@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "npx steam-theming-utils build_theme"
+  },
+  "dependencies": {
+    "postcss-functions": "^4.0.2",
+    "postcss-nested": "^6.2.0",
+    "steam-theming-utils": "^2.0.2"
+  }
+}

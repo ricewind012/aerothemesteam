@@ -1,0 +1,44 @@
+/* Filter options sidebar */
+#DialogBody {
+	--sidebar-width: 230px;
+	margin-left: var(--sidebar-width);
+	overflow: visible !important;
+	position: relative;
+}
+
+#FilterOptionsCtr {
+	opacity: 1 !important;
+	position: absolute;
+	top: 0;
+	left: calc(var(--sidebar-width) * -1);
+	height: 100% !important;
+	flex-direction: column !important;
+	align-items: start !important;
+}
+
+#FilterOptionsCtr {
+	.DialogCheckbox_Container,
+	.DialogDropDown,
+	.DialogInput {
+		/* 24px = .DialogBody padding */
+		width: calc(var(--sidebar-width) - 24px);
+		box-sizing: border-box;
+	}
+}
+
+#FilterOptionsLatencyAntiCheatCtr {
+	flex-basis: unset !important;
+}
+
+#FilterOptionsCheckboxesCtr {
+	align-self: start !important;
+}
+
+#ToggleShowFilterDetailsButton {
+	display: none;
+}
+
+/* Fix text being cut off */
+#ServerList [role="cell"] {
+	display: block !important;
+}
