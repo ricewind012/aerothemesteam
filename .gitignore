@@ -1,3 +1,5 @@
+dist
+js_dist
 node_modules
-
+package-lock.json
 class_map.json

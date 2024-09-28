@@ -1,0 +1,8 @@
+.icon-button {
+	--size: 16px;
+
+	background-image: var(--icon);
+
+	width: var(--size);
+	height: var(--size);
+}

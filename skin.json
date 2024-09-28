@@ -1,0 +1,18 @@
+{
+	"name": "aerothemesteam",
+	"author": "ricewind",
+	"description": "five hundred aeros",
+	"version": "1.0.0",
+	"Patches": [
+		{
+			"MatchRegexString": ".DesktopUI",
+			"TargetCss": "index.css",
+			"TargetJs": "js_dist/index.js"
+		},
+		{
+			"MatchRegexString": ".fullheight",
+			"TargetCss": "index.css",
+			"TargetJs": "js_dist/index.js"
+		}
+	]
+}

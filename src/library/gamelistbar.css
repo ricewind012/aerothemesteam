@@ -1,3 +1,8 @@
 #GameListHomeAndSearch {
-	display: none;
+	box-shadow: none !important;
+	padding: 0 !important;
+
+	flex-direction: column !important;
+	height: unset !important;
+	order: 1 !important;
 }

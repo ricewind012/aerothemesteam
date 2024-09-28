@@ -1,0 +1,18 @@
+#Bar {
+	--text: #2f4360;
+	--blue-dark: #bcd0e8;
+	--blue-light: #d3dfed;
+
+	background-image: linear-gradient(
+		180deg,
+		var(--blue-light),
+		var(--blue-dark),
+		var(--blue-light)
+	) !important;
+	box-shadow: none !important;
+	padding: 8px 12px !important;
+}
+
+#CollectionIcon {
+	display: none !important;
+}
