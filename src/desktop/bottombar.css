@@ -1,3 +1,18 @@
+#AddGameButton {
+	&::after {
+		content: "";
+
+		/* TODO: function ? */
+		background-color: var(--text);
+		-webkit-mask-image: var(--icon-arrow-bottom);
+		/* how the fuck is that not centered ? */
+		margin-top: 1px;
+
+		width: 7px;
+		height: 4px;
+	}
+}
+
 #BottomBar {
 	--text: #2f4360;
 	--blue-dark: #bcd0e8;
@@ -22,11 +37,26 @@
 	padding: 0 !important;
 }
 
-/* TODO: replace icons */
 #Icon {
-	color: var(--text) !important;
+	background-image: var(--icon) !important;
 
 	order: -1 !important;
+
+	#AddGameButton & {
+		--icon: var(--icon-add);
+	}
+
+	#DownloadStatusContent & {
+		--icon: var(--icon-download);
+	}
+
+	#FriendsButton & {
+		--icon: var(--icon-users);
+	}
+
+	svg {
+		display: none !important;
+	}
 }
 
 #Text,
