@@ -1,3 +1,7 @@
+#ContentFrame {
+	margin: var(--border-size) !important;
+}
+
 #FocusBar {
 	display: none !important;
 }
@@ -14,6 +18,9 @@
 }
 
 #Wrapper {
-	background-color: #101f34 !important;
+	background-image: linear-gradient(180deg, #304562, #0f1e30 25%) !important;
 	border: 1px solid #060d14 !important;
+	/* TODO doesn't work for no reason, ofc
+	border-image: linear-gradient(180deg, #131b27, #060d14) 1;
+	*/
 }

@@ -1,0 +1,10 @@
+#AppDetailsMain,
+#LeftListSizableContainer {
+	border: 1px solid #38567c !important;
+}
+
+#LibraryWindowDivider {
+	background-color: transparent !important;
+
+	min-width: 4px !important;
+}
