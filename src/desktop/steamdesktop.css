@@ -2,7 +2,18 @@
 	display: none !important;
 }
 
+#OuterFrame {
+	--border-size: 1px;
+	--window-size: calc(100% - calc(var(--border-size) * 2));
+
+	gap: var(--border-size) !important;
+	margin: var(--border-size) !important;
+
+	width: var(--window-size) !important;
+	height: var(--window-size) !important;
+}
+
 #Wrapper {
-	background-color: transparent !important;
-	border: none !important;
+	background-color: #101f34 !important;
+	border: 1px solid #060d14 !important;
 }
