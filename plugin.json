@@ -1,0 +1,7 @@
+{
+	"$schema": "https://raw.githubusercontent.com/SteamClientHomebrew/Millennium/main/src/sys/plugin-schema.json",
+
+	"name": "aerothemesteam_plugin",
+	"common_name": "aerothemesteam plugin",
+	"description": "Plugin for them aerothemesteam theme. Not actually required for the theme to work, [b]but may have less functionality or be broken.[/b]"
+}

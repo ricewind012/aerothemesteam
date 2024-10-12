@@ -1,5 +1,6 @@
 dist
-js_dist
+.millennium
+frontend/types
 node_modules
 package-lock.json
 class_map.json

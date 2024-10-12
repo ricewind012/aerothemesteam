@@ -1,11 +1,10 @@
-import type { CSSProperties, HTMLAttributes } from "react";
+import { Component, type CSSProperties, type HTMLAttributes } from "react";
 
 interface IconButtonProps {
 	strIconName: string;
 }
 
-// @ts-ignore ts(2686) because ts is retarded
-export class IconButton extends React.Component<
+export class IconButton extends Component<
 	IconButtonProps & HTMLAttributes<HTMLDivElement>
 > {
 	render() {

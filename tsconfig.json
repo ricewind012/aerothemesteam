@@ -1,13 +1,10 @@
 {
 	"compilerOptions": {
 		"target": "esnext",
-		"module": "esnext",
-		"outDir": "js_dist",
 		"jsx": "react",
-		"jsxFactory": "window.opener.SP_REACT.createElement",
-		"jsxFragmentFactory": "window.opener.SP_REACT.Fragment",
-		"moduleResolution": "node",
-		"allowJs": true
+		"jsxFactory": "window.SP_REACT.createElement",
+		"jsxFragmentFactory": "window.SP_REACT.Fragment",
+		"moduleResolution": "node"
 	},
-	"include": ["js_src/**/*"]
+	"include": ["frontend/**/*"]
 }

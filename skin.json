@@ -6,13 +6,11 @@
 	"Patches": [
 		{
 			"MatchRegexString": ".DesktopUI",
-			"TargetCss": "index.css",
-			"TargetJs": "js_dist/index.js"
+			"TargetCss": "index.css"
 		},
 		{
 			"MatchRegexString": ".fullheight",
-			"TargetCss": "index.css",
-			"TargetJs": "js_dist/index.js"
+			"TargetCss": "index.css"
 		}
 	]
 }
