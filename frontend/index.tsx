@@ -1,8 +1,10 @@
-import * as ReactDOM from "react-dom";
-import { findModule, Millennium } from "millennium-lib";
+import { cloneElement } from "react";
+import { render } from "react-dom";
 
-import { IconButton } from "./components/iconbutton";
+import * as parts from "./parts";
 import { CLog } from "./logger";
+import { classes, waitForElement } from "./shared";
+import type { SteamPopup } from "./types/sharedjscontext/normal";
 
 interface ComponentToRender {
 	normalClassName: string;
@@ -16,40 +18,40 @@ interface ComponentForWindow {
 	parts: ComponentToRender[];
 }
 
-const waitForElement = async (sel, parent = document) =>
-	[...(await Millennium.findElement(parent, sel))][0];
+/** Localization tokens to add for each window. */
+const LOC_TOKENS = ["GameList_View_Collections"];
 
 export default async function PluginMain() {
 	const logger = new CLog("index");
-	const classes = {
-		supernav: findModule((e) => e.SuperNav),
-	};
 
 	const components: ComponentForWindow[] = [
 		{
 			popupName: "#WindowName_SteamDesktop",
 			parts: [
 				{
+					normalClassName: "gamelistbar_Container",
+					className: classes.gamelistbar.Container,
+					// @ts-ignore fuck off
+					component: <parts.GameListBar />,
+				},
+				{
 					normalClassName: "supernav_SuperNav",
 					className: classes.supernav.SuperNav,
-					component: (
-						<>
-							<IconButton strIconName="some_pc_icon" />
-							<IconButton
-								strIconName="help"
-								onClick={() => {
-									const url = urlStore.GetHelpURL();
-									SteamClient.System.OpenInSystemBrowser(url);
-								}}
-							/>
-						</>
-					),
+					component: <parts.SuperNav />,
 				},
 			],
 		},
 	];
 	for (const { popupName, parts } of components) {
-		g_PopupManager.AddPopupCreatedCallback((popup) => {
+		const onPopupCreated = (popup: SteamPopup) => {
+			const doc = popup.m_popup.document;
+			const wnd = popup.m_popup;
+
+			for (const token of LOC_TOKENS) {
+				const localized = LocalizationManager.LocalizeString(`#${token}`);
+				doc.documentElement.style.setProperty(`--${token}`, `'${localized}'`);
+			}
+
 			const name = LocalizationManager.LocalizeString(popupName);
 			if (popup.m_strTitle !== name) {
 				return;
@@ -57,12 +59,25 @@ export default async function PluginMain() {
 
 			logger.Log("Trying %o for popup %o", popupName, popup.m_strTitle);
 			for (const { normalClassName, className, component } of parts) {
-				waitForElement(`.${className}`, popup.m_popup.document).then((el) => {
-					const div = el.appendChild(document.createElement("div"));
-					ReactDOM.render(component, div);
-					logger.Log("Got element %o for class %o", el, normalClassName);
+				waitForElement(`.${className}`, doc).then((el) => {
+					const div = el.appendChild(doc.createElement("div"));
+					// Some props aren't defined yet, so clone the element
+					const clonedComponent = cloneElement(component, { wnd });
+
+					div.className = "part";
+					render(clonedComponent, div);
+					logger.Log("%s: finished", normalClassName);
 				});
 			}
-		});
+		};
+
+		// Sometimes it injects too slow ?
+		const popup = g_PopupManager.GetExistingPopup("SP Desktop_uid0");
+		if (popup) {
+			onPopupCreated(popup);
+			continue;
+		}
+
+		g_PopupManager.AddPopupCreatedCallback(onPopupCreated);
 	}
 }

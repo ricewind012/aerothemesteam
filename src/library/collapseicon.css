@@ -1,0 +1,55 @@
+:root {
+	--collapseicon_bg: #b5c7e9;
+	--collapseicon_border-1: #9dabc1;
+	--collapseicon_border-2: #354962;
+	--collapseicon_deg: 135deg;
+	--collapseicon_size: 11px;
+}
+
+#Container {
+	--icon: var(--icon-minus);
+	--icon-size: 5px 2px;
+
+	background-image: linear-gradient(
+		var(--collapseicon_deg),
+		transparent,
+		var(--collapseicon_bg)
+	) !important;
+	border: 1px solid;
+	border-left-color: var(--collapseicon_border-1);
+	border-top-color: var(--collapseicon_border-1);
+	border-right-color: var(--collapseicon_border-2);
+	border-bottom-color: var(--collapseicon_border-2);
+	border-radius: 2px !important;
+	padding: 0 !important;
+
+	position: relative !important;
+	width: var(--collapseicon_size) !important;
+	height: var(--collapseicon_size) !important;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		inset: 0;
+
+		background-color: var(--collapseicon_border-2);
+		mask-image: var(--icon);
+		mask-repeat: no-repeat;
+		mask-position: 2px;
+		mask-size: var(--icon-size);
+	}
+
+	&:active {
+		--collapseicon_deg: 330deg;
+	}
+
+	&#Collapsed {
+		--icon: var(--icon-plus);
+		--icon-size: 5px;
+	}
+
+	svg {
+		display: none !important;
+	}
+}

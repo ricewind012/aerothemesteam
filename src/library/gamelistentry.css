@@ -1,0 +1,28 @@
+#Container {
+	color: #000 !important;
+	border: none !important;
+
+	&:is(:hover, #Selected) {
+		background-color: #8dd6ff !important;
+		box-shadow: none !important;
+	}
+}
+
+#FriendIsPlaying {
+	background-image: var(--icon-users) !important;
+
+	top: 4px !important;
+	left: 4px !important;
+	width: var(--icon-size) !important;
+	height: var(--icon-size) !important;
+
+	svg {
+		display: none !important;
+	}
+}
+
+#GameListEntryContainer {
+	padding-left: 38px !important;
+
+	align-items: center !important;
+}

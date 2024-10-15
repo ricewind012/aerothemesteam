@@ -1,11 +1,29 @@
 #Container {
 	background: transparent !important;
-	gap: 1px !important;
+
+	&::before {
+		content: "";
+
+		background-image: linear-gradient(180deg, #b8c5d9, #7e98bd);
+
+		position: absolute;
+		width: 100%;
+		height: 56px;
+
+		pointer-events: none;
+	}
+
+	& > .part {
+		order: -1;
+	}
 }
 
 #GameListHomeAndSearch {
+	background-color: transparent !important;
 	box-shadow: none !important;
 	padding: 0 !important;
+	gap: 1px !important;
+	margin-top: 1px !important;
 
 	flex-direction: column !important;
 	height: unset !important;

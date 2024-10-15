@@ -1,18 +1,51 @@
-#Bar {
-	--text: #2f4360;
-	--blue-dark: #bcd0e8;
-	--blue-light: #d3dfed;
-
-	background-image: linear-gradient(
-		180deg,
-		var(--blue-light),
-		var(--blue-dark),
-		var(--blue-light)
-	) !important;
-	box-shadow: none !important;
-	padding: 8px 12px !important;
+:root {
+	--gamelisthome_spacing: 7px 12px;
+	--gamelisthome_text: #2f4360;
+	--gamelisthome_blue-dark: #bcd0e8;
+	--gamelisthome_blue-light: #d3dfed;
 }
 
-#CollectionIcon {
+#Bar {
+	background: linear-gradient(
+			180deg,
+			var(--gamelisthome_blue-light),
+			var(--gamelisthome_blue-dark),
+			var(--gamelisthome_blue-light)
+		),
+		linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.15),
+			rgba(255, 255, 255, 0.1) 11px,
+			transparent 11px
+		) !important;
+	color: var(--gamelisthome_text) !important;
+	font-weight: bold !important;
+	letter-spacing: 0 !important;
+	border: none !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	padding: var(--gamelisthome_spacing) !important;
+	margin: 0 !important;
+
+	&#Selected {
+		--gamelisthome_blue-light: #bae5ff;
+		--gamelisthome_blue-dark: #65c7ff;
+	}
+}
+
+#CollectionButton {
+	&::before {
+		content: var(--GameList_View_Collections);
+	}
+}
+
+#CollectionIcon,
+#Icon {
 	display: none !important;
+}
+
+#Label {
+	color: inherit !important;
+	font-weight: inherit !important;
+	margin: 0 !important;
 }

@@ -1,8 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
 
+import postcssImport from "postcss-import";
+import postcssExtend from "postcss-extend";
 import postcssFunctions from "postcss-functions";
-import postcssNested from "postcss-nested";
 
 /**
  * `icon("name")` => `url("data:image/png;base64,${base64}")`
@@ -24,7 +25,8 @@ const config = {
 				icon,
 			},
 		}),
-		postcssNested,
+		postcssImport,
+		postcssExtend,
 	],
 };
 

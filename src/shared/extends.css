@@ -1,0 +1,27 @@
+%arrow {
+	mask-image: var(--icon-arrow-bottom);
+	margin: 0 !important;
+
+	width: 7px !important;
+	height: 4px !important;
+
+	svg {
+		display: none !important;
+	}
+}
+
+%white-gradient {
+	--wg-opacity-1: 0.75;
+	--wg-opacity-2: 0.25;
+	--wg-color: 255, 255, 255;
+	--wg-deg: 180deg;
+	--wg-size: 11px;
+	--white-gradient: linear-gradient(
+		var(--wg-deg),
+		rgba(var(--wg-color), var(--wg-opacity-1)),
+		rgba(var(--wg-color), var(--wg-opacity-2)) var(--wg-size),
+		transparent var(--wg-size)
+	);
+
+	background-blend-mode: color-burn !important;
+}

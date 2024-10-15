@@ -2,8 +2,16 @@
 	--icon-add: icon("add");
 	--icon-download: icon("download");
 	--icon-help: icon("help");
+	--icon-play: icon("play");
 	--icon-scrollbar-track: icon("scrollbar-track");
+	--icon-search: icon("search");
+	--icon-settings: icon("settings");
+	--icon-sort-last-played: icon("sort-last-played");
 	--icon-users: icon("users");
+	--icon-windows: icon("windows");
+
+	--icon-minus: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%205%202%22%3E%3Crect%20width%3D%225%22%20height%3D%221%22%2F%3E%3C%2Fsvg%3E");
+	--icon-plus: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%205%205%22%3E%3Crect%20width%3D%225%22%20height%3D%221%22%20y%3D%222%22%2F%3E%3Crect%20width%3D%221%22%20height%3D%225%22%20x%3D%222%22%2F%3E%3C%2Fsvg%3E");
 
 	--icon-arrow-left: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0IDciPjxzdHlsZT5yZWN0e3dpZHRoOjFweH08L3N0eWxlPjxyZWN0IGhlaWdodD0iNyIgeD0iMyIvPjxyZWN0IGhlaWdodD0iNSIgeD0iMiIgeT0iMSIvPjxyZWN0IGhlaWdodD0iMyIgeD0iMSIgeT0iMiIvPjxyZWN0IGhlaWdodD0iMSIgeT0iMyIvPjwvc3ZnPgo=");
 	--icon-arrow-top: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3IDQiPjxzdHlsZT5yZWN0e2hlaWdodDoxcHh9PC9zdHlsZT48cmVjdCB3aWR0aD0iNyIgeT0iMyIvPjxyZWN0IHdpZHRoPSI1IiB4PSIxIiB5PSIyIi8+PHJlY3Qgd2lkdGg9IjMiIHg9IjIiIHk9IjEiLz48cmVjdCB3aWR0aD0iMSIgeD0iMyIvPjwvc3ZnPgo=");

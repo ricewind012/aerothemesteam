@@ -1,0 +1,17 @@
+@import "../extends.css";
+
+.game-list-filter-status {
+	@extend %white-gradient;
+	--wg-size: 7px;
+	--wg-opacity-1: 0.5;
+	--wg-opacity-2: 0.15;
+	--bg: #bdd1e9;
+
+	background-image: linear-gradient(180deg, var(--bg), var(--bg)),
+		var(--white-gradient);
+	color: var(--gamelisthome_text);
+	font-size: 11px;
+	font-weight: bold;
+	border: 1px solid #9cb1c9;
+	padding: 3px 6px;
+}
