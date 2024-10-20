@@ -13,7 +13,7 @@ interface ComponentToRender {
 }
 
 interface ComponentForWindow {
-	/** Localization token. */
+	/** Popup title. */
 	popupName: string;
 	parts: ComponentToRender[];
 }
@@ -52,7 +52,7 @@ export default async function PluginMain() {
 				doc.documentElement.style.setProperty(`--${token}`, `'${localized}'`);
 			}
 
-			const name = LocalizationManager.LocalizeString(popupName);
+			const name = LocalizationManager.LocalizeIfToken(popupName);
 			if (popup.m_strTitle !== name) {
 				return;
 			}
@@ -71,8 +71,7 @@ export default async function PluginMain() {
 			}
 		};
 
-		// Sometimes it injects too slow ?
-		const popup = g_PopupManager.GetExistingPopup("SP Desktop_uid0");
+		const popup = g_PopupManager.GetExistingPopup(popupName);
 		if (popup) {
 			onPopupCreated(popup);
 			continue;
