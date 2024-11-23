@@ -1,12 +1,5 @@
-.DialogInput {
-	background-color: #fff !important;
-	color: #000 !important;
-	line-height: 18px !important;
-	border: 1px solid #5a7eaa !important;
-	box-shadow: none !important;
-	padding: 0 5px !important;
+@import "./extends/controls.css";
 
-	&::placeholder {
-		color: #7f7f7f !important;
-	}
+.DialogInput {
+	@extend %text-input-compact;
 }

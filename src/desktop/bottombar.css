@@ -1,18 +1,4 @@
-:root {
-	--bottombar_spacing: 7px 12px;
-	--bottombar_gradient: linear-gradient(
-			180deg,
-			var(--blue-light),
-			var(--blue-dark),
-			var(--blue-light)
-		),
-		linear-gradient(
-			180deg,
-			rgba(255, 255, 255, 0.15),
-			rgba(255, 255, 255, 0.1) 11px,
-			transparent 11px
-		);
-}
+@import "../shared/extends/style.css";
 
 #AddGameButton {
 	&::after {
@@ -27,10 +13,8 @@
 }
 
 #BottomBar {
-	background: var(--bottombar_gradient) !important;
-	background-blend-mode: color-burn !important;
+	@extend %blue-bar;
 	box-shadow: none !important;
-	padding: var(--bottombar_spacing) !important;
 
 	flex: unset !important;
 }

@@ -1,15 +1,15 @@
 @import "dist/desktop/bottombar.css";
 @import "dist/desktop/steamdesktop.css";
 
-@import "dist/library/collapseicon.css";
-@import "dist/library/gamelist.css";
-@import "dist/library/gamelistbar.css";
-@import "dist/library/gamelistdropdown.css";
-@import "dist/library/gamelistentry.css";
-@import "dist/library/gamelisthome.css";
-@import "dist/library/gamelistsearchbar.css";
-@import "dist/library/gamelistsectionheader.css";
 @import "dist/library/library.css";
+@import "dist/library/sidebar/collapseicon.css";
+@import "dist/library/sidebar/gamelist.css";
+@import "dist/library/sidebar/gamelistbar.css";
+@import "dist/library/sidebar/gamelistdropdown.css";
+@import "dist/library/sidebar/gamelistentry.css";
+@import "dist/library/sidebar/gamelisthome.css";
+@import "dist/library/sidebar/gamelistsearchbar.css";
+@import "dist/library/sidebar/gamelistsectionheader.css";
 
 @import "dist/shared/components/iconbutton.css";
 

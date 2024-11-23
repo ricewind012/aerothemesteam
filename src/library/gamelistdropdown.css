@@ -1,4 +1,4 @@
-@import "../shared/extends.css";
+@import "../../shared/extends/style.css";
 
 #Arrow {
 	@extend %arrow;

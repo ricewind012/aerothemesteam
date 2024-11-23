@@ -1,0 +1,57 @@
+%arrow {
+	mask-image: var(--icon-arrow-bottom);
+	margin: 0 !important;
+
+	width: 7px !important;
+	height: 4px !important;
+
+	svg {
+		display: none !important;
+	}
+}
+
+%white-gradient {
+	--wg-opacity-1: 0.75;
+	--wg-opacity-2: 0.25;
+	--wg-color: 255, 255, 255;
+	--wg-deg: 180deg;
+	--wg-size: 12px;
+	--white-gradient: linear-gradient(
+		var(--wg-deg),
+		rgba(var(--wg-color), var(--wg-opacity-1)),
+		rgba(var(--wg-color), var(--wg-opacity-2)) var(--wg-size),
+		transparent var(--wg-size)
+	);
+
+	background-blend-mode: color-burn !important;
+}
+
+%blue-bar {
+	@extend %white-gradient;
+	--blue-bar-gradient: linear-gradient(
+			180deg,
+			var(--blue-light),
+			var(--blue-dark),
+			var(--blue-light)
+		), var(--white-gradient);
+
+    background-color: transparent !important;
+    background-image: var(--blue-bar-gradient) !important;
+	padding: 7px 12px !important;
+}
+
+%section-header {
+	@extend %white-gradient;
+	--wg-size: 7px;
+	--wg-opacity-1: 0.5;
+	--wg-opacity-2: 0.15;
+	--bg: #bdd1ea;
+
+	background-image: linear-gradient(180deg, var(--bg), var(--bg)),
+		var(--white-gradient) !important;
+	color: var(--gamelisthome_text) !important;
+	font-size: var(--font-size-small) !important;
+	font-weight: bold !important;
+	border: 1px solid #9cb1ca !important;
+	padding: 2.5px 6px !important;
+}
