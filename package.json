@@ -2,7 +2,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "npm run build:css && npm run build:ts",
-		"build:css": "npx steam-theming-utils build_theme",
+		"build:css": "npx steam-theming-utils build_theme && node ./create_index.js",
 		"build:ts": "millennium-ttc --build dev"
 	},
 	"dependencies": {
