@@ -1,5 +1,6 @@
 :root {
-	--blue-text: #2f4360;
+	--blue-border: 1px solid #5a7eab;
+	--blue-text: #304461;
 	--blue-dark: #bcd0e8;
 	--blue-light: #d3dfed;
 
@@ -8,5 +9,6 @@
 	--font-size: 9pt;
 	--font-size-small: 8pt;
 
+	--border-radius: 2px;
 	--icon-size: 16px;
 }

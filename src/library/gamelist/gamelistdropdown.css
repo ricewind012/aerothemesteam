@@ -3,6 +3,10 @@
 #Arrow {
 	@extend %arrow;
 	background-color: var(--blue-text);
+
+	svg {
+		display: none !important;
+	}
 }
 
 #Bar {
@@ -34,7 +38,7 @@
 		background-image: linear-gradient(180deg, var(--bg), var(--bg)),
 			var(--white-gradient);
 		border-image: linear-gradient(180deg, #4a91b9, #8abdda) 1 !important;
-		border-radius: 2px !important;
+		border-radius: var(--border-radius) !important;
 		box-shadow: 0 0 0 1px #bbe7ff !important;
 	}
 
@@ -65,7 +69,7 @@
 	background-color: #fff !important;
 	color: var(--blue-text) !important;
 	font-size: 12px !important;
-	border: 1px solid #5a7eaa !important;
+	border: var(--blue-border) !important;
 	border-radius: 0 !important;
 	padding: 2px 5px !important;
 

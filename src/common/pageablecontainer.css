@@ -1,0 +1,14 @@
+@import "../shared/extends/style.css";
+
+#HeaderPageControls {
+	@extend %section-header;
+}
+
+#PageClickContainer {
+	margin: -2.5px -6px !important;
+	margin-left: auto !important;
+}
+
+#PageableCloseButton {
+	opacity: 1 !important;
+}

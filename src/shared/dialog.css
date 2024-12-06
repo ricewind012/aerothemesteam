@@ -1,5 +1,20 @@
 @import "./extends/controls.css";
 
+.DialogButton {
+	@extend %button;
+
+	box-shadow: none !important;
+
+	&::before {
+		display: none !important;
+	}
+}
+
+/* TODO: @extend */
+.DialogButton:is(:disabled, .Disabled) {
+	@extend %button-disabled;
+}
+
 .DialogInput {
 	@extend %text-input-compact;
 }

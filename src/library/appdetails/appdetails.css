@@ -1,0 +1,12 @@
+:root {
+	--appdetails_border-size: 1px;
+	--appdetails_border: var(--appdetails_border-size) solid #aeb8c6;
+	--appdetails_icon-size: 32px;
+	--appdetails_secondary-text-opacity: 0.5;
+	--appdetails_spacing: 12px;
+	--appdetails_spacing-x05: calc(var(--appdetails_spacing) / 2);
+}
+
+#ScrollContainer {
+	background: none var(--main-bg) !important;
+}

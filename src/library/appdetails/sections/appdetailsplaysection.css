@@ -1,0 +1,8 @@
+#Container:not(#InPage),
+#StickyHeaderShadow {
+	display: none !important;
+}
+
+#PlayBar {
+	background: none !important;
+}

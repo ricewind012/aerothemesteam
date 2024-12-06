@@ -1,0 +1,5 @@
+@import "../shared/extends/appdetails.css";
+
+#BoxCarousel {
+    @extend %appdetails_section;
+}

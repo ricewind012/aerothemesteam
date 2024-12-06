@@ -1,0 +1,22 @@
+@import "../../../shared/extends/controls.css";
+
+#FriendsOverflow {
+	width: 100%;
+}
+
+#ShowMore {
+	@extend %button;
+
+	margin-top: var(--appdetails_spacing-x05) !important;
+}
+
+#Subsection {
+	padding-bottom: var(--appdetails_spacing) !important;
+	margin-bottom: var(--appdetails_spacing) !important;
+}
+
+#SubsectionHeader {
+	color: inherit !important;
+	font-size: var(--font-size) !important;
+	padding-bottom: 9px !important;
+}

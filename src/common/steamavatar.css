@@ -1,0 +1,8 @@
+#avatarHolder {
+	--size: 32px;
+
+	transform: unset !important;
+
+	width: var(--size) !important;
+	height: var(--size) !important;
+}

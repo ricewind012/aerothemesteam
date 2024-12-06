@@ -20,7 +20,7 @@
 	border-top-color: var(--collapseicon_border-1);
 	border-right-color: var(--collapseicon_border-2);
 	border-bottom-color: var(--collapseicon_border-2);
-	border-radius: 2px !important;
+	border-radius: var(--border-radius) !important;
 	padding: 0 !important;
 
 	position: relative !important;

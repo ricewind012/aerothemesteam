@@ -1,0 +1,20 @@
+#Backdrop {
+	display: none !important;
+}
+
+#ColumnContainer {
+	padding: 16px !important;
+}
+
+#LeftColumn {
+	/* shit layout */
+	width: calc(66% - var(--appdetails_spacing) / 2);
+}
+
+#RightColumn {
+	margin-left: var(--appdetails_spacing) !important;
+}
+
+#Spotlights {
+	padding: 0 !important;
+}

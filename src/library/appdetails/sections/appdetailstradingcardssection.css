@@ -1,0 +1,25 @@
+@import "../../../shared/extends/appdetails.css";
+
+#Badge {
+	margin: 0 !important;
+	margin-right: var(--appdetails_spacing) !important;
+
+	width: var(--appdetails_icon-size) !important;
+	height: var(--appdetails_icon-size) !important;
+
+	&#EmptyCircle {
+		@extend %appdetails_placeholder;
+	}
+}
+
+#BadgeLevel {
+	@extend %appdetails_description;
+}
+
+#BadgeName {
+	@extend %appdetails_header;
+}
+
+#CardsLeft {
+	display: none !important;
+}

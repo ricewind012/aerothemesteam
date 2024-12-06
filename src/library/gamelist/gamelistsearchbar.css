@@ -10,8 +10,8 @@
 			transparent 11px
 		) !important;
 	background-blend-mode: color-burn !important;
-	border: 1px solid #5a7eaa !important;
-	border-radius: 2px !important;
+	border: var(--blue-border) !important;
+	border-radius: var(--border-radius) !important;
 	padding: 2px 3px !important;
 
 	min-width: unset !important;

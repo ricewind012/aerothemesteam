@@ -1,0 +1,25 @@
+%appdetails_description {
+	opacity: var(--appdetails_secondary-text-opacity) !important;
+	color: inherit !important;
+	font-size: var(--font-size) !important;
+	font-style: italic !important;
+}
+
+%appdetails_placeholder {
+	opacity: var(--appdetails_secondary-text-opacity) !important;
+	border: 2px dashed var(--blue-text) !important;
+	border-radius: 0 !important;
+}
+
+%appdetails_header {
+	color: inherit !important;
+	font-size: var(--font-size) !important;
+	font-weight: bold !important;
+}
+
+%appdetails_section {
+	background: none #e1e7ef !important;
+	border: var(--appdetails_border) !important;
+	border-top: none !important;
+	border-radius: 0 !important;
+}

@@ -1,0 +1,26 @@
+@import "../../../shared/extends/appdetails.css";
+@import "../../../shared/extends/controls.css";
+
+#ActivityFeedContainer {
+	max-width: unset !important;
+}
+
+#FetchMoreContainer {
+	margin-top: var(--appdetails_spacing-x05) !important;
+	margin-bottom: 0 !important;
+}
+
+#NoActivity {
+	@extend %appdetails_placeholder;
+
+	color: inherit !important;
+	font-size: var(--font-size) !important;
+	padding: var(--appdetails_spacing) !important;
+	margin-bottom: var(--appdetails_spacing-x05) !important;
+
+	min-height: unset !important;
+}
+
+#ViewLastNews {
+	@extend %button;
+}

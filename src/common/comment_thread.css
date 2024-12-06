@@ -1,0 +1,13 @@
+#ActivityCommentThreadMinimized {
+	opacity: 1 !important;
+	padding: 0 !important;
+}
+
+#ButtonSpacer {
+	width: var(--appdetails_spacing-x05) !important;
+}
+
+#RatingBar {
+	opacity: 1 !important;
+	margin-top: var(--appdetails_spacing) !important;
+}

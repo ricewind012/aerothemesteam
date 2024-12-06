@@ -4,10 +4,19 @@
 
 	width: 7px !important;
 	height: 4px !important;
+}
 
-	svg {
-		display: none !important;
-	}
+%icon {
+	background-image: var(--icon) !important;
+	background-size: var(--icon-size) !important;
+
+	width: var(--icon-size) !important;
+	height: var(--icon-size) !important;
+}
+
+%link {
+	color: blue !important;
+	text-decoration: underline !important;
 }
 
 %white-gradient {
@@ -49,7 +58,7 @@
 
 	background-image: linear-gradient(180deg, var(--bg), var(--bg)),
 		var(--white-gradient) !important;
-	color: var(--gamelisthome_text) !important;
+	color: var(--blue-text) !important;
 	font-size: var(--font-size-small) !important;
 	font-weight: bold !important;
 	border: 1px solid #9cb1ca !important;

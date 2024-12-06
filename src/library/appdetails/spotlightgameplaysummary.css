@@ -1,0 +1,15 @@
+#GamePlaySummaryContainer {
+	margin-bottom: var(--appdetails_spacing) !important;
+}
+
+#GamePlaySummaryHeader {
+	all: unset !important;
+}
+
+#SummaryCarouselContainer {
+	padding: 0 !important;
+
+	&::after {
+		display: none !important;
+	}
+}

@@ -1,0 +1,12 @@
+#AchievementIconWrapper {
+	width: var(--appdetails_icon-size) !important;
+	height: var(--appdetails_icon-size) !important;
+}
+
+#Icon {
+	box-shadow: none !important;
+}
+
+#RareAchievementIconGlowContainerRoot {
+	display: none !important;
+}

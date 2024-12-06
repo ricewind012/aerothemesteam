@@ -1,0 +1,46 @@
+@import "../../../shared/extends/appdetails.css";
+@import "../../../shared/extends/style.css";
+
+#ButtonContainer {
+	margin-top: calc(var(--appdetails_spacing) / -2) !important;
+
+	flex-wrap: wrap !important;
+}
+
+#FeaturedItem {
+	align-items: start !important;
+}
+
+#FeaturedItemDesc {
+	@extend %appdetails_description;
+
+	max-width: unset !important;
+	-webkit-line-clamp: 4 !important;
+}
+
+#FeaturedItemHeader {
+	display: none !important;
+}
+
+#FeaturedItemHideButton {
+	/* also TODO */
+	width: 32px !important;
+}
+
+#FeaturedItemLink {
+	@extend %link;
+
+	font: inherit !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#FeaturedItemName {
+	@extend %appdetails_header;
+
+	margin: 0 !important;
+}
+
+#WorkshopContainer {
+	background: none !important;
+}

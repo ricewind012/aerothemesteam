@@ -1,0 +1,12 @@
+@import "../../shared/extends/controls.css";
+
+#HeaderStyles {
+	border-radius: 0 !important;
+	margin: 0 !important;
+}
+
+#LoadContentButton {
+	@extend %button;
+
+	margin: var(--appdetails_spacing) !important;
+}

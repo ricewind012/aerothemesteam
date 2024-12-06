@@ -1,0 +1,9 @@
+#AdditionalItem {
+	padding: 0 !important;
+}
+
+#Title {
+	color: inherit !important;
+	font-size: var(--font-size) !important;
+	margin-left: var(--appdetails_spacing) !important;
+}

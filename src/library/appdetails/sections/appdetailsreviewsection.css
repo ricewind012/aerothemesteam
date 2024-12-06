@@ -1,0 +1,44 @@
+@import "../../../shared/extends/appdetails.css";
+
+#ButtonsGroup {
+	flex-wrap: wrap !important;
+}
+
+#CommentIcon {
+	display: none !important;
+}
+
+#CommentsContainer {
+	font-size: var(--font-size) !important;
+}
+
+#PlayedForTime {
+	@extend %appdetails_description;
+
+	font-weight: normal !important;
+	padding: 0 !important;
+}
+
+#ReviewDescription {
+	@extend %appdetails_header;
+}
+
+#ReviewIcon {
+	margin-right: var(--appdetails_spacing) !important;
+
+	width: var(--appdetails_icon-size) !important;
+	height: var(--appdetails_icon-size) !important;
+}
+
+#ReviewText {
+	color: inherit !important;
+	font-size: var(--font-size) !important;
+}
+
+#VoteUpDownContainer {
+	padding: 0 !important;
+
+	:last-child {
+		margin-inline-end: 0 !important;
+	}
+}
