@@ -19,6 +19,16 @@
 	text-decoration: underline !important;
 }
 
+%parentheses {
+	&::before {
+		content: "(";
+	}
+
+	&::after {
+		content: ")";
+	}
+}
+
 %white-gradient {
 	--wg-opacity-1: 0.75;
 	--wg-opacity-2: 0.25;

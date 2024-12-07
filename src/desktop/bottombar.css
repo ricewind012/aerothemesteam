@@ -1,4 +1,9 @@
+@import "../shared/extends/controls.css";
 @import "../shared/extends/style.css";
+
+:root {
+	--bottombar_spacing: 4px;
+}
 
 #AddGameButton {
 	&::after {
@@ -14,6 +19,7 @@
 
 #BottomBar {
 	@extend %blue-bar;
+
 	box-shadow: none !important;
 
 	flex: unset !important;
@@ -22,8 +28,12 @@
 #AddGameButton,
 #DownloadStatusContent,
 #FriendsButton {
-	gap: 4px !important;
+	gap: var(--bottombar_spacing) !important;
 	padding: 0 !important;
+}
+
+#DetailedDownloadProgress {
+	gap: var(--bottombar_spacing) !important;
 }
 
 #Icon {
@@ -33,6 +43,13 @@
 
 	#AddGameButton & {
 		--icon: var(--icon-add);
+	}
+
+	#DetailedDownloadProgress & {
+		box-shadow: none !important;
+
+		width: var(--icon-size) !important;
+		height: var(--icon-size) !important;
 	}
 
 	#DownloadStatusContent & {
@@ -46,6 +63,43 @@
 	svg {
 		display: none !important;
 	}
+}
+
+#IconBevel {
+	display: none !important;
+}
+
+#ProgressBar {
+	@extend %progress-bar-outer;
+
+	/* Align with icons */
+	margin-block: -1px !important;
+}
+
+/* TODO: scss - nesting */
+#ProgressBar::after {
+	@extend %progress-bar-inner;
+}
+
+#ProgressBarWrapper {
+	gap: var(--bottombar_spacing) !important;
+
+	flex-direction: row !important;
+	align-items: center !important;
+}
+
+#Status {
+	color: var(--blue-text) !important;
+
+	flex-grow: 0 !important;
+}
+
+/* TODO: scss - nesting */
+#Status#Percentage {
+	@extend %parentheses;
+
+	opacity: var(--appdetails_secondary-text-opacity) !important;
+	margin-left: var(--bottombar_spacing) !important;
 }
 
 #Text,
