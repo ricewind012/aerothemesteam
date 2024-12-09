@@ -10,9 +10,32 @@
 	}
 }
 
-/* TODO: @extend */
+/* TODO: scss @extend */
 .DialogButton:is(:disabled, .Disabled) {
 	@extend %button-disabled;
+}
+
+.DialogDropDown {
+	@extend %text-input;
+
+	align-items: center !important;
+}
+
+.DialogDropDown_Arrow {
+	@extend %arrow;
+
+	background-color: var(--blue-text) !important;
+	margin-left: 6px !important;
+
+	position: unset !important;
+
+	svg {
+		display: none !important;
+	}
+}
+
+.DialogDropDown_CurrentDisplay {
+	line-height: 1 !important;
 }
 
 .DialogInput {

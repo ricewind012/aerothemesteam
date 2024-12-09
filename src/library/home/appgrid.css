@@ -1,0 +1,18 @@
+#SortingDropDown {
+	font-size: inherit !important;
+	margin: 0 !important;
+
+	.DialogDropDown {
+		margin-left: var(--libraryhome_text-spacing) !important;
+	}
+
+	.DialogDropDown_Arrow,
+	.DialogDropDown_CurrentDisplay {
+		border-radius: 0 !important;
+		padding: 0 !important;
+	}
+}
+
+#SortingDropDownLabel {
+	all: unset !important;
+}

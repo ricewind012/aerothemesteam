@@ -1,0 +1,5 @@
+@import "../shared/extends/appdetails.css";
+
+#Container {
+	@extend %appdetails_section;
+}

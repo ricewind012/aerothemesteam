@@ -1,0 +1,17 @@
+@import "../../shared/extends/appdetails.css";
+
+#AddedDate {
+	@extend %appdetails_header;
+}
+
+#RecentGame {
+	margin-right: var(--libraryhome_spacing) !important;
+}
+
+#RecentGameMediaContainer {
+	margin-top: var(--libraryhome_text-spacing) !important;
+}
+
+#RecentGames {
+	padding: var(--libraryhome_spacing) !important;
+}

@@ -4,6 +4,10 @@
 	@extend %section-header;
 }
 
+#Name {
+	font: inherit !important;
+}
+
 #PageClickContainer {
 	margin: -2.5px -6px !important;
 	margin-left: auto !important;
