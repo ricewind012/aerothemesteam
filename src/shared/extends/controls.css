@@ -1,14 +1,13 @@
 @import "./style.css";
 
 %button {
+	@extend %lighter;
 	@extend %white-gradient;
+	--lighter-opacity: 0.35;
 	--wg-size: 9px;
 
-	--lighter-opacity: 0.35;
-	--lighter: rgba(255, 255, 255, var(--lighter-opacity));
-
 	background: linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580),
-		linear-gradient(0deg, var(--lighter), var(--lighter)),
+		var(--lighter-bg),
 		var(--white-gradient) !important;
 	color: #273b5c !important;
 	font-size: var(--font-size) !important;

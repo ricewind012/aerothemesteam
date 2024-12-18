@@ -1,10 +1,19 @@
 :root {
+	--appdetails_body-spacing: 16px;
 	--appdetails_border-size: 1px;
 	--appdetails_border: var(--appdetails_border-size) solid #aeb8c6;
+	--appdetails_game-stat-spacing: 7px;
+	--appdetails_header-img-height: 163px;
+	--appdetails_header-img-mask: radial-gradient(
+		55.62% 83.6% at 35.73% 0%,
+		#fff 0%,
+		rgba(255, 255, 255, 0) 100%
+	);
 	--appdetails_icon-size: 32px;
 	--appdetails_secondary-text-opacity: 0.5;
 	--appdetails_spacing: 12px;
 	--appdetails_spacing-x05: calc(var(--appdetails_spacing) / 2);
+	--appdetails_text-spacing: 4px;
 }
 
 #ScrollContainer {

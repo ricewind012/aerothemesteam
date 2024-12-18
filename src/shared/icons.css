@@ -1,14 +1,21 @@
 :root {
 	--icon-add: icon("add");
 	--icon-blue-arrow: icon("blue-arrow");
+	--icon-calendar: icon("calendar");
+	--icon-cancel: icon("cancel");
+	--icon-checkmark: icon("checkmark");
+	--icon-clock: icon("clock");
 	--icon-download: icon("download");
 	--icon-help: icon("help");
+	--icon-info: icon("info");
 	--icon-play: icon("play");
 	--icon-scrollbar-track: icon("scrollbar-track");
 	--icon-search: icon("search");
 	--icon-settings: icon("settings");
 	--icon-smiley: icon("smiley");
 	--icon-sort-last-played: icon("sort-last-played");
+	--icon-star: icon("star");
+	--icon-update: icon("update");
 	--icon-users: icon("users");
 	--icon-windows: icon("windows");
 

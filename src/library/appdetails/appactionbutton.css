@@ -1,0 +1,73 @@
+@import "../../shared/extends/controls.css";
+@import "../../shared/extends/style.css";
+
+#ButtonChild {
+	@extend %button;
+
+	padding-inline: 8px !important;
+}
+
+#ButtonText {
+	all: unset !important;
+}
+
+#PlayButton {
+	#ShowingStreaming & {
+		border-top-right-radius: 0 !important;
+		border-bottom-right-radius: 0 !important;
+	}
+}
+
+/* TODO: scss - nesting */
+#PlayButton svg {
+	@extend %icon;
+
+	margin-right: 6px !important;
+
+	/* TODO: refactor - move these somewhere one day */
+	&.SVGIcon_Download {
+		--icon: var(--icon-download);
+	}
+
+	&.SVGIcon_Play {
+		--icon: var(--icon-play);
+	}
+
+	&.SVGIcon_Pause,
+	&.SVGIcon_X_Line {
+		--icon: var(--icon-cancel);
+	}
+
+	&:not(.SVGIcon_Button) {
+		--icon: var(--icon-update);
+	}
+}
+
+#PlayButtonContainer {
+	display: inline-flex !important;
+	min-width: unset !important;
+	height: unset !important;
+
+	svg * {
+		display: none !important;
+	}
+}
+
+#StreamingSelector {
+	--size: 23px;
+
+	border-top-left-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	margin-left: 2px !important;
+
+	width: var(--size) !important;
+	height: var(--size) !important;
+}
+
+/* TODO: scss - nesting */
+#StreamingSelector svg {
+	/* TODO: fix arrow image */
+	@extend %arrow;
+
+	background-color: var(--blue-text) !important;
+}

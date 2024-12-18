@@ -14,6 +14,11 @@
 	height: var(--icon-size) !important;
 }
 
+%lighter {
+	--lighter: rgba(255, 255, 255, var(--lighter-opacity));
+	--lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter));
+}
+
 %link {
 	color: blue !important;
 	text-decoration: underline !important;

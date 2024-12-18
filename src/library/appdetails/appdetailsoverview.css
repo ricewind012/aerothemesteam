@@ -3,7 +3,8 @@
 }
 
 #ColumnContainer {
-	padding: 16px !important;
+	padding: var(--appdetails_body-spacing) !important;
+	padding-top: 0 !important;
 }
 
 #LeftColumn {

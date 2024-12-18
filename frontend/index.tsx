@@ -21,6 +21,59 @@ interface ComponentForWindow {
 /** Localization tokens to add for each window. */
 const LOC_TOKENS = ["GameList_View_Collections"];
 
+/** Internal main window name. */
+const MAIN_WINDOW_NAME = "SP Desktop_uid0";
+
+/**
+ * Safe version of `CPopupManager.AddPopupCreatedCallback`.
+ */
+function AddPopupCreatedCallback(
+	popupName: string,
+	callback: (popup: SteamPopup) => void,
+) {
+	const popup = g_PopupManager.GetExistingPopup(popupName);
+	if (popup) {
+		callback(popup);
+		return;
+	}
+
+	g_PopupManager.AddPopupCreatedCallback((popup) => {
+		callback(popup);
+
+		// Only apply once
+		g_PopupManager.m_rgPopupCreatedCallbacks =
+			g_PopupManager.m_rgPopupCreatedCallbacks.filter((e) => e !== callback);
+	});
+}
+
+function PatchUIStore(popup: SteamPopup) {
+	if (popup.m_strName !== MAIN_WINDOW_NAME) {
+		return;
+	}
+
+	const store = window.uiStore;
+	const orig = store.SetGameListSelection;
+	const logger = new CLog("PatchUIStore");
+	const doc = popup.m_popup.document.documentElement;
+
+	store.SetGameListSelection = async function (section: string, appId: number) {
+		const app = appStore.GetAppOverviewByAppID(appId);
+		const iconFilePath = urlStore.BuildCachedLibraryAssetURL(
+			appId,
+			`${app.icon_hash}.jpg`,
+		);
+		const url = app.icon_data
+			? `data:image/${app.icon_data_format};base64,${app.icon_data}`
+			: iconFilePath;
+
+		doc.style.setProperty("--appdetails_game-icon", `url("${url}")`);
+		doc.style.setProperty("--appdetails_game-name", `"${app.display_name}"`);
+		logger.Log("Called CUIStore.SetGameListSelection(%o, %s)", section, appId);
+
+		return orig.call(this, section, appId);
+	};
+}
+
 export default async function PluginMain() {
 	const logger = new CLog("index");
 
@@ -71,12 +124,8 @@ export default async function PluginMain() {
 			}
 		};
 
-		const popup = g_PopupManager.GetExistingPopup(popupName);
-		if (popup) {
-			onPopupCreated(popup);
-			continue;
-		}
-
-		g_PopupManager.AddPopupCreatedCallback(onPopupCreated);
+		AddPopupCreatedCallback(popupName, onPopupCreated);
 	}
+
+	AddPopupCreatedCallback(MAIN_WINDOW_NAME, PatchUIStore);
 }
