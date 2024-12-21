@@ -2,7 +2,7 @@
 @import "../../../shared/extends/style.css";
 
 %_details-section {
-	gap: var(--appdetails_text-spacing) !important;
+	gap: var(--library_text-spacing) !important;
 	padding: 0 !important;
 	margin: 0 !important;
 
@@ -42,9 +42,9 @@
 #Container {
 	position: absolute !important;
 	top: calc(
-		var(--appdetails_header-img-height) *
+		var(--library_header-img-height) *
 		-1 +
-		var(--appdetails_body-spacing) *
+		var(--library_body-spacing) *
 		2 +
 		1lh +
 		9px
@@ -107,7 +107,7 @@
 }
 
 #GameStatsSection {
-	gap: var(--appdetails_game-stat-spacing) !important;
+	gap: var(--library_game-stat-spacing) !important;
 
 	flex-direction: column !important;
 	flex-wrap: nowrap !important;
@@ -118,8 +118,8 @@
 }
 
 #InnerContainer {
-	padding: 0 var(--appdetails_body-spacing) !important;
-	margin-left: calc(var(--appdetails_icon-size) + var(--appdetails_spacing)) !important;
+	padding: 0 var(--library_body-spacing) !important;
+	margin-left: calc(var(--library_icon-size) + var(--library_spacing)) !important;
 }
 
 #MenuButton {
@@ -191,11 +191,11 @@
 
 #RightControls {
 	position: absolute !important;
-	right: var(--appdetails_body-spacing) !important;
+	right: var(--library_body-spacing) !important;
 }
 
 #StatusAndStats {
-	gap: var(--appdetails_game-stat-spacing) !important;
+	gap: var(--library_game-stat-spacing) !important;
 	margin-left: 14px !important;
 
 	flex-direction: column !important;

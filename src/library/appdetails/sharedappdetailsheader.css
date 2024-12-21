@@ -5,7 +5,7 @@
 }
 
 #BoxSizerContainer {
-	inset: var(--appdetails_body-spacing) !important;
+	inset: var(--library_body-spacing) !important;
 }
 
 #ImgBlur {
@@ -24,7 +24,7 @@
 	) !important;
 
 	width: 80% !important;
-	height: var(--appdetails_header-img-height) !important;
+	height: var(--library_header-img-height) !important;
 }
 
 #SVGTitle {
@@ -35,7 +35,7 @@
 	align-self: flex-start !important;
 
 	&::before {
-		content: var(--appdetails_game-name);
+		content: var(--library_game-name);
 
 		color: var(--blue-text) !important;
 		font-size: var(--font-size-large) !important;
@@ -48,24 +48,24 @@
 }
 
 #TitleSection {
-	padding: var(--appdetails_body-spacing) !important;
+	padding: var(--library_body-spacing) !important;
 
 	top: 0 !important;
 
 	&::before {
 		content: "";
 
-		width: var(--appdetails_icon-size);
-		height: var(--appdetails_icon-size);
+		width: var(--library_icon-size);
+		height: var(--library_icon-size);
 
-		background-image: var(--appdetails_game-icon);
+		background-image: var(--library_game-icon);
 		background-size: 100%;
-		margin-right: var(--appdetails_spacing) !important;
+		margin-right: var(--library_spacing) !important;
 	}
 }
 
 #TopCapsule {
-	height: var(--appdetails_header-img-height) !important;
+	height: var(--library_header-img-height) !important;
 
 	&#FallbackArt::before {
 		content: "";
@@ -75,6 +75,6 @@
 		height: 100%;
 
 		background-color: var(--blue-light);
-		mask: var(--appdetails_header-img-mask);
+		mask: var(--library_header-img-mask);
 	}
 }

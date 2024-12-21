@@ -1,23 +1,23 @@
-@import "../../shared/extends/appdetails.css";
+@import "../../shared/extends/library.css";
 
 #AppDetailsSection {
 	color: var(--blue-text) !important;
-	margin-bottom: var(--appdetails_spacing) !important;
+	margin-bottom: var(--library_spacing) !important;
 }
 
 #AppDetailsSectionContainer {
-	@extend %appdetails_section;
+	@extend %library_section;
 
 	box-shadow: none !important;
 	margin: 0 !important;
 }
 
 #Body {
-	padding: var(--appdetails_spacing) !important;
+	padding: var(--library_spacing) !important;
 }
 
 #ButtonContainer {
-	gap: var(--appdetails_spacing-x05) !important;
+	gap: var(--library_spacing-x05) !important;
 }
 
 #Highlight {
@@ -25,9 +25,9 @@
 	/* TODO: this has to be a var */
 	color: #273b5c !important;
 	font-size: var(--font-size) !important;
-	border-bottom: var(--appdetails_border) !important;
+	border-bottom: var(--library_border) !important;
 	border-radius: 0 !important;
 	box-shadow: none !important;
-	padding: var(--appdetails_spacing) !important;
+	padding: var(--library_spacing) !important;
 	margin: 0 !important;
 }

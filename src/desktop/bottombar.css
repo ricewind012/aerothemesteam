@@ -98,7 +98,7 @@
 #Status#Percentage {
 	@extend %parentheses;
 
-	opacity: var(--appdetails_secondary-text-opacity) !important;
+	opacity: var(--library_secondary-text-opacity) !important;
 	margin-left: var(--bottombar_spacing) !important;
 }
 

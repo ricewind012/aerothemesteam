@@ -3,14 +3,14 @@
 
 #Controls {
 	padding: 0 !important;
-	margin: var(--appdetails_spacing-x05) 0 !important;
+	margin: var(--library_spacing-x05) 0 !important;
 
 	max-height: unset !important;
 }
 
 #EmoticonButton {
 	background-color: transparent !important;
-	gap: var(--appdetails_spacing-x05) !important;
+	gap: var(--library_spacing-x05) !important;
 
 	width: unset !important;
 	height: unset !important;
@@ -47,7 +47,7 @@
 #PostButton {
 	@extend %button;
 
-	gap: var(--appdetails_spacing-x05) !important;
+	gap: var(--library_spacing-x05) !important;
 
 	display: flex !important;
 	align-items: center !important;

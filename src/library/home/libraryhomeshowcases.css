@@ -1,5 +1,5 @@
-@import "../../shared/extends/appdetails.css";
 @import "../../shared/extends/controls.css";
+@import "../../shared/extends/library.css";
 @import "../../shared/extends/style.css";
 
 #AddShowcase {
@@ -26,7 +26,7 @@
 
 #AddShowcaseRow {
 	margin: 0 !important;
-	margin-top: calc(var(--libraryhome_spacing) * -1) !important;
+	margin-top: calc(var(--library_spacing) * -1) !important;
 }
 
 #ChildrenContainer {
@@ -37,11 +37,11 @@
 }
 
 #CountDisplay {
-	opacity: var(--libraryhome_secondary-text-opacity) !important;
+	opacity: var(--library_secondary-text-opacity) !important;
 	color: inherit !important;
 	font-size: inherit !important;
 	line-height: 1 !important;
-	margin-left: var(--libraryhome_text-spacing) !important;
+	margin-left: var(--library_text-spacing) !important;
 }
 
 #Message {
@@ -50,7 +50,7 @@
 
 #Showcase {
 	border: none !important;
-	padding-top: var(--libraryhome_spacing) !important;
+	padding-top: var(--library_spacing) !important;
 }
 
 #ShowcaseArrow {
@@ -63,7 +63,7 @@
 }
 
 #ShowcaseGrid {
-	padding: var(--libraryhome_spacing) !important;
+	padding: var(--library_spacing) !important;
 }
 
 #ShowcaseHeader {

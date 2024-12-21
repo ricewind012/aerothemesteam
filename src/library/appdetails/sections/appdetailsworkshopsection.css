@@ -1,8 +1,8 @@
-@import "../../../shared/extends/appdetails.css";
+@import "../../../shared/extends/library.css";
 @import "../../../shared/extends/style.css";
 
 #ButtonContainer {
-	margin-top: calc(var(--appdetails_spacing) / -2) !important;
+	margin-top: calc(var(--library_spacing-x05) * -1) !important;
 
 	flex-wrap: wrap !important;
 }
@@ -12,7 +12,7 @@
 }
 
 #FeaturedItemDesc {
-	@extend %appdetails_description;
+	@extend %library_description;
 
 	max-width: unset !important;
 	-webkit-line-clamp: 4 !important;
@@ -36,7 +36,7 @@
 }
 
 #FeaturedItemName {
-	@extend %appdetails_header;
+	@extend %library_header;
 
 	margin: 0 !important;
 }

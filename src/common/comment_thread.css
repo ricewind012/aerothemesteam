@@ -4,10 +4,10 @@
 }
 
 #ButtonSpacer {
-	width: var(--appdetails_spacing-x05) !important;
+	width: var(--library_spacing-x05) !important;
 }
 
 #RatingBar {
 	opacity: 1 !important;
-	margin-top: var(--appdetails_spacing) !important;
+	margin-top: var(--library_spacing) !important;
 }

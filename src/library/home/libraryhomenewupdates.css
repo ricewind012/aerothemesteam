@@ -1,4 +1,4 @@
-@import "../../shared/extends/appdetails.css";
+@import "../../shared/extends/library.css";
 
 #EventOptions {
 	& > div {
@@ -7,14 +7,14 @@
 }
 
 #EventRowCarousel {
-	padding: var(--libraryhome_spacing) !important;
+	padding: var(--library_spacing) !important;
 	margin: 0 !important;
 }
 
 #EventTime {
-	@extend %appdetails_header;
+	@extend %library_header;
 
-	padding-bottom: var(--libraryhome_text-spacing) !important;
+	padding-bottom: var(--library_text-spacing) !important;
 }
 
 #EventSummaryContainer,
@@ -23,23 +23,23 @@
 }
 
 #PartnerEventRowCapsule {
-	margin-right: var(--libraryhome_spacing) !important;
+	margin-right: var(--library_spacing) !important;
 }
 
 #PartnerEventRowCapsule_TextCtn {
 	color: inherit !important;
 	padding: 0 !important;
-	margin-top: var(--libraryhome_text-spacing) !important;
+	margin-top: var(--library_text-spacing) !important;
 }
 
 #PartnerEventRowCapsule_TextTitle {
-	@extend %appdetails_description;
+	@extend %library_description;
 }
 
 #SettingsButton {
 	background-image: var(--icon-settings) !important;
 	margin: -2.5px 0 !important;
-	margin-left: var(--libraryhome_text-spacing) !important;
+	margin-left: var(--library_text-spacing) !important;
 
 	/* TODO: put somewhere else once I replace arrows */
 	svg {

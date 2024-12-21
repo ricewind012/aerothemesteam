@@ -1,4 +1,4 @@
-@import "../../shared/extends/appdetails.css";
+@import "../../shared/extends/library.css";
 @import "../../shared/extends/style.css";
 
 #Blur,
@@ -18,8 +18,8 @@
 	font-size: var(--font-size) !important;
 	border: none !important;
 	box-shadow: none !important;
-	margin: calc(var(--appdetails_spacing-x05) * -1) !important;
-	margin-top: calc(var(--appdetails_spacing) * -1) !important;
+	margin: calc(var(--library_spacing-x05) * -1) !important;
+	margin-top: calc(var(--library_spacing) * -1) !important;
 }
 
 #PartnerEventFeaturedHeader {
@@ -27,7 +27,7 @@
 
 	text-transform: unset !important;
 	line-height: unset !important;
-	margin-inline: calc(var(--appdetails_border-size) * -1) !important;
+	margin-inline: calc(var(--library_border-size) * -1) !important;
 }
 
 /* TODO: &_Container with scss */
@@ -38,12 +38,12 @@
 
 #PartnerEventLargeImage_Contents,
 #PartnerEventMediumImage_Contents {
-	padding: var(--appdetails_spacing) !important;
+	padding: var(--library_spacing) !important;
 }
 
 #PartnerEventLargeImage_Summary,
 #PartnerEventMediumImage_Summary {
-	opacity: var(--appdetails_secondary-text-opacity) !important;
+	opacity: var(--library_secondary-text-opacity) !important;
 	color: inherit !important;
 	font-size: inherit !important;
 	text-shadow: none !important;
@@ -64,7 +64,7 @@
 #PartnerEventTextOnly_Title,
 #PartnerEventLargeImage_Title,
 #PartnerEventMediumImage_Title {
-	@extend %appdetails_header;
+	@extend %library_header;
 
 	font-size: 10pt !important;
 	text-decoration: underline !important;
@@ -72,7 +72,7 @@
 }
 
 #PartnerEventType {
-	opacity: var(--appdetails_secondary-text-opacity) !important;
+	opacity: var(--library_secondary-text-opacity) !important;
 	color: inherit !important;
 	font-size: inherit !important;
 	font-weight: bold !important;

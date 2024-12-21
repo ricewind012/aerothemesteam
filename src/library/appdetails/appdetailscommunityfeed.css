@@ -8,5 +8,5 @@
 #LoadContentButton {
 	@extend %button;
 
-	margin: var(--appdetails_spacing) !important;
+	margin: var(--library_spacing) !important;
 }

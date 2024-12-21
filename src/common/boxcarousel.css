@@ -1,11 +1,11 @@
-@import "../shared/extends/appdetails.css";
+@import "../shared/extends/library.css";
 
 #BoxCarousel {
-	@extend %appdetails_section;
+	@extend %library_section;
 
 	margin: 0 !important;
 }
 
 #BoxCarouselContents {
-	--negative-margin: var(--libraryhome_spacing) !important;
+	--negative-margin: var(--library_spacing) !important;
 }

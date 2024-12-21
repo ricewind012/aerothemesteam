@@ -1,6 +1,6 @@
 #AchievementIconWrapper {
-	width: var(--appdetails_icon-size) !important;
-	height: var(--appdetails_icon-size) !important;
+	width: var(--library_icon-size) !important;
+	height: var(--library_icon-size) !important;
 }
 
 #Icon {

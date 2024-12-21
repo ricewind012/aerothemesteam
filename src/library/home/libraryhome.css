@@ -1,9 +1,3 @@
-:root {
-	--libraryhome_secondary-text-opacity: 0.5;
-	--libraryhome_spacing: 12px;
-	--libraryhome_text-spacing: 4px;
-}
-
 #Container {
 	background-color: var(--main-bg) !important;
 	background-image: none !important;
@@ -16,7 +10,7 @@
 #LibraryHome,
 #UpdatesContainer {
 	background-image: none !important;
-	padding: var(--libraryhome_spacing) !important;
+	padding: var(--library_spacing) !important;
 
 	height: unset !important;
 }

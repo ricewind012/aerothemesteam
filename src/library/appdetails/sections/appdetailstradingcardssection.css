@@ -1,23 +1,23 @@
-@import "../../../shared/extends/appdetails.css";
+@import "../../../shared/extends/library.css";
 
 #Badge {
 	margin: 0 !important;
-	margin-right: var(--appdetails_spacing) !important;
+	margin-right: var(--library_spacing) !important;
 
-	width: var(--appdetails_icon-size) !important;
-	height: var(--appdetails_icon-size) !important;
+	width: var(--library_icon-size) !important;
+	height: var(--library_icon-size) !important;
 
 	&#EmptyCircle {
-		@extend %appdetails_placeholder;
+		@extend %library_placeholder;
 	}
 }
 
 #BadgeLevel {
-	@extend %appdetails_description;
+	@extend %library_description;
 }
 
 #BadgeName {
-	@extend %appdetails_header;
+	@extend %library_header;
 }
 
 #CardsLeft {

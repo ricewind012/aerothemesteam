@@ -5,5 +5,5 @@
 #Title {
 	color: inherit !important;
 	font-size: var(--font-size) !important;
-	margin-left: var(--appdetails_spacing) !important;
+	margin-left: var(--library_spacing) !important;
 }

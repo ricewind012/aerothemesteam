@@ -1,27 +1,27 @@
-@import "../../shared/extends/appdetails.css";
+@import "../../shared/extends/library.css";
 
 #PlayNextSubHead {
-	@extend %appdetails_header;
+	@extend %library_header;
 
 	letter-spacing: 0 !important;
 
 	position: absolute !important;
-	top: var(--libraryhome_spacing) !important;
-	left: var(--libraryhome_spacing) !important;
+	top: var(--library_spacing) !important;
+	left: var(--library_spacing) !important;
 	z-index: 1 !important;
 }
 
 #PlayNextSuggestion {
-	margin-right: var(--libraryhome_spacing) !important;
+	margin-right: var(--library_spacing) !important;
 }
 
 #PlayNextSuggestionMediaContainer {
-	margin-top: var(--libraryhome_text-spacing) !important;
+	margin-top: var(--library_text-spacing) !important;
 }
 
 #PlayNextSuggestions {
-	padding: var(--libraryhome_spacing) !important;
-	padding-top: calc(var(--libraryhome_spacing) + 1lh) !important;
+	padding: var(--library_spacing) !important;
+	padding-top: calc(var(--library_spacing) + 1lh) !important;
 
 	height: unset !important;
 }

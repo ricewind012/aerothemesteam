@@ -3,17 +3,17 @@
 }
 
 #ColumnContainer {
-	padding: var(--appdetails_body-spacing) !important;
+	padding: var(--library_body-spacing) !important;
 	padding-top: 0 !important;
 }
 
 #LeftColumn {
 	/* shit layout */
-	width: calc(66% - var(--appdetails_spacing) / 2);
+	width: calc(66% - var(--library_spacing-x05));
 }
 
 #RightColumn {
-	margin-left: var(--appdetails_spacing) !important;
+	margin-left: var(--library_spacing) !important;
 }
 
 #Spotlights {

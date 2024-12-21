@@ -66,8 +66,8 @@ function PatchUIStore(popup: SteamPopup) {
 			? `data:image/${app.icon_data_format};base64,${app.icon_data}`
 			: iconFilePath;
 
-		doc.style.setProperty("--appdetails_game-icon", `url("${url}")`);
-		doc.style.setProperty("--appdetails_game-name", `"${app.display_name}"`);
+		doc.style.setProperty("--library_game-icon", `url("${url}")`);
+		doc.style.setProperty("--library_game-name", `"${app.display_name}"`);
 		logger.Log("Called CUIStore.SetGameListSelection(%o, %s)", section, appId);
 
 		return orig.call(this, section, appId);

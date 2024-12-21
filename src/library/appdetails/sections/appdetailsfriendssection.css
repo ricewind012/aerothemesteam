@@ -7,12 +7,12 @@
 #ShowMore {
 	@extend %button;
 
-	margin-top: var(--appdetails_spacing-x05) !important;
+	margin-top: var(--library_spacing-x05) !important;
 }
 
 #Subsection {
-	padding-bottom: var(--appdetails_spacing) !important;
-	margin-bottom: var(--appdetails_spacing) !important;
+	padding-bottom: var(--library_spacing) !important;
+	margin-bottom: var(--library_spacing) !important;
 }
 
 #SubsectionHeader {

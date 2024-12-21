@@ -3,7 +3,7 @@
 	margin: 0 !important;
 
 	.DialogDropDown {
-		margin-left: var(--libraryhome_text-spacing) !important;
+		margin-left: var(--library_text-spacing) !important;
 	}
 
 	.DialogDropDown_Arrow,

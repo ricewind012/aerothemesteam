@@ -1,5 +1,5 @@
-@import "../../../shared/extends/appdetails.css";
 @import "../../../shared/extends/controls.css";
+@import "../../../shared/extends/library.css";
 
 #AchievementProgressContainer {
 	@extend %progress-bar-outer;
@@ -13,19 +13,19 @@
 }
 
 #Additional {
-	padding: var(--appdetails_spacing) !important;
-	margin: 0 calc(var(--appdetails_spacing) * -1) !important;
+	padding: var(--library_spacing) !important;
+	margin: 0 calc(var(--library_spacing) * -1) !important;
 }
 
 #AdditionalItem:not(#RemainderContainer) {
 	box-shadow: inset -1px -1px #fff, inset 1px 1px #3c5678;
-	margin-right: var(--appdetails_spacing-x05) !important;
+	margin-right: var(--library_spacing-x05) !important;
 
 	height: unset !important;
 }
 
 #Desc {
-	@extend %appdetails_description;
+	@extend %library_description;
 
 	line-height: unset !important;
 
@@ -34,21 +34,21 @@
 
 #Featured {
 	background-color: #d1e1b9 !important;
-	border-bottom: var(--appdetails_border) !important;
-	padding: 0 var(--appdetails_spacing) !important;
-	margin: calc(var(--appdetails_spacing) * -1) !important;
+	border-bottom: var(--library_border) !important;
+	padding: 0 var(--library_spacing) !important;
+	margin: calc(var(--library_spacing) * -1) !important;
 	margin-bottom: 0 !important;
 }
 
 #Label {
-	opacity: var(--appdetails_secondary-text-opacity) !important;
+	opacity: var(--library_secondary-text-opacity) !important;
 	color: inherit !important;
 	font-size: var(--font-size-small) !important;
 	margin-bottom: 9px !important;
 }
 
 #Name {
-	@extend %appdetails_header;
+	@extend %library_header;
 }
 
 #Remainder {
@@ -57,8 +57,8 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: var(--appdetails_icon-size) !important;
-	height: var(--appdetails_icon-size) !important;
+	width: var(--library_icon-size) !important;
+	height: var(--library_icon-size) !important;
 }
 
 #RemainderContainer {
@@ -76,9 +76,9 @@
 }
 
 #UnachievedSection {
-	border-top: var(--appdetails_border) !important;
-	padding: var(--appdetails_spacing) !important;
-	margin: 0 calc(var(--appdetails_spacing) * -1) !important;
+	border-top: var(--library_border) !important;
+	padding: var(--library_spacing) !important;
+	margin: 0 calc(var(--library_spacing) * -1) !important;
 
 	#Additional {
 		padding-block: 0 !important;
@@ -90,6 +90,6 @@
 }
 
 #UnlockedLabelPercent {
-	opacity: var(--appdetails_secondary-text-opacity) !important;
+	opacity: var(--library_secondary-text-opacity) !important;
 	color: inherit !important;
 }
