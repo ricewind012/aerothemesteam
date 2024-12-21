@@ -1,5 +1,6 @@
-#ContentFrame {
-	margin: var(--border-size) !important;
+:root {
+	--steamdesktop_border-size: 1px;
+	--steamdesktop_window-size: calc(100% - var(--steamdesktop_border-size) * 2);
 }
 
 #FocusBar {
@@ -7,21 +8,15 @@
 }
 
 #OuterFrame {
-	--border-size: 1px;
-	--window-size: calc(100% - calc(var(--border-size) * 2));
+	gap: 2px !important;
+	margin: var(--steamdesktop_border-size) !important;
 
-	gap: var(--border-size) !important;
-	margin: var(--border-size) !important;
-
-	width: var(--window-size) !important;
-	height: var(--window-size) !important;
+	width: var(--steamdesktop_window-size) !important;
+	height: var(--steamdesktop_window-size) !important;
 }
 
 #Wrapper {
 	background-image: linear-gradient(0deg, transparent 96.5%, #82b4ff1a 100%),
 		linear-gradient(180deg, #293b53 0%, #112034 100%) !important;
-	border: 1px solid #060d14 !important;
-	/* TODO doesn't work for no reason, ofc
-	border-image: linear-gradient(180deg, #131b27, #060d14) 1;
-	*/
+	border: none !important;
 }

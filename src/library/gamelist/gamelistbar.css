@@ -1,17 +1,6 @@
 #Container {
-	background: transparent !important;
-
-	&::before {
-		content: "";
-
-		background-image: linear-gradient(180deg, #b8c5d9, #7e98bd);
-
-		position: absolute;
-		width: 100%;
-		height: 56px;
-
-		pointer-events: none;
-	}
+	background-color: transparent !important;
+	background-image: linear-gradient(0deg, #728fb7 88.41%, #c9d3e1 102.3%) !important;
 
 	& > .part {
 		order: -1;

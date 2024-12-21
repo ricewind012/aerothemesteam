@@ -10,10 +10,12 @@
 }
 
 #FriendIsPlaying {
+	--offset: 4px;
+
 	background-image: var(--icon-users) !important;
 
-	top: 4px !important;
-	left: 4px !important;
+	top: var(--offset) !important;
+	left: var(--offset) !important;
 	width: var(--icon-size) !important;
 	height: var(--icon-size) !important;
 
