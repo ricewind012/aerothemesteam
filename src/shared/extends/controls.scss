@@ -55,7 +55,7 @@
 
 %text-input {
 	background-color: #fff !important;
-	color: #000 !important;
+	color: var(--fg-main) !important;
 	font-size: var(--font-size) !important;
 	line-height: 18px !important;
 	border: var(--blue-border) !important;

@@ -151,7 +151,7 @@
 }
 
 #PlayBarDetailLabel {
-	color: #000 !important;
+	color: var(--fg-main) !important;
 	font-size: var(--font-size) !important;
 	line-height: 1 !important;
 }

@@ -22,22 +22,22 @@
 	& > div {
 		display: none !important;
 	}
-}
 
-#EmoticonButton::before {
-	content: "";
+	&::before {
+		content: "";
 
-	--icon: var(--icon-smiley);
+		--icon: var(--icon-smiley);
 
-	@extend %icon;
-}
+		@extend %icon;
+	}
 
-#EmoticonButton::after {
-	content: "";
+	&::after {
+		content: "";
 
-	background-color: var(--blue-text);
+		background-color: var(--blue-text);
 
-	@extend %arrow;
+		@extend %arrow;
+	}
 }
 
 #Label {
@@ -52,14 +52,14 @@
 	display: flex !important;
 	align-items: center !important;
 	width: unset !important;
-}
 
-#PostButton::before {
-	content: "";
+	&::before {
+		content: "";
 
-	--icon: var(--icon-blue-arrow);
+		--icon: var(--icon-blue-arrow);
 
-	@extend %icon;
+		@extend %icon;
+	}
 }
 
 #PostTextEntryArea {

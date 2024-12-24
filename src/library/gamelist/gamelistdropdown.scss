@@ -4,7 +4,7 @@
 #Arrow {
 	@extend %arrow;
 
-	background-color: #000 !important;
+	background-color: var(--fg-main) !important;
 }
 
 #Bar {
@@ -16,6 +16,7 @@
 
 #CheckboxWithImage {
 	@extend %white-gradient;
+
 	border: 1px solid transparent !important;
 	padding: 2px 3px !important;
 	margin: 0 !important;
@@ -40,10 +41,7 @@
 	&::before {
 		content: "";
 
-		width: var(--icon-size);
-		height: var(--icon-size);
-
-		background-image: var(--icon) !important;
+		@extend %icon;
 	}
 
 	&:nth-last-child(3) {

@@ -2,7 +2,6 @@
 	--collapseicon_bg: #b5c7e9;
 	--collapseicon_border-1: #9dabc1;
 	--collapseicon_border-2: #354962;
-	--collapseicon_deg: 135deg;
 	--collapseicon_size: 11px;
 }
 
@@ -11,7 +10,7 @@
 	--icon-size: 5px 2px;
 
 	background-image: linear-gradient(
-		var(--collapseicon_deg),
+		135deg,
 		transparent,
 		var(--collapseicon_bg)
 	) !important;
@@ -41,7 +40,7 @@
 	}
 
 	&:active {
-		--collapseicon_deg: 330deg;
+		transform: rotate(180deg);
 	}
 
 	&#Collapsed {

@@ -18,7 +18,9 @@
 }
 
 #AdditionalItem:not(#RemainderContainer) {
-	box-shadow: inset -1px -1px #fff, inset 1px 1px #3c5678;
+	box-shadow:
+		inset -1px -1px #fff,
+		inset 1px 1px #3c5678;
 	margin-right: var(--library_spacing-x05) !important;
 
 	height: unset !important;

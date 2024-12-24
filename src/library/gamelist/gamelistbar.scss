@@ -1,6 +1,10 @@
 #Container {
 	background-color: transparent !important;
-	background-image: linear-gradient(0deg, #728fb7 88.41%, #c9d3e1 102.3%) !important;
+	background-image: linear-gradient(
+		0deg,
+		#728fb7 88.41%,
+		#c9d3e1 102.3%
+	) !important;
 
 	& > .part {
 		order: -1;
@@ -8,11 +12,13 @@
 }
 
 #GameListHomeAndSearch {
+	--border-size: 1px;
+
 	background-color: transparent !important;
 	box-shadow: none !important;
 	padding: 0 !important;
-	gap: 1px !important;
-	margin-top: 1px !important;
+	gap: var(--border-size) !important;
+	margin-top: var(--border-size) !important;
 
 	flex-direction: column !important;
 	height: unset !important;

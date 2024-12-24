@@ -6,8 +6,8 @@
 	--library_header-img-height: 163px;
 	--library_header-img-mask: radial-gradient(
 		55.62% 83.6% at 35.73% 0%,
-		#fff 0%,
-		rgba(255, 255, 255, 0) 100%
+		var(--bg-main) 0%,
+		transparent 100%
 	);
 	--library_icon-size: 32px;
 	--library_secondary-text-opacity: 0.5;

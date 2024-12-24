@@ -24,16 +24,16 @@
 
 #PartnerEventRowCapsule {
 	margin-right: var(--library_spacing) !important;
-}
 
-#PartnerEventRowCapsule_TextCtn {
-	color: inherit !important;
-	padding: 0 !important;
-	margin-top: var(--library_text-spacing) !important;
-}
+	&_TextCtn {
+		color: inherit !important;
+		padding: 0 !important;
+		margin-top: var(--library_text-spacing) !important;
+	}
 
-#PartnerEventRowCapsule_TextTitle {
-	@extend %library_description;
+	&_TextTitle {
+		@extend %library_description;
+	}
 }
 
 #SettingsButton {
