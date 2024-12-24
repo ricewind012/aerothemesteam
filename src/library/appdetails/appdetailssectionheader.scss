@@ -1,4 +1,4 @@
-@import "../../shared/extends/style.css";
+@use "../../shared/extends/style";
 
 #SectionHeader {
 	@extend %section-header;

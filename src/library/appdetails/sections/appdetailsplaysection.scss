@@ -1,5 +1,5 @@
-@import "../../../shared/extends/controls.css";
-@import "../../../shared/extends/style.css";
+@use "../../../shared/extends/controls";
+@use "../../../shared/extends/style";
 
 %_details-section {
 	gap: var(--library_text-spacing) !important;
@@ -9,15 +9,10 @@
 	flex-direction: row !important;
 	align-items: center !important;
 
-	/* TODO: scss - nesting & @extend icon */
 	&::before {
 		content: "";
 
-		background-image: var(--icon);
-		background-size: var(--icon-size);
-
-		width: var(--icon-size);
-		height: var(--icon-size);
+		@extend %icon;
 	}
 }
 
@@ -42,12 +37,8 @@
 #Container {
 	position: absolute !important;
 	top: calc(
-		var(--library_header-img-height) *
-		-1 +
-		var(--library_body-spacing) *
-		2 +
-		1lh +
-		9px
+		var(--library_header-img-height) * -1 + var(--library_body-spacing) * 2 +
+			1lh + 9px
 	) !important;
 
 	svg * {
@@ -119,7 +110,9 @@
 
 #InnerContainer {
 	padding: 0 var(--library_body-spacing) !important;
-	margin-left: calc(var(--library_icon-size) + var(--library_spacing)) !important;
+	margin-left: calc(
+		var(--library_icon-size) + var(--library_spacing)
+	) !important;
 }
 
 #MenuButton {
@@ -146,11 +139,10 @@
 	.SVGIcon_Settings {
 		--icon: var(--icon-settings);
 	}
-}
 
-/* TODO: scss - nesting */
-#MenuButton svg {
-	@extend %icon;
+	svg {
+		@extend %icon;
+	}
 }
 
 #PlayBar {

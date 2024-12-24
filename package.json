@@ -9,10 +9,8 @@
 		"@types/react": "^18.3.10",
 		"@types/react-dom": "^18.3.0",
 		"millennium-lib": "^3.5.6",
-		"postcss-extend": "^1.0.5",
 		"postcss-functions": "^4.0.2",
-		"postcss-import": "^16.1.0",
-		"steam-theming-utils": "^2.0.2",
+		"steam-theming-utils": "file:/tmp/steam-theming-utils-2.0.2.tgz",
 		"tslib": "^2.7.0"
 	}
 }

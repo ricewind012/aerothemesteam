@@ -1,5 +1,5 @@
-@import "../../shared/extends/controls.css";
-@import "../../shared/extends/style.css";
+@use "../../shared/extends/controls";
+@use "../../shared/extends/style";
 
 #ButtonChild {
 	@extend %button;
@@ -16,30 +16,29 @@
 		border-top-right-radius: 0 !important;
 		border-bottom-right-radius: 0 !important;
 	}
-}
 
-/* TODO: scss - nesting */
-#PlayButton svg {
-	@extend %icon;
+	svg {
+		@extend %icon;
 
-	margin-right: 6px !important;
+		margin-right: 6px !important;
 
-	/* TODO: refactor - move these somewhere one day */
-	&.SVGIcon_Download {
-		--icon: var(--icon-download);
-	}
+		/* TODO: refactor - move these somewhere one day */
+		&.SVGIcon_Download {
+			--icon: var(--icon-download);
+		}
 
-	&.SVGIcon_Play {
-		--icon: var(--icon-play);
-	}
+		&.SVGIcon_Play {
+			--icon: var(--icon-play);
+		}
 
-	&.SVGIcon_Pause,
-	&.SVGIcon_X_Line {
-		--icon: var(--icon-cancel);
-	}
+		&.SVGIcon_Pause,
+		&.SVGIcon_X_Line {
+			--icon: var(--icon-cancel);
+		}
 
-	&:not(.SVGIcon_Button) {
-		--icon: var(--icon-update);
+		&:not(.SVGIcon_Button) {
+			--icon: var(--icon-update);
+		}
 	}
 }
 
@@ -62,12 +61,11 @@
 
 	width: var(--size) !important;
 	height: var(--size) !important;
-}
 
-/* TODO: scss - nesting */
-#StreamingSelector svg {
-	/* TODO: fix arrow image */
-	@extend %arrow;
+	svg {
+		/* TODO: fix arrow image */
+		@extend %arrow;
 
-	background-color: var(--blue-text) !important;
+		background-color: var(--blue-text) !important;
+	}
 }

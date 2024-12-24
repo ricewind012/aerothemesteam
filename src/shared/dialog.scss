@@ -1,18 +1,17 @@
-@import "./extends/controls.css";
+@use "./extends/controls";
 
 .DialogButton {
 	@extend %button;
 
 	box-shadow: none !important;
 
+	&:is(:disabled, .Disabled) {
+		@extend %button-disabled;
+	}
+
 	&::before {
 		display: none !important;
 	}
-}
-
-/* TODO: scss @extend */
-.DialogButton:is(:disabled, .Disabled) {
-	@extend %button-disabled;
 }
 
 .DialogDropDown {

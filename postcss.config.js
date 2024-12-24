@@ -1,8 +1,5 @@
 import fs from "node:fs";
 import path from "node:path";
-
-import postcssImport from "postcss-import";
-import postcssExtend from "postcss-extend";
 import postcssFunctions from "postcss-functions";
 
 /**
@@ -18,16 +15,13 @@ function icon(name) {
 }
 
 /** @type {import("postcss-load-config").Config} */
-const config = {
+export default {
+	map: false,
 	plugins: [
 		postcssFunctions({
 			functions: {
 				icon,
 			},
 		}),
-		postcssImport,
-		postcssExtend,
 	],
 };
-
-export default config;

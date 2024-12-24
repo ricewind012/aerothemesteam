@@ -1,5 +1,5 @@
-@import "../../shared/extends/controls.css";
-@import "../../shared/extends/style.css";
+@use "../../shared/extends/controls";
+@use "../../shared/extends/style";
 
 #Controls {
 	padding: 0 !important;

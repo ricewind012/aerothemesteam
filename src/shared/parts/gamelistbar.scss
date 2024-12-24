@@ -1,4 +1,4 @@
-@import "../extends/style.css";
+@use "../extends/style";
 
 .game-list-filter-status {
 	@extend %section-header;

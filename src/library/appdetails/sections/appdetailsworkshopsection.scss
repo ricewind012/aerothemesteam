@@ -1,5 +1,5 @@
-@import "../../../shared/extends/library.css";
-@import "../../../shared/extends/style.css";
+@use "../../../shared/extends/library";
+@use "../../../shared/extends/style";
 
 #ButtonContainer {
 	margin-top: calc(var(--library_spacing-x05) * -1) !important;

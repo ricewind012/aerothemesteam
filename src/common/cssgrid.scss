@@ -1,4 +1,4 @@
-@import "../shared/extends/library.css";
+@use "../shared/extends/library";
 
 #Container {
 	@extend %library_section;

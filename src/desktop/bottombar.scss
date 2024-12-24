@@ -1,5 +1,5 @@
-@import "../shared/extends/controls.css";
-@import "../shared/extends/style.css";
+@use "../shared/extends/controls";
+@use "../shared/extends/style";
 
 :root {
 	--bottombar_spacing: 4px;
@@ -74,11 +74,10 @@
 
 	/* Align with icons */
 	margin-block: -1px !important;
-}
 
-/* TODO: scss - nesting */
-#ProgressBar::after {
-	@extend %progress-bar-inner;
+	&::after {
+		@extend %progress-bar-inner;
+	}
 }
 
 #ProgressBarWrapper {
@@ -92,14 +91,13 @@
 	color: var(--blue-text) !important;
 
 	flex-grow: 0 !important;
-}
 
-/* TODO: scss - nesting */
-#Status#Percentage {
-	@extend %parentheses;
+	&#Percentage {
+		@extend %parentheses;
 
-	opacity: var(--library_secondary-text-opacity) !important;
-	margin-left: var(--bottombar_spacing) !important;
+		opacity: var(--library_secondary-text-opacity) !important;
+		margin-left: var(--bottombar_spacing) !important;
+	}
 }
 
 #Text,

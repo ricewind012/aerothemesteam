@@ -1,11 +1,15 @@
-@import "../../shared/extends/controls.css";
-@import "../../shared/extends/library.css";
-@import "../../shared/extends/style.css";
+@use "../../shared/extends/controls";
+@use "../../shared/extends/library";
+@use "../../shared/extends/style";
 
 #AddShowcase {
 	@extend %button;
 
 	opacity: 1 !important;
+
+	&#Disabled {
+		@extend %button-disabled;
+	}
 
 	svg {
 		width: var(--icon-size) !important;
@@ -17,11 +21,6 @@
 		stroke: var(--blue-text) !important;
 		stroke-width: 16px !important;
 	}
-}
-
-/* TODO: scss - nesting */
-#AddShowcase#Disabled {
-	@extend %button-disabled;
 }
 
 #AddShowcaseRow {

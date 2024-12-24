@@ -1,5 +1,5 @@
-@import "../../../shared/extends/controls.css";
-@import "../../../shared/extends/library.css";
+@use "../../../shared/extends/controls";
+@use "../../../shared/extends/library";
 
 #ActivityFeedContainer {
 	max-width: unset !important;

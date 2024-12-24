@@ -1,5 +1,5 @@
-@import "../../shared/extends/controls.css";
-@import "../../shared/extends/style.css";
+@use "../../shared/extends/controls";
+@use "../../shared/extends/style";
 
 #AdvancedSearchButton {
 	@extend %button;
@@ -8,16 +8,15 @@
 
 	min-width: unset !important;
 
+	& > div {
+		--icon: var(--icon-settings);
+
+		@extend %icon;
+	}
+
 	svg {
 		display: none !important;
 	}
-}
-
-/* TODO: scss - nesting */
-#AdvancedSearchButton > div {
-	--icon: var(--icon-settings);
-
-	@extend %icon;
 }
 
 #AdvancedSearchContainer {
