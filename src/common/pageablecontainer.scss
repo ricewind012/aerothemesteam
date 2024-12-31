@@ -9,7 +9,8 @@
 }
 
 #PageClickContainer {
-	margin: -2.5px -6px !important;
+	margin: calc(var(--library_section-header-spacing-y) * -1)
+		calc(var(--library_section-header-spacing-x) * -1) !important;
 	margin-left: auto !important;
 }
 

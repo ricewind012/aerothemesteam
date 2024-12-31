@@ -1,0 +1,79 @@
+@use "../shared/extends/library";
+
+#AppGridSectionFooter {
+	display: none !important;
+}
+
+#AppGridSectionHeader {
+	padding: 0 !important;
+	margin: var(--library_spacing) !important;
+	margin-bottom: 0 !important;
+
+	transform: none !important;
+}
+
+#AppGridSectionLabel,
+#SortingDropDownLabel {
+	color: var(--blue-text) !important;
+	font-size: var(--font-size) !important;
+	text-transform: none !important;
+	letter-spacing: 0 !important;
+	margin: 0 !important;
+	margin-right: var(--library_text-spacing) !important;
+}
+
+#CollectionOptions {
+	padding: var(--library_spacing) !important;
+}
+
+#CollectionOptionsRightJustified {
+	display: none !important;
+}
+
+#EmptyGridMessageContainer {
+	@extend %library_placeholder;
+
+	margin: var(--library_spacing) !important;
+}
+
+#EmptyGridMessageLine {
+	color: var(--blue-text) !important;
+	font-size: var(--font-size) !important;
+	margin: 0 !important;
+}
+
+#GridWithControls {
+	@extend %library_section;
+
+	padding: 0 !important;
+
+	.CSSGrid_Measure + div {
+		all: unset !important;
+	}
+}
+
+#Rule {
+	background-image: linear-gradient(
+		0deg,
+		var(--library_border-color),
+		var(--library_border-color)
+	) !important;
+	margin: 0 !important;
+}
+
+#SortingDropDown {
+	font-size: inherit !important;
+	margin: 0 !important;
+
+	align-items: center;
+
+	.DialogDropDown {
+		margin-left: 0 !important;
+	}
+
+	.DialogDropDown_Arrow,
+	.DialogDropDown_CurrentDisplay {
+		border-radius: 0 !important;
+		padding: 0 !important;
+	}
+}

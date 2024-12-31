@@ -7,10 +7,16 @@
 	--bg-main: #fff;
 	--fg-main: #000;
 
-	--font-size-large: 18pt;
+	--font-size-xlarge: 18pt;
+	--font-size-large: 12pt;
 	--font-size: 9pt;
 	--font-size-small: 8pt;
 
+	--anim-time: 150ms;
 	--border-radius: 2px;
 	--icon-size: 16px;
+
+	@media (prefers-reduced-motion: reduced) {
+		--anim-time: 0ms;
+	}
 }

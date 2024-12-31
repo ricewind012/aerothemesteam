@@ -9,6 +9,7 @@
 	opacity: var(--library_secondary-text-opacity) !important;
 	border: 2px dashed var(--blue-text) !important;
 	border-radius: 0 !important;
+	padding: var(--library_spacing) !important;
 }
 
 %library_header {

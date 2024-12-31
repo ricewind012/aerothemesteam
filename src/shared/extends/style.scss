@@ -57,10 +57,11 @@
 			var(--blue-light),
 			var(--blue-dark),
 			var(--blue-light)
-		), var(--white-gradient);
+		),
+		var(--white-gradient);
 
-    background-color: transparent !important;
-    background-image: var(--blue-bar-gradient) !important;
+	background-color: transparent !important;
+	background-image: var(--blue-bar-gradient) !important;
 	padding: 7px 12px !important;
 }
 
@@ -77,5 +78,6 @@
 	font-size: var(--font-size-small) !important;
 	font-weight: bold !important;
 	border: 1px solid #9cb1ca !important;
-	padding: 2.5px 6px !important;
+	padding: var(--library_section-header-spacing-y)
+		var(--library_section-header-spacing-x) !important;
 }

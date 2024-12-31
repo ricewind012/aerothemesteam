@@ -1,7 +1,7 @@
 #MoreInfoIcon {
 	background-color: transparent !important;
 	background-image: var(--icon-help) !important;
-	margin: -2.5px !important;
+	margin: calc(var(--library_section-header-spacing-y) * -1) !important;
 }
 
 #MoreInfoIconQuestionMark {
