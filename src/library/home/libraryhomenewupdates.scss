@@ -11,28 +11,59 @@
 	margin: 0 !important;
 }
 
+#EventSummaryContainer {
+	border-radius: calc(var(--border-radius) * 2) !important;
+}
+
 #EventTime {
 	@extend %library_header;
 
 	padding-bottom: var(--library_text-spacing) !important;
 }
 
-#EventSummaryContainer,
-#PartnerEventRowCapsule_MainImageContainer {
-	border-radius: calc(var(--border-radius) * 2) !important;
+#GameIcon {
+	margin-right: var(--library_text-spacing) !important;
+
+	width: var(--icon-size) !important;
+	height: var(--icon-size) !important;
+}
+
+// TODO: %library_header-secondary idk
+// TODO: filter: brightness(1.2); on hover
+#GameIconAndName {
+	background-color: transparent !important;
+	font-size: var(--font-size) !important;
+	font-weight: bold !important;
+	padding: 0 !important;
+	margin-top: var(--library_spacing-x05) !important;
+
+	align-items: center;
+}
+
+#GameName {
+	opacity: var(--library_secondary-text-opacity) !important;
+	color: inherit !important;
 }
 
 #PartnerEventRowCapsule {
 	margin-right: var(--library_spacing) !important;
 
+	&_MainImageContainer {
+		border-radius: calc(var(--border-radius) * 2) !important;
+	}
+
 	&_TextCtn {
 		color: inherit !important;
 		padding: 0 !important;
-		margin-top: var(--library_text-spacing) !important;
+		margin-top: var(--library_spacing-x05) !important;
 	}
 
+	// TODO: %library_header-primary idk
 	&_TextTitle {
-		@extend %library_description;
+		@extend %library_header;
+
+		font-size: 10pt !important;
+		text-decoration: underline !important;
 	}
 }
 
