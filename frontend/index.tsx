@@ -5,6 +5,19 @@ import * as parts from "./parts";
 import { CLog } from "./logger";
 import { classes, waitForElement } from "./shared";
 import type { SteamPopup } from "./types/sharedjscontext/normal";
+import type { GameListChangeEvent } from "./gamelistchangeevent";
+
+declare global {
+	const appStore: any;
+	const appDetailsStore: any;
+	const badgeStore: any;
+	const collectionStore: any;
+	const MainWindowBrowserManager: any;
+	const SteamUIStore: any;
+	const StoreItemCache: any;
+	const uiStore: any;
+	const urlStore: any;
+}
 
 interface ComponentToRender {
 	normalClassName: string;
@@ -46,17 +59,25 @@ function AddPopupCreatedCallback(
 	});
 }
 
+/**
+ * Intercepts the function that's called upon a selected game change in the library.
+ */
 function PatchUIStore(popup: SteamPopup) {
 	if (popup.m_strName !== MAIN_WINDOW_NAME) {
 		return;
 	}
 
-	const store = window.uiStore;
+	const store = uiStore;
 	const orig = store.SetGameListSelection;
 	const logger = new CLog("PatchUIStore");
 	const doc = popup.m_popup.document.documentElement;
 
 	store.SetGameListSelection = async function (section: string, appId: number) {
+		const ev = new CustomEvent<GameListChangeEvent>("game-list-change", {
+			detail: { appid: appId },
+		});
+		window.dispatchEvent(ev);
+
 		const app = appStore.GetAppOverviewByAppID(appId);
 		const iconFilePath = urlStore.BuildCachedLibraryAssetURL(
 			appId,
@@ -88,14 +109,22 @@ export default async function PluginMain() {
 					component: <parts.GameListBar />,
 				},
 				{
-					normalClassName: "supernav_SuperNav",
-					className: classes.supernav.SuperNav,
-					component: <parts.SuperNav />,
+					normalClassName: "steamdesktop_OuterFrame",
+					className: classes.steamdesktop.OuterFrame,
+					// @ts-ignore fuck off
+					component: <parts.SteamDesktop />,
+				},
+				{
+					normalClassName: "titlebarcontrols_TitleBarControls",
+					className: classes.titlebarcontrols.TitleBarControls,
+					// @ts-ignore fuck off
+					component: <parts.TitleBarControls />,
 				},
 			],
 		},
 	];
 	for (const { popupName, parts } of components) {
+		const name = LocalizationManager.LocalizeString(popupName);
 		const onPopupCreated = (popup: SteamPopup) => {
 			const doc = popup.m_popup.document;
 			const wnd = popup.m_popup;
@@ -105,7 +134,6 @@ export default async function PluginMain() {
 				doc.documentElement.style.setProperty(`--${token}`, `'${localized}'`);
 			}
 
-			const name = LocalizationManager.LocalizeIfToken(popupName);
 			if (popup.m_strTitle !== name) {
 				return;
 			}
@@ -124,7 +152,7 @@ export default async function PluginMain() {
 			}
 		};
 
-		AddPopupCreatedCallback(popupName, onPopupCreated);
+		AddPopupCreatedCallback(MAIN_WINDOW_NAME, onPopupCreated);
 	}
 
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, PatchUIStore);

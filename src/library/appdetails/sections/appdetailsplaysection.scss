@@ -115,36 +115,6 @@
 	) !important;
 }
 
-#MenuButton {
-	@extend %button;
-
-	/* TODO: %icon-button ? */
-	--size: 26px;
-
-	padding: 0 !important;
-
-	width: var(--size);
-	height: var(--size);
-
-	/* TODO: refactor - move these somewhere one day */
-	/* #Favorited */
-	&#FavoriteButton {
-		--icon: var(--icon-star);
-	}
-
-	.SVGIcon_Information {
-		--icon: var(--icon-info);
-	}
-
-	.SVGIcon_Settings {
-		--icon: var(--icon-settings);
-	}
-
-	svg {
-		@extend %icon;
-	}
-}
-
 #PlayBar {
 	background: none !important;
 	margin: 0 !important;
@@ -182,8 +152,7 @@
 }
 
 #RightControls {
-	position: absolute !important;
-	right: var(--library_body-spacing) !important;
+	display: none !important;
 }
 
 #StatusAndStats {

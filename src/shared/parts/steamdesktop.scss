@@ -1,0 +1,119 @@
+@use "../extends/style";
+
+.ribbon-button {
+	gap: 4px;
+
+	display: flex;
+	align-items: center;
+	flex-direction: var(--direction);
+	flex-grow: 1;
+}
+
+.ribbon-button-container {
+	display: flex;
+	align-items: center;
+	flex-direction: var(--direction);
+}
+
+.ribbon-button-arrow {
+	mask: var(--icon);
+	mask-position: 100% center;
+	mask-size: 4px 7px;
+	mask-repeat: no-repeat;
+	background-color: var(--blue-text);
+
+	width: 8px;
+	height: 100%;
+
+	&.vertical {
+		mask-position: center 100%;
+		mask-size: 7px 4px;
+
+		width: 100%;
+		height: 8px;
+	}
+}
+
+.ribbon-button-container {
+	--direction: row;
+	--icon: var(--icon-arrow-right);
+
+	justify-content: space-between;
+	cursor: pointer;
+
+	&.disabled {
+		pointer-events: none;
+	}
+
+	&.vertical {
+		--direction: column;
+		--icon: var(--icon-arrow-bottom);
+		--icon-size: 32px;
+	}
+}
+
+.ribbon-section {
+	--shd: 1px 1px var(--shadow-color);
+
+	font-size: var(--font-size-small);
+	border: 1px solid #8198b9;
+	border-radius: var(--border-radius);
+	box-shadow:
+		var(--shd),
+		inset var(--shd);
+
+	display: flex;
+	flex-direction: column;
+}
+
+.ribbon-section-body {
+	--max-item-count: 3;
+	--gap-y: 5px;
+	--padding-y: 6px;
+	--spacing-x: 10px;
+
+	color: var(--blue-text);
+	gap: var(--gap-y) var(--spacing-x);
+	padding: var(--padding-y) var(--spacing-x);
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	max-height: calc(
+		var(--gap-y) * (var(--max-item-count) - 1) + var(--padding-y) * 2 +
+			var(--icon-size) * var(--max-item-count)
+	);
+}
+
+.ribbon-section-title {
+	--spacing: 1.5px;
+
+	background-image: linear-gradient(0deg, #6a89b3, #a2b6d2);
+	color: #fff;
+	text-align: center;
+	padding: var(--spacing) calc(var(--spacing) * 2);
+}
+
+.ribbon-sections-container {
+	@extend %white-gradient;
+
+	--shadow-color: rgba(255, 255, 255, 0.5);
+	--spacing: 2px;
+	--wg-opacity-1: 0.575;
+	--wg-opacity-2: 0.15;
+	--wg-size: 26px;
+
+	background-image: linear-gradient(
+			0deg,
+			#bdd1ea 14.1%,
+			#93b0d5 84.62%,
+			#506580 156.7%
+		),
+		var(--white-gradient);
+	box-shadow: inset 0 0 9.3px var(--shadow-color);
+	border-radius: var(--border-radius-large);
+	gap: var(--spacing);
+	padding: var(--spacing);
+
+	display: flex;
+}

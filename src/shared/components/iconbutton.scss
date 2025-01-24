@@ -1,5 +1,7 @@
 .icon-button {
 	background-image: var(--icon);
+	background-position: center;
+	background-repeat: no-repeat;
 
 	width: var(--icon-size);
 	height: var(--icon-size);

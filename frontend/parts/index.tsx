@@ -1,4 +1,5 @@
 import { GameListBar } from "./gamelistbar";
-import { SuperNav } from "./supernav";
+import { SteamDesktop } from "./steamdesktop";
+import { TitleBarControls } from "./titlebarcontrols";
 
-export { GameListBar, SuperNav };
+export { GameListBar, SteamDesktop, TitleBarControls };

@@ -2,7 +2,7 @@
 
 #EventOptions {
 	& > div {
-		border-radius: calc(var(--border-radius) * 2) !important;
+		border-radius: var(--border-radius-large) !important;
 	}
 }
 
@@ -12,7 +12,7 @@
 }
 
 #EventSummaryContainer {
-	border-radius: calc(var(--border-radius) * 2) !important;
+	border-radius: var(--border-radius-large) !important;
 }
 
 #EventTime {
@@ -28,8 +28,10 @@
 	height: var(--icon-size) !important;
 }
 
-// TODO: %library_header-secondary idk
-// TODO: filter: brightness(1.2); on hover
+/* TODO:
+ * %library_header-secondary idk
+ * filter: brightness(1.2); on hover
+ */
 #GameIconAndName {
 	background-color: transparent !important;
 	font-size: var(--font-size) !important;
@@ -49,7 +51,7 @@
 	margin-right: var(--library_spacing) !important;
 
 	&_MainImageContainer {
-		border-radius: calc(var(--border-radius) * 2) !important;
+		border-radius: var(--border-radius-large) !important;
 	}
 
 	&_TextCtn {

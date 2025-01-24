@@ -1,20 +1,20 @@
 import { Component, type CSSProperties, type HTMLAttributes } from "react";
 
 interface IconButtonProps {
-	strIconName: string;
+	name: string;
 }
 
 export class IconButton extends Component<
 	IconButtonProps & HTMLAttributes<HTMLDivElement>
 > {
 	render() {
-		const { strIconName } = this.props;
+		const { name } = this.props;
 
 		return (
 			<div
 				{...this.props}
 				className="icon-button"
-				style={{ "--icon": `var(--icon-${strIconName})` } as CSSProperties}
+				style={{ "--icon": `var(--icon-${name})` } as CSSProperties}
 			/>
 		);
 	}

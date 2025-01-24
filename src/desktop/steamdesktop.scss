@@ -1,6 +1,11 @@
 :root {
 	--steamdesktop_border-size: 1px;
+	--steamdesktop_spacing: 2px;
 	--steamdesktop_window-size: calc(100% - var(--steamdesktop_border-size) * 2);
+}
+
+#DragArea {
+	display: none !important;
 }
 
 #FocusBar {
@@ -8,11 +13,53 @@
 }
 
 #OuterFrame {
-	gap: 2px !important;
+	gap: var(--steamdesktop_spacing) !important;
 	margin: var(--steamdesktop_border-size) !important;
 
 	width: var(--steamdesktop_window-size) !important;
 	height: var(--steamdesktop_window-size) !important;
+
+	& > .part {
+		order: -1;
+	}
+}
+
+#RootMenuBar {
+	display: none !important;
+}
+
+#SuperNavBar {
+	padding: 0 !important;
+
+	overflow: hidden !important;
+	height: unset !important;
+	min-height: unset !important;
+}
+
+#TitleBar {
+	width: unset !important;
+}
+
+#TopBar {
+	background-color: transparent !important;
+	box-shadow: none !important;
+	margin-bottom: calc(var(--steamdesktop_spacing) * -1) !important;
+
+	order: -1 !important;
+	flex-direction: row-reverse !important;
+	justify-content: space-between !important;
+}
+
+#URLBarReplacement {
+	display: none !important;
+}
+
+#WindowControls {
+	flex: unset !important;
+
+	.title-area {
+		position: unset !important;
+	}
 }
 
 #Wrapper {
