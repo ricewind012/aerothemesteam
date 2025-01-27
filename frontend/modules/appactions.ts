@@ -1,4 +1,4 @@
-import { findModuleByExport } from "millennium-lib";
+import { findModuleByExport } from "@steambrew/client";
 
 const vecAppActionsExports: any[] = Object.values(
 	findModuleByExport((e) => e.toString?.().includes("BIsAppBlocked()")),

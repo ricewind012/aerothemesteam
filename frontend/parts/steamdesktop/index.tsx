@@ -1,4 +1,4 @@
-import { findModuleByExport, showModal } from "millennium-lib";
+import { findModuleByExport, showModal } from "@steambrew/client";
 
 import { PartComponentBase } from "../../shared";
 import {

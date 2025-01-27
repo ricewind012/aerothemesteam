@@ -1,4 +1,4 @@
-import { showContextMenu, sleep } from "millennium-lib";
+import { showContextMenu, sleep } from "@steambrew/client";
 
 import { classes } from "../../shared";
 import { RibbonButton, RibbonGameSectionButton } from "./ribbon";

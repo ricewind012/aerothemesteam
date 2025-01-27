@@ -1,9 +1,9 @@
 {
 	"type": "module",
 	"scripts": {
-		"build": "npm run build:css && npm run build:ts",
+		"build": "millennium-ttc --build prod",
 		"build:css": "rm -rf dist && mkdir -p dist && npx postcss --verbose src --base src --dir dist --ext css",
-		"build:ts": "millennium-ttc --build dev"
+		"build:ts-dev": "millennium-ttc --build dev"
 	},
 	"devDependencies": {
 		"@csstools/postcss-sass": "^5.1.1",
@@ -12,9 +12,9 @@
 		"steam-theming-utils": "^3.1.1"
 	},
 	"dependencies": {
+		"@steambrew/client": "^4.2.1",
+		"@steambrew/ttc": "^1.0.5",
 		"@types/react": "^18.3.10",
-		"@types/react-dom": "^18.3.0",
-		"millennium-lib": "^3.5.6",
-		"tslib": "^2.7.0"
+		"@types/react-dom": "^18.3.0"
 	}
 }

@@ -1,4 +1,4 @@
-import { findModuleExport } from "millennium-lib";
+import { findModuleExport } from "@steambrew/client";
 
 export const GetAppMobileCategories: (
 	overview: any,

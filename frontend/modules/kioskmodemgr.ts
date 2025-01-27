@@ -1,4 +1,4 @@
-import { findModuleExport } from "millennium-lib";
+import { findModuleExport } from "@steambrew/client";
 
 interface KioskModeManager {
 	m_bLocked: boolean;

@@ -3,6 +3,7 @@
 
 	"name": "aerothemesteam_plugin",
 	"common_name": "aerothemesteam plugin",
-	"description": "Plugin for the aerothemesteam theme. Not actually required for the theme to work, [b]but may have less functionality or be broken.[/b]",
+	"description": "Plugin for the aerothemesteam theme. Adds a top bar, app filter status, and some buttons.",
+	"version": "1.0.0",
 	"useBackend": false
 }

@@ -1,4 +1,4 @@
-import { findClassModule, Millennium, type ClassModule } from "millennium-lib";
+import { findClassModule, Millennium, type ClassModule } from "@steambrew/client";
 import { Component } from "react";
 
 export interface PartComponentProps {

@@ -1,4 +1,4 @@
-import { findModuleExport } from "millennium-lib";
+import { findModuleExport } from "@steambrew/client";
 import type { FC, ReactNode } from "react";
 
 interface HoverPositionProps {
