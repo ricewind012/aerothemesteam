@@ -1,0 +1,25 @@
+@use "../../../../shared/extends/library";
+
+#Badge {
+	margin: 0 !important;
+	margin-right: var(--library_spacing) !important;
+
+	width: var(--library_icon-size) !important;
+	height: var(--library_icon-size) !important;
+
+	&#EmptyCircle {
+		@extend %library_placeholder;
+	}
+}
+
+#BadgeLevel {
+	@extend %library_description;
+}
+
+#BadgeName {
+	@extend %library_header;
+}
+
+#CardsLeft {
+	display: none !important;
+}

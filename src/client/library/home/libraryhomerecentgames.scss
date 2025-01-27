@@ -1,0 +1,17 @@
+@use "../../../shared/extends/library";
+
+#AddedDate {
+	@extend %library_header;
+}
+
+#RecentGame {
+	margin-right: var(--library_spacing) !important;
+}
+
+#RecentGameMediaContainer {
+	margin-top: var(--library_text-spacing) !important;
+}
+
+#RecentGames {
+	padding: var(--library_spacing) !important;
+}

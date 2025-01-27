@@ -1,0 +1,78 @@
+@use "../../../shared/extends/controls";
+@use "../../../shared/extends/style";
+
+#Arrow {
+	@extend %arrow;
+
+	background-color: var(--fg-main) !important;
+}
+
+#Bar {
+	padding: 3px 3px 0 !important;
+
+	z-index: 1 !important;
+	order: -1 !important;
+}
+
+#CheckboxWithImage {
+	@extend %white-gradient;
+
+	border: 1px solid transparent !important;
+	padding: 2px 3px !important;
+	margin: 0 !important;
+	margin-left: 3px !important;
+
+	box-sizing: content-box !important;
+	width: var(--icon-size) !important;
+	height: var(--icon-size) !important;
+
+	&#Active {
+		--wg-size: 7px;
+		--wg-opacity-1: 0.2;
+		--wg-opacity-2: 0.15;
+
+		background-image: linear-gradient(0deg, #a0d5f2 0%, #66c8ff 22.5%),
+			var(--white-gradient);
+		border-color: #bbe7ff !important;
+		border-radius: var(--border-radius) !important;
+		box-shadow: inset 0px 1px 2.3px 2px rgba(0, 0, 0, 0.3) !important;
+	}
+
+	&::before {
+		content: "";
+
+		@extend %icon;
+	}
+
+	&:nth-last-child(3) {
+		--icon: var(--icon-windows);
+	}
+
+	&:nth-last-child(2) {
+		--icon: var(--icon-sort-last-played);
+	}
+
+	&:nth-last-child(1) {
+		--icon: var(--icon-play);
+	}
+}
+
+#MenuHeader {
+	@extend %text-input;
+
+	line-height: 1 !important;
+
+	height: unset !important;
+}
+
+#ScrollToTop {
+	display: none !important;
+}
+
+#ViewFiltersBar {
+	margin: 0 !important;
+
+	svg {
+		display: none !important;
+	}
+}

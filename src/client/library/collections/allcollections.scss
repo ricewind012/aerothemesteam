@@ -1,0 +1,110 @@
+@use "../../../shared/extends/library";
+@use "../../../shared/extends/style";
+
+#BigPlus {
+	transform: none !important;
+	color: inherit !important;
+	margin: 0 !important;
+
+	width: var(--library_icon-size) !important;
+	height: var(--library_icon-size) !important;
+}
+
+#Collection {
+	background-color: var(--blue-text) !important;
+	color: var(--bg-main) !important;
+	border: 2px solid var(--blue-text) !important;
+	border-radius: 0 !important;
+	padding: var(--library_spacing) !important;
+
+	flex-direction: column;
+	justify-content: end !important;
+
+	transition: var(--anim-time);
+
+	&:hover {
+		--library_secondary-text-opacity: 1;
+		filter: contrast(1.25);
+
+		transition: var(--anim-time);
+	}
+}
+
+#CollectionBG {
+	filter: blur(64px) !important;
+}
+
+#CollectionLabel {
+	color: inherit !important;
+	font-size: var(--font-size-large) !important;
+	letter-spacing: 0 !important;
+	text-shadow: none !important;
+	text-transform: unset !important;
+	padding: 0 !important;
+
+	position: unset !important;
+	width: 100% !important;
+}
+
+#CollectionLabelCount {
+	color: inherit !important;
+	font-size: var(--font-size) !important;
+}
+
+#DisplayCaseContainerBounds {
+	mask: linear-gradient(
+		180deg,
+		black 33%,
+		rgba(0, 0, 0, 0.1) 58%,
+		rgba(0, 0, 0, 0) 100%
+	) !important;
+}
+
+#DynamicCollection svg {
+	background-color: color-mix(
+		in srgb,
+		var(--blue-text) 50%,
+		transparent
+	) !important;
+	border-radius: 0 !important;
+
+	top: var(--library_spacing) !important;
+	right: var(--library_spacing) !important;
+
+	// shadows
+	polyline {
+		display: none !important;
+	}
+}
+
+#ScrollContainer {
+	background-color: var(--bg-main) !important;
+	background-image: none !important;
+	border: var(--library_container-border) !important;
+	border-radius: 0 !important;
+	padding: var(--library_body-spacing) !important;
+}
+
+#Header {
+	@extend %section-header;
+
+	justify-content: space-between !important;
+}
+
+#Label {
+	all: unset !important;
+}
+
+// overqualify because @extends are at the start for some reason
+#NewCollection#NewCollection {
+	@extend %library_placeholder;
+
+	background-color: transparent !important;
+	color: var(--blue-text) !important;
+
+	justify-content: space-around !important;
+}
+
+#Rule {
+	display: none !important;
+}

@@ -1,0 +1,72 @@
+@use "../../../shared/extends/controls";
+@use "../../../shared/extends/library";
+@use "../../../shared/extends/style";
+
+#AddShowcase {
+	@extend %button;
+
+	opacity: 1 !important;
+
+	&#Disabled {
+		@extend %button-disabled;
+	}
+
+	svg {
+		width: var(--icon-size) !important;
+		height: var(--icon-size) !important;
+	}
+
+	line,
+	circle {
+		stroke: var(--blue-text) !important;
+		stroke-width: 16px !important;
+	}
+}
+
+#AddShowcaseRow {
+	margin: 0 !important;
+	margin-top: calc(var(--library_spacing) * -1) !important;
+}
+
+#ChildrenContainer {
+	margin: 0 !important;
+
+	/* for #PlayNextSubhead in libraryhomeplaynext */
+	position: relative !important;
+}
+
+#CountDisplay {
+	opacity: var(--library_secondary-text-opacity) !important;
+	color: inherit !important;
+	font-size: inherit !important;
+	line-height: 1 !important;
+	margin-left: var(--library_text-spacing) !important;
+}
+
+#Message {
+	font-size: var(--font-size-xlarge) !important;
+}
+
+#Showcase {
+	border: none !important;
+	padding-top: var(--library_spacing) !important;
+}
+
+#ShowcaseArrow {
+	top: 30px !important;
+
+	path,
+	line {
+		stroke: var(--blue-text) !important;
+	}
+}
+
+#ShowcaseGrid {
+	padding: var(--library_spacing) !important;
+}
+
+#ShowcaseHeader {
+	@extend %section-header;
+
+	margin: 0 !important;
+}

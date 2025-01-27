@@ -1,0 +1,67 @@
+@use "../../../shared/extends/library";
+@use "../../../shared/extends/style";
+
+#CollectionName {
+	font-size: inherit !important;
+	letter-spacing: 0 !important;
+	text-transform: unset !important;
+
+	&:not(.DialogInput) {
+		font-weight: bold !important;
+	}
+}
+
+#Container {
+	border: var(--library_container-border) !important;
+	border-radius: 0 !important;
+	padding: var(--library_body-spacing) !important;
+}
+
+// TODO: maybe move somewhere else
+#EditButton {
+	--icon: var(--icon-edit);
+
+	@extend %icon;
+
+	margin: calc(var(--library_section-header-spacing-y) * -1) 0 !important;
+
+	&#Close,
+	.SVGIcon_Button {
+		display: none !important;
+	}
+}
+
+#Header {
+	@extend %section-header;
+
+	text-transform: unset !important;
+
+	height: unset !important;
+
+	& > .tool-tip-source {
+		order: 1 !important;
+	}
+
+	.DialogInput_Wrapper {
+		margin: -1px 0 !important;
+
+		width: unset !important;
+	}
+}
+
+#OuterContainer {
+	background-color: var(--bg-main) !important;
+	background-image: none !important;
+}
+
+#Rule {
+	display: none !important;
+}
+
+#SectionCount {
+	opacity: var(--library_secondary-text-opacity) !important;
+	color: inherit !important;
+	margin-left: var(--library_text-spacing) !important;
+
+	flex-grow: 1 !important;
+}

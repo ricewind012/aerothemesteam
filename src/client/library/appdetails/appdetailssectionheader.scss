@@ -1,0 +1,13 @@
+@use "../../../shared/extends/style";
+
+#SectionHeader {
+	@extend %section-header;
+
+	letter-spacing: unset !important;
+	text-transform: unset !important;
+}
+
+#Label {
+	justify-content: space-between !important;
+	flex-grow: 1 !important;
+}

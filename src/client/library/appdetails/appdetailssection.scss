@@ -1,0 +1,33 @@
+@use "../../../shared/extends/library";
+
+#AppDetailsSection {
+	color: var(--blue-text) !important;
+	margin-bottom: var(--library_spacing) !important;
+}
+
+#AppDetailsSectionContainer {
+	@extend %library_section;
+
+	box-shadow: none !important;
+	margin: 0 !important;
+}
+
+#Body {
+	padding: var(--library_spacing) !important;
+}
+
+#ButtonContainer {
+	gap: var(--library_spacing-x05) !important;
+}
+
+#Highlight {
+	background: none #cedef2 !important;
+	/* TODO: this has to be a var */
+	color: #273b5c !important;
+	font-size: var(--font-size) !important;
+	border-bottom: var(--library_border) !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	padding: var(--library_spacing) !important;
+	margin: 0 !important;
+}

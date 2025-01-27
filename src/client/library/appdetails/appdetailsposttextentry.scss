@@ -1,0 +1,70 @@
+@use "../../../shared/extends/controls";
+@use "../../../shared/extends/style";
+
+#Controls {
+	padding: 0 !important;
+	margin: var(--library_spacing-x05) 0 !important;
+
+	max-height: unset !important;
+}
+
+#EmoticonButton {
+	background-color: transparent !important;
+	gap: var(--library_spacing-x05) !important;
+
+	width: unset !important;
+	height: unset !important;
+
+	&:disabled {
+		opacity: 0.75 !important;
+	}
+
+	& > div {
+		display: none !important;
+	}
+
+	&::before {
+		content: "";
+
+		--icon: var(--icon-smiley);
+
+		@extend %icon;
+	}
+
+	&::after {
+		content: "";
+
+		background-color: var(--blue-text);
+
+		@extend %arrow;
+	}
+}
+
+#Label {
+	color: inherit !important;
+}
+
+#PostButton {
+	@extend %button;
+
+	gap: var(--library_spacing-x05) !important;
+
+	display: flex !important;
+	align-items: center !important;
+	width: unset !important;
+
+	&::before {
+		content: "";
+
+		--icon: var(--icon-blue-arrow);
+
+		@extend %icon;
+	}
+}
+
+#PostTextEntryArea {
+	@extend %text-input;
+
+	width: 100% !important;
+	min-height: 40px !important;
+}

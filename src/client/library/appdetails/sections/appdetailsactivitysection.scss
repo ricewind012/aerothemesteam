@@ -1,0 +1,25 @@
+@use "../../../../shared/extends/controls";
+@use "../../../../shared/extends/library";
+
+#ActivityFeedContainer {
+	max-width: unset !important;
+}
+
+#FetchMoreContainer {
+	margin-top: var(--library_spacing-x05) !important;
+	margin-bottom: 0 !important;
+}
+
+#NoActivity {
+	@extend %library_placeholder;
+
+	color: inherit !important;
+	font-size: var(--font-size) !important;
+	margin-bottom: var(--library_spacing-x05) !important;
+
+	min-height: unset !important;
+}
+
+#ViewLastNews {
+	@extend %button;
+}

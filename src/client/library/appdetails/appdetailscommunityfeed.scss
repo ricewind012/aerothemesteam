@@ -1,0 +1,12 @@
+@use "../../../shared/extends/controls";
+
+#HeaderStyles {
+	border-radius: 0 !important;
+	margin: 0 !important;
+}
+
+#LoadContentButton {
+	@extend %button;
+
+	margin: var(--library_spacing) !important;
+}

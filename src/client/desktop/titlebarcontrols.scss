@@ -1,0 +1,69 @@
+@use "../../shared/extends/style";
+
+:root {
+	--titlebarcontrols_button-gap: 10px;
+	--titlebarcontrols_button-size: 24px;
+}
+
+%titlebarcontrols_button {
+	width: var(--titlebarcontrols_button-size) !important;
+	min-width: var(--titlebarcontrols_button-size) !important;
+	min-height: var(--titlebarcontrols_button-size) !important;
+
+	// TODO: hover & use for every icon
+	&:active {
+		filter: brightness(1.25) !important;
+	}
+}
+
+#AccountMenu {
+	display: none !important;
+}
+
+#AnnouncementsButton {
+	--icon: var(--icon-rss);
+}
+
+#AnnouncementWaveSVG {
+	display: none !important;
+}
+
+#Button {
+	@extend %titlebarcontrols_button;
+
+	background-color: transparent !important;
+	padding: 0 !important;
+	margin-right: var(--titlebarcontrols_button-gap) !important;
+
+	path {
+		display: none !important;
+	}
+
+	svg {
+		@extend %icon;
+	}
+}
+
+#GamepadUIToggle {
+	--icon: var(--icon-display);
+
+	svg {
+		position: unset !important;
+	}
+}
+
+#NotificationButtonContainer {
+	--icon: var(--icon-notifications);
+}
+
+#TitleBarControls {
+	margin: 0 !important;
+
+	.icon-button {
+		@extend %titlebarcontrols_button;
+
+		margin-right: var(--titlebarcontrols_button-gap);
+
+		app-region: no-drag;
+	}
+}

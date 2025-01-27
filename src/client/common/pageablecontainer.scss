@@ -1,0 +1,19 @@
+@use "../../shared/extends/style";
+
+#HeaderPageControls {
+	@extend %section-header;
+}
+
+#Name {
+	font: inherit !important;
+}
+
+#PageClickContainer {
+	margin: calc(var(--library_section-header-spacing-y) * -1)
+		calc(var(--library_section-header-spacing-x) * -1) !important;
+	margin-left: auto !important;
+}
+
+#PageableCloseButton {
+	opacity: 1 !important;
+}

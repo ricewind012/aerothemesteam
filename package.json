@@ -2,15 +2,19 @@
 	"type": "module",
 	"scripts": {
 		"build": "npm run build:css && npm run build:ts",
-		"build:css": "npx steam-theming-utils build_theme && node ./create_index.js",
+		"build:css": "rm -rf dist && mkdir -p dist && npx postcss --verbose src --base src --dir dist --ext css",
 		"build:ts": "millennium-ttc --build dev"
+	},
+	"devDependencies": {
+		"@csstools/postcss-sass": "^5.1.1",
+		"postcss-cli": "^11.0.0",
+		"postcss-functions": "^4.0.2",
+		"steam-theming-utils": "^3.1.1"
 	},
 	"dependencies": {
 		"@types/react": "^18.3.10",
 		"@types/react-dom": "^18.3.0",
 		"millennium-lib": "^3.5.6",
-		"postcss-functions": "^4.0.2",
-		"steam-theming-utils": "file:/tmp/steam-theming-utils-2.0.2.tgz",
 		"tslib": "^2.7.0"
 	}
 }

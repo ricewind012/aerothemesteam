@@ -1,0 +1,106 @@
+@use "../../shared/extends/controls";
+@use "../../shared/extends/style";
+
+:root {
+	--bottombar_spacing: 4px;
+}
+
+#AddGameButton {
+	&::after {
+		content: "";
+
+		background-color: var(--blue-text);
+		mask-image: var(--icon-arrow-bottom);
+
+		width: 7px;
+		height: 4px;
+	}
+}
+
+#BottomBar {
+	@extend %blue-bar;
+
+	box-shadow: none !important;
+
+	flex: unset !important;
+}
+
+#AddGameButton,
+#DownloadStatusContent,
+#FriendsButton {
+	gap: var(--bottombar_spacing) !important;
+	padding: 0 !important;
+}
+
+#DetailedDownloadProgress {
+	gap: var(--bottombar_spacing) !important;
+}
+
+#Icon {
+	background-image: var(--icon) !important;
+
+	order: -1 !important;
+
+	#AddGameButton & {
+		--icon: var(--icon-add);
+	}
+
+	#DetailedDownloadProgress & {
+		box-shadow: none !important;
+
+		width: var(--icon-size) !important;
+		height: var(--icon-size) !important;
+	}
+
+	#DownloadStatusContent & {
+		--icon: var(--icon-download);
+	}
+
+	#FriendsButton & {
+		--icon: var(--icon-users);
+	}
+
+	svg {
+		display: none !important;
+	}
+}
+
+#IconBevel {
+	display: none !important;
+}
+
+#ProgressBar {
+	@extend %progress-bar-outer;
+
+	/* Align with icons */
+	margin-block: -1px !important;
+
+	&::after {
+		@extend %progress-bar-inner;
+	}
+}
+
+#ProgressBarWrapper {
+	gap: var(--bottombar_spacing) !important;
+
+	flex-direction: row !important;
+	align-items: center !important;
+}
+
+#Status {
+	color: var(--blue-text) !important;
+
+	flex-grow: 0 !important;
+
+	&#Percentage {
+		@extend %parentheses;
+
+		opacity: var(--library_secondary-text-opacity) !important;
+		margin-left: var(--bottombar_spacing) !important;
+	}
+}
+
+#Text,
+#Queue {
+	color: var(--blue-text) !important;
+}
