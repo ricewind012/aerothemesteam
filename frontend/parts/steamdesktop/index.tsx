@@ -1,55 +1,24 @@
-import { findModuleByExport, showModal } from "@steambrew/client";
+import { ModalPosition, showModal } from "@steambrew/client";
 
-import { PartComponentBase } from "../../shared";
 import {
-	k_GameListChangeEventName,
+	RibbonButton,
+	RibbonContainer,
+	RibbonSection,
+} from "../../components/ribbon";
+import {
+	k_strGameListChangeEventName,
 	type GameListChangeEvent,
-} from "../../gamelistchangeevent";
+} from "../../gamelistchange";
+import { PartComponentBase } from "../../shared";
 
 import { BIsChinaLauncher, Config } from "../../modules/config";
 import { CKioskModeManager } from "../../modules/kioskmodemgr";
 import { AppGameInfo } from "../../modules/appgameinfo";
 
-import { RibbonButton, RibbonContainer, RibbonSection } from "./ribbon";
 import { FavoriteButton } from "./favoritebutton";
 import { ActionButton } from "./actionbutton";
 
 const k_EAppType_Demo = 8;
-
-interface StoreItemDataRequest {
-	include_assets: boolean;
-	include_release: boolean;
-	include_platforms: boolean;
-	include_all_purchase_options: boolean;
-	include_screenshots: boolean;
-	include_trailers: boolean;
-	include_ratings: boolean;
-	include_tag_count: boolean;
-	include_reviews: boolean;
-	include_basic_info: boolean;
-	include_supported_languages: boolean;
-	include_full_description: boolean;
-	include_included_items: boolean;
-	include_assets_without_overrides: boolean;
-	apply_user_filters: boolean;
-	include_links: boolean;
-}
-
-const some_hard_to_get_fn: (
-	unAppID: number,
-	param1: StoreItemDataRequest,
-	param2: any,
-) => any[] = (() => {
-	const mod = findModuleByExport((e) =>
-		e.toString?.().includes("useStoreItemCache: unmounting"),
-	);
-	// there are 2 of these, but the first one is correct
-	const key = Object.keys(mod).find((func) =>
-		mod[func].toString().match(/^function \w\(e,t,r\){return \w\(e,0,t,r\)}$/),
-	);
-
-	return mod[key];
-})();
 
 interface LibraryLink {
 	label: string;
@@ -80,7 +49,7 @@ function GetAppLinks(appid: number) {
 
 	const { app_type: eAppType, optional_parent_app_id: unParentAppID } =
 		overview;
-	const bIsDemo = k_EAppType_Demo === eAppType;
+	const bIsDemo = eAppType === k_EAppType_Demo;
 	const actual_appid =
 		bIsDemo && unParentAppID ? unParentAppID : overview.appid;
 
@@ -163,7 +132,9 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 		const { details } = appDetailsStore.GetAppData(appid);
 
 		showModal(
-			<AppGameInfo expand={true} overview={overview} details={details} />,
+			<ModalPosition>
+				<AppGameInfo expand={true} overview={overview} details={details} />
+			</ModalPosition>,
 			this.props.wnd,
 		);
 	}
@@ -173,14 +144,14 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 	}
 
 	componentDidMount() {
-		window.addEventListener(k_GameListChangeEventName, (ev) => {
+		window.addEventListener(k_strGameListChangeEventName, (ev) => {
 			this.OnGameListChangeEvent(ev);
 		});
 	}
 
 	// TODO: i bet this doesn't actually work
 	componentWillUnmount() {
-		window.removeEventListener(k_GameListChangeEventName, (ev) => {
+		window.removeEventListener(k_strGameListChangeEventName, (ev) => {
 			this.OnGameListChangeEvent(ev);
 		});
 	}

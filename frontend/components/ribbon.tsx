@@ -1,6 +1,7 @@
 import type { FC, ReactNode } from "react";
-import { IconButton } from "../../components/iconbutton";
-import { BuildClassName, PartComponentBase } from "../../shared";
+
+import { IconButton } from "./iconbutton";
+import { BuildClassName, PartComponentBase } from "../shared";
 
 interface RibbonButtonProps {
 	disabled?: boolean;

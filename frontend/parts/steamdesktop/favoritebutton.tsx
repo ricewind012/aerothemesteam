@@ -1,4 +1,4 @@
-import { RibbonGameSectionButton, RibbonButton } from "./ribbon";
+import { RibbonGameSectionButton, RibbonButton } from "../../components/ribbon";
 
 interface FavoriteButtonState {
 	text: string;

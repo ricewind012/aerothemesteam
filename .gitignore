@@ -1,6 +1,5 @@
 dist
 .millennium
 class_maps
-frontend/types
 node_modules
 package-lock.json

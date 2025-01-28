@@ -1,0 +1,3 @@
+[submodule "frontend/types"]
+	path = frontend/types
+	url = https://github.com/ricewind012/steam-sharedjscontext-types

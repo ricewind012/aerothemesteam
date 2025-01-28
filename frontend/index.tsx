@@ -4,14 +4,16 @@ import { render } from "react-dom";
 import * as parts from "./parts";
 import { CLog } from "./logger";
 import { classes, waitForElement } from "./shared";
-import type { SteamPopup } from "./types/sharedjscontext/normal";
-import type { GameListChangeEvent } from "./gamelistchangeevent";
+import type { CPopupManager, SteamPopup } from "./types/normal";
+import { DispatchGameListChange } from "./gamelistchange";
 
 declare global {
 	const appStore: any;
 	const appDetailsStore: any;
 	const badgeStore: any;
 	const collectionStore: any;
+	const g_PopupManager: CPopupManager;
+	const LocalizationManager: any;
 	const MainWindowBrowserManager: any;
 	const SteamUIStore: any;
 	const StoreItemCache: any;
@@ -72,26 +74,22 @@ function PatchUIStore(popup: SteamPopup) {
 	const logger = new CLog("PatchUIStore");
 	const doc = popup.m_popup.document.documentElement;
 
-	store.SetGameListSelection = async function (section: string, appId: number) {
-		const ev = new CustomEvent<GameListChangeEvent>("game-list-change", {
-			detail: { appid: appId },
-		});
-		window.dispatchEvent(ev);
-
-		const app = appStore.GetAppOverviewByAppID(appId);
+	store.SetGameListSelection = async function (section: string, appid: number) {
+		const app = appStore.GetAppOverviewByAppID(appid);
 		const iconFilePath = urlStore.BuildCachedLibraryAssetURL(
-			appId,
+			appid,
 			`${app.icon_hash}.jpg`,
 		);
 		const url = app.icon_data
 			? `data:image/${app.icon_data_format};base64,${app.icon_data}`
 			: iconFilePath;
 
+		DispatchGameListChange(appid);
 		doc.style.setProperty("--library_game-icon", `url("${url}")`);
 		doc.style.setProperty("--library_game-name", `"${app.display_name}"`);
-		logger.Log("Called CUIStore.SetGameListSelection(%o, %s)", section, appId);
+		logger.Log("Called CUIStore.SetGameListSelection(%o, %s)", section, appid);
 
-		return orig.call(this, section, appId);
+		return orig.call(this, section, appid);
 	};
 }
 

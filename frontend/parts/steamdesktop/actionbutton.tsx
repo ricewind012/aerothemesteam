@@ -1,7 +1,7 @@
 import { showContextMenu, sleep } from "@steambrew/client";
 
+import { RibbonButton, RibbonGameSectionButton } from "../../components/ribbon";
 import { classes } from "../../shared";
-import { RibbonButton, RibbonGameSectionButton } from "./ribbon";
 
 import {
 	ContextMenu,
@@ -17,9 +17,11 @@ import { Config } from "../../modules/config";
 import { Localize } from "../../modules/localization";
 import { GetAppMobileCategories } from "../../modules/remoteplay";
 
+type MobileCategory_t = "generic" | "mobile" | "phone" | "tablet" | "tv";
+
 const k_ELaunchSource_2ftLibraryDetails = 100;
 
-const mapCategoryLocTokens = {
+const mapCategoryLocTokens: Record<MobileCategory_t, string[]> = {
 	generic: [
 		"#StreamingClient_AnotherDevice",
 		"#StreamingClient_LinkDesc_Generic",
@@ -103,7 +105,7 @@ function RemotePlayAnywhereContextMenuItem({ overview, onSelected }) {
 		return null;
 	}
 
-	const eCategory = (() => {
+	const eCategory: MobileCategory_t = (() => {
 		switch (vecCategories.length) {
 			case 1:
 				return vecCategories[0];
@@ -119,12 +121,12 @@ function RemotePlayAnywhereContextMenuItem({ overview, onSelected }) {
 
 	return (
 		<StreamingContextMenuItem onSelected={onSelected}>
-			<div>
+			<>
 				<div>{strDevice}</div>
 				<div className={classes.appactionbutton.RemotePlayAnywhereDescription}>
 					{strLinkDesc}
 				</div>
-			</div>
+			</>
 		</StreamingContextMenuItem>
 	);
 }
