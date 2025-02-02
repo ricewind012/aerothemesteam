@@ -5,7 +5,8 @@ import * as parts from "./parts";
 import { CLog } from "./logger";
 import { classes, waitForElement } from "./shared";
 import type { CPopupManager, SteamPopup } from "./types/normal";
-import { DispatchGameListChange } from "./gamelistchange";
+import { DispatchTabChange } from "./events/tabchange";
+import { DispatchGameListChange } from "./events/gamelistchange";
 
 declare global {
 	const appStore: any;
@@ -15,6 +16,7 @@ declare global {
 	const g_PopupManager: CPopupManager;
 	const LocalizationManager: any;
 	const MainWindowBrowserManager: any;
+	const settingsStore: any;
 	const SteamUIStore: any;
 	const StoreItemCache: any;
 	const uiStore: any;
@@ -53,6 +55,10 @@ function AddPopupCreatedCallback(
 	}
 
 	g_PopupManager.AddPopupCreatedCallback((popup) => {
+		if (popup.m_strName !== popupName) {
+			return;
+		}
+
 		callback(popup);
 
 		// Only apply once
@@ -65,10 +71,6 @@ function AddPopupCreatedCallback(
  * Intercepts the function that's called upon a selected game change in the library.
  */
 function PatchUIStore(popup: SteamPopup) {
-	if (popup.m_strName !== MAIN_WINDOW_NAME) {
-		return;
-	}
-
 	const store = uiStore;
 	const orig = store.SetGameListSelection;
 	const logger = new CLog("PatchUIStore");
@@ -91,6 +93,28 @@ function PatchUIStore(popup: SteamPopup) {
 
 		return orig.call(this, section, appid);
 	};
+}
+
+async function AddSuperNavEvents(popup: SteamPopup) {
+	const doc = popup.m_popup.document;
+	const container = await waitForElement(`.${classes.supernav.SuperNav}`, doc);
+	const sel = classes.supernav.Selected;
+	const observer = new MutationObserver(() => {
+		const children = [...container.children];
+		if (children.some((e) => e.classList.contains(classes.menu.MenuOpen))) {
+			return;
+		}
+
+		const tab = children.findIndex((e) => e.classList.contains(sel));
+		// Account for the browser navigation arrows
+		DispatchTabChange(tab - 2);
+	});
+
+	observer.observe(container, {
+		attributes: true,
+		attributeFilter: ["class"],
+		subtree: true,
+	});
 }
 
 export default async function PluginMain() {
@@ -154,4 +178,5 @@ export default async function PluginMain() {
 	}
 
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, PatchUIStore);
+	AddPopupCreatedCallback(MAIN_WINDOW_NAME, AddSuperNavEvents);
 }

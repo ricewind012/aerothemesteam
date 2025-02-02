@@ -1,4 +1,8 @@
-import { findClassModule, Millennium, type ClassModule } from "@steambrew/client";
+import {
+	findClassModule,
+	Millennium,
+	type ClassModule,
+} from "@steambrew/client";
 import { Component } from "react";
 
 export interface PartComponentProps {
@@ -17,7 +21,9 @@ export const classes = {
 	) as ClassModule,
 	gamelistbar: findClassModule((e) => e.GameListHomeAndSearch) as ClassModule,
 	gamelistdropdown: findClassModule((e) => e.ScrollToTop) as ClassModule,
+	menu: findClassModule((e) => e.MenuWrapper) as ClassModule,
 	steamdesktop: findClassModule((e) => e.FocusBar) as ClassModule,
+	supernav: findClassModule((e) => e.SuperNav) as ClassModule,
 	titlebarcontrols: findClassModule((e) => e.BranchBar) as ClassModule,
 };
 

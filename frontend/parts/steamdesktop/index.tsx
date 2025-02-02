@@ -5,11 +5,17 @@ import {
 	RibbonContainer,
 	RibbonSection,
 } from "../../components/ribbon";
-import {
-	k_strGameListChangeEventName,
-	type GameListChangeEvent,
-} from "../../gamelistchange";
 import { PartComponentBase } from "../../shared";
+
+import {
+	ESuperNavTab,
+	GetESuperNavTabFromSetting,
+	TAB_CHANGE_EVENT_NAME,
+} from "../../events/tabchange";
+import {
+	type GameListChangeEvent,
+	GAME_LIST_CHANGE_EVENT_NAME,
+} from "../../events/gamelistchange";
 
 import { BIsChinaLauncher, Config } from "../../modules/config";
 import { CKioskModeManager } from "../../modules/kioskmodemgr";
@@ -113,12 +119,21 @@ function GetAppLinks(appid: number) {
 	return vecLinks.filter(Boolean);
 }
 
+function GetDefaltTabState() {
+	const [eDefaultTab] = settingsStore.GetClientSetting("start_page");
+	return GetESuperNavTabFromSetting(eDefaultTab);
+}
+
 interface SteamDesktopState {
 	appid: number;
+	tab: ESuperNavTab;
 }
 
 export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
-	state = { appid: -1 };
+	state = {
+		appid: -1,
+		tab: GetDefaltTabState(),
+	};
 
 	OnManageButtonClick() {
 		const { appid } = this.state;
@@ -139,59 +154,99 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 		);
 	}
 
-	OnGameListChangeEvent(ev: CustomEventInit<GameListChangeEvent>) {
-		this.setState({ ...ev.detail });
+	OnGoBackButtonClick() {
+		MainWindowBrowserManager.m_browser.GoBack();
+	}
+
+	OnGoForwardButtonClick() {
+		MainWindowBrowserManager.m_browser.GoForward();
+	}
+
+	OnReloadButtonClick() {
+		MainWindowBrowserManager.m_browser.Reload();
+	}
+
+	OnWindowEvent(ev: CustomEventInit<GameListChangeEvent>) {
+		const { appid, tab } = this.state;
+		this.setState({ appid, tab, ...ev.detail });
 	}
 
 	componentDidMount() {
-		window.addEventListener(k_strGameListChangeEventName, (ev) => {
-			this.OnGameListChangeEvent(ev);
-		});
-	}
-
-	// TODO: i bet this doesn't actually work
-	componentWillUnmount() {
-		window.removeEventListener(k_strGameListChangeEventName, (ev) => {
-			this.OnGameListChangeEvent(ev);
-		});
+		const events = [GAME_LIST_CHANGE_EVENT_NAME, TAB_CHANGE_EVENT_NAME];
+		for (const event of events) {
+			window.addEventListener(event, (ev) => {
+				this.OnWindowEvent(ev);
+			});
+		}
 	}
 
 	render() {
-		const { appid } = this.state;
-		if (appid === -1) {
+		const { appid, tab } = this.state;
+		if (tab === ESuperNavTab.Library && appid === -1) {
 			return <RibbonContainer />;
 		}
 
-		const links = GetAppLinks(appid).map((e) => {
-			const { label, icon, link, url } = e;
-			const dest = link ? urlStore.ResolveURL(link, appid) : url;
-			const onClick = () => {
-				MainWindowBrowserManager.ShowURL(dest);
-			};
+		switch (tab) {
+			case ESuperNavTab.Library: {
+				const links = GetAppLinks(appid).map((e) => {
+					const { label, icon, link, url } = e;
+					const dest = link ? urlStore.ResolveURL(link, appid) : url;
+					const onClick = () => {
+						MainWindowBrowserManager.ShowURL(dest);
+					};
 
-			return <RibbonButton icon={icon} text={label} onClick={onClick} />;
-		});
+					return <RibbonButton icon={icon} text={label} onClick={onClick} />;
+				});
 
-		return (
-			<RibbonContainer>
-				<RibbonSection title="Game">
-					<ActionButton wnd={this.props.wnd} appid={appid} />
-					<RibbonButton
-						icon="manage"
-						text="#GameAction_Manage"
-						onClick={() => this.OnManageButtonClick()}
-					/>
-					<RibbonButton
-						icon="details"
-						text="#GameAction_ViewDetails"
-						onClick={() => this.OnDetailsButtonClick()}
-					/>
-					<FavoriteButton wnd={this.props.wnd} appid={appid} />
-				</RibbonSection>
-				{links.length > 0 && (
-					<RibbonSection title="Links">{links}</RibbonSection>
-				)}
-			</RibbonContainer>
-		);
+				return (
+					<RibbonContainer>
+						<RibbonSection title="Game">
+							<ActionButton wnd={this.props.wnd} appid={appid} />
+							<RibbonButton
+								icon="manage"
+								text="#GameAction_Manage"
+								onClick={() => this.OnManageButtonClick()}
+							/>
+							<RibbonButton
+								icon="details"
+								text="#GameAction_ViewDetails"
+								onClick={() => this.OnDetailsButtonClick()}
+							/>
+							<FavoriteButton wnd={this.props.wnd} appid={appid} />
+						</RibbonSection>
+						{links.length > 0 && (
+							<RibbonSection title="Links">{links}</RibbonSection>
+						)}
+					</RibbonContainer>
+				);
+			}
+
+			case ESuperNavTab.Console:
+				return <RibbonContainer />;
+
+			// Browser
+			default:
+				return (
+					<RibbonContainer>
+						<RibbonSection title="Browser">
+							<RibbonButton
+								icon="nav-back"
+								text="Go back"
+								onClick={this.OnGoBackButtonClick}
+							/>
+							<RibbonButton
+								icon="nav-forward"
+								text="Go forward"
+								onClick={this.OnGoForwardButtonClick}
+							/>
+							<RibbonButton
+								icon="update"
+								text="Reload"
+								onClick={this.OnReloadButtonClick}
+							/>
+						</RibbonSection>
+					</RibbonContainer>
+				);
+		}
 	}
 }
