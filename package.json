@@ -2,14 +2,14 @@
 	"type": "module",
 	"scripts": {
 		"build": "millennium-ttc --build prod",
-		"build:css": "rm -rf dist && mkdir -p dist && npx postcss --verbose src --base src --dir dist --ext css",
+		"build:css": "npx postcss --verbose src --base src --dir dist --ext css",
 		"build:ts-dev": "millennium-ttc --build dev"
 	},
 	"devDependencies": {
 		"@csstools/postcss-sass": "^5.1.1",
 		"postcss-cli": "^11.0.0",
 		"postcss-functions": "^4.0.2",
-		"steam-theming-utils": "^3.1.1"
+		"steam-theming-utils": "^3.1.2"
 	},
 	"dependencies": {
 		"@steambrew/client": "^4.2.1",

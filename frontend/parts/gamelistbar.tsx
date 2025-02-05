@@ -20,7 +20,7 @@ export class GameListBar extends Component<
 			`.${classes.gamelistdropdown.ViewFiltersBar}`,
 		);
 		const isButtonSelected = (button: Element) =>
-			button.classList.contains(classes.gamelistdropdown.Active);
+			button?.classList.contains(classes.gamelistdropdown.Active);
 		const getButton = (sel: string) =>
 			filterButtonsContainer.querySelector(sel)?.parentElement;
 
