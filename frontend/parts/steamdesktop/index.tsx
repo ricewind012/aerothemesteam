@@ -11,6 +11,7 @@ import {
 	ESuperNavTab,
 	GetESuperNavTabFromSetting,
 	TAB_CHANGE_EVENT_NAME,
+	TabChangeEvent,
 } from "../../events/tabchange";
 import {
 	type GameListChangeEvent,
@@ -166,8 +167,13 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 		MainWindowBrowserManager.m_browser.Reload();
 	}
 
-	OnWindowEvent(ev: CustomEventInit<GameListChangeEvent>) {
+	OnWindowEvent(ev: CustomEventInit<GameListChangeEvent & TabChangeEvent>) {
 		const { appid, tab } = this.state;
+		if (appid === ev.detail.appid || tab === ev.detail.tab) {
+			return;
+		}
+
+		console.warn("EVENT", this.state, ev.detail);
 		this.setState({ appid, tab, ...ev.detail });
 	}
 

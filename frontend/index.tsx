@@ -101,11 +101,8 @@ async function AddSuperNavEvents(popup: SteamPopup) {
 	const sel = classes.supernav.Selected;
 	const observer = new MutationObserver(() => {
 		const children = [...container.children];
-		if (children.some((e) => e.classList.contains(classes.menu.MenuOpen))) {
-			return;
-		}
-
 		const tab = children.findIndex((e) => e.classList.contains(sel));
+
 		// Account for the browser navigation arrows
 		DispatchTabChange(tab - 2);
 	});
