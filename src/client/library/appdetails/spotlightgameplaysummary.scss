@@ -21,6 +21,10 @@
 
 #GamePlaySummaryContainer {
 	margin-bottom: var(--library_spacing) !important;
+
+	&:not(:first-child) {
+		margin-top: var(--library_spacing) !important;
+	}
 }
 
 #GamePlaySummaryHeader {
