@@ -1,14 +1,11 @@
 @use "../../shared/extends/style";
 
-:root {
-	--titlebarcontrols_button-gap: 10px;
-	--titlebarcontrols_button-size: 24px;
-}
-
 %titlebarcontrols_button {
-	width: var(--titlebarcontrols_button-size) !important;
-	min-width: var(--titlebarcontrols_button-size) !important;
-	min-height: var(--titlebarcontrols_button-size) !important;
+	margin-right: 10px !important;
+
+	width: var(--icon-size) !important;
+	min-width: var(--icon-size) !important;
+	min-height: var(--icon-size) !important;
 
 	// TODO: hover & use for every icon
 	&:active {
@@ -33,7 +30,6 @@
 
 	background-color: transparent !important;
 	padding: 0 !important;
-	margin-right: var(--titlebarcontrols_button-gap) !important;
 
 	path {
 		display: none !important;
@@ -54,6 +50,8 @@
 
 #NotificationButtonContainer {
 	--icon: var(--icon-notifications);
+
+	margin: 0 !important;
 }
 
 #TitleBarControls {
@@ -61,8 +59,6 @@
 
 	.icon-button {
 		@extend %titlebarcontrols_button;
-
-		margin-right: var(--titlebarcontrols_button-gap);
 
 		app-region: no-drag;
 	}

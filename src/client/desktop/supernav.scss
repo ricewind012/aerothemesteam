@@ -3,6 +3,11 @@
 :root {
 	--supernav_inverse-border-size: 3px;
 	--supernav_tab-gradient-end: #d7e0eb;
+	--supernav_tab-spacing-y: 9px;
+
+	&[browsertype="DirectHWND"] {
+		--supernav_tab-spacing-y: 3px;
+	}
 }
 
 #Arrow {
@@ -24,7 +29,7 @@
 #MenuButton {
 	color: inherit !important;
 	text-shadow: none !important;
-	padding: 9px 12px !important;
+	padding: var(--supernav_tab-spacing-y) 12px !important;
 
 	&::after {
 		display: none !important;

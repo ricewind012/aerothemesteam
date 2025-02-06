@@ -38,6 +38,7 @@
 
 #TitleBar {
 	width: unset !important;
+	height: unset !important;
 }
 
 #TopBar {
@@ -56,6 +57,10 @@
 
 #WindowControls {
 	flex: unset !important;
+
+	:root[browsertype="DirectHWND"] & {
+		display: none !important;
+	}
 
 	.title-area {
 		position: unset !important;
