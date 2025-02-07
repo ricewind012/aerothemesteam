@@ -1,0 +1,25 @@
+@use "../../shared/extends/controls";
+
+:root {
+	--tooltip_description-spacing: 9px;
+}
+
+#TextToolTip {
+	@extend %tooltip;
+}
+
+#ToolTipCustom {
+	@extend %tooltip;
+
+	max-width: 210px;
+}
+
+#ToolTipInsetContent {
+	color: inherit !important;
+	margin: var(--tooltip_description-spacing) !important;
+}
+
+#ToolTipTitle {
+	color: inherit !important;
+	font-weight: bold;
+}
