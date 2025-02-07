@@ -2,8 +2,11 @@ import type { FC, ReactNode } from "react";
 
 import { IconButton } from "./iconbutton";
 import { BuildClassName, PartComponentBase } from "../shared";
+import { Localize } from "../modules/localization";
 
 interface RibbonButtonProps {
+	/** Arguments for localization. */
+	args?: string[];
 	disabled?: boolean;
 	/** Icon name for {@link IconButton}. */
 	icon: string;
@@ -16,7 +19,7 @@ interface RibbonButtonProps {
 }
 
 export function RibbonButton(props: RibbonButtonProps) {
-	const { disabled, icon, text, vertical, onClick, onArrowClick } = props;
+	const { args, disabled, icon, text, vertical, onClick, onArrowClick } = props;
 	const strContainerClassName = BuildClassName([
 		"ribbon-button-container",
 		disabled && "disabled",
@@ -35,7 +38,7 @@ export function RibbonButton(props: RibbonButtonProps) {
 				onContextMenu={onArrowClick}
 			>
 				<IconButton name={icon} />
-				{LocalizationManager.LocalizeIfToken(text)}
+				{Localize(text, ...(args || []))}
 			</div>
 			{onArrowClick && (
 				<div className={strArrowClassName} onClick={onArrowClick} />

@@ -9,12 +9,14 @@ import { DispatchTabChange } from "./events/tabchange";
 import { DispatchGameListChange } from "./events/gamelistchange";
 
 declare global {
+	const App: any;
 	const appStore: any;
 	const appDetailsStore: any;
 	const badgeStore: any;
 	const collectionStore: any;
 	const g_PopupManager: CPopupManager;
 	const LocalizationManager: any;
+	const loginStore: any;
 	const MainWindowBrowserManager: any;
 	const settingsStore: any;
 	const SteamUIStore: any;

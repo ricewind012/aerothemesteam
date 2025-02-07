@@ -18,6 +18,10 @@ import {
 	GAME_LIST_CHANGE_EVENT_NAME,
 } from "../../events/gamelistchange";
 
+import {
+	EParentalFeature,
+	CParentalFeaturesManager,
+} from "../../modules/parentalfeatures";
 import { BIsChinaLauncher, Config } from "../../modules/config";
 import { CKioskModeManager } from "../../modules/kioskmodemgr";
 import { AppGameInfo } from "../../modules/appgameinfo";
@@ -120,6 +124,47 @@ function GetAppLinks(appid: number) {
 	return vecLinks.filter(Boolean);
 }
 
+function GetAccountEntries() {
+	const { strAccountBalance, strAccountName } = App.GetCurrentUser();
+	const { secureComputer } = loginStore;
+
+	return [
+		{
+			feature: EParentalFeature.Profile,
+			icon: "info",
+			text: "#Menu_ViewMyProfile",
+			url: "steam://url/SteamIDMyProfile",
+		},
+		{
+			args: [strAccountName],
+			feature: EParentalFeature.Max,
+			icon: "info",
+			text: "#Menu_ViewMyAccount",
+			url: "steam://url/StoreAccount",
+		},
+		{
+			feature: EParentalFeature.Max,
+			icon: "store",
+			text: "#Menu_StorePreferences",
+			url: "steam://url/SteamPreferences",
+		},
+		{
+			args: [strAccountBalance],
+			feature: EParentalFeature.Store,
+			icon: "store",
+			text: "#Menu_ViewMyWallet",
+			url: "steam://url/StoreAddFundsPage",
+		},
+		{
+			disabled: !secureComputer,
+			icon: "update",
+			text: "#Menu_ChangeAccount",
+			url: "steam://changeuser",
+		},
+		{ icon: "nav-back", text: "#Menu_Logout", url: "steam://signout" },
+	];
+}
+
 function GetDefaltTabState() {
 	const [eDefaultTab] = settingsStore.GetClientSetting("start_page");
 	return GetESuperNavTabFromSetting(eDefaultTab);
@@ -192,6 +237,44 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 			return <RibbonContainer />;
 		}
 
+		const accountSection = GetAccountEntries().map((e) => {
+			const { args, icon, feature, text, url } = e;
+			const onClick = () => {
+				SteamClient.URL.ExecuteSteamURL(url);
+			};
+			const disabled =
+				e.disabled || CParentalFeaturesManager.BIsFeatureBlocked(feature);
+
+			return (
+				<RibbonButton
+					args={args}
+					icon={icon}
+					disabled={disabled}
+					text={text}
+					onClick={onClick}
+				/>
+			);
+		});
+		const browserSection = (
+			<RibbonSection title="Browser">
+				<RibbonButton
+					icon="nav-back"
+					text="Go back"
+					onClick={this.OnGoBackButtonClick}
+				/>
+				<RibbonButton
+					icon="nav-forward"
+					text="Go forward"
+					onClick={this.OnGoForwardButtonClick}
+				/>
+				<RibbonButton
+					icon="update"
+					text="Reload"
+					onClick={this.OnReloadButtonClick}
+				/>
+			</RibbonSection>
+		);
+
 		switch (tab) {
 			case ESuperNavTab.Library: {
 				const links = GetAppLinks(appid).map((e) => {
@@ -234,23 +317,10 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 			default:
 				return (
 					<RibbonContainer>
-						<RibbonSection title="Browser">
-							<RibbonButton
-								icon="nav-back"
-								text="Go back"
-								onClick={this.OnGoBackButtonClick}
-							/>
-							<RibbonButton
-								icon="nav-forward"
-								text="Go forward"
-								onClick={this.OnGoForwardButtonClick}
-							/>
-							<RibbonButton
-								icon="update"
-								text="Reload"
-								onClick={this.OnReloadButtonClick}
-							/>
-						</RibbonSection>
+						{browserSection}
+						{tab === ESuperNavTab.Profile && (
+							<RibbonSection title="Account">{accountSection}</RibbonSection>
+						)}
 					</RibbonContainer>
 				);
 		}
