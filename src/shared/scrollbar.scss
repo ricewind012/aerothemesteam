@@ -1,49 +1,123 @@
 ::-webkit-scrollbar {
-	width: 18px !important;
-}
-
-::-webkit-scrollbar-button {
-	display: flex !important;
-}
-
-::-webkit-scrollbar-track {
 	background: linear-gradient(
 		90deg,
 		rgba(228, 228, 228, 1) 0%,
 		rgba(239, 239, 239, 1) 25%,
 		rgba(244, 244, 244, 1) 100%
 	) !important;
+
+	width: 15px !important;
 }
 
+::-webkit-scrollbar-button,
 ::-webkit-scrollbar-thumb {
-	--color1: rgba(245, 245, 245, 1);
-	--color2: rgba(231, 231, 231, 1);
-	--color3: rgba(215, 215, 218, 1);
-	--color4: rgba(190, 191, 194, 1);
+	--button-border: #979797;
+	--button-shadow: rgba(255, 255, 255, 0.15);
 
-	background: var(--icon-scrollbar-track) center / 9px 10px no-repeat,
+	--white-border-color: #fff4;
+
+	background:
+		var(--icon) var(--icon-pos) / var(--icon-size-w) var(--icon-size-h)
+			no-repeat,
+		linear-gradient(0deg, var(--white-border-color), var(--white-border-color))
+			var(--white-border-pos) / var(--white-border-size) no-repeat,
+		radial-gradient(60% 6px at 50% -1px, var(--gradient-color-1), transparent),
 		linear-gradient(
 			90deg,
-			var(--color1) 0%,
-			var(--color2) 49%,
-			var(--color3) 50%,
-			var(--color4) 100%
+			var(--gradient-color-1) 0%,
+			var(--gradient-color-2) 49%,
+			var(--gradient-color-3) 50%,
+			var(--gradient-color-4) 100%
 		) !important;
-	border: solid thin #979797 !important;
+	border: 1px solid var(--button-border) !important;
 	border-radius: var(--border-radius) !important;
-	box-shadow: inset 0px 0px 0px 1px var(--aero-white) !important;
+	box-shadow: inset 0 0 0 1px var(--button-shadow) !important;
 
 	&:hover {
-		--color1: rgb(227, 244, 252);
-		--color2: rgb(214, 238, 251);
-		--color3: rgb(169, 219, 246);
-		--color4: rgb(156, 202, 227);
+		--gradient-color-1: rgb(227, 244, 252);
+		--gradient-color-2: rgb(214, 238, 251);
+		--gradient-color-3: rgb(169, 219, 246);
+		--gradient-color-4: rgb(156, 202, 227);
 	}
 
 	&:active {
-		--color1: rgb(202, 236, 249);
-		--color2: rgb(175, 225, 247);
-		--color3: rgb(111, 202, 240);
-		--color4: rgb(108, 196, 233);
+		--gradient-color-1: rgb(202, 236, 249);
+		--gradient-color-2: rgb(175, 225, 247);
+		--gradient-color-3: rgb(111, 202, 240);
+		--gradient-color-4: rgb(108, 196, 233);
 	}
+}
+
+::-webkit-scrollbar-button {
+	--button-border: transparent;
+	--button-shadow: transparent;
+
+	--gradient-color-1: transparent;
+	--gradient-color-2: transparent;
+	--gradient-color-3: transparent;
+	--gradient-color-4: transparent;
+
+	--icon-pos: 4px 5px;
+	--icon-size-w: 7px;
+	--icon-size-h: 4px;
+
+	--white-border-pos: 4px 9px;
+	--white-border-size: var(--icon-size-w) 1px;
+
+	display: flex !important;
+	height: 16px;
+
+	&:hover {
+		--button-border: #3c7fb1;
+		--button-shadow: rgba(255, 255, 255, 0.9);
+	}
+
+	&:active {
+		--button-border: #18598a;
+		--button-shadow: #fff;
+	}
+}
+
+@each $arrow in decrement, increment {
+	::-webkit-scrollbar-button:#{$arrow} {
+		--icon: icon("scrollbar-arrow-#{$arrow}");
+
+		&:hover {
+			--icon: icon("scrollbar-arrow-#{$arrow}-hover");
+		}
+
+		&:active {
+			--icon: icon("scrollbar-arrow-#{$arrow}-active");
+		}
+	}
+}
+
+::-webkit-scrollbar-thumb {
+	--gradient-color-1: rgba(245, 245, 245, 1);
+	--gradient-color-2: rgba(231, 231, 231, 1);
+	--gradient-color-3: rgba(215, 215, 218, 1);
+	--gradient-color-4: rgba(207, 207, 209, 1);
+
+	--icon: icon("scrollbar-thumb");
+	--icon-pos: center;
+	--icon-size-w: 7px;
+	--icon-size-h: 8px;
+
+	--white-border-pos: var(--icon-pos);
+	--white-border-size: calc(var(--icon-size-w) + 2px)
+		calc(var(--icon-size-h) + 2px);
+
+	&:hover {
+		--icon: icon("scrollbar-thumb-hover");
+	}
+
+	&:active {
+		--icon: icon("scrollbar-thumb-active");
+	}
+}
+
+::-webkit-scrollbar-track {
+	margin: 1px 0;
+
+	display: flex !important;
 }

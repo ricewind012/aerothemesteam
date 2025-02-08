@@ -2,7 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import yargs from "yargs";
 import postcssFunctions from "postcss-functions";
-import postcssSass from "@csstools/postcss-sass";
+import postcssSassParser from "postcss-scss";
+import postcssSassPlugin from "@csstools/postcss-sass";
 import { selectorReplacerPlugin } from "steam-theming-utils/postcss-plugin";
 
 const { argv } = yargs(process.argv);
@@ -34,8 +35,9 @@ function icon(name) {
 /** @type {import("postcss-load-config").Config} */
 export default {
 	map: false,
+	parser: postcssSassParser,
 	plugins: [
-		postcssSass({
+		postcssSassPlugin({
 			silenceDeprecations: ["legacy-js-api"],
 		}),
 		postcssFunctions({
