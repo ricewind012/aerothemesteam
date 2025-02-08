@@ -1,6 +1,7 @@
 @use "../../shared/extends/controls";
 
 :root {
+	--tooltip_background: linear-gradient(180deg, #fff, #c9d9ef);
 	--tooltip_description-spacing: 9px;
 }
 

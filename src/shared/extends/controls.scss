@@ -75,7 +75,7 @@
 }
 
 %tooltip {
-	background: linear-gradient(180deg, #fff, #c9d9ef);
+	background: var(--tooltip_background);
 	color: #4c4c4c;
 	font-size: var(--font-size);
 	text-shadow: none;

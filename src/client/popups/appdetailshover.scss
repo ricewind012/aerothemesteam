@@ -1,0 +1,17 @@
+@use "../../shared/extends/controls";
+
+#AppDetailsHover {
+	@extend %tooltip;
+
+	background-image: none !important;
+}
+
+#Background {
+	background-image: var(--tooltip_background) !important;
+	border-radius: inherit !important;
+}
+
+#BlurContainer {
+	mask: none !important;
+	opacity: 1 !important;
+}

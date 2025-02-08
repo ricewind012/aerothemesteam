@@ -1,6 +1,8 @@
 #AchievementIconWrapper {
-	width: var(--library_icon-size) !important;
-	height: var(--library_icon-size) !important;
+	--icon-size: 32px;
+
+	width: var(--icon-size) !important;
+	height: var(--icon-size) !important;
 }
 
 #Icon {
