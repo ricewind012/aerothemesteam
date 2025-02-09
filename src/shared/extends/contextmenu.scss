@@ -1,0 +1,58 @@
+@mixin container {
+	background: #f5f5f5;
+	border: 1px solid #979797;
+	box-shadow: var(--popup-shadow);
+	padding: var(--contextmenu_container-spacing);
+}
+
+@mixin container-left-border {
+	&::before {
+		content: "";
+
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: var(--contextmenu_left-spacing);
+
+		border-left: 1px solid var(--contextmenu_separator-light);
+		box-shadow: -1px 0 var(--contextmenu_separator-dark);
+	}
+}
+
+@mixin icon-pos {
+	position: absolute;
+	left: 4px;
+	width: var(--icon-size);
+	height: var(--icon-size);
+}
+
+@mixin item-active {
+	background: var(--contextmenu_item-gradient);
+	border: 1px solid var(--contextmenu_item-border);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+@mixin item {
+	color: var(--contextmenu_fg);
+	font-size: var(--font-size);
+	// #contextmenu_UpperCase
+	text-transform: unset;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	padding: 1px calc(8px * 2 + 4px) 2px
+		calc(5px + var(--contextmenu_left-spacing));
+
+	position: relative;
+
+	&:hover {
+		@include item-active;
+	}
+}
+
+@mixin separator {
+	border-top: 1px solid var(--contextmenu_separator-light);
+	box-shadow: 0 -1px var(--contextmenu_separator-dark);
+	margin-top: 5px;
+	margin-bottom: 2px;
+	margin-left: var(--contextmenu_left-spacing);
+}

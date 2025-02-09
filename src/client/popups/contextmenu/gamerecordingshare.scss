@@ -1,0 +1,53 @@
+@use "../../../shared/extends/contextmenu" as contextmenu;
+
+#AllChats {
+	--icon: var(--icon-users);
+}
+
+#AllChats,
+#Chat {
+	gap: 0;
+
+	flex-direction: row;
+	max-width: unset;
+	min-width: unset;
+
+	.avatarHolder {
+		--size: 22px;
+
+		position: absolute;
+		top: 0;
+		left: 1px;
+	}
+}
+
+#ChatDivider {
+	@include contextmenu.separator;
+}
+
+#ChatLabel,
+#SectionTitle {
+	display: none;
+}
+
+#ChatRow {
+	margin: 0;
+
+	flex-direction: column;
+}
+
+#Name {
+	mask: none;
+	text-align: start;
+	padding: 0;
+}
+
+#ShareMenuLabel {
+	margin: 0;
+}
+
+#ShareSheet {
+	svg {
+		display: none;
+	}
+}

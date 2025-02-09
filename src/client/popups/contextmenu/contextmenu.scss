@@ -1,0 +1,105 @@
+@use "../../../shared/extends/contextmenu" as contextmenu;
+
+:root {
+	--contextmenu_container-spacing: 2px;
+	--contextmenu_fg: #000;
+	--contextmenu_fg-secondary: #6d6d6d;
+	--contextmenu_item-border: #9fc5f3;
+	// TODO: this is transparent
+	--contextmenu_item-gradient-start: #ecf5f9;
+	--contextmenu_item-gradient-end: #ddeefb;
+	--contextmenu_item-gradient: linear-gradient(
+		180deg,
+		var(--contextmenu_item-gradient-start),
+		var(--contextmenu_item-gradient-end)
+	);
+	--contextmenu_left-spacing: 27px;
+	--contextmenu_separator-dark: #e0e0e0;
+	--contextmenu_separator-light: #fff;
+}
+
+$icons: (
+	"PlusCircle": "add",
+	"Play": "play",
+);
+
+#Arrow {
+	background-color: var(--contextmenu_fg);
+	mask: var(--icon-arrow-right);
+
+	position: absolute;
+	right: 8px;
+	width: 4px;
+	height: 7px;
+
+	svg {
+		display: none;
+	}
+}
+
+#contextMenu {
+	@include contextmenu.container;
+
+	// child
+	& + & {
+		--offset: -3px;
+
+		margin-top: var(--offset);
+		margin-left: var(--offset);
+	}
+}
+
+#contextMenuContents {
+	@include contextmenu.container-left-border;
+
+	background-color: #f0f0f0;
+	padding: 0;
+
+	position: relative;
+}
+
+#contextMenuItem {
+	@include contextmenu.item;
+
+	@each $class, $icon in $icons {
+		&:has(.SVGIcon_#{$class}) {
+			--icon: var(--icon-#{$icon});
+
+			svg {
+				display: none;
+			}
+		}
+	}
+
+	&#active {
+		@include contextmenu.item-active;
+	}
+
+	&.disabled {
+		--contextmenu_fg: var(--contextmenu_fg-secondary);
+		--contextmenu_item-border: #d3d3d3;
+		--contextmenu_item-gradient-start: #f4f5f5;
+		--contextmenu_item-gradient-end: #e6e6e6;
+	}
+
+	&::before {
+		content: "";
+
+		@include contextmenu.icon-pos;
+
+		background-image: var(--icon);
+	}
+
+	svg:not([class]) {
+		@include contextmenu.icon-pos;
+	}
+}
+
+#ContextMenuSeparator {
+	@include contextmenu.separator;
+
+	// jumplist
+	&:last-child {
+		display: none;
+	}
+}

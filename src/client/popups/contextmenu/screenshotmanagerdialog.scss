@@ -1,0 +1,26 @@
+@use "../../../shared/extends/contextmenu" as contextmenu;
+
+#ComboboxSelector {
+	padding: 0;
+}
+
+#ComboboxSelectorContextMenu {
+	@include contextmenu.container;
+
+	border-radius: 0;
+	margin: 0;
+}
+
+#Option {
+	margin: 0;
+}
+
+#SearchBar {
+	opacity: 1;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0;
+	margin-bottom: 2px;
+	margin-left: calc(var(--contextmenu_left-spacing) + 5px);
+}

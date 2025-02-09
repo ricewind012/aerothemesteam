@@ -17,6 +17,7 @@
 
 	--anim-time: 150ms;
 	--icon-size: 16px;
+	--popup-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 
 	@media (prefers-reduced-motion: reduced) {
 		--anim-time: 0ms;

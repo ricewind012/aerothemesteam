@@ -1,0 +1,57 @@
+@use "../../../shared/extends/contextmenu" as contextmenu;
+
+#AppCount {
+	opacity: 1;
+	color: var(--contextmenu_fg-secondary);
+}
+
+#DropDown {
+	@include contextmenu.container-left-border;
+
+	&::before {
+		top: var(--contextmenu_container-spacing);
+		bottom: var(--contextmenu_container-spacing);
+
+		margin-left: var(--contextmenu_container-spacing);
+	}
+}
+
+#Row {
+	@include contextmenu.item;
+
+	.DialogCheckbox {
+		--icon: icon("context-menu-checkmark");
+		--offset: -1px;
+		--size: 22px;
+
+		background-color: transparent;
+		border-radius: 3px;
+
+		position: absolute;
+		top: var(--offset);
+		left: var(--offset);
+		width: var(--size);
+		height: var(--size);
+
+		&.Active {
+			@include contextmenu.item-active;
+		}
+
+		// TODO: no idea if it's ever disabled, but whatever
+		&.Disabled {
+			--icon: icon("context-menu-checkmark-disabled");
+		}
+
+		svg {
+			background-image: var(--icon);
+
+			* {
+				display: none;
+			}
+		}
+	}
+}
+
+#Rule {
+	@include contextmenu.separator;
+}

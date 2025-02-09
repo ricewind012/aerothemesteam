@@ -1,0 +1,20 @@
+@use "../../../shared/extends/contextmenu" as contextmenu;
+
+.contextMenuUnselectable,
+.contextMenuUnselectable.disabled,
+.contextMenuGameTitle,
+.contextMenuBroadcast,
+.contextMenuGameOptions {
+	background-color: transparent;
+}
+
+.contextMenuGameName {
+	color: inherit;
+	font-weight: bold;
+}
+
+.recentName {
+	@include contextmenu.item;
+
+	margin: 0;
+}

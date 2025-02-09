@@ -42,3 +42,7 @@
 .DialogInput {
 	@extend %text-input-compact;
 }
+
+.DialogToggle_Label {
+	color: inherit;
+}

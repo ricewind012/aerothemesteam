@@ -11,6 +11,10 @@
 		{
 			"MatchRegexString": ".fullheight",
 			"TargetCss": "dist/index.css"
+		},
+		{
+			"MatchRegexString": ".friendsui-container",
+			"TargetCss": "dist/index.css"
 		}
 	]
 }

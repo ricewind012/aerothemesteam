@@ -1,0 +1,7 @@
+@use "../../../shared/extends/contextmenu" as contextmenu;
+
+#Separator {
+	@include contextmenu.separator;
+
+	border: none;
+}

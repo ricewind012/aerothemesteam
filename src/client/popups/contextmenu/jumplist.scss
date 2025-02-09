@@ -1,0 +1,22 @@
+@use "../../../shared/extends/contextmenu" as contextmenu;
+
+#GameIcon {
+	@include contextmenu.icon-pos;
+}
+
+#Icon:not(div) {
+	--icon-size: 22px;
+
+	@include contextmenu.icon-pos;
+	@include contextmenu.item-active;
+
+	background-image: icon("context-menu-radio"), var(--contextmenu_item-gradient);
+	background-position: center;
+	border-radius: 3px;
+
+	left: -1px;
+
+	path {
+		display: none;
+	}
+}
