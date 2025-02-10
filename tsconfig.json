@@ -6,6 +6,6 @@
 		"jsxFragmentFactory": "window.SP_REACT.Fragment",
 		"moduleResolution": "node"
 	},
-	"include": ["frontend/**/*"],
-	"exclude": ["frontend/types/generated"]
+	"include": ["plugin/**/*"],
+	"exclude": ["plugin/types/generated"]
 }

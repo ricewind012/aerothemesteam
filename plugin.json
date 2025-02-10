@@ -1,9 +1,10 @@
 {
-	"$schema": "https://raw.githubusercontent.com/SteamClientHomebrew/Millennium/main/src/sys/plugin-schema.json",
+	"$schema": "https://raw.githubusercontent.com/shdwmtr/millennium/main/src/sys/plugin-schema.json",
 
 	"name": "aerothemesteam_plugin",
 	"common_name": "aerothemesteam plugin",
 	"description": "Plugin for the aerothemesteam theme. Adds a top bar, app filter status, and some buttons.",
 	"version": "1.0.0",
+	"frontend": "./plugin",
 	"useBackend": false
 }
