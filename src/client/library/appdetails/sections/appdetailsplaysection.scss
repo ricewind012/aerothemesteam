@@ -73,27 +73,25 @@
 #GameStatRight {
 	@extend %_details-section;
 
+	#CloudStatusSyncFail & {
+		--icon: var(--icon-cancel);
+	}
+
 	#LastPlayed & {
 		--icon: var(--icon-calendar);
 	}
 
-	/* TODO: cloud fail icon */
 	#SuperimposedGridItems & {
 		--icon: var(--icon-checkmark);
 	}
 
-	/* Duplicate info */
+	// Duplicate info
 	#MiniAchievements & {
 		display: none !important;
 	}
 
 	#Playtime & {
 		--icon: var(--icon-clock);
-
-		/* TODO: move the image manually instead */
-		&::before {
-			background-position: 2px 1px !important;
-		}
 	}
 }
 
@@ -126,7 +124,7 @@
 	line-height: 1 !important;
 }
 
-/* Used in sticky header, no longer useful */
+// Used in sticky header, no longer useful
 #PlayBarIconAndGame {
 	display: none !important;
 }

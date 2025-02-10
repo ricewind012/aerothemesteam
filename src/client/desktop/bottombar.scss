@@ -72,7 +72,7 @@
 #ProgressBar {
 	@extend %progress-bar-outer;
 
-	/* Align with icons */
+	// Align with icons
 	margin-block: -1px !important;
 
 	&::after {
