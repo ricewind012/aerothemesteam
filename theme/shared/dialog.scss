@@ -1,12 +1,13 @@
-@use "./extends/controls";
+@use "shared/extends/style";
+@use "shared/extends/controls";
 
 .DialogButton {
-	@extend %button;
+	@include controls.button;
 
 	box-shadow: none !important;
 
 	&:is(:disabled, .Disabled) {
-		@extend %button-disabled;
+		@include controls.button-disabled;
 	}
 
 	&::before {
@@ -15,13 +16,13 @@
 }
 
 .DialogDropDown {
-	@extend %text-input;
+	@include controls.text-input;
 
 	align-items: center !important;
 }
 
 .DialogDropDown_Arrow {
-	@extend %arrow;
+	@include style.arrow;
 
 	background-color: var(--blue-text) !important;
 	margin-left: 6px !important;
@@ -40,7 +41,7 @@
 }
 
 .DialogInput {
-	@extend %text-input-compact;
+	@include controls.text-input-compact;
 }
 
 .DialogToggle_Label {

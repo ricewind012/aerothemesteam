@@ -1,7 +1,7 @@
-@use "../../../shared/extends/library";
+@use "shared/extends/library";
 
 #AddedDate {
-	@extend %library_header;
+	@include library.header;
 }
 
 #RecentGame {

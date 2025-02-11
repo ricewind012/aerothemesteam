@@ -1,8 +1,8 @@
-@use "../../../shared/extends/controls";
-@use "../../../shared/extends/style";
+@use "shared/extends/controls";
+@use "shared/extends/style";
 
 #AdvancedSearchButton {
-	@extend %button;
+	@include controls.button;
 
 	padding: 2px 3px !important;
 
@@ -11,7 +11,7 @@
 	& > div {
 		--icon: var(--icon-settings);
 
-		@extend %icon;
+		@include style.icon;
 	}
 
 	svg {

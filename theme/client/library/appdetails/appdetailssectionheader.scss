@@ -1,7 +1,7 @@
-@use "../../../shared/extends/style";
+@use "shared/extends/style";
 
 #SectionHeader {
-	@extend %section-header;
+	@include style.section-header;
 
 	letter-spacing: unset !important;
 	text-transform: unset !important;

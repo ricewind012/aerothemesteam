@@ -1,4 +1,4 @@
-@use "../extends/style";
+@use "shared/extends/style";
 
 .ribbon-button {
 	gap: 4px;
@@ -95,7 +95,7 @@
 }
 
 .ribbon-sections-container {
-	@extend %white-gradient;
+	@include style.white-gradient;
 
 	--shadow-color: rgba(255, 255, 255, 0.5);
 	--spacing: 2px;

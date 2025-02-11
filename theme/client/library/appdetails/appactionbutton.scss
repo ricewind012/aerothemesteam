@@ -1,8 +1,8 @@
-@use "../../../shared/extends/controls";
-@use "../../../shared/extends/style";
+@use "shared/extends/controls";
+@use "shared/extends/style";
 
 #ButtonChild {
-	@extend %button;
+	@include controls.button;
 
 	padding-inline: 8px !important;
 }
@@ -18,7 +18,7 @@
 	}
 
 	svg {
-		@extend %icon;
+		@include style.icon;
 
 		margin-right: 6px !important;
 
@@ -64,7 +64,7 @@
 
 	svg {
 		/* TODO: fix arrow image */
-		@extend %arrow;
+		@include style.arrow;
 
 		background-color: var(--blue-text) !important;
 	}

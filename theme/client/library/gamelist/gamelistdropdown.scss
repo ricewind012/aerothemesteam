@@ -1,8 +1,8 @@
-@use "../../../shared/extends/controls";
-@use "../../../shared/extends/style";
+@use "shared/extends/controls";
+@use "shared/extends/style";
 
 #Arrow {
-	@extend %arrow;
+	@include style.arrow;
 
 	background-color: var(--fg-main) !important;
 }
@@ -15,7 +15,7 @@
 }
 
 #CheckboxWithImage {
-	@extend %white-gradient;
+	@include style.white-gradient;
 
 	border: 1px solid transparent !important;
 	padding: 2px 3px !important;
@@ -41,7 +41,7 @@
 	&::before {
 		content: "";
 
-		@extend %icon;
+		@include style.icon;
 	}
 
 	&:nth-last-child(3) {
@@ -58,7 +58,7 @@
 }
 
 #MenuHeader {
-	@extend %text-input;
+	@include controls.text-input;
 
 	line-height: 1 !important;
 

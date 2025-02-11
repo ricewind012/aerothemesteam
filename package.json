@@ -2,7 +2,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "millennium-ttc --build prod",
-		"build:css": "npx postcss --verbose theme --base theme --dir dist --ext css",
+		"build:css": "npx postcss theme --base theme --dir dist --ext css",
 		"build:ts-dev": "millennium-ttc --build dev"
 	},
 	"devDependencies": {

@@ -1,5 +1,5 @@
-@use "../../../shared/extends/library";
-@use "../../../shared/extends/style";
+@use "shared/extends/library";
+@use "shared/extends/style";
 
 #BigPlus {
 	transform: none !important;
@@ -77,11 +77,6 @@
 	}
 }
 
-// tooltip
-#Highlight {
-	color: inherit !important;
-}
-
 #ScrollContainer {
 	background-color: var(--bg-main) !important;
 	background-image: none !important;
@@ -91,7 +86,7 @@
 }
 
 #Header {
-	@extend %section-header;
+	@include style.section-header;
 
 	justify-content: space-between !important;
 }
@@ -102,7 +97,7 @@
 
 // overqualify because @extends are at the start for some reason
 #NewCollection#NewCollection {
-	@extend %library_placeholder;
+	@include library.placeholder;
 
 	background-color: transparent !important;
 	color: var(--blue-text) !important;

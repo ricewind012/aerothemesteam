@@ -1,24 +1,24 @@
-%library_description {
+@mixin description {
 	opacity: var(--library_secondary-text-opacity) !important;
 	color: inherit !important;
 	font-size: var(--font-size) !important;
 	font-style: italic !important;
 }
 
-%library_placeholder {
+@mixin placeholder {
 	opacity: var(--library_secondary-text-opacity) !important;
 	border: 2px dashed var(--blue-text) !important;
 	border-radius: 0 !important;
 	padding: var(--library_spacing) !important;
 }
 
-%library_header {
+@mixin header {
 	color: inherit !important;
 	font-size: var(--font-size) !important;
 	font-weight: bold !important;
 }
 
-%library_section {
+@mixin section {
 	background: none #e1e7ef !important;
 	border: var(--library_border) !important;
 	border-top: none !important;

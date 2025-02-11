@@ -1,15 +1,15 @@
-@use "../../../../shared/extends/controls";
-@use "../../../../shared/extends/library";
+@use "shared/extends/controls";
+@use "shared/extends/library";
 
 #AchievementProgressContainer {
-	@extend %progress-bar-outer;
+	@include controls.progress-bar-outer;
 
 	margin-top: 8px !important;
 	margin-bottom: 0 !important;
 }
 
 #AchievementProgress {
-	@extend %progress-bar-inner;
+	@include controls.progress-bar-inner;
 }
 
 #Additional {
@@ -27,7 +27,7 @@
 }
 
 #Desc {
-	@extend %library_description;
+	@include library.description;
 
 	line-height: unset !important;
 
@@ -49,15 +49,12 @@
 	margin-bottom: 9px !important;
 }
 
-// margin in tooltip
 #Name {
-	@extend %library_header;
-
-	margin: 0 !important;
+	@include library.header;
 }
 
 #Remainder {
-	@extend %button;
+	@include controls.button;
 
 	display: flex;
 	justify-content: center;
@@ -97,46 +94,4 @@
 #UnlockedLabelPercent {
 	opacity: var(--library_secondary-text-opacity) !important;
 	color: inherit !important;
-}
-
-//////////
-// TOOLTIP
-//////////
-
-#ProgressLabel {
-	opacity: var(--library_secondary-text-opacity) !important;
-	color: inherit !important;
-	font-size: var(--font-size-small) !important;
-	margin-bottom: var(--library_text-spacing) !important;
-}
-
-#SingleAchievementProgressBar {
-	@extend %progress-bar-outer;
-}
-
-#SingleAchievementProgressContainer {
-	margin-top: var(--tooltip_description-spacing);
-}
-
-#TextSection {
-	color: inherit !important;
-	font: inherit !important;
-	padding: var(--tooltip_description-spacing) !important;
-	padding-left: 0 !important;
-}
-
-#TopSectionAchievementIcon {
-	--icon-size: 64px;
-
-	margin: var(--tooltip_description-spacing) !important;
-}
-
-#Unlocked {
-	background: none !important;
-	color: inherit !important;
-	font-size: var(--font-size) !important;
-	font-weight: bold !important;
-	padding: 2px 0 1px 0 !important;
-	border-top: 1px solid #fff !important;
-	box-shadow: 0 -1px #9ebbdd !important;
 }

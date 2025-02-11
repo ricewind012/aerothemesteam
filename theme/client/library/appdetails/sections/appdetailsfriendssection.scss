@@ -1,11 +1,11 @@
-@use "../../../../shared/extends/controls";
+@use "shared/extends/controls";
 
 #FriendsOverflow {
 	width: 100%;
 }
 
 #ShowMore {
-	@extend %button;
+	@include controls.button;
 
 	margin-top: var(--library_spacing-x05) !important;
 }

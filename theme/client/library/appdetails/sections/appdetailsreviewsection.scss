@@ -1,4 +1,4 @@
-@use "../../../../shared/extends/library";
+@use "shared/extends/library";
 
 #ButtonsGroup {
 	flex-wrap: wrap !important;
@@ -13,14 +13,14 @@
 }
 
 #PlayedForTime {
-	@extend %library_description;
+	@include library.description;
 
 	font-weight: normal !important;
 	padding: 0 !important;
 }
 
 #ReviewDescription {
-	@extend %library_header;
+	@include library.header;
 }
 
 #ReviewIcon {

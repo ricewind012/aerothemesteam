@@ -1,4 +1,4 @@
-@use "../../../../shared/extends/library";
+@use "shared/extends/library";
 
 #Badge {
 	margin: 0 !important;
@@ -8,16 +8,16 @@
 	height: var(--library_icon-size) !important;
 
 	&#EmptyCircle {
-		@extend %library_placeholder;
+		@include library.placeholder;
 	}
 }
 
 #BadgeLevel {
-	@extend %library_description;
+	@include library.description;
 }
 
 #BadgeName {
-	@extend %library_header;
+	@include library.header;
 }
 
 #CardsLeft {

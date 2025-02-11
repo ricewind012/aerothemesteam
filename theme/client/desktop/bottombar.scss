@@ -1,5 +1,5 @@
-@use "../../shared/extends/controls";
-@use "../../shared/extends/style";
+@use "shared/extends/controls";
+@use "shared/extends/style";
 
 :root {
 	--bottombar_spacing: 4px;
@@ -18,7 +18,7 @@
 }
 
 #BottomBar {
-	@extend %blue-bar;
+	@include style.blue-bar;
 
 	box-shadow: none !important;
 
@@ -70,13 +70,13 @@
 }
 
 #ProgressBar {
-	@extend %progress-bar-outer;
+	@include controls.progress-bar-outer;
 
 	// Align with icons
 	margin-block: -1px !important;
 
 	&::after {
-		@extend %progress-bar-inner;
+		@include controls.progress-bar-inner;
 	}
 }
 
@@ -93,7 +93,7 @@
 	flex-grow: 0 !important;
 
 	&#Percentage {
-		@extend %parentheses;
+		@include style.parentheses;
 
 		opacity: var(--library_secondary-text-opacity) !important;
 		margin-left: var(--bottombar_spacing) !important;

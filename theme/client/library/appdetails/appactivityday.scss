@@ -1,5 +1,5 @@
-@use "../../../shared/extends/library";
-@use "../../../shared/extends/style";
+@use "shared/extends/library";
+@use "shared/extends/style";
 
 #Blur,
 #ImageContainer,
@@ -23,7 +23,7 @@
 }
 
 #PartnerEventFeaturedHeader {
-	@extend %section-header;
+	@include style.section-header;
 
 	text-transform: unset !important;
 	line-height: unset !important;
@@ -56,7 +56,7 @@
 	}
 
 	&_Title {
-		@extend %library_header;
+		@include library.header;
 
 		font-size: 10pt !important;
 		text-decoration: underline !important;

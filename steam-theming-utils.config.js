@@ -1,4 +1,4 @@
 /** @type {import("steam-theming-utils").Config} */
 export default {
-	ignore: ["client/shared"],
+	ignore: ["client/popups/contextmenu/friendsui", "client/shared"],
 };

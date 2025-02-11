@@ -1,4 +1,4 @@
-@use "../../../shared/extends/library";
+@use "shared/extends/library";
 
 #EventDaySeparator {
 	background-color: var(--library_border-color) !important;
@@ -8,7 +8,7 @@
 }
 
 #EventHeaderBlock {
-	@extend %library_header;
+	@include library.header;
 
 	margin-bottom: var(--library_text-spacing) !important;
 

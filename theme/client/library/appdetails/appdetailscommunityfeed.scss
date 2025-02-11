@@ -1,4 +1,4 @@
-@use "../../../shared/extends/controls";
+@use "shared/extends/controls";
 
 #HeaderStyles {
 	border-radius: 0 !important;
@@ -6,7 +6,7 @@
 }
 
 #LoadContentButton {
-	@extend %button;
+	@include controls.button;
 
 	margin: var(--library_spacing) !important;
 }

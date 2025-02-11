@@ -1,7 +1,7 @@
-@use "../../../shared/extends/library";
+@use "shared/extends/library";
 
 #PlayNextSubHead {
-	@extend %library_header;
+	@include library.header;
 
 	letter-spacing: 0 !important;
 

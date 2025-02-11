@@ -1,5 +1,5 @@
-@use "../../../shared/extends/controls";
-@use "../../../shared/extends/style";
+@use "shared/extends/controls";
+@use "shared/extends/style";
 
 #Controls {
 	padding: 0 !important;
@@ -28,7 +28,7 @@
 
 		--icon: var(--icon-smiley);
 
-		@extend %icon;
+		@include style.icon;
 	}
 
 	&::after {
@@ -36,7 +36,7 @@
 
 		background-color: var(--blue-text);
 
-		@extend %arrow;
+		@include style.arrow;
 	}
 }
 
@@ -45,7 +45,7 @@
 }
 
 #PostButton {
-	@extend %button;
+	@include controls.button;
 
 	gap: var(--library_spacing-x05) !important;
 
@@ -58,12 +58,12 @@
 
 		--icon: var(--icon-blue-arrow);
 
-		@extend %icon;
+		@include style.icon;
 	}
 }
 
 #PostTextEntryArea {
-	@extend %text-input;
+	@include controls.text-input;
 
 	width: 100% !important;
 	min-height: 40px !important;

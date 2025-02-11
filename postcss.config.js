@@ -26,7 +26,7 @@ fs.writeFileSync(path.join(argv.dir, "index.css"), text);
  * @param {string} name File name without the extension.
  */
 function icon(name) {
-	const file = path.join("assets", `${name.replace(/"/g, "")}.png`);
+	const file = path.join("assets", "icons", `${name.replace(/"/g, "")}.png`);
 	const base64 = fs.readFileSync(file, { encoding: "base64" });
 
 	return `url("data:image/png;base64,${base64}")`;
@@ -38,6 +38,9 @@ export default {
 	parser: postcssSassParser,
 	plugins: [
 		postcssSassPlugin({
+			// TODO: use "loadPaths" when @csstools/postcss-sass switches to
+			// normal sass API.
+			includePaths: ["theme"],
 			silenceDeprecations: ["legacy-js-api"],
 		}),
 		postcssFunctions({

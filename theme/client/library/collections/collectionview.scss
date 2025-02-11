@@ -1,5 +1,5 @@
-@use "../../../shared/extends/library";
-@use "../../../shared/extends/style";
+@use "shared/extends/library";
+@use "shared/extends/style";
 
 #CollectionName {
 	font-size: inherit !important;
@@ -21,7 +21,7 @@
 #EditButton {
 	--icon: var(--icon-edit);
 
-	@extend %icon;
+	@include style.icon;
 
 	margin: calc(var(--library_section-header-spacing-y) * -1) 0 !important;
 
@@ -32,7 +32,7 @@
 }
 
 #Header {
-	@extend %section-header;
+	@include style.section-header;
 
 	text-transform: unset !important;
 

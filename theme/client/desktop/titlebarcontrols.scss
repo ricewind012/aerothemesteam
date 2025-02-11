@@ -1,6 +1,6 @@
-@use "../../shared/extends/style";
+@use "shared/extends/style";
 
-%titlebarcontrols_button {
+@mixin _titlebar-button {
 	margin-right: 10px !important;
 
 	width: var(--icon-size) !important;
@@ -26,7 +26,7 @@
 }
 
 #Button {
-	@extend %titlebarcontrols_button;
+	@include _titlebar-button;
 
 	background-color: transparent !important;
 	padding: 0 !important;
@@ -36,7 +36,7 @@
 	}
 
 	svg {
-		@extend %icon;
+		@include style.icon;
 	}
 }
 
@@ -58,7 +58,7 @@
 	margin: 0 !important;
 
 	.icon-button {
-		@extend %titlebarcontrols_button;
+		@include _titlebar-button;
 
 		app-region: no-drag;
 	}

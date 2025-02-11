@@ -1,14 +1,14 @@
-@use "../../../shared/extends/controls";
-@use "../../../shared/extends/library";
-@use "../../../shared/extends/style";
+@use "shared/extends/controls";
+@use "shared/extends/library";
+@use "shared/extends/style";
 
 #AddShowcase {
-	@extend %button;
+	@include controls.button;
 
 	opacity: 1 !important;
 
 	&#Disabled {
-		@extend %button-disabled;
+		@include controls.button-disabled;
 	}
 
 	svg {
@@ -66,7 +66,7 @@
 }
 
 #ShowcaseHeader {
-	@extend %section-header;
+	@include style.section-header;
 
 	margin: 0 !important;
 }

@@ -1,4 +1,4 @@
-@use "../../../shared/extends/library";
+@use "shared/extends/library";
 
 #AppDetailsSection {
 	color: var(--blue-text) !important;
@@ -6,7 +6,7 @@
 }
 
 #AppDetailsSectionContainer {
-	@extend %library_section;
+	@include library.section;
 
 	box-shadow: none !important;
 	margin: 0 !important;

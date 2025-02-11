@@ -1,0 +1,43 @@
+@use "shared/extends/controls";
+
+#Name {
+	margin: 0 !important;
+}
+
+#ProgressLabel {
+	opacity: var(--library_secondary-text-opacity) !important;
+	color: inherit !important;
+	font-size: var(--font-size-small) !important;
+	margin-bottom: var(--library_text-spacing) !important;
+}
+
+#SingleAchievementProgressBar {
+	@include controls.progress-bar-outer;
+}
+
+#SingleAchievementProgressContainer {
+	margin-top: var(--tooltip_description-spacing);
+}
+
+#TextSection {
+	color: inherit !important;
+	font: inherit !important;
+	padding: var(--tooltip_description-spacing) !important;
+	padding-left: 0 !important;
+}
+
+#TopSectionAchievementIcon {
+	--icon-size: 64px;
+
+	margin: var(--tooltip_description-spacing) !important;
+}
+
+#Unlocked {
+	background: none !important;
+	color: inherit !important;
+	font-size: var(--font-size) !important;
+	font-weight: bold !important;
+	padding: 2px 0 1px 0 !important;
+	border-top: 1px solid #fff !important;
+	box-shadow: 0 -1px #9ebbdd !important;
+}

@@ -1,4 +1,4 @@
-@use "../../shared/extends/style";
+@use "shared/extends/style";
 
 :root {
 	--supernav_inverse-border-size: 3px;
@@ -13,7 +13,7 @@
 #Arrow {
 	--icon: var(--icon-nav-forward);
 
-	@extend %icon;
+	@include style.icon;
 
 	margin: 0 4px;
 

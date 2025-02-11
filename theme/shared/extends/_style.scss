@@ -1,4 +1,4 @@
-%arrow {
+@mixin arrow {
 	mask-image: var(--icon-arrow-bottom);
 	margin: 0 !important;
 
@@ -6,7 +6,7 @@
 	height: 4px !important;
 }
 
-%icon {
+@mixin icon {
 	background-image: var(--icon) !important;
 	background-size: var(--icon-size) !important;
 
@@ -14,17 +14,17 @@
 	height: var(--icon-size) !important;
 }
 
-%lighter {
+@mixin lighter {
 	--lighter: rgba(255, 255, 255, var(--lighter-opacity));
 	--lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter));
 }
 
-%link {
+@mixin link {
 	color: blue !important;
 	text-decoration: underline !important;
 }
 
-%parentheses {
+@mixin parentheses {
 	&::before {
 		content: "(";
 	}
@@ -34,7 +34,7 @@
 	}
 }
 
-%white-gradient {
+@mixin white-gradient {
 	--wg-opacity-1: 0.75;
 	--wg-opacity-2: 0.25;
 	--wg-color: 255, 255, 255;
@@ -50,8 +50,8 @@
 	background-blend-mode: color-burn !important;
 }
 
-%blue-bar {
-	@extend %white-gradient;
+@mixin blue-bar {
+	@include white-gradient;
 	--blue-bar-gradient: linear-gradient(
 			180deg,
 			var(--blue-light),
@@ -65,8 +65,8 @@
 	padding: 7px 12px !important;
 }
 
-%section-header {
-	@extend %white-gradient;
+@mixin section-header {
+	@include white-gradient;
 	--wg-size: 7px;
 	--wg-opacity-1: 0.5;
 	--wg-opacity-2: 0.15;

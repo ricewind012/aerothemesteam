@@ -1,4 +1,4 @@
-@use "../../shared/extends/library";
+@use "shared/extends/library";
 
 #AppGridSectionFooter {
 	display: none !important;
@@ -31,7 +31,7 @@
 }
 
 #EmptyGridMessageContainer {
-	@extend %library_placeholder;
+	@include library.placeholder;
 
 	margin: var(--library_spacing) !important;
 }
@@ -43,7 +43,7 @@
 }
 
 #GridWithControls {
-	@extend %library_section;
+	@include library.section;
 
 	padding: 0 !important;
 

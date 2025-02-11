@@ -1,7 +1,7 @@
-@use "../../shared/extends/library";
+@use "shared/extends/library";
 
 #BoxCarousel {
-	@extend %library_section;
+	@include library.section;
 
 	margin: 0 !important;
 }

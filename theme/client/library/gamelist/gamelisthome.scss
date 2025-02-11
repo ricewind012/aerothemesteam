@@ -1,7 +1,7 @@
-@use "../../../shared/extends/style";
+@use "shared/extends/style";
 
 #Bar {
-	@extend %blue-bar;
+	@include style.blue-bar;
 	--wg-opacity-1: 0.375;
 	--wg-opacity-2: 0.125;
 

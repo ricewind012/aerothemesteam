@@ -1,8 +1,8 @@
-@use "./style";
+@use "shared/extends/style";
 
-%button {
-	@extend %lighter;
-	@extend %white-gradient;
+@mixin button {
+	@include style.lighter;
+	@include style.white-gradient;
 	--lighter-opacity: 0.35;
 	--wg-size: 9px;
 
@@ -24,14 +24,14 @@
 	}
 }
 
-%button-disabled {
+@mixin button-disabled {
 	--wg-opacity-1: 0;
 	--wg-opacity-2: 0;
 
 	pointer-events: none !important;
 }
 
-%progress-bar-outer {
+@mixin progress-bar-outer {
 	background-color: transparent !important;
 	background-image: linear-gradient(180deg, #66666680, transparent) !important;
 	border: var(--blue-border) !important;
@@ -41,8 +41,8 @@
 	height: 18px !important;
 }
 
-%progress-bar-inner {
-	@extend %white-gradient;
+@mixin progress-bar-inner {
+	@include style.white-gradient;
 	--wg-size: 9px;
 
 	background-color: transparent !important;
@@ -57,7 +57,7 @@
 	border-radius: 0 !important;
 }
 
-%text-input {
+@mixin text-input {
 	background-color: #fff !important;
 	color: var(--fg-main) !important;
 	font-size: var(--font-size) !important;
@@ -72,13 +72,13 @@
 	}
 }
 
-%text-input-compact {
-	@extend %text-input;
+@mixin text-input-compact {
+	@include text-input;
 
 	padding: 0 6px !important;
 }
 
-%tooltip {
+@mixin tooltip {
 	background: var(--tooltip_background);
 	color: #4c4c4c;
 	font-size: var(--font-size);

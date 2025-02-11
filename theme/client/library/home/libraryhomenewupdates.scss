@@ -1,4 +1,4 @@
-@use "../../../shared/extends/library";
+@use "shared/extends/library";
 
 #EventOptions {
 	& > div {
@@ -16,7 +16,7 @@
 }
 
 #EventTime {
-	@extend %library_header;
+	@include library.header;
 
 	padding-bottom: var(--library_text-spacing) !important;
 }
@@ -29,7 +29,7 @@
 }
 
 /* TODO:
- * %library_header-secondary idk
+ * @mixin header-secondary idk
  * filter: brightness(1.2); on hover
  */
 #GameIconAndName {
@@ -60,9 +60,9 @@
 		margin-top: var(--library_spacing-x05) !important;
 	}
 
-	// TODO: %library_header-primary idk
+	// TODO: @mixin header-primary idk
 	&_TextTitle {
-		@extend %library_header;
+		@include library.header;
 
 		font-size: 10pt !important;
 		text-decoration: underline !important;

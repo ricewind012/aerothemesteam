@@ -1,5 +1,5 @@
-@use "../extends/style";
+@use "shared/extends/style";
 
 .game-list-filter-status {
-	@extend %section-header;
+	@include style.section-header;
 }

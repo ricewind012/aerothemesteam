@@ -1,8 +1,8 @@
-@use "../../shared/extends/controls";
-@use "../../shared/extends/library";
+@use "shared/extends/controls";
+@use "shared/extends/library";
 
 #CompactThumbButton {
-	@extend %button;
+	@include controls.button;
 
 	margin-left: var(--library_spacing-x05) !important;
 	margin-right: 0 !important;
@@ -12,9 +12,9 @@
 	color: var(--blue-text) !important;
 }
 
-// TODO: %library_header-primary
+// TODO: @mixin header-primary
 #Playtime {
-	@extend %library_header;
+	@include library.header;
 
 	font-size: 10pt !important;
 	text-decoration: underline !important;
@@ -30,9 +30,9 @@
 	padding: var(--library_spacing) !important;
 }
 
-// TODO: %library_header-secondary
+// TODO: @mixin header-secondary
 #RecommendGame {
-	@extend %library_header;
+	@include library.header;
 
 	opacity: var(--library_secondary-text-opacity) !important;
 	color: inherit !important;
