@@ -52,56 +52,15 @@
 	}
 }
 
-.ribbon-section {
-	--shd: 1px 1px var(--shadow-color);
-
-	font-size: var(--font-size-small);
-	border: 1px solid #8198b9;
-	border-radius: var(--border-radius);
-	box-shadow:
-		var(--shd),
-		inset var(--shd);
-
-	display: flex;
-	flex-direction: column;
-}
-
-.ribbon-section-body {
-	--max-item-count: 3;
-	--gap-y: 5px;
-	--padding-y: 6px;
-	--spacing-x: 10px;
-
-	color: var(--blue-text);
-	gap: var(--gap-y) var(--spacing-x);
-	padding: var(--padding-y) var(--spacing-x);
-
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	max-height: calc(
-		var(--gap-y) * (var(--max-item-count) - 1) + var(--padding-y) * 2 +
-			var(--icon-size) * var(--max-item-count)
+.ribbon-container {
+	@include style.white-gradient(
+		$opacity-start: 0.575,
+		$opacity-end: 0.15,
+		$size: 26px
 	);
-}
-
-.ribbon-section-title {
-	--spacing: 1.5px;
-
-	background-image: linear-gradient(0deg, #6a89b3, #a2b6d2);
-	color: #fff;
-	text-align: center;
-	padding: var(--spacing) calc(var(--spacing) * 2);
-}
-
-.ribbon-sections-container {
-	@include style.white-gradient;
 
 	--shadow-color: rgba(255, 255, 255, 0.5);
 	--spacing: 2px;
-	--wg-opacity-1: 0.575;
-	--wg-opacity-2: 0.15;
-	--wg-size: 26px;
 
 	background-image: linear-gradient(
 			0deg,
@@ -116,4 +75,46 @@
 	padding: var(--spacing);
 
 	display: flex;
+}
+
+.ribbon-section {
+	--shadow: 1px 1px var(--shadow-color);
+
+	font-size: var(--font-size-small);
+	border: 1px solid #8198b9;
+	border-radius: var(--border-radius);
+	box-shadow:
+		var(--shadow),
+		inset var(--shadow);
+
+	display: flex;
+	flex-direction: column;
+}
+
+.ribbon-section-body {
+	--max-item-count: 3;
+	--spacing: 5px;
+	--spacing-y: var(--spacing);
+	--spacing-x: calc(var(--spacing) * 2);
+
+	color: var(--blue-text);
+	gap: var(--spacing-y) var(--spacing-x);
+	padding: var(--spacing-y) var(--spacing-x);
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	max-height: calc(
+		var(--spacing-y) * (var(--max-item-count) - 1) + var(--spacing-y) * 2 +
+			var(--icon-size) * var(--max-item-count)
+	);
+}
+
+.ribbon-section-title {
+	--spacing: 1.5px;
+
+	background-image: linear-gradient(0deg, #6a89b3, #a2b6d2);
+	color: #fff;
+	text-align: center;
+	padding: var(--spacing) calc(var(--spacing) * 2);
 }

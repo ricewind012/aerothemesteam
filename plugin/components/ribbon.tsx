@@ -64,7 +64,7 @@ interface RibbonContainerProps {
 }
 
 export const RibbonContainer: FC<RibbonContainerProps> = ({ children }) => (
-	<div className="ribbon-sections-container">{children}</div>
+	<div className="ribbon-container">{children}</div>
 );
 
 interface RibbonGameSectionButtonProps {

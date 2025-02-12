@@ -52,7 +52,7 @@ $icons: (
 #contextMenuContents {
 	@include contextmenu.container-left-border;
 
-	background-color: #f0f0f0;
+	background-color: transparent;
 	padding: 0;
 
 	position: relative;

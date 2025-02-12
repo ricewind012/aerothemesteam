@@ -15,7 +15,11 @@
 }
 
 #CheckboxWithImage {
-	@include style.white-gradient;
+	@include style.white-gradient(
+		$opacity-start: 0.2,
+		$opacity-end: 0.15,
+		$size: 7px
+	);
 
 	border: 1px solid transparent !important;
 	padding: 2px 3px !important;
@@ -27,10 +31,6 @@
 	height: var(--icon-size) !important;
 
 	&#Active {
-		--wg-size: 7px;
-		--wg-opacity-1: 0.2;
-		--wg-opacity-2: 0.15;
-
 		background-image: linear-gradient(0deg, #a0d5f2 0%, #66c8ff 22.5%),
 			var(--white-gradient);
 		border-color: #bbe7ff !important;

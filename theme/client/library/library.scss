@@ -21,7 +21,7 @@
 }
 
 #AppDetailsMain {
-	border: none !important;
+	border: var(--library_container-border) !important;
 }
 
 #LeftListSizableContainer {

@@ -25,13 +25,13 @@
 
 #AddShowcaseRow {
 	margin: 0 !important;
-	margin-top: calc(var(--library_spacing) * -1) !important;
+	margin-top: calc(var(--library_body-spacing) * -1) !important;
 }
 
 #ChildrenContainer {
 	margin: 0 !important;
 
-	// for #libraryhomeplaynext_PlayNextSubhead
+	// #libraryhomeplaynext_PlayNextSubhead
 	position: relative !important;
 }
 

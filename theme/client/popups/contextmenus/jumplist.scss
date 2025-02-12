@@ -12,7 +12,7 @@
 
 	background-image: icon("context-menu-radio"), var(--contextmenu_item-gradient);
 	background-position: center;
-	border-radius: 3px;
+	border-radius: var(--border-radius);
 
 	left: -1px;
 
