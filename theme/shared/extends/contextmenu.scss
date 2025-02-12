@@ -28,12 +28,6 @@
 	height: var(--icon-size);
 }
 
-@mixin item-active {
-	background: var(--contextmenu_item-gradient);
-	border: 1px solid var(--contextmenu_item-border);
-	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
-}
-
 @mixin item {
 	color: var(--contextmenu_fg);
 	font-size: var(--font-size);
@@ -49,6 +43,27 @@
 	&:hover {
 		@include item-active;
 	}
+}
+
+@mixin item-active {
+	background: var(--contextmenu_item-gradient);
+	border: 1px solid var(--contextmenu_item-border);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+@mixin item-checkbox {
+	--offset: -1px;
+	--size: 22px;
+
+	@include item-active;
+
+	border-radius: var(--border-radius);
+
+	position: absolute;
+	top: var(--offset);
+	left: var(--offset);
+	width: var(--size);
+	height: var(--size);
 }
 
 @mixin separator {

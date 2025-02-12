@@ -19,6 +19,8 @@
 }
 
 $icons: (
+	"Check": "context-menu-checkmark",
+	"DialogCheck": "context-menu-checkmark",
 	"PlusCircle": "add",
 	"Play": "play",
 );
@@ -71,6 +73,26 @@ $icons: (
 		}
 	}
 
+	&:has(.SVGIcon_Check, .SVGIcon_DialogCheck) {
+		--offset: -1px;
+		--size: 22px;
+
+		&::before {
+			position: absolute;
+			box-sizing: border-box;
+			top: var(--offset);
+			left: var(--offset);
+			width: var(--size);
+			height: var(--size);
+
+			@include contextmenu.item-active;
+
+			background-image: var(--icon), var(--contextmenu_item-gradient);
+			background-position: center;
+			border-radius: var(--border-radius);
+		}
+	}
+
 	&#active {
 		@include contextmenu.item-active;
 	}
@@ -80,6 +102,11 @@ $icons: (
 		--contextmenu_item-border: #d3d3d3;
 		--contextmenu_item-gradient-start: #f4f5f5;
 		--contextmenu_item-gradient-end: #e6e6e6;
+		--contextmenu_item-gradient: linear-gradient(
+			180deg,
+			var(--contextmenu_item-gradient-start),
+			var(--contextmenu_item-gradient-end)
+		);
 	}
 
 	&::before {
