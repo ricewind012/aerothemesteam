@@ -1,0 +1,45 @@
+.Z5iAXBkRFGnwpXsO8ANTl {
+  background-image: none !important;
+  font-weight: bold !important;
+  letter-spacing: 0 !important;
+  /* TODO*/
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Stream, .Z5iAXBkRFGnwpXsO8ANTl.Connect, .Z5iAXBkRFGnwpXsO8ANTl.Launch, .Z5iAXBkRFGnwpXsO8ANTl.PlayMusic, .Z5iAXBkRFGnwpXsO8ANTl.Play {
+  /*background: linear-gradient(-45deg, #59bf4040 0%, #5be33a40 70%);*/
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Download, .Z5iAXBkRFGnwpXsO8ANTl.Update, .Z5iAXBkRFGnwpXsO8ANTl.PreLoad, .Z5iAXBkRFGnwpXsO8ANTl.Resume, .Z5iAXBkRFGnwpXsO8ANTl.Pause, .Z5iAXBkRFGnwpXsO8ANTl.BorrowApp, .Z5iAXBkRFGnwpXsO8ANTl.Stop, .Z5iAXBkRFGnwpXsO8ANTl.Cancel, .Z5iAXBkRFGnwpXsO8ANTl.Install, .Z5iAXBkRFGnwpXsO8ANTl.PurchaseApp {
+  /*background: linear-gradient(-45deg, #0056d640 8%, #1a9fff40 90%);*/
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Cancel {
+  --icon: var(--icon-cancel) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Connect {
+  --icon: var(--icon-play) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Download {
+  --icon: var(--icon-download) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Install {
+  --icon: var(--icon-download) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Launch {
+  --icon: var(--icon-play) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Play {
+  --icon: var(--icon-play) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl.PlayMusic {
+  --icon: var(--icon-play) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Resume {
+  --icon: var(--icon-play) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Stop {
+  --icon: var(--icon-cancel) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl.Update {
+  --icon: var(--icon-update) !important;
+}
+.Z5iAXBkRFGnwpXsO8ANTl svg {
+  display: none !important;
+}

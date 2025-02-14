@@ -1,0 +1,38 @@
+._2lNdDLgjQdeBXmMlPO8lvq {
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+._2RSxEUPGL8Bj016q0Sp3Hx {
+  --lighter: rgba(255, 255, 255, var(--lighter-opacity)) !important;
+  --lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter)) !important;
+  --lighter-opacity: 0.35 !important;
+  --wg-opacity-1: 0.75 !important;
+  --wg-opacity-2: 0.25 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 9px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  background: linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580), var(--lighter-bg), var(--white-gradient) !important;
+  color: #273b5c !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  border: var(--blue-border) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 2.5px 18px !important;
+  margin: var(--library_spacing) !important;
+}
+._2RSxEUPGL8Bj016q0Sp3Hx:active {
+  --wg-opacity-1: 0.9 !important;
+  --wg-opacity-2: 0.4 !important;
+  --lighter-opacity: 0 !important;
+}

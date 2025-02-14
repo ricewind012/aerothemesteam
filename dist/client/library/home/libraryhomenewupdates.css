@@ -1,0 +1,73 @@
+._2-p7shAZYrRijpaTU9bAFR > div {
+  border-radius: var(--border-radius-large) !important;
+}
+
+._11cYvnWDwOeGdlUpfGNlYt {
+  padding: var(--library_spacing) !important;
+  margin: 0 !important;
+}
+
+._3Rb_j3lgHaVVIud4Gla7_m {
+  border-radius: var(--border-radius-large) !important;
+}
+
+._2rlKqvybYupc-uk64cdQ8D {
+  color: inherit !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  padding-bottom: var(--library_text-spacing) !important;
+}
+
+._3tdftHFf8tvdJW34S-KwjR {
+  margin-right: var(--library_text-spacing) !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+}
+
+/* TODO:
+ * @mixin header-secondary idk
+ * filter: brightness(1.2); on hover
+ */
+._3_xMyCJAh_Dv99KgZ54P3j {
+  background-color: transparent !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  padding: 0 !important;
+  margin-top: var(--library_spacing-x05) !important;
+  align-items: center !important;
+}
+
+._28IqrZIgxpqkUQyhdaLDUN {
+  opacity: var(--library_secondary-text-opacity) !important;
+  color: inherit !important;
+}
+
+._3YO5BpDmZERh_G8kaWbaSJ {
+  margin-right: var(--library_spacing) !important;
+  /* TODO: @mixin header-primary idk*/
+}
+.SPz0ipLqfF1oAO7tdrkdY {
+  border-radius: var(--border-radius-large) !important;
+}
+.aqYQCF7Ny9x3EKcjCOTRY {
+  color: inherit !important;
+  padding: 0 !important;
+  margin-top: var(--library_spacing-x05) !important;
+}
+.DVBcpUzJ0x6kaRMfug0OJ {
+  color: inherit !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  font-size: 10pt !important;
+  text-decoration: underline !important;
+}
+
+._1eFe5VbyACJE4RVGpOWKMC {
+  background-image: var(--icon-settings) !important;
+  margin: calc(var(--library_section-header-spacing-y) * -1) 0 !important;
+  margin-left: var(--library_text-spacing) !important;
+  /* TODO: put somewhere else once I replace arrows*/
+}
+._1eFe5VbyACJE4RVGpOWKMC svg {
+  display: none !important;
+}

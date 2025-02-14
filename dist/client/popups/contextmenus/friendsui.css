@@ -1,0 +1,28 @@
+.contextMenuUnselectable,
+.contextMenuUnselectable.disabled,
+.contextMenuGameTitle,
+.contextMenuBroadcast,
+.contextMenuGameOptions {
+  background-color: transparent !important;
+}
+
+.contextMenuGameName {
+  color: inherit !important;
+  font-weight: bold !important;
+}
+
+.recentName {
+  color: var(--contextmenu_fg) !important;
+  font-size: var(--font-size) !important;
+  text-transform: unset !important;
+  border: 1px solid transparent !important;
+  border-radius: var(--border-radius) !important;
+  padding: 1px 20px 2px calc(5px + var(--contextmenu_left-spacing)) !important;
+  position: relative !important;
+  margin: 0 !important;
+}
+.recentName:hover {
+  background: var(--contextmenu_item-gradient) !important;
+  border: 1px solid var(--contextmenu_item-border) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+}

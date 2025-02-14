@@ -1,0 +1,100 @@
+.ribbon-button {
+  gap: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: var(--direction) !important;
+  flex-grow: 1 !important;
+}
+
+.ribbon-button-container {
+  display: flex !important;
+  align-items: center !important;
+  flex-direction: var(--direction) !important;
+}
+
+.ribbon-button-arrow {
+  mask: var(--icon) !important;
+  mask-position: 100% center !important;
+  mask-size: 4px 7px !important;
+  mask-repeat: no-repeat !important;
+  background-color: var(--blue-text) !important;
+  width: 8px !important;
+  height: 100% !important;
+}
+.ribbon-button-arrow.vertical {
+  mask-position: center 100% !important;
+  mask-size: 7px 4px !important;
+  width: 100% !important;
+  height: 8px !important;
+}
+
+.ribbon-button-container {
+  --direction: row !important;
+  --icon: var(--icon-arrow-right) !important;
+  justify-content: space-between !important;
+  cursor: pointer !important;
+}
+.ribbon-button-container.disabled {
+  pointer-events: none !important;
+}
+.ribbon-button-container.vertical {
+  --direction: column !important;
+  --icon: var(--icon-arrow-bottom) !important;
+  --icon-size: 32px !important;
+}
+
+.ribbon-container {
+  --wg-opacity-1: 0.575 !important;
+  --wg-opacity-2: 0.15 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 26px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  --shadow-color: rgba(255, 255, 255, 0.5) !important;
+  --spacing: 2px !important;
+  background-image: linear-gradient(0deg, #bdd1ea 14.1%, #93b0d5 84.62%, #506580 156.7%), var(--white-gradient) !important;
+  box-shadow: inset 0 0 9.3px var(--shadow-color) !important;
+  border-radius: var(--border-radius-large) !important;
+  gap: var(--spacing) !important;
+  padding: var(--spacing) !important;
+  display: flex !important;
+}
+
+.ribbon-section {
+  --shadow: 1px 1px var(--shadow-color) !important;
+  font-size: var(--font-size-small) !important;
+  border: 1px solid #8198b9 !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: var(--shadow), inset var(--shadow) !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.ribbon-section-body {
+  --max-item-count: 3 !important;
+  --spacing: 5px !important;
+  --spacing-y: var(--spacing) !important;
+  --spacing-x: calc(var(--spacing) * 2) !important;
+  color: var(--blue-text) !important;
+  gap: var(--spacing-y) var(--spacing-x) !important;
+  padding: var(--spacing-y) var(--spacing-x) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  flex-wrap: wrap !important;
+  max-height: calc(var(--spacing-y) * (var(--max-item-count) - 1) + var(--spacing-y) * 2 + var(--icon-size) * var(--max-item-count)) !important;
+}
+
+.ribbon-section-title {
+  --spacing: 1.5px !important;
+  background-image: linear-gradient(0deg, #6a89b3, #a2b6d2) !important;
+  color: #fff !important;
+  text-align: center !important;
+  padding: var(--spacing) calc(var(--spacing) * 2) !important;
+}

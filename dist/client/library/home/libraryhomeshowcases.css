@@ -1,0 +1,111 @@
+._2aw5aUUo3lrK6wxJb4_ms5 {
+  --lighter: rgba(255, 255, 255, var(--lighter-opacity)) !important;
+  --lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter)) !important;
+  --lighter-opacity: 0.35 !important;
+  --wg-opacity-1: 0.75 !important;
+  --wg-opacity-2: 0.25 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 9px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  background: linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580), var(--lighter-bg), var(--white-gradient) !important;
+  color: #273b5c !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  border: var(--blue-border) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 2.5px 18px !important;
+  opacity: 1 !important;
+}
+._2aw5aUUo3lrK6wxJb4_ms5:active {
+  --wg-opacity-1: 0.9 !important;
+  --wg-opacity-2: 0.4 !important;
+  --lighter-opacity: 0 !important;
+}
+._2aw5aUUo3lrK6wxJb4_ms5._1MNhU5EYdeegJRmQ51prWb {
+  --wg-opacity-1: 0 !important;
+  --wg-opacity-2: 0 !important;
+  pointer-events: none !important;
+}
+._2aw5aUUo3lrK6wxJb4_ms5 svg {
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+}
+._2aw5aUUo3lrK6wxJb4_ms5 line,
+._2aw5aUUo3lrK6wxJb4_ms5 circle {
+  stroke: var(--blue-text) !important;
+  stroke-width: 16px !important;
+}
+
+._3SkuN_ykQuWGF94fclHdhJ {
+  margin: 0 !important;
+  margin-top: calc(var(--library_body-spacing) * -1) !important;
+}
+
+._1VMQWnw-9FBp-MVXUbWfS_ {
+  margin: 0 !important;
+  /* #libraryhomeplaynext_PlayNextSubhead*/
+  position: relative !important;
+}
+
+._2qm05e8tWSAb-_fAHytQCP {
+  opacity: var(--library_secondary-text-opacity) !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  line-height: 1 !important;
+  margin-left: var(--library_text-spacing) !important;
+}
+
+._2j0P6ED4qgKoZ623as9P_e {
+  font-size: var(--font-size-xlarge) !important;
+}
+
+.V7RuDNUxhxoBRaiGWbk3B {
+  border: none !important;
+  padding-top: var(--library_spacing) !important;
+}
+
+.UOfJ-NXoaml5lmTtRdkSo {
+  top: 30px !important;
+}
+.UOfJ-NXoaml5lmTtRdkSo path,
+.UOfJ-NXoaml5lmTtRdkSo line {
+  stroke: var(--blue-text) !important;
+}
+
+._3DJLGrqzoQ5vMDI_4VG502 {
+  padding: var(--library_spacing) !important;
+}
+
+._23SnllqT_AqZ1C_QHcNQ4Z {
+  --wg-opacity-1: 0.5 !important;
+  --wg-opacity-2: 0.15 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 7px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  --bg: #bdd1ea !important;
+  background-image: linear-gradient(180deg, var(--bg), var(--bg)), var(--white-gradient) !important;
+  color: var(--blue-text) !important;
+  font-size: var(--font-size-small) !important;
+  font-weight: bold !important;
+  border: 1px solid #9cb1ca !important;
+  padding: var(--library_section-header-spacing-y) var(--library_section-header-spacing-x) !important;
+  margin: 0 !important;
+}

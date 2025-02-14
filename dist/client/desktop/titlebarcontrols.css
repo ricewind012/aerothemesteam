@@ -1,0 +1,60 @@
+._3yD46y5pd3zOGR7CzKs0mC {
+  display: none !important;
+}
+
+._5wILZhsLODVwGfcJ0hKmJ {
+  --icon: var(--icon-rss) !important;
+}
+
+._1B_GY6Ybp1MERAoz73-3um {
+  display: none !important;
+}
+
+._2Szzh5sKyGgnLUR870zbDE {
+  margin-right: 10px !important;
+  width: var(--icon-size) !important;
+  min-width: var(--icon-size) !important;
+  min-height: var(--icon-size) !important;
+  /* TODO: hover & use for every icon*/
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+._2Szzh5sKyGgnLUR870zbDE:active {
+  filter: brightness(1.25) !important;
+}
+._2Szzh5sKyGgnLUR870zbDE path {
+  display: none !important;
+}
+._2Szzh5sKyGgnLUR870zbDE svg {
+  background-image: var(--icon) !important;
+  background-size: var(--icon-size) !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+}
+
+._3LKQ3S_yqrebeNLF6aeiog {
+  --icon: var(--icon-display) !important;
+}
+._3LKQ3S_yqrebeNLF6aeiog svg {
+  position: unset !important;
+}
+
+._3mGEzzp18imtSzGPkduedi {
+  --icon: var(--icon-notifications) !important;
+  margin: 0 !important;
+}
+
+._3cykd-VfN_xBxf3Qxriccm {
+  margin: 0 !important;
+}
+._3cykd-VfN_xBxf3Qxriccm .icon-button {
+  margin-right: 10px !important;
+  width: var(--icon-size) !important;
+  min-width: var(--icon-size) !important;
+  min-height: var(--icon-size) !important;
+  /* TODO: hover & use for every icon*/
+  app-region: no-drag !important;
+}
+._3cykd-VfN_xBxf3Qxriccm .icon-button:active {
+  filter: brightness(1.25) !important;
+}

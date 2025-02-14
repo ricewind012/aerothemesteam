@@ -1,0 +1,18 @@
+._3x1HklzyDs4TEjACrRO2tB {
+  background-image: linear-gradient(0deg, #728fb7 88.41%, #c9d3e1 102.3%) !important;
+}
+._3x1HklzyDs4TEjACrRO2tB > .part {
+  order: -1 !important;
+}
+
+._2TKEazUUS3TlniZfpc8OOe {
+  --border-size: 1px !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  gap: var(--border-size) !important;
+  margin-top: var(--border-size) !important;
+  flex-direction: column !important;
+  height: unset !important;
+  order: 1 !important;
+}
