@@ -1,46 +1,11 @@
-# A more advanced theme template
+# Microsoft Office 2007 Styled Theme
 
-This uses **your own** class map - more info on how it works [here][steam-theming-utils].
+![Preview](./assets/preview/main-window.png)
 
-## Example
+Based on a mockup by MondySpartan: https://www.deviantart.com/mondyspartan/art/Steam-Office-2007-Styled-Mockup-1060261068
 
-Let's say you have a file called `src/desktop/titlebarcontrols.css`:
+## Plugin
 
-```css
-/* Remove useless shit */
-#AnnouncementsButton,
-#GamepadUIToggle {
-  display: none;
-}
-```
+This theme (optionally) requires a plugin under the same name for the top bar and some other additional elements. Nothing will break if you don't use it, but links to a game's store page, community hub, etc. will not be accessible. The top bar also replaces the account dropdown menu if you press on the profile tab.
 
-It will be compiled to the following code residing in `dist/desktop/titlebarcontrols.css`:
-
-```css
-/* Remove useless shit */
-._5wILZhsLODVwGfcJ0hKmJ /* AnnouncementsButton */,
-._3LKQ3S_yqrebeNLF6aeiog /* GamepadUIToggle */ {
-  display: none;
-}
-```
-
-This example resides in the `src` directory. The files whose class names will be replaced will reside in the `dist` directory.
-
-## Usage
-
-```sh
-# Install dependencies
-$ npm i
-
-# See the readable versions of classes
-$ npx steam-theming-utils make_readable_classes
-
-# ...and build!
-$ npm run build
-```
-
-[Biome][biome], a CSS/JS formatter/linter, and [PostCSS][postcss] are also included as dependencies of [steam-theming-utils][steam-theming-utils].
-
-[biome]: https://biomejs.dev
-[postcss]: https://postcss.org
-[steam-theming-utils]: https://github.com/ricewind012/steam-theming-utils
+It's independent from the theme but themes have to style it in order to be usable.

@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Reason this is a separate script is that CI is *not* going to download Steam,
+# run it, generate a class map, etc. It already takes ages with npm packages...
+
+export GH_TOKEN=$(gh auth token)
+
+while IFS= read -r line; do case $line in
+	*'The next release version'*)
+		next=${line##*is }
+		break
+	;;
+esac; done <<-EOF
+$(npx semantic-release --dry-run --no-ci 2>/dev/null)
+EOF
+
+for i in package plugin skin; do
+	file=$i.json
+	sed -i "s/\"version\": \".*\"/\"version\": \"$next\"/" "$file"
+done
+
+# Force add, since dist is gitignored.
+git add -f dist package.json plugin.json skin.json
+git \
+	-c "user.name=github-actions[bot]" \
+	-c "user.email=41898282+github-actions[bot]@users.noreply.github.com" \
+	commit -m "chore(release): $next"
+git push
