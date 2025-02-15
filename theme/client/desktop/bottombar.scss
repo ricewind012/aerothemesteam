@@ -75,6 +75,9 @@
 	// Align with icons
 	margin-block: -1px !important;
 
+	width: 0;
+	flex-grow: 1;
+
 	&::after {
 		@include controls.progress-bar-inner;
 	}
