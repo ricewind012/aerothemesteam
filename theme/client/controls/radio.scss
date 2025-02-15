@@ -1,0 +1,32 @@
+@use "shared/extends/controls";
+
+#Group {
+	background-color: transparent;
+	box-shadow: none;
+	gap: 6px;
+	padding: 0;
+
+	flex-direction: column;
+}
+
+#Button {
+	@include controls.input-base("radio", "#Active");
+
+	background-color: transparent;
+	background-repeat: no-repeat;
+	color: inherit;
+	font-size: var(--font-size);
+	line-height: 1;
+	text-shadow: none;
+	padding: 0;
+	// TODO: what lol
+	padding-bottom: 1px;
+	padding-left: calc(var(--size) + 4px);
+	margin: 0;
+
+	align-items: start;
+
+	&::before {
+		display: none;
+	}
+}

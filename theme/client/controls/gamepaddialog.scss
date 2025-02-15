@@ -1,0 +1,17 @@
+@use "shared/extends/controls";
+
+#Toggle {
+	@include controls.input-base("checkbox", "#On");
+
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0;
+
+	width: var(--size);
+	height: var(--size);
+}
+
+#ToggleRail,
+#ToggleSwitch {
+	display: none;
+}

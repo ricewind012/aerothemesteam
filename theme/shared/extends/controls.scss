@@ -1,5 +1,36 @@
 @use "shared/extends/style";
 
+/// Checkbox/radio base.
+///
+/// @param {string} $name - checkbox/radio
+/// @param {string} $checked-class-name - Class name of checked state
+@mixin input-base($name, $checked-class-name) {
+	--pos: calc(var(--pos-initial) + var(--size) * var(--state));
+	--pos-initial: 0px;
+	--size: 13px;
+	// Normal, Hover, Active, Disabled, Max
+	--state: 0;
+
+	background-image: url("../../../assets/images/#{$name}.png");
+	background-position-y: calc(var(--pos) * -1);
+
+	&:hover {
+		--state: 1;
+	}
+
+	&:active {
+		--state: 2;
+	}
+
+	&#Disabled {
+		--state: 3;
+	}
+
+	&#{$checked-class-name} {
+		--pos-initial: calc(var(--size) * 4);
+	}
+}
+
 @mixin button {
 	@include style.lighter($opacity: 0.35);
 	@include style.white-gradient($size: 9px);
