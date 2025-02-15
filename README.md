@@ -6,6 +6,4 @@ Based on a mockup by MondySpartan: https://www.deviantart.com/mondyspartan/art/S
 
 ## Plugin
 
-This theme (optionally) requires a plugin under the same name for the top bar and some other additional elements. Nothing will break if you don't use it, but links to a game's store page, community hub, etc. will not be accessible. The top bar also replaces the account dropdown menu if you press on the profile tab.
-
-It's independent from the theme but themes have to style it in order to be usable.
+This theme (optionally) requires a plugin under the same name for the top bar and some other additional elements. Nothing will break if you don't use it, but links to a game's store page, community hub, etc. will not be accessible.

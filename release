@@ -13,7 +13,7 @@ while IFS= read -r line; do case $line in
 esac; done <<-EOF
 $(npx semantic-release --dry-run --no-ci 2>/dev/null)
 EOF
-; "${next:=1.0.0}"
+: "${next:=1.0.0}"
 
 for i in package plugin skin; do
 	file=$i.json
