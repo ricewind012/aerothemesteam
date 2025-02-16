@@ -10,6 +10,8 @@
 @import "client/common/pageablecontainer.css";
 @import "client/common/steamavatar.css";
 @import "client/common/writereview.css";
+@import "client/controls/gamepaddialog.css";
+@import "client/controls/radio.css";
 @import "client/desktop/bottombar.css";
 @import "client/desktop/steamdesktop.css";
 @import "client/desktop/supernav.css";

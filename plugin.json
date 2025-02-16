@@ -4,7 +4,7 @@
 	"name": "aerothemesteam_plugin",
 	"common_name": "Microsoft Office 2007 Styled Theme plugin",
 	"description": "Plugin for the theme. Adds a top bar, app filter status, and some buttons.",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"frontend": "./plugin",
 	"useBackend": false
 }
