@@ -24,7 +24,7 @@
 	}
 }
 
-#RootMenuBar {
+#RootMenuBar > :not(:first-child) {
 	display: none !important;
 }
 
