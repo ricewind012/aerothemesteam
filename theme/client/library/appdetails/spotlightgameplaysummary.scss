@@ -12,11 +12,11 @@
 
 	margin-bottom: var(--library_text-spacing) !important;
 
-	height: unset !important;
+	height: 1lh !important;
+}
 
-	&:empty::before {
-		content: "";
-	}
+#ForcedCarouselPadding {
+	display: none;
 }
 
 #GamePlaySummaryContainer {

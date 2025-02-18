@@ -1,8 +1,3 @@
-:root {
-	// shit layout
-	--appdetails_left-column-size: calc(67% - var(--library_spacing));
-}
-
 #Backdrop {
 	display: none !important;
 }
@@ -13,7 +8,8 @@
 }
 
 #LeftColumn {
-	width: var(--appdetails_left-column-size);
+	// shit layout
+	width: calc(67% - var(--library_spacing));
 }
 
 #RightColumn {
@@ -22,6 +18,4 @@
 
 #Spotlights {
 	padding: 0 !important;
-
-	width: var(--appdetails_left-column-size);
 }
