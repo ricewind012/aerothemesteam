@@ -1,8 +1,19 @@
-#avatarHolder {
-	--size: 32px;
+:root {
+	--steamavatar_size: 32px;
+}
 
+#avatar {
+	border: none;
+	box-shadow: none;
+
+	width: var(--steamavatar_size);
+	height: var(--steamavatar_size);
+}
+
+#avatarHolder {
 	transform: unset !important;
 
-	width: var(--size) !important;
-	height: var(--size) !important;
+	position: relative;
+	width: var(--steamavatar_size) !important;
+	height: var(--steamavatar_size) !important;
 }
