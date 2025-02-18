@@ -1,4 +1,4 @@
-import { findModuleExport, showContextMenu, sleep } from "@steambrew/client";
+import { showContextMenu, sleep } from "@steambrew/client";
 
 import { RibbonButton, RibbonGameSectionButton } from "../../components/ribbon";
 import { classes } from "../../shared";
@@ -14,6 +14,7 @@ import {
 	type AppAction_t,
 } from "../../modules/appactions";
 import { Config } from "../../modules/config";
+import { CheckIcon } from "../../modules/icons";
 import { Localize } from "../../modules/localization";
 import { GetAppMobileCategories } from "../../modules/remoteplay";
 
@@ -37,10 +38,6 @@ const mapCategoryLocTokens: Record<MobileCategory_t, string[]> = {
 		"#StreamingClient_LinkDesc_Specific_Mobile",
 	],
 };
-
-const CheckIcon = findModuleExport((e) =>
-	e.toString().includes("SVGIcon_Check"),
-);
 
 function StreamingContextMenu({ overview, onStreamingTargetSelected }) {
 	const bInGamepadUI = Config.IN_GAMEPADUI;

@@ -18,6 +18,15 @@ export const ContextMenuItem: FC<ContextMenuItemProps> = findModuleExport((e) =>
 	e.toString().includes("onDisabledItemSelected"),
 );
 
+interface ContextMenuSubMenuItemProps {
+	label: string;
+	disabled?: boolean;
+	children?: ReactNode;
+}
+
+export const ContextMenuSubMenuItem: FC<ContextMenuSubMenuItemProps> =
+	findModuleExport((e) => e.toString().includes("...e,bInGamepadUI:"));
+
 export const ContextMenuSeparator: FC = findModuleExport((e) =>
 	e.toString().includes("ContextMenuSeparator"),
 );

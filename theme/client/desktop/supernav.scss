@@ -1,6 +1,7 @@
 @use "shared/extends/style";
 
 :root {
+	--supernav_icon-spacing: 4px;
 	--supernav_inverse-border-size: 3px;
 	--supernav_tab-gradient-end: #d7e0eb;
 	--supernav_tab-spacing-y: 9px;
@@ -15,7 +16,7 @@
 
 	@include style.icon;
 
-	margin: 0 4px;
+	margin: 0 var(--supernav_icon-spacing);
 
 	&#Disabled {
 		opacity: 0.5 !important;
@@ -33,6 +34,15 @@
 
 	&::after {
 		display: none !important;
+	}
+}
+
+#SuperNav {
+	& > .part {
+		margin: 0 var(--supernav_icon-spacing);
+
+		app-region: no-drag;
+		order: -1;
 	}
 }
 

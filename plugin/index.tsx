@@ -14,6 +14,7 @@ declare global {
 	const appDetailsStore: any;
 	const badgeStore: any;
 	const collectionStore: any;
+	const g_FriendsUIApp: any;
 	const g_PopupManager: CPopupManager;
 	const LocalizationManager: any;
 	const loginStore: any;
@@ -134,6 +135,12 @@ export default async function PluginMain() {
 					className: classes.steamdesktop.OuterFrame,
 					// @ts-ignore fuck off
 					component: <parts.SteamDesktop />,
+				},
+				{
+					normalClassName: "supernav_SuperNav",
+					className: classes.supernav.SuperNav,
+					// @ts-ignore fuck off
+					component: <parts.SuperNav />,
 				},
 				{
 					normalClassName: "titlebarcontrols_TitleBarControls",

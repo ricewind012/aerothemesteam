@@ -76,12 +76,12 @@ function GetAppLinks(appid: number) {
 	const vecLinks: LibraryLink[] = [
 		{
 			label: "#AppDetails_Links_Store",
-			icon: "store",
+			icon: "steam",
 			url: urlStore.BuildStoreAppURL(unDemoAppID, "primarylinks"),
 		},
 		bAvailableContentOnStore && {
 			label: "#AppDetails_Links_DLC",
-			icon: "store",
+			icon: "steam",
 			url: urlStore.BuildStoreAppDlcURL(actual_appid, "primarylinks"),
 		},
 		!bIsChinaLauncher && {
@@ -144,14 +144,14 @@ function GetAccountEntries() {
 		},
 		{
 			feature: EParentalFeature.Max,
-			icon: "store",
+			icon: "steam",
 			text: "#Menu_StorePreferences",
 			url: "steam://url/SteamPreferences",
 		},
 		{
 			args: [strAccountBalance],
 			feature: EParentalFeature.Store,
-			icon: "store",
+			icon: "steam",
 			text: "#Menu_ViewMyWallet",
 			url: "steam://url/StoreAddFundsPage",
 		},
