@@ -1,6 +1,6 @@
-import { findModuleByExport } from "@steambrew/client";
+import { findModuleByExport, Module } from "@steambrew/client";
 
-const vecAppActionsExports: any[] = Object.values(
+const exports: Module[] = Object.values(
 	findModuleByExport((e) => e.toString?.().includes("BIsAppBlocked()")),
 );
 
@@ -32,7 +32,7 @@ export const GetAppAction: (
 	pWindowInstance: any,
 	pOverview: any,
 	ePerClientData?: PerClientData_t,
-) => AppAction_t | null = vecAppActionsExports.find((e) =>
+) => AppAction_t | null = exports.find((e) =>
 	e.toString?.().includes("BIsAppBlocked()"),
 );
 
@@ -42,6 +42,4 @@ export const GetFunctionFromAppAction: (
 	ePerClientData: PerClientData_t,
 	eLaunchSource: number, // ELaunchSource
 	wnd?: Window,
-) => () => void = vecAppActionsExports.find((e) =>
-	e.toString().includes("Local-only app"),
-);
+) => () => void = exports.find((e) => e.toString().includes("Local-only app"));
