@@ -2,45 +2,45 @@
 @use "shared/extends/style";
 
 #ButtonContainer {
-	margin-top: calc(var(--library_spacing-x05) * -1) !important;
+	margin-top: calc(var(--library_spacing-x05) * -1);
 
-	flex-wrap: wrap !important;
+	flex-wrap: wrap;
 }
 
 #FeaturedItem {
-	align-items: start !important;
+	align-items: start;
 }
 
 #FeaturedItemDesc {
 	@include library.description;
 
-	max-width: unset !important;
-	-webkit-line-clamp: 4 !important;
+	max-width: unset;
+	-webkit-line-clamp: 4;
 }
 
 #FeaturedItemHeader {
-	display: none !important;
+	display: none;
 }
 
 #FeaturedItemHideButton {
 	// also TODO
-	width: 32px !important;
+	width: 32px;
 }
 
 #FeaturedItemLink {
 	@include style.link;
 
-	font: inherit !important;
-	padding: 0 !important;
-	margin: 0 !important;
+	font: inherit;
+	padding: 0;
+	margin: 0;
 }
 
 #FeaturedItemName {
 	@include library.header;
 
-	margin: 0 !important;
+	margin: 0;
 }
 
 #WorkshopContainer {
-	background: none !important;
+	background: none;
 }

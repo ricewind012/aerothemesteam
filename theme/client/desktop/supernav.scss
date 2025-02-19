@@ -19,21 +19,21 @@
 	margin: 0 var(--supernav_icon-spacing);
 
 	&#Disabled {
-		opacity: 0.5 !important;
+		opacity: 0.5;
 	}
 
 	path {
-		display: none !important;
+		display: none;
 	}
 }
 
 #MenuButton {
-	color: inherit !important;
-	text-shadow: none !important;
-	padding: var(--supernav_tab-spacing-y) 12px !important;
+	color: inherit;
+	text-shadow: none;
+	padding: var(--supernav_tab-spacing-y) 12px;
 
 	&::after {
-		display: none !important;
+		display: none;
 	}
 }
 
@@ -47,13 +47,13 @@
 }
 
 #SuperNavMenu {
-	color: #fff !important;
-	font-size: var(--font-size) !important;
-	text-transform: unset !important;
-	padding: 0 !important;
-	border-radius: var(--border-radius-large) var(--border-radius-large) 0 0 !important;
+	color: #fff;
+	font-size: var(--font-size);
+	text-transform: unset;
+	padding: 0;
+	border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
 
-	position: relative !important;
+	position: relative;
 
 	&#Selected {
 		--inverse-border-color: var(--supernav_tab-gradient-end);
@@ -62,8 +62,8 @@
 			var(--supernav_tab-gradient-end) 18.86%,
 			#fff 95.54%
 		);
-		color: var(--blue-text) !important;
-		box-shadow: inset 0 1px #ccddf2 !important;
+		color: var(--blue-text);
+		box-shadow: inset 0 1px #ccddf2;
 	}
 
 	&::before,

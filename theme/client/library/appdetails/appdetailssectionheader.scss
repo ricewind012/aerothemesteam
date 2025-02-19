@@ -3,13 +3,13 @@
 #SectionHeader {
 	@include style.section-header;
 
-	letter-spacing: unset !important;
-	text-transform: unset !important;
+	letter-spacing: unset;
+	text-transform: unset;
 
 	width: 100%;
 }
 
 #Label {
-	justify-content: space-between !important;
-	flex-grow: 1 !important;
+	justify-content: space-between;
+	flex-grow: 1;
 }

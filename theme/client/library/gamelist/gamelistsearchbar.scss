@@ -4,9 +4,9 @@
 #AdvancedSearchButton {
 	@include controls.button;
 
-	padding: 2px 3px !important;
+	padding: 2px 3px;
 
-	min-width: unset !important;
+	min-width: unset;
 
 	& > div {
 		--icon: var(--icon-settings);
@@ -15,40 +15,40 @@
 	}
 
 	svg {
-		display: none !important;
+		display: none;
 	}
 }
 
 #AdvancedSearchContainer {
-	background-color: transparent !important;
-	border-radius: 0 !important;
+	background-color: transparent;
+	border-radius: 0;
 
-	height: unset !important;
+	height: unset;
 }
 
 #Container {
-	background-color: transparent !important;
-	gap: 3px !important;
-	margin: 3px 4px 5px 3px !important;
+	background-color: transparent;
+	gap: 3px;
+	margin: 3px 4px 5px 3px;
 
 	// for part
-	order: -1 !important;
-	z-index: 1 !important;
+	order: -1;
+	z-index: 1;
 
 	.DialogInput {
 		--spacing-x: 5px;
 
-		background-image: var(--icon-search) !important;
-		background-position: calc(100% - var(--spacing-x)) !important;
-		font-size: 11px !important;
-		padding-right: calc(var(--icon-size) + var(--spacing-x) * 2) !important;
+		background-image: var(--icon-search);
+		background-position: calc(100% - var(--spacing-x));
+		font-size: 11px;
+		padding-right: calc(var(--icon-size) + var(--spacing-x) * 2);
 
-		height: unset !important;
+		height: unset;
 	}
 }
 
 #SearchInput {
-	border-radius: 0 !important;
+	border-radius: 0;
 
-	min-height: unset !important;
+	min-height: unset;
 }

@@ -4,52 +4,52 @@
 #Blur,
 #ImageContainer,
 #MediumImageContainer {
-	display: none !important;
+	display: none;
 }
 
 #DayPosted {
-	color: inherit !important;
-	font-size: inherit !important;
-	font-weight: inherit !important;
+	color: inherit;
+	font-size: inherit;
+	font-weight: inherit;
 }
 
 #Event {
-	background: none !important;
-	font-size: var(--font-size) !important;
-	border: none !important;
-	box-shadow: none !important;
-	margin: calc(var(--library_spacing-x05) * -1) !important;
-	margin-top: calc(var(--library_spacing) * -1) !important;
+	background: none;
+	font-size: var(--font-size);
+	border: none;
+	box-shadow: none;
+	margin: calc(var(--library_spacing-x05) * -1);
+	margin-top: calc(var(--library_spacing) * -1);
 }
 
 #PartnerEventFeaturedHeader {
 	@include style.section-header;
 
-	text-transform: unset !important;
-	line-height: unset !important;
-	margin-inline: calc(var(--library_border-size) * -1) !important;
+	text-transform: unset;
+	line-height: unset;
+	margin-inline: calc(var(--library_border-size) * -1);
 }
 
 #PartnerEventTextOnly,
 #PartnerEventLargeImage,
 #PartnerEventMediumImage {
 	&_Container {
-		background: none !important;
+		background: none;
 	}
 
 	&_Summary {
-		opacity: var(--library_secondary-text-opacity) !important;
-		color: inherit !important;
-		font-size: inherit !important;
-		text-shadow: none !important;
+		opacity: var(--library_secondary-text-opacity);
+		color: inherit;
+		font-size: inherit;
+		text-shadow: none;
 
-		order: 1 !important;
+		order: 1;
 	}
 
 	&_TextColumn {
-		text-shadow: none !important;
-		padding: 0 !important;
-		margin: 0 !important;
+		text-shadow: none;
+		padding: 0;
+		margin: 0;
 
 		display: flex;
 		flex-direction: column;
@@ -58,27 +58,27 @@
 	&_Title {
 		@include library.header;
 
-		font-size: 10pt !important;
-		text-decoration: underline !important;
-		text-shadow: none !important;
+		font-size: 10pt;
+		text-decoration: underline;
+		text-shadow: none;
 	}
 }
 
 #PartnerEventLargeImage,
 #PartnerEventMediumImage {
 	&_Contents {
-		padding: var(--library_spacing) !important;
+		padding: var(--library_spacing);
 	}
 }
 
 #PartnerEventType {
-	opacity: var(--library_secondary-text-opacity) !important;
-	color: inherit !important;
-	font-size: inherit !important;
-	font-weight: bold !important;
-	text-shadow: none !important;
-	text-transform: unset !important;
-	margin-top: 10px !important;
+	opacity: var(--library_secondary-text-opacity);
+	color: inherit;
+	font-size: inherit;
+	font-weight: bold;
+	text-shadow: none;
+	text-transform: unset;
+	margin-top: 10px;
 
-	order: 1 !important;
+	order: 1;
 }

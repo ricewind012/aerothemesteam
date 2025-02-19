@@ -7,16 +7,16 @@
 #ShowMore {
 	@include controls.button;
 
-	margin-top: var(--library_spacing-x05) !important;
+	margin-top: var(--library_spacing-x05);
 }
 
 #Subsection {
-	padding-bottom: var(--library_spacing) !important;
-	margin-bottom: var(--library_spacing) !important;
+	padding-bottom: var(--library_spacing);
+	margin-bottom: var(--library_spacing);
 }
 
 #SubsectionHeader {
-	color: inherit !important;
-	font-size: var(--font-size) !important;
-	padding-bottom: 9px !important;
+	color: inherit;
+	font-size: var(--font-size);
+	padding-bottom: 9px;
 }

@@ -1,26 +1,26 @@
 @mixin description {
-	opacity: var(--library_secondary-text-opacity) !important;
-	color: inherit !important;
-	font-size: var(--font-size) !important;
-	font-style: italic !important;
+	opacity: var(--library_secondary-text-opacity);
+	color: inherit;
+	font-size: var(--font-size);
+	font-style: italic;
 }
 
 @mixin placeholder {
-	opacity: var(--library_secondary-text-opacity) !important;
-	border: 2px dashed var(--blue-text) !important;
-	border-radius: 0 !important;
-	padding: var(--library_spacing) !important;
+	opacity: var(--library_secondary-text-opacity);
+	border: 2px dashed var(--blue-text);
+	border-radius: 0;
+	padding: var(--library_spacing);
 }
 
 @mixin header {
-	color: inherit !important;
-	font-size: var(--font-size) !important;
-	font-weight: bold !important;
+	color: inherit;
+	font-size: var(--font-size);
+	font-weight: bold;
 }
 
 @mixin section {
-	background: none #e1e7ef !important;
-	border: var(--library_border) !important;
-	border-top: none !important;
-	border-radius: 0 !important;
+	background: none #e1e7ef;
+	border: var(--library_border);
+	border-top: none;
+	border-radius: 0;
 }

@@ -2,25 +2,25 @@
 @use "shared/extends/style";
 
 #Controls {
-	padding: 0 !important;
-	margin: var(--library_spacing-x05) 0 !important;
+	padding: 0;
+	margin: var(--library_spacing-x05) 0;
 
-	max-height: unset !important;
+	max-height: unset;
 }
 
 #EmoticonButton {
-	background-color: transparent !important;
-	gap: var(--library_spacing-x05) !important;
+	background-color: transparent;
+	gap: var(--library_spacing-x05);
 
-	width: unset !important;
-	height: unset !important;
+	width: unset;
+	height: unset;
 
 	&:disabled {
-		opacity: 0.75 !important;
+		opacity: 0.75;
 	}
 
 	& > div {
-		display: none !important;
+		display: none;
 	}
 
 	&::before {
@@ -41,17 +41,17 @@
 }
 
 #Label {
-	color: inherit !important;
+	color: inherit;
 }
 
 #PostButton {
 	@include controls.button;
 
-	gap: var(--library_spacing-x05) !important;
+	gap: var(--library_spacing-x05);
 
-	display: flex !important;
-	align-items: center !important;
-	width: unset !important;
+	display: flex;
+	align-items: center;
+	width: unset;
 
 	&::before {
 		content: "";
@@ -65,6 +65,6 @@
 #PostTextEntryArea {
 	@include controls.text-input;
 
-	width: 100% !important;
-	min-height: 40px !important;
+	width: 100%;
+	min-height: 40px;
 }

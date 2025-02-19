@@ -1,8 +1,8 @@
 #AppGameInfoContainer {
-	display: none !important;
+	display: none;
 
 	// Hide only in main window
 	.PopupFullWindow > & {
-		display: initial !important;
+		display: initial;
 	}
 }

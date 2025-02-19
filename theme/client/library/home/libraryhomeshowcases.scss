@@ -5,68 +5,68 @@
 #AddShowcase {
 	@include controls.button;
 
-	opacity: 1 !important;
+	opacity: 1;
 
 	&#Disabled {
 		@include controls.button-disabled;
 	}
 
 	svg {
-		width: var(--icon-size) !important;
-		height: var(--icon-size) !important;
+		width: var(--icon-size);
+		height: var(--icon-size);
 	}
 
 	line,
 	circle {
-		stroke: var(--blue-text) !important;
-		stroke-width: 16px !important;
+		stroke: var(--blue-text);
+		stroke-width: 16px;
 	}
 }
 
 #AddShowcaseRow {
-	margin: 0 !important;
-	margin-top: calc(var(--library_body-spacing) * -1) !important;
+	margin: 0;
+	margin-top: calc(var(--library_body-spacing) * -1);
 }
 
 #ChildrenContainer {
-	margin: 0 !important;
+	margin: 0;
 
 	// #libraryhomeplaynext_PlayNextSubhead
-	position: relative !important;
+	position: relative;
 }
 
 #CountDisplay {
-	opacity: var(--library_secondary-text-opacity) !important;
-	color: inherit !important;
-	font-size: inherit !important;
-	line-height: 1 !important;
-	margin-left: var(--library_text-spacing) !important;
+	opacity: var(--library_secondary-text-opacity);
+	color: inherit;
+	font-size: inherit;
+	line-height: 1;
+	margin-left: var(--library_text-spacing);
 }
 
 #Message {
-	font-size: var(--font-size-xlarge) !important;
+	font-size: var(--font-size-xlarge);
 }
 
 #Showcase {
-	border: none !important;
-	padding-top: var(--library_spacing) !important;
+	border: none;
+	padding-top: var(--library_spacing);
 }
 
 #ShowcaseArrow {
-	top: 30px !important;
+	top: 30px;
 
 	path,
 	line {
-		stroke: var(--blue-text) !important;
+		stroke: var(--blue-text);
 	}
 }
 
 #ShowcaseGrid {
-	padding: var(--library_spacing) !important;
+	padding: var(--library_spacing);
 }
 
 #ShowcaseHeader {
 	@include style.section-header;
 
-	margin: 0 !important;
+	margin: 0;
 }

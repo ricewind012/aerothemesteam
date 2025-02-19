@@ -1,54 +1,54 @@
 @use "shared/extends/library";
 
 #AppGridSectionFooter {
-	display: none !important;
+	display: none;
 }
 
 #AppGridSectionHeader {
-	padding: 0 !important;
-	margin: var(--library_spacing) !important;
-	margin-bottom: 0 !important;
+	padding: 0;
+	margin: var(--library_spacing);
+	margin-bottom: 0;
 
-	transform: none !important;
+	transform: none;
 }
 
 #AppGridSectionLabel,
 #SortingDropDownLabel {
-	color: var(--blue-text) !important;
-	font-size: var(--font-size) !important;
-	text-transform: none !important;
-	letter-spacing: 0 !important;
-	margin: 0 !important;
-	margin-right: var(--library_text-spacing) !important;
+	color: var(--blue-text);
+	font-size: var(--font-size);
+	text-transform: none;
+	letter-spacing: 0;
+	margin: 0;
+	margin-right: var(--library_text-spacing);
 }
 
 #CollectionOptions {
-	padding: var(--library_spacing) !important;
+	padding: var(--library_spacing);
 }
 
 #CollectionOptionsRightJustified {
-	display: none !important;
+	display: none;
 }
 
 #EmptyGridMessageContainer {
 	@include library.placeholder;
 
-	margin: var(--library_spacing) !important;
+	margin: var(--library_spacing);
 }
 
 #EmptyGridMessageLine {
-	color: var(--blue-text) !important;
-	font-size: var(--font-size) !important;
-	margin: 0 !important;
+	color: var(--blue-text);
+	font-size: var(--font-size);
+	margin: 0;
 }
 
 #GridWithControls {
 	@include library.section;
 
-	padding: 0 !important;
+	padding: 0;
 
 	.CSSGrid_Measure + div {
-		all: unset !important;
+		all: unset;
 	}
 }
 
@@ -57,23 +57,23 @@
 		0deg,
 		var(--library_border-color),
 		var(--library_border-color)
-	) !important;
-	margin: 0 !important;
+	);
+	margin: 0;
 }
 
 #SortingDropDown {
-	font-size: inherit !important;
-	margin: 0 !important;
+	font-size: inherit;
+	margin: 0;
 
 	align-items: center;
 
 	.DialogDropDown {
-		margin-left: 0 !important;
+		margin-left: 0;
 	}
 
 	.DialogDropDown_Arrow,
 	.DialogDropDown_CurrentDisplay {
-		border-radius: 0 !important;
-		padding: 0 !important;
+		border-radius: 0;
+		padding: 0;
 	}
 }

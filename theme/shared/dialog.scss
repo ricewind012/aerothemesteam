@@ -4,40 +4,40 @@
 .DialogButton {
 	@include controls.button;
 
-	box-shadow: none !important;
+	box-shadow: none;
 
 	&:is(:disabled, .Disabled) {
 		@include controls.button-disabled;
 	}
 
 	&::before {
-		display: none !important;
+		display: none;
 	}
 }
 
 .DialogDropDown {
 	@include controls.text-input;
 
-	align-items: center !important;
+	align-items: center;
 }
 
 .DialogDropDown_Arrow {
 	@include style.arrow;
 
-	background-color: var(--blue-text) !important;
-	margin-left: 6px !important;
+	background-color: var(--blue-text);
+	margin-left: 6px;
 
-	position: unset !important;
+	position: unset;
 
 	svg {
-		display: none !important;
+		display: none;
 	}
 }
 
 .DialogDropDown_CurrentDisplay {
-	line-height: 1 !important;
+	line-height: 1;
 
-	flex-grow: 1 !important;
+	flex-grow: 1;
 }
 
 .DialogInput {

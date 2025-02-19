@@ -5,19 +5,19 @@
 }
 
 #DragArea {
-	display: none !important;
+	display: none;
 }
 
 #FocusBar {
-	display: none !important;
+	display: none;
 }
 
 #OuterFrame {
-	gap: var(--steamdesktop_spacing) !important;
-	margin: var(--steamdesktop_border-size) !important;
+	gap: var(--steamdesktop_spacing);
+	margin: var(--steamdesktop_border-size);
 
-	width: var(--steamdesktop_window-size) !important;
-	height: var(--steamdesktop_window-size) !important;
+	width: var(--steamdesktop_window-size);
+	height: var(--steamdesktop_window-size);
 
 	& > .part {
 		order: -1;
@@ -25,52 +25,52 @@
 }
 
 #RootMenuBar {
-	display: none !important;
+	display: none;
 }
 
 #SuperNavBar {
-	padding: 0 !important;
+	padding: 0;
 
-	overflow: hidden !important;
-	height: unset !important;
-	min-height: unset !important;
+	overflow: hidden;
+	height: unset;
+	min-height: unset;
 }
 
 #TitleBar {
-	width: unset !important;
-	height: unset !important;
+	width: unset;
+	height: unset;
 }
 
 #TopBar {
-	background-color: transparent !important;
-	box-shadow: none !important;
-	margin-bottom: calc(var(--steamdesktop_spacing) * -1) !important;
+	background-color: transparent;
+	box-shadow: none;
+	margin-bottom: calc(var(--steamdesktop_spacing) * -1);
 
-	order: -1 !important;
-	flex-direction: row-reverse !important;
-	justify-content: space-between !important;
+	order: -1;
+	flex-direction: row-reverse;
+	justify-content: space-between;
 
 	app-region: drag;
 }
 
 #URLBarReplacement {
-	display: none !important;
+	display: none;
 }
 
 #WindowControls {
-	flex: unset !important;
+	flex: unset;
 
 	:root[browsertype="DirectHWND"] & {
-		display: none !important;
+		display: none;
 	}
 
 	.title-area {
-		position: unset !important;
+		position: unset;
 	}
 }
 
 #Wrapper {
 	background-image: linear-gradient(0deg, transparent 96.5%, #82b4ff1a 100%),
-		linear-gradient(180deg, #293b53 0%, #112034 100%) !important;
-	border: none !important;
+		linear-gradient(180deg, #293b53 0%, #112034 100%);
+	border: none;
 }

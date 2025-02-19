@@ -4,21 +4,21 @@
 #CompactThumbButton {
 	@include controls.button;
 
-	margin-left: var(--library_spacing-x05) !important;
-	margin-right: 0 !important;
+	margin-left: var(--library_spacing-x05);
+	margin-right: 0;
 }
 
 #LeftContainer {
-	color: var(--blue-text) !important;
+	color: var(--blue-text);
 }
 
 // TODO: @mixin header-primary
 #Playtime {
 	@include library.header;
 
-	font-size: 10pt !important;
-	text-decoration: underline !important;
-	margin-bottom: var(--library_text-spacing) !important;
+	font-size: 10pt;
+	text-decoration: underline;
+	margin-bottom: var(--library_text-spacing);
 }
 
 #RatingContainer {
@@ -26,14 +26,14 @@
 		135deg,
 		var(--blue-light),
 		var(--blue-dark)
-	) !important;
-	padding: var(--library_spacing) !important;
+	);
+	padding: var(--library_spacing);
 }
 
 // TODO: @mixin header-secondary
 #RecommendGame {
 	@include library.header;
 
-	opacity: var(--library_secondary-text-opacity) !important;
-	color: inherit !important;
+	opacity: var(--library_secondary-text-opacity);
+	color: inherit;
 }

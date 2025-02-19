@@ -5,15 +5,15 @@
 }
 
 #Name {
-	font: inherit !important;
+	font: inherit;
 }
 
 #PageClickContainer {
 	margin: calc(var(--library_section-header-spacing-y) * -1)
-		calc(var(--library_section-header-spacing-x) * -1) !important;
-	margin-left: auto !important;
+		calc(var(--library_section-header-spacing-x) * -1);
+	margin-left: auto;
 }
 
 #PageableCloseButton {
-	opacity: 1 !important;
+	opacity: 1;
 }

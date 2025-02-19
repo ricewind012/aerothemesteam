@@ -20,36 +20,36 @@
 #BottomBar {
 	@include style.blue-bar;
 
-	box-shadow: none !important;
+	box-shadow: none;
 
-	flex: unset !important;
+	flex: unset;
 }
 
 #AddGameButton,
 #DownloadStatusContent,
 #FriendsButton {
-	gap: var(--bottombar_spacing) !important;
-	padding: 0 !important;
+	gap: var(--bottombar_spacing);
+	padding: 0;
 }
 
 #DetailedDownloadProgress {
-	gap: var(--bottombar_spacing) !important;
+	gap: var(--bottombar_spacing);
 }
 
 #Icon {
-	background-image: var(--icon) !important;
+	background-image: var(--icon);
 
-	order: -1 !important;
+	order: -1;
 
 	#AddGameButton & {
 		--icon: var(--icon-add);
 	}
 
 	#DetailedDownloadProgress & {
-		box-shadow: none !important;
+		box-shadow: none;
 
-		width: var(--icon-size) !important;
-		height: var(--icon-size) !important;
+		width: var(--icon-size);
+		height: var(--icon-size);
 	}
 
 	#DownloadStatusContent & {
@@ -61,19 +61,19 @@
 	}
 
 	svg {
-		display: none !important;
+		display: none;
 	}
 }
 
 #IconBevel {
-	display: none !important;
+	display: none;
 }
 
 #ProgressBar {
 	@include controls.progress-bar-outer;
 
 	// Align with icons
-	margin-block: -1px !important;
+	margin-block: -1px;
 
 	width: 0;
 	flex-grow: 1;
@@ -84,26 +84,26 @@
 }
 
 #ProgressBarWrapper {
-	gap: var(--bottombar_spacing) !important;
+	gap: var(--bottombar_spacing);
 
-	flex-direction: row !important;
-	align-items: center !important;
+	flex-direction: row;
+	align-items: center;
 }
 
 #Status {
-	color: var(--blue-text) !important;
+	color: var(--blue-text);
 
-	flex-grow: 0 !important;
+	flex-grow: 0;
 
 	&#Percentage {
 		@include style.parentheses;
 
-		opacity: var(--library_secondary-text-opacity) !important;
-		margin-left: var(--bottombar_spacing) !important;
+		opacity: var(--library_secondary-text-opacity);
+		margin-left: var(--bottombar_spacing);
 	}
 }
 
 #Text,
 #Queue {
-	color: var(--blue-text) !important;
+	color: var(--blue-text);
 }

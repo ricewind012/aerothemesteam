@@ -1,28 +1,28 @@
 #Container {
-	background: none !important;
-	border: none !important;
-	box-shadow: none !important;
-	gap: 6px !important;
-	padding: 0 6px !important;
+	background: none;
+	border: none;
+	box-shadow: none;
+	gap: 6px;
+	padding: 0 6px;
 
-	align-items: center !important;
+	align-items: center;
 }
 
 #SectionCount {
-	color: inherit !important;
-	font: inherit !important;
-	margin: 0 !important;
+	color: inherit;
+	font: inherit;
+	margin: 0;
 
-	height: unset !important;
+	height: unset;
 }
 
 #SectionHeaderContent {
-	color: var(--fg-main) !important;
-	font-size: 12px !important;
-	gap: 4px !important;
-	padding-top: 4px !important;
+	color: var(--fg-main);
+	font-size: 12px;
+	gap: 4px;
+	padding-top: 4px;
 }
 
 #SectionName {
-	all: unset !important;
+	all: unset;
 }

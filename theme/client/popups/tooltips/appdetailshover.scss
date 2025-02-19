@@ -3,15 +3,15 @@
 #AppDetailsHover {
 	@include controls.tooltip;
 
-	background-image: none !important;
+	background-image: none;
 }
 
 #Background {
-	background-image: var(--tooltip_background) !important;
-	border-radius: inherit !important;
+	background-image: var(--tooltip_background);
+	border-radius: inherit;
 }
 
 #BlurContainer {
-	mask: none !important;
-	opacity: 1 !important;
+	mask: none;
+	opacity: 1;
 }

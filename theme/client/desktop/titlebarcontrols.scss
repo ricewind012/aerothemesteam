@@ -1,20 +1,20 @@
 @use "shared/extends/style";
 
 @mixin _titlebar-button {
-	margin-right: 10px !important;
+	margin-right: 10px;
 
-	width: var(--icon-size) !important;
-	min-width: var(--icon-size) !important;
-	min-height: var(--icon-size) !important;
+	width: var(--icon-size);
+	min-width: var(--icon-size);
+	min-height: var(--icon-size);
 
 	// TODO: hover & use for every icon
 	&:active {
-		filter: brightness(1.25) !important;
+		filter: brightness(1.25);
 	}
 }
 
 #AccountMenu {
-	display: none !important;
+	display: none;
 }
 
 #AnnouncementsButton {
@@ -22,17 +22,17 @@
 }
 
 #AnnouncementWaveSVG {
-	display: none !important;
+	display: none;
 }
 
 #Button {
 	@include _titlebar-button;
 
-	background-color: transparent !important;
-	padding: 0 !important;
+	background-color: transparent;
+	padding: 0;
 
 	path {
-		display: none !important;
+		display: none;
 	}
 
 	svg {
@@ -44,18 +44,18 @@
 	--icon: var(--icon-display);
 
 	svg {
-		position: unset !important;
+		position: unset;
 	}
 }
 
 #NotificationButtonContainer {
 	--icon: var(--icon-notifications);
 
-	margin: 0 !important;
+	margin: 0;
 }
 
 #TitleBarControls {
-	margin: 0 !important;
+	margin: 0;
 
 	.icon-button {
 		@include _titlebar-button;

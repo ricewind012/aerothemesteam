@@ -2,12 +2,12 @@
 @use "shared/extends/style";
 
 @mixin _details-section {
-	gap: var(--library_text-spacing) !important;
-	padding: 0 !important;
-	margin: 0 !important;
+	gap: var(--library_text-spacing);
+	padding: 0;
+	margin: 0;
 
-	flex-direction: row !important;
-	align-items: center !important;
+	flex-direction: row;
+	align-items: center;
 
 	&::before {
 		content: "";
@@ -17,37 +17,37 @@
 }
 
 #ActionSection {
-	margin: 0 !important;
+	margin: 0;
 }
 
 #Container:not(#InPage),
 #StickyHeaderShadow {
-	display: none !important;
+	display: none;
 }
 
 #ClickablePlayBarItem {
 	@include style.link;
 
-	background: none !important;
-	border: none !important;
-	padding: 0 !important;
-	margin: 0 !important;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
 }
 
 #Container {
-	position: absolute !important;
+	position: absolute;
 	top: calc(
 		var(--library_header-img-height) * -1 + var(--library_body-spacing) * 2 +
 			1lh + 9px
-	) !important;
+	);
 
 	svg * {
-		display: none !important;
+		display: none;
 	}
 }
 
 #DetailsProgressContainer {
-	display: none !important;
+	display: none;
 }
 
 #DetailsSection {
@@ -59,17 +59,17 @@
 }
 
 #DetailsSectionExtra {
-	overflow: visible !important;
+	overflow: visible;
 }
 
 #GameStat {
 	padding: 0;
-	margin: 0 !important;
+	margin: 0;
 }
 
 #GameStatIcon,
 #GameStatIconForced {
-	display: none !important;
+	display: none;
 }
 
 #GameStatRight {
@@ -89,7 +89,7 @@
 
 	// Duplicate info
 	#MiniAchievements & {
-		display: none !important;
+		display: none;
 	}
 
 	#Playtime & {
@@ -98,46 +98,46 @@
 }
 
 #GameStatsSection {
-	gap: var(--library_game-stat-spacing) !important;
+	gap: var(--library_game-stat-spacing);
 
-	flex-direction: column !important;
-	flex-wrap: nowrap !important;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 #HideWhenNarrow {
-	display: flex !important;
+	display: flex;
 }
 
 #InnerContainer {
-	padding: 0 var(--library_body-spacing) !important;
+	padding: 0 var(--library_body-spacing);
 	margin-left: calc(
 		var(--library_icon-size) + var(--library_spacing)
-	) !important;
+	);
 }
 
 #PlayBar {
-	background: none !important;
-	margin: 0 !important;
+	background: none;
+	margin: 0;
 }
 
 #PlayBarDetailLabel {
-	color: var(--fg-main) !important;
-	font-size: var(--font-size) !important;
-	line-height: 1 !important;
+	color: var(--fg-main);
+	font-size: var(--font-size);
+	line-height: 1;
 }
 
 // Used in sticky header, no longer useful
 #PlayBarIconAndGame {
-	display: none !important;
+	display: none;
 }
 
 #PlayBarLabel {
-	color: var(--blue-text) !important;
-	font-size: var(--font-size) !important;
-	font-weight: bold !important;
-	letter-spacing: 0 !important;
-	line-height: 1 !important;
-	text-transform: unset !important;
+	color: var(--blue-text);
+	font-size: var(--font-size);
+	font-weight: bold;
+	letter-spacing: 0;
+	line-height: 1;
+	text-transform: unset;
 
 	&::after {
 		content: ":";
@@ -146,24 +146,24 @@
 	#Downloading &,
 	&:only-child {
 		&::after {
-			display: none !important;
+			display: none;
 		}
 	}
 }
 
 #RightControls {
-	display: none !important;
+	display: none;
 }
 
 #StatusAndStats {
-	gap: var(--library_game-stat-spacing) !important;
-	margin-left: 14px !important;
+	gap: var(--library_game-stat-spacing);
+	margin-left: 14px;
 
-	flex-direction: column !important;
-	flex-wrap: unset !important;
-	max-height: unset !important;
+	flex-direction: column;
+	flex-wrap: unset;
+	max-height: unset;
 }
 
 #StatusNameContainer {
-	height: unset !important;
+	height: unset;
 }

@@ -1,18 +1,18 @@
 @use "shared/extends/library";
 
 #EventDaySeparator {
-	background-color: var(--library_border-color) !important;
-	margin: 0 !important;
+	background-color: var(--library_border-color);
+	margin: 0;
 
-	width: var(--library_border-size) !important;
+	width: var(--library_border-size);
 }
 
 #EventHeaderBlock {
 	@include library.header;
 
-	margin-bottom: var(--library_text-spacing) !important;
+	margin-bottom: var(--library_text-spacing);
 
-	height: 1lh !important;
+	height: 1lh;
 }
 
 #ForcedCarouselPadding {
@@ -20,33 +20,33 @@
 }
 
 #GamePlaySummaryContainer {
-	margin-bottom: var(--library_spacing) !important;
+	margin-bottom: var(--library_spacing);
 
 	&:not(:first-child) {
-		margin-top: var(--library_spacing) !important;
+		margin-top: var(--library_spacing);
 	}
 }
 
 #GamePlaySummaryHeader {
-	all: unset !important;
+	all: unset;
 }
 
 #SummaryCarouselContainer {
-	padding: 0 !important;
+	padding: 0;
 
-	height: unset !important;
+	height: unset;
 
 	&::after {
-		display: none !important;
+		display: none;
 	}
 }
 
 #SummaryContainer {
-	margin: var(--library_spacing) !important;
+	margin: var(--library_spacing);
 
-	height: unset !important;
+	height: unset;
 }
 
 #TypeSeparator {
-	display: none !important;
+	display: none;
 }

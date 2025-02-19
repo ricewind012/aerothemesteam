@@ -2,23 +2,23 @@
 @use "shared/extends/style";
 
 #BigPlus {
-	transform: none !important;
-	color: inherit !important;
-	margin: 0 !important;
+	transform: none;
+	color: inherit;
+	margin: 0;
 
-	width: var(--library_icon-size) !important;
-	height: var(--library_icon-size) !important;
+	width: var(--library_icon-size);
+	height: var(--library_icon-size);
 }
 
 #Collection {
-	background-color: var(--blue-text) !important;
-	color: var(--bg-main) !important;
-	border: 2px solid var(--blue-text) !important;
-	border-radius: 0 !important;
-	padding: var(--library_spacing) !important;
+	background-color: var(--blue-text);
+	color: var(--bg-main);
+	border: 2px solid var(--blue-text);
+	border-radius: 0;
+	padding: var(--library_spacing);
 
 	flex-direction: column;
-	justify-content: end !important;
+	justify-content: end;
 
 	transition: var(--anim-time);
 
@@ -31,24 +31,24 @@
 }
 
 #CollectionBG {
-	filter: blur(64px) !important;
+	filter: blur(64px);
 }
 
 #CollectionLabel {
-	color: inherit !important;
-	font-size: var(--font-size-large) !important;
-	letter-spacing: 0 !important;
-	text-shadow: none !important;
-	text-transform: unset !important;
-	padding: 0 !important;
+	color: inherit;
+	font-size: var(--font-size-large);
+	letter-spacing: 0;
+	text-shadow: none;
+	text-transform: unset;
+	padding: 0;
 
-	position: unset !important;
-	width: 100% !important;
+	position: unset;
+	width: 100%;
 }
 
 #CollectionLabelCount {
-	color: inherit !important;
-	font-size: var(--font-size) !important;
+	color: inherit;
+	font-size: var(--font-size);
 }
 
 #DisplayCaseContainerBounds {
@@ -57,7 +57,7 @@
 		black 33%,
 		rgba(0, 0, 0, 0.1) 58%,
 		rgba(0, 0, 0, 0) 100%
-	) !important;
+	);
 }
 
 #DynamicCollection svg {
@@ -65,46 +65,46 @@
 		in srgb,
 		var(--blue-text) 50%,
 		transparent
-	) !important;
-	border-radius: 0 !important;
+	);
+	border-radius: 0;
 
-	top: var(--library_spacing) !important;
-	right: var(--library_spacing) !important;
+	top: var(--library_spacing);
+	right: var(--library_spacing);
 
 	// shadows
 	polyline {
-		display: none !important;
+		display: none;
 	}
 }
 
 #ScrollContainer {
-	background-color: var(--bg-main) !important;
-	background-image: none !important;
-	border: none !important;
-	border-radius: 0 !important;
-	padding: var(--library_body-spacing) !important;
+	background-color: var(--bg-main);
+	background-image: none;
+	border: none;
+	border-radius: 0;
+	padding: var(--library_body-spacing);
 }
 
 #Header {
 	@include style.section-header;
 
-	justify-content: space-between !important;
+	justify-content: space-between;
 }
 
 #Label {
-	all: unset !important;
+	all: unset;
 }
 
 // overqualify because @extends are at the start for some reason
 #NewCollection#NewCollection {
 	@include library.placeholder;
 
-	background-color: transparent !important;
-	color: var(--blue-text) !important;
+	background-color: transparent;
+	color: var(--blue-text);
 
-	justify-content: space-around !important;
+	justify-content: space-around;
 }
 
 #Rule {
-	display: none !important;
+	display: none;
 }

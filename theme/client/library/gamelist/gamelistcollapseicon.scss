@@ -13,18 +13,18 @@
 		135deg,
 		transparent,
 		var(--collapseicon_bg)
-	) !important;
+	);
 	border: 1px solid;
 	border-left-color: var(--collapseicon_border-1);
 	border-top-color: var(--collapseicon_border-1);
 	border-right-color: var(--collapseicon_border-2);
 	border-bottom-color: var(--collapseicon_border-2);
-	border-radius: var(--border-radius) !important;
-	padding: 0 !important;
+	border-radius: var(--border-radius);
+	padding: 0;
 
-	position: relative !important;
-	width: var(--collapseicon_size) !important;
-	height: var(--collapseicon_size) !important;
+	position: relative;
+	width: var(--collapseicon_size);
+	height: var(--collapseicon_size);
 
 	&::before {
 		content: "";
@@ -49,6 +49,6 @@
 	}
 
 	svg {
-		display: none !important;
+		display: none;
 	}
 }

@@ -1,22 +1,22 @@
 @use "shared/extends/library";
 
 #ButtonsGroup {
-	flex-wrap: wrap !important;
+	flex-wrap: wrap;
 }
 
 #CommentIcon {
-	display: none !important;
+	display: none;
 }
 
 #CommentsContainer {
-	font-size: var(--font-size) !important;
+	font-size: var(--font-size);
 }
 
 #PlayedForTime {
 	@include library.description;
 
-	font-weight: normal !important;
-	padding: 0 !important;
+	font-weight: normal;
+	padding: 0;
 }
 
 #ReviewDescription {
@@ -24,21 +24,21 @@
 }
 
 #ReviewIcon {
-	margin-right: var(--library_spacing) !important;
+	margin-right: var(--library_spacing);
 
-	width: var(--library_icon-size) !important;
-	height: var(--library_icon-size) !important;
+	width: var(--library_icon-size);
+	height: var(--library_icon-size);
 }
 
 #ReviewText {
-	color: inherit !important;
-	font-size: var(--font-size) !important;
+	color: inherit;
+	font-size: var(--font-size);
 }
 
 #VoteUpDownContainer {
-	padding: 0 !important;
+	padding: 0;
 
 	:last-child {
-		margin-inline-end: 0 !important;
+		margin-inline-end: 0;
 	}
 }

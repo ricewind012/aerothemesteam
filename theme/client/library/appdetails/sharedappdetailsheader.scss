@@ -1,11 +1,11 @@
 @use "shared/extends/style";
 
 #BoxSizer {
-	inset: 0 !important;
+	inset: 0;
 }
 
 #BoxSizerContainer {
-	inset: var(--library_body-spacing) !important;
+	inset: var(--library_body-spacing);
 }
 
 #ImgBlur {
@@ -13,40 +13,40 @@
 }
 
 #ImgContainer {
-	justify-content: start !important;
+	justify-content: start;
 }
 
 #ImgSrc {
-	mask: var(--library_header-img-mask) !important;
+	mask: var(--library_header-img-mask);
 
-	width: 80% !important;
-	height: var(--library_header-img-height) !important;
+	width: 80%;
+	height: var(--library_header-img-height);
 }
 
 #SVGTitle {
-	display: none !important;
+	display: none;
 }
 
 #TextNameSpace {
-	align-self: flex-start !important;
+	align-self: flex-start;
 
 	&::before {
 		content: var(--library_game-name);
 
-		color: var(--blue-text) !important;
-		font-size: var(--font-size-xlarge) !important;
-		font-weight: bold !important;
+		color: var(--blue-text);
+		font-size: var(--font-size-xlarge);
+		font-weight: bold;
 	}
 }
 
 #TitleImageContainer {
-	display: none !important;
+	display: none;
 }
 
 #TitleSection {
-	padding: var(--library_body-spacing) !important;
+	padding: var(--library_body-spacing);
 
-	top: 0 !important;
+	top: 0;
 
 	&::before {
 		content: "";
@@ -56,12 +56,12 @@
 
 		background-image: var(--library_game-icon);
 		background-size: 100%;
-		margin-right: var(--library_spacing) !important;
+		margin-right: var(--library_spacing);
 	}
 }
 
 #TopCapsule {
-	height: var(--library_header-img-height) !important;
+	height: var(--library_header-img-height);
 
 	&#FallbackArt::before {
 		content: "";

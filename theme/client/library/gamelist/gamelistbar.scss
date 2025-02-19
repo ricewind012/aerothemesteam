@@ -3,7 +3,7 @@
 		0deg,
 		#728fb7 88.41%,
 		#c9d3e1 102.3%
-	) !important;
+	);
 
 	& > .part {
 		order: -1;
@@ -13,13 +13,13 @@
 #GameListHomeAndSearch {
 	--border-size: 1px;
 
-	background-color: transparent !important;
-	box-shadow: none !important;
-	padding: 0 !important;
-	gap: var(--border-size) !important;
-	margin-top: var(--border-size) !important;
+	background-color: transparent;
+	box-shadow: none;
+	padding: 0;
+	gap: var(--border-size);
+	margin-top: var(--border-size);
 
-	flex-direction: column !important;
-	height: unset !important;
-	order: 1 !important;
+	flex-direction: column;
+	height: unset;
+	order: 1;
 }

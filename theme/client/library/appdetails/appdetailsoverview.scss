@@ -1,10 +1,10 @@
 #Backdrop {
-	display: none !important;
+	display: none;
 }
 
 #ColumnContainer {
-	padding: var(--library_body-spacing) !important;
-	padding-top: 0 !important;
+	padding: var(--library_body-spacing);
+	padding-top: 0;
 }
 
 #LeftColumn {
@@ -13,9 +13,9 @@
 }
 
 #RightColumn {
-	margin-left: var(--library_spacing) !important;
+	margin-left: var(--library_spacing);
 }
 
 #Spotlights {
-	padding: 0 !important;
+	padding: 0;
 }

@@ -1,32 +1,32 @@
 @use "shared/extends/library";
 
 #AppDetailsSection {
-	color: var(--blue-text) !important;
-	margin-bottom: var(--library_spacing) !important;
+	color: var(--blue-text);
+	margin-bottom: var(--library_spacing);
 }
 
 #AppDetailsSectionContainer {
 	@include library.section;
 
-	box-shadow: none !important;
-	margin: 0 !important;
+	box-shadow: none;
+	margin: 0;
 }
 
 #Body {
-	padding: var(--library_spacing) !important;
+	padding: var(--library_spacing);
 }
 
 #ButtonContainer {
-	gap: var(--library_spacing-x05) !important;
+	gap: var(--library_spacing-x05);
 }
 
 #Highlight {
-	background: none #cedef2 !important;
-	color: #273b5c !important;
-	font-size: var(--font-size) !important;
-	border-bottom: var(--library_border) !important;
-	border-radius: 0 !important;
-	box-shadow: none !important;
-	padding: var(--library_spacing) !important;
-	margin: 0 !important;
+	background: none #cedef2;
+	color: #273b5c;
+	font-size: var(--font-size);
+	border-bottom: var(--library_border);
+	border-radius: 0;
+	box-shadow: none;
+	padding: var(--library_spacing);
+	margin: 0;
 }

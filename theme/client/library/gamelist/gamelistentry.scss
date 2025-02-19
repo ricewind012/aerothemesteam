@@ -1,31 +1,31 @@
 #Container {
-	color: var(--fg-main) !important;
-	font-size: var(--font-size) !important;
-	border: none !important;
+	color: var(--fg-main);
+	font-size: var(--font-size);
+	border: none;
 
 	&:is(:hover, #Selected) {
-		background-color: #8dd6ff !important;
-		box-shadow: none !important;
+		background-color: #8dd6ff;
+		box-shadow: none;
 	}
 }
 
 #FriendIsPlaying {
 	--offset: 4px;
 
-	background-image: var(--icon-users) !important;
+	background-image: var(--icon-users);
 
-	top: var(--offset) !important;
-	left: var(--offset) !important;
-	width: var(--icon-size) !important;
-	height: var(--icon-size) !important;
+	top: var(--offset);
+	left: var(--offset);
+	width: var(--icon-size);
+	height: var(--icon-size);
 
 	svg {
-		display: none !important;
+		display: none;
 	}
 }
 
 #GameListEntryContainer {
-	padding-left: 38px !important;
+	padding-left: 38px;
 
-	align-items: center !important;
+	align-items: center;
 }

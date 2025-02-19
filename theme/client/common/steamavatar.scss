@@ -11,9 +11,9 @@
 }
 
 #avatarHolder {
-	transform: unset !important;
+	transform: unset;
 
 	position: relative;
-	width: var(--steamavatar_size) !important;
-	height: var(--steamavatar_size) !important;
+	width: var(--steamavatar_size);
+	height: var(--steamavatar_size);
 }

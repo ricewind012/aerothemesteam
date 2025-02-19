@@ -36,15 +36,15 @@
 	@include style.white-gradient($size: 9px);
 
 	background: linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580),
-		var(--lighter-bg), var(--white-gradient) !important;
-	color: #273b5c !important;
-	font-size: var(--font-size) !important;
-	font-weight: bold !important;
-	text-align: center !important;
-	line-height: 1 !important;
-	border: var(--blue-border) !important;
-	border-radius: var(--border-radius) !important;
-	padding: 2.5px 18px !important;
+		var(--lighter-bg), var(--white-gradient);
+	color: #273b5c;
+	font-size: var(--font-size);
+	font-weight: bold;
+	text-align: center;
+	line-height: 1;
+	border: var(--blue-border);
+	border-radius: var(--border-radius);
+	padding: 2.5px 18px;
 
 	&:active {
 		--wg-opacity-1: 0.9;
@@ -57,53 +57,53 @@
 	--wg-opacity-1: 0;
 	--wg-opacity-2: 0;
 
-	pointer-events: none !important;
+	pointer-events: none;
 }
 
 @mixin progress-bar-outer {
-	background-color: transparent !important;
-	background-image: linear-gradient(180deg, #66666680, transparent) !important;
-	border: var(--blue-border) !important;
-	box-shadow: 0 0 0 1px #fff !important;
-	border-radius: var(--border-radius) !important;
+	background-color: transparent;
+	background-image: linear-gradient(180deg, #66666680, transparent);
+	border: var(--blue-border);
+	box-shadow: 0 0 0 1px #fff;
+	border-radius: var(--border-radius);
 
-	height: 18px !important;
+	height: 18px;
 }
 
 @mixin progress-bar-inner {
 	@include style.white-gradient($size: 9px);
 
-	background-color: transparent !important;
+	background-color: transparent;
 	background-image: linear-gradient(
 			90deg,
 			#69922c 0%,
 			#84c422 65%,
 			#c6e296 98%
 		),
-		var(--white-gradient) !important;
-	box-shadow: inset 0 0 0 1px #ffffff80 !important;
-	border-radius: 0 !important;
+		var(--white-gradient);
+	box-shadow: inset 0 0 0 1px #ffffff80;
+	border-radius: 0;
 }
 
 @mixin text-input {
-	background-color: #fff !important;
-	color: var(--fg-main) !important;
-	font-size: var(--font-size) !important;
-	line-height: 18px !important;
-	border: var(--blue-border) !important;
-	border-radius: 0 !important;
-	box-shadow: none !important;
-	padding: 3px 6px !important;
+	background-color: #fff;
+	color: var(--fg-main);
+	font-size: var(--font-size);
+	line-height: 18px;
+	border: var(--blue-border);
+	border-radius: 0;
+	box-shadow: none;
+	padding: 3px 6px;
 
 	&::placeholder {
-		color: #7f7f7f !important;
+		color: #7f7f7f;
 	}
 }
 
 @mixin text-input-compact {
 	@include text-input;
 
-	padding: 0 6px !important;
+	padding: 0 6px;
 }
 
 @mixin tooltip {

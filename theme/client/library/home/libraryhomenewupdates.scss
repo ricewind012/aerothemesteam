@@ -2,30 +2,30 @@
 
 #EventOptions {
 	& > div {
-		border-radius: var(--border-radius-large) !important;
+		border-radius: var(--border-radius-large);
 	}
 }
 
 #EventRowCarousel {
-	padding: var(--library_spacing) !important;
-	margin: 0 !important;
+	padding: var(--library_spacing);
+	margin: 0;
 }
 
 #EventSummaryContainer {
-	border-radius: var(--border-radius-large) !important;
+	border-radius: var(--border-radius-large);
 }
 
 #EventTime {
 	@include library.header;
 
-	padding-bottom: var(--library_text-spacing) !important;
+	padding-bottom: var(--library_text-spacing);
 }
 
 #GameIcon {
-	margin-right: var(--library_text-spacing) !important;
+	margin-right: var(--library_text-spacing);
 
-	width: var(--icon-size) !important;
-	height: var(--icon-size) !important;
+	width: var(--icon-size);
+	height: var(--icon-size);
 }
 
 /* TODO:
@@ -33,49 +33,49 @@
  * filter: brightness(1.2); on hover
  */
 #GameIconAndName {
-	background-color: transparent !important;
-	font-size: var(--font-size) !important;
-	font-weight: bold !important;
-	padding: 0 !important;
-	margin-top: var(--library_spacing-x05) !important;
+	background-color: transparent;
+	font-size: var(--font-size);
+	font-weight: bold;
+	padding: 0;
+	margin-top: var(--library_spacing-x05);
 
 	align-items: center;
 }
 
 #GameName {
-	opacity: var(--library_secondary-text-opacity) !important;
-	color: inherit !important;
+	opacity: var(--library_secondary-text-opacity);
+	color: inherit;
 }
 
 #PartnerEventRowCapsule {
-	margin-right: var(--library_spacing) !important;
+	margin-right: var(--library_spacing);
 
 	&_MainImageContainer {
-		border-radius: var(--border-radius-large) !important;
+		border-radius: var(--border-radius-large);
 	}
 
 	&_TextCtn {
-		color: inherit !important;
-		padding: 0 !important;
-		margin-top: var(--library_spacing-x05) !important;
+		color: inherit;
+		padding: 0;
+		margin-top: var(--library_spacing-x05);
 	}
 
 	// TODO: @mixin header-primary idk
 	&_TextTitle {
 		@include library.header;
 
-		font-size: 10pt !important;
-		text-decoration: underline !important;
+		font-size: 10pt;
+		text-decoration: underline;
 	}
 }
 
 #SettingsButton {
-	background-image: var(--icon-settings) !important;
-	margin: calc(var(--library_section-header-spacing-y) * -1) 0 !important;
-	margin-left: var(--library_text-spacing) !important;
+	background-image: var(--icon-settings);
+	margin: calc(var(--library_section-header-spacing-y) * -1) 0;
+	margin-left: var(--library_text-spacing);
 
 	// TODO: put somewhere else once I replace arrows
 	svg {
-		display: none !important;
+		display: none;
 	}
 }

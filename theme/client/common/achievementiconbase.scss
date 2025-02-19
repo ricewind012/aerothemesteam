@@ -1,14 +1,14 @@
 #AchievementIconWrapper {
 	--icon-size: 32px;
 
-	width: var(--icon-size) !important;
-	height: var(--icon-size) !important;
+	width: var(--icon-size);
+	height: var(--icon-size);
 }
 
 #Icon {
-	box-shadow: none !important;
+	box-shadow: none;
 }
 
 #RareAchievementIconGlowContainerRoot {
-	display: none !important;
+	display: none;
 }

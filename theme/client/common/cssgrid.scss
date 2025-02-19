@@ -5,8 +5,8 @@
 }
 
 #CSSGrid {
-	gap: var(--library_spacing) !important;
-	padding: var(--library_spacing) !important;
+	gap: var(--library_spacing);
+	padding: var(--library_spacing);
 
-	grid-template-columns: repeat(auto-fill, 128px) !important;
+	grid-template-columns: repeat(auto-fill, 128px);
 }

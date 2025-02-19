@@ -1,16 +1,16 @@
 #Container {
-	background-color: var(--bg-main) !important;
-	background-image: none !important;
+	background-color: var(--bg-main);
+	background-image: none;
 }
 
 #InnerContainer {
-	color: var(--blue-text) !important;
+	color: var(--blue-text);
 }
 
 #LibraryHome,
 #UpdatesContainer {
-	background-image: none !important;
-	padding: var(--library_body-spacing) !important;
+	background-image: none;
+	padding: var(--library_body-spacing);
 
-	height: unset !important;
+	height: unset;
 }

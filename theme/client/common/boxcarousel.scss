@@ -3,9 +3,9 @@
 #BoxCarousel {
 	@include library.section;
 
-	margin: 0 !important;
+	margin: 0;
 }
 
 #BoxCarouselContents {
-	--negative-margin: var(--library_spacing) !important;
+	--negative-margin: var(--library_spacing);
 }

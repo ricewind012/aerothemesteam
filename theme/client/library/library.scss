@@ -21,15 +21,15 @@
 }
 
 #AppDetailsMain {
-	border: var(--library_container-border) !important;
+	border: var(--library_container-border);
 }
 
 #LeftListSizableContainer {
-	border: var(--library_container-border) !important;
+	border: var(--library_container-border);
 }
 
 #LibraryWindowDivider {
-	background-color: transparent !important;
+	background-color: transparent;
 
-	min-width: 4px !important;
+	min-width: 4px;
 }

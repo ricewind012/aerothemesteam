@@ -4,8 +4,8 @@
 #AchievementProgressContainer {
 	@include controls.progress-bar-outer;
 
-	margin-top: 8px !important;
-	margin-bottom: 0 !important;
+	margin-top: 8px;
+	margin-bottom: 0;
 }
 
 #AchievementProgress {
@@ -13,40 +13,40 @@
 }
 
 #Additional {
-	padding: var(--library_spacing) !important;
-	margin: 0 calc(var(--library_spacing) * -1) !important;
+	padding: var(--library_spacing);
+	margin: 0 calc(var(--library_spacing) * -1);
 }
 
 #AdditionalItem:not(#RemainderContainer) {
 	box-shadow:
 		inset -1px -1px #fff,
 		inset 1px 1px #3c5678;
-	margin-right: var(--library_spacing-x05) !important;
+	margin-right: var(--library_spacing-x05);
 
-	height: unset !important;
+	height: unset;
 }
 
 #Desc {
 	@include library.description;
 
-	line-height: unset !important;
+	line-height: unset;
 
-	-webkit-line-clamp: 1 !important;
+	-webkit-line-clamp: 1;
 }
 
 #Featured {
-	background-color: #d1e1b9 !important;
-	border-bottom: var(--library_border) !important;
-	padding: 0 var(--library_spacing) !important;
-	margin: calc(var(--library_spacing) * -1) !important;
-	margin-bottom: 0 !important;
+	background-color: #d1e1b9;
+	border-bottom: var(--library_border);
+	padding: 0 var(--library_spacing);
+	margin: calc(var(--library_spacing) * -1);
+	margin-bottom: 0;
 }
 
 #Label {
-	opacity: var(--library_secondary-text-opacity) !important;
-	color: inherit !important;
-	font-size: var(--font-size-small) !important;
-	margin-bottom: 9px !important;
+	opacity: var(--library_secondary-text-opacity);
+	color: inherit;
+	font-size: var(--font-size-small);
+	margin-bottom: 9px;
 }
 
 #Name {
@@ -59,39 +59,39 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: var(--library_icon-size) !important;
-	height: var(--library_icon-size) !important;
+	width: var(--library_icon-size);
+	height: var(--library_icon-size);
 }
 
 #RemainderContainer {
-	border-radius: var(--border-radius) !important;
+	border-radius: var(--border-radius);
 
-	height: unset !important;
+	height: unset;
 }
 
 #RemainderText {
-	all: unset !important;
+	all: unset;
 }
 
 #Ribbon {
-	display: none !important;
+	display: none;
 }
 
 #UnachievedSection {
-	border-top: var(--library_border) !important;
-	padding: var(--library_spacing) !important;
-	margin: 0 calc(var(--library_spacing) * -1) !important;
+	border-top: var(--library_border);
+	padding: var(--library_spacing);
+	margin: 0 calc(var(--library_spacing) * -1);
 
 	#Additional {
-		padding-block: 0 !important;
+		padding-block: 0;
 	}
 }
 
 #UnlockedLabel {
-	color: inherit !important;
+	color: inherit;
 }
 
 #UnlockedLabelPercent {
-	opacity: var(--library_secondary-text-opacity) !important;
-	color: inherit !important;
+	opacity: var(--library_secondary-text-opacity);
+	color: inherit;
 }

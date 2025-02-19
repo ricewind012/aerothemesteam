@@ -1,9 +1,9 @@
 #MoreInfoIcon {
-	background-color: transparent !important;
-	background-image: var(--icon-help) !important;
-	margin: calc(var(--library_section-header-spacing-y) * -1) !important;
+	background-color: transparent;
+	background-image: var(--icon-help);
+	margin: calc(var(--library_section-header-spacing-y) * -1);
 }
 
 #MoreInfoIconQuestionMark {
-	display: none !important;
+	display: none;
 }

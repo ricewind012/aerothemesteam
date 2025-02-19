@@ -1,11 +1,11 @@
 @use "shared/extends/library";
 
 #Badge {
-	margin: 0 !important;
-	margin-right: var(--library_spacing) !important;
+	margin: 0;
+	margin-right: var(--library_spacing);
 
-	width: var(--library_icon-size) !important;
-	height: var(--library_icon-size) !important;
+	width: var(--library_icon-size);
+	height: var(--library_icon-size);
 
 	&#EmptyCircle {
 		@include library.placeholder;
@@ -21,5 +21,5 @@
 }
 
 #CardsLeft {
-	display: none !important;
+	display: none;
 }

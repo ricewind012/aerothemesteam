@@ -1,17 +1,17 @@
 @mixin arrow {
 	mask-image: var(--icon-arrow-bottom);
-	margin: 0 !important;
+	margin: 0;
 
-	width: 7px !important;
-	height: 4px !important;
+	width: 7px;
+	height: 4px;
 }
 
 @mixin icon {
-	background-image: var(--icon) !important;
-	background-size: var(--icon-size) !important;
+	background-image: var(--icon);
+	background-size: var(--icon-size);
 
-	width: var(--icon-size) !important;
-	height: var(--icon-size) !important;
+	width: var(--icon-size);
+	height: var(--icon-size);
 }
 
 @mixin lighter($opacity) {
@@ -21,8 +21,8 @@
 }
 
 @mixin link {
-	color: blue !important;
-	text-decoration: underline !important;
+	color: blue;
+	text-decoration: underline;
 }
 
 @mixin parentheses {
@@ -50,7 +50,7 @@
 		transparent var(--wg-size)
 	);
 
-	background-blend-mode: color-burn !important;
+	background-blend-mode: color-burn;
 }
 
 @mixin blue-bar {
@@ -63,9 +63,9 @@
 		),
 		var(--white-gradient);
 
-	background-color: transparent !important;
-	background-image: var(--blue-bar-gradient) !important;
-	padding: 7px 12px !important;
+	background-color: transparent;
+	background-image: var(--blue-bar-gradient);
+	padding: 7px 12px;
 }
 
 @mixin section-header {
@@ -73,11 +73,11 @@
 	--bg: #bdd1ea;
 
 	background-image: linear-gradient(180deg, var(--bg), var(--bg)),
-		var(--white-gradient) !important;
-	color: var(--blue-text) !important;
-	font-size: var(--font-size-small) !important;
-	font-weight: bold !important;
-	border: 1px solid #9cb1ca !important;
+		var(--white-gradient);
+	color: var(--blue-text);
+	font-size: var(--font-size-small);
+	font-weight: bold;
+	border: 1px solid #9cb1ca;
 	padding: var(--library_section-header-spacing-y)
-		var(--library_section-header-spacing-x) !important;
+		var(--library_section-header-spacing-x);
 }

@@ -2,22 +2,22 @@
 @use "shared/extends/library";
 
 #ActivityFeedContainer {
-	max-width: unset !important;
+	max-width: unset;
 }
 
 #FetchMoreContainer {
-	margin-top: var(--library_spacing-x05) !important;
-	margin-bottom: 0 !important;
+	margin-top: var(--library_spacing-x05);
+	margin-bottom: 0;
 }
 
 #NoActivity {
 	@include library.placeholder;
 
-	color: inherit !important;
-	font-size: var(--font-size) !important;
-	margin-bottom: var(--library_spacing-x05) !important;
+	color: inherit;
+	font-size: var(--font-size);
+	margin-bottom: var(--library_spacing-x05);
 
-	min-height: unset !important;
+	min-height: unset;
 }
 
 #ViewLastNews {

@@ -3,25 +3,25 @@
 #PlayNextSubHead {
 	@include library.header;
 
-	letter-spacing: 0 !important;
+	letter-spacing: 0;
 
-	position: absolute !important;
-	top: var(--library_spacing) !important;
-	left: var(--library_spacing) !important;
-	z-index: 1 !important;
+	position: absolute;
+	top: var(--library_spacing);
+	left: var(--library_spacing);
+	z-index: 1;
 }
 
 #PlayNextSuggestion {
-	margin-right: var(--library_spacing) !important;
+	margin-right: var(--library_spacing);
 }
 
 #PlayNextSuggestionMediaContainer {
-	margin-top: var(--library_text-spacing) !important;
+	margin-top: var(--library_text-spacing);
 }
 
 #PlayNextSuggestions {
-	padding: var(--library_spacing) !important;
-	padding-top: calc(var(--library_spacing) + 1lh) !important;
+	padding: var(--library_spacing);
+	padding-top: calc(var(--library_spacing) + 1lh);
 
-	height: unset !important;
+	height: unset;
 }
