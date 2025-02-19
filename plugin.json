@@ -6,5 +6,6 @@
 	"description": "Plugin for the theme. Adds a top bar, app filter status, and some buttons.",
 	"version": "1.1.0",
 	"frontend": "./plugin",
+	"include": ["./locales"],
 	"useBackend": false
 }

@@ -2,6 +2,8 @@ import { Component } from "react";
 
 import { classes, type PartComponentProps } from "../shared";
 
+import { Localize } from "../modules/localization";
+
 interface GameListBarState {
 	text: string;
 }
@@ -12,7 +14,7 @@ export class GameListBar extends Component<
 > {
 	observer: MutationObserver;
 	state = {
-		text: "No filters",
+		text: "#Theme_GameListBar_NoFilters",
 	};
 
 	componentDidMount() {
@@ -30,22 +32,28 @@ export class GameListBar extends Component<
 			const readyToPlayButton = getButton(".SVGIcon_ReadyToPlay");
 			const linuxSelected = isButtonSelected(linuxButton);
 			const readyToPlaySelected = isButtonSelected(readyToPlayButton);
+			const recentActivitySelected = isButtonSelected(recentActivityButton);
 
-			// pls
-			let text = "No filters";
-			if (readyToPlaySelected) text = "Showing only Ready to Play games";
-			if (linuxSelected) {
-				text = "Showing only Linux-ready games";
-				if (readyToPlaySelected) text = "Showing installed Linux-ready games";
-			}
-			if (isButtonSelected(recentActivityButton)) {
-				text = "Sorting games by recent activity";
-
-				if (linuxSelected) {
-					text += " that run on Linux";
-					if (readyToPlaySelected) text += " and Ready to Play";
-				} else if (readyToPlaySelected) text += " that are Ready to Play";
-			}
+			const text = (() => {
+				switch (true) {
+					case recentActivitySelected && linuxSelected && readyToPlaySelected:
+						return "#Theme_GameListBar_SortRecentActivityOnLinuxAndReadyToPlay";
+					case recentActivitySelected && linuxSelected:
+						return "#Theme_GameListBar_SortRecentActivityOnLinux";
+					case recentActivitySelected && readyToPlaySelected:
+						return "#Theme_GameListBar_SortRecentActivityReadyToPlay";
+					case linuxSelected && readyToPlaySelected:
+						return "#Theme_GameListBar_OnlyLinuxAndInstalled";
+					case recentActivitySelected:
+						return "#Theme_GameListBar_SortRecentActivity";
+					case linuxSelected:
+						return "#Theme_GameListBar_OnlyLinux";
+					case readyToPlaySelected:
+						return "#Theme_GameListBar_OnlyReadyToPlay";
+					default:
+						return "#Theme_GameListBar_NoFilters";
+				}
+			})();
 			this.setState({ text });
 		};
 
@@ -63,6 +71,8 @@ export class GameListBar extends Component<
 	}
 
 	render() {
-		return <div className="game-list-filter-status">{this.state.text}</div>;
+		const text = Localize(this.state.text);
+
+		return <div className="game-list-filter-status">{text}</div>;
 	}
 }

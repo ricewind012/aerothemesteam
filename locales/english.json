@@ -1,0 +1,15 @@
+{
+	"Theme_GameListBar_NoFilters": "No filters",
+	"Theme_GameListBar_OnlyReadyToPlay": "Showing only Ready to Play games",
+	"Theme_GameListBar_OnlyLinux": "Showing only Linux-ready games",
+	"Theme_GameListBar_OnlyLinuxAndInstalled": "Showing installed Linux-ready games",
+	"Theme_GameListBar_SortRecentActivity": "Sorting games by recent activity",
+	"Theme_GameListBar_SortRecentActivityOnLinux": "Sorting games by recent activity that run on Linux",
+	"Theme_GameListBar_SortRecentActivityOnLinuxAndReadyToPlay": "Sorting games by recent activity that run on Linux and are Ready to Play",
+	"Theme_GameListBar_SortRecentActivityReadyToPlay": "Sorting games by recent activity that are Ready to Play",
+
+	"Theme_RibbonSection_Account": "Account",
+	"Theme_RibbonSection_Browser": "Browser",
+	"Theme_RibbonSection_Game": "Game",
+	"Theme_RibbonSection_Links": "Links"
+}

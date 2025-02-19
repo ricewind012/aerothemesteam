@@ -256,7 +256,7 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 			);
 		});
 		const browserSection = (
-			<RibbonSection title="Browser">
+			<RibbonSection title="#Theme_RibbonSection_Browser">
 				<RibbonButton
 					icon="nav-back"
 					text="Go back"
@@ -289,7 +289,7 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 
 				return (
 					<RibbonContainer>
-						<RibbonSection title="Game">
+						<RibbonSection title="#Theme_RibbonSection_Game">
 							<ActionButton wnd={this.props.wnd} appid={appid} />
 							<RibbonButton
 								icon="manage"
@@ -304,7 +304,9 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 							<FavoriteButton wnd={this.props.wnd} appid={appid} />
 						</RibbonSection>
 						{links.length > 0 && (
-							<RibbonSection title="Links">{links}</RibbonSection>
+							<RibbonSection title="#Theme_RibbonSection_Links">
+								{links}
+							</RibbonSection>
 						)}
 					</RibbonContainer>
 				);
@@ -319,7 +321,9 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 					<RibbonContainer>
 						{browserSection}
 						{tab === ESuperNavTab.Profile && (
-							<RibbonSection title="Account">{accountSection}</RibbonSection>
+							<RibbonSection title="#Theme_RibbonSection_Account">
+								{accountSection}
+							</RibbonSection>
 						)}
 					</RibbonContainer>
 				);

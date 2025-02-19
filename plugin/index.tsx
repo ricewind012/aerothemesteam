@@ -44,6 +44,37 @@ const LOC_TOKENS = ["GameList_View_Collections"];
 /** Internal main window name. */
 const MAIN_WINDOW_NAME = "SP Desktop_uid0";
 
+const INTERNAL_PLUGIN_NAME = "aerothemesteam_plugin";
+
+const url = (() => {
+	const script = document.getElementById(
+		"millennium-injected",
+	) as HTMLScriptElement;
+	const { port } = new URL(script.src);
+
+	return `http://localhost:${port}/${INTERNAL_PLUGIN_NAME}`;
+})();
+
+/**
+ * Replacement function to avoid JSON modules because of localization - it's
+ * easier to just create 1 file instead of doing the same thing, then typing an
+ * import somewhere here, checking if it works, and so on.
+ */
+const ImportJSON = async (path: string) =>
+	(await fetch(`${url}/${path}`)).json();
+
+async function InitLocalization() {
+	const lang = await SteamClient.Settings.GetCurrentLanguage();
+	const tokens = await ImportJSON(`locales/${lang}.json`).catch(() => {
+		const msg = "%s: No %o locale, reverting to English";
+		console.error(msg, INTERNAL_PLUGIN_NAME, lang);
+
+		return ImportJSON(`locales/english.json`);
+	});
+
+	LocalizationManager.AddTokens(tokens);
+}
+
 /**
  * Safe version of `CPopupManager.AddPopupCreatedCallback`.
  */
@@ -119,6 +150,9 @@ async function AddSuperNavEvents(popup: SteamPopup) {
 
 export default async function PluginMain() {
 	const logger = new CLog("index");
+
+	logger.Log("Initializing localization...");
+	await InitLocalization();
 
 	const components: ComponentForWindow[] = [
 		{

@@ -2,6 +2,7 @@ import type { FC, ReactNode } from "react";
 
 import { IconButton } from "./iconbutton";
 import { BuildClassName, PartComponentBase } from "../shared";
+
 import { Localize } from "../modules/localization";
 
 interface RibbonButtonProps {
@@ -55,7 +56,7 @@ interface RibbonSectionProps {
 export const RibbonSection: FC<RibbonSectionProps> = ({ children, title }) => (
 	<div className="ribbon-section">
 		<div className="ribbon-section-body">{children}</div>
-		<div className="ribbon-section-title">{title}</div>
+		<div className="ribbon-section-title">{Localize(title)}</div>
 	</div>
 );
 
