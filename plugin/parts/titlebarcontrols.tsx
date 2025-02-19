@@ -1,10 +1,11 @@
+import { Component } from "react";
+
 import { IconButton } from "../components/iconbutton";
-import { PartComponentBase } from "../shared";
 
 import { Localize } from "../modules/localization";
 import { ToolTip } from "../modules/tooltip";
 
-export class TitleBarControls extends PartComponentBase {
+export class TitleBarControls extends Component {
 	render() {
 		const text = Localize("#Menu_Support");
 		const url = urlStore.GetHelpURL();

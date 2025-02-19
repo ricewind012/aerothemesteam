@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-import { classes, type PartComponentProps } from "../shared";
+import { classes, GetMainPopupWindow } from "../shared";
 
 import { Localize } from "../modules/localization";
 
@@ -8,17 +8,15 @@ interface GameListBarState {
 	text: string;
 }
 
-export class GameListBar extends Component<
-	PartComponentProps,
-	GameListBarState
-> {
+export class GameListBar extends Component<{}, GameListBarState> {
 	observer: MutationObserver;
 	state = {
 		text: "#Theme_GameListBar_NoFilters",
 	};
 
 	componentDidMount() {
-		const filterButtonsContainer = this.props.wnd.document.querySelector(
+		const wnd = GetMainPopupWindow();
+		const filterButtonsContainer = wnd.document.querySelector(
 			`.${classes.gamelistdropdown.ViewFiltersBar}`,
 		);
 		const isButtonSelected = (button: Element) =>

@@ -1,7 +1,7 @@
 import { showContextMenu, sleep } from "@steambrew/client";
 
 import { RibbonButton, RibbonGameSectionButton } from "../../components/ribbon";
-import { classes } from "../../shared";
+import { classes, GetMainPopupWindow } from "../../shared";
 
 import {
 	ContextMenu,
@@ -212,8 +212,10 @@ export class ActionButton extends RibbonGameSectionButton<ActionButtonState> {
 		const overview = this.GetAppOverview();
 
 		if (!this.m_elButton) {
+			const wnd = GetMainPopupWindow();
 			const strElementID = this.GetLocToken().replace("#", "");
-			this.m_elButton = this.props.wnd.document.getElementById(strElementID);
+
+			this.m_elButton = wnd.document.getElementById(strElementID);
 		}
 
 		showContextMenu(

@@ -4,9 +4,10 @@ import {
 	showContextMenu,
 	showModal,
 } from "@steambrew/client";
+import { Component } from "react";
 
 import { IconButton } from "../components/iconbutton";
-import { classes, PartComponentBase, waitForElement } from "../shared";
+import { classes, GetMainPopupWindow, waitForElement } from "../shared";
 
 import { BIsChinaLauncher, Config } from "../modules/config";
 import {
@@ -48,9 +49,6 @@ const ActivateRetailDialog = findModuleExport((e) =>
 const ShowBackupAppsDialog: (wnd: Window) => void = findModuleExport((e) =>
 	e.toString().includes("#BackupApps_Title"),
 );
-
-const GetMainPopupWindow = () =>
-	g_PopupManager.GetExistingPopup("SP Desktop_uid0").m_popup;
 
 interface RootMenuEntry {
 	checked?: boolean;
@@ -330,15 +328,16 @@ function BuildHelpRootMenuEntries(): RootMenuEntry[] {
 	];
 }
 
-export class SuperNav extends PartComponentBase {
+export class SuperNav extends Component {
 	/** ref */
 	m_elSuperNav: Element | null = null;
 
 	async onClick() {
 		if (!this.m_elSuperNav) {
+			const wnd = GetMainPopupWindow();
 			this.m_elSuperNav = await waitForElement(
 				`.${classes.supernav.SuperNav}`,
-				this.props.wnd.document,
+				wnd.document,
 			);
 		}
 

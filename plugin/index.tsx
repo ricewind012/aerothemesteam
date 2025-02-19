@@ -189,7 +189,6 @@ export default async function PluginMain() {
 		const name = LocalizationManager.LocalizeString(popupName);
 		const onPopupCreated = (popup: SteamPopup) => {
 			const doc = popup.m_popup.document;
-			const wnd = popup.m_popup;
 
 			for (const token of LOC_TOKENS) {
 				const localized = LocalizationManager.LocalizeString(`#${token}`);
@@ -204,11 +203,9 @@ export default async function PluginMain() {
 			for (const { normalClassName, className, component } of parts) {
 				waitForElement(`.${className}`, doc).then((el) => {
 					const div = el.appendChild(doc.createElement("div"));
-					// Some props aren't defined yet, so clone the element
-					const clonedComponent = cloneElement(component, { wnd });
-
 					div.className = "part";
-					render(clonedComponent, div);
+
+					render(component, div);
 					logger.Log("%s: finished", normalClassName);
 				});
 			}

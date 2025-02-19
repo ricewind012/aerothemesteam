@@ -3,17 +3,6 @@ import {
 	Millennium,
 	type ClassModule,
 } from "@steambrew/client";
-import { Component } from "react";
-
-export interface PartComponentProps {
-	wnd: Window;
-}
-
-// biome-ignore lint/complexity/noBannedTypes: KILL YOURSELF
-export class PartComponentBase<S = {}, P = {}> extends Component<
-	PartComponentProps & P,
-	S
-> {}
 
 export const classes = {
 	appactionbutton: findClassModule(
@@ -30,4 +19,5 @@ export const classes = {
 export const BuildClassName = (vecClasses: string[]) =>
 	vecClasses.filter(Boolean).join(" ");
 export const waitForElement = async (sel: string, parent = document) =>
-	[...(await Millennium.findElement(parent, sel))][0];
+	[...(await Millennium.findElement(parent, sel))][0];export const GetMainPopupWindow = () => g_PopupManager.GetExistingPopup("SP Desktop_uid0").m_popup;
+

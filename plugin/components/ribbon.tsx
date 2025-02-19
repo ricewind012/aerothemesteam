@@ -1,7 +1,7 @@
-import type { FC, ReactNode } from "react";
+import { Component, type FC, type ReactNode } from "react";
 
 import { IconButton } from "./iconbutton";
-import { BuildClassName, PartComponentBase } from "../shared";
+import { BuildClassName } from "../shared";
 
 import { Localize } from "../modules/localization";
 
@@ -72,8 +72,7 @@ interface RibbonGameSectionButtonProps {
 	appid: number;
 }
 
-// biome-ignore lint/complexity/noBannedTypes: stfu
-export class RibbonGameSectionButton<S = {}> extends PartComponentBase<
-	S,
-	RibbonGameSectionButtonProps
+export class RibbonGameSectionButton<S = {}> extends Component<
+	RibbonGameSectionButtonProps,
+	S
 > {}

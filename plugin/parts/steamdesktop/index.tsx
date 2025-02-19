@@ -1,11 +1,12 @@
 import { ModalPosition, showModal } from "@steambrew/client";
+import { Component } from "react";
 
 import {
 	RibbonButton,
 	RibbonContainer,
 	RibbonSection,
 } from "../../components/ribbon";
-import { PartComponentBase } from "../../shared";
+import { GetMainPopupWindow } from "../../shared";
 
 import {
 	ESuperNavTab,
@@ -175,7 +176,7 @@ interface SteamDesktopState {
 	tab: ESuperNavTab;
 }
 
-export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
+export class SteamDesktop extends Component<{}, SteamDesktopState> {
 	state = {
 		appid: -1,
 		tab: GetDefaltTabState(),
@@ -191,12 +192,13 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 		const { appid } = this.state;
 		const overview = appStore.GetAppOverviewByAppID(appid);
 		const { details } = appDetailsStore.GetAppData(appid);
+		const wnd = GetMainPopupWindow();
 
 		showModal(
 			<ModalPosition>
 				<AppGameInfo expand={true} overview={overview} details={details} />
 			</ModalPosition>,
-			this.props.wnd,
+			wnd,
 		);
 	}
 
@@ -290,7 +292,7 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 				return (
 					<RibbonContainer>
 						<RibbonSection title="#Theme_RibbonSection_Game">
-							<ActionButton wnd={this.props.wnd} appid={appid} />
+							<ActionButton appid={appid} />
 							<RibbonButton
 								icon="manage"
 								text="#GameAction_Manage"
@@ -301,7 +303,7 @@ export class SteamDesktop extends PartComponentBase<SteamDesktopState> {
 								text="#GameAction_ViewDetails"
 								onClick={() => this.OnDetailsButtonClick()}
 							/>
-							<FavoriteButton wnd={this.props.wnd} appid={appid} />
+							<FavoriteButton appid={appid} />
 						</RibbonSection>
 						{links.length > 0 && (
 							<RibbonSection title="#Theme_RibbonSection_Links">
