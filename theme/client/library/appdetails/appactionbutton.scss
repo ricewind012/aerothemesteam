@@ -66,5 +66,7 @@
 		@include style.arrow("bottom");
 
 		background-color: var(--blue-text);
+
+		transform: unset;
 	}
 }

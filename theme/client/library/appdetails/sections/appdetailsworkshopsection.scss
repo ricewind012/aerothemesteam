@@ -23,8 +23,7 @@
 }
 
 #FeaturedItemHideButton {
-	// also TODO
-	width: 32px;
+	width: var(--library_icon-size);
 }
 
 #FeaturedItemLink {
