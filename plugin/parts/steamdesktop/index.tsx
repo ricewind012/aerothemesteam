@@ -9,23 +9,23 @@ import {
 import { GetMainPopupWindow } from "../../shared";
 
 import {
+	type GameListChangeEvent,
+	GAME_LIST_CHANGE_EVENT_NAME,
+} from "../../events/gamelistchange";
+import {
 	ESuperNavTab,
 	GetESuperNavTabFromSetting,
 	TAB_CHANGE_EVENT_NAME,
 	TabChangeEvent,
 } from "../../events/tabchange";
-import {
-	type GameListChangeEvent,
-	GAME_LIST_CHANGE_EVENT_NAME,
-} from "../../events/gamelistchange";
 
+import { AppGameInfo } from "../../modules/appgameinfo";
+import { BIsChinaLauncher, Config } from "../../modules/config";
+import { CKioskModeManager } from "../../modules/kioskmodemgr";
 import {
 	EParentalFeature,
 	CParentalFeaturesManager,
 } from "../../modules/parentalfeatures";
-import { BIsChinaLauncher, Config } from "../../modules/config";
-import { CKioskModeManager } from "../../modules/kioskmodemgr";
-import { AppGameInfo } from "../../modules/appgameinfo";
 
 import { FavoriteButton } from "./favoritebutton";
 import { ActionButton } from "./actionbutton";

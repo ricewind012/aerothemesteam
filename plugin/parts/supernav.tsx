@@ -7,7 +7,7 @@ import {
 import { Component } from "react";
 
 import { IconButton } from "../components/iconbutton";
-import { classes, GetMainPopupWindow, waitForElement } from "../shared";
+import { classes, GetMainPopupWindow, WaitForElement } from "../shared";
 
 import { BIsChinaLauncher, Config } from "../modules/config";
 import {
@@ -335,7 +335,7 @@ export class SuperNav extends Component {
 	async onClick() {
 		if (!this.m_elSuperNav) {
 			const wnd = GetMainPopupWindow();
-			this.m_elSuperNav = await waitForElement(
+			this.m_elSuperNav = await WaitForElement(
 				`.${classes.supernav.SuperNav}`,
 				wnd.document,
 			);

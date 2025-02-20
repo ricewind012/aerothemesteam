@@ -1,4 +1,4 @@
-import { findModuleByExport, Module } from "@steambrew/client";
+import { findModuleByExport, type Module } from "@steambrew/client";
 import type { FC, ReactNode } from "react";
 
 const exports = Object.values(

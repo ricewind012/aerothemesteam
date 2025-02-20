@@ -4,16 +4,16 @@ import { RibbonButton, RibbonGameSectionButton } from "../../components/ribbon";
 import { classes, GetMainPopupWindow } from "../../shared";
 
 import {
+	GetAppAction,
+	GetCallbackForAppAction,
+	type AppAction_t,
+} from "../../modules/appactions";
+import { Config } from "../../modules/config";
+import {
 	ContextMenu,
 	ContextMenuItem,
 	ContextMenuSeparator,
 } from "../../modules/contextmenu";
-import {
-	GetAppAction,
-	GetFunctionFromAppAction,
-	type AppAction_t,
-} from "../../modules/appactions";
-import { Config } from "../../modules/config";
 import { CheckIcon } from "../../modules/icons";
 import { Localize } from "../../modules/localization";
 import { GetAppMobileCategories } from "../../modules/remoteplay";
@@ -233,7 +233,7 @@ export class ActionButton extends RibbonGameSectionButton<ActionButtonState> {
 
 	onClick() {
 		const overview = this.GetAppOverview();
-		const callback = GetFunctionFromAppAction(
+		const callback = GetCallbackForAppAction(
 			this.GetAppAction(),
 			overview,
 			"selected",

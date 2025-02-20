@@ -1,4 +1,4 @@
-import { findModuleByExport, Module } from "@steambrew/client";
+import { findModuleByExport, type Module } from "@steambrew/client";
 
 const exports: Module[] = Object.values(
 	findModuleByExport((e) => e.toString?.().includes("BIsAppBlocked()")),
@@ -36,7 +36,7 @@ export const GetAppAction: (
 	e.toString?.().includes("BIsAppBlocked()"),
 );
 
-export const GetFunctionFromAppAction: (
+export const GetCallbackForAppAction: (
 	eAction: AppAction_t,
 	pOverview: any,
 	ePerClientData: PerClientData_t,

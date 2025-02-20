@@ -1,10 +1,10 @@
-import { cloneElement } from "react";
 import { render } from "react-dom";
 
 import * as parts from "./parts";
 import { CLog } from "./logger";
-import { classes, waitForElement } from "./shared";
+import { classes, WaitForElement } from "./shared";
 import type { CPopupManager, SteamPopup } from "./types/normal";
+
 import { DispatchTabChange } from "./events/tabchange";
 import { DispatchGameListChange } from "./events/gamelistchange";
 
@@ -46,6 +46,7 @@ const MAIN_WINDOW_NAME = "SP Desktop_uid0";
 
 const INTERNAL_PLUGIN_NAME = "aerothemesteam_plugin";
 
+const logger = new CLog("index");
 const url = (() => {
 	const script = document.getElementById(
 		"millennium-injected",
@@ -66,9 +67,7 @@ const ImportJSON = async (path: string) =>
 async function InitLocalization() {
 	const lang = await SteamClient.Settings.GetCurrentLanguage();
 	const tokens = await ImportJSON(`locales/${lang}.json`).catch(() => {
-		const msg = "%s: No %o locale, reverting to English";
-		console.error(msg, INTERNAL_PLUGIN_NAME, lang);
-
+		logger.Warn("No %o locale, reverting to English", lang);
 		return ImportJSON(`locales/english.json`);
 	});
 
@@ -107,7 +106,6 @@ function AddPopupCreatedCallback(
 function PatchUIStore(popup: SteamPopup) {
 	const store = uiStore;
 	const orig = store.SetGameListSelection;
-	const logger = new CLog("PatchUIStore");
 	const doc = popup.m_popup.document.documentElement;
 
 	store.SetGameListSelection = async function (section: string, appid: number) {
@@ -123,7 +121,6 @@ function PatchUIStore(popup: SteamPopup) {
 		DispatchGameListChange(appid);
 		doc.style.setProperty("--library_game-icon", `url("${url}")`);
 		doc.style.setProperty("--library_game-name", `"${app.display_name}"`);
-		logger.Log("Called CUIStore.SetGameListSelection(%o, %s)", section, appid);
 
 		return orig.call(this, section, appid);
 	};
@@ -131,7 +128,7 @@ function PatchUIStore(popup: SteamPopup) {
 
 async function AddSuperNavEvents(popup: SteamPopup) {
 	const doc = popup.m_popup.document;
-	const container = await waitForElement(`.${classes.supernav.SuperNav}`, doc);
+	const container = await WaitForElement(`.${classes.supernav.SuperNav}`, doc);
 	const sel = classes.supernav.Selected;
 	const observer = new MutationObserver(() => {
 		const children = [...container.children];
@@ -149,9 +146,7 @@ async function AddSuperNavEvents(popup: SteamPopup) {
 }
 
 export default async function PluginMain() {
-	const logger = new CLog("index");
-
-	logger.Log("Initializing localization...");
+	logger.Log("Initializing localization");
 	await InitLocalization();
 
 	const components: ComponentForWindow[] = [
@@ -201,7 +196,7 @@ export default async function PluginMain() {
 
 			logger.Log("Trying %o for popup %o", popupName, popup.m_strTitle);
 			for (const { normalClassName, className, component } of parts) {
-				waitForElement(`.${className}`, doc).then((el) => {
+				WaitForElement(`.${className}`, doc).then((el) => {
 					const div = el.appendChild(doc.createElement("div"));
 					div.className = "part";
 

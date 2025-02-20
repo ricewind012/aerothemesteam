@@ -12,7 +12,7 @@ export class CLog {
 		console[strMethod](
 			`%c${k_strThemeName}%c${this.m_strScope}%c ${strFormat}`,
 			`${k_strLogStyle}; background-color: black`,
-			`${k_strLogStyle}; background-color: #151515`,
+			`${k_strLogStyle}; background-color: #252525`,
 			"",
 			...args,
 		);

@@ -18,6 +18,9 @@ export const classes = {
 
 export const BuildClassName = (vecClasses: string[]) =>
 	vecClasses.filter(Boolean).join(" ");
-export const waitForElement = async (sel: string, parent = document) =>
-	[...(await Millennium.findElement(parent, sel))][0];export const GetMainPopupWindow = () => g_PopupManager.GetExistingPopup("SP Desktop_uid0").m_popup;
 
+export const GetMainPopupWindow = () =>
+	g_PopupManager.GetExistingPopup("SP Desktop_uid0").m_popup;
+
+export const WaitForElement = async (sel: string, parent = document) =>
+	[...(await Millennium.findElement(parent, sel))][0];
