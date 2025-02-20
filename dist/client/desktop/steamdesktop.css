@@ -45,6 +45,7 @@
   order: -1 !important;
   flex-direction: row-reverse !important;
   justify-content: space-between !important;
+  app-region: drag !important;
 }
 
 ._2CmrnGY-Amtd83ScJkFvx2 {
@@ -55,7 +56,7 @@
   flex: unset !important;
 }
 :root[browsertype=DirectHWND] .qP17eBPXkfezFfexZ4hC3 {
-  display: none !important;
+  display: none;
 }
 .qP17eBPXkfezFfexZ4hC3 .title-area {
   position: unset !important;

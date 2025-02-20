@@ -1,6 +1,17 @@
+:root {
+  --steamavatar_size: 32px;
+}
+
+._3h-QRJGxnVOIExtHD1R0f2 {
+  border: none !important;
+  box-shadow: none !important;
+  width: var(--steamavatar_size) !important;
+  height: var(--steamavatar_size) !important;
+}
+
 .nibodjvvrm86uCfnnAn4g {
-  --size: 32px !important;
   transform: unset !important;
-  width: var(--size) !important;
-  height: var(--size) !important;
+  position: relative !important;
+  width: var(--steamavatar_size) !important;
+  height: var(--steamavatar_size) !important;
 }

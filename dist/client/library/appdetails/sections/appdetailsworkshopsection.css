@@ -21,8 +21,7 @@
 }
 
 .aZc8RQUeHL3YNHxrG4pXN {
-  /* also TODO*/
-  width: 32px !important;
+  width: var(--library_icon-size) !important;
 }
 
 .YE_jJPwp0fBbRm1vQHIIq {

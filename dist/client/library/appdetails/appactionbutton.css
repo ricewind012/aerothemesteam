@@ -79,10 +79,9 @@
   height: var(--size) !important;
 }
 ._2q-gZ3XJzlvSGHSF-GvSmi svg {
-  /* TODO: fix arrow image */
   mask-image: var(--icon-arrow-bottom) !important;
-  margin: 0 !important;
   width: 7px !important;
   height: 4px !important;
   background-color: var(--blue-text) !important;
+  transform: unset !important;
 }

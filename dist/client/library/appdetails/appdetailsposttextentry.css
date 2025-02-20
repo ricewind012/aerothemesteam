@@ -28,7 +28,6 @@
   content: "" !important;
   background-color: var(--blue-text) !important;
   mask-image: var(--icon-arrow-bottom) !important;
-  margin: 0 !important;
   width: 7px !important;
   height: 4px !important;
 }

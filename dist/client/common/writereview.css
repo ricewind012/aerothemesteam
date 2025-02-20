@@ -37,7 +37,6 @@
   color: var(--blue-text) !important;
 }
 
-/* TODO: @mixin header-primary*/
 .qX4kNo6O0M-mYntdErKSJ {
   color: inherit !important;
   font-size: var(--font-size) !important;
@@ -52,11 +51,9 @@
   padding: var(--library_spacing) !important;
 }
 
-/* TODO: @mixin header-secondary*/
 .My1beniJXh9pXud8rxYLK {
   color: inherit !important;
   font-size: var(--font-size) !important;
   font-weight: bold !important;
   opacity: var(--library_secondary-text-opacity) !important;
-  color: inherit !important;
 }

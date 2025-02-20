@@ -17,12 +17,12 @@
 }
 
 ._114nFoGF7tZ4PpremDP2w0 {
-  background-color: var(--contextmenu_fg) !important;
-  mask: var(--icon-arrow-right) !important;
-  position: absolute !important;
-  right: 8px !important;
+  mask-image: var(--icon-arrow-right) !important;
   width: 4px !important;
   height: 7px !important;
+  background-color: var(--contextmenu_fg) !important;
+  position: absolute !important;
+  right: 8px !important;
 }
 ._114nFoGF7tZ4PpremDP2w0 svg {
   display: none !important;

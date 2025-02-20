@@ -24,27 +24,22 @@
   height: var(--icon-size) !important;
 }
 
-/* TODO:
- * @mixin header-secondary idk
- * filter: brightness(1.2); on hover
- */
 ._3_xMyCJAh_Dv99KgZ54P3j {
   background-color: transparent !important;
-  font-size: var(--font-size) !important;
-  font-weight: bold !important;
   padding: 0 !important;
   margin-top: var(--library_spacing-x05) !important;
   align-items: center !important;
 }
 
 ._28IqrZIgxpqkUQyhdaLDUN {
-  opacity: var(--library_secondary-text-opacity) !important;
   color: inherit !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  opacity: var(--library_secondary-text-opacity) !important;
 }
 
 ._3YO5BpDmZERh_G8kaWbaSJ {
   margin-right: var(--library_spacing) !important;
-  /* TODO: @mixin header-primary idk*/
 }
 .SPz0ipLqfF1oAO7tdrkdY {
   border-radius: var(--border-radius-large) !important;

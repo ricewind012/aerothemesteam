@@ -53,9 +53,10 @@
 ._3ZUP3RJr6PRn6IzODoxZDx,
 ._3zwBRDW1egliiT4pKYIXap,
 .Ru7OBQzSxqIo3jIsbtV9g {
-  opacity: var(--library_secondary-text-opacity) !important;
   color: inherit !important;
-  font-size: inherit !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  opacity: var(--library_secondary-text-opacity) !important;
   text-shadow: none !important;
   order: 1 !important;
 }
@@ -85,10 +86,10 @@
 }
 
 ._1ujzuoxGhLunHZQqHAqRgg {
-  opacity: var(--library_secondary-text-opacity) !important;
   color: inherit !important;
-  font-size: inherit !important;
+  font-size: var(--font-size) !important;
   font-weight: bold !important;
+  opacity: var(--library_secondary-text-opacity) !important;
   text-shadow: none !important;
   text-transform: unset !important;
   margin-top: 10px !important;

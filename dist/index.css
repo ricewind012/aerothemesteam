@@ -16,6 +16,7 @@
 @import "client/desktop/steamdesktop.css";
 @import "client/desktop/supernav.css";
 @import "client/desktop/titlebarcontrols.css";
+@import "client/dialogs/screenshotmanagerdialog.css";
 @import "client/library/library.css";
 @import "shared/components/iconbutton.css";
 @import "shared/components/ribbon.css";

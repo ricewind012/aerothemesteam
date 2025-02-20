@@ -21,6 +21,7 @@
   padding: var(--library_section-header-spacing-y) var(--library_section-header-spacing-x) !important;
   letter-spacing: unset !important;
   text-transform: unset !important;
+  width: 100% !important;
 }
 
 ._1SQ30LQnUhED7sXI79rmas {

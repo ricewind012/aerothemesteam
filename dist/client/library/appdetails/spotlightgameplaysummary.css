@@ -9,10 +9,11 @@
   font-size: var(--font-size) !important;
   font-weight: bold !important;
   margin-bottom: var(--library_text-spacing) !important;
-  height: unset !important;
+  height: 1lh !important;
 }
-._3ugJ_KPVlOd9oeYm-fYC_w:empty::before {
-  content: "" !important;
+
+.CWJmg0DLwk-wE8QkhPwqR {
+  display: none !important;
 }
 
 ._1OMmVJHDgNwOt0Wqn0hrf9 {

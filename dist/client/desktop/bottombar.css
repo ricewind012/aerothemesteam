@@ -4,10 +4,10 @@
 
 ._2foCkpRXhqq0UGVE50BWqj::after {
   content: "" !important;
-  background-color: var(--blue-text) !important;
   mask-image: var(--icon-arrow-bottom) !important;
   width: 7px !important;
   height: 4px !important;
+  background-color: var(--blue-text) !important;
 }
 
 ._3vCzSrrXZzZjVJFZNg9SGu {
@@ -84,6 +84,8 @@
   height: 18px !important;
   /* Align with icons*/
   margin-block: -1px !important;
+  width: 0 !important;
+  flex-grow: 1 !important;
 }
 .wi0pDywRgOCxhG7OqQNaA::after {
   --wg-opacity-1: 0.75 !important;
