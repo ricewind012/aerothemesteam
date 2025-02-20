@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 # Reason this is a separate script is that CI is *not* going to download Steam,
 # run it, generate a class map, etc. It already takes ages with npm packages...
@@ -19,6 +19,9 @@ for i in package plugin skin; do
 	file=$i.json
 	sed -i "s/\"version\": \".*\"/\"version\": \"$next\"/" "$file"
 done
+
+# Compile again in case I forget.
+npm run build:css
 
 # Force add, since dist is gitignored.
 git add -f dist package.json plugin.json skin.json
