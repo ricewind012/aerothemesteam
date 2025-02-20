@@ -28,14 +28,8 @@
 	height: var(--icon-size);
 }
 
-/* TODO:
- * @mixin header-secondary idk
- * filter: brightness(1.2); on hover
- */
 #GameIconAndName {
 	background-color: transparent;
-	font-size: var(--font-size);
-	font-weight: bold;
 	padding: 0;
 	margin-top: var(--library_spacing-x05);
 
@@ -43,8 +37,7 @@
 }
 
 #GameName {
-	opacity: var(--library_secondary-text-opacity);
-	color: inherit;
+	@include library.header-secondary;
 }
 
 #PartnerEventRowCapsule {
@@ -60,12 +53,8 @@
 		margin-top: var(--library_spacing-x05);
 	}
 
-	// TODO: @mixin header-primary idk
 	&_TextTitle {
-		@include library.header;
-
-		font-size: 10pt;
-		text-decoration: underline;
+		@include library.header-primary;
 	}
 }
 

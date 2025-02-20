@@ -18,6 +18,19 @@
 	font-weight: bold;
 }
 
+@mixin header-primary {
+	@include header;
+
+	font-size: 10pt;
+	text-decoration: underline;
+}
+
+@mixin header-secondary {
+	@include header;
+
+	opacity: var(--library_secondary-text-opacity);
+}
+
 @mixin section {
 	background: none #e1e7ef;
 	border: var(--library_border);

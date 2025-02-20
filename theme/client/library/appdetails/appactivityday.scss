@@ -38,9 +38,8 @@
 	}
 
 	&_Summary {
-		opacity: var(--library_secondary-text-opacity);
-		color: inherit;
-		font-size: inherit;
+		@include library.header-secondary;
+
 		text-shadow: none;
 
 		order: 1;
@@ -56,10 +55,8 @@
 	}
 
 	&_Title {
-		@include library.header;
+		@include library.header-primary;
 
-		font-size: 10pt;
-		text-decoration: underline;
 		text-shadow: none;
 	}
 }
@@ -72,10 +69,8 @@
 }
 
 #PartnerEventType {
-	opacity: var(--library_secondary-text-opacity);
-	color: inherit;
-	font-size: inherit;
-	font-weight: bold;
+	@include library.header-secondary;
+
 	text-shadow: none;
 	text-transform: unset;
 	margin-top: 10px;

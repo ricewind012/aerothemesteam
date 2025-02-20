@@ -12,12 +12,9 @@
 	color: var(--blue-text);
 }
 
-// TODO: @mixin header-primary
 #Playtime {
-	@include library.header;
+	@include library.header-primary;
 
-	font-size: 10pt;
-	text-decoration: underline;
 	margin-bottom: var(--library_text-spacing);
 }
 
@@ -30,10 +27,6 @@
 	padding: var(--library_spacing);
 }
 
-// TODO: @mixin header-secondary
 #RecommendGame {
-	@include library.header;
-
-	opacity: var(--library_secondary-text-opacity);
-	color: inherit;
+	@include library.header-secondary;
 }
