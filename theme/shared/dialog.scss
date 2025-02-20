@@ -22,7 +22,7 @@
 }
 
 .DialogDropDown_Arrow {
-	@include style.arrow;
+	@include style.arrow("bottom");
 
 	background-color: var(--blue-text);
 	margin-left: 6px;

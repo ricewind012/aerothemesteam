@@ -63,8 +63,7 @@
 	height: var(--size);
 
 	svg {
-		/* TODO: fix arrow image */
-		@include style.arrow;
+		@include style.arrow("bottom");
 
 		background-color: var(--blue-text);
 	}

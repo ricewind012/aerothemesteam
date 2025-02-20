@@ -2,9 +2,10 @@
 @use "shared/extends/style";
 
 #Arrow {
-	@include style.arrow;
+	@include style.arrow("bottom");
 
 	background-color: var(--fg-main);
+	margin: 0;
 }
 
 #Bar {

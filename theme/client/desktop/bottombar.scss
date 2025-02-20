@@ -9,11 +9,9 @@
 	&::after {
 		content: "";
 
-		background-color: var(--blue-text);
-		mask-image: var(--icon-arrow-bottom);
+		@include style.arrow("bottom");
 
-		width: 7px;
-		height: 4px;
+		background-color: var(--blue-text);
 	}
 }
 

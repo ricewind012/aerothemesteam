@@ -1,4 +1,5 @@
 @use "shared/extends/contextmenu";
+@use "shared/extends/style";
 
 :root {
 	--contextmenu_container-spacing: 2px;
@@ -26,13 +27,12 @@ $icons: (
 );
 
 #Arrow {
+	@include style.arrow("right");
+
 	background-color: var(--contextmenu_fg);
-	mask: var(--icon-arrow-right);
 
 	position: absolute;
 	right: 8px;
-	width: 4px;
-	height: 7px;
 
 	svg {
 		display: none;
