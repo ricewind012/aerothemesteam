@@ -1,8 +1,8 @@
-@use "shared/extends/controls";
+@use "shared/extends/library";
 @use "shared/extends/style";
 
 #AdvancedSearchButton {
-	@include controls.button;
+	@include library.button;
 
 	padding: 2px 3px;
 

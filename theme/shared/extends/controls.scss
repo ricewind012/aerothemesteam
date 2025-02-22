@@ -31,35 +31,6 @@
 	}
 }
 
-@mixin button {
-	@include style.lighter($opacity: 0.35);
-	@include style.white-gradient($size: 9px);
-
-	background: linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580),
-		var(--lighter-bg), var(--white-gradient);
-	color: #273b5c;
-	font-size: var(--font-size);
-	font-weight: bold;
-	text-align: center;
-	line-height: 1;
-	border: var(--blue-border);
-	border-radius: var(--border-radius);
-	padding: 2.5px 18px;
-
-	&:active {
-		--wg-opacity-1: 0.9;
-		--wg-opacity-2: 0.4;
-		--lighter-opacity: 0;
-	}
-}
-
-@mixin button-disabled {
-	--wg-opacity-1: 0;
-	--wg-opacity-2: 0;
-
-	pointer-events: none;
-}
-
 @mixin progress-bar-outer {
 	background-color: transparent;
 	background-image: linear-gradient(180deg, #66666680, transparent);
@@ -83,27 +54,6 @@
 		var(--white-gradient);
 	box-shadow: inset 0 0 0 1px #ffffff80;
 	border-radius: 0;
-}
-
-@mixin text-input {
-	background-color: #fff;
-	color: var(--fg-main);
-	font-size: var(--font-size);
-	line-height: 18px;
-	border: var(--blue-border);
-	border-radius: 0;
-	box-shadow: none;
-	padding: 3px 6px;
-
-	&::placeholder {
-		color: #7f7f7f;
-	}
-}
-
-@mixin text-input-compact {
-	@include text-input;
-
-	padding: 0 6px;
 }
 
 @mixin tooltip {

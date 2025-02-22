@@ -1,8 +1,8 @@
-@use "shared/extends/controls";
+@use "shared/extends/library";
 @use "shared/extends/style";
 
 #ButtonChild {
-	@include controls.button;
+	@include library.button;
 
 	padding-inline: 8px;
 }

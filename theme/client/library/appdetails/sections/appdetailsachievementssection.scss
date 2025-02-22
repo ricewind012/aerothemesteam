@@ -54,7 +54,7 @@
 }
 
 #Remainder {
-	@include controls.button;
+	@include library.button;
 
 	display: flex;
 	justify-content: center;

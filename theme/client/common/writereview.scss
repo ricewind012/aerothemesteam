@@ -1,8 +1,7 @@
-@use "shared/extends/controls";
 @use "shared/extends/library";
 
 #CompactThumbButton {
-	@include controls.button;
+	@include library.button;
 
 	margin-left: var(--library_spacing-x05);
 	margin-right: 0;

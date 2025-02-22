@@ -1,4 +1,4 @@
-@use "shared/extends/controls";
+@use "shared/extends/library";
 @use "shared/extends/style";
 
 #Controls {
@@ -45,7 +45,7 @@
 }
 
 #PostButton {
-	@include controls.button;
+	@include library.button;
 
 	gap: var(--library_spacing-x05);
 
@@ -63,7 +63,7 @@
 }
 
 #PostTextEntryArea {
-	@include controls.text-input;
+	@include library.text-input;
 
 	width: 100%;
 	min-height: 40px;

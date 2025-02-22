@@ -1,14 +1,13 @@
-@use "shared/extends/controls";
 @use "shared/extends/library";
 @use "shared/extends/style";
 
 #AddShowcase {
-	@include controls.button;
+	@include library.button;
 
 	opacity: 1;
 
 	&#Disabled {
-		@include controls.button-disabled;
+		@include library.button-disabled;
 	}
 
 	svg {

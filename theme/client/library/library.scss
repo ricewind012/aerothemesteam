@@ -1,3 +1,6 @@
+@use "shared/extends/style";
+@use "shared/extends/library";
+
 :root {
 	--library_body-spacing: 16px;
 	--library_border-color: #aeb8c6;
@@ -22,6 +25,51 @@
 
 #AppDetailsMain {
 	border: var(--library_container-border);
+}
+
+#Container {
+	.DialogButton {
+		@include library.button;
+
+		box-shadow: none;
+
+		&:is(:disabled, .Disabled) {
+			@include library.button-disabled;
+		}
+
+		&::before {
+			display: none;
+		}
+	}
+
+	.DialogDropDown {
+		@include library.text-input;
+
+		align-items: center;
+	}
+
+	.DialogDropDown_Arrow {
+		@include style.arrow("bottom");
+
+		background-color: var(--blue-text);
+		margin-left: 6px;
+
+		position: unset;
+
+		svg {
+			display: none;
+		}
+	}
+
+	.DialogDropDown_CurrentDisplay {
+		line-height: 1;
+
+		flex-grow: 1;
+	}
+
+	.DialogInput {
+		@include library.text-input($compact: true);
+	}
 }
 
 #LeftListSizableContainer {
