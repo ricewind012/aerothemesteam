@@ -1,0 +1,31 @@
+#Field {
+	--field-row-children-spacing: 7px;
+
+	color: inherit;
+	padding-block: 3px;
+	padding-inline: calc(
+		var(--pagedsettings_spacing) + var(--indent-level) * 20px
+	);
+}
+
+#FieldChildrenWithIcon {
+	align-self: start;
+}
+
+#FieldDescription {
+	opacity: 0.5;
+	font: inherit;
+	margin-top: 0;
+	margin-left: 20px;
+}
+
+#FieldLabel {
+	color: inherit;
+	font: inherit;
+}
+
+#FieldLabelRow {
+	&:not(:has(.DialogButton, .DialogDropDown, .DialogInput)) {
+		flex-direction: row-reverse;
+	}
+}

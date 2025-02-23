@@ -60,10 +60,6 @@
 #WindowControls {
 	flex: unset;
 
-	:root[browsertype="DirectHWND"] & {
-		display: none;
-	}
-
 	.title-area {
 		position: unset;
 	}

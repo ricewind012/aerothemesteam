@@ -1,0 +1,11 @@
+@use "shared/extends/settings";
+
+#SettingsDialogBodyFade {
+	mask: none;
+
+	overflow: auto;
+}
+
+#SettingsDialogBodyText {
+	@include settings.header;
+}

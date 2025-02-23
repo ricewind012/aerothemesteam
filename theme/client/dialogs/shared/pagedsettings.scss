@@ -1,0 +1,99 @@
+:root {
+	--pagedsettings_blue-text: #00156e;
+	--pagedsettings_border: 1px solid #828790;
+	--pagedsettings_dialog-spacing: 6px;
+	--pagedsettings_separator-color: #c5c5c5;
+	--pagedsettings_spacing: 14px;
+}
+
+#PageListItem_Icon {
+	display: none;
+}
+
+#PageListSeparator {
+	background-color: var(--pagedsettings_separator-color);
+	box-shadow: 0 -1px #dde7ee;
+	margin: 0 4px;
+}
+
+#PagedSettingsDialog {
+	background-color: #f0f0f0;
+	gap: var(--pagedsettings_dialog-spacing);
+	padding: var(--pagedsettings_dialog-spacing);
+
+	&_PageContent {
+		background-color: var(--bg-main);
+		border: var(--pagedsettings_border);
+		padding: 0;
+
+		.DialogBody {
+			color: inherit;
+			padding: var(--pagedsettings_spacing);
+		}
+	}
+
+	&_PageList {
+		gap: 2px;
+		padding: 0;
+	}
+
+	&_PageListColumn {
+		background-color: var(--bg-main);
+		border: var(--pagedsettings_border);
+		padding: 2px;
+	}
+
+	&_PageListItem {
+		--border-grad-start: transparent;
+		--border-grad-color: transparent;
+		--border-grad-end: transparent;
+
+		background: linear-gradient(
+			180deg,
+			var(--bg-grad-start),
+			var(--bg-grad-end)
+		);
+		color: var(--pagedsettings_blue-text);
+		font-size: var(--font-size);
+		line-height: 1.25;
+		border-inline: 1px solid transparent;
+		border-color: var(--border-grad-color);
+		border-radius: var(--border-radius);
+		box-shadow:
+			0 -1px var(--border-grad-start),
+			0 1px var(--border-grad-end);
+		padding: 5px 10px;
+
+		// TODO: i have no time for this shitty imitation of a border gradient
+		//       because apparently you can't use border-radius with
+		//       border-image, STOP HAVING FUN
+		//
+		// TODO: if i won't be able to remake it myself, grab the gradient from
+		//       ms office...
+		&#Active {
+			--bg-grad-start: #f9952b;
+			--bg-grad-end: #fdd64d;
+
+			--border-grad-start: #9f7558;
+			--border-grad-color: #8e8165;
+			--border-grad-end: #ffd33f;
+		}
+
+		&:hover {
+			--bg-grad-start: #ffd551;
+			--bg-grad-end: #ffe691;
+
+			--border-grad-start: #dbc57b;
+			--border-grad-color: #d8bb6c;
+			--border-grad-end: #d0ba73;
+		}
+	}
+
+	&_Title {
+		display: none;
+	}
+
+	.DialogHeader {
+		display: none;
+	}
+}

@@ -1,3 +1,53 @@
+@use "shared/extends/settings";
+@use "shared/extends/style";
+
+.DialogBody {
+	a {
+		@include style.link;
+
+		font: inherit;
+	}
+}
+
+.DialogControlsSection,
+.DialogControlsSectionHeader,
+.DialogHeader,
+.DialogSubHeader {
+	margin-top: var(--pagedsettings_spacing);
+}
+
+.DialogControlsSection {
+	& > [class="Panel"] {
+		color: inherit;
+		font: inherit;
+		margin: 0;
+		margin-left: var(--pagedsettings_spacing);
+	}
+}
+
 .DialogToggle_Label {
 	color: inherit;
+}
+
+.ModalPosition_Content {
+	color: var(--fg-main);
+	font-size: var(--font-size);
+	font-weight: normal;
+}
+
+.ModalPosition_TopBar {
+	display: none;
+}
+
+.DialogHeader,
+.DialogSubHeader,
+.SettingsDialogSubHeader {
+	@include settings.header;
+}
+
+:root[browsertype="DirectHWND"] {
+	.DialogHeader,
+	.TitleBar {
+		display: none;
+	}
 }
