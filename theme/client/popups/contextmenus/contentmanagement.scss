@@ -1,0 +1,49 @@
+@use "shared/extends/contextmenu";
+
+@mixin -use-icon {
+	&::before {
+		content: "";
+
+		@include contextmenu.icon-pos;
+
+		background-image: var(--icon);
+	}
+
+	// The dropdown doesn't have a separate class for that...
+	svg {
+		display: none;
+	}
+}
+
+#AddFolderDropdownOption {
+	--icon: var(--icon-add);
+
+	@include -use-icon;
+}
+
+#DriveName {
+	color: inherit;
+	font: inherit;
+}
+
+#DriveSize {
+	color: var(--contextmenu_fg-secondary);
+	font: inherit;
+	letter-spacing: 0;
+	text-transform: unset;
+}
+
+#DropdownOptionCtn {
+    // star icon
+	.tool-tip-source svg {
+		display: block;
+	}
+}
+
+#InstallDropdownOption {
+	--icon: var(--icon-download);
+
+	@include -use-icon;
+
+	color: inherit;
+}

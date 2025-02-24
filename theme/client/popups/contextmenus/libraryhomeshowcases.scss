@@ -1,0 +1,23 @@
+@use "shared/extends/contextmenu";
+
+#DropDownItems {
+	margin: 0;
+}
+
+#OptionsRule {
+	margin-top: 8px;
+
+	overflow: visible;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		top: -9px;
+		// TODO: what
+		right: -1px;
+		left: calc(var(--contextmenu_container-spacing) * -1);
+
+		@include contextmenu.separator;
+	}
+}

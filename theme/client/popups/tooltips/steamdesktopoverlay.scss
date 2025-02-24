@@ -1,0 +1,7 @@
+@use "shared/extends/controls";
+
+#ToolbarToolTip {
+	@include controls.tooltip;
+
+	font-weight: normal;
+}

@@ -1,0 +1,26 @@
+@use "shared/extends/controls";
+
+#ListItemTooltipBase {
+	@include controls.tooltip;
+}
+
+#ListItemTooltipDetail {
+	color: inherit;
+	font-size: var(--font-size);
+}
+
+#ListItemTooltipDetailSection {
+	margin-inline: var(--tooltip_description-spacing);
+
+	&:last-child {
+		margin-block-end: var(--tooltip_description-spacing);
+	}
+}
+
+#Title {
+	color: inherit;
+}
+
+#TitleRow {
+	margin-block-end: var(--tooltip_description-spacing);
+}

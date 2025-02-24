@@ -5,15 +5,15 @@
 	--contextmenu_container-spacing: 2px;
 	--contextmenu_fg: #000;
 	--contextmenu_fg-secondary: #6d6d6d;
-	--contextmenu_item-border: #9fc5f3;
-	// TODO: this is transparent
-	--contextmenu_item-gradient-start: #ecf5f9;
-	--contextmenu_item-gradient-end: #ddeefb;
+	--contextmenu_item-border: rgba(152, 196, 249, 0.75);
+	--contextmenu_item-gradient-start: rgba(245, 250, 255, 0.4);
+	--contextmenu_item-gradient-end: rgba(215, 232, 255, 0.4);
 	--contextmenu_item-gradient: linear-gradient(
 		180deg,
 		var(--contextmenu_item-gradient-start),
 		var(--contextmenu_item-gradient-end)
 	);
+	--contextmenu_item-inner-border: rgba(243, 248, 254, 0.75);
 	--contextmenu_left-spacing: 27px;
 	--contextmenu_separator-dark: #e0e0e0;
 	--contextmenu_separator-light: #fff;
@@ -63,6 +63,8 @@ $icons: (
 #contextMenuItem {
 	@include contextmenu.item;
 
+	line-height: unset;
+
 	@each $class, $icon in $icons {
 		&:has(.SVGIcon_#{$class}) {
 			--icon: var(--icon-#{$icon});
@@ -99,14 +101,17 @@ $icons: (
 
 	&.disabled {
 		--contextmenu_fg: var(--contextmenu_fg-secondary);
-		--contextmenu_item-border: #d3d3d3;
-		--contextmenu_item-gradient-start: #f4f5f5;
-		--contextmenu_item-gradient-end: #e6e6e6;
+		--contextmenu_item-border: rgba(201, 201, 201, 0.75);
+		--contextmenu_item-gradient-start: rgba(243, 243, 243, 0.69);
+		--contextmenu_item-gradient-end: rgba(221, 223, 223, 0.69);
 		--contextmenu_item-gradient: linear-gradient(
 			180deg,
 			var(--contextmenu_item-gradient-start),
 			var(--contextmenu_item-gradient-end)
 		);
+		--contextmenu_item-inner-border: rgba(235, 235, 235, 0.714);
+
+		--icon-context-menu-checkmark: var(--icon-context-menu-checkmark-disabled);
 	}
 
 	&::before {
@@ -120,6 +125,12 @@ $icons: (
 	svg:not([class]) {
 		@include contextmenu.icon-pos;
 	}
+}
+
+#ContextMenuPosition {
+	margin: 0;
+
+	overflow: visible;
 }
 
 #ContextMenuSeparator {

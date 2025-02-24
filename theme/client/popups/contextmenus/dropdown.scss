@@ -1,0 +1,13 @@
+@use "shared/extends/contextmenu";
+
+// Some guy really thought putting !important would be funny af
+.DesktopUI .visible.visible #DialogDropDownMenu {
+	@include contextmenu.container;
+	@include contextmenu.container-left-border;
+
+	position: relative;
+}
+
+#DialogDropDownMenu_Item {
+	@include contextmenu.item;
+}

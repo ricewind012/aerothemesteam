@@ -50,18 +50,16 @@ function StreamingContextMenu({ overview, onStreamingTargetSelected }) {
 	};
 
 	return (
-		<>
-			<ContextMenu>
-				{overview.per_client_data.map((e) => (
-					<StreamingClientContextMenuItem
-						key={e.clientid}
-						pClient={e}
-						bIsLocalClient={overview.BIsPerClientDataLocal(e)}
-						bSelected={overview.selected_clientid === e.clientid}
-						onSelected={(t) => onStreamingTargetSelected(e, t)}
-					/>
-				))}
-			</ContextMenu>
+		<ContextMenu>
+			{overview.per_client_data.map((e) => (
+				<StreamingClientContextMenuItem
+					key={e.clientid}
+					pClient={e}
+					bIsLocalClient={overview.BIsPerClientDataLocal(e)}
+					bSelected={overview.selected_clientid === e.clientid}
+					onSelected={(t) => onStreamingTargetSelected(e, t)}
+				/>
+			))}
 			{bHasMobileCategories && (
 				<div>
 					<ContextMenuSeparator />
@@ -71,7 +69,7 @@ function StreamingContextMenu({ overview, onStreamingTargetSelected }) {
 					/>
 				</div>
 			)}
-		</>
+		</ContextMenu>
 	);
 }
 

@@ -1,0 +1,10 @@
+#OtherToolTip {
+	& > div:not([class]) {
+		margin: var(--tooltip_description-spacing);
+	}
+}
+
+#OtherToolTipHeader {
+	color: inherit;
+	margin: 0;
+}
