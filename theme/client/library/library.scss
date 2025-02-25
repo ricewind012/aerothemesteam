@@ -36,35 +36,35 @@
 		&:is(:disabled, .Disabled) {
 			@include library.button-disabled;
 		}
-
-		&::before {
-			display: none;
-		}
 	}
 
 	.DialogDropDown {
+		--fg-main: var(--blue-text);
+
 		@include library.text-input;
 
 		align-items: center;
 	}
 
 	.DialogDropDown_Arrow {
-		@include style.arrow("bottom");
-
-		background-color: var(--blue-text);
+		background: none;
+		border: none;
+		box-shadow: none;
 		margin-left: 6px;
 
-		position: unset;
+		width: 7px;
+		height: 4px;
 
+		// TODO: wtf
 		svg {
-			display: none;
+			position: relative;
+			top: -9px;
 		}
 	}
 
 	.DialogDropDown_CurrentDisplay {
 		line-height: 1;
-
-		flex-grow: 1;
+		padding: 0;
 	}
 
 	.DialogInput {
