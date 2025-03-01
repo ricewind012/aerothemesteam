@@ -9,5 +9,13 @@
 }
 
 #DialogDropDownMenu_Item {
-	@include contextmenu.item;
+	cursor: unset;
+
+	&:not(#DialogDropDownMenu_Separator) {
+		@include contextmenu.item;
+	}
+}
+
+#DialogDropDownMenu_Separator {
+	@include contextmenu.separator;
 }

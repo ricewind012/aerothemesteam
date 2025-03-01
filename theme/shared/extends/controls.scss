@@ -4,14 +4,19 @@
 ///
 /// @param {string} $name - checkbox/radio
 /// @param {string} $checked-class-name - Class name of checked state
-@mixin input-base($name, $checked-class-name) {
+/// @param {string} $disabled-class-name - Class name of disabled state
+@mixin input-base(
+	$name,
+	$checked-class-name,
+	$disabled-class-name: "#Disabled"
+) {
 	--pos: calc(var(--pos-initial) + var(--size) * var(--state));
 	--pos-initial: 0px;
 	--size: 13px;
 	// Normal, Hover, Active, Disabled, Max
 	--state: 0;
 
-	background-image: url("../../../assets/images/#{$name}.png");
+	background-image: url("https://steamloopback.host/skins/aerothemesteam/assets/images/#{$name}.png");
 	background-position-y: calc(var(--pos) * -1);
 
 	&:hover {
@@ -22,8 +27,11 @@
 		--state: 2;
 	}
 
-	&#Disabled {
-		--state: 3;
+	// Unlike checked state, disabled isn't present in game session settings.
+	@if $disabled-class-name != "" {
+		&#{$disabled-class-name} {
+			--state: 3;
+		}
 	}
 
 	&#{$checked-class-name} {

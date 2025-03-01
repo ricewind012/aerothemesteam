@@ -9,3 +9,8 @@
 #SettingsDialogBodyText {
 	@include settings.header;
 }
+
+#SettingsDialogDescriptionText {
+	color: inherit;
+	font: inherit;
+}

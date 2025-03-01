@@ -1,0 +1,12 @@
+#BitrateButton {
+	// Some guy really thought not using the normal dropdown component would be
+	// funny af
+	& > :first-child {
+		padding: 3px 5px;
+	}
+}
+
+#Muted {
+	opacity: 0.5;
+	color: inherit;
+}

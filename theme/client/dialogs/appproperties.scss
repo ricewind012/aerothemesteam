@@ -1,0 +1,64 @@
+@use "shared/extends/settings";
+@use "shared/extends/style";
+
+#AsyncBackedInputChildren {
+	margin: 0;
+}
+
+#BetaLabel {
+	@include settings.header;
+}
+
+#BrowseDiskSize {
+	color: inherit;
+	font-weight: bold;
+	margin-left: 4px;
+}
+
+#BuildInfo {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+#DefaultOptionText {
+	color: inherit;
+}
+
+#Detail {
+	font: inherit;
+	margin: 0;
+	margin-bottom: 4px;
+}
+
+#NameText {
+	color: inherit;
+}
+
+#SectionTopLine {
+	@include settings.separator;
+}
+
+#SortCaret {
+	display: none;
+}
+
+#SteamInputLink {
+	@include style.link;
+}
+
+#Title {
+	@include settings.header;
+}
+
+#WorkshopOptionsContainer {
+	gap: 0;
+}
+
+#WorkshopTopRow {
+	gap: 12px;
+
+	.DialogLabel {
+		margin-right: 4px;
+	}
+}

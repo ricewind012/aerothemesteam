@@ -12,3 +12,9 @@
 
 	width: 100%;
 }
+
+@mixin separator {
+	border-top: 2px solid #7ba4e0;
+	padding-top: 12px;
+	margin-top: 10px;
+}

@@ -1,0 +1,23 @@
+#Details {
+	opacity: 0.5;
+	color: inherit;
+	font: inherit;
+}
+
+#FatButton {
+	svg {
+		display: none;
+	}
+}
+
+#Highlight {
+	color: inherit;
+	font-weight: bold;
+	margin-left: 4px;
+}
+
+#Label {
+	color: inherit;
+	font: inherit;
+	font-size: var(--font-size-large);
+}

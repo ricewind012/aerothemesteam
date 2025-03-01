@@ -1,0 +1,154 @@
+@use "shared/extends/controls";
+@use "shared/extends/settings";
+@use "shared/extends/style";
+
+#AddGameButton {
+	--spacing: 5px;
+
+	gap: var(--spacing);
+	padding-left: var(--spacing);
+}
+
+#AddPerGameRow {
+	color: inherit;
+	font: inherit;
+}
+
+#BackgroundSettingGameNameRow {
+	gap: 4px;
+}
+
+#BackgroundSettingOperator {
+	font-weight: bold;
+	margin-top: 17px;
+}
+
+#BackgroundSettingRow {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+#Body {
+	opacity: 0.5;
+	color: inherit;
+	font: inherit;
+	gap: 0;
+	margin: 0;
+}
+
+#DiskSpace {
+	color: inherit;
+	font: inherit;
+
+	height: unset;
+}
+
+#DurationUnits {
+	padding: 3px 5px;
+}
+
+#FolderLink {
+	color: inherit;
+}
+
+#GameIconAndName {
+	gap: 4px;
+
+	img,
+	svg {
+		--size: 16px;
+
+		border-radius: 0;
+
+		width: var(--size);
+		height: var(--size);
+	}
+
+	span {
+		color: inherit;
+		font: inherit;
+		font-weight: bold;
+
+		width: 100%;
+		display: flex;
+		align-items: center;
+
+		&:after {
+			content: "";
+
+			flex: 1 1 0;
+
+			border-top: 2px solid #7ba4e0;
+			margin-left: 4px;
+		}
+	}
+}
+
+#Header {
+	color: inherit;
+	font: inherit;
+
+	#BackgroundSetting & {
+		letter-spacing: 0;
+		text-transform: unset;
+		margin-bottom: 4px;
+	}
+}
+
+#HeaderContent {
+	margin: 0;
+}
+
+#LinkContainer {
+	display: none;
+}
+
+#ModeDescriptionText {
+	padding: 0;
+}
+
+#NewItemBug {
+	display: none;
+}
+
+#Pip {
+	@include controls.input-base("radio", "#ActivePip", "");
+
+	background-color: transparent;
+	border: none;
+	margin: 0;
+
+	width: var(--size);
+	height: var(--size);
+
+	#RecordingModeOption:hover & {
+		--state: 1;
+	}
+
+	#RecordingModeOption:active & {
+		--state: 2;
+	}
+}
+
+#RecordingMode {
+	gap: 6px;
+}
+
+#RecordingModeOption {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	gap: 4px;
+	padding: 0;
+}
+
+#TrashButton {
+	--icon: var(--icon-delete);
+
+	@include style.icon;
+
+	svg {
+		display: none;
+	}
+}

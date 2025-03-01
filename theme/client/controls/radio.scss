@@ -19,13 +19,16 @@
 	font-size: var(--font-size);
 	line-height: 1;
 	text-shadow: none;
+	gap: 4px;
 	padding: 0;
 	// TODO: what lol
 	padding-bottom: 1px;
 	padding-left: calc(var(--size) + 4px);
 	margin: 0;
 
+	flex-direction: row;
 	align-items: start;
+	justify-content: start;
 
 	&::before {
 		display: none;

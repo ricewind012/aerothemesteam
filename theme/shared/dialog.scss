@@ -1,4 +1,4 @@
-@use "shared/extends/settings";
+@use "shared/extends/controls";
 @use "shared/extends/style";
 
 %input-base {
@@ -16,6 +16,13 @@
 
 		font: inherit;
 	}
+}
+
+.DialogBodyText {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	margin-bottom: 4px;
 }
 
 .DialogButton {
@@ -95,19 +102,26 @@
 	}
 }
 
+.DialogCheckbox {
+	@include controls.input-base("checkbox", ".Active");
+
+	border-radius: 0;
+	box-shadow: none;
+
+	width: var(--size);
+	height: var(--size);
+
+	svg {
+		display: none;
+	}
+}
+
 .DialogControlsSection,
 .DialogControlsSectionHeader,
 .DialogHeader,
 .DialogSubHeader {
-	margin-top: var(--pagedsettings_spacing);
-}
-
-.DialogControlsSection {
-	& > [class="Panel"] {
-		color: inherit;
-		font: inherit;
-		margin: 0;
-		margin-left: var(--pagedsettings_spacing);
+	&:not(:first-child) {
+		margin-top: var(--pagedsettings_spacing);
 	}
 }
 
@@ -183,25 +197,21 @@
 	border-radius: 0;
 }
 
+.DialogLabel,
 .DialogToggle_Label {
 	color: inherit;
 	font-size: inherit;
+	text-transform: unset;
 }
 
 .ModalPosition_Content {
-	color: var(--fg-main);
-	font-size: var(--font-size);
+	color: inherit;
+	font-size: inherit;
 	font-weight: normal;
 }
 
 .ModalPosition_TopBar {
 	display: none;
-}
-
-.DialogHeader,
-.DialogSubHeader,
-.SettingsDialogSubHeader {
-	@include settings.header;
 }
 
 :root[browsertype="DirectHWND"] {

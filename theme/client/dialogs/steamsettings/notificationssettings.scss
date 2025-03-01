@@ -1,0 +1,43 @@
+#NotificationDescription {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+#NotificationGroup {
+	background-color: transparent;
+	border: none;
+}
+
+#NotificationPrefDetails {
+	background-color: transparent;
+	box-shadow: none;
+	padding-top: 0;
+	padding-left: 20px;
+}
+
+#NotificationSection {
+	font: inherit;
+}
+
+#PrefDetailsToggle {
+	svg {
+		height: unset;
+	}
+}
+
+#Sound {
+	text-align: start;
+}
+
+#ToggleHeader {
+	font: inherit;
+	font-weight: bold;
+	letter-spacing: 0;
+	text-transform: unset;
+	padding: 0 !important;
+
+	#Toggles {
+		gap: 28px;
+	}
+}

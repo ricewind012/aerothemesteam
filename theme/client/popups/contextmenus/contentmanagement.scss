@@ -1,6 +1,8 @@
 @use "shared/extends/contextmenu";
 
-@mixin -use-icon {
+#AddFolderDropdownOption {
+	--icon: var(--icon-add);
+
 	&::before {
 		content: "";
 
@@ -13,37 +15,4 @@
 	svg {
 		display: none;
 	}
-}
-
-#AddFolderDropdownOption {
-	--icon: var(--icon-add);
-
-	@include -use-icon;
-}
-
-#DriveName {
-	color: inherit;
-	font: inherit;
-}
-
-#DriveSize {
-	color: var(--contextmenu_fg-secondary);
-	font: inherit;
-	letter-spacing: 0;
-	text-transform: unset;
-}
-
-#DropdownOptionCtn {
-    // star icon
-	.tool-tip-source svg {
-		display: block;
-	}
-}
-
-#InstallDropdownOption {
-	--icon: var(--icon-download);
-
-	@include -use-icon;
-
-	color: inherit;
 }

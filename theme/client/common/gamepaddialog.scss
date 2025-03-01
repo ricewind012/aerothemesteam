@@ -1,11 +1,11 @@
+@use "shared/extends/settings";
+
 #Field {
 	--field-row-children-spacing: 7px;
 
 	color: inherit;
 	padding-block: 3px;
-	padding-inline: calc(
-		var(--pagedsettings_spacing) + var(--indent-level) * 20px
-	);
+	margin: 0;
 }
 
 #FieldChildrenWithIcon {
@@ -13,10 +13,14 @@
 }
 
 #FieldDescription {
-	opacity: 0.5;
+	color: inherit;
 	font: inherit;
 	margin-top: 0;
 	margin-left: 20px;
+
+	&:not(:has(> *)) {
+		opacity: 0.5;
+	}
 }
 
 #FieldLabel {
@@ -28,4 +32,8 @@
 	&:not(:has(.DialogButton, .DialogDropDown, .DialogInput)) {
 		flex-direction: row-reverse;
 	}
+}
+
+#StandaloneFieldSeparator {
+	@include settings.separator;
 }

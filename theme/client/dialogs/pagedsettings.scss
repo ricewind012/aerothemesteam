@@ -1,3 +1,5 @@
+@use "shared/extends/settings";
+
 :root {
 	--pagedsettings_blue-text: #00156e;
 	--pagedsettings_border: 1px solid #828790;
@@ -18,6 +20,7 @@
 
 #PagedSettingsDialog {
 	background-color: #f0f0f0;
+	color: var(--fg-main);
 	gap: var(--pagedsettings_dialog-spacing);
 	padding: var(--pagedsettings_dialog-spacing);
 
@@ -25,11 +28,6 @@
 		background-color: var(--bg-main);
 		border: var(--pagedsettings_border);
 		padding: 0;
-
-		.DialogBody {
-			color: inherit;
-			padding: var(--pagedsettings_spacing);
-		}
 	}
 
 	&_PageList {
@@ -93,7 +91,28 @@
 		display: none;
 	}
 
+	.DialogBody {
+		color: var(--fg-main);
+		font-size: var(--font-size);
+		font-weight: normal;
+		padding: var(--pagedsettings_spacing);
+		margin: 0;
+
+		overflow: auto;
+	}
+
 	.DialogHeader {
-		display: none;
+		@include settings.header;
+
+		margin: var(--pagedsettings_spacing);
+		margin-bottom: 0;
+
+		// 15px = scrollbar
+		width: calc(100% - var(--pagedsettings_spacing) - 15px);
+	}
+
+	.DialogSubHeader,
+	.SettingsDialogSubHeader {
+		@include settings.header;
 	}
 }
