@@ -26,9 +26,7 @@
 	&::before {
 		content: "";
 
-		--icon: var(--icon-smiley);
-
-		@include style.icon;
+		@include style.icon("smiley");
 	}
 
 	&::after {
@@ -56,9 +54,7 @@
 	&::before {
 		content: "";
 
-		--icon: var(--icon-blue-arrow);
-
-		@include style.icon;
+		@include style.icon("blue-arrow");
 	}
 }
 

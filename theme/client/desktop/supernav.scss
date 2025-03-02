@@ -12,18 +12,12 @@
 }
 
 #Arrow {
-	--icon: var(--icon-nav-forward);
-
-	@include style.icon;
+	@include style.icon("nav-forward", "path");
 
 	margin: 0 var(--supernav_icon-spacing);
 
 	&#Disabled {
 		opacity: 0.5;
-	}
-
-	path {
-		display: none;
 	}
 }
 

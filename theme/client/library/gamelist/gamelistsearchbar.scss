@@ -9,9 +9,7 @@
 	min-width: unset;
 
 	& > div {
-		--icon: var(--icon-settings);
-
-		@include style.icon;
+		@include style.icon("settings");
 	}
 
 	svg {

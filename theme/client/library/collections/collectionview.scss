@@ -19,9 +19,7 @@
 
 // TODO: maybe move somewhere else
 #EditButton {
-	--icon: var(--icon-edit);
-
-	@include style.icon;
+	@include style.icon("edit");
 
 	margin: calc(var(--library_section-header-spacing-y) * -1) 0;
 

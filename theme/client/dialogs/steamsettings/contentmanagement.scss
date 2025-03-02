@@ -25,20 +25,9 @@
 }
 
 #DriveSettingsButton {
-	--icon: var(--icon-settings);
-
-	@include style.icon;
+	@include style.icon("settings", "svg");
 
 	background-color: transparent;
-
-	// TODO: titlebarcontrols
-	&:active {
-		filter: brightness(1.25);
-	}
-
-	svg {
-		display: none;
-	}
 }
 
 #DriveSize {

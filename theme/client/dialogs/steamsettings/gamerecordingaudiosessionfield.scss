@@ -144,11 +144,5 @@
 }
 
 #TrashButton {
-	--icon: var(--icon-delete);
-
-	@include style.icon;
-
-	svg {
-		display: none;
-	}
+	@include style.icon("delete", "svg");
 }

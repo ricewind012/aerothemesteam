@@ -10,12 +10,28 @@
 	height: $h;
 }
 
-@mixin icon {
+/// @param {string} $name - Icon name found in `assets/icons`.
+/// @param {string} $hide-selector - Hide this selector, i.e. `svg`.
+@mixin icon($name: false, $hide-selector: false) {
+	@if $name {
+		--icon: var(--icon-#{$name});
+	}
+
 	background-image: var(--icon);
 	background-size: var(--icon-size);
 
 	width: var(--icon-size);
 	height: var(--icon-size);
+
+	&:active {
+		filter: brightness(1.25);
+	}
+
+	@if $hide-selector {
+		#{$hide-selector} {
+			display: none;
+		}
+	}
 }
 
 @mixin lighter($opacity) {
