@@ -1,4 +1,5 @@
 @use "shared/extends/library";
+@use "shared/extends/style";
 
 #EventOptions {
 	& > div {
@@ -59,12 +60,7 @@
 }
 
 #SettingsButton {
-	background-image: var(--icon-settings);
-	margin: calc(var(--library_section-header-spacing-y) * -1) 0;
-	margin-left: var(--library_text-spacing);
+	@include style.icon("settings", "svg");
 
-	// TODO: put somewhere else once I replace arrows
-	svg {
-		display: none;
-	}
+	margin: 0;
 }

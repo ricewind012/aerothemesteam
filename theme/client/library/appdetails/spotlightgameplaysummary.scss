@@ -28,7 +28,12 @@
 }
 
 #GamePlaySummaryHeader {
-	all: unset;
+	color: inherit;
+	font: inherit;
+	letter-spacing: 0;
+	text-transform: none;
+	margin: var(--library_section-header-spacing-y)
+		var(--library_section-header-spacing-x);
 }
 
 #SummaryCarouselContainer {

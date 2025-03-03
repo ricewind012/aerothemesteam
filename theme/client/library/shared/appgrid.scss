@@ -15,7 +15,7 @@
 #AppGridSectionLabel,
 #SortingDropDownLabel {
 	color: var(--blue-text);
-	font-size: var(--font-size);
+	font: inherit;
 	text-transform: none;
 	letter-spacing: 0;
 	margin: 0;

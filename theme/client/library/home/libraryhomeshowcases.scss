@@ -1,4 +1,5 @@
 @use "shared/extends/library";
+@use "shared/extends/pageablecontainer";
 @use "shared/extends/style";
 
 #AddShowcase {
@@ -34,6 +35,25 @@
 	position: relative;
 }
 
+// ty valve for making me duplicate my code, amazing
+#Collapser {
+	@include pageablecontainer.button("blue-arrow");
+
+	background: none;
+
+	svg {
+		all: inherit;
+
+		transform: rotate(90deg);
+		background-image: var(--icon);
+		background-size: var(--icon-size);
+
+		&[style="transform: rotate(270deg);"] {
+			transform: rotate(-90deg);
+		}
+	}
+}
+
 #CountDisplay {
 	opacity: var(--library_secondary-text-opacity);
 	color: inherit;
@@ -44,6 +64,20 @@
 
 #Message {
 	font-size: var(--font-size-xlarge);
+}
+
+#PageButtons {
+	@include pageablecontainer.buttons-container;
+
+	margin: 0;
+}
+
+#PageLeft {
+	@include pageablecontainer.button("nav-back");
+}
+
+#PageRight {
+	@include pageablecontainer.button("nav-forward");
 }
 
 #Showcase {

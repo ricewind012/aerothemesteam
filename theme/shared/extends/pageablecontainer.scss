@@ -1,0 +1,23 @@
+@use "shared/extends/style";
+
+@mixin button($icon-name) {
+	@include style.icon($icon-name);
+
+	opacity: 1;
+	margin: 0;
+}
+
+@mixin buttons-container {
+	gap: calc(var(--library_section-header-spacing-x) / 2);
+	margin-right: var(--library_section-header-spacing-x);
+
+	#Disabled {
+		opacity: 0.5;
+
+		pointer-events: none;
+	}
+
+	svg {
+		display: none;
+	}
+}

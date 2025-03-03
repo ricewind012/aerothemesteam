@@ -1,19 +1,32 @@
+@use "shared/extends/pageablecontainer";
 @use "shared/extends/style";
 
 #HeaderPageControls {
 	@include style.section-header;
+
+	padding: 0;
+
+	align-items: center;
 }
 
 #Name {
 	font: inherit;
+	margin: var(--library_section-header-spacing-y)
+		var(--library_section-header-spacing-x);
 }
 
 #PageClickContainer {
-	margin: calc(var(--library_section-header-spacing-y) * -1)
-		calc(var(--library_section-header-spacing-x) * -1);
-	margin-left: auto;
+	@include pageablecontainer.buttons-container;
 }
 
 #PageableCloseButton {
-	opacity: 1;
+	@include pageablecontainer.button("delete");
+}
+
+#PageLeft {
+	@include pageablecontainer.button("nav-back");
+}
+
+#PageRight {
+	@include pageablecontainer.button("nav-forward");
 }
