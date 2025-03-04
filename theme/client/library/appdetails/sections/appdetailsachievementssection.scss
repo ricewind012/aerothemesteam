@@ -1,5 +1,6 @@
 @use "shared/extends/controls";
 @use "shared/extends/library";
+@use "shared/extends/style";
 
 #AchievementProgressContainer {
 	@include controls.progress-bar-outer;
@@ -13,14 +14,17 @@
 }
 
 #Additional {
-	padding: var(--library_spacing);
-	margin: 0 calc(var(--library_spacing) * -1);
+	margin: 0;
+
+	#Featured + & {
+		border-bottom: var(--library_border);
+		padding: var(--library_spacing);
+		margin: 0 calc(var(--library_spacing) * -1);
+	}
 }
 
 #AdditionalItem:not(#RemainderContainer) {
-	box-shadow:
-		inset -1px -1px #fff,
-		inset 1px 1px #3c5678;
+	box-shadow: var(--achievementiconbase_border);
 	margin-right: var(--library_spacing-x05);
 
 	height: unset;
@@ -32,6 +36,12 @@
 	line-height: unset;
 
 	-webkit-line-clamp: 1;
+
+	#RemainderContainer & {
+		all: unset;
+
+		@include style.link;
+	}
 }
 
 #Featured {
@@ -56,11 +66,13 @@
 #Remainder {
 	@include library.button;
 
+	padding: 0;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: var(--library_icon-size);
-	height: var(--library_icon-size);
+	width: var(--achievementiconbase_size);
+	height: var(--achievementiconbase_size);
 }
 
 #RemainderContainer {
@@ -78,12 +90,12 @@
 }
 
 #UnachievedSection {
-	border-top: var(--library_border);
+	border-top: none;
 	padding: var(--library_spacing);
 	margin: 0 calc(var(--library_spacing) * -1);
 
-	#Additional {
-		padding-block: 0;
+	&:only-of-type {
+		margin-top: calc(var(--library_spacing) * -1);
 	}
 }
 

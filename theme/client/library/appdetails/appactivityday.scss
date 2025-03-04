@@ -1,6 +1,10 @@
 @use "shared/extends/library";
 @use "shared/extends/style";
 
+#AchievementRemainder {
+	display: none;
+}
+
 #Blur,
 #ImageContainer,
 #MediumImageContainer {

@@ -1,8 +1,25 @@
-#AchievementIconWrapper {
-	--icon-size: 32px;
+:root {
+	--achievementiconbase_border: inset -1px -1px #fff, inset 1px 1px #3c5678;
+	--achievementiconbase_size: 32px;
+}
 
-	width: var(--icon-size);
-	height: var(--icon-size);
+#AchievementIconWrapper {
+	width: var(--achievementiconbase_size);
+	height: var(--achievementiconbase_size);
+}
+
+#HiddenLabel {
+	background: var(--library_header-img-mask);
+	background-color: var(--blue-dark);
+	color: inherit;
+	font-size: 18px;
+	box-shadow: var(--achievementiconbase_border);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--achievementiconbase_size);
+	height: var(--achievementiconbase_size);
 }
 
 #Icon {
