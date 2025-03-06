@@ -4,6 +4,20 @@
 	max-width: unset;
 }
 
+#AddToFeed {
+	margin-bottom: var(--library_spacing);
+}
+
+#EndRule {
+	@include library.activity-section_rule;
+}
+
+#EndText {
+	@include library.activity-section_header;
+
+	padding: 0 var(--library_text-spacing);
+}
+
 #FetchMoreContainer {
 	margin-top: var(--library_spacing-x05);
 	margin-bottom: 0;
@@ -14,7 +28,7 @@
 
 	color: inherit;
 	font-size: var(--font-size);
-	margin-bottom: var(--library_spacing-x05);
+	margin-bottom: 0;
 
 	min-height: unset;
 }

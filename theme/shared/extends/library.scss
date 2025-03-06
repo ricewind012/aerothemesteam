@@ -88,4 +88,16 @@
 
 	opacity: var(--library_secondary-text-opacity);
 }
+
 /*#endregion*/
+/*#region ACTIVITY SECTION */
+@mixin activity-section_header {
+	color: inherit;
+	font-size: var(--font-size-large);
+	font-weight: bold;
+}
+
+@mixin activity-section_rule {
+	border-top: 1px solid var(--library_border-color);
+	border-bottom: 1px solid var(--bg-main);
+}

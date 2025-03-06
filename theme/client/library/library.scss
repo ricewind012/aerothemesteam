@@ -8,6 +8,8 @@
 	--library_border: var(--library_border-size) solid var(--library_border-color);
 	--library_container-border: var(--library_border-size) solid #39577c;
 	--library_game-stat-spacing: 7px;
+	--library_green: #d1e1b9;
+	--library_green-dark: color-mix(in srgb, var(--library_green) 75%, black);
 	--library_header-img-height: 163px;
 	--library_header-img-mask: radial-gradient(
 		55.62% 83.6% at 35.73% 0%,

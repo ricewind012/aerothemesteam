@@ -1,13 +1,92 @@
+@use "shared/extends/library";
+
+#ActivityCommentThread {
+	background: transparent;
+	border-top: var(--library_border);
+	padding-top: 0;
+	padding-left: 0;
+	margin-top: var(--library_spacing-x05);
+}
+
 #ActivityCommentThreadMinimized {
 	opacity: 1;
+	padding-top: 0;
+}
+
+#AddReply {
 	padding: 0;
+}
+
+// and then they say the class obfuscation is to reduce the bundle size... lmao
+#CommentButton,
+#LikeButton,
+#Reactions {
+	@include library.button;
+}
+
+#CommentCount,
+#LikeCount,
+#ReactionCount {
+	color: inherit;
+	font: inherit;
+}
+
+#CommentIcon,
+#LikeIcon,
+#ReactionIcon {
+	margin: 0;
+	margin-left: var(--library_text-spacing);
+
+	overflow: visible;
+	width: var(--icon-size);
+	height: var(--icon-size);
+
+	// TODO: var
+	path {
+		fill: #273b5c;
+	}
 }
 
 #ButtonSpacer {
 	width: var(--library_spacing-x05);
 }
 
+#Comment {
+	color: inherit;
+	padding-block: var(--library_spacing-x05);
+	margin: 0;
+}
+
+#CommentControls {
+	// TODO: devtools crashes while trying to inspect LOOOOOOOOOOOOOOOOOOOOOOL
+}
+
+#CommenterandTime {
+	margin-block: 6.5px;
+}
+
+#CommentTime {
+	color: inherit;
+	font: inherit;
+}
+
+#MakeCommentsVisible {
+	@include library.button;
+
+	margin-top: var(--library_spacing);
+	margin-bottom: var(--library_spacing-x05);
+}
+
 #RatingBar {
 	opacity: 1;
-	margin-top: var(--library_spacing);
+	margin-top: var(--library_spacing-x05);
+}
+
+#RatingContainer {
+	padding: 0;
+}
+
+#RatingDetails {
+	color: inherit;
+	font: inherit;
 }

@@ -3,7 +3,8 @@
 
 #Controls {
 	padding: 0;
-	margin: var(--library_spacing-x05) 0;
+	margin-top: var(--library_spacing-x05);
+	margin-bottom: var(--library_spacing);
 
 	max-height: unset;
 }

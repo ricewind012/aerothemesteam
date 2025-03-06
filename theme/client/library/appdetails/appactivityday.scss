@@ -5,10 +5,80 @@
 	display: none;
 }
 
+#ActiveScreenshot {
+	margin: 0;
+}
+
+#ActivityAchievementUnlocked {
+	background: var(--library_green-dark);
+	border: var(--library_border-size) solid var(--library_green-dark);
+	gap: calc(var(--library_spacing) + var(--library_border-size));
+	padding: 0;
+	padding-top: var(--library_spacing);
+	padding-left: var(--library_spacing);
+
+	// copied, since the inline one doesn't work
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+
+	&:has(> :only-child) {
+		grid-template-columns: 1fr;
+	}
+}
+
+#ActivityPublishedStatus {
+	color: inherit;
+	font: inherit;
+}
+
+#ActivityRecommendedGame {
+	padding: 0;
+}
+
+#AppActivityDate {
+	@include library.activity-section_header;
+
+	letter-spacing: 0;
+	text-transform: unset;
+	margin-bottom: var(--library_spacing-x05);
+
+	// ty valve, fucking amazing
+	& + div:not([class]) {
+		gap: var(--library_spacing);
+
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+#AppActivityDay {
+	border: none;
+	padding: 0;
+	margin-bottom: calc(var(--library_spacing) * 2);
+}
+
 #Blur,
 #ImageContainer,
-#MediumImageContainer {
+#MediumImageContainer,
+#PartnerEventTextOnly_Icon {
 	display: none;
+}
+
+#CaptionQuoteContainer {
+	gap: var(--library_spacing-x05);
+}
+
+#CarouselThumb {
+	border-radius: var(--border-radius-large);
+	margin-bottom: var(--library_spacing-x05);
+
+	&#Active {
+		border: none;
+	}
+}
+
+#CarouselThumbs {
+	margin: 0;
+	margin-left: var(--library_spacing-x05);
 }
 
 #DayPosted {
@@ -22,8 +92,37 @@
 	font-size: var(--font-size);
 	border: none;
 	box-shadow: none;
-	margin: calc(var(--library_spacing-x05) * -1);
-	margin-top: calc(var(--library_spacing) * -1);
+	margin-top: 0;
+}
+
+#EventActorAvatar {
+	height: unset;
+}
+
+#EventBody {
+	background: none;
+	border: none;
+	box-shadow: none;
+	margin-top: var(--library_spacing);
+
+	&#UserStatus {
+		padding: var(--library_spacing);
+		margin-top: 0;
+	}
+}
+
+#EventHeadline {
+	color: inherit;
+	font: inherit;
+	padding-block: var(--library_spacing-x05);
+}
+
+#ImageWrapper {
+	border-radius: var(--border-radius-large);
+}
+
+#LeftSideMajorUpdateBar {
+	display: none;
 }
 
 #PartnerEventFeaturedHeader {
@@ -65,13 +164,6 @@
 	}
 }
 
-#PartnerEventLargeImage,
-#PartnerEventMediumImage {
-	&_Contents {
-		padding: var(--library_spacing);
-	}
-}
-
 #PartnerEventType {
 	@include library.header-secondary;
 
@@ -81,3 +173,65 @@
 
 	order: 1;
 }
+
+// TODO: !important
+#PrimaryAchievement#PrimaryAchievement,
+#ActivityAchievementUnlocked > :last-child {
+	// fucking hell, valve
+	--tooltip_description-spacing: 9px 0 9px;
+	border: none;
+
+	width: calc(100% + var(--library_spacing));
+}
+
+#Rule {
+	@include library.activity-section_rule;
+
+	margin-left: var(--library_text-spacing);
+	margin-top: 3px;
+}
+
+#ScreenshotCaption#HasCaption {
+	font-size: var(--font-size);
+	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+	padding-block: calc(var(--library_spacing-x05) / 2);
+	padding-inline: var(--library_spacing);
+	margin-right: 0;
+	margin-bottom: calc(1lh + var(--library_text-spacing));
+
+	max-width: unset;
+}
+
+#TimeStamp {
+	@include library.description;
+
+	margin-inline: 0;
+}
+
+/*#region Pasted from appdetailsreviewsection */
+#PlayedForTime {
+	@include library.description;
+
+	font-weight: normal;
+	padding: 0;
+}
+
+#ReviewDescriptionRecommended {
+	@include library.header;
+
+	padding: 0;
+}
+
+#ReviewIcon {
+	border-radius: var(--border-radius);
+	margin-right: var(--library_spacing);
+
+	width: var(--library_icon-size);
+	height: var(--library_icon-size);
+}
+
+#ReviewText {
+	color: inherit;
+	font-size: var(--font-size);
+}
+/*#endregion*/
