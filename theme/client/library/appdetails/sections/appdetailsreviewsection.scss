@@ -4,12 +4,22 @@
 	flex-wrap: wrap;
 }
 
-#CommentIcon {
+#CommentIcon,
+#UpVotesIcon {
 	display: none;
+}
+
+#CommentCount {
+	color: inherit;
+	font-weight: bold;
 }
 
 #CommentsContainer {
 	font-size: var(--font-size);
+}
+
+#CommentsLabel {
+	color: inherit;
 }
 
 #PlayedForTime {

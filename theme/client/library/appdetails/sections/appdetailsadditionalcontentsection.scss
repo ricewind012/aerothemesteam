@@ -1,9 +1,53 @@
+@use "shared/extends/library";
+
 #AdditionalItem {
 	padding: 0;
+
+	&:not(:last-child) {
+		margin-bottom: var(--library_spacing-x05);
+	}
+}
+
+#SoundtrackDetails {
+	gap: var(--library_text-spacing);
+	margin-left: var(--library_spacing);
+}
+
+#Soundtracks {
+	#Artist {
+		@include library.header-primary;
+
+		order: -1;
+	}
+
+	#Image {
+		--size: calc(var(--library_icon-size) * 2);
+
+		width: var(--size);
+		height: var(--size);
+
+		img {
+			border-radius: 0;
+			box-shadow: none;
+		}
+	}
+
+	#Title {
+		@include library.header-secondary;
+
+		margin: 0;
+	}
+
+	#TracksDetails {
+		@include library.description;
+
+		font-weight: normal;
+	}
 }
 
 #Title {
 	color: inherit;
 	font-size: var(--font-size);
-	margin-left: var(--library_spacing);
+	font-weight: normal;
+	margin-left: var(--library_text-spacing);
 }

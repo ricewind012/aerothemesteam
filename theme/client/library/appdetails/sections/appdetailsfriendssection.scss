@@ -4,6 +4,10 @@
 	width: 100%;
 }
 
+#LabelHolder {
+	padding-top: 0;
+}
+
 #ShowMore {
 	@include library.button;
 
@@ -11,12 +15,19 @@
 }
 
 #Subsection {
+	border-bottom: var(--library_border);
 	padding-bottom: var(--library_spacing);
 	margin-bottom: var(--library_spacing);
+
+	&:last-of-type {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
 }
 
 #SubsectionHeader {
 	color: inherit;
 	font-size: var(--font-size);
-	padding-bottom: 9px;
+	padding-bottom: var(--library_text-spacing);
 }

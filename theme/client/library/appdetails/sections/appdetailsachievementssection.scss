@@ -5,7 +5,7 @@
 #AchievementProgressContainer {
 	@include controls.progress-bar-outer;
 
-	margin-top: 8px;
+	margin-top: var(--library_text-spacing);
 	margin-bottom: 0;
 }
 
@@ -56,7 +56,7 @@
 	opacity: var(--library_secondary-text-opacity);
 	color: inherit;
 	font-size: var(--font-size-small);
-	margin-bottom: 9px;
+	margin-bottom: var(--library_text-spacing);
 }
 
 #Name {
