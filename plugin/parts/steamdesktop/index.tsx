@@ -29,6 +29,7 @@ import {
 
 import { FavoriteButton } from "./favoritebutton";
 import { ActionButton } from "./actionbutton";
+import { Localize } from "../../modules/localization";
 
 const k_EAppType_Demo = 8;
 
@@ -199,6 +200,11 @@ export class SteamDesktop extends Component<{}, SteamDesktopState> {
 				<AppGameInfo expand={true} overview={overview} details={details} />
 			</ModalPosition>,
 			wnd,
+			{
+				popupWidth: 800,
+				popupHeight: 500,
+				strTitle: Localize("#AppDetails_Tab_GameInfo"),
+			},
 		);
 	}
 

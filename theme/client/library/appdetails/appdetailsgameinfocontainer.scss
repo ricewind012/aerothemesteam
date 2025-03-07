@@ -2,7 +2,7 @@
 	display: none;
 
 	// Hide only in main window
-	.PopupFullWindow > & {
+	.PopupFullWindow & {
 		display: initial;
 	}
 }
