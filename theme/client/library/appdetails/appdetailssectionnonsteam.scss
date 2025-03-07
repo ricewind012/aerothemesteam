@@ -1,0 +1,11 @@
+@use "shared/extends/library";
+
+#Body {
+	@include library.placeholder;
+
+	background-color: transparent;
+	color: inherit;
+	font-size: var(--font-size);
+
+	min-height: unset;
+}

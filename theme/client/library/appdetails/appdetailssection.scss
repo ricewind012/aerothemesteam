@@ -6,13 +6,13 @@
 }
 
 #AppDetailsSectionContainer {
-	@include library.section;
-
 	box-shadow: none;
 	margin: 0;
 }
 
 #Body {
+	@include library.section;
+
 	padding: var(--library_spacing);
 }
 
@@ -24,7 +24,8 @@
 	background: none #cedef2;
 	color: #273b5c;
 	font-size: var(--font-size);
-	border-bottom: var(--library_border);
+	border: var(--library_border);
+	border-top: none;
 	border-radius: 0;
 	box-shadow: none;
 	padding: var(--library_spacing);

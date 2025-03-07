@@ -84,6 +84,8 @@
 }
 
 #InnerContainer {
+	@include library.section;
+
 	padding: var(--library_spacing);
 }
 
