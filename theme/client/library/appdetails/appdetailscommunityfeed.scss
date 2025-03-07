@@ -1,12 +1,143 @@
 @use "shared/extends/library";
+@use "shared/extends/style";
+
+#AppOverviewRow {
+	gap: var(--library_spacing);
+	padding-bottom: var(--library_spacing);
+}
+
+#AuthorName {
+	font-size: var(--font-size);
+	margin-left: var(--library_text-spacing);
+}
+
+#AuthorSection {
+	background: #cedef2;
+	color: inherit;
+	border-top: var(--library_border);
+	border-radius: 0;
+	padding: var(--library_spacing-x05);
+}
+
+#BottomSection {
+	padding: var(--library_spacing-x05);
+}
+
+#Button {
+	width: unset;
+	height: unset;
+}
+
+#CommunityItem {
+	background-color: transparent;
+	border: var(--library_border);
+	border-radius: 0;
+	box-shadow: none;
+}
+
+#Control {
+	@include library.button;
+
+	opacity: 1;
+	transform: scale(1);
+	margin-right: 0;
+
+	justify-content: center;
+}
+
+#Controls {
+	transform: unset;
+	background-color: #cedef2;
+	gap: var(--library_spacing-x05);
+	padding: var(--library_spacing-x05);
+
+	justify-content: center;
+	position: unset;
+}
+
+#Count {
+	color: inherit;
+}
+
+#Description {
+	color: inherit;
+	font-size: var(--font-size);
+	line-height: inherit;
+}
+
+// Make it consistent with the rest...
+#GuideTitle {
+	display: none;
+}
+
+#Header {
+	margin: 0;
+}
 
 #HeaderStyles {
 	border-radius: 0;
 	margin: 0;
 }
 
+#Icon16 {
+	margin: 0;
+}
+
+#InnerContainer {
+	padding: var(--library_spacing);
+}
+
 #LoadContentButton {
 	@include library.button;
 
-	margin: var(--library_spacing);
+	margin: 0;
+}
+
+#MenuButton {
+	@include library.button;
+
+	opacity: 1;
+
+	top: unset;
+	right: var(--library_spacing-x05);
+	bottom: calc(
+		var(--library_spacing-x05) * 3 + var(--steamavatar_size) / 2 + 1lh
+	);
+	width: unset;
+	height: unset;
+
+	// TODO: SVGIcon_Settings unify ?
+	svg {
+		@include style.icon("settings", "path");
+	}
+}
+
+#NoContent {
+	margin-bottom: var(--library_spacing);
+}
+
+#PreviewContainer {
+	border-radius: 0;
+
+	#Guide & {
+		display: none;
+	}
+}
+
+#Title {
+	@include library.header-primary;
+
+	line-height: inherit;
+	margin: var(--library_spacing-x05);
+	margin-bottom: 0;
+}
+
+#TopSection {
+	margin: 0;
+	// 10 - 6
+	margin-bottom: 4px;
+}
+
+#TopSectionInner {
+	background-color: transparent;
 }
