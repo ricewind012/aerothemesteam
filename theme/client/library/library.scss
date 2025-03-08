@@ -41,8 +41,6 @@
 	}
 
 	.DialogDropDown {
-		--fg-main: var(--blue-text);
-
 		@include library.text-input;
 
 		align-items: center;

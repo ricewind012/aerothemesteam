@@ -34,11 +34,13 @@
 }
 
 #ReviewIcon {
+	--size: calc(var(--library_icon-size) * 1.5);
+
 	border-radius: var(--border-radius);
 	margin-right: var(--library_spacing);
 
-	width: var(--library_icon-size);
-	height: var(--library_icon-size);
+	width: var(--size);
+	height: var(--size);
 }
 
 #ReviewText {
