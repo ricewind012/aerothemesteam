@@ -1,27 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
-import yargs from "yargs";
 import postcssFunctions from "postcss-functions";
+import removeComments from "postcss-discard-comments";
 import postcssSassParser from "postcss-scss";
 import postcssSassPlugin from "@csstools/postcss-sass";
 import {
 	appendImportantPlugin,
 	selectorReplacerPlugin,
 } from "steam-theming-utils/postcss-plugins";
-
-const { argv } = yargs(process.argv);
-
-// Recreate the CSS output directory
-fs.rmSync(argv.dir, { recursive: true, force: true });
-fs.mkdirSync(argv.dir);
-
-// Generate an index.css file that imports everything
-const text = fs
-	.readdirSync(argv.base, { recursive: true })
-	.filter((e) => e.endsWith(".scss"))
-	.map((e) => `@import "${e.replace(/\\/g, "/").replace("scss", "css")}";`)
-	.join("\n");
-fs.writeFileSync(path.join(argv.dir, "index.css"), text);
 
 /**
  * `icon("name")` => `url("data:image/png;base64,${base64}")`
@@ -51,6 +37,7 @@ export default {
 				icon,
 			},
 		}),
+		removeComments(),
 		selectorReplacerPlugin(),
 		appendImportantPlugin({
 			filter: [/^:root/],

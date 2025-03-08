@@ -199,7 +199,7 @@
 }
 
 #NoCheckboxSpacer {
-	@include controls.input-base("checkbox", ".hack");
+	@include controls.input-base("checkbox", ".hack", ".hack");
 
 	width: var(--size);
 	height: var(--size);

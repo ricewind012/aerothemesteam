@@ -12,15 +12,24 @@
 	"Patches": [
 		{
 			"MatchRegexString": ".DesktopUI",
-			"TargetCss": "dist/index.css"
+			"TargetCss": [
+				"dist/client.css",
+				"dist/shared.css"
+			]
 		},
 		{
 			"MatchRegexString": ".fullheight",
-			"TargetCss": "dist/index.css"
+			"TargetCss": [
+				"dist/client.css",
+				"dist/shared.css"
+			]
 		},
 		{
 			"MatchRegexString": ".friendsui-container",
-			"TargetCss": "dist/index.css"
+			"TargetCss": [
+				"dist/client.css",
+				"dist/shared.css"
+			]
 		}
 	]
 }

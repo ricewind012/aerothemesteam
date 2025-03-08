@@ -21,7 +21,8 @@ for i in package plugin skin; do
 done
 
 # Compile again in case I forget.
-npm run build:css
+npm run build:css client
+npm run build:css shared
 
 # Force add, since dist is gitignored.
 git add -f dist package.json plugin.json skin.json
