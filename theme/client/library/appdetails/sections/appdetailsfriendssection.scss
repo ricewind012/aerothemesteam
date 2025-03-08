@@ -15,12 +15,23 @@
 }
 
 #Subsection {
-	border-bottom: var(--library_border);
-	padding-bottom: var(--library_spacing);
-	margin-bottom: var(--library_spacing);
+	padding-bottom: var(--library_spacing-x05);
+	margin-bottom: var(--library_spacing-x05);
+
+	overflow: visible;
+	position: relative;
+
+	&:not(:last-of-type)::after {
+		content: "";
+
+		position: absolute;
+		bottom: calc(var(--library_border-size) * -1);
+		inset-inline: calc(var(--library_spacing-x05) * -1);
+
+		border-bottom: var(--library_border) !important;
+	}
 
 	&:last-of-type {
-		border: none;
 		padding: 0;
 		margin: 0;
 	}
