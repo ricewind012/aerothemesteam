@@ -6,14 +6,35 @@
 	border: none;
 	box-shadow: none;
 
-	width: var(--steamavatar_size);
-	height: var(--steamavatar_size);
+	width: inherit;
+	height: inherit;
 }
 
 #avatarHolder {
 	transform: unset;
 
 	position: relative;
-	width: var(--steamavatar_size);
-	height: var(--steamavatar_size);
+	width: calc(var(--steamavatar_size) * var(--multiply));
+	height: calc(var(--steamavatar_size) * var(--multiply));
+
+	&.X-Small {
+		--multiply: 0.75;
+	}
+
+	&.Small {
+		--multiply: 1;
+	}
+
+	&.Medium {
+		// same size in steam css
+		--multiply: 1;
+	}
+
+	&.Large {
+		--multiply: 1.5;
+	}
+
+	&.X-Large {
+		--multiply: 2;
+	}
 }
