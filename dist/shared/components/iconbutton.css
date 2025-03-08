@@ -1,7 +1,0 @@
-.icon-button {
-  background-image: var(--icon) !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  width: var(--icon-size) !important;
-  height: var(--icon-size) !important;
-}
