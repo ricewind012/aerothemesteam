@@ -1,3 +1,10 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 :root {
   --library_body-spacing: 16px;
   --library_border-color: #aeb8c6;
@@ -5,6 +12,8 @@
   --library_border: var(--library_border-size) solid var(--library_border-color);
   --library_container-border: var(--library_border-size) solid #39577c;
   --library_game-stat-spacing: 7px;
+  --library_green: #d1e1b9;
+  --library_green-dark: color-mix(in srgb, var(--library_green) 75%, black);
   --library_header-img-height: 163px;
   --library_header-img-mask: radial-gradient(
   	55.62% 83.6% at 35.73% 0%,
@@ -22,6 +31,89 @@
 
 ._2Nq6ov7A1hGcHXVOXNt_OE {
   border: var(--library_container-border) !important;
+}
+
+._3xRRJfD2xy95i9NhJxLTp0 .DialogButton {
+  --lighter: rgba(255, 255, 255, var(--lighter-opacity)) !important;
+  --lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter)) !important;
+  --lighter-opacity: 0.35 !important;
+  --wg-opacity-1: 0.75 !important;
+  --wg-opacity-2: 0.25 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 9px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  background: linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580), var(--lighter-bg), var(--white-gradient) !important;
+  color: #273b5c !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  border: var(--blue-border) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 2.5px 18px !important;
+  box-shadow: none !important;
+}
+._3xRRJfD2xy95i9NhJxLTp0 .DialogButton:active {
+  --wg-opacity-1: 0.9 !important;
+  --wg-opacity-2: 0.4 !important;
+  --lighter-opacity: 0 !important;
+}
+._3xRRJfD2xy95i9NhJxLTp0 .DialogButton:is(:disabled, .Disabled) {
+  --wg-opacity-1: 0 !important;
+  --wg-opacity-2: 0 !important;
+  pointer-events: none !important;
+}
+._3xRRJfD2xy95i9NhJxLTp0 .DialogDropDown {
+  background-color: #fff !important;
+  color: var(--fg-main) !important;
+  font-size: var(--font-size) !important;
+  line-height: 18px !important;
+  border: var(--blue-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 3px 6px !important;
+  align-items: center !important;
+}
+._3xRRJfD2xy95i9NhJxLTp0 .DialogDropDown::placeholder {
+  color: #7f7f7f !important;
+}
+._3xRRJfD2xy95i9NhJxLTp0 .DialogDropDown_Arrow {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-left: 6px !important;
+  width: 7px !important;
+  height: 4px !important;
+  /* TODO: wtf*/
+}
+._3xRRJfD2xy95i9NhJxLTp0 .DialogDropDown_Arrow svg {
+  position: relative !important;
+  top: -9px !important;
+}
+._3xRRJfD2xy95i9NhJxLTp0 .DialogDropDown_CurrentDisplay {
+  line-height: 1 !important;
+  padding: 0 !important;
+}
+._3xRRJfD2xy95i9NhJxLTp0 .DialogInput {
+  background-color: #fff !important;
+  color: var(--fg-main) !important;
+  font-size: var(--font-size) !important;
+  line-height: 18px !important;
+  border: var(--blue-border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 6px !important;
+}
+._3xRRJfD2xy95i9NhJxLTp0 .DialogInput::placeholder {
+  color: #7f7f7f !important;
 }
 
 ._9sPoVBFyE_vE87mnZJ5aB {

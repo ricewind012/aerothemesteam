@@ -1,3 +1,10 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._2-p7shAZYrRijpaTU9bAFR > div {
   border-radius: var(--border-radius-large) !important;
 }
@@ -58,10 +65,15 @@
 }
 
 ._1eFe5VbyACJE4RVGpOWKMC {
-  background-image: var(--icon-settings) !important;
-  margin: calc(var(--library_section-header-spacing-y) * -1) 0 !important;
-  margin-left: var(--library_text-spacing) !important;
-  /* TODO: put somewhere else once I replace arrows*/
+  --icon: var(--icon-settings) !important;
+  background-image: var(--icon) !important;
+  background-size: var(--icon-size) !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  margin: 0 !important;
+}
+._1eFe5VbyACJE4RVGpOWKMC:active {
+  filter: brightness(1.25) !important;
 }
 ._1eFe5VbyACJE4RVGpOWKMC svg {
   display: none !important;

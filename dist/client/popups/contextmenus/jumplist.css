@@ -13,7 +13,7 @@
   height: var(--icon-size) !important;
   background: var(--contextmenu_item-gradient) !important;
   border: 1px solid var(--contextmenu_item-border) !important;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+  box-shadow: inset 0 0 0 1px var(--contextmenu_item-inner-border) !important;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuMvu8A7YAAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAIAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAAYAAAAAEAAABgAAAAAQAAAFBhaW50Lk5FVCA1LjEuMgADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAADp1fY4ytpsegAAAT5JREFUOE9jGAXYwfQFx6Qt7FpW8PAlP9HQKnsSnz5nxcrNx6Sh0vjB4pVH1EXFs97mF27+P3/Btf+Hj7z8v3HTrf8BIRPfLl55QguqDA6YoTQcfP2mMUNJUd5YSVGaQVCQk0FKkoeBj5cbiAU4l686KHX31q6VUKVgwASl4eD61SeuDP8ZGV68fMdw/fozhhu3XjHcvfcGaPB/hjOn77tClcEBhgG8PFwML1+9ZXj5EoTfMZw+fZ/h6tVnDM+fvWHg4WSHqkIADAPs7NT2PX70iuHVq/dgAyD4LcO58zcZTK3VdkOVwQEjlIaDc+ceaBUWLj18/eYLIWFhfgYuLg6Gnz9/M/AKsL5r7gqzdbFQuwZVCgYYBoDA+fOPpOfMPzDh+NGbNn///mcws1A9khjnXGBlJfcUqmQUwAEDAwBcan5RyayqegAAAABJRU5ErkJggg=="), var(--contextmenu_item-gradient) !important;
   background-position: center !important;
   border-radius: var(--border-radius) !important;

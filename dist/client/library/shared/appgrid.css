@@ -1,3 +1,10 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._2c0Fgw4ROufef0QaSULEkw {
   display: none !important;
 }
@@ -12,7 +19,7 @@
 ._2hvQbTq62AjXQS4tZqVepi,
 ._1ljKTq3H58WbDZGNPfM0TY {
   color: var(--blue-text) !important;
-  font-size: var(--font-size) !important;
+  font: inherit !important;
   text-transform: none !important;
   letter-spacing: 0 !important;
   margin: 0 !important;

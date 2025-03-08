@@ -5,13 +5,29 @@
 ._3h-QRJGxnVOIExtHD1R0f2 {
   border: none !important;
   box-shadow: none !important;
-  width: var(--steamavatar_size) !important;
-  height: var(--steamavatar_size) !important;
+  width: inherit !important;
+  height: inherit !important;
 }
 
 .nibodjvvrm86uCfnnAn4g {
   transform: unset !important;
   position: relative !important;
-  width: var(--steamavatar_size) !important;
-  height: var(--steamavatar_size) !important;
+  width: calc(var(--steamavatar_size) * var(--multiply)) !important;
+  height: calc(var(--steamavatar_size) * var(--multiply)) !important;
+}
+.nibodjvvrm86uCfnnAn4g.X-Small {
+  --multiply: 0.75 !important;
+}
+.nibodjvvrm86uCfnnAn4g.Small {
+  --multiply: 1 !important;
+}
+.nibodjvvrm86uCfnnAn4g.Medium {
+  /* same size in steam css*/
+  --multiply: 1 !important;
+}
+.nibodjvvrm86uCfnnAn4g.Large {
+  --multiply: 1.5 !important;
+}
+.nibodjvvrm86uCfnnAn4g.X-Large {
+  --multiply: 2 !important;
 }

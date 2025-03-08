@@ -2,6 +2,6 @@
   display: none !important;
   /* Hide only in main window*/
 }
-.PopupFullWindow > ._25oBZpa3dUcMw8QAsa2u67 {
+.PopupFullWindow ._25oBZpa3dUcMw8QAsa2u67 {
   display: initial !important;
 }

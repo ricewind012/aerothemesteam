@@ -1,6 +1,124 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
+._1I55h8ejmOddwvE4LFbSEq {
+  gap: var(--library_spacing) !important;
+  padding-bottom: var(--library_spacing) !important;
+}
+
+.rMbCqh2ydczoq62EticF5 {
+  font-size: var(--font-size) !important;
+  margin-left: var(--library_text-spacing) !important;
+}
+
+._1ul9ZRBfhF0vyj-hrit6nU {
+  background: #cedef2 !important;
+  color: inherit !important;
+  border-top: var(--library_border) !important;
+  border-radius: 0 !important;
+  padding: var(--library_spacing-x05) !important;
+}
+
+._3uabislt81gdMksbxzc-iN {
+  padding: var(--library_spacing-x05) !important;
+}
+
+.Mj5HqvDXedpotuga04XmY {
+  width: unset !important;
+  height: unset !important;
+}
+
+._3QS6OBHpvI5bXsSQA2zQuW {
+  background-color: transparent !important;
+  border: var(--library_border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+._1GfHtX6GRZ_5BukahmkQp4 {
+  --lighter: rgba(255, 255, 255, var(--lighter-opacity)) !important;
+  --lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter)) !important;
+  --lighter-opacity: 0.35 !important;
+  --wg-opacity-1: 0.75 !important;
+  --wg-opacity-2: 0.25 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 9px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  background: linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580), var(--lighter-bg), var(--white-gradient) !important;
+  color: #273b5c !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  border: var(--blue-border) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 2.5px 18px !important;
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  margin-right: 0 !important;
+  justify-content: center !important;
+}
+._1GfHtX6GRZ_5BukahmkQp4:active {
+  --wg-opacity-1: 0.9 !important;
+  --wg-opacity-2: 0.4 !important;
+  --lighter-opacity: 0 !important;
+}
+
+._3lh8aaHNMcFvupuNhQDfFt {
+  transform: unset !important;
+  background-color: #cedef2 !important;
+  gap: var(--library_spacing-x05) !important;
+  padding: var(--library_spacing-x05) !important;
+  justify-content: center !important;
+  position: unset !important;
+}
+
+.NlL1tQGqhUyRhv6p9zwTZ {
+  color: inherit !important;
+}
+
+.xsBpzsjWWv0lqaQr0yzrG {
+  color: inherit !important;
+  font-size: var(--font-size) !important;
+  line-height: inherit !important;
+}
+
+/* Make it consistent with the rest...*/
+._23Pup1qLf91kwjALd-jFGc {
+  display: none !important;
+}
+
+.l0pbvMApUzYaf32F51pIO {
+  margin: 0 !important;
+}
+
 ._2lNdDLgjQdeBXmMlPO8lvq {
   border-radius: 0 !important;
   margin: 0 !important;
+}
+
+._3AoQ6Gu9jJ6BCK8TiMic30 {
+  margin: 0 !important;
+}
+
+._3Uy7tGY-DstlA3jV6dGEfB {
+  background: none #e1e7ef !important;
+  border: var(--library_border) !important;
+  border-top: none !important;
+  border-radius: 0 !important;
+  padding: var(--library_spacing) !important;
 }
 
 ._2RSxEUPGL8Bj016q0Sp3Hx {
@@ -29,10 +147,95 @@
   border: var(--blue-border) !important;
   border-radius: var(--border-radius) !important;
   padding: 2.5px 18px !important;
-  margin: var(--library_spacing) !important;
+  margin: 0 !important;
 }
 ._2RSxEUPGL8Bj016q0Sp3Hx:active {
   --wg-opacity-1: 0.9 !important;
   --wg-opacity-2: 0.4 !important;
   --lighter-opacity: 0 !important;
+}
+
+.CwZqp0ZwInfY8H9jUO4Xy {
+  --lighter: rgba(255, 255, 255, var(--lighter-opacity)) !important;
+  --lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter)) !important;
+  --lighter-opacity: 0.35 !important;
+  --wg-opacity-1: 0.75 !important;
+  --wg-opacity-2: 0.25 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 9px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  background: linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580), var(--lighter-bg), var(--white-gradient) !important;
+  color: #273b5c !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  border: var(--blue-border) !important;
+  border-radius: var(--border-radius) !important;
+  padding: 2.5px 18px !important;
+  opacity: 1 !important;
+  top: unset !important;
+  right: var(--library_spacing-x05) !important;
+  bottom: calc(var(--library_spacing-x05) * 3 + var(--steamavatar_size) / 2 + 1lh) !important;
+  width: unset !important;
+  height: unset !important;
+  /* TODO: SVGIcon_Settings unify ?*/
+}
+.CwZqp0ZwInfY8H9jUO4Xy:active {
+  --wg-opacity-1: 0.9 !important;
+  --wg-opacity-2: 0.4 !important;
+  --lighter-opacity: 0 !important;
+}
+.CwZqp0ZwInfY8H9jUO4Xy svg {
+  --icon: var(--icon-settings) !important;
+  background-image: var(--icon) !important;
+  background-size: var(--icon-size) !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+}
+.CwZqp0ZwInfY8H9jUO4Xy svg:active {
+  filter: brightness(1.25) !important;
+}
+.CwZqp0ZwInfY8H9jUO4Xy svg path {
+  display: none !important;
+}
+
+._13HxuJ0oTs2vPOIhoZ48Wm {
+  margin-bottom: var(--library_spacing) !important;
+}
+
+._3XZzfVx8SPRZc4kLownPRd {
+  border-radius: 0 !important;
+}
+._-85o5-M_cGo-fefOuWwER ._3XZzfVx8SPRZc4kLownPRd {
+  display: none !important;
+}
+
+._2xEgUh8bB82nVRtIzS6EHD {
+  color: inherit !important;
+  font-size: var(--font-size) !important;
+  font-weight: bold !important;
+  font-size: 10pt !important;
+  text-decoration: underline !important;
+  line-height: inherit !important;
+  margin: var(--library_spacing-x05) !important;
+  margin-bottom: 0 !important;
+}
+
+._33Cd4gWWUSqwn-dCRv_9Ko {
+  margin: 0 !important;
+  /* 10 - 6*/
+  margin-bottom: 4px !important;
+}
+
+._1dJuvQ4rvlB0q8vmLJH3l2 {
+  background-color: transparent !important;
 }

@@ -1,3 +1,10 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._2AzIX5kl9k6JnxLfR5H4kX {
   --lighter: rgba(255, 255, 255, var(--lighter-opacity)) !important;
   --lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter)) !important;
@@ -47,6 +54,9 @@
   height: var(--icon-size) !important;
   margin-right: 6px !important;
   /* TODO: refactor - move these somewhere one day*/
+}
+._3ydigb6zZAjJ0JCDgHwSYA svg:active {
+  filter: brightness(1.25) !important;
 }
 ._3ydigb6zZAjJ0JCDgHwSYA svg.SVGIcon_Download {
   --icon: var(--icon-download) !important;

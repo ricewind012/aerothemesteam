@@ -1,0 +1,15 @@
+.uKeuMqJfqlpqWCHcUojnE {
+  --icon: var(--icon-add) !important;
+  /* The dropdown doesn't have a separate class for that...*/
+}
+.uKeuMqJfqlpqWCHcUojnE::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 4px !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  background-image: var(--icon) !important;
+}
+.uKeuMqJfqlpqWCHcUojnE svg {
+  display: none !important;
+}

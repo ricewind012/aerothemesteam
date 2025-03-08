@@ -1,3 +1,10 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._2oJt3qYLAqr6xMjnpmBFLN {
   font-size: inherit !important;
   letter-spacing: 0 !important;
@@ -21,6 +28,9 @@
   width: var(--icon-size) !important;
   height: var(--icon-size) !important;
   margin: calc(var(--library_section-header-spacing-y) * -1) 0 !important;
+}
+._12pDikfkuNH_o3MHKU1skz:active {
+  filter: brightness(1.25) !important;
 }
 ._12pDikfkuNH_o3MHKU1skz._1t_GA8AUflPZnjl2YQVzBF,
 ._12pDikfkuNH_o3MHKU1skz .SVGIcon_Button {

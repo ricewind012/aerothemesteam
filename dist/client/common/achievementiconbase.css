@@ -1,7 +1,24 @@
+:root {
+  --achievementiconbase_border: inset -1px -1px #fff, inset 1px 1px #3c5678;
+  --achievementiconbase_size: 32px;
+}
+
 ._1fEbX-PfpZ2FhkhttWcm-V {
-  --icon-size: 32px !important;
-  width: var(--icon-size) !important;
-  height: var(--icon-size) !important;
+  width: var(--achievementiconbase_size) !important;
+  height: var(--achievementiconbase_size) !important;
+}
+
+._1ABm6sfuqiZZDSL9z8mW1a {
+  background: var(--library_header-img-mask) !important;
+  background-color: var(--blue-dark) !important;
+  color: inherit !important;
+  font-size: 18px !important;
+  box-shadow: var(--achievementiconbase_border) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: var(--achievementiconbase_size) !important;
+  height: var(--achievementiconbase_size) !important;
 }
 
 ._2V2sHETNfa62yMoDwSF3_t {

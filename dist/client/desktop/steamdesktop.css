@@ -55,9 +55,6 @@
 .qP17eBPXkfezFfexZ4hC3 {
   flex: unset !important;
 }
-:root[browsertype=DirectHWND] .qP17eBPXkfezFfexZ4hC3 {
-  display: none;
-}
 .qP17eBPXkfezFfexZ4hC3 .title-area {
   position: unset !important;
 }

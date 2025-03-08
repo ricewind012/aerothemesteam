@@ -1,5 +1,28 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._3yTl3RiWfo-Itg-xp967wP {
   max-width: unset !important;
+}
+
+._2bqRppbRWGNAZV5lfubW7- {
+  margin-bottom: var(--library_spacing) !important;
+}
+
+._1AZdyRAiMfrbi_khz7C9rB {
+  border-top: 1px solid var(--library_border-color) !important;
+  border-bottom: 1px solid var(--bg-main) !important;
+}
+
+._3jmKNZy10zi_ZKGqluFltQ {
+  color: inherit !important;
+  font-size: var(--font-size-large) !important;
+  font-weight: bold !important;
+  padding: 0 var(--library_text-spacing) !important;
 }
 
 ._39ZurKJQex6v69aXzvc_nj {
@@ -14,7 +37,7 @@
   padding: var(--library_spacing) !important;
   color: inherit !important;
   font-size: var(--font-size) !important;
-  margin-bottom: var(--library_spacing-x05) !important;
+  margin-bottom: 0 !important;
   min-height: unset !important;
 }
 

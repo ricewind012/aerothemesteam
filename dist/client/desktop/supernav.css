@@ -16,11 +16,14 @@
   height: var(--icon-size) !important;
   margin: 0 var(--supernav_icon-spacing) !important;
 }
-._25lBLzuVeYAUG279up4xP8._2cO0HdvLEGAdhosLekWsmo {
-  opacity: 0.5 !important;
+._25lBLzuVeYAUG279up4xP8:active {
+  filter: brightness(1.25) !important;
 }
 ._25lBLzuVeYAUG279up4xP8 path {
   display: none !important;
+}
+._25lBLzuVeYAUG279up4xP8._2cO0HdvLEGAdhosLekWsmo {
+  opacity: 0.5 !important;
 }
 
 ._19axKcqYRuaJ8vdYKYmtTQ {

@@ -1,5 +1,6 @@
 ._1ml4SNc3LIyBDHIf8ekVSw {
   background-color: transparent !important;
+  color: inherit !important;
   box-shadow: none !important;
   gap: 6px !important;
   padding: 0 !important;
@@ -11,7 +12,7 @@
   --pos-initial: 0px !important;
   --size: 13px !important;
   --state: 0 !important;
-  background-image: url("../../../assets/images/radio.png") !important;
+  background-image: url("https://steamloopback.host/skins/aerothemesteam/assets/images/radio.png") !important;
   background-position-y: calc(var(--pos) * -1) !important;
   background-color: transparent !important;
   background-repeat: no-repeat !important;
@@ -19,12 +20,15 @@
   font-size: var(--font-size) !important;
   line-height: 1 !important;
   text-shadow: none !important;
+  gap: 4px !important;
   padding: 0 !important;
   /* TODO: what lol*/
   padding-bottom: 1px !important;
   padding-left: calc(var(--size) + 4px) !important;
   margin: 0 !important;
+  flex-direction: row !important;
   align-items: start !important;
+  justify-content: start !important;
 }
 .HijmccPB1BKyhOwhX1EVl:hover {
   --state: 1 !important;

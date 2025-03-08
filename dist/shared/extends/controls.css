@@ -2,3 +2,4 @@
 /*/*/
 /*/ @param {string} $name - checkbox/radio*/
 /*/ @param {string} $checked-class-name - Class name of checked state*/
+/*/ @param {string} $disabled-class-name - Class name of disabled state*/

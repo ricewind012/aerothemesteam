@@ -1,3 +1,10 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._15aGnszAf3gHD-PFdJBoFD {
   mask-image: var(--icon-arrow-bottom) !important;
   width: 7px !important;
@@ -46,6 +53,9 @@
   background-size: var(--icon-size) !important;
   width: var(--icon-size) !important;
   height: var(--icon-size) !important;
+}
+._3mzKdQXht__YHo6PX1LmB6::before:active {
+  filter: brightness(1.25) !important;
 }
 ._3mzKdQXht__YHo6PX1LmB6:nth-last-child(3) {
   --icon: var(--icon-windows) !important;

@@ -1,1 +1,3 @@
 /*/ @param {"top" | "right" | "bottom" | "left"} $direction*/
+/*/ @param {string} $name - Icon name found in `assets/icons`.*/
+/*/ @param {string} $hide-selector - Hide this selector, i.e. `svg`.*/

@@ -1,0 +1,17 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
+._1TGl52GwsFQg3CXUYvThP- {
+  opacity: var(--library_secondary-text-opacity) !important;
+  border: 2px dashed var(--blue-text) !important;
+  border-radius: 0 !important;
+  padding: var(--library_spacing) !important;
+  background-color: transparent !important;
+  color: inherit !important;
+  font-size: var(--font-size) !important;
+  min-height: unset !important;
+}

@@ -1,0 +1,235 @@
+._2RCSUgg2X_uF_C0e1lrcqc,
+._3_uaa39SNrhTAYH7hF9tbE,
+.YxhO6W2VNKG69k4WqIrip {
+  color: inherit !important;
+}
+
+._3vHX3wZSMEfQYNhAjbu0RB {
+  align-items: center !important;
+}
+
+.mohK9opGjpCsWNdUuJuFE {
+  opacity: 0.5 !important;
+  color: inherit !important;
+}
+
+._1rihlgVMF4Q_fFZDnXeVt5 {
+  color: inherit !important;
+  font: inherit !important;
+  letter-spacing: 0 !important;
+  text-transform: unset !important;
+}
+
+._1WKUOT3FdB9-48MMP0Tz9l {
+  --icon: var(--icon-settings) !important;
+  background-image: var(--icon) !important;
+  background-size: var(--icon-size) !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  background-color: transparent !important;
+}
+._1WKUOT3FdB9-48MMP0Tz9l:active {
+  filter: brightness(1.25) !important;
+}
+._1WKUOT3FdB9-48MMP0Tz9l svg {
+  display: none !important;
+}
+
+._5bG9Iwr014pu3H1SPRwYh {
+  /* TODO: used in dropdown*/
+  color: var(--contextmenu_fg-secondary) !important;
+  font: inherit !important;
+  letter-spacing: 0 !important;
+  text-transform: unset !important;
+}
+
+.wEM7Q5RG3mzmns1x1Zjux {
+  --wg-opacity-1: 0.75 !important;
+  --wg-opacity-2: 0.25 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 9px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(90deg, #69922c 0%, #84c422 65%, #c6e296 98%), var(--white-gradient) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5019607843) !important;
+  border-radius: 0 !important;
+  background-image: linear-gradient(var(--bg), var(--bg)), var(--white-gradient) !important;
+  box-shadow: none !important;
+  z-index: 1 !important;
+}
+.wEM7Q5RG3mzmns1x1Zjux:not([style="width: 0%;"], [style^="width: 0.0"]) {
+  border-right: 1px solid var(--border-and-grad-color-50) !important;
+}
+
+/* Same colors, but from the same base as the progress bar background*/
+._2W7tN4vCUKpfU8L0WFTIJT {
+  --bg: #9e22c4 !important;
+}
+._22KCiI1IJ7Op5fP8OZtqa- {
+  --bg: #22b9c4 !important;
+}
+._2h-2O3n134sdwgtdM_Fuqr {
+  --bg: #22c42f !important;
+}
+._1SwNAeBlLusPoHHiJK1PGk, ._3A9P8X3ruWMzNiRVnwf_pq {
+  --bg: #2248c4 !important;
+}
+._1GOFGeTHq8sYkjxutW5G-a {
+  --bg: #c4227b !important;
+}
+._3mzewepCzbFGOjI5X0u_Xh {
+  --bg: #c45522 !important;
+}
+._1W6jWiFmoiCg9NZKWnF1sn {
+  --bg: #84c422 !important;
+}
+
+._2jcmNE7U-Ujkk6nmPxvC1r {
+  --size: var(--font-size) !important;
+  --wg-opacity-1: 0.75 !important;
+  --wg-opacity-2: 0.25 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 12px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  background: linear-gradient(var(--bg), var(--bg)), var(--white-gradient) !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2509803922), inset 0 1px rgba(255, 255, 255, 0.2509803922) !important;
+  width: var(--size) !important;
+  height: var(--size) !important;
+}
+
+/* The parent of all, hence the vars*/
+._1EubJAK9z7JtdGks5M2f8t {
+  --bar-z-index: 1 !important;
+  --border-and-grad-color: #fff !important;
+  --border-and-grad-color-50: color-mix(
+  	in srgb,
+  	var(--border-and-grad-color) 50%,
+  	transparent
+  ) !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(180deg, rgba(102, 102, 102, 0.5019607843), transparent) !important;
+  border: var(--blue-border) !important;
+  box-shadow: 0 0 0 1px #fff !important;
+  border-radius: var(--border-radius) !important;
+  height: 18px !important;
+  --wg-opacity-1: 0.75 !important;
+  --wg-opacity-2: 0.25 !important;
+  --wg-color: #fff !important;
+  --wg-deg: 180deg !important;
+  --wg-size: 9px !important;
+  --white-gradient: linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode: color-burn !important;
+  position: relative !important;
+}
+._1EubJAK9z7JtdGks5M2f8t::before, ._1EubJAK9z7JtdGks5M2f8t::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+}
+._1EubJAK9z7JtdGks5M2f8t::before {
+  --bg: color-mix(in srgb, #000 12.5%, transparent) !important;
+  --size: 10px !important;
+  background-image: repeating-linear-gradient(315deg, var(--bg), var(--bg) var(--size), transparent var(--size), transparent calc(var(--size) * 2)), var(--white-gradient) !important;
+}
+._1EubJAK9z7JtdGks5M2f8t::after {
+  z-index: var(--bar-z-index) !important;
+  background-image: linear-gradient(90deg, transparent, var(--border-and-grad-color-50) 65%, color-mix(in srgb, var(--border-and-grad-color) 75%, transparent) 98%) !important;
+  box-shadow: inset 0 0 0 1px var(--border-and-grad-color-50) !important;
+}
+
+._181OY9APZJDARykJ_KOFPE {
+  opacity: 0.5 !important;
+  color: inherit !important;
+  font: inherit !important;
+  font-weight: bold !important;
+  letter-spacing: 0 !important;
+  text-transform: unset !important;
+}
+
+._1DFCGL1HyqZkIjEaoNLdjf {
+  color: inherit !important;
+  font: inherit !important;
+  font-weight: bold !important;
+  letter-spacing: 0 !important;
+  text-transform: unset !important;
+}
+
+.iFalJAi3VT9vGdVVOLNgA {
+  /* star icon*/
+}
+.iFalJAi3VT9vGdVVOLNgA .DialogDropDown_CurrentDisplay {
+  margin-left: calc(var(--icon-size) + 5px) !important;
+}
+.iFalJAi3VT9vGdVVOLNgA .tool-tip-source svg {
+  display: block !important;
+}
+
+._3YelWui4gQvucX_bHwvl15 {
+  --icon: var(--icon-download) !important;
+  color: inherit !important;
+  /* The dropdown doesn't have a separate class for that...*/
+}
+._3YelWui4gQvucX_bHwvl15::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 4px !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  background-image: var(--icon) !important;
+}
+._3YelWui4gQvucX_bHwvl15 svg {
+  display: none !important;
+}
+
+._3rGEUoEnGkGWALEBzbvfef {
+  padding: 0 !important;
+}
+
+._34-qDDFJ8Vyt9R3f20ZHuB {
+  --pos: calc(var(--pos-initial) + var(--size) * var(--state)) !important;
+  --pos-initial: 0px !important;
+  --size: 13px !important;
+  --state: 0 !important;
+  background-image: url("https://steamloopback.host/skins/aerothemesteam/assets/images/checkbox.png") !important;
+  background-position-y: calc(var(--pos) * -1) !important;
+  width: var(--size) !important;
+  height: var(--size) !important;
+}
+._34-qDDFJ8Vyt9R3f20ZHuB:hover {
+  --state: 1 !important;
+}
+._34-qDDFJ8Vyt9R3f20ZHuB:active {
+  --state: 2 !important;
+}
+._34-qDDFJ8Vyt9R3f20ZHuBundefined {
+  --state: 3 !important;
+}
+._34-qDDFJ8Vyt9R3f20ZHuB.hack {
+  --pos-initial: calc(var(--size) * 4) !important;
+}
+._34-qDDFJ8Vyt9R3f20ZHuB, ._34-qDDFJ8Vyt9R3f20ZHuB:active, ._34-qDDFJ8Vyt9R3f20ZHuB:hover {
+  /* Always disabled*/
+  --state: 3 !important;
+}

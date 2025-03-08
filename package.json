@@ -1,12 +1,13 @@
 {
 	"name": "aerothemesteam",
 	"private": true,
-	"version": "1.2.0",
+	"version": "1.3.0",
 	"type": "module",
 	"scripts": {
 		"build": "millennium-ttc --build prod",
 		"build:css": "npx postcss theme --base theme --dir dist --ext css",
-		"build:ts-dev": "millennium-ttc --build dev"
+		"build:ts-dev": "millennium-ttc --build dev",
+		"mkclasses": "npx steam-theming-utils make_readable_classes"
 	},
 	"devDependencies": {
 		"@csstools/postcss-sass": "^5.1.1",
@@ -18,7 +19,7 @@
 	},
 	"dependencies": {
 		"@steambrew/client": "^4.2.1",
-		"@steambrew/ttc": "^1.0.5",
+		"@steambrew/ttc": "^1.1.1",
 		"@types/react": "^18.3.10",
 		"@types/react-dom": "^18.3.0"
 	}

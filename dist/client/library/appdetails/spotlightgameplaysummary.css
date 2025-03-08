@@ -1,3 +1,10 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._284XbL-B7aHiK4XgyI2DPS {
   background-color: var(--library_border-color) !important;
   margin: 0 !important;
@@ -24,7 +31,11 @@
 }
 
 .P_gQ8X-yCsgXeXpP68KS0 {
-  all: unset !important;
+  color: inherit !important;
+  font: inherit !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  margin: var(--library_section-header-spacing-y) var(--library_section-header-spacing-x) !important;
 }
 
 ._2MKO5j24KqDdD-92hH5FXi {

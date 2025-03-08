@@ -1,6 +1,14 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._37e7DrDNmf1FmsMGA5y0A0 {
   padding: 0 !important;
-  margin: var(--library_spacing-x05) 0 !important;
+  margin-top: var(--library_spacing-x05) !important;
+  margin-bottom: var(--library_spacing) !important;
   max-height: unset !important;
 }
 
@@ -23,6 +31,9 @@
   background-size: var(--icon-size) !important;
   width: var(--icon-size) !important;
   height: var(--icon-size) !important;
+}
+.bACIuqv-b_9TztCczFK19::before:active {
+  filter: brightness(1.25) !important;
 }
 .bACIuqv-b_9TztCczFK19::after {
   content: "" !important;
@@ -79,6 +90,9 @@
   background-size: var(--icon-size) !important;
   width: var(--icon-size) !important;
   height: var(--icon-size) !important;
+}
+._2JSyABqFEh-v_dwaTnBydR::before:active {
+  filter: brightness(1.25) !important;
 }
 
 ._1JlC29Ic6L-QvL-39X_d-X {

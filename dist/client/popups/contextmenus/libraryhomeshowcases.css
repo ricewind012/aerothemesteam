@@ -1,0 +1,19 @@
+.lYnGtW6EEZqmYUVJH2wLC {
+  margin: 0 !important;
+}
+
+._2U_Y7A-0lddoJdrJBvf8JE {
+  margin-top: 8px !important;
+  overflow: visible !important;
+}
+._2U_Y7A-0lddoJdrJBvf8JE::before {
+  content: "" !important;
+  position: absolute !important;
+  top: -9px !important;
+  /* TODO: what*/
+  right: -1px !important;
+  left: calc(var(--contextmenu_container-spacing) * -1) !important;
+  border-top: 1px solid var(--contextmenu_separator-light) !important;
+  box-shadow: 0 -1px var(--contextmenu_separator-dark) !important;
+  margin: 5px 0 2px var(--contextmenu_left-spacing) !important;
+}

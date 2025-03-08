@@ -42,6 +42,9 @@
   width: var(--icon-size) !important;
   height: var(--icon-size) !important;
 }
+._1dg8hJMsAYISbeQUxcCJcv::before:active {
+  filter: brightness(1.25) !important;
+}
 ._1dg8hJMsAYISbeQUxcCJcv._2F4PcO4yl7Xl5emuGiF2La {
   --icon: var(--icon-download) !important;
 }
@@ -74,6 +77,9 @@
   background-size: var(--icon-size) !important;
   width: var(--icon-size) !important;
   height: var(--icon-size) !important;
+}
+._3m_zjRTQBqcfzCjXLXUHcR::before:active {
+  filter: brightness(1.25) !important;
 }
 .q_Xpj_ztkqZCfOIksH3UR ._3m_zjRTQBqcfzCjXLXUHcR {
   --icon: var(--icon-cancel) !important;

@@ -20,9 +20,7 @@
 ._3tCPe9E8xrwDbIdktZTyEm {
   border-top: 1px solid var(--contextmenu_separator-light) !important;
   box-shadow: 0 -1px var(--contextmenu_separator-dark) !important;
-  margin-top: 5px !important;
-  margin-bottom: 2px !important;
-  margin-left: var(--contextmenu_left-spacing) !important;
+  margin: 5px 0 2px var(--contextmenu_left-spacing) !important;
 }
 
 ._vNe74s39St1jszCfGwTg,

@@ -1,3 +1,10 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._2aw5aUUo3lrK6wxJb4_ms5 {
   --lighter: rgba(255, 255, 255, var(--lighter-opacity)) !important;
   --lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter)) !important;
@@ -57,6 +64,30 @@
   position: relative !important;
 }
 
+/* ty valve for making me duplicate my code, amazing*/
+._3sz4Ldugm_cV_JaHOErVR8 {
+  --icon: var(--icon-blue-arrow) !important;
+  background-image: var(--icon) !important;
+  background-size: var(--icon-size) !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+  background: none !important;
+}
+._3sz4Ldugm_cV_JaHOErVR8:active {
+  filter: brightness(1.25) !important;
+}
+._3sz4Ldugm_cV_JaHOErVR8 svg {
+  all: inherit !important;
+  transform: rotate(90deg) !important;
+  background-image: var(--icon) !important;
+  background-size: var(--icon-size) !important;
+}
+._3sz4Ldugm_cV_JaHOErVR8 svg[style="transform: rotate(270deg);"] {
+  transform: rotate(-90deg) !important;
+}
+
 ._2qm05e8tWSAb-_fAHytQCP {
   opacity: var(--library_secondary-text-opacity) !important;
   color: inherit !important;
@@ -67,6 +98,45 @@
 
 ._2j0P6ED4qgKoZ623as9P_e {
   font-size: var(--font-size-xlarge) !important;
+}
+
+._29NTOneobxPjUfxHUk9N8Y {
+  gap: calc(var(--library_section-header-spacing-x) / 2) !important;
+  margin-right: var(--library_section-header-spacing-x) !important;
+  margin: 0 !important;
+}
+._29NTOneobxPjUfxHUk9N8Y ._1MNhU5EYdeegJRmQ51prWb {
+  opacity: 0.5 !important;
+  pointer-events: none !important;
+}
+._29NTOneobxPjUfxHUk9N8Y svg {
+  display: none !important;
+}
+
+._3uMa3icVa3JTCGQKPeUikO {
+  --icon: var(--icon-nav-back) !important;
+  background-image: var(--icon) !important;
+  background-size: var(--icon-size) !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+}
+._3uMa3icVa3JTCGQKPeUikO:active {
+  filter: brightness(1.25) !important;
+}
+
+._2kWWyBO7w_F76NB8sBw86c {
+  --icon: var(--icon-nav-forward) !important;
+  background-image: var(--icon) !important;
+  background-size: var(--icon-size) !important;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+}
+._2kWWyBO7w_F76NB8sBw86c:active {
+  filter: brightness(1.25) !important;
 }
 
 .V7RuDNUxhxoBRaiGWbk3B {

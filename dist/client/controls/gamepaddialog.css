@@ -3,11 +3,12 @@
   --pos-initial: 0px !important;
   --size: 13px !important;
   --state: 0 !important;
-  background-image: url("../../../assets/images/checkbox.png") !important;
+  background-image: url("https://steamloopback.host/skins/aerothemesteam/assets/images/checkbox.png") !important;
   background-position-y: calc(var(--pos) * -1) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   margin: 0 !important;
+  position: unset !important;
   width: var(--size) !important;
   height: var(--size) !important;
 }

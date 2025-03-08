@@ -1,3 +1,10 @@
+/*#region CONTROLS */
+/*#endregion*/
+/*#region STYLE */
+/*#endregion*/
+/*#region TEXT */
+/*#endregion*/
+/*#region ACTIVITY SECTION */
 ._1TxHdzOt3OD9ikR3xIseKe {
   --lighter: rgba(255, 255, 255, var(--lighter-opacity)) !important;
   --lighter-bg: linear-gradient(0deg, var(--lighter), var(--lighter)) !important;
@@ -38,6 +45,9 @@
   background-size: var(--icon-size) !important;
   width: var(--icon-size) !important;
   height: var(--icon-size) !important;
+}
+._1TxHdzOt3OD9ikR3xIseKe > div:active {
+  filter: brightness(1.25) !important;
 }
 ._1TxHdzOt3OD9ikR3xIseKe svg {
   display: none !important;

@@ -2,15 +2,15 @@
   --contextmenu_container-spacing: 2px;
   --contextmenu_fg: #000;
   --contextmenu_fg-secondary: #6d6d6d;
-  --contextmenu_item-border: #9fc5f3;
-  /* TODO: this is transparent*/
-  --contextmenu_item-gradient-start: #ecf5f9;
-  --contextmenu_item-gradient-end: #ddeefb;
+  --contextmenu_item-border: rgba(152, 196, 249, 0.75);
+  --contextmenu_item-gradient-start: rgba(245, 250, 255, 0.4);
+  --contextmenu_item-gradient-end: rgba(215, 232, 255, 0.4);
   --contextmenu_item-gradient: linear-gradient(
   	180deg,
   	var(--contextmenu_item-gradient-start),
   	var(--contextmenu_item-gradient-end)
   );
+  --contextmenu_item-inner-border: rgba(243, 248, 254, 0.75);
   --contextmenu_left-spacing: 27px;
   --contextmenu_separator-dark: #e0e0e0;
   --contextmenu_separator-light: #fff;
@@ -62,13 +62,14 @@
   text-transform: unset !important;
   border: 1px solid transparent !important;
   border-radius: var(--border-radius) !important;
-  padding: 1px 20px 2px calc(5px + var(--contextmenu_left-spacing)) !important;
+  padding: 2px 20px 2px calc(5px + var(--contextmenu_left-spacing)) !important;
   position: relative !important;
+  line-height: unset !important;
 }
-._1n7Wloe5jZ6fSuvV18NNWI:hover {
+._1n7Wloe5jZ6fSuvV18NNWI:focus, ._1n7Wloe5jZ6fSuvV18NNWI:hover {
   background: var(--contextmenu_item-gradient) !important;
   border: 1px solid var(--contextmenu_item-border) !important;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+  box-shadow: inset 0 0 0 1px var(--contextmenu_item-inner-border) !important;
 }
 ._1n7Wloe5jZ6fSuvV18NNWI:has(.SVGIcon_Check) {
   --icon: var(--icon-context-menu-checkmark) !important;
@@ -107,7 +108,7 @@
   height: var(--size) !important;
   background: var(--contextmenu_item-gradient) !important;
   border: 1px solid var(--contextmenu_item-border) !important;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+  box-shadow: inset 0 0 0 1px var(--contextmenu_item-inner-border) !important;
   background-image: var(--icon), var(--contextmenu_item-gradient) !important;
   background-position: center !important;
   border-radius: var(--border-radius) !important;
@@ -115,18 +116,20 @@
 ._1n7Wloe5jZ6fSuvV18NNWI._18z-3vkWndCBO5WJgFldRK {
   background: var(--contextmenu_item-gradient) !important;
   border: 1px solid var(--contextmenu_item-border) !important;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5) !important;
+  box-shadow: inset 0 0 0 1px var(--contextmenu_item-inner-border) !important;
 }
 ._1n7Wloe5jZ6fSuvV18NNWI.disabled {
   --contextmenu_fg: var(--contextmenu_fg-secondary) !important;
-  --contextmenu_item-border: #d3d3d3 !important;
-  --contextmenu_item-gradient-start: #f4f5f5 !important;
-  --contextmenu_item-gradient-end: #e6e6e6 !important;
+  --contextmenu_item-border: rgba(201, 201, 201, 0.75) !important;
+  --contextmenu_item-gradient-start: rgba(243, 243, 243, 0.69) !important;
+  --contextmenu_item-gradient-end: rgba(221, 223, 223, 0.69) !important;
   --contextmenu_item-gradient: linear-gradient(
   	180deg,
   	var(--contextmenu_item-gradient-start),
   	var(--contextmenu_item-gradient-end)
   ) !important;
+  --contextmenu_item-inner-border: rgba(235, 235, 235, 0.714) !important;
+  --icon-context-menu-checkmark: var(--icon-context-menu-checkmark-disabled) !important;
 }
 ._1n7Wloe5jZ6fSuvV18NNWI::before {
   content: "" !important;
@@ -143,12 +146,15 @@
   height: var(--icon-size) !important;
 }
 
+._2yAm5LY_eu-Vg_52l0HFlM {
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
 .WUOrULWKkGLl3ZUQdDXg8 {
   border-top: 1px solid var(--contextmenu_separator-light) !important;
   box-shadow: 0 -1px var(--contextmenu_separator-dark) !important;
-  margin-top: 5px !important;
-  margin-bottom: 2px !important;
-  margin-left: var(--contextmenu_left-spacing) !important;
+  margin: 5px 0 2px var(--contextmenu_left-spacing) !important;
   /* jumplist*/
 }
 .WUOrULWKkGLl3ZUQdDXg8:last-child {
