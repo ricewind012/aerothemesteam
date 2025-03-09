@@ -1,8 +1,5 @@
-.icon-button {
-	background-image: var(--icon);
-	background-position: center;
-	background-repeat: no-repeat;
+@use "shared/extends/style";
 
-	width: var(--icon-size);
-	height: var(--icon-size);
+.icon-button {
+	@include style.icon;
 }

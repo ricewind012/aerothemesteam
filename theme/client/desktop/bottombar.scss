@@ -35,7 +35,7 @@
 }
 
 #Icon {
-	background-image: var(--icon);
+	@include style.icon;
 
 	order: -1;
 
