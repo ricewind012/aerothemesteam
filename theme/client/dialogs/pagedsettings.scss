@@ -39,6 +39,8 @@
 		background-color: var(--bg-main);
 		border: var(--pagedsettings_border);
 		padding: 2px;
+
+		min-height: unset;
 	}
 
 	&_PageListItem {

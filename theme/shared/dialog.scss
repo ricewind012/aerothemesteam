@@ -208,6 +208,10 @@
 	color: inherit;
 	font-size: inherit;
 	font-weight: normal;
+
+	& > div {
+		padding-top: var(--title-bar-height);
+	}
 }
 
 .ModalPosition_TopBar {
@@ -219,4 +223,10 @@
 	.TitleBar {
 		display: none;
 	}
+}
+
+// fix for game info dialog
+.TitleBar {
+	z-index: 99;
+	height: var(--title-bar-height);
 }
