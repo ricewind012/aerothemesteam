@@ -1,10 +1,14 @@
 @use "shared/extends/library";
 
-#CompactThumbButton {
+%button {
 	@include library.button;
 
 	margin-left: var(--library_spacing-x05);
 	margin-right: 0;
+}
+
+#CompactThumbButton {
+	@extend %button;
 }
 
 #LeftContainer {
@@ -28,4 +32,16 @@
 
 #RecommendGame {
 	@include library.header-secondary;
+}
+
+#ReviewThumbButton {
+	@extend %button;
+
+	span {
+		all: unset;
+	}
+}
+
+#ThumbIcon {
+	display: none;
 }
