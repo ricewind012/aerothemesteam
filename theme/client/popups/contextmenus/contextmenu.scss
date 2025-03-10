@@ -100,18 +100,7 @@ $icons: (
 	}
 
 	&.disabled {
-		--contextmenu_fg: var(--contextmenu_fg-secondary);
-		--contextmenu_item-border: rgba(201, 201, 201, 0.75);
-		--contextmenu_item-gradient-start: rgba(243, 243, 243, 0.69);
-		--contextmenu_item-gradient-end: rgba(221, 223, 223, 0.69);
-		--contextmenu_item-gradient: linear-gradient(
-			180deg,
-			var(--contextmenu_item-gradient-start),
-			var(--contextmenu_item-gradient-end)
-		);
-		--contextmenu_item-inner-border: rgba(235, 235, 235, 0.714);
-
-		--icon-context-menu-checkmark: var(--icon-context-menu-checkmark-disabled);
+		@include contextmenu.item-disabled;
 	}
 
 	&::before {

@@ -1,0 +1,34 @@
+@use "shared/extends/contextmenu";
+
+%alias-entry {
+	@include contextmenu.item;
+	@include contextmenu.item-disabled;
+}
+
+#NamePopup {
+	font-weight: normal;
+
+	& > .popup_menu > :first-child {
+		@extend %alias-entry;
+	}
+}
+
+#NamePopupAliases {
+	padding: 0;
+
+	p {
+		@extend %alias-entry;
+
+		margin: 0;
+	}
+}
+
+#NamePopupClearAliases {
+	@include contextmenu.item;
+
+	float: unset;
+
+	a {
+		color: inherit;
+	}
+}

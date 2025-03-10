@@ -1,0 +1,28 @@
+@use "shared/extends/contextmenu";
+
+.group_invite_menu_option_disabled {
+	@include contextmenu.item-disabled;
+}
+
+.popup_block_new {
+	box-shadow: none;
+}
+
+.popup_menu:not(.popup_menu_browse) {
+	@include contextmenu.container;
+	@include contextmenu.container-left-border;
+
+	.popup_menu_item {
+		@include contextmenu.item;
+
+		line-height: inherit;
+
+		&:not([style="display: none;"]) {
+			display: block;
+		}
+
+		#profile_action_dropdown & img {
+			@include contextmenu.icon-pos;
+		}
+	}
+}

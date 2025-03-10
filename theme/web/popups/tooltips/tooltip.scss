@@ -1,7 +1,6 @@
 @use "shared/extends/tooltip";
 
-#ToolbarToolTip {
+.community_tooltip,
+.store_tooltip {
 	@include tooltip.container;
-
-	font-weight: normal;
 }

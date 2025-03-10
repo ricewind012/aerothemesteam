@@ -1,0 +1,16 @@
+@mixin container {
+	background: var(--tooltip_background);
+	color: #4c4c4c;
+	font-size: var(--font-size);
+	text-shadow: none;
+	border: 1px solid #767676;
+	border-radius: var(--border-radius);
+	box-shadow: var(--popup-shadow);
+	padding: 3px 5px 3px 4px;
+}
+
+@mixin separator {
+	border-top: 1px solid #fff;
+	box-shadow: 0 -1px #9ebbdd;
+	padding: 2px 0 1px 0;
+}

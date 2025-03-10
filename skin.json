@@ -9,11 +9,13 @@
 		"owner": "ricewind012",
 		"repo_name": "aerothemesteam"
 	},
+	"Steam-WebKit": "dist/webindex.css",
 	"Patches": [
 		{
 			"MatchRegexString": ".DesktopUI",
 			"TargetCss": [
 				"dist/client.css",
+				"dist/clientshared.css",
 				"dist/shared.css"
 			]
 		},
@@ -21,6 +23,7 @@
 			"MatchRegexString": ".fullheight",
 			"TargetCss": [
 				"dist/client.css",
+				"dist/clientshared.css",
 				"dist/shared.css"
 			]
 		},
@@ -28,6 +31,7 @@
 			"MatchRegexString": ".friendsui-container",
 			"TargetCss": [
 				"dist/client.css",
+				"dist/clientshared.css",
 				"dist/shared.css"
 			]
 		}

@@ -1,0 +1,22 @@
+@use "shared/extends/contextmenu";
+
+div.navContent {
+	@include contextmenu.container;
+	@include contextmenu.container-left-border;
+
+	border-radius: 0;
+
+	a {
+		@include contextmenu.item;
+
+		margin: 0;
+	}
+
+	hr {
+		@include contextmenu.separator;
+
+		background-color: transparent;
+
+		height: unset;
+	}
+}

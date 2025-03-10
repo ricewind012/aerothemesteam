@@ -1,0 +1,10 @@
+@use "shared/extends/contextmenu";
+
+.popup_menu .context_name {
+	@include contextmenu.item;
+
+	font-weight: normal;
+	line-height: inherit;
+
+	height: unset;
+}

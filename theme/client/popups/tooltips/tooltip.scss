@@ -1,4 +1,4 @@
-@use "shared/extends/controls";
+@use "shared/extends/tooltip";
 
 :root {
 	--tooltip_background: linear-gradient(180deg, #fff, #c9d9ef);
@@ -6,11 +6,11 @@
 }
 
 #TextToolTip {
-	@include controls.tooltip;
+	@include tooltip.container;
 }
 
 #ToolTipCustom {
-	@include controls.tooltip;
+	@include tooltip.container;
 
 	max-width: 220px;
 }

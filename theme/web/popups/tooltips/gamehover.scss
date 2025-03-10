@@ -1,0 +1,101 @@
+@use "shared/extends/library";
+@use "shared/extends/tooltip";
+
+.game_hover_box {
+	@include tooltip.container;
+
+	.content {
+		padding: 0;
+
+		& > div > * {
+			margin-inline: var(--tooltip_description-spacing);
+		}
+	}
+
+	.rule {
+		@include tooltip.separator;
+	}
+}
+
+.hover_arrow_left,
+.hover_arrow_right {
+	display: none;
+}
+
+.hover_body {
+	margin-block: var(--tooltip_description-spacing);
+}
+
+.hover_details_block {
+	border-radius: var(--border-radius);
+	margin-top: var(--library_text-spacing);
+}
+
+.hover_details_block_full {
+	background-color: transparent;
+	padding: 0;
+}
+
+.hover_friends_blocks {
+	margin-block: var(--library_text-spacing) var(--tooltip_description-spacing);
+}
+
+.hover_release {
+	--tooltip_description-spacing: 0px;
+
+	@include library.description;
+}
+
+.hover_review_summary {
+	background-color: transparent;
+	color: inherit;
+	padding: 0;
+	margin: 0;
+
+	.game_review_summary {
+		color: hsl(var(--hue), 93%, 30%);
+		font-weight: bold;
+
+		&.mixed {
+			--hue: 61;
+		}
+
+		&.positive {
+			--hue: 194;
+		}
+
+		&.no_reviews,
+		&.not_enough_reviews {
+			color: inherit;
+		}
+	}
+}
+
+.hover_screenshots {
+	margin: var(--tooltip_description-spacing);
+	margin-bottom: var(--library_text-spacing);
+
+	.screenshot {
+		border-radius: var(--border-radius-large);
+	}
+}
+
+.hover_tag_row {
+	margin-top: var(--library_text-spacing);
+
+	.app_tag {
+		// Derived from tooltip bottom background
+		background-color: #85a9db;
+		color: #fff;
+		border-radius: var(--border-radius);
+	}
+}
+
+.hover_title {
+	--tooltip_description-spacing: 0px;
+
+	@include library.header;
+
+	line-height: inherit;
+	margin-block: 0;
+}

@@ -63,14 +63,3 @@
 	box-shadow: inset 0 0 0 1px #ffffff80;
 	border-radius: 0;
 }
-
-@mixin tooltip {
-	background: var(--tooltip_background);
-	color: #4c4c4c;
-	font-size: var(--font-size);
-	text-shadow: none;
-	border: 1px solid #767676;
-	border-radius: var(--border-radius);
-	box-shadow: var(--popup-shadow);
-	padding: 3px 5px 3px 4px;
-}

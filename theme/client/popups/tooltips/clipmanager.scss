@@ -1,7 +1,7 @@
-@use "shared/extends/controls";
+@use "shared/extends/tooltip";
 
 #ListItemTooltipBase {
-	@include controls.tooltip;
+	@include tooltip.container;
 }
 
 #ListItemTooltipDetail {

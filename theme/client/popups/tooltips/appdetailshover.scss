@@ -1,7 +1,7 @@
-@use "shared/extends/controls";
+@use "shared/extends/tooltip";
 
 #AppDetailsHover {
-	@include controls.tooltip;
+	@include tooltip.container;
 
 	background-image: none;
 }
