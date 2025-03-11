@@ -16,7 +16,6 @@ import {
 	ContextMenuSeparator,
 	ContextMenuSubMenuItem,
 } from "../modules/contextmenu";
-import { CheckIcon } from "../modules/icons";
 import { CKioskModeManager } from "../modules/kioskmodemgr";
 import { Localize } from "../modules/localization";
 import {
@@ -379,7 +378,8 @@ export class SuperNav extends Component {
 								return (
 									<ContextMenuItem onSelected={onClick || onClickFallback}>
 										<>
-											{checked && <CheckIcon />} {text}
+											{checked && <span className={classes.jumplist.Icon} />}
+											{text}
 										</>
 									</ContextMenuItem>
 								);

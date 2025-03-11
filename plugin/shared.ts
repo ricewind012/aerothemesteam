@@ -10,6 +10,7 @@ export const classes = {
 	) as ClassModule,
 	gamelistbar: findClassModule((e) => e.GameListHomeAndSearch) as ClassModule,
 	gamelistdropdown: findClassModule((e) => e.ScrollToTop) as ClassModule,
+	jumplist: findClassModule((e) => e.JumpListItemText) as ClassModule,
 	menu: findClassModule((e) => e.MenuWrapper) as ClassModule,
 	steamdesktop: findClassModule((e) => e.FocusBar) as ClassModule,
 	supernav: findClassModule((e) => e.SuperNav) as ClassModule,
