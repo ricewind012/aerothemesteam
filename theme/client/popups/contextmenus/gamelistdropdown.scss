@@ -3,6 +3,7 @@
 #AppCount {
 	opacity: 1;
 	color: var(--contextmenu_fg-secondary);
+	padding-left: var(--library_text-spacing);
 }
 
 #DropDown {
@@ -22,17 +23,16 @@
 	.DialogCheckbox {
 		--icon: icon("context-menu-checkmark");
 		--offset: -1px;
-		--size: 22px;
 
-		background-color: transparent;
+		background: transparent;
 		border-radius: var(--border-radius);
 		box-shadow: none;
 
 		position: absolute;
 		top: var(--offset);
 		left: var(--offset);
-		width: var(--size);
-		height: var(--size);
+		width: var(--contextmenu_item-height);
+		height: var(--contextmenu_item-height);
 
 		&.Active {
 			@include contextmenu.item-active;
@@ -45,6 +45,8 @@
 
 		svg {
 			background-image: var(--icon);
+
+			display: initial;
 
 			* {
 				display: none;

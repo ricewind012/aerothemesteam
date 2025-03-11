@@ -13,7 +13,8 @@
 	min-width: unset;
 
 	.avatarHolder {
-		--size: 22px;
+		// contextmenu_item-height / steamavatar_size
+		--multiply: 0.6875;
 
 		position: absolute;
 		top: 0;

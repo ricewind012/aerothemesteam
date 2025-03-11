@@ -5,18 +5,5 @@
 }
 
 #Icon:not(div) {
-	--icon-size: 22px;
-
-	@include contextmenu.icon-pos;
-	@include contextmenu.item-active;
-
-	background-image: icon("context-menu-radio"), var(--contextmenu_item-gradient);
-	background-position: center;
-	border-radius: var(--border-radius);
-
-	left: -1px;
-
-	path {
-		display: none;
-	}
+	@include contextmenu.icon;
 }

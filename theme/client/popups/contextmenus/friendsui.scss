@@ -13,6 +13,41 @@
 	font-weight: bold;
 }
 
+.contextMenuGameTitle {
+	all: unset;
+
+	@include contextmenu.separator;
+}
+
+.contextMenuGameTitleBlurCropContainer {
+	display: none;
+}
+
+.contextMenuItem.menuChecked .contextMenuCheckMark {
+	@include contextmenu.icon;
+
+	display: block;
+}
+
+.contextMenuSectionContent {
+	&:not(:last-child)::after {
+		content: "";
+
+		@include contextmenu.separator;
+	}
+}
+
+.DNDCheckBox .DialogCheckbox {
+	display: none;
+}
+
+.persona_menu_descriptor,
+.persona_menu_dnd_descriptor {
+	color: var(--contextmenu_fg-secondary);
+	font: inherit;
+	padding: 0;
+}
+
 .recentName {
 	@include contextmenu.item;
 

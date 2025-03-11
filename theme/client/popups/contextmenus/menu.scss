@@ -3,5 +3,7 @@
 #Separator {
 	@include contextmenu.separator;
 
-	border: none;
+	border-bottom: none;
+
+	width: unset;
 }

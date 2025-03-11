@@ -21,6 +21,26 @@
 	}
 }
 
+@mixin icon {
+	--icon-size: var(--contextmenu_item-height);
+	--offset: -1px;
+
+	@include icon-pos;
+	@include item-active;
+
+	background-image: var(--icon-context-menu-radio),
+		var(--contextmenu_item-gradient);
+	background-position: center;
+	border-radius: var(--border-radius);
+
+	top: var(--offset);
+	left: var(--offset);
+
+	path {
+		display: none;
+	}
+}
+
 @mixin icon-pos {
 	position: absolute;
 	left: 4px;
@@ -83,7 +103,9 @@
 }
 
 @mixin separator {
+	--offset: calc(1px + var(--contextmenu_container-spacing));
+
 	border-top: 1px solid var(--contextmenu_separator-light);
 	box-shadow: 0 -1px var(--contextmenu_separator-dark);
-	margin: 5px 0 2px var(--contextmenu_left-spacing);
+	margin: 5px 0 2px calc(var(--contextmenu_left-spacing) + var(--offset));
 }

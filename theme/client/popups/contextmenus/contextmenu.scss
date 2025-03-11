@@ -14,6 +14,7 @@
 		var(--contextmenu_item-gradient-end)
 	);
 	--contextmenu_item-inner-border: rgba(243, 248, 254, 0.75);
+	--contextmenu_item-height: 22px;
 	--contextmenu_left-spacing: 27px;
 	--contextmenu_separator-dark: #e0e0e0;
 	--contextmenu_separator-light: #fff;
@@ -109,6 +110,7 @@ $icons: (
 		@include contextmenu.icon-pos;
 
 		background-image: var(--icon);
+		background-size: var(--icon-size);
 	}
 
 	svg:not([class]) {
@@ -120,6 +122,14 @@ $icons: (
 	margin: 0;
 
 	overflow: visible;
+}
+
+#ContextMenuHRSeparator {
+	border: none;
+
+	@include contextmenu.separator;
+
+	width: unset;
 }
 
 #ContextMenuSeparator {
