@@ -1,0 +1,201 @@
+// TODO: fuck off to listitem
+@use "shared/extends/contextmenu";
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+#AddFavoriteButton {
+	--margin: 0 8px 0 0;
+
+	&::after {
+		content: "";
+
+		@include style.icon("add");
+	}
+}
+
+#BottomControlsRow {
+	gap: 4px;
+
+	position: absolute;
+	inset-inline: 0;
+	bottom: 0;
+	height: unset;
+}
+
+#ColumnResizer {
+	background-color: transparent;
+	margin-right: -3px;
+}
+
+#DialogBody {
+	position: relative;
+}
+
+#DropdownLabel {
+	font-size: inherit;
+}
+
+#FilterOptionsCtr {
+	padding-bottom: 0;
+
+	&:not(#Collapsed) {
+		height: unset;
+	}
+}
+
+#FilterOptionsCheckboxesCtr {
+	gap: 4px;
+	margin-bottom: 8px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+#RadioButtonColumn {
+	display: none;
+}
+
+#SearchButton {
+	justify-content: center;
+
+	&::after {
+		content: "";
+
+		@include style.icon("search");
+	}
+}
+
+// !important
+div#PasswordColumn,
+div#SecureColumn {
+	padding-inline: 0;
+
+	height: unset;
+
+	// !important
+	#DialogBody & svg:not(.SVGIcon_Button) {
+		margin: 0;
+
+		display: unset;
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+}
+
+#SelectColumnsButton {
+	@include controls.table-header-row;
+}
+
+#ServerBrowserDialog {
+	font-size: var(--font-size);
+
+	// TODO: move to ~/clientshared/dialog when ready
+	:where(.DialogButton) {
+		line-height: 1;
+		margin: var(--margin);
+
+		min-width: 75px;
+	}
+
+	.DialogCheckbox_Container {
+		padding: 0;
+	}
+
+	.DialogContent:has(&) {
+		background: #f0f0f0;
+		color: #000;
+		padding: 7px 8px 8px 6px;
+	}
+
+	.DialogDropDown,
+	.DialogInput_Wrapper {
+		margin-bottom: 8px;
+	}
+
+	.DialogHeader {
+		color: var(--blue-text);
+	}
+
+	.DialogTwoColLayout {
+		gap: 8px;
+	}
+
+	svg:not(.SVGIcon_Button) {
+		display: none;
+	}
+
+	#SwitchTabButton {
+		@include controls.tab;
+
+		min-width: unset;
+
+		&#Selected {
+			@include controls.tab-selected;
+		}
+	}
+}
+
+#ServerList {
+	@include controls.table;
+
+	box-shadow: none;
+	margin: 0;
+
+	[role="rowgroup"] {
+		padding: var(--contextmenu_container-spacing);
+
+		overflow: auto;
+	}
+}
+
+#ServerListHeaderCell {
+	@include controls.table-header-row;
+}
+
+#ServerListHeaderCtr {
+	background-color: transparent;
+	padding: 0;
+}
+
+#ServerListHeaderRow {
+	gap: 0;
+}
+
+#ServerListHeaderSort {
+	color: inherit;
+	font: inherit;
+	text-transform: unset;
+}
+
+#ServerRow {
+	@include contextmenu.item;
+
+	gap: 0;
+	padding: 0;
+
+	position: absolute;
+
+	&:hover,
+	&#SelectedRow {
+		@include contextmenu.item-active;
+	}
+}
+
+#ServerTabPane {
+	@include controls.tab-panel;
+
+	background-color: #fff;
+	border: 1px solid #898c95;
+	padding: 14px;
+	margin-bottom: calc(21px + 8px);
+}
+
+#TopControlsCtr {
+	@include controls.tabs;
+
+	gap: 0;
+
+	.DialogDropDown {
+		margin: 0;
+	}
+}
