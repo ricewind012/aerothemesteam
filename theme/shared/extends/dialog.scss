@@ -1,0 +1,17 @@
+// TODO: move to ~/clientshared/dialog when ready
+@mixin shared {
+	.DialogContent:has(&) {
+		background: #f0f0f0;
+		color: #000;
+		padding: 7px 8px 8px 6px;
+	}
+
+	.DialogHeader {
+		color: var(--blue-text);
+	}
+
+	.DialogThreeColLayout,
+	.DialogTwoColLayout {
+		gap: 8px;
+	}
+}

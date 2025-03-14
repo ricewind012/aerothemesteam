@@ -1,0 +1,41 @@
+@use "shared/extends/controls";
+@use "shared/extends/dialog";
+
+#DialogBody {
+	@include dialog.shared;
+
+	font-size: var(--font-size);
+
+	.DialogBodyText {
+		margin: 0;
+	}
+
+	// #gamepaddialog_Field
+	[style="--indent-level: 0;"] {
+		& > div {
+			flex-direction: row;
+
+			& > div {
+				width: 50%;
+			}
+		}
+	}
+}
+
+#PlayersList {
+	@include controls.table;
+
+	margin: 3px 0;
+
+	#Details {
+		border-bottom-color: #d5d5d5;
+		padding: 0 6px;
+	}
+
+	#Header {
+		@include controls.table-header-row;
+
+		letter-spacing: 0;
+		text-transform: unset;
+	}
+}
