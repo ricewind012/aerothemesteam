@@ -1,4 +1,5 @@
 @use "shared/extends/contextmenu";
+@use "shared/extends/list";
 
 #AppCount {
 	opacity: 1;
@@ -35,7 +36,7 @@
 		height: var(--contextmenu_item-height);
 
 		&.Active {
-			@include contextmenu.item-active;
+			@include list.item-active;
 		}
 
 		// TODO: no idea if it's ever disabled, but whatever
@@ -52,6 +53,10 @@
 				display: none;
 			}
 		}
+	}
+
+	.DialogToggle_Label {
+		line-height: inherit;
 	}
 }
 

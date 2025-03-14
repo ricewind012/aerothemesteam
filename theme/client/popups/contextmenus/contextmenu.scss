@@ -1,4 +1,5 @@
 @use "shared/extends/contextmenu";
+@use "shared/extends/list";
 @use "shared/extends/style";
 
 :root {
@@ -88,7 +89,7 @@ $icons: (
 			width: var(--size);
 			height: var(--size);
 
-			@include contextmenu.item-active;
+			@include list.item-active;
 
 			background-image: var(--icon), var(--contextmenu_item-gradient);
 			background-position: center;
@@ -97,11 +98,11 @@ $icons: (
 	}
 
 	&#active {
-		@include contextmenu.item-active;
+		@include list.item-active;
 	}
 
 	&.disabled {
-		@include contextmenu.item-disabled;
+		@include list.item-disabled;
 	}
 
 	&::before {

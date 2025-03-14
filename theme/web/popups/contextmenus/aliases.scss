@@ -1,8 +1,9 @@
 @use "shared/extends/contextmenu";
+@use "shared/extends/list";
 
 %alias-entry {
 	@include contextmenu.item;
-	@include contextmenu.item-disabled;
+	@include list.item-disabled;
 }
 
 #NamePopup {

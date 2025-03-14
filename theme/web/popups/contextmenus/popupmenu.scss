@@ -1,7 +1,8 @@
 @use "shared/extends/contextmenu";
+@use "shared/extends/list";
 
 .group_invite_menu_option_disabled {
-	@include contextmenu.item-disabled;
+	@include list.item-disabled;
 }
 
 .popup_block_new {

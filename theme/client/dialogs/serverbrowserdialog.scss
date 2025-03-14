@@ -1,6 +1,5 @@
-// TODO: fuck off to listitem
-@use "shared/extends/contextmenu";
 @use "shared/extends/controls";
+@use "shared/extends/list";
 @use "shared/extends/style";
 
 #AddFavoriteButton {
@@ -168,7 +167,7 @@ div#SecureColumn {
 }
 
 #ServerRow {
-	@include contextmenu.item;
+	@include list.item;
 
 	gap: 0;
 	padding: 0;
@@ -177,7 +176,7 @@ div#SecureColumn {
 
 	&:hover,
 	&#SelectedRow {
-		@include contextmenu.item-active;
+		@include list.item-active;
 	}
 }
 
