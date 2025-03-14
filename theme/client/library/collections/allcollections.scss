@@ -1,5 +1,4 @@
 @use "shared/extends/library";
-@use "shared/extends/style";
 
 #BigPlus {
 	transform: none;
@@ -86,7 +85,7 @@
 }
 
 #Header {
-	@include style.section-header;
+	@include library.section-header;
 
 	justify-content: space-between;
 }

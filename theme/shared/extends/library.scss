@@ -61,6 +61,24 @@
 	border-radius: 0;
 }
 
+@mixin section-header {
+	@include style.white-gradient(
+		$opacity-start: 0.5,
+		$opacity-end: 0.15,
+		$size: 7px
+	);
+	--bg: #bdd1ea;
+
+	background-image: linear-gradient(180deg, var(--bg), var(--bg)),
+		var(--white-gradient);
+	color: var(--blue-text);
+	font-size: var(--font-size-small);
+	font-weight: bold;
+	border: 1px solid #9cb1ca;
+	padding: var(--library_section-header-spacing-y)
+		var(--library_section-header-spacing-x);
+}
+
 /*#endregion*/
 /*#region TEXT */
 @mixin description {

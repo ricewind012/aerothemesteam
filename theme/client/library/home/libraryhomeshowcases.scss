@@ -1,6 +1,5 @@
 @use "shared/extends/library";
 @use "shared/extends/pageablecontainer";
-@use "shared/extends/style";
 
 #AddShowcase {
 	@include library.button;
@@ -99,7 +98,7 @@
 }
 
 #ShowcaseHeader {
-	@include style.section-header;
+	@include library.section-header;
 
 	margin: 0;
 }

@@ -30,7 +30,7 @@
 }
 
 #Header {
-	@include style.section-header;
+	@include library.section-header;
 
 	text-transform: unset;
 
