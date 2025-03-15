@@ -1,6 +1,14 @@
+#CheckContainer {
+	display: none;
+}
+
 #RemotePlayAnywhereDescription {
 	color: var(--contextmenu_fg-secondary);
 }
 
 #StreamingContextMenuItem {
+}
+
+#StreamingTargetLabel {
+	margin: 0;
 }

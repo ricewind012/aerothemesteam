@@ -1,6 +1,4 @@
 ::-webkit-scrollbar {
-	--size: 15px;
-
 	background: linear-gradient(
 		90deg,
 		rgba(228, 228, 228, 1) 0%,
@@ -8,8 +6,8 @@
 		rgba(244, 244, 244, 1) 100%
 	);
 
-	width: var(--size);
-	height: var(--size);
+	width: var(--scrollbar-size);
+	height: var(--scrollbar-size);
 }
 
 ::-webkit-scrollbar-button,

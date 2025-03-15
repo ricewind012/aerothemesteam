@@ -109,8 +109,7 @@
 		margin: var(--pagedsettings_spacing);
 		margin-bottom: 0;
 
-		// 15px = scrollbar
-		width: calc(100% - var(--pagedsettings_spacing) - 15px);
+		width: calc(100% - var(--pagedsettings_spacing) - var(--scrollbar-size));
 	}
 
 	.DialogSubHeader,

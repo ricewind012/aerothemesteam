@@ -7,7 +7,7 @@
 
 	background: linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580),
 		var(--lighter-bg), var(--white-gradient);
-	color: #273b5c;
+	color: var(--library_button-text);
 	font-size: var(--font-size);
 	font-weight: bold;
 	text-align: center;

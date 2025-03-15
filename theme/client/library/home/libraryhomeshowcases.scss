@@ -18,7 +18,7 @@
 	line,
 	circle {
 		stroke: var(--blue-text);
-		stroke-width: 16px;
+		stroke-width: var(--icon-size);
 	}
 }
 

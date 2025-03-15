@@ -22,7 +22,7 @@
 
 #Highlight {
 	background: none #cedef2;
-	color: #273b5c;
+	color: var(--library_button-text);
 	font-size: var(--font-size);
 	border: var(--library_border);
 	border-top: none;

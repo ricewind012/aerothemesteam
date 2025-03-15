@@ -24,7 +24,7 @@
 }
 
 .contextMenuItem.menuChecked .contextMenuCheckMark {
-	@include contextmenu.icon;
+	@include contextmenu.icon("radio");
 
 	display: block;
 }
@@ -58,18 +58,7 @@
 		}
 
 		&.Active {
-			@include contextmenu.item-checkbox;
-
-			// TODO(refactor): pasted from gamelistdropdown
-			svg {
-				background-image: var(--icon-context-menu-checkmark);
-
-				display: initial;
-
-				* {
-					display: none;
-				}
-			}
+			@include contextmenu.icon("checkmark");
 		}
 	}
 }

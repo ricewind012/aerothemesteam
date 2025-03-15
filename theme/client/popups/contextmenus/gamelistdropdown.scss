@@ -22,36 +22,10 @@
 	@include contextmenu.item;
 
 	.DialogCheckbox {
-		--icon: icon("context-menu-checkmark");
-		--offset: -1px;
+		@include contextmenu.icon("checkmark");
 
-		background: transparent;
-		border-radius: var(--border-radius);
-		box-shadow: none;
-
-		position: absolute;
-		top: var(--offset);
-		left: var(--offset);
-		width: var(--contextmenu_item-height);
-		height: var(--contextmenu_item-height);
-
-		&.Active {
-			@include list.item-active;
-		}
-
-		// TODO: no idea if it's ever disabled, but whatever
-		&.Disabled {
-			--icon: icon("context-menu-checkmark-disabled");
-		}
-
-		svg {
-			background-image: var(--icon);
-
-			display: initial;
-
-			* {
-				display: none;
-			}
+		&:not(.Active) {
+			display: none;
 		}
 	}
 

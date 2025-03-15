@@ -5,5 +5,9 @@
 }
 
 #Icon:not(div) {
-	@include contextmenu.icon;
+	@include contextmenu.icon("radio");
+
+	path {
+		display: none;
+	}
 }

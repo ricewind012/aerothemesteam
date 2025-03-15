@@ -41,9 +41,8 @@
 	width: var(--icon-size);
 	height: var(--icon-size);
 
-	// TODO: var
 	path {
-		fill: #273b5c;
+		fill: var(--library_button-text);
 	}
 }
 

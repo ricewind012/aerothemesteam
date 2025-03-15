@@ -78,22 +78,10 @@ $icons: (
 	}
 
 	&:has(.SVGIcon_Check, .SVGIcon_DialogCheck) {
-		--offset: -1px;
-		--size: 22px;
-
 		&::before {
-			position: absolute;
+			@include contextmenu.icon("checkmark");
+
 			box-sizing: border-box;
-			top: var(--offset);
-			left: var(--offset);
-			width: var(--size);
-			height: var(--size);
-
-			@include list.item-active;
-
-			background-image: var(--icon), var(--contextmenu_item-gradient);
-			background-position: center;
-			border-radius: var(--border-radius);
 		}
 	}
 

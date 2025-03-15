@@ -57,12 +57,10 @@
 
 	img,
 	svg {
-		--size: 16px;
-
 		border-radius: 0;
 
-		width: var(--size);
-		height: var(--size);
+		width: var(--icon-size);
+		height: var(--icon-size);
 	}
 
 	span {

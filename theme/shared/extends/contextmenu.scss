@@ -23,24 +23,22 @@
 	}
 }
 
-@mixin icon {
-	--icon-size: var(--contextmenu_item-height);
+/// @param {"checkmark" | "radio"} $what
+@mixin icon($what) {
 	--offset: -1px;
 
-	@include icon-pos;
 	@include list.item-active;
 
-	background-image: var(--icon-context-menu-radio),
+	background-image: var(--icon-context-menu-#{$what}),
 		var(--contextmenu_item-gradient);
 	background-position: center;
 	border-radius: var(--border-radius);
 
+	position: absolute;
 	top: var(--offset);
 	left: var(--offset);
-
-	path {
-		display: none;
-	}
+	width: var(--contextmenu_item-height);
+	height: var(--contextmenu_item-height);
 }
 
 @mixin icon-pos {
@@ -63,21 +61,6 @@
 	&:focus {
 		@include list.item-active;
 	}
-}
-
-@mixin item-checkbox {
-	--offset: -1px;
-	--size: 22px;
-
-	@include list.item-active;
-
-	border-radius: var(--border-radius);
-
-	position: absolute;
-	top: var(--offset);
-	left: var(--offset);
-	width: var(--size);
-	height: var(--size);
 }
 
 @mixin separator {
