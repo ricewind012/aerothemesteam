@@ -118,6 +118,10 @@
 	flex-grow: 1;
 }
 
+.DialogFooter {
+	padding-top: 8px;
+}
+
 .DialogHeader {
 	:root[browsertype="DirectHWND"] & {
 		display: none;
