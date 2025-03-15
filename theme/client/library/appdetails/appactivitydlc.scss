@@ -1,0 +1,52 @@
+@use "shared/extends/library";
+
+#ContentCarousel {
+	border: none;
+
+	& > div {
+		padding: 0;
+	}
+}
+
+#Contents {
+	all: unset;
+
+	// ok
+	& > :first-child > :first-child {
+		margin-inline: -1px;
+
+		& > :first-child {
+			border: none;
+		}
+	}
+}
+
+#CarouselBody {
+	@include library.description;
+}
+
+#CarouselDescription {
+	margin: var(--library_spacing);
+
+	max-width: unset;
+}
+
+#CarouselHeader {
+	@include library.header;
+}
+
+#CarouselImage {
+	display: none;
+}
+
+#Rollup {
+	margin: calc(var(--library_spacing) * -1);
+}
+
+#ViewAll {
+	@include library.button;
+}
+
+#ViewAllRow {
+	margin: var(--library_spacing);
+}
