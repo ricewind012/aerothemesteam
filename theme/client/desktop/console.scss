@@ -1,0 +1,8 @@
+#Console {
+	background: none;
+}
+
+#ConsoleInner {
+	mask: linear-gradient(rgba(0, 0, 0, 1) calc(100% - 10px), transparent),
+		linear-gradient(to left, black 15px, transparent);
+}
