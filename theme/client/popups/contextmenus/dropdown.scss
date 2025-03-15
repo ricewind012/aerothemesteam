@@ -1,7 +1,7 @@
 @use "shared/extends/contextmenu";
 
 // Some guy really thought putting !important would be funny af
-.DesktopUI .visible.visible #DialogDropDownMenu {
+body:is(.DesktopUI, .friendsui-container) .visible.visible #DialogDropDownMenu {
 	@include contextmenu.container;
 	@include contextmenu.container-left-border;
 

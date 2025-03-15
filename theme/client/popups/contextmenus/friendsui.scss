@@ -37,8 +37,41 @@
 	}
 }
 
-.DNDCheckBox .DialogCheckbox {
-	display: none;
+.FriendMenuRoleCheckbox .SVGIcon_Crown {
+	@include contextmenu.icon-pos;
+
+	path {
+		fill: #cb9500;
+	}
+}
+
+.personaContextMenuItem {
+	&::before {
+		display: none;
+	}
+
+	.DialogCheckbox {
+		transform: unset;
+
+		&:not(.Active) {
+			display: none;
+		}
+
+		&.Active {
+			@include contextmenu.item-checkbox;
+
+			// TODO(refactor): pasted from gamelistdropdown
+			svg {
+				background-image: var(--icon-context-menu-checkmark);
+
+				display: initial;
+
+				* {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .persona_menu_descriptor,
