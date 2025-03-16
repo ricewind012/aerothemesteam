@@ -4,9 +4,12 @@ This theme requires a [plugin](https://steambrew.app/plugin?id=dc691b7d877b) for
 
 # Microsoft Office 2007 Styled Theme
 
+Based on a mockup by MondySpartan: https://www.deviantart.com/mondyspartan/art/Steam-Office-2007-Styled-Mockup-1060261068
+
 ![Preview](./assets/preview/main-window.png)
 
 <details>
+
 <summary>Other previews</summary>
 
 ![Context menu](assets/preview/context-menu.png)
@@ -15,8 +18,6 @@ This theme requires a [plugin](https://steambrew.app/plugin?id=dc691b7d877b) for
 ![Game info dialog](assets/preview/game-info.png)
 
 </details>
-
-Based on a mockup by MondySpartan: https://www.deviantart.com/mondyspartan/art/Steam-Office-2007-Styled-Mockup-1060261068
 
 ## Titlebar is missing
 
