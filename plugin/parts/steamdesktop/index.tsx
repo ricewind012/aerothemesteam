@@ -226,7 +226,6 @@ export class SteamDesktop extends Component<{}, SteamDesktopState> {
 			return;
 		}
 
-		console.warn("EVENT", this.state, ev.detail);
 		this.setState({ appid, tab, ...ev.detail });
 	}
 

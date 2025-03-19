@@ -1,7 +1,5 @@
 #!/bin/sh -e
 
-# TODO: this bullshit is slow af on windows
-
 DIST_DIR=dist
 SRC_DIR=theme
 

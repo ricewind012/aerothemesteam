@@ -21,28 +21,6 @@ $icons: (
 	font-weight: bold;
 	letter-spacing: 0;
 
-	// TODO
-	&.Stream,
-	&.Connect,
-	&.Launch,
-	&.PlayMusic,
-	&.Play {
-		//background: linear-gradient(-45deg, #59bf4040 0%, #5be33a40 70%);
-	}
-
-	&.Download,
-	&.Update,
-	&.PreLoad,
-	&.Resume,
-	&.Pause,
-	&.BorrowApp,
-	&.Stop,
-	&.Cancel,
-	&.Install,
-	&.PurchaseApp {
-		//background: linear-gradient(-45deg, #0056d640 8%, #1a9fff40 90%);
-	}
-
 	@each $class, $icon in $icons {
 		&.#{$class} {
 			--icon: var(--icon-#{$icon});
