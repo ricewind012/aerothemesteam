@@ -14,15 +14,7 @@
 
 // TODO: !important in ~/clientshared/dialog
 .ModalPosition_Content > #PlayersDialog {
-	@include dialog.shared;
-
-	// TODO
-	font-size: var(--font-size);
-
-	// TODO: that's actually the above one
-	background: #f0f0f0;
-	color: #000;
-	padding: 7px 8px 8px 6px;
+	@include dialog.shared(".ModalPosition_Content > #PlayersDialog");
 }
 
 #PlayersList {

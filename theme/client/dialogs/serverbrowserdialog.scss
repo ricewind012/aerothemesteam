@@ -87,9 +87,7 @@ div#SecureColumn {
 }
 
 #ServerBrowserDialog {
-	@include dialog.shared;
-
-	font-size: var(--font-size);
+	@include dialog.shared("&");
 
 	// TODO: move to ~/clientshared/dialog when ready
 	:where(.DialogButton) {

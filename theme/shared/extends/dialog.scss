@@ -1,8 +1,9 @@
 // TODO: move to ~/clientshared/dialog when ready
-@mixin shared {
-	.DialogContent:has(&) {
+@mixin shared($content-selector) {
+	#{$content-selector} {
 		background: #f0f0f0;
 		color: #000;
+		font-size: var(--font-size);
 		padding: 7px 8px 8px 6px;
 	}
 

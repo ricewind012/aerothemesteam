@@ -1,0 +1,52 @@
+@use "shared/extends/controls";
+@use "shared/extends/dialog";
+@use "shared/extends/list";
+
+// TODO: !important in ~/clientshared/dialog
+.ModalPosition_Content > #AddNonSteamGameDialog {
+	@include dialog.shared("&");
+}
+
+#Footer {
+	gap: 8px;
+	padding-top: 8px;
+}
+
+#GameList {
+	@include controls.table;
+
+	border-top: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+#GameRow {
+	@include list.item;
+
+	padding: 0;
+
+	#AppName {
+		color: inherit;
+		font: inherit;
+		padding-left: 6px;
+	}
+
+	#ExePath {
+		opacity: 1;
+		color: inherit;
+		font: inherit;
+		padding-left: 12px;
+	}
+}
+
+#Header {
+	@include controls.table;
+
+	border-bottom: none;
+
+	& > div {
+		@include controls.table-header-row;
+
+		text-transform: none;
+	}
+}

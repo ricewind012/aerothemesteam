@@ -2,9 +2,7 @@
 @use "shared/extends/dialog";
 
 #DialogBody {
-	@include dialog.shared;
-
-	font-size: var(--font-size);
+	@include dialog.shared("&");
 
 	.DialogBodyText {
 		margin: 0;
