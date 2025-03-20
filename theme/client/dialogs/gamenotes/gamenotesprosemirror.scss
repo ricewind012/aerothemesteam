@@ -1,0 +1,19 @@
+#CommandButton {
+	margin-block: 0;
+
+	svg {
+		padding: 0;
+		margin: 0;
+
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+
+	&.Disabled svg {
+		opacity: 0.5;
+	}
+
+	path {
+		fill: var(--fg-main);
+	}
+}

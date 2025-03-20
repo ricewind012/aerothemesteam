@@ -1,0 +1,39 @@
+@use "shared/extends/controls";
+@use "shared/extends/dialog";
+
+#EditorInput {
+	background-color: var(--bg-main);
+	color: var(--fg-main);
+	font: inherit;
+	border: 1px solid #abadb3;
+	box-shadow: none;
+}
+
+#NoteActions {
+	margin-top: 8px;
+
+	justify-content: end;
+	position: unset;
+
+	.DialogButton {
+		opacity: 1;
+
+		height: unset;
+	}
+
+	.tool-tip-source .DialogButton {
+		width: 32px;
+	}
+}
+
+#NoteEditorArea {
+	@include dialog.shared(".DialogContent:has(&)");
+
+	margin: 0;
+}
+
+#Toolbar {
+	border-bottom: 1px solid #707070;
+	padding-block: 0 8px;
+	margin-bottom: 8px;
+}
