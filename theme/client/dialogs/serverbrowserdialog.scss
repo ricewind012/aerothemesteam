@@ -87,7 +87,7 @@ div#SecureColumn {
 }
 
 #ServerBrowserDialog {
-	@include dialog.shared("&");
+	@include dialog.shared(".ModalPosition_Content > .DialogContent:has(&)");
 
 	// TODO: move to ~/clientshared/dialog when ready
 	:where(.DialogButton) {

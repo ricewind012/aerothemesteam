@@ -50,7 +50,9 @@
 	flex-direction: row-reverse;
 	justify-content: space-between;
 
-	app-region: drag;
+	:root:not([browsertype="DirectHWND"]) & {
+		app-region: drag;
+	}
 }
 
 #URLBarReplacement {
@@ -66,7 +68,8 @@
 }
 
 #Wrapper {
-	background-image: linear-gradient(0deg, transparent 96.5%, #82b4ff1a 100%),
+	background-image:
+		linear-gradient(0deg, transparent 96.5%, #82b4ff1a 100%),
 		linear-gradient(180deg, #293b53 0%, #112034 100%);
 	border: none;
 }

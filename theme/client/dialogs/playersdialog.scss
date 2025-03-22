@@ -14,7 +14,7 @@
 
 // TODO: !important in ~/clientshared/dialog
 .ModalPosition_Content > #PlayersDialog {
-	@include dialog.shared(".ModalPosition_Content > #PlayersDialog");
+	@include dialog.shared("&");
 }
 
 #PlayersList {

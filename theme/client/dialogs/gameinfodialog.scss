@@ -2,7 +2,7 @@
 @use "shared/extends/dialog";
 
 #DialogBody {
-	@include dialog.shared("&");
+	@include dialog.shared(".DialogContent:has(&)");
 
 	.DialogBodyText {
 		margin: 0;
