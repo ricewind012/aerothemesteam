@@ -112,6 +112,15 @@
 	}
 }
 
+%textfield-base {
+	background-color: var(--bg-main);
+	color: var(--fg-main);
+	font: inherit;
+	border: 1px solid #abadb3;
+	border-radius: 0;
+	box-shadow: none;
+}
+
 @mixin progress-bar-outer {
 	background-color: transparent;
 	background-image: linear-gradient(180deg, #66666680, transparent);
@@ -126,12 +135,8 @@
 	@include style.white-gradient($size: 9px);
 
 	background-color: transparent;
-	background-image: linear-gradient(
-			90deg,
-			#69922c 0%,
-			#84c422 65%,
-			#c6e296 98%
-		),
+	background-image:
+		linear-gradient(90deg, #69922c 0%, #84c422 65%, #c6e296 98%),
 		var(--white-gradient);
 	box-shadow: inset 0 0 0 1px #ffffff80;
 	border-radius: 0;
@@ -141,9 +146,9 @@
 	@include button;
 
 	border-bottom: none;
-	border-color: #898c95;
+	border-color: var(--tab_border-outer);
 	border-radius: 0;
-	box-shadow: inset 0 0 0 1px #f8f8f8;
+	box-shadow: inset 0 0 0 1px var(--tab_border-inner);
 	margin: 2px 0px 0px 0;
 	padding: 2px 5px 5px 4px;
 
@@ -151,11 +156,15 @@
 }
 
 @mixin tab-panel {
+	background-color: var(--tabpanel_bg);
+	border: 1px solid var(--tabpanel_border);
+	padding: 14px;
+
 	z-index: 0;
 }
 
 @mixin tab-selected {
-	background: #fff;
+	background: var(--tab_bg-selected);
 	box-shadow: none;
 	margin: 0px -2px 0px -2px;
 	padding: 0px 7px 5px 6px;
@@ -169,8 +178,8 @@
 }
 
 @mixin table {
-	background-color: #fff;
-	border: 1px solid #828790;
+	background-color: var(--table_bg);
+	border: 1px solid var(--table_border);
 	padding: 1px;
 }
 
@@ -185,7 +194,10 @@
 
 	border-top: none;
 	border-left: none;
-	border-image-source: linear-gradient(#f2f2f2, #d5d5d5);
+	border-image-source: linear-gradient(
+		var(--tableheaderrow_border-start),
+		var(--tableheaderrow_border-end)
+	);
 	border-image-slice: 1;
 	border-radius: 0;
 	padding: 3px 6px;

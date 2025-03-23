@@ -1,8 +1,8 @@
 // TODO: move to ~/clientshared/dialog when ready
 @mixin shared($content-selector) {
 	#{$content-selector} {
-		background: #f0f0f0;
-		color: #000;
+		background: var(--dialog_bg);
+		color: var(--dialog_fg);
 		font-size: var(--font-size);
 		padding: 7px 8px 8px 6px;
 	}

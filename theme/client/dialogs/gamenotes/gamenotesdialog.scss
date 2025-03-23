@@ -2,11 +2,7 @@
 @use "shared/extends/dialog";
 
 #EditorInput {
-	background-color: var(--bg-main);
-	color: var(--fg-main);
-	font: inherit;
-	border: 1px solid #abadb3;
-	box-shadow: none;
+	@extend %textfield-base;
 }
 
 #NoteActions {
@@ -33,7 +29,7 @@
 }
 
 #Toolbar {
-	border-bottom: 1px solid #707070;
+	border-bottom: 1px solid var(--tabpanel_border);
 	padding-block: 0 8px;
 	margin-bottom: 8px;
 }

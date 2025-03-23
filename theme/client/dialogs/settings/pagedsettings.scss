@@ -2,10 +2,11 @@
 
 :root {
 	--pagedsettings_blue-text: #00156e;
-	--pagedsettings_border: 1px solid #828790;
+	--pagedsettings_border: 1px solid var(--tabpanel_border);
 	--pagedsettings_dialog-spacing: 6px;
-	--pagedsettings_separator-color: #c5c5c5;
-	--pagedsettings_spacing: 14px;
+	--pagedsettings_separator: 2px solid #7ba4e0;
+	--pagedsettings_tab-separator: #c5c5c5;
+	--pagedsettings_tab-separator2: #dde7ee;
 }
 
 #PageListItem_Icon {
@@ -13,14 +14,14 @@
 }
 
 #PageListSeparator {
-	background-color: var(--pagedsettings_separator-color);
-	box-shadow: 0 -1px #dde7ee;
+	background-color: var(--pagedsettings_tab-separator);
+	box-shadow: 0 -1px var(--pagedsettings_tab-separator2);
 	margin: 0 4px;
 }
 
 #PagedSettingsDialog {
-	background-color: #f0f0f0;
-	color: var(--fg-main);
+	background-color: var(--dialog_bg);
+	color: var(--dialog_fg);
 	gap: var(--pagedsettings_dialog-spacing);
 	padding: var(--pagedsettings_dialog-spacing);
 
@@ -94,10 +95,10 @@
 	}
 
 	.DialogBody {
-		color: var(--fg-main);
+		color: var(--dialog_fg);
 		font-size: var(--font-size);
 		font-weight: normal;
-		padding: var(--pagedsettings_spacing);
+		padding: var(--tabpanel_spacing);
 		margin: 0;
 
 		overflow: auto;
@@ -106,10 +107,10 @@
 	.DialogHeader {
 		@include settings.header;
 
-		margin: var(--pagedsettings_spacing);
+		margin: var(--tabpanel_spacing);
 		margin-bottom: 0;
 
-		width: calc(100% - var(--pagedsettings_spacing) - var(--scrollbar-size));
+		width: calc(100% - var(--tabpanel_spacing) - var(--scrollbar-size));
 	}
 
 	.DialogSubHeader,

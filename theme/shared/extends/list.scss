@@ -1,7 +1,5 @@
-// TODO: maybe NOT share variables with contextmenu ?
-
 @mixin item {
-	color: var(--contextmenu_fg);
+	color: var(--listitem_fg);
 	font-size: var(--font-size);
 	border: 1px solid transparent;
 	border-radius: var(--border-radius);
@@ -13,22 +11,22 @@
 }
 
 @mixin item-active {
-	background: var(--contextmenu_item-gradient);
-	border: 1px solid var(--contextmenu_item-border);
-	box-shadow: inset 0 0 0 1px var(--contextmenu_item-inner-border);
+	background: var(--listitem_item-gradient);
+	border: 1px solid var(--listitem_item-border);
+	box-shadow: inset 0 0 0 1px var(--listitem_item-inner-border);
 }
 
 @mixin item-disabled {
-	--contextmenu_fg: var(--contextmenu_fg-secondary);
-	--contextmenu_item-border: rgba(201, 201, 201, 0.75);
-	--contextmenu_item-gradient-start: rgba(243, 243, 243, 0.69);
-	--contextmenu_item-gradient-end: rgba(221, 223, 223, 0.69);
-	--contextmenu_item-gradient: linear-gradient(
+	--listitem_fg: var(--listitem_fg-secondary);
+	--listitem_item-border: rgba(201, 201, 201, 0.75);
+	--listitem_item-gradient-start: rgba(243, 243, 243, 0.69);
+	--listitem_item-gradient-end: rgba(221, 223, 223, 0.69);
+	--listitem_item-gradient: linear-gradient(
 		180deg,
-		var(--contextmenu_item-gradient-start),
-		var(--contextmenu_item-gradient-end)
+		var(--listitem_item-gradient-start),
+		var(--listitem_item-gradient-end)
 	);
-	--contextmenu_item-inner-border: rgba(235, 235, 235, 0.714);
+	--listitem_item-inner-border: rgba(235, 235, 235, 0.714);
 
 	--icon-context-menu-checkmark: var(--icon-context-menu-checkmark-disabled);
 }

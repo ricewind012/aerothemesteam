@@ -174,9 +174,6 @@ div#SecureColumn {
 #ServerTabPane {
 	@include controls.tab-panel;
 
-	background-color: #fff;
-	border: 1px solid #898c95;
-	padding: 14px;
 	margin-bottom: calc(21px + 8px);
 }
 

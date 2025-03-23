@@ -25,3 +25,33 @@
 		--anim-time: 0ms;
 	}
 }
+
+// Other global vars
+:root {
+	--dialog_bg: #f0f0f0;
+	--dialog_fg: var(--fg-main);
+
+	--listitem_fg: var(--fg-main);
+	--listitem_fg-secondary: #6d6d6d;
+	--listitem_item-border: rgba(152, 196, 249, 0.75);
+	--listitem_item-gradient-start: rgba(245, 250, 255, 0.4);
+	--listitem_item-gradient-end: rgba(215, 232, 255, 0.4);
+	--listitem_item-gradient: linear-gradient(
+		180deg,
+		var(--listitem_item-gradient-start),
+		var(--listitem_item-gradient-end)
+	);
+	--listitem_item-inner-border: rgba(243, 248, 254, 0.75);
+
+	--tab_bg-selected: var(--bg-main);
+	--tab_border-outer: var(--tabpanel_border);
+	--tab_border-inner: #f8f8f8;
+	--tabpanel_bg: var(--bg-main);
+	--tabpanel_border: #898c95;
+	--tabpanel_spacing: 14px;
+
+	--table_bg: var(--bg-main);
+	--table_border: #828790;
+	--tableheaderrow_border-start: #f2f2f2;
+	--tableheaderrow_border-end: #d5d5d5;
+}

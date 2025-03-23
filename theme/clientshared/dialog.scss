@@ -1,15 +1,6 @@
 @use "shared/extends/controls";
 @use "shared/extends/style";
 
-%input-base {
-	background-color: var(--bg-main);
-	color: var(--fg-main);
-	font: inherit;
-	border: 1px solid #abadb3;
-	border-radius: 0;
-	box-shadow: none;
-}
-
 .DialogBody {
 	a {
 		@include style.link;
@@ -52,7 +43,7 @@
 .DialogHeader,
 .DialogSubHeader {
 	&:not(:first-child) {
-		margin-top: var(--pagedsettings_spacing);
+		margin-top: var(--tabpanel_spacing);
 	}
 }
 
@@ -62,7 +53,7 @@
 	--arrow-border: #707070;
 	--arrow-inner-border: #fcfcfc;
 
-	@extend %input-base;
+	@extend %textfield-base;
 
 	opacity: 1;
 	gap: 0;
@@ -129,7 +120,7 @@
 }
 
 .DialogInput {
-	@extend %input-base;
+	@extend %textfield-base;
 
 	padding: 1px 3px;
 }

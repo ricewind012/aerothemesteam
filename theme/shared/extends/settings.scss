@@ -5,16 +5,16 @@
 	font-weight: bold;
 	letter-spacing: 0;
 	text-transform: unset;
-	border-bottom: 1px solid var(--pagedsettings_separator-color);
+	border-bottom: 1px solid var(--pagedsettings_separator);
 	padding: 6px;
 	padding-bottom: 7px;
-	margin-bottom: var(--pagedsettings_spacing);
+	margin-bottom: var(--tabpanel_spacing);
 
 	width: 100%;
 }
 
 @mixin separator {
-	border-top: 2px solid #7ba4e0;
+	border-top: var(--pagedsettings_separator);
 	padding-top: 12px;
 	margin-top: 10px;
 }

@@ -3,18 +3,10 @@
 @use "shared/extends/style";
 
 :root {
+	--contextmenu_container-bg: #f0f0f0;
+	--contextmenu_container-border-inner: #f5f5f5;
+	--contextmenu_container-border-outer: #979797;
 	--contextmenu_container-spacing: 2px;
-	--contextmenu_fg: #000;
-	--contextmenu_fg-secondary: #6d6d6d;
-	--contextmenu_item-border: rgba(152, 196, 249, 0.75);
-	--contextmenu_item-gradient-start: rgba(245, 250, 255, 0.4);
-	--contextmenu_item-gradient-end: rgba(215, 232, 255, 0.4);
-	--contextmenu_item-gradient: linear-gradient(
-		180deg,
-		var(--contextmenu_item-gradient-start),
-		var(--contextmenu_item-gradient-end)
-	);
-	--contextmenu_item-inner-border: rgba(243, 248, 254, 0.75);
 	--contextmenu_item-height: 22px;
 	--contextmenu_left-spacing: 27px;
 	--contextmenu_separator-dark: #e0e0e0;
@@ -31,7 +23,7 @@ $icons: (
 #Arrow {
 	@include style.arrow("right");
 
-	background-color: var(--contextmenu_fg);
+	background-color: var(--listitem_fg);
 
 	position: absolute;
 	right: 8px;

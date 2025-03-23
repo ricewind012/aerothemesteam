@@ -31,8 +31,7 @@
 }
 
 #DriveSize {
-	// TODO: used in dropdown
-	color: var(--contextmenu_fg-secondary);
+	color: var(--listitem_fg-secondary);
 	font: inherit;
 	letter-spacing: 0;
 	text-transform: unset;
@@ -41,7 +40,8 @@
 #DriveUsageBar {
 	@include controls.progress-bar-inner;
 
-	background-image: linear-gradient(var(--bg), var(--bg)), var(--white-gradient);
+	background-image:
+		linear-gradient(var(--bg), var(--bg)), var(--white-gradient);
 	box-shadow: none;
 
 	z-index: 1;
@@ -124,7 +124,8 @@
 		--bg: color-mix(in srgb, #000 12.5%, transparent);
 		--size: 10px;
 
-		background-image: repeating-linear-gradient(
+		background-image:
+			repeating-linear-gradient(
 				315deg,
 				var(--bg),
 				var(--bg) var(--size),
