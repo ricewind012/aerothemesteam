@@ -2,6 +2,8 @@
 
 This theme requires a [plugin](https://steambrew.app/plugin?id=dc691b7d877b) for the top bar and some other additional elements. The menu bar, links to a game's store page, community hub, etc. and some other things will not be accessible if not installed. Learn to read if you missed this.
 
+In case you can't access settings to enable the plugin - either access it from your system tray or press Win+R and run `steam://open/settings`.
+
 # Microsoft Office 2007 Styled Theme
 
 Based on a mockup by MondySpartan: https://www.deviantart.com/mondyspartan/art/Steam-Office-2007-Styled-Mockup-1060261068
