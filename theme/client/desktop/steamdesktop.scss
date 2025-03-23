@@ -1,7 +1,12 @@
 :root {
 	--steamdesktop_border-size: 1px;
+	--steamdesktop_top-bar-drag: drag;
 	--steamdesktop_spacing: 2px;
 	--steamdesktop_window-size: calc(100% - var(--steamdesktop_border-size) * 2);
+
+	&[browsertype="DirectHWND"] {
+		--steamdesktop_top-bar-drag: no-drag;
+	}
 }
 
 #DragArea {
@@ -50,9 +55,7 @@
 	flex-direction: row-reverse;
 	justify-content: space-between;
 
-	:root:not([browsertype="DirectHWND"]) & {
-		app-region: drag;
-	}
+	app-drag: var(--steamdesktop_top-bar-drag);
 }
 
 #URLBarReplacement {

@@ -1,0 +1,9 @@
+html:root {
+	--steamdesktop_top-bar-drag: drag;
+	--supernav_tab-spacing-y: 5px;
+}
+
+.DialogHeader,
+.TitleBar {
+	display: none !important;
+}

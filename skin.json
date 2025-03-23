@@ -35,5 +35,19 @@
 				"dist/shared.css"
 			]
 		}
-	]
+	],
+	"Conditions": {
+		"Adjust for native titlebars": {
+			"description": "Only use this if you forced the native titlebar!",
+			"default": "no",
+			"values": {
+				"yes": {
+					"TargetCss": {
+						"affects": [".*"],
+						"src": "options/nativetitlebar.css"
+					}
+				}
+			}
+		}
+	}
 }
