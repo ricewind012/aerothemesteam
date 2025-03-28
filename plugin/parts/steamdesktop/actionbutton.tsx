@@ -195,7 +195,7 @@ export class ActionButton extends RibbonGameSectionButton<ActionButtonState> {
 	 * @todo Need a better way, but this works well enough, fuck you
 	 */
 	async OnGameAction() {
-		await sleep(250);
+		await sleep(500);
 
 		this.SetState();
 	}
