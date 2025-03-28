@@ -3,32 +3,25 @@ import { render } from "react-dom";
 import * as parts from "./parts";
 import { CLog } from "./logger";
 import { classes, WaitForElement } from "./shared";
-import type { CPopupManager, SteamPopup } from "./types/normal";
+import type { SteamPopup } from "./types/normal";
 
 import { DispatchTabChange } from "./events/tabchange";
 import { DispatchGameListChange } from "./events/gamelistchange";
 
-declare global {
-	const App: any;
-	const appStore: any;
-	const appDetailsStore: any;
-	const badgeStore: any;
-	const collectionStore: any;
-	const g_FriendsUIApp: any;
-	const g_PopupManager: CPopupManager;
-	const LocalizationManager: any;
-	const loginStore: any;
-	const MainWindowBrowserManager: any;
-	const settingsStore: any;
-	const SteamUIStore: any;
-	const StoreItemCache: any;
-	const uiStore: any;
-	const urlStore: any;
-}
-
 interface ComponentToRender {
-	normalClassName: string;
-	className: string;
+	/**
+	 * Steam component name whose class names are found in {@link classes}.
+	 */
+	steamComponent: keyof typeof classes;
+
+	/**
+	 * Steam component's class name to use for rendering the plugin component.
+	 */
+	componentClassName: string;
+
+	/**
+	 * The plugin component.
+	 */
 	component: JSX.Element;
 }
 
@@ -152,27 +145,23 @@ export default async function PluginMain() {
 			popupName: "#WindowName_SteamDesktop",
 			parts: [
 				{
-					normalClassName: "gamelistbar_Container",
-					className: classes.gamelistbar.Container,
-					// @ts-ignore fuck off
+					steamComponent: "gamelistbar",
+					componentClassName: "Container",
 					component: <parts.GameListBar />,
 				},
 				{
-					normalClassName: "steamdesktop_OuterFrame",
-					className: classes.steamdesktop.OuterFrame,
-					// @ts-ignore fuck off
+					steamComponent: "steamdesktop",
+					componentClassName: "OuterFrame",
 					component: <parts.SteamDesktop />,
 				},
 				{
-					normalClassName: "supernav_SuperNav",
-					className: classes.supernav.SuperNav,
-					// @ts-ignore fuck off
+					steamComponent: "supernav",
+					componentClassName: "SuperNav",
 					component: <parts.SuperNav />,
 				},
 				{
-					normalClassName: "titlebarcontrols_TitleBarControls",
-					className: classes.titlebarcontrols.TitleBarControls,
-					// @ts-ignore fuck off
+					steamComponent: "titlebarcontrols",
+					componentClassName: "TitleBarControls",
 					component: <parts.TitleBarControls />,
 				},
 			],
@@ -193,13 +182,14 @@ export default async function PluginMain() {
 			}
 
 			logger.Log("Trying %o for popup %o", popupName, popup.m_strTitle);
-			for (const { normalClassName, className, component } of parts) {
+			for (const { steamComponent, componentClassName, component } of parts) {
+				const className = classes[steamComponent][componentClassName];
 				WaitForElement(`.${className}`, doc).then((el) => {
 					const div = el.appendChild(doc.createElement("div"));
 					div.className = "part";
-
 					render(component, div);
-					logger.Log("%s: finished", normalClassName);
+
+					logger.Log("%s: finished", steamComponent);
 				});
 			}
 		};
