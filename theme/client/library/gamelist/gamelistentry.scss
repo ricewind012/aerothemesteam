@@ -1,11 +1,24 @@
+:root {
+	--gamelistentry_active-bg: #8dd6ff;
+}
+
 #Container {
+	background-color: transparent;
 	color: var(--fg-main);
 	font-size: var(--font-size);
 	border: none;
+	box-shadow: none;
 
-	&:is(:hover, #Selected) {
-		background-color: #8dd6ff;
-		box-shadow: none;
+	&:is(:hover, #HasContextMenuOpen) {
+		background-color: color-mix(
+			in srgb,
+			var(--gamelistentry_active-bg) 50%,
+			transparent
+		);
+	}
+
+	&#Selected {
+		background-color: var(--gamelistentry_active-bg);
 	}
 }
 
