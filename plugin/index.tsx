@@ -44,16 +44,14 @@ const LOC_TOKENS = ["GameList_View_Collections"];
 /** Internal main window name. */
 const MAIN_WINDOW_NAME = "SP Desktop_uid0";
 
-const INTERNAL_PLUGIN_NAME = "aerothemesteam_plugin";
-
 const logger = new CLog("index");
 const url = (() => {
-	const script = document.getElementById(
-		"millennium-injected",
+	const script = document.querySelector(
+		`script[src*="aerothemesteam"]`,
 	) as HTMLScriptElement;
-	const { port } = new URL(script.src);
+	const { href } = new URL(script.src);
 
-	return `http://localhost:${port}/${INTERNAL_PLUGIN_NAME}`;
+	return href.replace(/\.millennium\/Dist\/index.js$/, "");
 })();
 
 /**
