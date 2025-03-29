@@ -1,0 +1,22 @@
+@use "shared/extends/contextmenu";
+
+.appselect_options {
+	line-height: inherit;
+
+	.option {
+		background-image: none;
+		height: unset;
+
+		&.has_submenu::after {
+			content: "";
+
+			top: 7px;
+
+			@include contextmenu.submenu-arrow;
+		}
+	}
+
+	img {
+		@include contextmenu.icon-pos;
+	}
+}

@@ -1,6 +1,5 @@
 @use "shared/extends/contextmenu";
 @use "shared/extends/list";
-@use "shared/extends/style";
 
 :root {
 	--contextmenu_container-bg: #f0f0f0;
@@ -21,12 +20,7 @@ $icons: (
 );
 
 #Arrow {
-	@include style.arrow("right");
-
-	background-color: var(--listitem_fg);
-
-	position: absolute;
-	right: 8px;
+	@include contextmenu.submenu-arrow;
 
 	svg {
 		display: none;
@@ -36,12 +30,8 @@ $icons: (
 #contextMenu {
 	@include contextmenu.container;
 
-	// child
 	& + & {
-		--offset: -3px;
-
-		margin-top: var(--offset);
-		margin-left: var(--offset);
+		@include contextmenu.container-child("-3px");
 	}
 }
 

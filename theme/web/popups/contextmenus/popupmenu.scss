@@ -13,6 +13,10 @@
 	@include contextmenu.container;
 	@include contextmenu.container-left-border;
 
+	& & {
+		@include contextmenu.container-child("9px");
+	}
+
 	.popup_menu_item {
 		@include contextmenu.item;
 
@@ -26,4 +30,15 @@
 			@include contextmenu.icon-pos;
 		}
 	}
+}
+
+.shadow_ul,
+.shadow_top,
+.shadow_ur,
+.shadow_left,
+.shadow_right,
+.shadow_bl,
+.shadow_bottom,
+.shadow_br {
+	display: none;
 }
