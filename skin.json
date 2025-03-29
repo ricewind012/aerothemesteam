@@ -12,6 +12,10 @@
 	"Steam-WebKit": "dist/webindex.css",
 	"Patches": [
 		{
+			"MatchRegexString": "^Steam$",
+			"TargetJs": "plugin/themepluginhandler.js"
+		},
+		{
 			"MatchRegexString": ".DesktopUI",
 			"TargetCss": [
 				"dist/client.css",
