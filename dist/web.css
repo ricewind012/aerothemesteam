@@ -138,6 +138,11 @@
   border-left:1px solid var(--contextmenu_separator-light) !important;
   box-shadow:-1px 0 var(--contextmenu_separator-dark) !important;
 }
+.popup_menu:not(.popup_menu_browse) .popup_menu:not(.popup_menu_browse){
+  --offset:9px !important;
+  margin-top:var(--offset) !important;
+  margin-left:var(--offset) !important;
+}
 .popup_menu:not(.popup_menu_browse) .popup_menu_item{
   color:var(--listitem_fg) !important;
   font-size:var(--font-size) !important;
@@ -145,7 +150,7 @@
   border-radius:var(--border-radius) !important;
   padding:2px !important;
   text-transform:unset !important;
-  padding:2px 20px 2px calc(5px + var(--contextmenu_left-spacing)) !important;
+  padding:3px 20px 3px calc(5px + var(--contextmenu_left-spacing)) !important;
   position:relative !important;
   line-height:inherit !important;
 }
@@ -167,6 +172,17 @@
   left:4px !important;
   width:var(--icon-size) !important;
   height:var(--icon-size) !important;
+}
+
+.shadow_ul,
+.shadow_top,
+.shadow_ur,
+.shadow_left,
+.shadow_right,
+.shadow_bl,
+.shadow_bottom,
+.shadow_br{
+  display:none !important;
 }.popup_menu .context_name{
   color:var(--listitem_fg) !important;
   font-size:var(--font-size) !important;
@@ -174,7 +190,7 @@
   border-radius:var(--border-radius) !important;
   padding:2px !important;
   text-transform:unset !important;
-  padding:2px 20px 2px calc(5px + var(--contextmenu_left-spacing)) !important;
+  padding:3px 20px 3px calc(5px + var(--contextmenu_left-spacing)) !important;
   position:relative !important;
   font-weight:normal !important;
   line-height:inherit !important;
@@ -196,7 +212,7 @@
   border-radius:var(--border-radius) !important;
   padding:2px !important;
   text-transform:unset !important;
-  padding:2px 20px 2px calc(5px + var(--contextmenu_left-spacing)) !important;
+  padding:3px 20px 3px calc(5px + var(--contextmenu_left-spacing)) !important;
   position:relative !important;
   --listitem_fg:var(--listitem_fg-secondary) !important;
   --listitem_item-border:rgba(201, 201, 201, 0.75) !important;
@@ -238,7 +254,7 @@
   border-radius:var(--border-radius) !important;
   padding:2px !important;
   text-transform:unset !important;
-  padding:2px 20px 2px calc(5px + var(--contextmenu_left-spacing)) !important;
+  padding:3px 20px 3px calc(5px + var(--contextmenu_left-spacing)) !important;
   position:relative !important;
   float:unset !important;
 }
@@ -277,7 +293,7 @@ div.navContent a{
   border-radius:var(--border-radius) !important;
   padding:2px !important;
   text-transform:unset !important;
-  padding:2px 20px 2px calc(5px + var(--contextmenu_left-spacing)) !important;
+  padding:3px 20px 3px calc(5px + var(--contextmenu_left-spacing)) !important;
   position:relative !important;
   margin:0 !important;
 }
@@ -302,4 +318,26 @@ div.navContent hr{
 .contextMenuItem span{
   color:inherit !important;
   padding:0 !important;
+}.appselect_options{
+  line-height:inherit !important;
+}
+.appselect_options .option{
+  background-image:none !important;
+  height:unset !important;
+}
+.appselect_options .option.has_submenu::after{
+  content:"" !important;
+  top:7px !important;
+  mask-image:var(--icon-arrow-right) !important;
+  width:4px !important;
+  height:7px !important;
+  background-color:var(--listitem_fg) !important;
+  position:absolute !important;
+  right:8px !important;
+}
+.appselect_options img{
+  position:absolute !important;
+  left:4px !important;
+  width:var(--icon-size) !important;
+  height:var(--icon-size) !important;
 }
