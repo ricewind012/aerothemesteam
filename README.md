@@ -1,8 +1,8 @@
 # **INSTALL THE MOTHERFUCKING PLUGIN**
 
-This theme requires a [plugin](https://steambrew.app/plugin?id=dc691b7d877b) for the top bar and some other additional elements. The menu bar, links to a game's store page, community hub, etc. and some other things will not be accessible if not installed. Learn to read if you missed this.
+On theme installation, a dialog for handling the plugin installation should appear. It will lead you to the plugin page and give you an option to enable it after you install it and restart Steam. In case the plugin will stop working, it will give you the option to revert your theme to default.
 
-In case you can't access settings to enable the plugin - either access it from your system tray or press Win+R and run `steam://open/settings`.
+This theme requires a [plugin](https://steambrew.app/plugin?id=dc691b7d877b) for the top bar and some other additional elements. The menu bar, links to a game's store page, community hub, etc. and some other things will not be accessible if not installed. Learn to read if you missed this.
 
 # Microsoft Office 2007 Styled Theme
 
