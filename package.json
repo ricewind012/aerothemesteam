@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "millennium-ttc --build prod",
-		"build:css": "sh ./scripts/build",
+		"build:css": "sh ./scripts/build_theme",
 		"build:ts-dev": "millennium-ttc --build dev",
 		"mkclasses": "npx steam-theming-utils make_readable_classes"
 	},
