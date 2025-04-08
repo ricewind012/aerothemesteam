@@ -1,17 +1,15 @@
-const {
-	App,
-	LocalizationManager,
-	Millennium,
-	MILLENNIUM_API,
-	PLUGIN_LIST,
-	SP_REACT,
-} = window.opener;
+const { App, Millennium, MILLENNIUM_API, PLUGIN_LIST, SP_REACT } =
+	window.opener;
 const { createElement, Fragment } = SP_REACT;
 const { ConfirmModal, showModal, sleep } = MILLENNIUM_API;
 
 const INTERNAL_PLUGIN_NAME = "aerothemesteam_plugin";
 const PLUGIN_LINK = "https://steambrew.app/plugin?id=dc691b7d877b";
 
+/**
+ * @param {string} method
+ * @param {Record<string, string>} kwargs
+ */
 function CallCorePluginMethod(method, kwargs) {
 	return Millennium.callServerMethod("core", method, kwargs);
 }

@@ -66,7 +66,8 @@ async function InitLocalization() {
 }
 
 /**
- * Safe version of `CPopupManager.AddPopupCreatedCallback`.
+ * Like `CPopupManager.AddPopupCreatedCallback`, but account for existing popups
+ * and is specifically for one popup.
  */
 function AddPopupCreatedCallback(
 	popupName: string,
@@ -117,6 +118,9 @@ function PatchUIStore(popup: SteamPopup) {
 	};
 }
 
+/**
+ * Watches for supernav's active tab changes.
+ */
 async function AddSuperNavEvents(popup: SteamPopup) {
 	const doc = popup.m_popup.document;
 	const container = await WaitForElement(`.${classes.supernav.SuperNav}`, doc);

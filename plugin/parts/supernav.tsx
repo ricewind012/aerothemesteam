@@ -217,7 +217,6 @@ function BuildViewRootMenuEntries(): RootMenuEntry[] {
 			visible: !bIsChinaLauncher,
 		},
 		{ name: "Separator4" },
-		// _New
 		{ name: "#Menu_Screenshots", steamURL: "steam://open/screenshots" },
 	];
 }
