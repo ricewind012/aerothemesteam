@@ -42,7 +42,7 @@
 	],
 	"Conditions": {
 		"Adjust for native titlebars": {
-			"description": "Only use this if you forced the native titlebar!",
+			"description": "Only use this if you force-enabled the native titlebar!",
 			"default": "no",
 			"values": {
 				"yes": {

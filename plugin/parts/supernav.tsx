@@ -110,16 +110,16 @@ function BuildSteamRootMenuEntries(): RootMenuEntry[] {
 			visible: !bIsOSX,
 		},
 		{
-			name: "Millennium",
-			steamURL: "steam://millennium",
-		},
-		{
 			name: "#Menu_Settings",
 			steamURL: "steam://settings",
 			parentalFeature: bKioskModeLocked
 				? EParentalFeature.Max
 				: EParentalFeature.Invalid,
 			visible: !bIsOSX,
+		},
+		{
+			name: "Millennium",
+			steamURL: "steam://millennium",
 		},
 		{
 			name: "Separator4",

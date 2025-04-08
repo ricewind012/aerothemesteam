@@ -191,6 +191,8 @@ export default async function PluginMain() {
 				WaitForElement(`.${className}`, doc).then((el) => {
 					const div = el.appendChild(doc.createElement("div"));
 					div.className = "part";
+					// Hide if not themed by anything
+					div.style.display = "none";
 					render(component, div);
 
 					logger.Log("%s: finished", steamComponent);

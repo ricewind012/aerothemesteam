@@ -1,6 +1,10 @@
 *{
   font-family:"Segoe UI", sans-serif !important;
   box-sizing:border-box !important;
+}
+
+.part{
+  display:initial !important;
 }.DialogDropDown, .DialogInput{
   background-color:var(--bg-main) !important;
   color:var(--fg-main) !important;
