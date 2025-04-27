@@ -7,6 +7,4 @@
 #CSSGrid {
 	gap: var(--library_spacing);
 	padding: var(--library_spacing);
-
-	grid-template-columns: repeat(auto-fill, 128px);
 }
