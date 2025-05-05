@@ -1651,7 +1651,6 @@ div._2O6m8U2N2S2aJKBf3H0Zxn{
 ._3vHkmRShhzwd67_MtEq8-n{
   gap:var(--library_spacing) !important;
   padding:var(--library_spacing) !important;
-  grid-template-columns:repeat(auto-fill, 128px) !important;
 }:root{
   --steamavatar_size:32px;
 }
