@@ -14,10 +14,6 @@ function CallCorePluginMethod(method, kwargs) {
 	return Millennium.callServerMethod("core", method, kwargs);
 }
 
-function OpenPluginPage() {
-	SteamClient.System.OpenInSystemBrowser(PLUGIN_LINK);
-}
-
 function RestartJSContext() {
 	SteamClient.Browser.RestartJSContext();
 }
@@ -57,7 +53,7 @@ function ShowConfirmDialog(props) {
 				Fragment,
 				null,
 				"The plugin required for the theme to function as intended is not installed. You can install it ",
-				createElement("a", { onClick: OpenPluginPage }, "here"),
+				createElement("a", { href: PLUGIN_LINK, target: "_blank" }, "here"),
 				".",
 			),
 			strOKButtonText: "Restart",
