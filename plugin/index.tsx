@@ -143,6 +143,7 @@ async function AddSuperNavEvents(popup: SteamPopup) {
 export default async function PluginMain() {
 	logger.Log("Initializing localization");
 	await InitLocalization();
+	await App.WaitForServicesInitialized();
 
 	const components: ComponentForWindow[] = [
 		{
