@@ -1,4 +1,4 @@
-# Plugin is currently broken
+# Plugin is currently broken, disable the theme with `steam://millennium/settings/themes/disable`
 
 # **INSTALL THE MOTHERFUCKING PLUGIN**
 
