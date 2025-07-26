@@ -1,5 +1,3 @@
-# Plugin is currently broken, disable the theme with `steam://millennium/settings/themes/disable`
-
 # **INSTALL THE MOTHERFUCKING PLUGIN**
 
 On theme installation, a dialog for handling the plugin installation should appear. It will lead you to the plugin page and give you an option to enable it after you install it and restart Steam. In case the plugin will stop working, it will give you the option to revert your theme to default.
