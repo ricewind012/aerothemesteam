@@ -1,6 +1,9 @@
 import {
 	findModuleByExport,
 	findModuleExport,
+	Menu,
+	MenuItem,
+	MenuSeparator,
 	showContextMenu,
 	showModal,
 } from "@steambrew/client";
@@ -10,12 +13,7 @@ import { IconButton } from "../components/iconbutton";
 import { classes, GetMainPopupWindow, WaitForElement } from "../shared";
 
 import { BIsChinaLauncher, Config } from "../modules/config";
-import {
-	ContextMenu,
-	ContextMenuItem,
-	ContextMenuSeparator,
-	ContextMenuSubMenuItem,
-} from "../modules/contextmenu";
+import { MenuGroup } from "../modules/contextmenu";
 import { CKioskModeManager } from "../modules/kioskmodemgr";
 import { Localize } from "../modules/localization";
 import {
@@ -356,9 +354,9 @@ export class SuperNav extends Component {
 		};
 
 		showContextMenu(
-			<ContextMenu>
+			<Menu label="Menu">
 				{Object.entries(pEntries).map(([token, entries]) => (
-					<ContextMenuSubMenuItem label={Localize(token)}>
+					<MenuGroup label={Localize(token)}>
 						{entries
 							.filter(
 								(e) =>
@@ -370,7 +368,7 @@ export class SuperNav extends Component {
 							.map((e) => {
 								const { checked, name, onClick, steamURL } = e;
 								if (name.startsWith("Separator")) {
-									return <ContextMenuSeparator />;
+									return <MenuSeparator />;
 								}
 
 								const text = Localize(name);
@@ -379,17 +377,17 @@ export class SuperNav extends Component {
 								};
 
 								return (
-									<ContextMenuItem onSelected={onClick || onClickFallback}>
+									<MenuItem onSelected={onClick || onClickFallback}>
 										<>
 											{checked && <span className={classes.jumplist.Icon} />}
 											{text}
 										</>
-									</ContextMenuItem>
+									</MenuItem>
 								);
 							})}
-					</ContextMenuSubMenuItem>
+					</MenuGroup>
 				))}
-			</ContextMenu>,
+			</Menu>,
 			this.m_elSuperNav,
 			// @ts-ignore
 			{

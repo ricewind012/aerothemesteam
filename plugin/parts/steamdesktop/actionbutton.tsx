@@ -1,4 +1,10 @@
-import { showContextMenu, sleep } from "@steambrew/client";
+import {
+	Menu,
+	MenuItem,
+	MenuSeparator,
+	showContextMenu,
+	sleep,
+} from "@steambrew/client";
 
 import { RibbonButton, RibbonGameSectionButton } from "../../components/ribbon";
 import { classes, GetMainPopupWindow } from "../../shared";
@@ -9,11 +15,6 @@ import {
 	type AppAction_t,
 } from "../../modules/appactions";
 import { Config } from "../../modules/config";
-import {
-	ContextMenu,
-	ContextMenuItem,
-	ContextMenuSeparator,
-} from "../../modules/contextmenu";
 import { CheckIcon } from "../../modules/icons";
 import { Localize } from "../../modules/localization";
 import { GetAppMobileCategories } from "../../modules/remoteplay";
@@ -50,7 +51,7 @@ function StreamingContextMenu({ overview, onStreamingTargetSelected }) {
 	};
 
 	return (
-		<ContextMenu>
+		<Menu label={Localize("#AppDetails_Feature_RemotePlayTogether")}>
 			{overview.per_client_data.map((e) => (
 				<StreamingClientContextMenuItem
 					key={e.clientid}
@@ -62,14 +63,14 @@ function StreamingContextMenu({ overview, onStreamingTargetSelected }) {
 			))}
 			{bHasMobileCategories && (
 				<div>
-					<ContextMenuSeparator />
+					<MenuSeparator />
 					<RemotePlayAnywhereContextMenuItem
 						overview={overview}
 						onSelected={onRemotePlayItemSelected}
 					/>
 				</div>
 			)}
-		</ContextMenu>
+		</Menu>
 	);
 }
 
@@ -96,7 +97,7 @@ function StreamingClientContextMenuItem({
 }
 
 const StreamingContextMenuItem = (props) => (
-	<ContextMenuItem
+	<MenuItem
 		{...props}
 		className={classes.appactionbutton.StreamingContextMenuItem}
 	/>
