@@ -1,4 +1,5 @@
 import { render } from "react-dom";
+import { sleep } from "@steambrew/client";
 
 import * as parts from "./parts";
 import { CLog } from "./logger";
@@ -144,6 +145,8 @@ export default async function PluginMain() {
 	logger.Log("Initializing localization");
 	await InitLocalization();
 	await App.WaitForServicesInitialized();
+	// TODO: shitty workaround for millennium ui rerender
+	await sleep(1_000);
 
 	const components: ComponentForWindow[] = [
 		{
