@@ -117,7 +117,7 @@ function BuildSteamRootMenuEntries(): RootMenuEntry[] {
 		},
 		{
 			name: "Millennium",
-			steamURL: "steam://millennium",
+			steamURL: "steam://millennium/settings",
 		},
 		{
 			name: "Separator4",
