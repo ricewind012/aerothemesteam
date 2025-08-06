@@ -142,9 +142,11 @@ async function AddSuperNavEvents(popup: SteamPopup) {
 }
 
 export default async function PluginMain() {
-	logger.Log("Initializing localization");
 	await InitLocalization();
+	// Wait until services load to prevent early access to modal manager
 	await App.WaitForServicesInitialized();
+	// Load(ing!) correctly... no API yet? so go with a global
+	globalThis.aerothemesteamPluginLoading = true;
 	// TODO: shitty workaround for millennium ui rerender
 	await sleep(1_000);
 

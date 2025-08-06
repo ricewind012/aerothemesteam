@@ -18,6 +18,11 @@ function RestartJSContext() {
 	SteamClient.Browser.RestartJSContext();
 }
 
+function Link(props) {
+	const { href, text } = props;
+	return createElement("a", { href, target: "_blank" }, text);
+}
+
 /**
  * @note Text is not localized in case of a plugin error and duplicating code
  * @param {import("@steambrew/client").ConfirmModalProps} props
@@ -53,8 +58,13 @@ function ShowConfirmDialog(props) {
 				Fragment,
 				null,
 				"The plugin required for the theme to function as intended is not installed. You can install it ",
-				createElement("a", { href: PLUGIN_LINK, target: "_blank" }, "here"),
-				".",
+				Link({ href: PLUGIN_LINK, text: "here" }),
+				". ",
+				createElement("br", null),
+				Link({
+					href: "steam://millennium/settings/plugins",
+					text: "Go to Millennium plugins",
+				}),
 			),
 			strOKButtonText: "Restart",
 			onOK: () => {
@@ -68,7 +78,7 @@ function ShowConfirmDialog(props) {
 			strOKButtonText: "Enable",
 			onOK: async () => {
 				plugins[index].enabled = true;
-				await CallCorePluginMethod("update_plugin_status", {
+				await CallCorePluginMethod("ChangePluginStatus", {
 					pluginJson: JSON.stringify(plugins),
 				});
 				RestartJSContext();
@@ -80,8 +90,8 @@ function ShowConfirmDialog(props) {
 				"It seems like the plugin had an error. Would you like to disable the theme?",
 			strOKButtonText: "Disable",
 			onOK: async () => {
-				await CallCorePluginMethod("cfg.change_theme", {
-					theme_name: "__default__",
+				await CallCorePluginMethod("theme_config.change_theme", {
+					theme_name: "default",
 				});
 				RestartJSContext();
 			},
@@ -91,7 +101,7 @@ function ShowConfirmDialog(props) {
 	const msgIndex = [
 		index === -1,
 		!plugins[index]?.enabled,
-		!PLUGIN_LIST[INTERNAL_PLUGIN_NAME],
+		index !== -1 && !globalThis.opener.aerothemesteamPluginLoading,
 	].findIndex(Boolean);
 	if (msgIndex === -1) {
 		return;
