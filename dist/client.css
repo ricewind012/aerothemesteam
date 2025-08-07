@@ -876,6 +876,50 @@ div._2O6m8U2N2S2aJKBf3H0Zxn{
   padding-bottom:7px !important;
   margin-bottom:var(--tabpanel_spacing) !important;
   width:100% !important;
+}:root{
+  --MillenniumText-HeadingLarge:normal 700 26px/1.4 var(--MillenniumText-Font);
+  --MillenniumText-HeadingMedium:normal 700 22px/1.4 var(--MillenniumText-Font);
+  --MillenniumText-HeadingSmall:normal 700 18px/1.4 var(--MillenniumText-Font);
+  --MillenniumText-BodyLarge:normal 400 16px/1.4 var(--MillenniumText-Font);
+  --MillenniumText-BodyMedium:normal 400 14px/1.4 var(--MillenniumText-Font);
+  --MillenniumText-BodySmall:normal 400 12px/1.4 var(--MillenniumText-Font);
+  --MillenniumTextColor-Normal:var(--fg-main);
+  --MillenniumTextColor-Muted:color-mix(
+  	in srgb,
+  	var(--fg-main) 50%,
+  	transparent
+  );
+  --MillenniumTextColor-Success:#59bf40;
+  --MillenniumTextColor-Error:#bf4040;
+  --MillenniumTextColor-Warning:#bfbd40;
+  --MillenniumSpacing-Small:4px;
+  --MillenniumSpacing-Normal:8px;
+  --MillenniumSpacing-Large:16px;
+  --MillenniumControls-BorderRadius:var(--border-radius);
+  --MillenniumControls-IconSize:var(--icon-size);
+}
+
+.MillenniumThemes_ThemeItem{
+  --bg-mask:linear-gradient(-135deg, black, transparent) !important;
+  --separator-size:2px !important;
+  text-shadow:1px 1px color-mix(in srgb, var(--dialog_bg) 50%, transparent) !important;
+  margin-block:calc(var(--separator-size) / 4) !important;
+}
+.MillenniumThemes_ThemeItem::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:0 !important;
+  z-index:-1 !important;
+  mask:var(--bg-mask) !important;
+  background-image:var(--img) !important;
+  background-size:cover !important;
+}
+.MillenniumThemes_ThemeItem::after{
+  bottom:calc(var(--separator-size) * -1) !important;
+  height:var(--separator-size) !important;
+  mask:var(--bg-mask) !important;
+  background:linear-gradient(var(--dialog_bg), color-mix(in srgb, var(--dialog_fg) 50%, transparent)) !important;
+  box-shadow:inset 0 1px var(--dialog_bg) !important;
 }._1ifM6luJEQ5H2O1Y3S6F_R{
   color:inherit !important;
   font:inherit !important;
