@@ -5,7 +5,7 @@
 	font-weight: bold;
 	letter-spacing: 0;
 	text-transform: unset;
-	border-bottom: 1px solid var(--pagedsettings_separator);
+	border-bottom: var(--pagedsettings_separator);
 	padding: 6px;
 	padding-bottom: 7px;
 	margin-bottom: var(--tabpanel_spacing);

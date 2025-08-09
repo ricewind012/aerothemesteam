@@ -141,6 +141,29 @@ async function AddSuperNavEvents(popup: SteamPopup) {
 	});
 }
 
+/**
+ * Adds theme preview image vars for Millennium theme fields.
+ */
+async function AddThemeFieldVars(popup: SteamPopup) {
+	const themes = JSON.parse(
+		// No API for finding themes yet? so use the internal API instead, the
+		// compiler also changes the string to using this plugin's backend...
+		await globalThis["Millennium"].callServerMethod("core", "find_all_themes"),
+	);
+	const textContent = themes
+		.map(
+			(e) => `
+				.MillenniumThemes_ThemeItem[data-theme-folder-name-on-disk="${e.native}"] {
+					--img: url("${e.data.splash_image}");
+				}
+			`,
+		)
+		.join("\n");
+
+	const style = Object.assign(document.createElement("style"), { textContent });
+	popup.m_popup.document.head.appendChild(style);
+}
+
 export default async function PluginMain() {
 	await InitLocalization();
 	// Wait until services load to prevent early access to modal manager
@@ -211,4 +234,5 @@ export default async function PluginMain() {
 
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, PatchUIStore);
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, AddSuperNavEvents);
+	AddPopupCreatedCallback(MAIN_WINDOW_NAME, AddThemeFieldVars);
 }
