@@ -20,6 +20,10 @@
 	&#Selected {
 		background-color: var(--gamelistentry_active-bg);
 	}
+
+	* {
+		background-color: transparent;
+	}
 }
 
 #FriendIsPlaying {
@@ -38,7 +42,6 @@
 }
 
 #GameListEntryContainer {
-	background-color: transparent;
 	padding: 3px 6px 3px 38px;
 
 	align-items: center;
