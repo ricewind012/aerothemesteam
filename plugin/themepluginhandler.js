@@ -20,7 +20,9 @@ function RestartJSContext() {
 
 function Link(props) {
 	const { href, text } = props;
-	return createElement("a", { href, target: "_blank" }, text);
+	const target = href.startsWith("https://") ? "_blank" : "";
+
+	return createElement("a", { href, target }, text);
 }
 
 /**
