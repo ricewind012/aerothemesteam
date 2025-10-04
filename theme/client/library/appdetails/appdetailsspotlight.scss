@@ -1,3 +1,36 @@
+@use "shared/extends/library";
+
+#AppDetailsSpotlightDemo {
+	@include library.spotlight;
+
+	#Buttons {
+		padding-top: var(--library_spacing);
+	}
+
+	#Header {
+		width: 200px;
+	}
+
+	#Info {
+		color: var(--blue-text);
+		padding-inline: var(--library_spacing);
+
+		& > :first-child {
+			@include library.header-primary;
+
+			margin-bottom: var(--library_text-spacing);
+		}
+	}
+
+	#Title {
+		@include library.description;
+	}
+
+	#VisitButton {
+		height: unset;
+	}
+}
+
 #Inner {
 	width: unset;
 }

@@ -18,4 +18,8 @@
 
 #Spotlights {
 	padding: 0;
+
+	& > :last-child {
+		margin-bottom: var(--library_spacing);
+	}
 }
