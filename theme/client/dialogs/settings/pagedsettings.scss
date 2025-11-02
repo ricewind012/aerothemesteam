@@ -1,14 +1,6 @@
 @use "shared/extends/list";
 @use "shared/extends/settings";
 
-:root {
-	--pagedsettings_border: 1px solid var(--tabpanel_border);
-	--pagedsettings_dialog-spacing: 6px;
-	--pagedsettings_separator: 2px solid #7ba4e0;
-	--pagedsettings_tab-separator: #c5c5c5;
-	--pagedsettings_tab-separator2: #dde7ee;
-}
-
 #PageListItem_Icon {
 	display: none;
 }

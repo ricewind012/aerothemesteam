@@ -1,17 +1,6 @@
 @use "shared/extends/contextmenu";
 @use "shared/extends/list";
 
-:root {
-	--contextmenu_container-bg: #f0f0f0;
-	--contextmenu_container-border-inner: #f5f5f5;
-	--contextmenu_container-border-outer: #979797;
-	--contextmenu_container-spacing: 2px;
-	--contextmenu_item-height: 22px;
-	--contextmenu_left-spacing: 27px;
-	--contextmenu_separator-dark: #e0e0e0;
-	--contextmenu_separator-light: #fff;
-}
-
 $icons: (
 	"Check": "context-menu-checkmark",
 	"DialogCheck": "context-menu-checkmark",

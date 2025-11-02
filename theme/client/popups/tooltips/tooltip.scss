@@ -1,10 +1,5 @@
 @use "shared/extends/tooltip";
 
-:root {
-	--tooltip_background: linear-gradient(180deg, #fff, #c9d9ef);
-	--tooltip_description-spacing: 9px;
-}
-
 #TextToolTip {
 	@include tooltip.container;
 }

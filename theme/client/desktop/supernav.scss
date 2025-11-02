@@ -1,16 +1,5 @@
 @use "shared/extends/style";
 
-:root {
-	--supernav_icon-spacing: 4px;
-	--supernav_inverse-border-size: 3px;
-	--supernav_tab-gradient-end: #d7e0eb;
-	--supernav_tab-spacing-y: 9px;
-
-	&[browsertype="DirectHWND"] {
-		--supernav_tab-spacing-y: 3px;
-	}
-}
-
 #Arrow {
 	@include style.icon("nav-forward", "path");
 
