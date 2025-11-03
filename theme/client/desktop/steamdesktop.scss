@@ -19,6 +19,10 @@
 }
 
 #RootMenuBar {
+	gap: 0;
+	padding: 0;
+	margin: 0;
+
 	display: none;
 }
 
@@ -60,8 +64,19 @@
 }
 
 #Wrapper {
-	background-image:
-		linear-gradient(0deg, transparent 96.5%, #82b4ff1a 100%),
-		linear-gradient(180deg, #293b53 0%, #112034 100%);
+	background-image: var(--steamdesktop_window-gradient);
 	border: none;
+}
+
+html:not([data-millennium-plugin~="aerothemesteam_plugin"]) {
+	#DragArea,
+	#RootMenuBar {
+		display: flex;
+	}
+
+	#TopBar {
+		border-bottom: 2px solid var(--supernav_tab-gradient-end);
+
+		flex-direction: column;
+	}
 }

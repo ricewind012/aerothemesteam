@@ -1,0 +1,27 @@
+#MenuWrapper {
+	color: color-mix(
+		in srgb,
+		var(--steamdesktop_top-bar-text-color) 50%,
+		transparent
+	);
+
+	transition: none;
+
+	&:hover {
+		color: var(--steamdesktop_top-bar-text-color);
+	}
+
+	&#MenuOpen {
+		background-image:
+			linear-gradient(
+				0deg,
+				transparent 96.5%,
+				var(--steamdesktop_window-gradient-top-color) 100%
+			),
+			linear-gradient(
+				var(--steamdesktop_window-gradient-end),
+				var(--steamdesktop_window-gradient-start)
+			);
+		color: var(--steamdesktop_top-bar-text-color);
+	}
+}

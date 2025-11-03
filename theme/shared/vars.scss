@@ -107,7 +107,26 @@
 
 	--steamdesktop_border-size: 1px;
 	--steamdesktop_top-bar-drag: drag;
+	--steamdesktop_top-bar-text-color: #fff;
 	--steamdesktop_spacing: 2px;
+	--steamdesktop_window-gradient:
+		linear-gradient(
+			0deg,
+			transparent 96.5%,
+			var(--steamdesktop_window-gradient-top-color-mix) 100%
+		),
+		linear-gradient(
+			var(--steamdesktop_window-gradient-start),
+			var(--steamdesktop_window-gradient-end)
+		);
+	--steamdesktop_window-gradient-end: #112034;
+	--steamdesktop_window-gradient-start: #293b53;
+	--steamdesktop_window-gradient-top-color: #82b4ff;
+	--steamdesktop_window-gradient-top-color-mix: color-mix(
+		in srgb,
+		var(--steamdesktop_window-gradient-top-color) 10%,
+		transparent
+	);
 	--steamdesktop_window-size: calc(100% - var(--steamdesktop_border-size) * 2);
 
 	--supernav_icon-spacing: 4px;
