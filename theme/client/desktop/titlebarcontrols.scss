@@ -12,10 +12,6 @@
 	display: none;
 }
 
-#AnnouncementsButton {
-	--icon: var(--icon-rss);
-}
-
 #AnnouncementWaveSVG {
 	display: none;
 }
@@ -26,26 +22,31 @@
 	background-color: transparent;
 	padding: 0;
 
-	path {
-		display: none;
+	&#AnnouncementsButton {
+		--icon: var(--icon-rss);
 	}
 
-	svg {
-		@include style.icon;
+	&#GamepadUIToggle {
+		--icon: var(--icon-display);
+	}
+
+	&#NotificationsButton {
+		--icon: var(--icon-notifications);
 	}
 }
 
-#GamepadUIToggle {
-	--icon: var(--icon-display);
+#Icon {
+	@include style.icon;
 
-	svg {
-		position: unset;
+	// #GamepadUIToggle
+	position: unset;
+
+	path {
+		display: none;
 	}
 }
 
 #NotificationButtonContainer {
-	--icon: var(--icon-notifications);
-
 	margin: 0;
 }
 
