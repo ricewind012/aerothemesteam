@@ -12,15 +12,16 @@
 	"devDependencies": {
 		"@csstools/postcss-sass": "^5.1.1",
 		"postcss-cli": "^11.0.0",
-		"postcss-discard-comments": "^7.0.4",
+		"postcss-discard-comments": "^7.0.5",
 		"postcss-functions": "^4.0.2",
 		"postcss-scss": "^4.0.9",
-		"semantic-release": "^24.2.7",
+		"semantic-release": "^24.2.9",
 		"steam-theming-utils": "^3.3.1"
 	},
 	"dependencies": {
-		"@steambrew/client": "^5.5.0",
-		"@steambrew/ttc": "^2.6.3",
+		"@biomejs/biome": "^2.3.6",
+		"@steambrew/client": "^5.8.1",
+		"@steambrew/ttc": "^2.8.6",
 		"@types/react": "^18.3.10",
 		"@types/react-dom": "^18.3.0"
 	}

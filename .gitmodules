@@ -1,3 +1,0 @@
-[submodule "plugin/types"]
-	path = plugin/types
-	url = https://github.com/ricewind012/steam-sharedjscontext-types

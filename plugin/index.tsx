@@ -4,10 +4,11 @@ import { sleep } from "@steambrew/client";
 import * as parts from "./parts";
 import { CLog } from "./logger";
 import { classes, WaitForElement } from "./shared";
-import type { SteamPopup } from "./types/normal";
 
 import { DispatchTabChange } from "./events/tabchange";
 import { DispatchGameListChange } from "./events/gamelistchange";
+
+type SteamPopup = any;
 
 interface ComponentToRender {
 	/**

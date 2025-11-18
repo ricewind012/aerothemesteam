@@ -50,16 +50,16 @@ export class CLogTime extends CLog {
 	}
 
 	TimeStart() {
-		this.m_unDate = Number(new Date());
+		this.m_unDate = Date.now();
 	}
 
 	TimeEnd() {
-		const pCurrentDate = Number(new Date());
+		const unCurrentDate = Date.now();
 
 		this.Log(
 			"%s: took %o seconds",
 			this.m_strLabel,
-			(pCurrentDate - this.m_unDate) / 1000,
+			(unCurrentDate - this.m_unDate) / 1000,
 		);
 	}
 }

@@ -1,5 +1,3 @@
-import { CPopupManager } from "./types/normal";
-
 declare global {
 	const App: any;
 	const appStore: any;
@@ -7,7 +5,7 @@ declare global {
 	const badgeStore: any;
 	const collectionStore: any;
 	const g_FriendsUIApp: any;
-	const g_PopupManager: CPopupManager;
+	const g_PopupManager: any;
 	const LocalizationManager: any;
 	const loginStore: any;
 	const MainWindowBrowserManager: any;
@@ -17,3 +15,5 @@ declare global {
 	const uiStore: any;
 	const urlStore: any;
 }
+
+export {};

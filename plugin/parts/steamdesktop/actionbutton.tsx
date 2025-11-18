@@ -223,7 +223,6 @@ export class ActionButton extends RibbonGameSectionButton<ActionButtonState> {
 				onStreamingTargetSelected={(e) => this.OnStreamingTargetSelected(e)}
 			/>,
 			this.m_elButton,
-			// @ts-ignore
 			{
 				bOverlapHorizontal: true,
 			},

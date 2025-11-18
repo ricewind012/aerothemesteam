@@ -389,7 +389,6 @@ export class SuperNav extends Component {
 				))}
 			</Menu>,
 			this.m_elSuperNav,
-			// @ts-ignore
 			{
 				// Make it appear above the browser view
 				bForcePopup: true,
