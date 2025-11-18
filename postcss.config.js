@@ -1,13 +1,14 @@
-import fs from "node:fs";
-import path from "node:path";
-import postcssFunctions from "postcss-functions";
-import removeComments from "postcss-discard-comments";
-import postcssSassParser from "postcss-scss";
 import postcssSassPlugin from "@csstools/postcss-sass";
+import removeComments from "postcss-discard-comments";
+import postcssFunctions from "postcss-functions";
+import postcssSassParser from "postcss-scss";
 import {
 	appendImportantPlugin,
 	selectorReplacerPlugin,
 } from "steam-theming-utils/postcss-plugins";
+
+import fs from "node:fs";
+import path from "node:path";
 
 /**
  * `icon("name")` => `url("data:image/png;base64,${base64}")`

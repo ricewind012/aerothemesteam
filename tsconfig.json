@@ -1,11 +1,10 @@
 {
 	"compilerOptions": {
-		"target": "esnext",
-		"jsx": "react",
-		"jsxFactory": "window.SP_REACT.createElement",
-		"jsxFragmentFactory": "window.SP_REACT.Fragment",
-		"moduleResolution": "node"
-	},
-	"include": ["plugin/**/*"],
-	"exclude": ["plugin/types/generated"]
+		"jsx": "react-jsx",
+		"moduleResolution": "node",
+		"paths": {
+			"@/*": ["./plugin/*"]
+		},
+		"target": "esnext"
+	}
 }

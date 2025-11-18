@@ -1,14 +1,56 @@
 {
 	"$schema": "https://biomejs.dev/schemas/2.3.6/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": {
+						"groups": [
+							":PACKAGE:",
+							":BLANK_LINE:",
+							":ALIAS:",
+							":BLANK_LINE:",
+							":PATH:"
+						]
+					}
+				},
+				"useSortedKeys": "on"
+			}
+		}
+	},
 	"linter": {
 		"rules": {
 			"correctness": {
-				"noUnusedVariables": "error",
 				"noUnusedImports": "error",
+				"noUnusedVariables": "error",
 				"useJsxKeyInIterable": "off"
 			},
 			"style": {
-				"useEnumInitializers": "off"
+				"useEnumInitializers": "off",
+				"useNamingConvention": {
+					"level": "on",
+					"options": {
+						"conventions": [
+							{
+								"match": "(.+)_t",
+								"selector": {
+									"kind": "typeAlias"
+								}
+							},
+							{
+								"match": "E(.+)",
+								"selector": {
+									"kind": "enum"
+								}
+							},
+							{
+								"match": ".*"
+							}
+						],
+						"strictCase": false
+					}
+				}
 			},
 			"suspicious": {
 				"noExplicitAny": "off"

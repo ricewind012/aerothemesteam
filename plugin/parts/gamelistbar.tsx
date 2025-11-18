@@ -1,8 +1,8 @@
 import { Component } from "react";
 
-import { classes, GetMainPopupWindow } from "../shared";
+import { Localize } from "@/modules/localization";
 
-import { Localize } from "../modules/localization";
+import { classes, GetMainPopupWindow } from "../shared";
 
 interface GameListBarState {
 	text: string;
@@ -14,7 +14,7 @@ export class GameListBar extends Component<{}, GameListBarState> {
 		text: "#Theme_GameListBar_NoFilters",
 	};
 
-	componentDidMount() {
+	override componentDidMount() {
 		const wnd = GetMainPopupWindow();
 		const filterButtonsContainer = wnd.document.querySelector(
 			`.${classes.gamelistdropdown.ViewFiltersBar}`,
@@ -64,11 +64,11 @@ export class GameListBar extends Component<{}, GameListBarState> {
 		});
 	}
 
-	componentWillUnmount() {
+	override componentWillUnmount() {
 		this.observer.disconnect();
 	}
 
-	render() {
+	override render() {
 		const text = Localize(this.state.text);
 
 		return <div className="game-list-filter-status">{text}</div>;

@@ -6,18 +6,17 @@ import {
 	sleep,
 } from "@steambrew/client";
 
-import { RibbonButton, RibbonGameSectionButton } from "../../components/ribbon";
-import { classes, GetMainPopupWindow } from "../../shared";
-
+import { RibbonButton, RibbonGameSectionButton } from "@/components/ribbon";
 import {
+	type AppAction_t,
 	GetAppAction,
 	GetCallbackForAppAction,
-	type AppAction_t,
-} from "../../modules/appactions";
-import { Config } from "../../modules/config";
-import { CheckIcon } from "../../modules/icons";
-import { Localize } from "../../modules/localization";
-import { GetAppMobileCategories } from "../../modules/remoteplay";
+} from "@/modules/appactions";
+import { Config } from "@/modules/config";
+import { CheckIcon } from "@/modules/icons";
+import { Localize } from "@/modules/localization";
+import { GetAppMobileCategories } from "@/modules/remoteplay";
+import { classes, GetMainPopupWindow } from "@/shared";
 
 type MobileCategory_t = "generic" | "mobile" | "phone" | "tablet" | "tv";
 
@@ -28,16 +27,16 @@ const mapCategoryLocTokens: Record<MobileCategory_t, string[]> = {
 		"#StreamingClient_AnotherDevice",
 		"#StreamingClient_LinkDesc_Generic",
 	],
+	mobile: [
+		"#StreamingClient_MobileDevice",
+		"#StreamingClient_LinkDesc_Specific_Mobile",
+	],
 	phone: ["#StreamingClient_Phone", "#StreamingClient_LinkDesc_Specific_Phone"],
 	tablet: [
 		"#StreamingClient_TabletDevice",
 		"#StreamingClient_LinkDesc_Specific_Tablet",
 	],
 	tv: ["#StreamingClient_TV", "#StreamingClient_LinkDesc_Specific_TV"],
-	mobile: [
-		"#StreamingClient_MobileDevice",
-		"#StreamingClient_LinkDesc_Specific_Mobile",
-	],
 };
 
 function StreamingContextMenu({ overview, onStreamingTargetSelected }) {
@@ -89,9 +88,8 @@ function StreamingClientContextMenuItem({
 
 	return (
 		<StreamingContextMenuItem onSelected={onSelected}>
-			<>
-				{bSelected && <CheckIcon />} {text}
-			</>
+			{bSelected && <CheckIcon />}
+			{text}
 		</StreamingContextMenuItem>
 	);
 }
@@ -229,7 +227,7 @@ export class ActionButton extends RibbonGameSectionButton<ActionButtonState> {
 		);
 	}
 
-	onClick() {
+	OnClick() {
 		const overview = this.GetAppOverview();
 		const callback = GetCallbackForAppAction(
 			this.GetAppAction(),
@@ -242,13 +240,13 @@ export class ActionButton extends RibbonGameSectionButton<ActionButtonState> {
 		this.SetState();
 	}
 
-	componentDidMount() {
+	override componentDidMount() {
 		this.SetState();
 		SteamClient.Apps.RegisterForGameActionStart(() => this.OnGameAction());
 		SteamClient.Apps.RegisterForGameActionEnd(() => this.OnGameAction());
 	}
 
-	render() {
+	override render() {
 		const eAction = this.GetAppAction();
 		const icon = this.GetIcon(eAction);
 		const strToken = this.GetLocToken();
@@ -259,7 +257,7 @@ export class ActionButton extends RibbonGameSectionButton<ActionButtonState> {
 				icon={icon}
 				text={strToken}
 				vertical
-				onClick={() => this.onClick()}
+				onClick={() => this.OnClick()}
 				onArrowClick={() => this.OnArrowClick()}
 			/>
 		);

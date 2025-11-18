@@ -54,7 +54,9 @@ function ShowConfirmDialog(props) {
 	/** @type {import("@steambrew/client").ConfirmModalProps[]} */
 	const msgs = [
 		{
-			strTitle: "Plugin is not installed",
+			onOK: () => {
+				RestartJSContext();
+			},
 			strDescription: createElement(
 				Fragment,
 				null,
@@ -68,15 +70,9 @@ function ShowConfirmDialog(props) {
 				}),
 			),
 			strOKButtonText: "Restart",
-			onOK: () => {
-				RestartJSContext();
-			},
+			strTitle: "Plugin is not installed",
 		},
 		{
-			strTitle: "Plugin is not enabled",
-			strDescription:
-				"The plugin required for the theme to function as intended is not enabled. Enable it now?",
-			strOKButtonText: "Enable",
 			onOK: async () => {
 				plugins[index].enabled = true;
 				await CallCorePluginMethod("ChangePluginStatus", {
@@ -84,18 +80,22 @@ function ShowConfirmDialog(props) {
 				});
 				RestartJSContext();
 			},
+			strDescription:
+				"The plugin required for the theme to function as intended is not enabled. Enable it now?",
+			strOKButtonText: "Enable",
+			strTitle: "Plugin is not enabled",
 		},
 		{
-			strTitle: "Plugin error",
-			strDescription:
-				"It seems like the plugin had an error. Would you like to disable the theme?",
-			strOKButtonText: "Disable",
 			onOK: async () => {
 				await CallCorePluginMethod("theme_config.change_theme", {
 					theme_name: "default",
 				});
 				RestartJSContext();
 			},
+			strDescription:
+				"It seems like the plugin had an error. Would you like to disable the theme?",
+			strOKButtonText: "Disable",
+			strTitle: "Plugin error",
 		},
 	];
 

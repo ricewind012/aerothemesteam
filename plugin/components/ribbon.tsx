@@ -1,9 +1,9 @@
 import { Component, type FC, type ReactNode } from "react";
 
-import { IconButton } from "./iconbutton";
-import { BuildClassName } from "../shared";
+import { Localize } from "@/modules/localization";
+import { BuildClassName } from "@/shared";
 
-import { Localize } from "../modules/localization";
+import { IconButton } from "./iconbutton";
 
 interface RibbonButtonProps {
 	/** Arguments for localization. */

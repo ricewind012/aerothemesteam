@@ -1,14 +1,14 @@
-import { render } from "react-dom";
 import { sleep } from "@steambrew/client";
+import { render } from "react-dom";
 
-import * as parts from "./parts";
+import { DispatchGameListChange } from "@/events/gamelistchange";
+import { DispatchTabChange } from "@/events/tabchange";
+
 import { CLog } from "./logger";
+import * as parts from "./parts";
 import { classes, WaitForElement } from "./shared";
 
-import { DispatchTabChange } from "./events/tabchange";
-import { DispatchGameListChange } from "./events/gamelistchange";
-
-type SteamPopup = any;
+type SteamPopup_t = any;
 
 interface ComponentToRender {
 	/**
@@ -73,7 +73,7 @@ async function InitLocalization() {
  */
 function AddPopupCreatedCallback(
 	popupName: string,
-	callback: (popup: SteamPopup) => void,
+	callback: (popup: SteamPopup_t) => void,
 ) {
 	const popup = g_PopupManager.GetExistingPopup(popupName);
 	if (popup) {
@@ -97,7 +97,7 @@ function AddPopupCreatedCallback(
 /**
  * Intercepts the function that's called upon a selected game change in the library.
  */
-function PatchUIStore(popup: SteamPopup) {
+function PatchUIStore(popup: SteamPopup_t) {
 	const store = uiStore;
 	const orig = store.SetGameListSelection;
 	const doc = popup.m_popup.document.documentElement;
@@ -123,7 +123,7 @@ function PatchUIStore(popup: SteamPopup) {
 /**
  * Watches for supernav's active tab changes.
  */
-async function AddSuperNavEvents(popup: SteamPopup) {
+async function AddSuperNavEvents(popup: SteamPopup_t) {
 	const doc = popup.m_popup.document;
 	const container = await WaitForElement(`.${classes.supernav.SuperNav}`, doc);
 	const sel = classes.supernav.Selected;
@@ -136,8 +136,8 @@ async function AddSuperNavEvents(popup: SteamPopup) {
 	});
 
 	observer.observe(container, {
-		attributes: true,
 		attributeFilter: ["class"],
+		attributes: true,
 		subtree: true,
 	});
 }
@@ -145,10 +145,10 @@ async function AddSuperNavEvents(popup: SteamPopup) {
 /**
  * Adds theme preview image vars for Millennium theme fields.
  */
-async function AddThemeFieldVars(popup: SteamPopup) {
+async function AddThemeFieldVars(popup: SteamPopup_t) {
 	const themes = JSON.parse(
-		// No API for finding themes yet? so use the internal API instead, the
-		// compiler also changes the string to using this plugin's backend...
+		// No API for finding themes yet? so use the internal API instead
+		// biome-ignore lint/complexity/useLiteralKeys: not needed here
 		await globalThis["Millennium"].callServerMethod("core", "find_all_themes"),
 	);
 	const textContent = themes
@@ -176,34 +176,34 @@ export default async function PluginMain() {
 
 	const components: ComponentForWindow[] = [
 		{
-			popupName: "#WindowName_SteamDesktop",
 			parts: [
 				{
-					steamComponent: "gamelistbar",
-					componentClassName: "Container",
 					component: <parts.GameListBar />,
+					componentClassName: "Container",
+					steamComponent: "gamelistbar",
 				},
 				{
-					steamComponent: "steamdesktop",
-					componentClassName: "OuterFrame",
 					component: <parts.SteamDesktop />,
+					componentClassName: "OuterFrame",
+					steamComponent: "steamdesktop",
 				},
 				{
-					steamComponent: "supernav",
-					componentClassName: "SuperNav",
 					component: <parts.SuperNav />,
+					componentClassName: "SuperNav",
+					steamComponent: "supernav",
 				},
 				{
-					steamComponent: "titlebarcontrols",
-					componentClassName: "TitleBarControls",
 					component: <parts.TitleBarControls />,
+					componentClassName: "TitleBarControls",
+					steamComponent: "titlebarcontrols",
 				},
 			],
+			popupName: "#WindowName_SteamDesktop",
 		},
 	];
 	for (const { popupName, parts } of components) {
 		const name = LocalizationManager.LocalizeString(popupName);
-		const onPopupCreated = (popup: SteamPopup) => {
+		const onPopupCreated = (popup: SteamPopup_t) => {
 			const doc = popup.m_popup.document;
 
 			for (const token of LOC_TOKENS) {

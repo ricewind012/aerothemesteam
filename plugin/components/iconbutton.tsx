@@ -7,7 +7,7 @@ interface IconButtonProps {
 export class IconButton extends Component<
 	IconButtonProps & HTMLAttributes<HTMLDivElement>
 > {
-	render() {
+	override render() {
 		const { name } = this.props;
 
 		return (

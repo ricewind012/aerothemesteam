@@ -1,4 +1,4 @@
-import { RibbonGameSectionButton, RibbonButton } from "../../components/ribbon";
+import { RibbonButton, RibbonGameSectionButton } from "@/components/ribbon";
 
 interface FavoriteButtonState {
 	text: string;
@@ -31,20 +31,20 @@ export class FavoriteButton extends RibbonGameSectionButton<FavoriteButtonState>
 		this.setState({ text });
 	}
 
-	onClick() {
+	OnClick() {
 		this.ToggleAppFavorite();
 		this.SetFavorite();
 	}
 
-	componentDidMount() {
+	override componentDidMount() {
 		this.SetFavorite();
 	}
 
-	render() {
+	override render() {
 		const { text } = this.state;
 
 		return (
-			<RibbonButton icon="star" text={text} onClick={() => this.onClick()} />
+			<RibbonButton icon="star" text={text} onClick={() => this.OnClick()} />
 		);
 	}
 }

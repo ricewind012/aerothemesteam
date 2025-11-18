@@ -5,31 +5,29 @@ import {
 	RibbonButton,
 	RibbonContainer,
 	RibbonSection,
-} from "../../components/ribbon";
-import { GetMainPopupWindow } from "../../shared";
-
+} from "@/components/ribbon";
 import {
-	type GameListChangeEvent,
 	GAME_LIST_CHANGE_EVENT_NAME,
-} from "../../events/gamelistchange";
+	type GameListChangeEvent,
+} from "@/events/gamelistchange";
 import {
 	ESuperNavTab,
 	GetESuperNavTabFromSetting,
 	TAB_CHANGE_EVENT_NAME,
-	TabChangeEvent,
-} from "../../events/tabchange";
-
-import { AppGameInfo } from "../../modules/appgameinfo";
-import { BIsChinaLauncher, Config } from "../../modules/config";
-import { CKioskModeManager } from "../../modules/kioskmodemgr";
+	type TabChangeEvent,
+} from "@/events/tabchange";
+import { AppGameInfo } from "@/modules/appgameinfo";
+import { BIsChinaLauncher, Config } from "@/modules/config";
+import { CKioskModeManager } from "@/modules/kioskmodemgr";
+import { Localize } from "@/modules/localization";
 import {
-	EParentalFeature,
 	CParentalFeaturesManager,
-} from "../../modules/parentalfeatures";
+	EParentalFeature,
+} from "@/modules/parentalfeatures";
+import { GetMainPopupWindow } from "@/shared";
 
-import { FavoriteButton } from "./favoritebutton";
 import { ActionButton } from "./actionbutton";
-import { Localize } from "../../modules/localization";
+import { FavoriteButton } from "./favoritebutton";
 
 const k_EAppType_Demo = 8;
 
@@ -77,48 +75,48 @@ function GetAppLinks(appid: number) {
 
 	const vecLinks: LibraryLink[] = [
 		{
-			label: "#AppDetails_Links_Store",
 			icon: "steam",
+			label: "#AppDetails_Links_Store",
 			url: urlStore.BuildStoreAppURL(unDemoAppID, "primarylinks"),
 		},
 		bAvailableContentOnStore && {
-			label: "#AppDetails_Links_DLC",
 			icon: "steam",
+			label: "#AppDetails_Links_DLC",
 			url: urlStore.BuildStoreAppDlcURL(actual_appid, "primarylinks"),
 		},
 		!bIsChinaLauncher && {
-			label: "#AppDetails_Links_Community",
 			icon: "community",
+			label: "#AppDetails_Links_Community",
 			link: "GameHub",
 		},
 		bPointsShopAvailable && {
-			label: "#AppDetails_Links_PointsShop",
 			icon: "points",
+			label: "#AppDetails_Links_PointsShop",
 			url: urlStore.BuildAppPointsShopURL(actual_appid),
 		},
 		!bIsChinaLauncher && {
-			label: "#AppDetails_Link_Discussions",
 			icon: "discussions",
+			label: "#AppDetails_Link_Discussions",
 			link: "GameHubDiscussions",
 		},
 		!bIsChinaLauncher && {
-			label: "#AppDetails_Link_Guides",
 			icon: "guide",
+			label: "#AppDetails_Link_Guides",
 			link: "GameHubGuides",
 		},
 		bWorkshopVisible && {
-			label: "#AppDetails_Link_Workshop",
 			icon: "community",
+			label: "#AppDetails_Link_Workshop",
 			link: "SteamWorkshopPage",
 		},
 		bCommunityMarketPresence && {
-			label: "#AppDetails_Link_Market",
 			icon: "community",
+			label: "#AppDetails_Link_Market",
 			link: "CommunityMarketApp",
 		},
 		!CKioskModeManager.BKioskModeLocked() && {
-			label: "#AppDetails_Link_Support",
 			icon: "help",
+			label: "#AppDetails_Link_Support",
 			link: "HelpAppPage",
 		},
 	];
@@ -201,8 +199,8 @@ export class SteamDesktop extends Component<{}, SteamDesktopState> {
 			</ModalPosition>,
 			wnd,
 			{
-				popupWidth: 800,
 				popupHeight: 500,
+				popupWidth: 800,
 				strTitle: Localize("#AppDetails_Tab_GameInfo"),
 			},
 		);
@@ -229,7 +227,7 @@ export class SteamDesktop extends Component<{}, SteamDesktopState> {
 		this.setState({ appid, tab, ...ev.detail });
 	}
 
-	componentDidMount() {
+	override componentDidMount() {
 		const events = [GAME_LIST_CHANGE_EVENT_NAME, TAB_CHANGE_EVENT_NAME];
 		for (const event of events) {
 			window.addEventListener(event, (ev) => {
@@ -238,7 +236,7 @@ export class SteamDesktop extends Component<{}, SteamDesktopState> {
 		}
 	}
 
-	render() {
+	override render() {
 		const { appid, tab } = this.state;
 		if (tab === ESuperNavTab.Library && appid === -1) {
 			return <RibbonContainer />;

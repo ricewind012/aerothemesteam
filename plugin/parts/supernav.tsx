@@ -9,19 +9,19 @@ import {
 } from "@steambrew/client";
 import { Component } from "react";
 
-import { IconButton } from "../components/iconbutton";
-import { classes, GetMainPopupWindow, WaitForElement } from "../shared";
-
-import { BIsChinaLauncher, Config } from "../modules/config";
-import { MenuGroup } from "../modules/contextmenu";
-import { CKioskModeManager } from "../modules/kioskmodemgr";
-import { Localize } from "../modules/localization";
+import { IconButton } from "@/components/iconbutton";
+import { BIsChinaLauncher, Config } from "@/modules/config";
+import { MenuGroup } from "@/modules/contextmenu";
+import { CKioskModeManager } from "@/modules/kioskmodemgr";
+import { Localize } from "@/modules/localization";
 import {
 	CParentalFeaturesManager,
 	EParentalFeature,
-} from "../modules/parentalfeatures";
-import { ToolTip } from "../modules/tooltip";
-import { CVRStore } from "../modules/vrstore";
+} from "@/modules/parentalfeatures";
+import { ToolTip } from "@/modules/tooltip";
+import { CVRStore } from "@/modules/vrstore";
+
+import { classes, GetMainPopupWindow, WaitForElement } from "../shared";
 
 enum EPersonaState {
 	Offline,
@@ -109,10 +109,10 @@ function BuildSteamRootMenuEntries(): RootMenuEntry[] {
 		},
 		{
 			name: "#Menu_Settings",
-			steamURL: "steam://settings",
 			parentalFeature: bKioskModeLocked
 				? EParentalFeature.Max
 				: EParentalFeature.Invalid,
+			steamURL: "steam://settings",
 			visible: !bIsOSX,
 		},
 		{
@@ -191,13 +191,13 @@ function BuildViewRootMenuEntries(): RootMenuEntry[] {
 		{ name: "Separator3" },
 		{
 			name: "#Menu_FriendsChat",
-			steamURL: "steam://open/friends",
 			parentalFeature: EParentalFeature.Friends,
+			steamURL: "steam://open/friends",
 		},
 		{
 			name: "#Menu_Players",
-			steamURL: "steam://friends/players",
 			parentalFeature: EParentalFeature.Friends,
+			steamURL: "steam://friends/players",
 		},
 		{
 			name: "#Menu_Servers",
@@ -279,13 +279,13 @@ function BuildGamesRootMenuEntries(): RootMenuEntry[] {
 		},
 		{
 			name: "#Menu_RedeemWallet",
-			steamURL: "steam://url/RedeemWalletVoucher",
 			parentalFeature: EParentalFeature.Store,
+			steamURL: "steam://url/RedeemWalletVoucher",
 		},
 		{
 			name: "#Menu_ManageGifts",
-			steamURL: "steam://url/ManageGiftsPage",
 			parentalFeature: EParentalFeature.Store,
+			steamURL: "steam://url/ManageGiftsPage",
 		},
 		{
 			name: "#Menu_AddNonSteam",
@@ -332,7 +332,7 @@ export class SuperNav extends Component {
 	/** ref */
 	m_elSuperNav: Element | null = null;
 
-	async onClick() {
+	async OnClick() {
 		if (!this.m_elSuperNav) {
 			const wnd = GetMainPopupWindow();
 			this.m_elSuperNav = await WaitForElement(
@@ -347,10 +347,10 @@ export class SuperNav extends Component {
 		 */
 		const pEntries: Record<string, RootMenuEntry[]> = {
 			[strSteamRootMenuTitle]: BuildSteamRootMenuEntries(),
-			"#Menu_View": BuildViewRootMenuEntries(),
 			"#Menu_Friends": BuildFriendsRootMenuEntries(),
 			"#Menu_Games": BuildGamesRootMenuEntries(),
 			"#Menu_Help": BuildHelpRootMenuEntries(),
+			"#Menu_View": BuildViewRootMenuEntries(),
 		};
 
 		showContextMenu(
@@ -378,10 +378,8 @@ export class SuperNav extends Component {
 
 								return (
 									<MenuItem onSelected={onClick || onClickFallback}>
-										<>
-											{checked && <span className={classes.jumplist.Icon} />}
-											{text}
-										</>
+										{checked && <span className={classes.jumplist.Icon} />}
+										{text}
 									</MenuItem>
 								);
 							})}
@@ -397,10 +395,10 @@ export class SuperNav extends Component {
 		);
 	}
 
-	render() {
+	override render() {
 		return (
 			<ToolTip direction="bottom" toolTipContent={strSteamRootMenuTitle}>
-				<IconButton name="steam" onClick={() => this.onClick()} />
+				<IconButton name="steam" onClick={() => this.OnClick()} />
 			</ToolTip>
 		);
 	}

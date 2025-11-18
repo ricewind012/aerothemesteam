@@ -1,7 +1,7 @@
 import {
+	type ClassModule,
 	findClassModule,
 	Millennium,
-	type ClassModule,
 } from "@steambrew/client";
 
 export const classes = {
