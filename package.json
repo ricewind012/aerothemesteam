@@ -1,7 +1,7 @@
 {
 	"name": "aerothemesteam",
 	"private": true,
-	"version": "1.5.5",
+	"version": "1.6.0",
 	"type": "module",
 	"scripts": {
 		"build": "millennium-ttc --build prod",
