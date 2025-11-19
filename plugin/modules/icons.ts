@@ -1,5 +1,3 @@
-import { findModuleExport } from "@steambrew/client";
+import { FindModuleExportByString } from "@/shared";
 
-export const CheckIcon = findModuleExport((e) =>
-	e.toString().includes("SVGIcon_Check"),
-);
+export const CheckIcon = FindModuleExportByString("SVGIcon_Check");

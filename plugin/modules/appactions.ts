@@ -1,7 +1,9 @@
-import { findModuleByExport, type Module } from "@steambrew/client";
+import type { Module } from "@steambrew/client";
+
+import { FindModuleExportByString } from "@/shared";
 
 const exports: Module[] = Object.values(
-	findModuleByExport((e) => e.toString?.().includes("BIsAppBlocked()")),
+	FindModuleExportByString("BIsAppBlocked()"),
 );
 
 /**

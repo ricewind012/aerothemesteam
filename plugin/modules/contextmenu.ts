@@ -1,16 +1,11 @@
-import { findModuleByExport, type Module } from "@steambrew/client";
-import type { FC, ReactNode } from "react";
+import type { FC, PropsWithChildren } from "react";
 
-const exports = Object.values(
-	findModuleByExport((e) => e.toString().includes("ContextMenuSeparator")),
-) as Module[];
+import { FindModuleExportByString } from "@/shared";
 
-interface MenuGroupProps {
+interface MenuGroupProps extends PropsWithChildren {
 	label: string;
 	disabled?: boolean;
-	children?: ReactNode;
 }
 
-export const MenuGroup: FC<MenuGroupProps> = exports.find((e) =>
-	e.toString().includes("...e,bInGamepadUI:"),
-);
+export const MenuGroup: FC<MenuGroupProps> =
+	FindModuleExportByString("...e,bInGamepadUI:");

@@ -1,5 +1,6 @@
-import { findModuleExport } from "@steambrew/client";
 import type { FC } from "react";
+
+import { FindModuleExportByString } from "@/shared";
 
 interface AppGameInfoProps {
 	collapsible?: boolean;
@@ -14,6 +15,5 @@ interface AppGameInfoProps {
 	overview: any;
 }
 
-export const AppGameInfo: FC<AppGameInfoProps> = findModuleExport((e) =>
-	e.toString().includes("gameInfoHeight"),
-);
+export const AppGameInfo: FC<AppGameInfoProps> =
+	FindModuleExportByString("gameInfoHeight");

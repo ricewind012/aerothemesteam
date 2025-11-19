@@ -1,5 +1,6 @@
-import { findModuleExport } from "@steambrew/client";
-import type { FC, ReactNode } from "react";
+import type { FC, PropsWithChildren, ReactNode } from "react";
+
+import { FindModuleExportByString } from "@/shared";
 
 interface HoverPositionProps {
 	/**
@@ -30,10 +31,9 @@ interface HoverPositionProps {
 	nMaxLateralMoveOnScreen: number;
 }
 
-interface ToolTipProps extends Partial<HoverPositionProps> {
+interface ToolTipProps extends Partial<HoverPositionProps>, PropsWithChildren {
 	bDisabled?: boolean;
 	bNavStop?: boolean;
-	children: ReactNode;
 
 	/**
 	 * Tooltip **container** class name.
@@ -54,6 +54,5 @@ interface ToolTipProps extends Partial<HoverPositionProps> {
 	toolTipContent: ReactNode;
 }
 
-export const ToolTip: FC<ToolTipProps> = findModuleExport((e) =>
-	e.toString().includes("tool-tip-source"),
-);
+export const ToolTip: FC<ToolTipProps> =
+	FindModuleExportByString("tool-tip-source");

@@ -1,5 +1,7 @@
 import { findModuleExport } from "@steambrew/client";
 
+import { FindModuleExportByString } from "@/shared";
+
 /**
  * Global configuration constants.
  * Populated by GetWebUIConfig on websites.
@@ -27,4 +29,4 @@ enum ELauncherType {
 // launcher, and the pw csgo and pw dota2 launchers.
 //
 export const BIsChinaLauncher: (eLauncherType: ELauncherType) => boolean =
-	findModuleExport((e) => e.toString().includes("case 4:case 1:case 7:"));
+	FindModuleExportByString("case 4:case 1:case 7:");

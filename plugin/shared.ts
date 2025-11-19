@@ -1,6 +1,7 @@
 import {
 	type ClassModule,
 	findClassModule,
+	findModuleExport,
 	Millennium,
 } from "@steambrew/client";
 
@@ -19,6 +20,9 @@ export const classes = {
 
 export const BuildClassName = (vecClasses: string[]) =>
 	vecClasses.filter(Boolean).join(" ");
+
+export const FindModuleExportByString = (s: string) =>
+	findModuleExport((e) => e.toString?.().includes(s));
 
 export const GetMainPopupWindow = () =>
 	g_PopupManager.GetExistingPopup("SP Desktop_uid0").m_popup;

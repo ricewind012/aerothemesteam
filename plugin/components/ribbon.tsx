@@ -1,4 +1,4 @@
-import { Component, type FC, type ReactNode } from "react";
+import { Component, type FC, type PropsWithChildren } from "react";
 
 import { Localize } from "@/modules/localization";
 import { BuildClassName } from "@/shared";
@@ -48,8 +48,7 @@ export function RibbonButton(props: RibbonButtonProps) {
 	);
 }
 
-interface RibbonSectionProps {
-	children: ReactNode;
+interface RibbonSectionProps extends PropsWithChildren {
 	title: string;
 }
 
@@ -60,9 +59,7 @@ export const RibbonSection: FC<RibbonSectionProps> = ({ children, title }) => (
 	</div>
 );
 
-interface RibbonContainerProps {
-	children?: ReactNode;
-}
+interface RibbonContainerProps extends PropsWithChildren {}
 
 export const RibbonContainer: FC<RibbonContainerProps> = ({ children }) => (
 	<div className="ribbon-container">{children}</div>

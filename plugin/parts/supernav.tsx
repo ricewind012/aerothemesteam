@@ -21,7 +21,12 @@ import {
 import { ToolTip } from "@/modules/tooltip";
 import { CVRStore } from "@/modules/vrstore";
 
-import { classes, GetMainPopupWindow, WaitForElement } from "../shared";
+import {
+	classes,
+	FindModuleExportByString,
+	GetMainPopupWindow,
+	WaitForElement,
+} from "../shared";
 
 enum EPersonaState {
 	Offline,
@@ -40,12 +45,11 @@ const bIsLinux = Config.PLATFORM === "linux";
 const bIsOSX = Config.PLATFORM === "macos";
 const strSteamRootMenuTitle = bIsOSX ? "#Menu_Account" : "#Menu_Steam";
 
-const ActivateRetailDialog = findModuleExport((e) =>
-	e.toString().includes("#Activate_SubscriptionSuccess_Headline"),
+const ActivateRetailDialog = FindModuleExportByString(
+	"#Activate_SubscriptionSuccess_Headline",
 );
-const ShowBackupAppsDialog: (wnd: Window) => void = findModuleExport((e) =>
-	e.toString().includes("#BackupApps_Title"),
-);
+const ShowBackupAppsDialog: (wnd: Window) => void =
+	FindModuleExportByString("#BackupApps_Title");
 
 interface RootMenuEntry {
 	checked?: boolean;

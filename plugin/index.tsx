@@ -1,5 +1,6 @@
 import { sleep } from "@steambrew/client";
-import { render } from "react-dom";
+import type { ReactNode } from "react";
+import { createRoot } from "react-dom/client";
 
 import { DispatchGameListChange } from "@/events/gamelistchange";
 import { DispatchTabChange } from "@/events/tabchange";
@@ -24,7 +25,7 @@ interface ComponentToRender {
 	/**
 	 * The plugin component.
 	 */
-	component: JSX.Element;
+	component: ReactNode;
 }
 
 interface ComponentForWindow {
@@ -223,7 +224,9 @@ export default async function PluginMain() {
 					div.className = "part";
 					// Hide if not themed by anything
 					div.style.display = "none";
-					render(component, div);
+
+					const root = createRoot(div);
+					root.render(component);
 
 					logger.Log("%s: finished", steamComponent);
 				});
