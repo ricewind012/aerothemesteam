@@ -1,4 +1,4 @@
-import { sleep } from "@steambrew/client";
+import { EUIMode, sleep } from "@steambrew/client";
 import type { ReactNode } from "react";
 import { createRoot } from "react-dom/client";
 
@@ -88,11 +88,75 @@ function AddPopupCreatedCallback(
 		}
 
 		callback(popup);
-
-		// Only apply once
-		g_PopupManager.m_rgPopupCreatedCallbacks =
-			g_PopupManager.m_rgPopupCreatedCallbacks.filter((e) => e !== callback);
 	});
+}
+
+function OnUIModeChange(mode: EUIMode) {
+	if (mode === EUIMode.GamePad) {
+		logger.Log("Running in gamepad mode, bye");
+		return;
+	}
+
+	const components: ComponentForWindow[] = [
+		{
+			parts: [
+				{
+					component: <parts.GameListBar />,
+					componentClassName: "Container",
+					steamComponent: "gamelistbar",
+				},
+				{
+					component: <parts.SteamDesktop />,
+					componentClassName: "OuterFrame",
+					steamComponent: "steamdesktop",
+				},
+				{
+					component: <parts.SuperNav />,
+					componentClassName: "SuperNav",
+					steamComponent: "supernav",
+				},
+				{
+					component: <parts.TitleBarControls />,
+					componentClassName: "TitleBarControls",
+					steamComponent: "titlebarcontrols",
+				},
+			],
+			popupName: "#WindowName_SteamDesktop",
+		},
+	];
+	for (const { popupName, parts } of components) {
+		const name = LocalizationManager.LocalizeString(popupName);
+		const onPopupCreated = (popup: SteamPopup_t) => {
+			const doc = popup.m_popup.document;
+
+			for (const token of LOC_TOKENS) {
+				const localized = LocalizationManager.LocalizeString(`#${token}`);
+				doc.documentElement.style.setProperty(`--${token}`, `'${localized}'`);
+			}
+
+			if (popup.m_strTitle !== name) {
+				return;
+			}
+
+			logger.Log("Trying %o for popup %o", popupName, popup.m_strTitle);
+			for (const { steamComponent, componentClassName, component } of parts) {
+				const className = classes[steamComponent][componentClassName];
+				WaitForElement(`.${className}`, doc).then((el) => {
+					const div = el.appendChild(doc.createElement("div"));
+					div.className = "part";
+					// Hide if not themed by anything
+					div.style.display = "none";
+
+					const root = createRoot(div);
+					root.render(component);
+
+					logger.Log("%s: finished", steamComponent);
+				});
+			}
+		};
+
+		AddPopupCreatedCallback(MAIN_WINDOW_NAME, onPopupCreated);
+	}
 }
 
 /**
@@ -175,67 +239,7 @@ export default async function PluginMain() {
 	// TODO: shitty workaround for millennium ui rerender
 	await sleep(1_000);
 
-	const components: ComponentForWindow[] = [
-		{
-			parts: [
-				{
-					component: <parts.GameListBar />,
-					componentClassName: "Container",
-					steamComponent: "gamelistbar",
-				},
-				{
-					component: <parts.SteamDesktop />,
-					componentClassName: "OuterFrame",
-					steamComponent: "steamdesktop",
-				},
-				{
-					component: <parts.SuperNav />,
-					componentClassName: "SuperNav",
-					steamComponent: "supernav",
-				},
-				{
-					component: <parts.TitleBarControls />,
-					componentClassName: "TitleBarControls",
-					steamComponent: "titlebarcontrols",
-				},
-			],
-			popupName: "#WindowName_SteamDesktop",
-		},
-	];
-	for (const { popupName, parts } of components) {
-		const name = LocalizationManager.LocalizeString(popupName);
-		const onPopupCreated = (popup: SteamPopup_t) => {
-			const doc = popup.m_popup.document;
-
-			for (const token of LOC_TOKENS) {
-				const localized = LocalizationManager.LocalizeString(`#${token}`);
-				doc.documentElement.style.setProperty(`--${token}`, `'${localized}'`);
-			}
-
-			if (popup.m_strTitle !== name) {
-				return;
-			}
-
-			logger.Log("Trying %o for popup %o", popupName, popup.m_strTitle);
-			for (const { steamComponent, componentClassName, component } of parts) {
-				const className = classes[steamComponent][componentClassName];
-				WaitForElement(`.${className}`, doc).then((el) => {
-					const div = el.appendChild(doc.createElement("div"));
-					div.className = "part";
-					// Hide if not themed by anything
-					div.style.display = "none";
-
-					const root = createRoot(div);
-					root.render(component);
-
-					logger.Log("%s: finished", steamComponent);
-				});
-			}
-		};
-
-		AddPopupCreatedCallback(MAIN_WINDOW_NAME, onPopupCreated);
-	}
-
+	SteamClient.UI.RegisterForUIModeChanged(OnUIModeChange);
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, PatchUIStore);
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, AddSuperNavEvents);
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, AddThemeFieldVars);
