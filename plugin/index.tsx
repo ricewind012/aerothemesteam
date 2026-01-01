@@ -168,6 +168,11 @@ function PatchUIStore(popup: SteamPopup_t) {
 	const doc = popup.m_popup.document.documentElement;
 
 	store.SetGameListSelection = async function (section: string, appid: number) {
+		if (!appid) {
+			DispatchGameListChange(-1);
+			return;
+		}
+
 		const app = appStore.GetAppOverviewByAppID(appid);
 		const iconFilePath = urlStore.BuildCachedLibraryAssetURL(
 			appid,
@@ -211,12 +216,13 @@ async function AddSuperNavEvents(popup: SteamPopup_t) {
  * Adds theme preview image vars for Millennium theme fields.
  */
 async function AddThemeFieldVars(popup: SteamPopup_t) {
-	const themes = JSON.parse(
-		// No API for finding themes yet? so use the internal API instead
-		// biome-ignore lint/complexity/useLiteralKeys: not needed here
-		await globalThis["Millennium"].callServerMethod("core", "find_all_themes"),
+	// No API for finding themes yet? so use the internal API instead
+	// biome-ignore lint/complexity/useLiteralKeys: required here
+	const themes = await globalThis["Millennium"].callServerMethod(
+		"core",
+		"Core_FindAllThemes",
 	);
-	const textContent = themes
+	const textContent = JSON.parse(themes)
 		.map(
 			(e) => `
 				.MillenniumThemes_ThemeItem[data-theme-folder-name-on-disk="${e.native}"] {
@@ -227,6 +233,7 @@ async function AddThemeFieldVars(popup: SteamPopup_t) {
 		.join("\n");
 
 	const style = Object.assign(document.createElement("style"), { textContent });
+	logger.Log("%o", { popup });
 	popup.m_popup.document.head.appendChild(style);
 }
 

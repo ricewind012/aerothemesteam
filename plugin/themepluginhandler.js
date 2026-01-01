@@ -47,7 +47,7 @@ function ShowConfirmDialog(props) {
 
 	// FIX your shit
 	const plugins = JSON.parse(
-		await CallCorePluginMethod("find_all_plugins"),
+		await CallCorePluginMethod("Core_FindAllPlugins"),
 	).map((e) => ({ ...e, plugin_name: e.data.name }));
 	const index = plugins.findIndex((e) => e.data.name === INTERNAL_PLUGIN_NAME);
 
@@ -75,7 +75,7 @@ function ShowConfirmDialog(props) {
 		{
 			onOK: async () => {
 				plugins[index].enabled = true;
-				await CallCorePluginMethod("ChangePluginStatus", {
+				await CallCorePluginMethod("Core_ChangePluginStatus", {
 					pluginJson: JSON.stringify(plugins),
 				});
 				RestartJSContext();
@@ -87,7 +87,7 @@ function ShowConfirmDialog(props) {
 		},
 		{
 			onOK: async () => {
-				await CallCorePluginMethod("theme_config.change_theme", {
+				await CallCorePluginMethod("Core_ChangeActiveTheme", {
 					theme_name: "default",
 				});
 				RestartJSContext();
