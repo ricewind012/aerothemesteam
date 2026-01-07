@@ -187,6 +187,7 @@
 		@include contextmenu.icon-pos;
 
 		background-image: var(--icon);
+		background-size: var(--icon-size);
 	}
 
 	// The dropdown doesn't have a separate class for that...

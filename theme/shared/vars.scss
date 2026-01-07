@@ -138,6 +138,7 @@
 	--tooltip_description-spacing: 9px;
 
 	&[browsertype="DirectHWND"] {
+		--title-bar-height: 0px;
 		--steamdesktop_top-bar-drag: no-drag;
 		--supernav_tab-spacing-y: 3px;
 	}

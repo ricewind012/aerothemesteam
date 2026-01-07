@@ -17,6 +17,10 @@
 	gap: var(--pagedsettings_dialog-spacing);
 	padding: var(--pagedsettings_dialog-spacing);
 
+	html[browsertype="DirectHWND"] & {
+		padding-block-start: var(--pagedsettings_dialog-spacing);
+	}
+
 	&_PageContent {
 		background-color: var(--bg-main);
 		border: var(--pagedsettings_border);

@@ -21,6 +21,6 @@ Based on a mockup by MondySpartan: https://www.deviantart.com/mondyspartan/art/S
 
 </details>
 
-## Titlebar is missing
+## System titlebar
 
-It's going to be available in a separate plugin in the future. It's not released yet because it doesn't start early enough to modify `window.open` before the main window appears (but works for everything else). The screenshot only includes it so I don't have to take another one.
+Use the [Change Window Params plugin](https://steambrew.app/plugin?id=70961284c213) and enable "Use system titlebar".
