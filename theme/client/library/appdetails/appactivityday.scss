@@ -124,10 +124,15 @@
 	display: none;
 }
 
+#PartnerEventFeatured {
+	margin: calc(var(--library_spacing) * -1);
+}
+
 #PartnerEventFeaturedHeader {
 	@include library.section-header;
 
 	text-transform: unset;
+	letter-spacing: 0;
 	line-height: unset;
 	margin-inline: calc(var(--library_border-size) * -1);
 }
