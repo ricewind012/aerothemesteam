@@ -16,7 +16,7 @@
 		"postcss-functions": "^4.0.2",
 		"postcss-scss": "^4.0.9",
 		"semantic-release": "^24.2.9",
-		"steam-theming-utils": "^3.3.1"
+		"steam-theming-utils": "^3.4.0"
 	},
 	"dependencies": {
 		"@biomejs/biome": "^2.3.6",

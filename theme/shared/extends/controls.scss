@@ -124,7 +124,7 @@
 @mixin progress-bar-outer {
 	background-color: transparent;
 	background-image: linear-gradient(180deg, #66666680, transparent);
-	border: var(--blue-border);
+	border: 1px solid var(--blue-border);
 	box-shadow: 0 0 0 1px #fff;
 	border-radius: var(--border-radius);
 

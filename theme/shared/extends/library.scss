@@ -6,14 +6,19 @@
 	@include style.white-gradient($size: 9px);
 
 	background:
-		linear-gradient(0deg, #bdd1ea 9%, #93b0d4 54%, #506580), var(--lighter-bg),
-		var(--white-gradient);
+		linear-gradient(
+			0deg,
+			var(--library_button-bg-1) 9%,
+			var(--library_button-bg-2) 54%,
+			var(--library_button-bg-3)
+		),
+		var(--lighter-bg), var(--white-gradient);
 	color: var(--library_button-text);
 	font-size: var(--font-size);
 	font-weight: bold;
 	text-align: center;
 	line-height: 1;
-	border: var(--blue-border);
+	border: 1px solid var(--blue-border);
 	border-radius: var(--border-radius);
 	padding: 2.5px 18px;
 
@@ -36,7 +41,7 @@
 	color: var(--fg-main);
 	font-size: var(--font-size);
 	line-height: 18px;
-	border: var(--blue-border);
+	border: 1px solid var(--blue-border);
 	border-radius: 0;
 	box-shadow: none;
 	padding: #{$compact and 0 or 3px} 6px;
@@ -56,7 +61,7 @@
 }
 
 @mixin section {
-	background: none #e1e7ef;
+	background: none var(--library_section-bg);
 	border: var(--library_border);
 	border-top: none;
 	border-radius: 0;
@@ -75,7 +80,7 @@
 	color: var(--blue-text);
 	font-size: var(--font-size-small);
 	font-weight: bold;
-	border: 1px solid #9cb1ca;
+	border: 1px solid var(--library_section-header-border-color);
 	padding: var(--library_section-header-spacing-y)
 		var(--library_section-header-spacing-x);
 }

@@ -1,6 +1,6 @@
 :root {
 	// Design
-	--blue-border: 1px solid #5a7eab;
+	--blue-border: #5a7eab;
 	--blue-text: #304461;
 	--blue-dark: #bcd0e8;
 	--blue-light: #d3dfed;
@@ -78,6 +78,9 @@
 	--library_border-color: #aeb8c6;
 	--library_border-size: 1px;
 	--library_border: var(--library_border-size) solid var(--library_border-color);
+	--library_button-bg-1: #bdd1ea;
+	--library_button-bg-2: #93b0d4;
+	--library_button-bg-3: #506580;
 	--library_button-text: #273b5c;
 	--library_container-border: var(--library_border-size) solid #39577c;
 	--library_game-stat-spacing: 7px;
@@ -91,6 +94,8 @@
 	);
 	--library_icon-size: 32px;
 	--library_secondary-text-opacity: 0.5;
+	--library_section-bg: #e1e7ef;
+	--library_section-header-border-color: #9cb1ca;
 	--library_section-header-spacing-y: 2.5px;
 	--library_section-header-spacing-x: 6px;
 	--library_spacing: 12px;

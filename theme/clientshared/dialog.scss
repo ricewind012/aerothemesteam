@@ -1,5 +1,18 @@
 @use "shared/extends/controls";
+@use "shared/extends/library";
 @use "shared/extends/style";
+
+@keyframes dropfade {
+	0% {
+		opacity: 0;
+		transform: translateY(-5px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
 .DialogBody {
 	a {
@@ -32,6 +45,10 @@
 
 	width: var(--size);
 	height: var(--size);
+
+	.DialogCheckbox_Container & {
+		margin-inline-end: 4px;
+	}
 
 	svg {
 		display: none;
@@ -125,6 +142,13 @@
 	padding: 1px 3px;
 }
 
+.DialogInput_ClearAction {
+	--icon-size: 12px;
+	@include style.icon("delete", "svg");
+
+	inset-inline-end: 6px;
+}
+
 .DialogInput_Wrapper {
 	gap: 8px;
 }
@@ -136,7 +160,7 @@
 .DialogLabel,
 .DialogToggle_Label {
 	color: inherit;
-	font-size: inherit;
+	font: inherit;
 	text-transform: unset;
 }
 
@@ -144,14 +168,122 @@
 	line-height: 1;
 }
 
+.FullModalOverlay {
+	// Use this element for the animation
+	opacity: 1;
+	backdrop-filter: blur(3px) saturate(50%);
+	background: radial-gradient(transparent, rgba(0, 0, 0, 0.4));
+	transition: calc(var(--anim-time) * 2);
+
+	display: block;
+
+	&[style="display: none;"] {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	& > dialog {
+		border: none;
+	}
+
+	.DialogBody {
+		padding: var(--library_spacing);
+	}
+
+	.DialogButton {
+		@include library.button;
+
+		box-shadow: none;
+	}
+
+	.DialogContent {
+		@include library.section;
+
+		color: var(--blue-text);
+		font-size: var(--font-size);
+		border-top: var(--library_border);
+		padding: 0;
+	}
+
+	.DialogContent_InnerWidth {
+		overflow: hidden;
+	}
+
+	.DialogHeader {
+		@include library.section-header;
+
+		background-image: linear-gradient(
+			0deg,
+			var(--blue-dark),
+			var(--blue-light)
+		);
+		font-size: var(--font-size);
+		line-height: 2;
+		margin: calc(var(--library_border-size) * -1);
+
+		display: block;
+	}
+
+	.DialogTwoColLayout {
+		gap: var(--library_spacing-x05);
+	}
+
+	.ModalOverlayBackground {
+		display: none;
+	}
+
+	.ModalPosition_Content {
+		animation: dropfade var(--anim-time) ease-in;
+	}
+}
+
+.ModalPosition.Destructive {
+	.DialogButton {
+		background:
+			linear-gradient(
+				0deg,
+				hsl(from var(--library_button-bg-1) 0 s l) 9%,
+				hsl(from var(--library_button-bg-2) 0 s l) 54%,
+				hsl(from var(--library_button-bg-3) 0 s l)
+			),
+			var(--lighter-bg), var(--white-gradient);
+		color: hsl(from var(--library_button-text) 0 s l);
+		border-color: hsl(from var(--blue-border) 0 s l);
+	}
+
+	.DialogContent {
+		background-color: hsl(from var(--library_section-bg) 0 s l);
+		color: hsl(from var(--blue-text) 0 s l);
+		border-color: hsl(from var(--library_border-color) 0 s l);
+	}
+
+	.DialogHeader {
+		background-image: linear-gradient(
+			0deg,
+			hsl(from var(--blue-dark) 0 s l),
+			hsl(from var(--blue-light) 0 s l)
+		);
+		color: hsl(from var(--blue-text) 0 s l);
+		border-color: hsl(from var(--library_section-header-border-color) 0 s l);
+	}
+}
+
 .ModalPosition_Content {
 	color: inherit;
 	font-size: inherit;
 	font-weight: normal;
+	box-shadow: none;
 
-	& > div {
+	.PopupFullWindow & > div {
 		padding-top: var(--title-bar-height);
 	}
+}
+
+.ModalPosition_Dismiss {
+	@include style.icon("delete", "svg");
+
+	inset-inline-end: 8px;
+	inset-block-start: 8px;
 }
 
 .ModalPosition_TopBar {
