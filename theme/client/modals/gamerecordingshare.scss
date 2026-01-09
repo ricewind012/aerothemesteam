@@ -1,0 +1,59 @@
+@use "shared/extends/style";
+
+#ClientDetails {
+	height: unset;
+
+	#LastSeen {
+		font-style: normal;
+	}
+
+	#Name {
+		font-weight: bold;
+	}
+
+	#PlatformIcon {
+		color: inherit;
+		fill: currentColor;
+
+		width: var(--icon-size);
+		height: var(--icon-size);
+
+		.DialogMenuPosition & {
+			position: absolute;
+			left: 2px;
+		}
+	}
+}
+
+#CreateLinkDialog,
+#SendClipDialog {
+	.DialogFooter {
+		margin: var(--library_spacing);
+		margin-block-start: 0;
+	}
+}
+
+#Content {
+	gap: var(--library_spacing-x05);
+	padding: var(--library_spacing);
+
+	#Error {
+		color: hsl(from var(--blue-text) 0 s l);
+		font: inherit;
+	}
+
+	#MobileLink {
+		@include style.link;
+	}
+}
+
+#Description,
+#DescriptionSmall {
+	color: inherit;
+	font: inherit;
+	padding: 0;
+}
+
+#DropDown {
+	margin: 0;
+}

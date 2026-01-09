@@ -1,0 +1,35 @@
+#ActionLabel {
+	text-transform: unset;
+
+	svg {
+		display: none;
+	}
+}
+
+#Description {
+	background: none;
+	color: color-mix(in srgb, currentColor 50%, transparent);
+	font-size: var(--font-size-small);
+	padding: 0;
+	margin-block-start: 4px;
+}
+
+#Option {
+	margin: 0;
+}
+
+#Required {
+	margin-inline-start: 4px;
+}
+
+#SaveCollectionContainer {
+	.DialogLabel {
+		margin-block-start: 0;
+	}
+}
+
+#TwoOptionsContainer {
+	background-color: transparent;
+	border-radius: 0;
+	gap: var(--library_spacing);
+}

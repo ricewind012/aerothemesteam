@@ -1,0 +1,41 @@
+@use "shared/extends/controls";
+
+#DescribeGame {
+	margin-block: 0 4px;
+}
+
+#FreeCheckbox {
+	.HelperTooltip {
+		display: none;
+	}
+}
+
+#Header {
+	color: var(--blue-text);
+	font-size: var(--font-size-xlarge);
+	border-bottom: 2px solid transparent;
+	border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
+}
+
+#ReviewSettingsRow {
+	& > span {
+		line-height: 22px;
+		margin-inline-end: 4px;
+	}
+}
+
+#ReviewTextArea {
+	@extend %textfield-base;
+}
+
+#WriteReviewContainer {
+	font-size: inherit;
+
+	#RatingContainer {
+		margin-block: var(--library_spacing);
+	}
+
+	.DialogInputLabelGroup {
+		margin: 0;
+	}
+}

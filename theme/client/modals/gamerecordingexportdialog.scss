@@ -1,0 +1,79 @@
+@use "shared/extends/library";
+
+#Content {
+	color: var(--blue-text);
+	font-size: var(--font-size);
+	margin: var(--library_spacing);
+
+	hr {
+		border-block-end: 2px solid var(--blue-border);
+		margin-block: var(--library_spacing-x05);
+	}
+}
+
+#DetailBlock {
+	font: inherit;
+
+	#Header {
+		@include library.header-primary;
+
+		letter-spacing: 0;
+		text-transform: none;
+		margin-block-end: var(--library_spacing-x05);
+	}
+
+	#Primary {
+		@include library.header-secondary;
+
+		margin-block-end: var(--library_spacing-x05);
+	}
+}
+
+#ExportPreview {
+	gap: var(--library_spacing);
+	padding-block-start: var(--library_spacing);
+
+	#Thumbnail {
+		border-radius: var(--border-radius-large);
+	}
+}
+
+#PathRow {
+	#DiskIcon {
+		// Makes it appear not blurred
+		--icon-size: 18px;
+
+		color: inherit;
+		padding: 0;
+		margin: auto;
+
+		position: absolute;
+		inset: 0;
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+
+	#File {
+		@include library.header;
+	}
+
+	#Path {
+		@include library.description;
+	}
+}
+
+#SettingRow {
+	color: inherit;
+	font: inherit;
+	margin-block: 2px;
+}
+
+#Slider {
+	& ~ hr {
+		display: none;
+	}
+}
+
+#SliderHeader {
+	@include library.header;
+}

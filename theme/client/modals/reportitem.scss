@@ -1,0 +1,17 @@
+@use "shared/extends/controls";
+
+#Description,
+#Description2,
+#DMCA {
+	color: inherit;
+	font: inherit;
+	margin-block: 0 var(--library_spacing-x05);
+}
+
+#InputBox {
+	@extend %textfield-base;
+
+	margin-block-end: var(--library_spacing-x05);
+
+	width: 100%;
+}

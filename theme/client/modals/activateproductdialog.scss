@@ -1,0 +1,35 @@
+@use "shared/extends/library";
+
+#ActivateProductDialog {
+	.DialogFooter {
+		margin: var(--library_spacing);
+		margin-block-start: 0;
+	}
+
+	.DialogInput_Wrapper {
+		margin-inline: var(--library_spacing);
+	}
+}
+
+#HeaderContainer {
+	all: unset;
+}
+
+#InfoExample {
+	color: inherit;
+	font-size: var(--font-size-small);
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#InfoExampleHeader {
+	@include library.header;
+
+	letter-spacing: 0;
+	text-transform: none;
+	margin-block-start: 8px;
+}
+
+#ProductActivationInfoContainerDesktop {
+	padding: var(--library_spacing);
+}

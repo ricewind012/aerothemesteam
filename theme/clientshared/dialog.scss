@@ -186,17 +186,17 @@
 		border: none;
 	}
 
-	.DialogBody {
+	:where(.DialogBody) {
 		padding: var(--library_spacing);
 	}
 
-	.DialogButton {
+	:where(.DialogButton) {
 		@include library.button;
 
 		box-shadow: none;
 	}
 
-	.DialogContent {
+	:where(.DialogContent) {
 		@include library.section;
 
 		color: var(--blue-text);
@@ -205,11 +205,11 @@
 		padding: 0;
 	}
 
-	.DialogContent_InnerWidth {
+	:where(.DialogContent_InnerWidth) {
 		overflow: hidden;
 	}
 
-	.DialogHeader {
+	:where(& .DialogHeader) {
 		@include library.section-header;
 
 		background-image: linear-gradient(

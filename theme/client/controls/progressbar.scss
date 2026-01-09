@@ -1,0 +1,9 @@
+@use "shared/extends/controls";
+
+#ProgressBar {
+	@include controls.progress-bar-outer;
+}
+
+#Percent {
+	@include controls.progress-bar-inner;
+}

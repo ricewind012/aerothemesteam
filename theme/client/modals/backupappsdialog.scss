@@ -1,0 +1,20 @@
+#BackupAppsBrowse {
+	margin: 0;
+}
+
+#BackupAppsDialog {
+	.DialogBody {
+		padding-block-start: 4px;
+	}
+
+	.DialogBodyText {
+		padding: var(--library_spacing);
+		padding-block-end: 0;
+		margin: 0;
+	}
+
+	.DialogFooter {
+		margin: var(--library_spacing);
+		margin-block-start: 0;
+	}
+}
