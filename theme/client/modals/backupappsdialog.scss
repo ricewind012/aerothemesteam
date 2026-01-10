@@ -18,3 +18,10 @@
 		margin-block-start: 0;
 	}
 }
+
+// Not the same as .DialogBodyText, this one is in .DialogBody
+#DialogBodyText {
+	color: inherit;
+	font: inherit;
+	padding-block: var(--library_spacing) 4px;
+}

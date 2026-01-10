@@ -1,0 +1,117 @@
+@use "shared/extends/library";
+@use "shared/extends/list";
+@use "shared/extends/style";
+
+#AppsToInstall {
+	border: none;
+	padding: 0;
+	margin: 0;
+
+	position: relative;
+}
+
+#AppToInstall {
+	line-height: inherit;
+	border: none;
+	padding: 0;
+
+	align-items: center;
+
+	#AppLogo {
+		margin-inline-end: var(--library_spacing-x05);
+	}
+
+	#AppName {
+		@include library.header-primary;
+
+		flex: 0 0 auto;
+	}
+
+	#DiskSpace {
+		@include style.parentheses;
+
+		color: color-mix(in srgb, var(--blue-text) 50%, transparent);
+		font: inherit;
+		text-align: start;
+		margin-inline: 4px 0;
+	}
+}
+
+#CreateShortcuts {
+	gap: 0;
+	margin-block: var(--library_spacing-x05);
+
+	flex-direction: column;
+}
+
+#FolderOption {
+	@include list.item;
+
+	font: inherit;
+	margin: 0;
+
+	&#Active {
+		@include list.item-active;
+	}
+
+	#DiskSpace {
+		font: inherit;
+		text-transform: none;
+	}
+
+	#FolderFlag {
+		@include style.icon("download");
+
+		margin: 0;
+	}
+
+	#FolderFlagStar {
+		@include style.icon("star");
+
+		margin: 0;
+	}
+
+	#FolderName {
+		font-weight: bold;
+	}
+
+	svg {
+		display: none;
+	}
+}
+
+#FolderSelector {
+	border-top: 2px solid var(--blue-border);
+	padding-block: var(--library_spacing);
+
+	#FolderSettings {
+		all: unset;
+
+		// fix some bullshit css behavior
+		.tool-tip-source {
+			display: flex;
+		}
+
+		svg {
+			@include style.icon("settings", "path");
+		}
+	}
+
+	#Header {
+		@include library.header-secondary;
+
+		letter-spacing: 0;
+		line-height: inherit;
+		text-transform: none;
+
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	& > :not([class]) {
+		background-color: var(--bg-main);
+		color: var(--fg-main);
+		border: 1px solid var(--blue-border);
+		padding: 2px;
+	}
+}

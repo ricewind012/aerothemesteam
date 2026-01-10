@@ -46,12 +46,16 @@
 	width: var(--size);
 	height: var(--size);
 
-	.DialogCheckbox_Container & {
-		margin-inline-end: 4px;
-	}
-
 	svg {
 		display: none;
+	}
+}
+
+.DialogCheckbox_Container {
+	margin: 0;
+
+	.DialogCheckbox {
+		margin-inline-end: 4px;
 	}
 }
 
@@ -226,6 +230,10 @@
 
 	.DialogTwoColLayout {
 		gap: var(--library_spacing-x05);
+
+		& > ._DialogLayout {
+			min-width: unset;
+		}
 	}
 
 	.ModalOverlayBackground {
