@@ -1,0 +1,105 @@
+@use "shared/extends/library";
+@use "shared/extends/list";
+@use "shared/extends/style";
+
+#Button {
+	@include list.item;
+
+	color: var(--blue-text);
+
+	&#Selected {
+		@include list.item-active;
+	}
+
+	#Label {
+		@include library.header;
+
+		letter-spacing: 0;
+	}
+
+	#Points {
+		@include library.description;
+
+		letter-spacing: 0;
+	}
+
+	#PointsAmountIcon {
+		padding-inline-end: 4px;
+	}
+}
+
+#ButtonContainer {
+	background-color: var(--bg-main);
+	border: 1px solid var(--blue-border);
+	gap: 2px;
+	padding: 2px;
+	margin: var(--library_spacing);
+	margin-block-start: var(--library_spacing-x05);
+}
+
+#Divider {
+	display: none;
+}
+
+#Footer {
+	margin: var(--library_spacing);
+	margin-block-start: 0;
+
+	#Action {
+		min-width: unset;
+	}
+
+	#BalanceDetails {
+		line-height: inherit;
+	}
+
+	#BalanceAmount {
+		@include library.description;
+
+		letter-spacing: 0;
+	}
+
+	#BalanceLabel {
+		@include library.header;
+
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	#NotEnoughPoints {
+		opacity: 1;
+		font: inherit;
+	}
+
+	a .DialogButton {
+		all: unset;
+	}
+}
+
+#FooterLink {
+	@include style.link;
+}
+
+#Header {
+	#Description {
+		color: inherit;
+		font: inherit;
+		margin: var(--library_spacing);
+		margin-block-end: 0;
+	}
+
+	#Title {
+		@include library.section-header;
+
+		background-image: linear-gradient(
+			0deg,
+			var(--blue-dark),
+			var(--blue-light)
+		);
+		font-size: var(--font-size);
+		line-height: 2;
+		letter-spacing: 0;
+		text-transform: none;
+		margin: calc(var(--library_border-size) * -1);
+	}
+}
