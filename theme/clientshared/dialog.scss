@@ -161,6 +161,31 @@
 	border-radius: 0;
 }
 
+.DialogRoundCheckboxField {
+	margin: 0;
+
+	width: unset;
+	height: unset;
+}
+
+.DialogRoundCheckboxField_Container {
+	gap: 7px;
+	margin-block-end: 7px;
+}
+
+.DialogRoundCheckboxField_Control {
+	@include controls.input-base("radio", ".Active", ".Disabled");
+
+	background-color: transparent;
+
+	width: var(--size);
+	height: var(--size);
+}
+
+.DialogRoundCheckboxField_OuterCircle {
+	display: none;
+}
+
 .DialogLabel,
 .DialogToggle_Label {
 	color: inherit;

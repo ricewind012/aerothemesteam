@@ -1,0 +1,39 @@
+#AutoExplainer {
+	color: inherit;
+	font: inherit;
+	margin: var(--library_spacing);
+	margin-block-start: 0;
+}
+
+#BitrateOption {
+	color: inherit;
+	font: inherit;
+
+	#Emphasis {
+		color: inherit;
+	}
+}
+
+#BitRateTable {
+	background-color: var(--table_bg);
+	color: var(--fg-main);
+	font: inherit;
+	border: 1px solid var(--table_border);
+	border-radius: 0;
+	margin: var(--library_spacing);
+	margin-block: 0 auto;
+
+	// wtf
+	width: calc(100% - var(--library_spacing) * 2);
+
+	th {
+		color: inherit;
+	}
+}
+
+#DropDownRow {
+	margin: var(--library_spacing);
+
+	// wtf
+	width: calc(100% - var(--library_spacing) * 2);
+}

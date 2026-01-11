@@ -84,8 +84,11 @@
 }
 
 #Header {
-	color: inherit;
-	font: inherit;
+	// For some reason, gamerecordingsettings also has the exact same class
+	&:not(.DialogHeader) {
+		color: inherit;
+		font: inherit;
+	}
 
 	#BackgroundSetting & {
 		letter-spacing: 0;
