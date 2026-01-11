@@ -1,0 +1,52 @@
+@use "shared/extends/library";
+
+@mixin -footer($header, $description) {
+	color: var(--blue-light);
+	line-height: inherit;
+	// undo shitty layout...
+	padding-top: 0;
+
+	#RecentGameFooter > & {
+		justify-content: center;
+	}
+
+	&#{$header} {
+		@include library.header;
+	}
+
+	&#{$description} {
+		@include library.description;
+	}
+}
+
+#FooterBlurImage {
+	opacity: 1;
+	filter: brightness(0.5);
+	margin: calc(-25% - var(--radius) * 2) 0;
+
+	width: inherit;
+}
+
+#FooterBlurImageContainer {
+	--radius: 18px;
+
+	filter: blur(var(--radius));
+
+	overflow: visible;
+	inset: calc(var(--radius) * -0.5);
+	width: calc(100% + var(--radius));
+	height: calc(100% + var(--radius));
+}
+
+#PlaytimeDetails {
+	@include -footer($header: "#PlayedRecent", $description: "#PlayedTotal");
+}
+
+#PortraitMessage {
+	@include -footer($header: "#Message", $description: "#SubMessage");
+
+	#Message {
+		letter-spacing: 0;
+		text-transform: unset;
+	}
+}
