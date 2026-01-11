@@ -1,0 +1,20 @@
+@use "shared/extends/dialog";
+
+#EulaDialogContent {
+	color: inherit;
+	font: inherit;
+}
+
+#EulaModalDialog {
+	@include dialog.shared("&");
+}
+
+#EULAScrolling {
+	border: 1px solid var(--blue-border);
+	box-shadow: none;
+
+	#EULAContent {
+		background-color: var(--bg-main);
+		border-radius: 0;
+	}
+}
