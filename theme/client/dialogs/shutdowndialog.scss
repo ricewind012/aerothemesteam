@@ -1,0 +1,9 @@
+@use "shared/extends/dialog";
+
+#Buttons {
+	margin-block-start: auto;
+}
+
+#ShutdownDialog {
+	@include dialog.shared(".DialogContent");
+}
