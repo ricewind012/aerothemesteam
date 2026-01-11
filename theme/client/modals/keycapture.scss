@@ -1,0 +1,40 @@
+@use "shared/extends/style";
+
+#KeyCaptureBottomRow {
+	margin: var(--library_spacing);
+	margin-block-start: auto;
+}
+
+#KeyCaptureCenter {
+	margin: var(--library_spacing);
+	margin-block-start: 0;
+
+	align-items: start;
+
+	#Explainer {
+		color: inherit;
+		font: inherit;
+		font-weight: bold;
+		margin-block-end: var(--library_spacing-x05);
+	}
+}
+
+#KeyCaptureContainer {
+	padding: 0;
+
+	#UnbindButton {
+		@include style.icon("delete", "svg");
+
+		inset-inline-end: 4px;
+	}
+}
+
+#KeyCaptureHeader #Subhead {
+	color: inherit;
+	font: inherit;
+	margin: var(--library_spacing);
+}
+
+#KeyCaptureModal {
+	justify-content: start;
+}
