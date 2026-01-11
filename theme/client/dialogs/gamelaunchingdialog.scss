@@ -1,0 +1,33 @@
+@use "shared/extends/dialog";
+@use "shared/extends/library";
+
+#GameLaunchingDialog {
+	@include dialog.shared("&");
+}
+
+#GameName {
+	@include library.header-primary;
+
+	order: -1;
+}
+
+#Launching {
+	@include library.header-secondary;
+}
+
+#Layout {
+	gap: var(--library_spacing);
+	margin: auto;
+}
+
+#OpenSteamButton {
+	margin-block-start: var(--library_spacing);
+}
+
+#RightColumn {
+	padding: 0;
+}
+
+#StatusWrapper {
+	margin-block-start: var(--library_spacing);
+}
