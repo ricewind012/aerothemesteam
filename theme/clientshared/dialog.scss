@@ -1,4 +1,5 @@
 @use "shared/extends/controls";
+@use "shared/extends/dialog";
 @use "shared/extends/library";
 @use "shared/extends/style";
 
@@ -198,11 +199,10 @@
 }
 
 .FullModalOverlay {
+	@include dialog.overlay;
+
 	// Use this element for the animation
 	opacity: 1;
-	backdrop-filter: blur(3px) saturate(50%);
-	background: radial-gradient(transparent, rgba(0, 0, 0, 0.4));
-	transition: calc(var(--anim-time) * 2);
 
 	display: block;
 

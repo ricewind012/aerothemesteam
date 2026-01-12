@@ -1,0 +1,48 @@
+@use "shared/extends/dialog";
+@use "shared/extends/library";
+
+.MillenniumDesktopSidebar {
+	--sidebar-content-spacing-inline: var(--library_spacing);
+
+	@include library.section;
+
+	color: var(--blue-text);
+	font-size: var(--font-size);
+	border: none;
+	border-inline-start: var(--library_border);
+	padding: 0;
+}
+
+.MillenniumDesktopSidebar_Content {
+	.MillenniumDesktopSidebar:not([data-focused-item-type]) & {
+		padding-block-start: var(--library_spacing);
+	}
+}
+
+.MillenniumDesktopSidebar_EditorContent {
+	padding: 0;
+
+	.MillenniumDesktopSidebar[data-focused-item-type="PLUGIN"] & {
+		padding-block-start: var(--library_spacing);
+	}
+}
+
+.MillenniumDesktopSidebar_EditorHeader {
+	border-block-end: var(--library_border);
+	box-shadow: none;
+	margin: 0;
+}
+
+.MillenniumDesktopSidebar_Overlay {
+	@include dialog.overlay;
+}
+
+.MillenniumDesktopSidebar_Title {
+	@include library.section-header;
+
+	background-color: transparent;
+	line-height: inherit;
+	border: none;
+	border-block-end: 1px solid var(--library_section-header-border-color);
+	box-shadow: none;
+}

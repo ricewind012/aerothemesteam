@@ -2,7 +2,7 @@
 export default {
 	ignore: [
 		"clientshared",
-		"client/dialogs/settings/millennium",
+		"client/desktop/millennium",
 		"client/popups/contextmenus/friendsui",
 		"client/shared",
 	],

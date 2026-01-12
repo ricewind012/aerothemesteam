@@ -1,7 +1,7 @@
 @use "shared/extends/contextmenu";
 
 #AddFolderDropdownOption {
-	--icon: var(--icon-add);
+	--icon: var(--icon-plus);
 
 	&::before {
 		content: "";

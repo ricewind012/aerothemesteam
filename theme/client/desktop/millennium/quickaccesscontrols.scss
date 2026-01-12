@@ -1,0 +1,12 @@
+@use "shared/extends/settings";
+
+#PanelSection {
+	padding-inline: var(--library_spacing);
+	margin-block-end: var(--library_spacing);
+}
+
+#PanelSectionTitle {
+	@include settings.header;
+
+	background-color: hsl(214 30% 83% / 1);
+}

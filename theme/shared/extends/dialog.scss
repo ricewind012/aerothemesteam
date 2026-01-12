@@ -1,3 +1,9 @@
+@mixin overlay {
+	backdrop-filter: blur(3px) saturate(50%);
+	background: radial-gradient(transparent, rgba(0, 0, 0, 0.4));
+	transition: calc(var(--anim-time) * 2);
+}
+
 // TODO: move to ~/clientshared/dialog when ready
 @mixin shared($content-selector) {
 	#{$content-selector} {

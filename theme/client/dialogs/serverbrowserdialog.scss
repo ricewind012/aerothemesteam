@@ -9,7 +9,7 @@
 	&::after {
 		content: "";
 
-		@include style.icon("add");
+		@include style.icon("plus");
 	}
 }
 
