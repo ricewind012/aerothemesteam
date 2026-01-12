@@ -13,7 +13,16 @@
   border-radius:0 !important;
   box-shadow:none !important;
 }
-
+@keyframes dropfade{
+  0%{
+    opacity:0;
+    transform:translateY(-5px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 .DialogBody a{
   color:blue !important;
   text-decoration:underline !important;
@@ -114,6 +123,13 @@
   display:none !important;
 }
 
+.DialogCheckbox_Container{
+  margin:0 !important;
+}
+.DialogCheckbox_Container .DialogCheckbox{
+  margin-inline-end:4px !important;
+}
+
 .DialogControlsSection:not(:first-child),
 .DialogControlsSectionHeader:not(:first-child),
 .DialogHeader:not(:first-child),
@@ -183,6 +199,22 @@
   padding:1px 3px !important;
 }
 
+.DialogInput_ClearAction{
+  --icon-size:12px !important;
+  --icon:var(--icon-delete) !important;
+  background-image:var(--icon) !important;
+  background-size:var(--icon-size) !important;
+  width:var(--icon-size) !important;
+  height:var(--icon-size) !important;
+  inset-inline-end:6px !important;
+}
+.DialogInput_ClearAction:active{
+  filter:brightness(1.25) !important;
+}
+.DialogInput_ClearAction svg{
+  display:none !important;
+}
+
 .DialogInput_Wrapper{
   gap:8px !important;
 }
@@ -191,10 +223,49 @@
   border-radius:0 !important;
 }
 
+.DialogRoundCheckboxField{
+  margin:0 !important;
+  width:unset !important;
+  height:unset !important;
+}
+
+.DialogRoundCheckboxField_Container{
+  gap:7px !important;
+  margin-block-end:7px !important;
+}
+
+.DialogRoundCheckboxField_Control{
+  --pos:calc(var(--pos-initial) + var(--size) * var(--state)) !important;
+  --pos-initial:0px !important;
+  --size:13px !important;
+  --state:0 !important;
+  background-image:url("https://steamloopback.host/skins/aerothemesteam/assets/images/radio.png") !important;
+  background-position-y:calc(var(--pos) * -1) !important;
+  background-color:transparent !important;
+  width:var(--size) !important;
+  height:var(--size) !important;
+}
+.DialogRoundCheckboxField_Control:hover{
+  --state:1 !important;
+}
+.DialogRoundCheckboxField_Control:active{
+  --state:2 !important;
+}
+.DialogRoundCheckboxField_Control.Disabled{
+  --state:3 !important;
+}
+.DialogRoundCheckboxField_Control.Active{
+  --pos-initial:calc(var(--size) * 4) !important;
+}
+
+.DialogRoundCheckboxField_OuterCircle{
+  display:none !important;
+}
+
 .DialogLabel,
 .DialogToggle_Label{
   color:inherit !important;
-  font-size:inherit !important;
+  font:inherit !important;
   text-transform:unset !important;
 }
 
@@ -202,13 +273,149 @@
   line-height:1 !important;
 }
 
+.FullModalOverlay{
+  backdrop-filter:blur(3px) saturate(50%) !important;
+  background:radial-gradient(transparent, rgba(0, 0, 0, 0.4)) !important;
+  transition:calc(var(--anim-time) * 2) !important;
+  opacity:1 !important;
+  display:block !important;
+}
+.FullModalOverlay[style="display: none;"]{
+  opacity:0 !important;
+  pointer-events:none !important;
+}
+.FullModalOverlay > dialog{
+  border:none !important;
+}
+.FullModalOverlay :where(.DialogBody){
+  padding:var(--library_spacing) !important;
+}
+.FullModalOverlay :where(.DialogButton){
+  --lighter:rgba(255, 255, 255, var(--lighter-opacity)) !important;
+  --lighter-bg:linear-gradient(0deg, var(--lighter), var(--lighter)) !important;
+  --lighter-opacity:0.35 !important;
+  --wg-opacity-1:0.75 !important;
+  --wg-opacity-2:0.25 !important;
+  --wg-color:#fff !important;
+  --wg-deg:180deg !important;
+  --wg-size:9px !important;
+  --white-gradient:linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode:color-burn !important;
+  background:linear-gradient(0deg, var(--library_button-bg-1) 9%, var(--library_button-bg-2) 54%, var(--library_button-bg-3)), var(--lighter-bg), var(--white-gradient) !important;
+  color:var(--library_button-text) !important;
+  font-size:var(--font-size) !important;
+  font-weight:bold !important;
+  text-align:center !important;
+  line-height:1 !important;
+  border:1px solid var(--blue-border) !important;
+  border-radius:var(--border-radius) !important;
+  padding:2.5px 18px !important;
+  box-shadow:none !important;
+}
+.FullModalOverlay :where(.DialogButton):active{
+  --wg-opacity-1:0.9 !important;
+  --wg-opacity-2:0.4 !important;
+  --lighter-opacity:0 !important;
+}
+.FullModalOverlay :where(.DialogContent){
+  background:none var(--library_section-bg) !important;
+  border:var(--library_border) !important;
+  border-top:none !important;
+  border-radius:0 !important;
+  color:var(--blue-text) !important;
+  font-size:var(--font-size) !important;
+  border-top:var(--library_border) !important;
+  padding:0 !important;
+}
+.FullModalOverlay :where(.DialogContent_InnerWidth){
+  overflow:hidden !important;
+}
+:where(.FullModalOverlay .DialogHeader){
+  --wg-opacity-1:0.5 !important;
+  --wg-opacity-2:0.15 !important;
+  --wg-color:#fff !important;
+  --wg-deg:180deg !important;
+  --wg-size:7px !important;
+  --white-gradient:linear-gradient(
+  	var(--wg-deg),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-1) * 100%), transparent),
+  	color-mix(in srgb, var(--wg-color) calc(var(--wg-opacity-2) * 100%), transparent)
+  		var(--wg-size),
+  	transparent var(--wg-size)
+  ) !important;
+  background-blend-mode:color-burn !important;
+  --bg:#bdd1ea !important;
+  background-image:linear-gradient(180deg, var(--bg), var(--bg)), var(--white-gradient) !important;
+  color:var(--blue-text) !important;
+  font-size:var(--font-size-small) !important;
+  font-weight:bold !important;
+  border:1px solid var(--library_section-header-border-color) !important;
+  padding:var(--library_section-header-spacing-y) var(--library_section-header-spacing-x) !important;
+  background-image:linear-gradient(0deg, var(--blue-dark), var(--blue-light)) !important;
+  font-size:var(--font-size) !important;
+  line-height:2 !important;
+  margin:calc(var(--library_border-size) * -1) !important;
+  display:block !important;
+}
+.FullModalOverlay .DialogTwoColLayout{
+  gap:var(--library_spacing-x05) !important;
+}
+.FullModalOverlay .DialogTwoColLayout > ._DialogLayout{
+  min-width:unset !important;
+}
+.FullModalOverlay .ModalOverlayBackground{
+  display:none !important;
+}
+.FullModalOverlay .ModalPosition_Content{
+  animation:dropfade var(--anim-time) ease-in !important;
+}
+
+.ModalPosition.Destructive .DialogButton{
+  background:linear-gradient(0deg, hsl(from var(--library_button-bg-1) 0 s l) 9%, hsl(from var(--library_button-bg-2) 0 s l) 54%, hsl(from var(--library_button-bg-3) 0 s l)), var(--lighter-bg), var(--white-gradient) !important;
+  color:hsl(from var(--library_button-text) 0 s l) !important;
+  border-color:hsl(from var(--blue-border) 0 s l) !important;
+}
+.ModalPosition.Destructive .DialogContent{
+  background-color:hsl(from var(--library_section-bg) 0 s l) !important;
+  color:hsl(from var(--blue-text) 0 s l) !important;
+  border-color:hsl(from var(--library_border-color) 0 s l) !important;
+}
+.ModalPosition.Destructive .DialogHeader{
+  background-image:linear-gradient(0deg, hsl(from var(--blue-dark) 0 s l), hsl(from var(--blue-light) 0 s l)) !important;
+  color:hsl(from var(--blue-text) 0 s l) !important;
+  border-color:hsl(from var(--library_section-header-border-color) 0 s l) !important;
+}
+
 .ModalPosition_Content{
   color:inherit !important;
   font-size:inherit !important;
   font-weight:normal !important;
+  box-shadow:none !important;
 }
-.ModalPosition_Content > div{
+.PopupFullWindow .ModalPosition_Content > div{
   padding-top:var(--title-bar-height) !important;
+}
+
+.ModalPosition_Dismiss{
+  --icon:var(--icon-delete) !important;
+  background-image:var(--icon) !important;
+  background-size:var(--icon-size) !important;
+  width:var(--icon-size) !important;
+  height:var(--icon-size) !important;
+  inset-inline-end:8px !important;
+  inset-block-start:8px !important;
+}
+.ModalPosition_Dismiss:active{
+  filter:brightness(1.25) !important;
+}
+.ModalPosition_Dismiss svg{
+  display:none !important;
 }
 
 .ModalPosition_TopBar{
