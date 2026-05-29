@@ -1,0 +1,15 @@
+{
+	"Theme_GameListBar_NoFilters": "显示全部",
+	"Theme_GameListBar_OnlyReadyToPlay": "仅显示准备就绪的游戏",
+	"Theme_GameListBar_OnlyLinux": "仅显示支持 Linux 的游戏",
+	"Theme_GameListBar_OnlyLinuxAndInstalled": "仅显示支持 Linux 且准备就绪的游戏",
+	"Theme_GameListBar_SortRecentActivity": "按近期活动排序",
+	"Theme_GameListBar_SortRecentActivityOnLinux": "按近期活动排序支持 Linux 的游戏",
+	"Theme_GameListBar_SortRecentActivityOnLinuxAndReadyToPlay": "按近期活动排序支持 Linux 且准备就绪的游戏",
+	"Theme_GameListBar_SortRecentActivityReadyToPlay": "按近期活动排序准备就绪的游戏",
+
+	"Theme_RibbonSection_Account": "帐户",
+	"Theme_RibbonSection_Browser": "浏览器",
+	"Theme_RibbonSection_Game": "游戏",
+	"Theme_RibbonSection_Links": "链接"
+}
