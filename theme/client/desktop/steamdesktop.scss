@@ -68,7 +68,7 @@
 	border: none;
 }
 
-html:not([data-millennium-plugin~="aerothemesteam_plugin"]) {
+html:not([data-aerothemesteam-plugin-loaded]) {
 	#DragArea,
 	#RootMenuBar {
 		display: flex;
@@ -76,6 +76,9 @@ html:not([data-millennium-plugin~="aerothemesteam_plugin"]) {
 
 	#TopBar {
 		border-bottom: 2px solid var(--supernav_tab-gradient-end);
+		margin-block-end: calc(
+			var(--steamdesktop_spacing) * -1 + var(--steamdesktop_border-size)
+		);
 
 		flex-direction: column;
 	}

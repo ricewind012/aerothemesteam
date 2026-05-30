@@ -160,6 +160,16 @@ function OnUIModeChange(mode: EUIMode) {
 }
 
 /**
+ * Adds an attribute to `<html>` that says the plugin is loaded, as using the
+ * `data-millennium-plugin` attribute is inaccurate, because that does not say
+ * if the plugin failed to load.
+ */
+function EnsurePluginLoaded(popup: SteamPopup_t) {
+	const doc = popup.m_popup.document.documentElement;
+	doc.dataset.aerothemesteamPluginLoaded = true;
+}
+
+/**
  * Intercepts the function that's called upon a selected game change in the library.
  */
 function PatchUIStore(popup: SteamPopup_t) {
@@ -241,8 +251,6 @@ export default async function PluginMain() {
 	await InitLocalization();
 	// Wait until services load to prevent early access to modal manager
 	await App.WaitForServicesInitialized();
-	// Load(ing!) correctly... no API yet? so go with a global
-	globalThis.aerothemesteamPluginLoading = true;
 	// TODO: shitty workaround for millennium ui rerender
 	await sleep(1_000);
 
@@ -250,4 +258,6 @@ export default async function PluginMain() {
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, PatchUIStore);
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, AddSuperNavEvents);
 	AddPopupCreatedCallback(MAIN_WINDOW_NAME, AddThemeFieldVars);
+	// **Must be last** in case of failure.
+	AddPopupCreatedCallback(MAIN_WINDOW_NAME, EnsurePluginLoaded);
 }
