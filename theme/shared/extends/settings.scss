@@ -1,13 +1,11 @@
 @mixin header {
 	background-color: #dde7ee;
-	color: var(--pagedsettings_blue-text);
+	color: var(--blue-text);
 	font: inherit;
 	font-weight: bold;
-	letter-spacing: 0;
-	text-transform: unset;
 	border-bottom: var(--pagedsettings_separator);
 	padding: 6px;
-	padding-bottom: 7px;
+	margin: 0;
 	margin-bottom: var(--tabpanel_spacing);
 
 	width: 100%;

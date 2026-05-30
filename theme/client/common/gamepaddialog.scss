@@ -3,8 +3,11 @@
 #Field {
 	--field-row-children-spacing: 7px;
 
+	background: none;
 	color: inherit;
-	padding-block: 3px;
+	padding: 3px 0;
+	// 13px = checkbox size
+	padding-inline-start: calc(20px * var(--indent-level));
 	margin: 0;
 }
 

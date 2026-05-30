@@ -4,3 +4,9 @@
 		var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
 	);
 }
+
+// "Game update timing", FUCKING WHY
+#FakeContainer {
+	background: none;
+	padding: 0;
+}

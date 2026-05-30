@@ -1,3 +1,22 @@
+#CheckboxColumn {
+	color: inherit;
+	font-size: var(--font-size);
+
+	align-items: start;
+}
+
+#CheckboxHeaders {
+	padding: 0;
+
+	position: unset;
+
+	#NotifyViaHeader {
+		opacity: 0.5;
+		font-size: var(--font-size);
+		font-style: normal;
+	}
+}
+
 #NotificationDescription {
 	color: inherit;
 	font: inherit;
@@ -20,6 +39,20 @@
 	font: inherit;
 }
 
+#NotificationSectionHeader {
+	position: relative;
+
+	#Toggles {
+		gap: 0;
+		margin: 0;
+
+		position: absolute;
+		// 6px = settings.header padding
+		inset: 6px;
+		inset-inline-start: unset;
+	}
+}
+
 #PrefDetailsToggle {
 	svg {
 		height: unset;
@@ -27,17 +60,16 @@
 }
 
 #Sound {
-	text-align: start;
+	text-align: end;
 }
 
-#ToggleHeader {
+#Toggles {
+	color: inherit;
 	font: inherit;
 	font-weight: bold;
 	letter-spacing: 0;
 	text-transform: unset;
-	padding: 0 !important;
-
-	#Toggles {
-		gap: 28px;
-	}
+	gap: 105px;
+	padding: 0;
+	margin-inline-end: 6px;
 }
