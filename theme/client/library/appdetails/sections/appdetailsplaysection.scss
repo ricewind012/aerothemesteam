@@ -8,6 +8,7 @@
 
 	flex-direction: row;
 	align-items: center;
+	justify-content: start;
 
 	&::before {
 		content: "";
@@ -110,9 +111,7 @@
 
 #InnerContainer {
 	padding: 0 var(--library_body-spacing);
-	margin-left: calc(
-		var(--library_icon-size) + var(--library_spacing)
-	);
+	margin-left: calc(var(--library_icon-size) + var(--library_spacing));
 }
 
 #PlayBar {
