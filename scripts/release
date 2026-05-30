@@ -31,4 +31,9 @@ git \
 	-c "user.name=github-actions[bot]" \
 	-c "user.email=41898282+github-actions[bot]@users.noreply.github.com" \
 	commit -m "chore(release): $next"
+npx semantic-release --no-ci --plugins '
+	@semantic-release/commit-analyzer,
+	@semantic-release/release-notes-generator,
+	@semantic-release/github
+'
 git push
