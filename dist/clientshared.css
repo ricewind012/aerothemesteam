@@ -1,11 +1,4 @@
-*{
-  font-family:"Segoe UI", sans-serif !important;
-  box-sizing:border-box !important;
-}
-
-.part{
-  display:initial !important;
-}.DialogDropDown, .DialogInput{
+.DialogDropDown, .DialogInput{
   background-color:var(--bg-main) !important;
   color:var(--fg-main) !important;
   font:inherit !important;
@@ -102,10 +95,6 @@
   --state:0 !important;
   background-image:url("https://steamloopback.host/skins/aerothemesteam/assets/images/checkbox.png") !important;
   background-position-y:calc(var(--pos) * -1) !important;
-  border-radius:0 !important;
-  box-shadow:none !important;
-  width:var(--size) !important;
-  height:var(--size) !important;
 }
 .DialogCheckbox:hover{
   --state:1 !important;
@@ -118,6 +107,12 @@
 }
 .DialogCheckbox.Active{
   --pos-initial:calc(var(--size) * 4) !important;
+}
+.DialogCheckbox{
+  border-radius:0 !important;
+  box-shadow:none !important;
+  width:var(--size) !important;
+  height:var(--size) !important;
 }
 .DialogCheckbox svg{
   display:none !important;
@@ -206,13 +201,15 @@
   background-size:var(--icon-size) !important;
   width:var(--icon-size) !important;
   height:var(--icon-size) !important;
-  inset-inline-end:6px !important;
 }
 .DialogInput_ClearAction:active{
   filter:brightness(1.25) !important;
 }
 .DialogInput_ClearAction svg{
   display:none !important;
+}
+.DialogInput_ClearAction{
+  inset-inline-end:6px !important;
 }
 
 .DialogInput_Wrapper{
@@ -241,9 +238,6 @@
   --state:0 !important;
   background-image:url("https://steamloopback.host/skins/aerothemesteam/assets/images/radio.png") !important;
   background-position-y:calc(var(--pos) * -1) !important;
-  background-color:transparent !important;
-  width:var(--size) !important;
-  height:var(--size) !important;
 }
 .DialogRoundCheckboxField_Control:hover{
   --state:1 !important;
@@ -256,6 +250,11 @@
 }
 .DialogRoundCheckboxField_Control.Active{
   --pos-initial:calc(var(--size) * 4) !important;
+}
+.DialogRoundCheckboxField_Control{
+  background-color:transparent !important;
+  width:var(--size) !important;
+  height:var(--size) !important;
 }
 
 .DialogRoundCheckboxField_OuterCircle{
@@ -316,12 +315,14 @@
   border:1px solid var(--blue-border) !important;
   border-radius:var(--border-radius) !important;
   padding:2.5px 18px !important;
-  box-shadow:none !important;
 }
 .FullModalOverlay :where(.DialogButton):active{
   --wg-opacity-1:0.9 !important;
   --wg-opacity-2:0.4 !important;
   --lighter-opacity:0 !important;
+}
+.FullModalOverlay :where(.DialogButton){
+  box-shadow:none !important;
 }
 .FullModalOverlay :where(.DialogContent){
   background:none var(--library_section-bg) !important;
@@ -408,14 +409,16 @@
   background-size:var(--icon-size) !important;
   width:var(--icon-size) !important;
   height:var(--icon-size) !important;
-  inset-inline-end:8px !important;
-  inset-block-start:8px !important;
 }
 .ModalPosition_Dismiss:active{
   filter:brightness(1.25) !important;
 }
 .ModalPosition_Dismiss svg{
   display:none !important;
+}
+.ModalPosition_Dismiss{
+  inset-inline-end:8px !important;
+  inset-block-start:8px !important;
 }
 
 .ModalPosition_TopBar{
@@ -427,4 +430,11 @@
 }
 :root[browsertype=DirectHWND] .TitleBar{
   display:none;
+}*{
+  font-family:"Segoe UI", sans-serif !important;
+  box-sizing:border-box !important;
+}
+
+.part{
+  display:initial !important;
 }
