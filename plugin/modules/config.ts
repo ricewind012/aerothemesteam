@@ -1,14 +1,12 @@
 import { findModuleExport } from "@steambrew/client";
 
-import { FindModuleExportByString } from "@/shared";
-
 /**
  * Global configuration constants.
  * Populated by GetWebUIConfig on websites.
  * Library fills most fields: some in the URL passed from newlibrarypage.cpp, some in CURLStore.Init,
  * and some in SteamLibrary.InitConfig directly. Some it skips - be sure to test.
  */
-export const Config = findModuleExport((e) => e.LAUNCHER_TYPE);
+export const Config = findModuleExport((e) => typeof e.PLATFORM === "string");
 
 enum ELauncherType {
 	Default,
@@ -28,5 +26,14 @@ enum ELauncherType {
 // features like anti addiction. This includes steam china, the steam china government review
 // launcher, and the pw csgo and pw dota2 launchers.
 //
-export const BIsChinaLauncher: (eLauncherType: ELauncherType) => boolean =
-	FindModuleExportByString("case 4:case 1:case 7:");
+export function BIsChinaLauncher(eLauncherType: ELauncherType) {
+	switch (eLauncherType) {
+		case ELauncherType.CSGO:
+		case ELauncherType.PerfectWorld:
+		case ELauncherType.SteamChina:
+		case ELauncherType.SingleApp:
+			return true;
+		default:
+			return false;
+	}
+}
