@@ -248,6 +248,9 @@
 		);
 		font-size: var(--font-size);
 		line-height: 2;
+		padding-block-start: calc(
+			var(--library_section-header-spacing-y) + var(--library_border-size)
+		);
 		margin: calc(var(--library_border-size) * -1);
 
 		display: block;
@@ -305,9 +308,9 @@
 	color: inherit;
 	font-size: inherit;
 	font-weight: normal;
-	box-shadow: none;
+	box-shadow: var(--popup-shadow);
 
-	.PopupFullWindow & > div {
+	.PopupFullWindow & > :not(.DialogContent, .ModalPosition_Dismiss) {
 		padding-top: var(--title-bar-height);
 	}
 }
