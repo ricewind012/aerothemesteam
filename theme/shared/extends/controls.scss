@@ -89,7 +89,7 @@
 	// Normal, Hover, Active, Disabled, Max
 	--state: 0;
 
-	background-image: url("https://steamloopback.host/skins/aerothemesteam/assets/images/#{$name}.png");
+	background-image: url("https://millennium.host/v1/themes/aerothemesteam/assets/images/#{$name}.png");
 	background-position-y: calc(var(--pos) * -1);
 
 	&:hover {
