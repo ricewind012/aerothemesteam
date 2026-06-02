@@ -1,0 +1,15 @@
+@use "shared/extends/library";
+
+#OfflineButton {
+	display: none;
+}
+
+#OfflineSectionBody {
+	@include library.placeholder;
+
+	background-color: transparent;
+	color: inherit;
+	font-size: var(--font-size);
+
+	min-height: unset;
+}

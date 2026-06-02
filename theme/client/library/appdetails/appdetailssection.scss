@@ -10,7 +10,7 @@
 	margin: 0;
 }
 
-#Body {
+:where(#Body) {
 	@include library.section;
 
 	padding: var(--library_spacing);
