@@ -1,9 +1,4 @@
-@use "shared/extends/dialog";
 @use "shared/extends/library";
-
-#GameLaunchingDialog {
-	@include dialog.shared("&");
-}
 
 #GameName {
 	@include library.header-primary;

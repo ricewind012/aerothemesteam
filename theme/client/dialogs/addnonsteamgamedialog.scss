@@ -1,11 +1,5 @@
 @use "shared/extends/controls";
-@use "shared/extends/dialog";
 @use "shared/extends/list";
-
-// TODO: !important in ~/clientshared/dialog
-.ModalPosition_Content > #AddNonSteamGameDialog {
-	@include dialog.shared("&");
-}
 
 #Footer {
 	gap: 8px;

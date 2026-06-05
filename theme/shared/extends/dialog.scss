@@ -3,22 +3,3 @@
 	background: radial-gradient(transparent, rgba(0, 0, 0, 0.4));
 	transition: calc(var(--anim-time) * 2);
 }
-
-// TODO: move to ~/clientshared/dialog when ready
-@mixin shared($content-selector) {
-	#{$content-selector} {
-		background: var(--dialog_bg);
-		color: var(--dialog_fg);
-		font-size: var(--font-size);
-		padding: 7px 8px 8px 6px;
-	}
-
-	.DialogHeader {
-		color: var(--blue-text);
-	}
-
-	.DialogThreeColLayout,
-	.DialogTwoColLayout {
-		gap: 8px;
-	}
-}

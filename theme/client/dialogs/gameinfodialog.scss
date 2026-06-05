@@ -1,9 +1,6 @@
 @use "shared/extends/controls";
-@use "shared/extends/dialog";
 
 #DialogBody {
-	@include dialog.shared(".DialogContent:has(&)");
-
 	.DialogBodyText {
 		margin: 0;
 	}
@@ -11,11 +8,7 @@
 	// #gamepaddialog_Field
 	[style="--indent-level: 0;"] {
 		& > div {
-			flex-direction: row;
-
-			& > div {
-				width: 50%;
-			}
+			width: 50%;
 		}
 	}
 }

@@ -1,5 +1,17 @@
 @use "shared/extends/controls";
-@use "shared/extends/dialog";
+
+#AppNameHeader {
+	color: var(--blue-text);
+	font-size: var(--font-size-xlarge);
+	border-bottom: 2px solid transparent;
+	border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
+	margin: 0;
+	margin-block-end: 12px;
+
+	html[browsertype="DirectHWND"] & {
+		display: none;
+	}
+}
 
 #ButtonContainer {
 	gap: 14px;
@@ -10,23 +22,6 @@
 		@include controls.button;
 
 		margin: 0;
-	}
-}
-
-#LaunchOptionDialog {
-	@include dialog.shared("&");
-
-	#AppNameHeader {
-		color: var(--blue-text);
-		font-size: var(--font-size-xlarge);
-		border-bottom: 2px solid transparent;
-		border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
-		margin: 0;
-		margin-block-end: 12px;
-
-		html[browsertype="DirectHWND"] & {
-			display: none;
-		}
 	}
 }
 

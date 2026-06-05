@@ -1,5 +1,4 @@
 @use "shared/extends/controls";
-@use "shared/extends/dialog";
 
 #EditorInput {
 	@extend %textfield-base;
@@ -20,12 +19,6 @@
 	.tool-tip-source .DialogButton {
 		width: 32px;
 	}
-}
-
-#NoteEditorArea {
-	@include dialog.shared(".DialogContent:has(&)");
-
-	margin: 0;
 }
 
 #Toolbar {

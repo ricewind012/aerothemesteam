@@ -1,5 +1,4 @@
 @use "shared/extends/controls";
-@use "shared/extends/dialog";
 
 #AvatarAndName {
 	color: inherit;
@@ -10,11 +9,6 @@
 #ColumnResizer {
 	background-color: transparent;
 	border-color: transparent;
-}
-
-// TODO: !important in ~/clientshared/dialog
-.ModalPosition_Content > #PlayersDialog {
-	@include dialog.shared("&");
 }
 
 #PlayersList {

@@ -1,12 +1,6 @@
-@use "shared/extends/dialog";
-
 #EulaDialogContent {
 	color: inherit;
 	font: inherit;
-}
-
-#EulaModalDialog {
-	@include dialog.shared("&");
 }
 
 #EULAScrolling {

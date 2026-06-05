@@ -44,6 +44,11 @@
 :where(.DialogButton) {
 	@include controls.button;
 
+	line-height: 1;
+	margin: 0;
+
+	min-width: 75px;
+
 	&::before {
 		display: none;
 	}
@@ -69,6 +74,13 @@
 	.DialogCheckbox {
 		margin-inline-end: 4px;
 	}
+}
+
+:where(.DialogContent) {
+	background: var(--dialog_bg);
+	color: var(--dialog_fg);
+	font-size: var(--font-size);
+	padding: 7px 8px 8px 6px;
 }
 
 .DialogControlsSection,
@@ -147,6 +159,8 @@
 }
 
 .DialogHeader {
+	color: var(--blue-text);
+
 	:root[browsertype="DirectHWND"] & {
 		display: none;
 	}
@@ -207,6 +221,11 @@
 
 .DialogToggle_Label {
 	line-height: 1;
+}
+
+:where(.DialogThreeColLayout),
+:where(.DialogTwoColLayout) {
+	gap: 8px;
 }
 
 .FullModalOverlay {
