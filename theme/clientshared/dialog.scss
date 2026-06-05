@@ -21,6 +21,17 @@
 
 		font: inherit;
 	}
+
+	// Used in launch options and app properties dialogs
+	input[type="radio"] {
+		@include controls.input-base("radio", ":checked", ":disabled");
+
+		appearance: none;
+		margin: 0;
+
+		width: var(--size);
+		height: var(--size);
+	}
 }
 
 .DialogBodyText {
@@ -30,7 +41,7 @@
 	margin-bottom: 4px;
 }
 
-.DialogButton {
+:where(.DialogButton) {
 	@include controls.button;
 
 	&::before {

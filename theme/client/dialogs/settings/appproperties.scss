@@ -1,12 +1,77 @@
+@use "shared/extends/controls";
 @use "shared/extends/settings";
 @use "shared/extends/style";
+
+%-beta-row {
+	background: none;
+	gap: 7px;
+
+	display: grid;
+	grid-template-columns: 13px 1fr 100px;
+}
 
 #AsyncBackedInputChildren {
 	margin: 0;
 }
 
+#BetaHeaderRow {
+	@extend %-beta-row;
+
+	opacity: 0.5;
+	text-transform: unset;
+	padding: 0;
+	margin-block: var(--tabpanel_spacing) var(--library_text-spacing);
+}
+
 #BetaLabel {
 	@include settings.header;
+}
+
+#BetaLastUpdated {
+	margin: 0;
+
+	justify-content: start;
+}
+
+#BetaName {
+	color: inherit;
+	font-size: var(--font-size);
+	margin: 0;
+}
+
+#BetaRadioButton {
+	border: none;
+
+	align-items: start;
+	width: 13px;
+}
+
+#BetaRow {
+	@extend %-beta-row;
+
+	&:hover input[type="radio"] {
+		--state: 1;
+	}
+
+	&:active input[type="radio"] {
+		--state: 2;
+	}
+
+	#DescText {
+		opacity: 0.5;
+	}
+
+	#NameText {
+		color: inherit;
+		font-weight: normal;
+	}
+}
+
+#BetasTable {
+	border: none;
+	box-shadow: none;
+	gap: var(--library_text-spacing);
+	margin-block-end: var(--tabpanel_spacing);
 }
 
 #BrowseDiskSize {
@@ -29,10 +94,6 @@
 	font: inherit;
 	margin: 0;
 	margin-bottom: 4px;
-}
-
-#NameText {
-	color: inherit;
 }
 
 #SectionTopLine {

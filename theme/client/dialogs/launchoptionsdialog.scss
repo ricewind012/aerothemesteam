@@ -47,15 +47,6 @@
 #ListItem {
 	all: unset;
 
-	input[type="radio"] {
-		@include controls.input-base("radio", ":checked", ":disabled");
-
-		appearance: none;
-
-		width: var(--size);
-		height: var(--size);
-	}
-
 	label {
 		padding-inline-start: 4px;
 	}
