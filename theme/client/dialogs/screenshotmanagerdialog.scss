@@ -1,4 +1,37 @@
+@use "shared/extends/controls";
+
+#ButtonBox {
+	// TODO: for now
+	svg {
+		color: inherit;
+	}
+}
+
+#SpoilerField,
+#VisibilityField {
+	justify-content: space-between;
+	width: 100%;
+
+	#Label {
+		color: inherit;
+		font: inherit;
+
+		// Prefer text over icons
+		&#Narrow {
+			display: none;
+		}
+
+		&#Wide {
+			display: block;
+		}
+	}
+}
+
 #StickyHeader,
 #TopListTitle {
 	box-sizing: content-box;
+}
+
+#Text {
+	color: inherit;
 }

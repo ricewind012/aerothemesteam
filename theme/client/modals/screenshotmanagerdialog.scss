@@ -1,0 +1,37 @@
+@use "shared/extends/library";
+
+// Actually screenshot share
+
+#CaptionField {
+	@include library.text-input;
+}
+
+#CloudStorageImpact {
+	color: inherit;
+	font-size: var(--font-size);
+	font-style: normal;
+	opacity: 0.5;
+}
+
+#ScreenshotShareDialog {
+	gap: var(--library_spacing-x05);
+	padding: var(--library_spacing);
+
+	#ButtonBox {
+		@include library.button;
+
+		// TODO: remove these when styling ss manager dialog
+		box-shadow: none;
+		height: unset;
+	}
+
+	#Buttons {
+		gap: var(--library_spacing-x05);
+	}
+}
+
+#ShareDialogRow {
+	align-items: start;
+	flex-direction: column;
+	gap: var(--library_text-spacing);
+}
