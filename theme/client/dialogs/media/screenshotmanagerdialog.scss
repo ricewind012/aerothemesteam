@@ -71,6 +71,14 @@
 	}
 }
 
+#PhaseFilterTag {
+	#Close {
+		@include style.icon($name: "delete", $hide-selector: "*");
+
+		background-color: none;
+	}
+}
+
 #SpoilerField,
 #VisibilityField {
 	justify-content: space-between;
@@ -140,18 +148,21 @@
 	margin-block-start: var(--title-bar-height);
 
 	// left
-	&:nth-child(1) > :nth-child(1) {
-		--icon: icon("copy");
-	}
+	& > :nth-child(1) {
+		// no icons for that
+		#IconButtonIcon {
+			color: inherit;
 
-	&:nth-child(1) > :nth-child(2) {
-		--icon: icon("copy");
+			* {
+				display: initial;
+			}
+		}
 	}
 
 	// right
-	&:nth-child(2) {
-		& > :first-child {
-			--icon: icon("download");
+	& > :nth-child(2) {
+		& > :nth-child(1) {
+			--icon: icon("link");
 		}
 
 		& > :nth-child(2) {

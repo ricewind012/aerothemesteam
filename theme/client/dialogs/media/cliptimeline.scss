@@ -1,0 +1,22 @@
+#TimelineAndControls {
+	gap: var(--library_spacing);
+
+	& > div:first-child {
+		margin: 0;
+	}
+}
+
+#TimelineContainer {
+	// From #clipmanager_OpenedItemHeaderControls
+	background: linear-gradient(
+		hsla(from var(--listitem_item-gradient-end) h s l / 1),
+		hsla(from var(--listitem_item-gradient-start) h s l / 1)
+	);
+	border-block-start: 1px solid var(--listitem_item-border);
+	padding: var(--library_spacing);
+}
+
+#VideoPlayerContainer {
+	background: none;
+	box-shadow: none;
+}

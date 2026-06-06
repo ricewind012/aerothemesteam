@@ -1,0 +1,50 @@
+@use "shared/extends/tooltip";
+
+#ImageContainer {
+	box-shadow: none;
+	position: unset;
+}
+
+#ThumbnailContainerOffset {
+	padding: 0;
+}
+
+#ThumbnailContents {
+	@include tooltip.container;
+}
+
+#ThumbnailImage {
+	border-radius: var(--border-radius);
+}
+
+#TimeDisplayContainer {
+	color: var(--blue-text);
+	font-family: var(--font-family-monospace);
+	margin: 0;
+	padding: 0;
+}
+
+#TooltipButtons {
+	min-height: unset;
+
+	svg {
+		color: var(--blue-border);
+		filter: none;
+		height: var(--icon-size);
+		opacity: 1;
+		padding: 0;
+		width: var(--icon-size);
+	}
+}
+
+#TooltipChildren {
+	background: none;
+	width: 100%;
+
+	&::before {
+		@include tooltip.separator;
+
+		content: "";
+		margin-block: 8px 4px;
+	}
+}

@@ -9,6 +9,25 @@
 	display: none;
 }
 
+#BackgroundRecordingLabel {
+	background: var(--blue-light);
+	border-radius: 0;
+	color: inherit;
+	font: inherit;
+}
+
+#BackgroundRecordingListItem {
+	background: none;
+
+	#ListItem:hover > & {
+		filter: none;
+	}
+}
+
+#BackgroundRecordingListScaler {
+	background: var(--blue-dark);
+}
+
 #ContentPadding {
 	padding: 0;
 }

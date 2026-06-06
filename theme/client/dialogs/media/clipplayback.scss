@@ -1,0 +1,105 @@
+@use "shared/extends/style";
+
+#LeftControls {
+	gap: var(--clipplayback_button-gap);
+
+	#AddMarkerIcon {
+		color: var(--blue-border);
+		height: var(--icon-size);
+		width: var(--icon-size);
+	}
+
+	:where(& #PlaybackButton) {
+		--icon: icon("fullscreen");
+	}
+}
+
+#PlaybackButton {
+	@include style.icon($hide-selector: "svg");
+
+	margin-inline: calc(var(--clipplayback_button-gap) / 2);
+	transform: none;
+
+	&:where(#FrameStepButton) {
+		--icon: icon("media-next-32");
+	}
+
+	&:where(#JumpSecondsButton) {
+		--icon: icon("media-forward-32");
+	}
+
+	&:where(#PlayButton) {
+		--icon: icon("media-play-32");
+	}
+}
+
+#PlaybackControls {
+	--clipplayback_button-gap: 4px;
+
+	height: unset;
+}
+
+#PlaybackControlsCtn {
+	--icon-size: 32px;
+
+	// bruh ok
+	#PlaybackButton:where(:has(> svg > [d^="M14"])) {
+		--icon: icon("media-pause-32");
+	}
+}
+
+#RightButtons {
+	gap: var(--library_spacing-x05);
+
+	#MoreSpecific {
+		gap: 0;
+		height: unset;
+		justify-content: center;
+
+		&#DeleteButton svg {
+			@include style.icon($name: "delete", $hide-selector: "*");
+
+			display: block;
+		}
+	}
+
+	svg {
+		display: none;
+	}
+}
+
+#TimeBar {
+	color: var(--blue-text);
+	font-family: var(--font-family-monospace);
+	font-size: var(--font-size-small);
+
+	#TimeDash {
+		color: inherit;
+		opacity: 0.5;
+	}
+
+	#TimeTotal {
+		color: inherit;
+	}
+}
+
+#VolumeControls {
+	#PlaybackButton {
+		background: none;
+		color: var(--blue-border);
+	}
+
+	.SliderHandle {
+		background-color: var(--blue-border);
+		box-shadow: none;
+	}
+
+	.SliderTrack {
+		background-color: var(--blue-text);
+	}
+
+	// No other way to identify other than using :has()
+	svg {
+		display: block;
+	}
+}

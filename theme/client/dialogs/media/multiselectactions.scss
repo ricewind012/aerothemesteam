@@ -23,6 +23,7 @@
 #DialogInner {
 	@include library.section;
 
+	box-shadow: var(--popup-shadow);
 	color: var(--blue-text);
 	font-size: var(--font-size);
 	border-block-start: var(--library_border);
