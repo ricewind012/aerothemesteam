@@ -1,13 +1,34 @@
 @use "shared/extends/controls";
+@use "shared/extends/style";
+
+#AppNameHeader {
+	display: none;
+}
 
 #BackgroundImageGlow {
 	display: none;
+}
+
+#ContentPadding {
+	padding: 0;
 }
 
 #ListItem {
 	height: 100%;
 	transform: none;
 	width: 100%;
+
+	@media not (prefers-reduced-motion) {
+		transition-duration: 0.3s;
+		transition-property: box-shadow, filter, transform;
+		transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
+	}
+
+	&:hover {
+		box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+		transform: rotateX(6deg) translateZ(30px);
+		filter: brightness(1.1) contrast(0.95) saturate(1);
+	}
 
 	&#Selected {
 		border-color: hsla(from var(--listitem_item-border) h s l / 1);
@@ -47,4 +68,31 @@
 
 #ListItemThumbnailImg {
 	filter: none;
+}
+
+#OpenedItemContainer {
+	inset: 0;
+}
+
+#OpenedItemHeaderControls {
+	background: linear-gradient(
+		hsla(from var(--listitem_item-gradient-start) h s l / 1),
+		hsla(from var(--listitem_item-gradient-end) h s l / 1)
+	);
+	border-block-end: 1px solid var(--listitem_item-border);
+	padding: var(--library_spacing);
+
+	#BackLabel {
+		@include controls.button;
+
+		gap: var(--library_text-spacing);
+		height: unset;
+		transform: none;
+
+		svg {
+			@include style.icon($name: "nav-back", $hide-selector: "*");
+
+			transform: none;
+		}
+	}
 }

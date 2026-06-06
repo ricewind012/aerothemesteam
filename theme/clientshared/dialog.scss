@@ -97,35 +97,12 @@
 
 	opacity: 1;
 	gap: 0;
-	padding: 0;
 
 	display: flex;
 }
 
 .DialogDropDown_Arrow {
-	background: linear-gradient(var(--arrow-grad-start), var(--arrow-grad-end));
-	border: var(--arrow-border-size) solid var(--arrow-border);
-	box-shadow: inset 0 0 0 1px var(--arrow-inner-border);
-
-	// !
-	text-align: center;
-	// !
-	position: unset;
-	width: var(--arrow-size);
-	height: 22px;
-
-	svg {
-		background-color: var(--arrow-fg, var(--fg-main));
-		mask: var(--icon-arrow-bottom);
-		padding: 0;
-
-		width: 7px;
-		height: 4px;
-	}
-
-	polygon {
-		display: none;
-	}
+	@include controls.dropdown-arrow;
 }
 
 .DialogDropDown_CurrentDisplay {
