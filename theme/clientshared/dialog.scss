@@ -80,7 +80,7 @@
 	background: var(--dialog_bg);
 	color: var(--dialog_fg);
 	font-size: var(--font-size);
-	padding: 7px 8px 8px 6px;
+	padding: var(--dialog_spacing-content);
 }
 
 .DialogControlsSection,
@@ -93,45 +93,25 @@
 }
 
 .DialogDropDown {
-	--arrow-grad-start: #f2f2f2;
-	--arrow-grad-end: #cfcfcf;
-	--arrow-border: #707070;
-	--arrow-inner-border: #fcfcfc;
-
-	@extend %textfield-base;
+	@include controls.dropdown($disabled-class-name: ".Disabled");
 
 	opacity: 1;
 	gap: 0;
 	padding: 0;
 
 	display: flex;
-
-	&:not(.Disabled):hover {
-		--arrow-grad-start: #eaf6fd;
-		--arrow-grad-end: #a7d9f5;
-		--arrow-border: #3c7fb1;
-		--arrow-inner-border: #fafdfe;
-	}
-
-	&.Disabled {
-		--bg-main: #f0f0f0;
-		--fg-main: #6d6d6d;
-
-		--arrow-grad-start: #f4f4f4;
-		--arrow-grad-end: #f4f4f4;
-		--arrow-border: #adb2b5;
-		--arrow-fg: #afafaf;
-	}
 }
 
 .DialogDropDown_Arrow {
 	background: linear-gradient(var(--arrow-grad-start), var(--arrow-grad-end));
-	border: 1px solid var(--arrow-border);
+	border: var(--arrow-border-size) solid var(--arrow-border);
 	box-shadow: inset 0 0 0 1px var(--arrow-inner-border);
 
+	// !
 	text-align: center;
+	// !
 	position: unset;
-	width: 19px;
+	width: var(--arrow-size);
 	height: 22px;
 
 	svg {
@@ -149,9 +129,7 @@
 }
 
 .DialogDropDown_CurrentDisplay {
-	padding: 3px 5px;
-
-	flex-grow: 1;
+	@include dropdown-text;
 }
 
 .DialogFooter {

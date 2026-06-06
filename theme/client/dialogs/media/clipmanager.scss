@@ -1,0 +1,50 @@
+@use "shared/extends/controls";
+
+#BackgroundImageGlow {
+	display: none;
+}
+
+#ListItem {
+	height: 100%;
+	transform: none;
+	width: 100%;
+
+	&#Selected {
+		border-color: hsla(from var(--listitem_item-border) h s l / 1);
+		box-shadow: none;
+		box-shadow: none;
+		filter: none;
+	}
+
+	#Check {
+		display: none;
+	}
+
+	#CheckboxContainer {
+		@include controls.input-base(
+			$name: "checkbox",
+			$checked-class-name: ":not(:empty)",
+			$disabled-class-name: ""
+		);
+
+		border-radius: 0;
+		height: var(--size);
+		width: var(--size);
+	}
+
+	&:hover #CheckboxContainer {
+		--state: 1;
+	}
+
+	&:active #CheckboxContainer {
+		--state: 2;
+	}
+}
+
+#ListItemAndGlowContainer {
+	position: relative;
+}
+
+#ListItemThumbnailImg {
+	filter: none;
+}

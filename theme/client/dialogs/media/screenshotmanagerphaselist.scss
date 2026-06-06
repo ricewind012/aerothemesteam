@@ -1,0 +1,28 @@
+@use "shared/extends/controls";
+
+#InputFilter {
+	all: unset;
+
+	input {
+		@extend %textfield-base;
+
+		line-height: 20px;
+
+		&::placeholder {
+			color: inherit;
+		}
+	}
+
+	svg {
+		display: none;
+	}
+}
+
+#NoContent {
+	color: inherit;
+	font-size: var(--font-size-xlarge);
+}
+
+#PhaseListContainer {
+	background: none;
+}

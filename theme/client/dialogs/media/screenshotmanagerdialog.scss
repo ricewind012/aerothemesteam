@@ -1,0 +1,141 @@
+@use "shared/extends/controls";
+@use "shared/extends/dialog";
+@use "shared/extends/style";
+
+#ButtonBox {
+	:where(&:not(#Combobox)) {
+		@include controls.button;
+
+		&:where(#Disabled) {
+			// TODO(shared): mixin args
+			--bg: #f4f4f4;
+
+			--border: #adb2b5;
+			--inner-border: #fcfcfc;
+			--grad-top-start: var(--bg);
+			--grad-top-end: var(--bg);
+			--grad-bottom-start: var(--bg);
+			--grad-bottom-end: var(--bg);
+		}
+	}
+
+	:where(&#Combobox) {
+		@include controls.dropdown($disabled-class-name: "#Disabled");
+		@include controls.dropdown-arrow;
+
+		height: unset;
+		min-width: 180px;
+
+		svg {
+			display: none;
+		}
+	}
+
+	#Text {
+		@include controls.dropdown-text;
+
+		color: inherit;
+		order: -1;
+	}
+
+	#IconButtonIcon {
+		@include style.icon($hide-selector: "*");
+	}
+}
+
+#DesktopBottomGlass {
+	display: none;
+}
+
+#SpoilerField,
+#VisibilityField {
+	justify-content: space-between;
+	width: 100%;
+
+	#Label {
+		color: inherit;
+		font: inherit;
+
+		// Prefer text over icons
+		&#Narrow {
+			display: none;
+		}
+
+		&#Wide {
+			display: block;
+		}
+	}
+}
+
+#ScreenshotList {
+	padding: var(--dialog_spacing-content);
+}
+
+#ScreenshotListInner {
+	margin-block-start: calc(var(--stickyHeaderHeight) * -1);
+}
+
+#StickyHeader {
+	backdrop-filter: none;
+	background: linear-gradient(
+		hsla(from var(--listitem_item-gradient-start) h s l / 1),
+		hsla(from var(--listitem_item-gradient-end) h s l / 1)
+	);
+	border: none;
+	border-block-end: 1px solid var(--listitem_item-border);
+	box-shadow: none;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: var(--dialog_spacing-content);
+	position: unset;
+	width: 100%;
+}
+
+#TopList {
+	padding: 0;
+}
+
+#TopListButtonRow {
+	flex-direction: column;
+	gap: 8px;
+	justify-content: space-between;
+	margin: 0;
+	margin-block-start: var(--title-bar-height);
+
+	// left
+	&:nth-child(1) > :nth-child(1) {
+		--icon: icon("copy");
+	}
+
+	&:nth-child(1) > :nth-child(2) {
+		--icon: icon("copy");
+	}
+
+	// right
+	&:nth-child(2) {
+		& > :first-child {
+			--icon: icon("download");
+		}
+
+		& > :nth-child(2) {
+			--icon: icon("delete");
+		}
+
+		// TODO: SVGIcon_Settings
+		& > :last-child {
+			--icon: icon("settings");
+		}
+	}
+}
+
+#TopListTitle {
+	color: var(--listitem_fg);
+	font-size: var(--font-size-large);
+	font-weight: bold;
+	height: unset;
+	line-height: inherit;
+	margin-block-start: var(--title-bar-height);
+	padding: 0;
+	text-shadow: 2px 2px var(--listitem_item-border);
+	text-transform: none;
+}
