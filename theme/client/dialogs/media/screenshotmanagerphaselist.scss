@@ -1,0 +1,65 @@
+@use "shared/extends/controls";
+
+#DateHeader {
+	color: inherit;
+	font-size: var(--font-size-xlarge);
+}
+
+#GameHeader {
+	color: inherit;
+	font-size: var(--font-size);
+
+	#Icon {
+		border-radius: 0;
+	}
+}
+
+#InputFilter {
+	all: unset;
+
+	input {
+		@extend %textfield-base;
+
+		line-height: 20px;
+
+		&::placeholder {
+			color: inherit;
+		}
+	}
+
+	svg {
+		display: none;
+	}
+}
+
+#NoContent {
+	color: inherit;
+	font-size: var(--font-size-xlarge);
+}
+
+#OverflowItem {
+	background-color: var(--blue-border);
+	color: var(--blue-light);
+	font-size: var(--font-size);
+	text-shadow: 0 1px 1px var(--dialog_fg);
+}
+
+#PhaseGridItem {
+	color: inherit;
+
+	&:where(#PhaseDetails) {
+		background: var(--blue-dark);
+	}
+
+	&:where(#PhaseMediaList) {
+		background: var(--blue-light);
+	}
+}
+
+#PhaseList {
+	padding: var(--library_spacing);
+}
+
+#PhaseListContainer {
+	background: none;
+}

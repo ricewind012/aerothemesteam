@@ -1,0 +1,71 @@
+@use "shared/extends/dialog";
+@use "shared/extends/library";
+
+// TODO: put ts into modals mixins to unify with clientshared/dialog
+
+#ActionButton,
+#CancelButton {
+	@include library.button;
+
+	flex-grow: 0;
+}
+
+#ButtonRow {
+	gap: var(--library_spacing-x05);
+	justify-content: end;
+	margin: 0;
+}
+
+#DialogCarrot {
+	display: none;
+}
+
+#DialogInner {
+	@include library.section;
+
+	box-shadow: var(--popup-shadow);
+	color: var(--blue-text);
+	font-size: var(--font-size);
+	border-block-start: var(--library_border);
+	padding: var(--library_spacing);
+}
+
+#ExplainerText {
+	@include library.description;
+
+	margin-block: var(--library_spacing-x05);
+}
+
+#MultiSelectActionDialogContainer {
+	animation: dropfade var(--anim-time) ease-in;
+	box-shadow: none;
+	inset: 0;
+	margin: auto;
+	position: fixed;
+
+	&::before {
+		@include dialog.overlay;
+
+		content: "";
+		inset: 0;
+		position: fixed;
+		z-index: -1;
+	}
+}
+
+#Title {
+	@include library.section-header;
+
+	background-image: linear-gradient(0deg, var(--blue-dark), var(--blue-light));
+	display: block;
+	font-size: var(--font-size);
+	line-height: 2;
+	margin: calc((var(--library_spacing) + var(--library_border-size)) * -1);
+	margin-block-end: 0;
+	padding-block-start: calc(
+		var(--library_section-header-spacing-y) + var(--library_border-size)
+	);
+	width: calc(
+		100% + var(--library_spacing) * 2 + var(--library_border-size) * 2
+	);
+}

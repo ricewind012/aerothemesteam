@@ -1,0 +1,24 @@
+@use "shared/extends/style";
+
+#ArrowButton {
+	@include style.icon($hide-selector: "*");
+
+	margin: 0;
+
+	&:where(#Disabled) {
+		opacity: 0.5;
+	}
+}
+
+#SkipperCtn {
+	gap: var(--clipplayback_button-gap);
+	height: unset;
+
+	& > :first-child {
+		--icon: icon("media-rewind-32");
+	}
+
+	& > :last-child {
+		--icon: icon("media-forward-32");
+	}
+}

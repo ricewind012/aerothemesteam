@@ -8,6 +8,7 @@
 	--bg-main: #fff;
 	--fg-main: #000;
 
+	--font-family-monospace: "Consolas", monospace;
 	--font-size-xlarge: 18pt;
 	--font-size-large: 12pt;
 	--font-size: 9pt;
@@ -29,6 +30,7 @@
 	// Imitation of native Windows 7 controls
 	--dialog_bg: #f0f0f0;
 	--dialog_fg: var(--fg-main);
+	--dialog_spacing-content: 7px 8px 8px 6px;
 
 	--listitem_fg: var(--fg-main);
 	--listitem_fg-secondary: #6d6d6d;

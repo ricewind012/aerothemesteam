@@ -73,6 +73,70 @@
 	}
 }
 
+/// @param {string} $disabled-class-name - Class name of disabled state
+@mixin dropdown($disabled-class-name) {
+	--arrow-grad-start: #f2f2f2;
+	--arrow-grad-end: #cfcfcf;
+	--arrow-border: #707070;
+	--arrow-inner-border: #fcfcfc;
+
+	--arrow-border-size: 1px;
+	--arrow-size: calc(19px + var(--arrow-border-size) * 2);
+
+	@extend %textfield-base;
+
+	padding: var(--arrow-border-size);
+	padding-inline-end: calc(var(--arrow-border-size) + var(--arrow-size));
+	position: relative;
+
+	&:where(:not(#{$disabled-class-name}):hover) {
+		--arrow-grad-start: #eaf6fd;
+		--arrow-grad-end: #a7d9f5;
+		--arrow-border: #3c7fb1;
+		--arrow-inner-border: #fafdfe;
+	}
+
+	&:where(#{$disabled-class-name}) {
+		--bg-main: #f0f0f0;
+		--fg-main: #6d6d6d;
+
+		--arrow-grad-start: #f4f4f4;
+		--arrow-grad-end: #f4f4f4;
+		--arrow-border: #adb2b5;
+		--arrow-fg: #afafaf;
+	}
+}
+
+@mixin dropdown-arrow {
+	&::before {
+		background: linear-gradient(var(--arrow-grad-start), var(--arrow-grad-end));
+		border: 1px solid var(--arrow-border);
+		box-shadow: inset 0 0 0 1px var(--arrow-inner-border);
+		box-sizing: border-box;
+		content: "";
+		height: 22px;
+		inset-inline-end: 0;
+		position: absolute;
+		width: var(--arrow-size);
+	}
+
+	&::after {
+		background-color: var(--arrow-fg, var(--fg-main));
+		content: "";
+		height: 4px;
+		inset-inline-end: calc(var(--arrow-border-size) + 5px);
+		mask: var(--icon-arrow-bottom);
+		position: absolute;
+		width: 7px;
+	}
+}
+
+@mixin dropdown-text {
+	padding: 3px 5px;
+
+	flex-grow: 1;
+}
+
 /// Checkbox/radio base.
 ///
 /// @param {string} $name - checkbox/radio
