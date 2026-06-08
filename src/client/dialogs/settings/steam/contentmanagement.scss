@@ -1,6 +1,6 @@
-@use "shared/extends/contextmenu";
-@use "shared/extends/controls";
-@use "shared/extends/style";
+@use "mixins/contextmenu";
+@use "mixins/controls";
+@use "mixins/style";
 
 #AppBody,
 #AppHeader,

@@ -1,5 +1,5 @@
-@use "shared/extends/controls";
-@use "shared/extends/tooltip";
+@use "mixins/controls";
+@use "mixins/tooltip";
 
 #Name {
 	margin: 0;

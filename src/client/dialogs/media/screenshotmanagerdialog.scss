@@ -1,6 +1,6 @@
-@use "shared/extends/controls";
-@use "shared/extends/dialog";
-@use "shared/extends/style";
+@use "mixins/controls";
+@use "mixins/dialog";
+@use "mixins/style";
 
 #ButtonBox {
 	:where(&:not(#Combobox)) {

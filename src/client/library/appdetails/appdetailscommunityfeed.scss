@@ -1,5 +1,5 @@
-@use "shared/extends/library";
-@use "shared/extends/style";
+@use "mixins/library";
+@use "mixins/style";
 
 #AppOverviewRow {
 	gap: var(--library_spacing);

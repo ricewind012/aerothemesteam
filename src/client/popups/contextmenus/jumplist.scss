@@ -1,4 +1,4 @@
-@use "shared/extends/contextmenu";
+@use "mixins/contextmenu";
 
 #GameIcon {
 	@include contextmenu.icon-pos;

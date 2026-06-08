@@ -1,5 +1,5 @@
-@use "shared/extends/list";
-@use "shared/extends/style";
+@use "mixins/list";
+@use "mixins/style";
 
 @mixin container {
 	background: var(--contextmenu_container-bg);

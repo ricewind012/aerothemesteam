@@ -1,6 +1,6 @@
-@use "shared/extends/controls";
-@use "shared/extends/library";
-@use "shared/extends/style";
+@use "mixins/controls";
+@use "mixins/library";
+@use "mixins/style";
 
 #AchievementProgressContainer {
 	@include controls.progress-bar-outer;

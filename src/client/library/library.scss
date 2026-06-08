@@ -1,5 +1,5 @@
-@use "shared/extends/style";
-@use "shared/extends/library";
+@use "mixins/style";
+@use "mixins/library";
 
 #AppDetailsMain {
 	border: var(--library_container-border);

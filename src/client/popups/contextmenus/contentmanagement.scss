@@ -1,4 +1,4 @@
-@use "shared/extends/contextmenu";
+@use "mixins/contextmenu";
 
 #AddFolderDropdownOption {
 	--icon: var(--icon-plus);

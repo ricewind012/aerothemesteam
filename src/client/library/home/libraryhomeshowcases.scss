@@ -1,5 +1,5 @@
-@use "shared/extends/library";
-@use "shared/extends/pageablecontainer";
+@use "mixins/library";
+@use "mixins/pageablecontainer";
 
 #AddShowcase {
 	@include library.button;

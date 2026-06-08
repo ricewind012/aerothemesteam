@@ -1,7 +1,7 @@
-@use "shared/extends/controls";
-@use "shared/extends/dialog";
-@use "shared/extends/library";
-@use "shared/extends/style";
+@use "mixins/controls";
+@use "mixins/dialog";
+@use "mixins/library";
+@use "mixins/style";
 
 @keyframes dropfade {
 	0% {

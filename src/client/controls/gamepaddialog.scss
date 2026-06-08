@@ -1,4 +1,4 @@
-@use "shared/extends/controls";
+@use "mixins/controls";
 
 #Toggle {
 	@include controls.input-base("checkbox", "#On");

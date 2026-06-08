@@ -1,6 +1,6 @@
-@use "shared/extends/controls";
-@use "shared/extends/list";
-@use "shared/extends/style";
+@use "mixins/controls";
+@use "mixins/list";
+@use "mixins/style";
 
 #AddFavoriteButton {
 	margin: 0 8px 0 0;

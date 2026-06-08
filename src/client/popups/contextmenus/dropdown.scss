@@ -1,4 +1,4 @@
-@use "shared/extends/contextmenu";
+@use "mixins/contextmenu";
 
 // Some guy really thought putting !important would be funny af
 body:is(.DesktopUI, .friendsui-container) .visible.visible #DialogDropDownMenu {

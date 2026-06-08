@@ -1,4 +1,4 @@
-@use "shared/extends/settings";
+@use "mixins/settings";
 
 #PanelSection {
 	margin-block-end: var(--library_spacing);

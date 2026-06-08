@@ -1,5 +1,5 @@
-@use "shared/extends/dialog";
-@use "shared/extends/library";
+@use "mixins/dialog";
+@use "mixins/library";
 
 // TODO: put ts into modals mixins to unify with clientshared/dialog
 

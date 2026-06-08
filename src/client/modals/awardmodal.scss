@@ -1,6 +1,6 @@
-@use "shared/extends/library";
-@use "shared/extends/list";
-@use "shared/extends/style";
+@use "mixins/library";
+@use "mixins/list";
+@use "mixins/style";
 
 #Button {
 	@include list.item;

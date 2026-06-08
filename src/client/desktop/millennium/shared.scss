@@ -1,4 +1,4 @@
-@use "shared/extends/style";
+@use "mixins/style";
 
 :root[data-millennium-plugin~="core"] {
 	--MillenniumText-HeadingLarge: normal 700 26px/1.4 var(--MillenniumText-Font);

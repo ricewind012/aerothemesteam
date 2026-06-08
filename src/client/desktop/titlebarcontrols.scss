@@ -1,4 +1,4 @@
-@use "shared/extends/style";
+@use "mixins/style";
 
 @mixin _titlebar-button {
 	margin-inline-end: 10px;

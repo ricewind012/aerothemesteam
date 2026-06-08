@@ -1,5 +1,5 @@
-@use "shared/extends/list";
-@use "shared/extends/settings";
+@use "mixins/list";
+@use "mixins/settings";
 
 #PageListItem_Icon {
 	display: none;

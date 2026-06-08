@@ -1,5 +1,5 @@
-@use "shared/extends/contextmenu";
-@use "shared/extends/list";
+@use "mixins/contextmenu";
+@use "mixins/list";
 
 .group_invite_menu_option_disabled {
 	@include list.item-disabled;

@@ -1,4 +1,4 @@
-@use "shared/extends/controls";
+@use "mixins/controls";
 
 #ProgressBar {
 	@include controls.progress-bar-outer;

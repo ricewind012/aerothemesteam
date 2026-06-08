@@ -1,6 +1,6 @@
-@use "shared/extends/controls";
-@use "shared/extends/settings";
-@use "shared/extends/style";
+@use "mixins/controls";
+@use "mixins/settings";
+@use "mixins/style";
 
 %-beta-row {
 	background: none;

@@ -1,5 +1,5 @@
-@use "shared/extends/library";
-@use "shared/extends/tooltip";
+@use "mixins/library";
+@use "mixins/tooltip";
 
 .game_hover_box {
 	@include tooltip.container;

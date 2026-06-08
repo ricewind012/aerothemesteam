@@ -1,5 +1,5 @@
-@use "shared/extends/contextmenu";
-@use "shared/extends/list";
+@use "mixins/contextmenu";
+@use "mixins/list";
 
 #AppCount {
 	color: var(--listitem_fg-secondary);

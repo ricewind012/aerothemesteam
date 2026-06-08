@@ -1,5 +1,5 @@
-@use "shared/extends/controls";
-@use "shared/extends/list";
+@use "mixins/controls";
+@use "mixins/list";
 
 #Footer {
 	gap: 8px;

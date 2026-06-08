@@ -1,4 +1,4 @@
-@use "shared/extends/tooltip";
+@use "mixins/tooltip";
 
 #TextToolTip {
 	@include tooltip.container;

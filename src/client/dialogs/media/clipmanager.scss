@@ -1,5 +1,5 @@
-@use "shared/extends/controls";
-@use "shared/extends/style";
+@use "mixins/controls";
+@use "mixins/style";
 
 #AppNameHeader {
 	display: none;

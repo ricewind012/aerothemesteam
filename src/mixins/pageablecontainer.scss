@@ -1,4 +1,4 @@
-@use "shared/extends/style";
+@use "mixins/style";
 
 @mixin button($icon-name) {
 	@include style.icon($icon-name);
