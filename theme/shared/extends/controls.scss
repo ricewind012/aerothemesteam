@@ -115,6 +115,7 @@
 		box-sizing: border-box;
 		content: "";
 		height: 22px;
+		inset-block-start: 0;
 		inset-inline-end: 0;
 		position: absolute;
 		width: var(--arrow-size);
@@ -124,6 +125,7 @@
 		background-color: var(--arrow-fg, var(--fg-main));
 		content: "";
 		height: 4px;
+		inset-block-end: calc(var(--arrow-border-size) + 8px);
 		inset-inline-end: calc(var(--arrow-border-size) + 5px);
 		mask: var(--icon-arrow-bottom);
 		position: absolute;

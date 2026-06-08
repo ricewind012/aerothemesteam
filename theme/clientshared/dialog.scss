@@ -15,7 +15,7 @@
 	}
 }
 
-.DialogBody {
+:where(.DialogBody) {
 	a {
 		@include style.link;
 
@@ -34,7 +34,7 @@
 	}
 }
 
-.DialogBodyText {
+:where(.DialogBodyText) {
 	color: inherit;
 	font: inherit;
 	margin: 0;
@@ -54,7 +54,7 @@
 	}
 }
 
-.DialogCheckbox {
+:where(.DialogCheckbox) {
 	@include controls.input-base("checkbox", ".Active");
 
 	border-radius: 0;
@@ -68,7 +68,7 @@
 	}
 }
 
-.DialogCheckbox_Container {
+:where(.DialogCheckbox_Container) {
 	margin: 0;
 
 	.DialogCheckbox {
@@ -83,16 +83,16 @@
 	padding: var(--dialog_spacing-content);
 }
 
-.DialogControlsSection,
-.DialogControlsSectionHeader,
-.DialogHeader,
-.DialogSubHeader {
+:where(.DialogControlsSection),
+:where(.DialogControlsSectionHeader),
+:where(.DialogHeader),
+:where(.DialogSubHeader) {
 	&:not(:first-child) {
 		margin-top: var(--tabpanel_spacing);
 	}
 }
 
-.DialogDropDown {
+:where(.DialogDropDown) {
 	@include controls.dropdown($disabled-class-name: ".Disabled");
 
 	opacity: 1;
@@ -101,19 +101,23 @@
 	display: flex;
 }
 
-.DialogDropDown_Arrow {
+:where(.DialogDropDown_Arrow) {
 	@include controls.dropdown-arrow;
+
+	svg {
+		display: none;
+	}
 }
 
-.DialogDropDown_CurrentDisplay {
-	@include dropdown-text;
+:where(.DialogDropDown_CurrentDisplay) {
+	@include controls.dropdown-text;
 }
 
-.DialogFooter {
+:where(.DialogFooter) {
 	padding-top: 8px;
 }
 
-.DialogHeader {
+:where(.DialogHeader) {
 	color: var(--blue-text);
 
 	:root[browsertype="DirectHWND"] & {
@@ -121,40 +125,40 @@
 	}
 }
 
-.DialogInput {
+:where(.DialogInput) {
 	@extend %textfield-base;
 
 	padding: 1px 3px;
 }
 
-.DialogInput_ClearAction {
+:where(.DialogInput_ClearAction) {
 	--icon-size: 12px;
 	@include style.icon("delete", "svg");
 
 	inset-inline-end: 6px;
 }
 
-.DialogInput_Wrapper {
+:where(.DialogInput_Wrapper) {
 	gap: 8px;
 }
 
-._DialogInputContainer {
+:where(._DialogInputContainer) {
 	border-radius: 0;
 }
 
-.DialogRoundCheckboxField {
+:where(.DialogRoundCheckboxField) {
 	margin: 0;
 
 	width: unset;
 	height: unset;
 }
 
-.DialogRoundCheckboxField_Container {
+:where(.DialogRoundCheckboxField_Container) {
 	gap: 7px;
 	margin-block-end: 7px;
 }
 
-.DialogRoundCheckboxField_Control {
+:where(.DialogRoundCheckboxField_Control) {
 	@include controls.input-base("radio", ".Active", ".Disabled");
 
 	background-color: transparent;
@@ -163,18 +167,18 @@
 	height: var(--size);
 }
 
-.DialogRoundCheckboxField_OuterCircle {
+:where(.DialogRoundCheckboxField_OuterCircle) {
 	display: none;
 }
 
-.DialogLabel,
-.DialogToggle_Label {
+:where(.DialogLabel),
+:where(.DialogToggle_Label) {
 	color: inherit;
 	font: inherit;
 	text-transform: unset;
 }
 
-.DialogToggle_Label {
+:where(.DialogToggle_Label) {
 	line-height: 1;
 }
 
@@ -183,7 +187,7 @@
 	gap: 8px;
 }
 
-.FullModalOverlay {
+:where(.FullModalOverlay) {
 	@include dialog.overlay;
 
 	// Use this element for the animation
@@ -191,26 +195,26 @@
 
 	display: block;
 
-	&[style="display: none;"] {
+	&:where([style="display: none;"]) {
 		opacity: 0;
 		pointer-events: none;
 	}
 
-	& > dialog {
+	:where(& > dialog) {
 		border: none;
 	}
 
-	:where(.DialogBody) {
+	:where(& .DialogBody) {
 		padding: var(--library_spacing);
 	}
 
-	:where(.DialogButton) {
+	:where(& .DialogButton) {
 		@include library.button;
 
 		box-shadow: none;
 	}
 
-	:where(.DialogContent) {
+	:where(& .DialogContent) {
 		@include library.section;
 
 		color: var(--blue-text);
@@ -219,7 +223,7 @@
 		padding: 0;
 	}
 
-	:where(.DialogContent_InnerWidth) {
+	:where(& .DialogContent_InnerWidth) {
 		overflow: hidden;
 	}
 
@@ -241,7 +245,7 @@
 		display: block;
 	}
 
-	.DialogTwoColLayout {
+	:where(& .DialogTwoColLayout) {
 		gap: var(--library_spacing-x05);
 
 		& > ._DialogLayout {
@@ -249,17 +253,17 @@
 		}
 	}
 
-	.ModalOverlayBackground {
+	:where(& .ModalOverlayBackground) {
 		display: none;
 	}
 
-	.ModalPosition_Content {
+	:where(& .ModalPosition_Content) {
 		animation: dropfade var(--anim-time) ease-in;
 	}
 }
 
 .ModalPosition.Destructive {
-	.DialogButton {
+	:where(& .DialogButton) {
 		background:
 			linear-gradient(
 				0deg,
@@ -272,13 +276,13 @@
 		border-color: hsl(from var(--blue-border) 0 s l);
 	}
 
-	.DialogContent {
+	:where(& .DialogContent) {
 		background-color: hsl(from var(--library_section-bg) 0 s l);
 		color: hsl(from var(--blue-text) 0 s l);
 		border-color: hsl(from var(--library_border-color) 0 s l);
 	}
 
-	.DialogHeader {
+	:where(& .DialogHeader) {
 		background-image: linear-gradient(
 			0deg,
 			hsl(from var(--blue-dark) 0 s l),
@@ -289,30 +293,30 @@
 	}
 }
 
-.ModalPosition_Content {
+:where(.ModalPosition_Content) {
 	color: inherit;
 	font-size: inherit;
 	font-weight: normal;
 	box-shadow: var(--popup-shadow);
 
-	.PopupFullWindow & > :not(.DialogContent, .ModalPosition_Dismiss) {
+	:where(.PopupFullWindow & > :not(.DialogContent, .ModalPosition_Dismiss)) {
 		padding-top: var(--title-bar-height);
 	}
 }
 
-.ModalPosition_Dismiss {
+:where(.ModalPosition_Dismiss) {
 	@include style.icon("delete", "svg");
 
 	inset-inline-end: 8px;
 	inset-block-start: 8px;
 }
 
-.ModalPosition_TopBar {
+:where(.ModalPosition_TopBar) {
 	display: none;
 }
 
 // fix for game info dialog
-.TitleBar {
+:where(.TitleBar) {
 	z-index: 99;
 	height: var(--title-bar-height);
 

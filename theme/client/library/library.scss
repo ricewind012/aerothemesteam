@@ -6,23 +6,23 @@
 }
 
 #Container {
-	.DialogButton {
+	:where(& .DialogButton) {
 		@include library.button;
 
 		box-shadow: none;
 
-		&:is(:disabled, .Disabled) {
+		&:where(:disabled, .Disabled) {
 			@include library.button-disabled;
 		}
 	}
 
-	.DialogDropDown {
+	:where(& .DialogDropDown) {
 		@include library.text-input;
 
 		align-items: center;
 	}
 
-	.DialogDropDown_Arrow {
+	:where(& .DialogDropDown_Arrow) {
 		background: none;
 		border: none;
 		box-shadow: none;
@@ -38,12 +38,12 @@
 		}
 	}
 
-	.DialogDropDown_CurrentDisplay {
+	:where(& .DialogDropDown_CurrentDisplay) {
 		line-height: 1;
 		padding: 0;
 	}
 
-	.DialogInput {
+	:where(& .DialogInput) {
 		@include library.text-input($compact: true);
 	}
 }
