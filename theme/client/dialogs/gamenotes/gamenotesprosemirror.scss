@@ -1,5 +1,7 @@
 #CommandButton {
 	margin-block: 0;
+	min-width: unset;
+	width: 32px;
 
 	svg {
 		padding: 0;

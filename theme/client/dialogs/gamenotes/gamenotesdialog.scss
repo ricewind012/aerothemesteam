@@ -1,10 +1,12 @@
 @use "shared/extends/controls";
+@use "shared/extends/style";
 
 #EditorInput {
 	@extend %textfield-base;
 }
 
 #NoteActions {
+	gap: 8px;
 	margin-top: 8px;
 
 	justify-content: end;
@@ -18,6 +20,10 @@
 
 	.tool-tip-source .DialogButton {
 		width: 32px;
+
+		svg {
+			@include style.icon($name: "delete", $hide-selector: "*");
+		}
 	}
 }
 
