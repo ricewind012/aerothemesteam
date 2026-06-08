@@ -35,9 +35,8 @@
 	&_PageListColumn {
 		background-color: var(--bg-main);
 		border: var(--pagedsettings_border);
-		padding: 2px;
-
 		min-height: unset;
+		padding: 2px;
 	}
 
 	&_PageListItem {
@@ -58,18 +57,16 @@
 		color: var(--dialog_fg);
 		font-size: var(--font-size);
 		font-weight: normal;
-		padding: var(--tabpanel_spacing);
 		margin: 0;
-
 		overflow: auto;
+		padding: var(--tabpanel_spacing);
 	}
 
 	.DialogHeader {
 		@include settings.header;
 
 		margin: var(--tabpanel_spacing);
-		margin-bottom: 0;
-
+		margin-block-end: 0;
 		width: calc(100% - var(--tabpanel_spacing) - var(--scrollbar-size));
 	}
 

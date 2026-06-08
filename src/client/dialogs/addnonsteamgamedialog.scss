@@ -3,13 +3,13 @@
 
 #Footer {
 	gap: 8px;
-	padding-top: 8px;
+	padding-block-start: 8px;
 }
 
 #GameList {
 	@include controls.table;
 
-	border-top: none;
+	border-block-start: none;
 	border-radius: 0;
 	box-shadow: none;
 }
@@ -22,21 +22,21 @@
 	#AppName {
 		color: inherit;
 		font: inherit;
-		padding-left: 6px;
+		padding-inline-start: 6px;
 	}
 
 	#ExePath {
-		opacity: 1;
 		color: inherit;
 		font: inherit;
-		padding-left: 12px;
+		opacity: 1;
+		padding-inline-start: 12px;
 	}
 }
 
 #Header {
 	@include controls.table;
 
-	border-bottom: none;
+	border-block-end: none;
 
 	& > div {
 		@include controls.table-header-row;

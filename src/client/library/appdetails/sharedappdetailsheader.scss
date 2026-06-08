@@ -17,10 +17,9 @@
 }
 
 #ImgSrc {
-	mask: var(--library_header-img-mask);
-
-	width: 80%;
 	height: var(--library_header-img-height);
+	mask: var(--library_header-img-mask);
+	width: 80%;
 }
 
 #SVGTitle {
@@ -31,9 +30,8 @@
 	align-self: flex-start;
 
 	&::before {
-		content: var(--library_game-name);
-
 		color: var(--blue-text);
+		content: var(--library_game-name);
 		font-size: var(--font-size-xlarge);
 		font-weight: bold;
 	}
@@ -44,19 +42,16 @@
 }
 
 #TitleSection {
+	inset-block-start: 0;
 	padding: var(--library_body-spacing);
 
-	top: 0;
-
 	&::before {
-		content: "";
-
-		width: var(--library_icon-size);
-		height: var(--library_icon-size);
-
 		background-image: var(--library_game-icon);
 		background-size: 100%;
-		margin-right: var(--library_spacing);
+		content: "";
+		height: var(--library_icon-size);
+		margin-inline-end: var(--library_spacing);
+		width: var(--library_icon-size);
 	}
 }
 
@@ -64,13 +59,11 @@
 	height: var(--library_header-img-height);
 
 	&#FallbackArt::before {
+		background-color: var(--blue-light);
 		content: "";
-
+		height: 100%;
+		mask: var(--library_header-img-mask);
 		position: absolute;
 		width: 100%;
-		height: 100%;
-
-		background-color: var(--blue-light);
-		mask: var(--library_header-img-mask);
 	}
 }

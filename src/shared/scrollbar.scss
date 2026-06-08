@@ -5,9 +5,8 @@
 		rgba(239, 239, 239, 1) 25%,
 		rgba(244, 244, 244, 1) 100%
 	);
-
-	width: var(--scrollbar-size);
 	height: var(--scrollbar-size);
+	width: var(--scrollbar-size);
 }
 
 ::-webkit-scrollbar-button,
@@ -114,7 +113,6 @@
 }
 
 ::-webkit-scrollbar-track {
-	margin: 1px 0;
-
 	display: flex;
+	margin: 1px 0;
 }

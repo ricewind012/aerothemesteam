@@ -1,26 +1,24 @@
 #Container {
+	align-items: center;
 	background: none;
 	border: none;
 	box-shadow: none;
 	gap: 6px;
 	padding: 0 6px;
-
-	align-items: center;
 }
 
 #SectionCount {
 	color: inherit;
 	font: inherit;
-	margin: 0;
-
 	height: unset;
+	margin: 0;
 }
 
 #SectionHeaderContent {
 	color: var(--fg-main);
 	font-size: 12px;
 	gap: 4px;
-	padding-top: 4px;
+	padding-block-start: 4px;
 }
 
 #SectionName {

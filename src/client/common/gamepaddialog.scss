@@ -5,10 +5,10 @@
 
 	background: none;
 	color: inherit;
+	margin: 0;
 	padding: 3px 0;
 	// 13px = checkbox size
 	padding-inline-start: calc(20px * var(--indent-level));
-	margin: 0;
 }
 
 #FieldChildrenWithIcon {
@@ -18,8 +18,8 @@
 #FieldDescription {
 	color: inherit;
 	font: inherit;
-	margin-top: 0;
-	margin-left: 20px;
+	margin-block-start: 0;
+	margin-inline-start: 20px;
 
 	&:not(:has(> *)) {
 		opacity: 0.5;

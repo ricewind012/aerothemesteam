@@ -1,6 +1,6 @@
 // WHYYYYYYYYY
 #BandwidthInputField {
-	padding-left: calc(
+	padding-inline-start: calc(
 		var(--field-negative-horizontal-margin) + var(--indent-level) * 20px
 	);
 }

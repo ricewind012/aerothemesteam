@@ -1,36 +1,33 @@
 @use "shared/extends/style";
 
 .ribbon-button {
-	gap: 4px;
-
-	display: flex;
 	align-items: center;
+	display: flex;
+	gap: 4px;
 	flex-direction: var(--direction);
 	flex-grow: 1;
 }
 
 .ribbon-button-container {
-	display: flex;
 	align-items: center;
+	display: flex;
 	flex-direction: var(--direction);
 }
 
 .ribbon-button-arrow {
+	background-color: var(--blue-text);
+	height: 100%;
 	mask: var(--icon);
 	mask-position: 100% center;
 	mask-size: 4px 7px;
 	mask-repeat: no-repeat;
-	background-color: var(--blue-text);
-
 	width: 8px;
-	height: 100%;
 
 	&.vertical {
+		height: 8px;
 		mask-position: center 100%;
 		mask-size: 7px 4px;
-
 		width: 100%;
-		height: 8px;
 	}
 }
 
@@ -38,8 +35,8 @@
 	--direction: row;
 	--icon: var(--icon-arrow-right);
 
-	justify-content: space-between;
 	cursor: pointer;
+	justify-content: space-between;
 
 	&.disabled {
 		pointer-events: none;
@@ -62,33 +59,27 @@
 	--shadow-color: rgba(255, 255, 255, 0.5);
 	--spacing: 2px;
 
-	background-image: linear-gradient(
-			0deg,
-			#bdd1ea 14.1%,
-			#93b0d5 84.62%,
-			#506580 156.7%
-		),
+	background-image:
+		linear-gradient(0deg, #bdd1ea 14.1%, #93b0d5 84.62%, #506580 156.7%),
 		var(--white-gradient);
 	box-shadow: inset 0 0 9.3px var(--shadow-color);
 	border-radius: var(--border-radius-large);
+	display: flex;
 	gap: var(--spacing);
 	padding: var(--spacing);
-
-	display: flex;
 }
 
 .ribbon-section {
 	--shadow: 1px 1px var(--shadow-color);
 
-	font-size: var(--font-size-small);
 	border: 1px solid #8198b9;
 	border-radius: var(--border-radius);
 	box-shadow:
 		var(--shadow),
 		inset var(--shadow);
-
 	display: flex;
 	flex-direction: column;
+	font-size: var(--font-size-small);
 }
 
 .ribbon-section-body {
@@ -98,16 +89,15 @@
 	--spacing-x: calc(var(--spacing) * 2);
 
 	color: var(--blue-text);
-	gap: var(--spacing-y) var(--spacing-x);
-	padding: var(--spacing-y) var(--spacing-x);
-
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
+	gap: var(--spacing-y) var(--spacing-x);
 	max-height: calc(
 		var(--spacing-y) * (var(--max-item-count) - 1) + var(--spacing-y) * 2 +
 			var(--icon-size) * var(--max-item-count)
 	);
+	padding: var(--spacing-y) var(--spacing-x);
 }
 
 .ribbon-section-title {
@@ -115,6 +105,6 @@
 
 	background-image: linear-gradient(0deg, #6a89b3, #a2b6d2);
 	color: #fff;
-	text-align: center;
 	padding: var(--spacing) calc(var(--spacing) * 2);
+	text-align: center;
 }

@@ -35,9 +35,8 @@
 	padding: 0;
 
 	& > :empty::before {
-		content: ".";
-
 		color: transparent;
+		content: ".";
 	}
 }
 

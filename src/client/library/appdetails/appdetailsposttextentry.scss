@@ -2,19 +2,17 @@
 @use "shared/extends/style";
 
 #Controls {
-	padding: 0;
-	margin-top: var(--library_spacing-x05);
-	margin-bottom: var(--library_spacing);
-
+	margin-block-start: var(--library_spacing-x05);
+	margin-block-end: var(--library_spacing);
 	max-height: unset;
+	padding: 0;
 }
 
 #EmoticonButton {
 	background-color: transparent;
 	gap: var(--library_spacing-x05);
-
-	width: unset;
 	height: unset;
+	width: unset;
 
 	&:disabled {
 		opacity: 0.75;
@@ -31,11 +29,10 @@
 	}
 
 	&::after {
-		content: "";
+		@include style.arrow("bottom");
 
 		background-color: var(--blue-text);
-
-		@include style.arrow("bottom");
+		content: "";
 	}
 }
 
@@ -46,22 +43,21 @@
 #PostButton {
 	@include library.button;
 
-	gap: var(--library_spacing-x05);
-
-	display: flex;
 	align-items: center;
+	display: flex;
+	gap: var(--library_spacing-x05);
 	width: unset;
 
 	&::before {
-		content: "";
-
 		@include style.icon("blue-arrow");
+
+		content: "";
 	}
 }
 
 #PostTextEntryArea {
 	@include library.text-input;
 
-	width: 100%;
 	min-height: 40px;
+	width: 100%;
 }

@@ -1,17 +1,15 @@
 #avatar {
 	border: none;
 	box-shadow: none;
-
-	width: inherit;
 	height: inherit;
+	width: inherit;
 }
 
 #avatarHolder {
-	transform: unset;
-
-	position: relative;
-	width: calc(var(--steamavatar_size) * var(--multiply));
 	height: calc(var(--steamavatar_size) * var(--multiply));
+	position: relative;
+	transform: unset;
+	width: calc(var(--steamavatar_size) * var(--multiply));
 
 	&.X-Small {
 		--multiply: 0.75;

@@ -4,10 +4,9 @@
 	$w: $cond and 7px or 4px;
 	$h: $cond and 4px or 7px;
 
-	mask-image: var(--icon-arrow-#{$direction});
-
-	width: $w;
 	height: $h;
+	mask-image: var(--icon-arrow-#{$direction});
+	width: $w;
 }
 
 /// @param {string} $name - Icon name found in `assets/icons`.
@@ -19,9 +18,8 @@
 
 	background-image: var(--icon);
 	background-size: var(--icon-size);
-
-	width: var(--icon-size);
 	height: var(--icon-size);
+	width: var(--icon-size);
 
 	&:active {
 		filter: brightness(1.25);
@@ -75,7 +73,9 @@
 
 @mixin blue-bar {
 	@include white-gradient;
-	--blue-bar-gradient: linear-gradient(
+
+	--blue-bar-gradient:
+		linear-gradient(
 			180deg,
 			var(--blue-light),
 			var(--blue-dark),

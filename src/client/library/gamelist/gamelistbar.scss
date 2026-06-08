@@ -1,9 +1,5 @@
 #Container {
-	background-image: linear-gradient(
-		0deg,
-		#728fb7 88.41%,
-		#c9d3e1 102.3%
-	);
+	background-image: linear-gradient(0deg, #728fb7 88.41%, #c9d3e1 102.3%);
 
 	& > .part {
 		order: -1;
@@ -15,11 +11,10 @@
 
 	background-color: transparent;
 	box-shadow: none;
-	padding: 0;
-	gap: var(--border-size);
-	margin-top: var(--border-size);
-
 	flex-direction: column;
+	gap: var(--border-size);
 	height: unset;
+	margin-block-start: var(--border-size);
 	order: 1;
+	padding: 0;
 }

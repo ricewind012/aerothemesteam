@@ -6,10 +6,10 @@
 }
 
 #ProgressLabel {
-	opacity: var(--library_secondary-text-opacity);
 	color: inherit;
 	font-size: var(--font-size-small);
-	margin-bottom: var(--library_text-spacing);
+	margin-block-end: var(--library_text-spacing);
+	opacity: var(--library_secondary-text-opacity);
 }
 
 #SingleAchievementProgressBar {
@@ -17,14 +17,14 @@
 }
 
 #SingleAchievementProgressContainer {
-	margin-top: var(--tooltip_description-spacing);
+	margin-block-start: var(--tooltip_description-spacing);
 }
 
 #TextSection {
 	color: inherit;
 	font: inherit;
 	padding: var(--tooltip_description-spacing);
-	padding-left: 0;
+	padding-inline-start: 0;
 }
 
 #TopSectionAchievementIcon {

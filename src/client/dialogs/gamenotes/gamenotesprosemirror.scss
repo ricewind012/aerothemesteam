@@ -4,11 +4,10 @@
 	width: 32px;
 
 	svg {
-		padding: 0;
-		margin: 0;
-
-		width: var(--icon-size);
 		height: var(--icon-size);
+		margin: 0;
+		padding: 0;
+		width: var(--icon-size);
 	}
 
 	&.Disabled svg {

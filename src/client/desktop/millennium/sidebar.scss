@@ -6,10 +6,10 @@
 
 	@include library.section;
 
-	color: var(--blue-text);
-	font-size: var(--font-size);
 	border: none;
 	border-inline-start: var(--library_border);
+	color: var(--blue-text);
+	font-size: var(--font-size);
 	padding: 0;
 }
 
@@ -41,8 +41,8 @@
 	@include library.section-header;
 
 	background-color: transparent;
-	line-height: inherit;
 	border: none;
 	border-block-end: 1px solid var(--library_section-header-border-color);
 	box-shadow: none;
+	line-height: inherit;
 }

@@ -6,19 +6,18 @@
 
 #AllChats,
 #Chat {
-	gap: 0;
-
 	flex-direction: row;
-	max-width: unset;
+	gap: 0;
 	min-width: unset;
+	max-width: unset;
 
 	.avatarHolder {
 		// contextmenu_item-height / steamavatar_size
 		--multiply: 0.6875;
 
+		inset-block-start: 0;
+		inset-inline-start: 1px;
 		position: absolute;
-		top: 0;
-		left: 1px;
 	}
 }
 
@@ -32,15 +31,14 @@
 }
 
 #ChatRow {
-	margin: 0;
-
 	flex-direction: column;
+	margin: 0;
 }
 
 #Name {
 	mask: none;
-	text-align: start;
 	padding: 0;
+	text-align: start;
 }
 
 #ShareMenuLabel {

@@ -3,7 +3,7 @@
 #AppNameHeader {
 	color: var(--blue-text);
 	font-size: var(--font-size-xlarge);
-	border-bottom: 2px solid transparent;
+	border-block-end: 2px solid transparent;
 	border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
 	margin: 0;
 	margin-block-end: 12px;
@@ -28,11 +28,10 @@
 #ListContainer {
 	all: unset;
 
-	gap: 4px;
-	padding: 4px;
-
 	display: flex;
 	flex-direction: column;
+	gap: 4px;
+	padding: 4px;
 }
 
 #ListHeader {

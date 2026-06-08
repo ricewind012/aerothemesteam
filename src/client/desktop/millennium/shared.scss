@@ -28,8 +28,8 @@
 }
 
 .MillenniumButton {
-	width: auto;
 	flex-grow: 0;
+	width: auto;
 
 	&:not(.MillenniumIconButton, .MillenniumLogs_LogItemButton) svg {
 		display: none;

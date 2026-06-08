@@ -5,40 +5,37 @@
 }
 
 #LabelHolder {
-	padding-top: 0;
+	padding-block-start: 0;
 }
 
 #ShowMore {
 	@include library.button;
 
-	margin-top: var(--library_spacing-x05);
+	margin-block-start: var(--library_spacing-x05);
 }
 
 #Subsection {
-	padding-bottom: var(--library_spacing-x05);
-	margin-bottom: var(--library_spacing-x05);
-
+	margin-block-end: var(--library_spacing-x05);
 	overflow: visible;
+	padding-block-end: var(--library_spacing-x05);
 	position: relative;
 
 	&:not(:last-of-type)::after {
+		border-block-end: var(--library_border) !important;
 		content: "";
-
-		position: absolute;
-		bottom: calc(var(--library_border-size) * -1);
+		inset-block-end: calc(var(--library_border-size) * -1);
 		inset-inline: calc(var(--library_spacing-x05) * -1);
-
-		border-bottom: var(--library_border) !important;
+		position: absolute;
 	}
 
 	&:last-of-type {
-		padding: 0;
 		margin: 0;
+		padding: 0;
 	}
 }
 
 #SubsectionHeader {
 	color: inherit;
 	font-size: var(--font-size);
-	padding-bottom: var(--library_text-spacing);
+	padding-block-end: var(--library_text-spacing);
 }

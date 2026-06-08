@@ -32,9 +32,9 @@
 	background-color: var(--bg-main);
 	border: 1px solid var(--blue-border);
 	gap: 2px;
-	padding: 2px;
 	margin: var(--library_spacing);
 	margin-block-start: var(--library_spacing-x05);
+	padding: 2px;
 }
 
 #Divider {
@@ -97,9 +97,9 @@
 			var(--blue-light)
 		);
 		font-size: var(--font-size);
-		line-height: 2;
 		letter-spacing: 0;
-		text-transform: none;
+		line-height: 2;
 		margin: calc(var(--library_border-size) * -1);
+		text-transform: none;
 	}
 }

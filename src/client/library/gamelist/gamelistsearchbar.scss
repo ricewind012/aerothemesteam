@@ -4,9 +4,8 @@
 #AdvancedSearchButton {
 	@include library.button;
 
-	padding: 2px 3px;
-
 	min-width: unset;
+	padding: 2px 3px;
 
 	& > div {
 		@include style.icon("settings");
@@ -20,7 +19,6 @@
 #AdvancedSearchContainer {
 	background-color: transparent;
 	border-radius: 0;
-
 	height: unset;
 }
 
@@ -28,7 +26,6 @@
 	background-color: transparent;
 	gap: 3px;
 	margin: 3px 4px 5px 3px;
-
 	// for part
 	order: -1;
 	z-index: 1;
@@ -40,14 +37,12 @@
 		background-position: calc(100% - var(--spacing-x));
 		background-repeat: no-repeat;
 		font-size: 11px;
-		padding-right: calc(var(--icon-size) + var(--spacing-x) * 2);
-
 		height: unset;
+		margin-inline-end: calc(var(--icon-size) + var(--spacing-x) * 2);
 	}
 }
 
 #SearchInput {
 	border-radius: 0;
-
 	min-height: unset;
 }

@@ -14,16 +14,15 @@
 
 #BottomControlsRow {
 	gap: 4px;
-
-	position: absolute;
-	inset-inline: 0;
-	bottom: 0;
 	height: unset;
+	inset-inline: 0;
+	inset-block-end: 0;
+	position: absolute;
 }
 
 #ColumnResizer {
 	background-color: transparent;
-	margin-right: -3px;
+	margin-inline-end: -3px;
 }
 
 #DialogBody {
@@ -35,7 +34,7 @@
 }
 
 #FilterOptionsCtr {
-	padding-bottom: 0;
+	padding-block-end: 0;
 
 	&:not(#Collapsed) {
 		height: unset;
@@ -43,11 +42,10 @@
 }
 
 #FilterOptionsCheckboxesCtr {
-	gap: 4px;
-	margin-bottom: 8px;
-
 	display: flex;
 	flex-direction: column;
+	gap: 4px;
+	margin-block-end: 8px;
 }
 
 #RadioButtonColumn {
@@ -67,17 +65,15 @@
 // !important
 div#PasswordColumn,
 div#SecureColumn {
-	padding-inline: 0;
-
 	height: unset;
+	padding-inline: 0;
 
 	// !important
 	#DialogBody & svg:not(.SVGIcon_Button) {
-		margin: 0;
-
 		display: unset;
-		width: var(--icon-size);
 		height: var(--icon-size);
+		margin: 0;
+		width: var(--icon-size);
 	}
 }
 
@@ -96,7 +92,7 @@ div#SecureColumn {
 
 	.DialogDropDown,
 	.DialogInput_Wrapper {
-		margin-bottom: 8px;
+		margin-block-end: 8px;
 	}
 
 	svg:not(.SVGIcon_Button) {
@@ -151,7 +147,6 @@ div#SecureColumn {
 
 	gap: 0;
 	padding: 0;
-
 	position: absolute;
 
 	&:hover,
@@ -163,7 +158,7 @@ div#SecureColumn {
 #ServerTabPane {
 	@include controls.tab-panel;
 
-	margin-bottom: calc(21px + 8px);
+	margin-block-end: calc(21px + 8px);
 }
 
 #TopControlsCtr {

@@ -3,8 +3,8 @@
 %button {
 	@include library.button;
 
-	margin-left: var(--library_spacing-x05);
-	margin-right: 0;
+	margin-inline-start: var(--library_spacing-x05);
+	margin-inline-end: 0;
 }
 
 #CompactThumbButton {
@@ -18,7 +18,7 @@
 #Playtime {
 	@include library.header-primary;
 
-	margin-bottom: var(--library_text-spacing);
+	margin-block-end: var(--library_text-spacing);
 }
 
 #RatingContainer {

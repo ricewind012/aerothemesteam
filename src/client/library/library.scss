@@ -26,15 +26,14 @@
 		background: none;
 		border: none;
 		box-shadow: none;
-		margin-left: 6px;
-
-		width: 7px;
 		height: 4px;
+		margin-inline-start: 6px;
+		width: 7px;
 
 		// TODO: wtf
 		svg {
+			inset-block-start: -9px;
 			position: relative;
-			top: -9px;
 		}
 	}
 
@@ -54,6 +53,5 @@
 
 #LibraryWindowDivider {
 	background-color: transparent;
-
 	min-width: 4px;
 }

@@ -28,7 +28,7 @@
 
 .hover_details_block {
 	border-radius: var(--border-radius);
-	margin-top: var(--library_text-spacing);
+	margin-block-start: var(--library_text-spacing);
 }
 
 .hover_details_block_full {
@@ -73,7 +73,7 @@
 
 .hover_screenshots {
 	margin: var(--tooltip_description-spacing);
-	margin-bottom: var(--library_text-spacing);
+	margin-block-end: var(--library_text-spacing);
 
 	.screenshot {
 		border-radius: var(--border-radius-large);
@@ -81,7 +81,7 @@
 }
 
 .hover_tag_row {
-	margin-top: var(--library_text-spacing);
+	margin-block-start: var(--library_text-spacing);
 
 	.app_tag {
 		// Derived from tooltip bottom background

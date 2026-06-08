@@ -7,11 +7,10 @@
 
 #AddGameButton {
 	&::after {
-		content: "";
-
 		@include style.arrow("bottom");
 
 		background-color: var(--blue-text);
+		content: "";
 	}
 }
 
@@ -19,7 +18,6 @@
 	@include style.blue-bar;
 
 	box-shadow: none;
-
 	flex: unset;
 }
 
@@ -45,9 +43,8 @@
 
 	#DetailedDownloadProgress & {
 		box-shadow: none;
-
-		width: var(--icon-size);
 		height: var(--icon-size);
+		width: var(--icon-size);
 	}
 
 	#DownloadStatusContent & {
@@ -70,11 +67,10 @@
 #ProgressBar {
 	@include controls.progress-bar-outer;
 
+	flex-grow: 1;
 	// Align with icons
 	margin-block: -1px;
-
 	width: 0;
-	flex-grow: 1;
 
 	&::after {
 		@include controls.progress-bar-inner;
@@ -82,22 +78,20 @@
 }
 
 #ProgressBarWrapper {
-	gap: var(--bottombar_spacing);
-
-	flex-direction: row;
 	align-items: center;
+	flex-direction: row;
+	gap: var(--bottombar_spacing);
 }
 
 #Status {
 	color: var(--blue-text);
-
 	flex-grow: 0;
 
 	&#Percentage {
 		@include style.parentheses;
 
+		margin-inline-start: var(--bottombar_spacing);
 		opacity: var(--library_secondary-text-opacity);
-		margin-left: var(--bottombar_spacing);
 	}
 }
 

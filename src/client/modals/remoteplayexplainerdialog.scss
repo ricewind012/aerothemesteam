@@ -1,14 +1,13 @@
 #InsetContainer {
 	background-color: transparent;
 	border: none;
-	padding: 0;
 	margin-block-start: var(--library_spacing);
+	padding: 0;
 }
 
 #LinksContainer {
-	margin-block-start: var(--library_spacing);
-
 	flex-direction: row-reverse;
+	margin-block-start: var(--library_spacing);
 
 	#Right {
 		padding: 0;

@@ -13,27 +13,26 @@
 
 #BackgroundSettingOperator {
 	font-weight: bold;
-	margin-top: 17px;
+	margin-block-start: 17px;
 }
 
 #BackgroundSettingRow {
 	border: none;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 #Body {
-	opacity: 0.5;
 	color: inherit;
 	font: inherit;
 	gap: 0;
 	margin: 0;
+	opacity: 0.5;
 }
 
 #DiskSpace {
 	color: inherit;
 	font: inherit;
-
 	height: unset;
 }
 
@@ -51,27 +50,23 @@
 	img,
 	svg {
 		border-radius: 0;
-
-		width: var(--icon-size);
 		height: var(--icon-size);
+		width: var(--icon-size);
 	}
 
 	span {
+		align-items: center;
 		color: inherit;
+		display: flex;
 		font: inherit;
 		font-weight: bold;
-
 		width: 100%;
-		display: flex;
-		align-items: center;
 
 		&:after {
+			border-block-start: var(--pagedsettings_separator);
 			content: "";
-
 			flex: 1 1 0;
-
-			border-top: var(--pagedsettings_separator);
-			margin-left: 4px;
+			margin-inline-start: 4px;
 		}
 	}
 }
@@ -85,8 +80,8 @@
 
 	#BackgroundSetting & {
 		letter-spacing: 0;
+		margin-block-end: 4px;
 		text-transform: unset;
-		margin-bottom: 4px;
 	}
 }
 
@@ -107,10 +102,9 @@
 
 	background-color: transparent;
 	border: none;
-	margin: 0;
-
-	width: var(--size);
 	height: var(--size);
+	margin: 0;
+	width: var(--size);
 
 	#RecordingModeOption:hover & {
 		--state: 1;

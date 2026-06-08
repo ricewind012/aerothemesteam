@@ -14,13 +14,12 @@
 	#PlatformIcon {
 		color: inherit;
 		fill: currentColor;
-
-		width: var(--icon-size);
 		height: var(--icon-size);
+		width: var(--icon-size);
 
 		.DialogMenuPosition & {
 			position: absolute;
-			left: 2px;
+			inset-inline-start: 2px;
 		}
 	}
 }

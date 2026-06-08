@@ -5,8 +5,8 @@
 #AchievementProgressContainer {
 	@include controls.progress-bar-outer;
 
-	margin-top: var(--library_text-spacing);
-	margin-bottom: 0;
+	margin-block-start: var(--library_text-spacing);
+	margin-block-end: 0;
 }
 
 #AchievementProgress {
@@ -17,25 +17,23 @@
 	margin: 0;
 
 	#Featured + & {
-		border-bottom: var(--library_border);
-		padding: var(--library_spacing);
+		border-block-end: var(--library_border);
 		margin: 0 calc(var(--library_spacing) * -1);
+		padding: var(--library_spacing);
 	}
 }
 
 #AdditionalItem:not(#RemainderContainer) {
 	box-shadow: var(--achievementiconbase_border);
-	margin-right: var(--library_spacing-x05);
-
 	height: unset;
+	margin-inline-end: var(--library_spacing-x05);
 }
 
 #Desc {
 	@include library.description;
 
-	line-height: unset;
-
 	-webkit-line-clamp: 1;
+	line-height: unset;
 
 	#RemainderContainer & {
 		all: unset;
@@ -46,17 +44,17 @@
 
 #Featured {
 	background-color: #d1e1b9;
-	border-bottom: var(--library_border);
-	padding: 0 var(--library_spacing);
+	border-block-end: var(--library_border);
 	margin: calc(var(--library_spacing) * -1);
-	margin-bottom: 0;
+	margin-block-end: 0;
+	padding: 0 var(--library_spacing);
 }
 
 #Label {
-	opacity: var(--library_secondary-text-opacity);
 	color: inherit;
 	font-size: var(--font-size-small);
-	margin-bottom: var(--library_text-spacing);
+	margin-block-end: var(--library_text-spacing);
+	opacity: var(--library_secondary-text-opacity);
 }
 
 #Name {
@@ -66,18 +64,16 @@
 #Remainder {
 	@include library.button;
 
-	padding: 0;
-
-	display: flex;
-	justify-content: center;
 	align-items: center;
-	width: var(--achievementiconbase_size);
+	display: flex;
 	height: var(--achievementiconbase_size);
+	justify-content: center;
+	padding: 0;
+	width: var(--achievementiconbase_size);
 }
 
 #RemainderContainer {
 	border-radius: var(--border-radius);
-
 	height: unset;
 }
 
@@ -90,12 +86,12 @@
 }
 
 #UnachievedSection {
-	border-top: none;
-	padding: var(--library_spacing);
+	border-block-start: none;
 	margin: 0 calc(var(--library_spacing) * -1);
+	padding: var(--library_spacing);
 
 	&:only-of-type {
-		margin-top: calc(var(--library_spacing) * -1);
+		margin-block-start: calc(var(--library_spacing) * -1);
 	}
 }
 
@@ -104,6 +100,6 @@
 }
 
 #UnlockedLabelPercent {
-	opacity: var(--library_secondary-text-opacity);
 	color: inherit;
+	opacity: var(--library_secondary-text-opacity);
 }

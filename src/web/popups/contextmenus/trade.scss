@@ -10,7 +10,7 @@
 		&.has_submenu::after {
 			content: "";
 
-			top: 7px;
+			inset-block-start: 7px;
 
 			@include contextmenu.submenu-arrow;
 		}

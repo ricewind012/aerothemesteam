@@ -2,15 +2,15 @@
 
 #ActivityCommentThread {
 	background: transparent;
-	border-top: var(--library_border);
-	padding-top: 0;
-	padding-left: 0;
-	margin-top: var(--library_spacing-x05);
+	border-block-start: var(--library_border);
+	margin-block-start: var(--library_spacing-x05);
+	padding-block-start: 0;
+	padding-inline-start: 0;
 }
 
 #ActivityCommentThreadMinimized {
 	opacity: 1;
-	padding-top: 0;
+	padding-block-start: 0;
 }
 
 #AddReply {
@@ -34,12 +34,11 @@
 #CommentIcon,
 #LikeIcon,
 #ReactionIcon {
+	height: var(--icon-size);
 	margin: 0;
-	margin-left: var(--library_text-spacing);
-
+	margin-inline-start: var(--library_text-spacing);
 	overflow: visible;
 	width: var(--icon-size);
-	height: var(--icon-size);
 
 	path {
 		fill: var(--library_button-text);
@@ -52,8 +51,8 @@
 
 #Comment {
 	color: inherit;
-	padding-block: var(--library_spacing-x05);
 	margin: 0;
+	padding-block: var(--library_spacing-x05);
 }
 
 #CommentControls {
@@ -72,13 +71,13 @@
 #MakeCommentsVisible {
 	@include library.button;
 
-	margin-top: var(--library_spacing);
-	margin-bottom: var(--library_spacing-x05);
+	margin-block-start: var(--library_spacing);
+	margin-block-end: var(--library_spacing-x05);
 }
 
 #RatingBar {
 	opacity: 1;
-	margin-top: var(--library_spacing-x05);
+	margin-block-start: var(--library_spacing-x05);
 }
 
 #RatingContainer {

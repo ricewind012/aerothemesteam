@@ -2,7 +2,7 @@
 
 #AppDetailsSection {
 	color: var(--blue-text);
-	margin-bottom: var(--library_spacing);
+	margin-block-end: var(--library_spacing);
 }
 
 #AppDetailsSectionContainer {
@@ -22,12 +22,12 @@
 
 #Highlight {
 	background: none #cedef2;
-	color: var(--library_button-text);
-	font-size: var(--font-size);
 	border: var(--library_border);
-	border-top: none;
+	border-block-start: none;
 	border-radius: 0;
 	box-shadow: none;
-	padding: var(--library_spacing);
+	color: var(--library_button-text);
+	font-size: var(--font-size);
 	margin: 0;
+	padding: var(--library_spacing);
 }

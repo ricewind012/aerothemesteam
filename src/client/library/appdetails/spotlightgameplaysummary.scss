@@ -3,16 +3,14 @@
 #EventDaySeparator {
 	background-color: var(--library_border-color);
 	margin: 0;
-
 	width: var(--library_border-size);
 }
 
 #EventHeaderBlock {
 	@include library.header;
 
-	margin-bottom: var(--library_text-spacing);
-
 	height: 1lh;
+	margin-block-end: var(--library_text-spacing);
 }
 
 #ForcedCarouselPadding {
@@ -20,10 +18,10 @@
 }
 
 #GamePlaySummaryContainer {
-	margin-bottom: var(--library_spacing);
+	margin-block-end: var(--library_spacing);
 
 	&:not(:first-child) {
-		margin-top: var(--library_spacing);
+		margin-block-start: var(--library_spacing);
 	}
 }
 
@@ -31,15 +29,14 @@
 	color: inherit;
 	font: inherit;
 	letter-spacing: 0;
-	text-transform: none;
 	margin: var(--library_section-header-spacing-y)
 		var(--library_section-header-spacing-x);
+	text-transform: none;
 }
 
 #SummaryCarouselContainer {
-	padding: 0;
-
 	height: unset;
+	padding: 0;
 
 	&::after {
 		display: none;
@@ -51,9 +48,8 @@
 }
 
 #SummaryContainer {
-	margin: var(--library_spacing);
-
 	height: unset;
+	margin: var(--library_spacing);
 }
 
 #TypeSeparator {

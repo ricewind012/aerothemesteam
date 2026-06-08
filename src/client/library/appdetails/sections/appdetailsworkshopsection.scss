@@ -2,9 +2,8 @@
 @use "shared/extends/style";
 
 #ButtonContainer {
-	margin-top: calc(var(--library_spacing-x05) * -1);
-
 	flex-wrap: wrap;
+	margin-block-start: calc(var(--library_spacing-x05) * -1);
 }
 
 #FeaturedItem {
@@ -14,8 +13,8 @@
 #FeaturedItemDesc {
 	@include library.description;
 
-	max-width: unset;
 	-webkit-line-clamp: 4;
+	max-width: unset;
 }
 
 #FeaturedItemHeader {
@@ -30,8 +29,8 @@
 	@include style.link;
 
 	font: inherit;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 #FeaturedItemName {

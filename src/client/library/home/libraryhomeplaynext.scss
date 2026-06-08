@@ -3,25 +3,23 @@
 #PlayNextSubHead {
 	@include library.header;
 
-	letter-spacing: 0;
-
 	position: absolute;
-	top: var(--library_spacing);
-	left: var(--library_spacing);
+	inset-block-start: var(--library_spacing);
+	inset-inline-start: var(--library_spacing);
+	letter-spacing: 0;
 	z-index: 1;
 }
 
 #PlayNextSuggestion {
-	margin-right: var(--library_spacing);
+	margin-inline-end: var(--library_spacing);
 }
 
 #PlayNextSuggestionMediaContainer {
-	margin-top: var(--library_text-spacing);
+	margin-block-start: var(--library_text-spacing);
 }
 
 #PlayNextSuggestions {
-	padding: var(--library_spacing);
-	padding-top: calc(var(--library_spacing) + 1lh);
-
 	height: unset;
+	padding: var(--library_spacing);
+	padding-block-start: calc(var(--library_spacing) + 1lh);
 }

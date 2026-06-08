@@ -9,9 +9,8 @@
 #OuterFrame {
 	gap: var(--steamdesktop_spacing);
 	margin: var(--steamdesktop_border-size);
-
-	width: var(--steamdesktop_window-size);
 	height: var(--steamdesktop_window-size);
+	width: var(--steamdesktop_window-size);
 
 	& > .part {
 		order: -1;
@@ -19,36 +18,32 @@
 }
 
 #RootMenuBar {
-	gap: 0;
-	padding: 0;
-	margin: 0;
-
 	display: none;
+	gap: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #SuperNavBar {
-	padding: 0;
-
-	overflow: hidden;
 	height: unset;
 	min-height: unset;
+	overflow: hidden;
+	padding: 0;
 }
 
 #TitleBar {
-	width: unset;
 	height: unset;
+	width: unset;
 }
 
 #TopBar {
+	app-region: var(--steamdesktop_top-bar-drag);
 	background-color: transparent;
 	box-shadow: none;
-	margin-bottom: calc(var(--steamdesktop_spacing) * -1);
-
-	order: -1;
 	flex-direction: row-reverse;
 	justify-content: space-between;
-
-	app-region: var(--steamdesktop_top-bar-drag);
+	margin-block-end: calc(var(--steamdesktop_spacing) * -1);
+	order: -1;
 }
 
 #URLBarReplacement {
@@ -75,11 +70,10 @@ html:not([data-aerothemesteam-plugin-loaded]) {
 	}
 
 	#TopBar {
-		border-bottom: 2px solid var(--supernav_tab-gradient-end);
+		border-block-end: 2px solid var(--supernav_tab-gradient-end);
+		flex-direction: column;
 		margin-block-end: calc(
 			var(--steamdesktop_spacing) * -1 + var(--steamdesktop_border-size)
 		);
-
-		flex-direction: column;
 	}
 }

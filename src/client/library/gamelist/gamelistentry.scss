@@ -26,11 +26,10 @@
 	--offset: 4px;
 
 	background-image: var(--icon-users);
-
-	top: var(--offset);
-	left: var(--offset);
-	width: var(--icon-size);
 	height: var(--icon-size);
+	inset-block-start: var(--offset);
+	inset-inline-start: var(--offset);
+	width: var(--icon-size);
 
 	svg {
 		display: none;
@@ -38,7 +37,6 @@
 }
 
 #GameListEntryContainer {
-	padding: 3px 6px 3px 38px;
-
 	align-items: center;
+	padding: 3px 6px 3px 38px;
 }

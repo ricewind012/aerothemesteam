@@ -1,8 +1,8 @@
 @use "shared/extends/settings";
 
 #PanelSection {
-	padding-inline: var(--library_spacing);
 	margin-block-end: var(--library_spacing);
+	padding-inline: var(--library_spacing);
 }
 
 #PanelSectionTitle {

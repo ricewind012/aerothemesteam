@@ -32,9 +32,8 @@
 #Header {
 	@include library.section-header;
 
-	text-transform: unset;
-
 	height: unset;
+	text-transform: unset;
 
 	& > .tool-tip-source {
 		order: 1;
@@ -42,7 +41,6 @@
 
 	.DialogInput_Wrapper {
 		margin: -1px 0;
-
 		width: unset;
 	}
 }
@@ -57,9 +55,8 @@
 }
 
 #SectionCount {
-	opacity: var(--library_secondary-text-opacity);
 	color: inherit;
-	margin-left: var(--library_text-spacing);
-
 	flex-grow: 1;
+	margin-inline-start: var(--library_text-spacing);
+	opacity: var(--library_secondary-text-opacity);
 }

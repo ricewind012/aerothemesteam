@@ -4,7 +4,7 @@
 
 #ColumnContainer {
 	padding: var(--library_body-spacing);
-	padding-top: 0;
+	padding-block-start: 0;
 }
 
 #LeftColumn {
@@ -13,13 +13,13 @@
 }
 
 #RightColumn {
-	margin-left: var(--library_spacing);
+	margin-inline-start: var(--library_spacing);
 }
 
 #Spotlights {
 	padding: 0;
 
 	& > :last-child {
-		margin-bottom: var(--library_spacing);
+		margin-block-end: var(--library_spacing);
 	}
 }

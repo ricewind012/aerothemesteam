@@ -7,15 +7,13 @@
 
 #NoteActions {
 	gap: 8px;
-	margin-top: 8px;
-
 	justify-content: end;
+	margin-block-start: 8px;
 	position: unset;
 
 	.DialogButton {
-		opacity: 1;
-
 		height: unset;
+		opacity: 1;
 	}
 
 	.tool-tip-source .DialogButton {
@@ -28,7 +26,7 @@
 }
 
 #Toolbar {
-	border-bottom: 1px solid var(--tabpanel_border);
+	border-block-end: 1px solid var(--tabpanel_border);
+	margin-block-end: 8px;
 	padding-block: 0 8px;
-	margin-bottom: 8px;
 }

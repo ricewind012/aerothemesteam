@@ -4,11 +4,10 @@
 	--icon: var(--icon-plus);
 
 	&::before {
-		content: "";
-
 		@include contextmenu.icon-pos;
 
 		background-image: var(--icon);
+		content: "";
 	}
 
 	// The dropdown doesn't have a separate class for that...

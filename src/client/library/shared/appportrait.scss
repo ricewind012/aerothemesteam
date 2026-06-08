@@ -4,7 +4,7 @@
 	color: var(--blue-light);
 	line-height: inherit;
 	// undo shitty layout...
-	padding-top: 0;
+	padding-block-start: 0;
 
 	#RecentGameFooter > & {
 		justify-content: center;
@@ -20,10 +20,9 @@
 }
 
 #FooterBlurImage {
-	opacity: 1;
 	filter: brightness(0.5);
 	margin: calc(-25% - var(--radius) * 2) 0;
-
+	opacity: 1;
 	width: inherit;
 }
 
@@ -31,11 +30,10 @@
 	--radius: 18px;
 
 	filter: blur(var(--radius));
-
-	overflow: visible;
-	inset: calc(var(--radius) * -0.5);
-	width: calc(100% + var(--radius));
 	height: calc(100% + var(--radius));
+	inset: calc(var(--radius) * -0.5);
+	overflow: visible;
+	width: calc(100% + var(--radius));
 }
 
 #PlaytimeDetails {

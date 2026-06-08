@@ -1,11 +1,10 @@
 @use "shared/extends/library";
 
 #Badge {
-	margin: 0;
-	margin-right: var(--library_spacing);
-
-	width: var(--library_icon-size);
 	height: var(--library_icon-size);
+	margin: 0;
+	margin-inline-end: var(--library_spacing);
+	width: var(--library_icon-size);
 
 	&#EmptyCircle {
 		@include library.placeholder;

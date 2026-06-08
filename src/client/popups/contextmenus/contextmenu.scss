@@ -29,7 +29,6 @@ $icons: (
 
 	background-color: transparent;
 	padding: 0;
-
 	position: relative;
 }
 
@@ -65,12 +64,11 @@ $icons: (
 	}
 
 	&::before {
-		content: "";
-
 		@include contextmenu.icon-pos;
 
 		background-image: var(--icon);
 		background-size: var(--icon-size);
+		content: "";
 	}
 
 	svg:not([class]) {
@@ -80,15 +78,13 @@ $icons: (
 
 #ContextMenuPosition {
 	margin: 0;
-
 	overflow: visible;
 }
 
 #ContextMenuHRSeparator {
-	border: none;
-
 	@include contextmenu.separator;
 
+	border: none;
 	width: unset;
 }
 

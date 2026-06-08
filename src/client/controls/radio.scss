@@ -2,33 +2,31 @@
 
 #Group {
 	background-color: transparent;
-	color: inherit;
 	box-shadow: none;
+	color: inherit;
+	flex-direction: column;
 	gap: 6px;
 	padding: 0;
-
-	flex-direction: column;
 }
 
 #Button {
 	@include controls.input-base("radio", "#Active");
 
+	align-items: start;
 	background-color: transparent;
 	background-repeat: no-repeat;
 	color: inherit;
+	flex-direction: row;
 	font-size: var(--font-size);
-	line-height: 1;
-	text-shadow: none;
 	gap: 4px;
+	justify-content: start;
+	line-height: 1;
+	margin: 0;
 	padding: 0;
 	// TODO: what lol
-	padding-bottom: 1px;
-	padding-left: calc(var(--size) + 4px);
-	margin: 0;
-
-	flex-direction: row;
-	align-items: start;
-	justify-content: start;
+	padding-block-end: 1px;
+	padding-inline-start: calc(var(--size) + 4px);
+	text-shadow: none;
 
 	&::before {
 		display: none;

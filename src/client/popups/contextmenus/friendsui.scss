@@ -31,9 +31,9 @@
 
 .contextMenuSectionContent {
 	&:not(:last-child)::after {
-		content: "";
-
 		@include contextmenu.separator;
+
+		content: "";
 	}
 }
 

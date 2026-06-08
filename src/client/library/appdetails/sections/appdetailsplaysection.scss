@@ -2,18 +2,17 @@
 @use "shared/extends/style";
 
 @mixin _details-section {
-	gap: var(--library_text-spacing);
-	padding: 0;
-	margin: 0;
-
-	flex-direction: row;
 	align-items: center;
+	flex-direction: row;
+	gap: var(--library_text-spacing);
 	justify-content: start;
+	margin: 0;
+	padding: 0;
 
 	&::before {
-		content: "";
-
 		@include style.icon;
+
+		content: "";
 	}
 }
 
@@ -31,16 +30,16 @@
 
 	background: none;
 	border: none;
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 #Container {
-	position: absolute;
-	top: calc(
+	inset-block-start: calc(
 		var(--library_header-img-height) * -1 + var(--library_body-spacing) * 2 +
 			1lh + 9px
 	);
+	position: absolute;
 
 	svg * {
 		display: none;
@@ -64,8 +63,8 @@
 }
 
 #GameStat {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 #GameStatIcon,
@@ -99,10 +98,9 @@
 }
 
 #GameStatsSection {
-	gap: var(--library_game-stat-spacing);
-
 	flex-direction: column;
 	flex-wrap: nowrap;
+	gap: var(--library_game-stat-spacing);
 }
 
 #HideWhenNarrow {
@@ -110,8 +108,8 @@
 }
 
 #InnerContainer {
+	margin-inline-start: calc(var(--library_icon-size) + var(--library_spacing));
 	padding: 0 var(--library_body-spacing);
-	margin-left: calc(var(--library_icon-size) + var(--library_spacing));
 }
 
 #PlayBar {
@@ -134,8 +132,8 @@
 	color: var(--blue-text);
 	font-size: var(--font-size);
 	font-weight: bold;
-	letter-spacing: 0;
 	line-height: 1;
+	letter-spacing: 0;
 	text-transform: unset;
 
 	&::after {
@@ -155,11 +153,10 @@
 }
 
 #StatusAndStats {
-	gap: var(--library_game-stat-spacing);
-	margin-left: 14px;
-
 	flex-direction: column;
 	flex-wrap: unset;
+	gap: var(--library_game-stat-spacing);
+	margin-inline-start: 14px;
 	max-height: unset;
 }
 

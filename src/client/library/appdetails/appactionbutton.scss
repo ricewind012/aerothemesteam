@@ -13,14 +13,14 @@
 
 #PlayButton {
 	#ShowingStreaming & {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
+		border-start-end-radius: 0;
+		border-end-end-radius: 0;
 	}
 
 	svg {
 		@include style.icon;
 
-		margin-right: 6px;
+		margin-inline-end: 6px;
 
 		// TODO: refactor - move these somewhere one day
 		&.SVGIcon_Download {
@@ -44,8 +44,8 @@
 
 #PlayButtonContainer {
 	display: inline-flex;
-	min-width: unset;
 	height: unset;
+	min-width: unset;
 
 	svg * {
 		display: none;
@@ -55,18 +55,16 @@
 #StreamingSelector {
 	--size: 23px;
 
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-	margin-left: 2px;
-
-	width: var(--size);
+	border-start-start-radius: 0;
+	border-end-start-radius: 0;
 	height: var(--size);
+	margin-inline-start: 2px;
+	width: var(--size);
 
 	svg {
 		@include style.arrow("bottom");
 
 		background-color: var(--blue-text);
-
 		transform: unset;
 	}
 }

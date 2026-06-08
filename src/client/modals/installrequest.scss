@@ -4,18 +4,16 @@
 
 #AppsToInstall {
 	border: none;
-	padding: 0;
 	margin: 0;
-
+	padding: 0;
 	position: relative;
 }
 
 #AppToInstall {
-	line-height: inherit;
-	border: none;
-	padding: 0;
-
 	align-items: center;
+	border: none;
+	line-height: inherit;
+	padding: 0;
 
 	#AppLogo {
 		margin-inline-end: var(--library_spacing-x05);
@@ -32,16 +30,15 @@
 
 		color: color-mix(in srgb, var(--blue-text) 50%, transparent);
 		font: inherit;
-		text-align: start;
 		margin-inline: 4px 0;
+		text-align: start;
 	}
 }
 
 #CreateShortcuts {
+	flex-direction: column;
 	gap: 0;
 	margin-block: var(--library_spacing-x05);
-
-	flex-direction: column;
 }
 
 #FolderOption {
@@ -81,7 +78,7 @@
 }
 
 #FolderSelector {
-	border-top: 2px solid var(--blue-border);
+	border-block-start: 2px solid var(--blue-border);
 	padding-block: var(--library_spacing);
 
 	#FolderSettings {
@@ -100,18 +97,17 @@
 	#Header {
 		@include library.header-secondary;
 
-		letter-spacing: 0;
-		line-height: inherit;
-		text-transform: none;
-
 		align-items: center;
 		justify-content: space-between;
+		line-height: inherit;
+		letter-spacing: 0;
+		text-transform: none;
 	}
 
 	& > :not([class]) {
 		background-color: var(--bg-main);
-		color: var(--fg-main);
 		border: 1px solid var(--blue-border);
+		color: var(--fg-main);
 		padding: 2px;
 	}
 }

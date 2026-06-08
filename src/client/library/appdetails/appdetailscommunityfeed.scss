@@ -3,19 +3,19 @@
 
 #AppOverviewRow {
 	gap: var(--library_spacing);
-	padding-bottom: var(--library_spacing);
+	padding-block-end: var(--library_spacing);
 }
 
 #AuthorName {
 	font-size: var(--font-size);
-	margin-left: var(--library_text-spacing);
+	margin-inline-start: var(--library_text-spacing);
 }
 
 #AuthorSection {
 	background: #cedef2;
-	color: inherit;
-	border-top: var(--library_border);
+	border-block-start: var(--library_border);
 	border-radius: 0;
+	color: inherit;
 	padding: var(--library_spacing-x05);
 }
 
@@ -24,8 +24,8 @@
 }
 
 #Button {
-	width: unset;
 	height: unset;
+	width: unset;
 }
 
 #CommunityItem {
@@ -38,21 +38,19 @@
 #Control {
 	@include library.button;
 
+	justify-content: center;
+	margin-inline-end: 0;
 	opacity: 1;
 	transform: scale(1);
-	margin-right: 0;
-
-	justify-content: center;
 }
 
 #Controls {
-	transform: unset;
 	background-color: #cedef2;
 	gap: var(--library_spacing-x05);
-	padding: var(--library_spacing-x05);
-
 	justify-content: center;
+	padding: var(--library_spacing-x05);
 	position: unset;
+	transform: unset;
 }
 
 #Count {
@@ -98,15 +96,14 @@
 #MenuButton {
 	@include library.button;
 
-	opacity: 1;
-
-	top: unset;
-	right: var(--library_spacing-x05);
-	bottom: calc(
+	height: unset;
+	inset-block-start: unset;
+	inset-block-end: calc(
 		var(--library_spacing-x05) * 3 + var(--steamavatar_size) / 2 + 1lh
 	);
+	inset-inline-end: var(--library_spacing-x05);
+	opacity: 1;
 	width: unset;
-	height: unset;
 
 	// TODO: SVGIcon_Settings unify ?
 	svg {
@@ -115,7 +112,7 @@
 }
 
 #NoContent {
-	margin-bottom: var(--library_spacing);
+	margin-block-end: var(--library_spacing);
 }
 
 #PreviewContainer {
@@ -131,13 +128,13 @@
 
 	line-height: inherit;
 	margin: var(--library_spacing-x05);
-	margin-bottom: 0;
+	margin-block-end: 0;
 }
 
 #TopSection {
 	margin: 0;
 	// 10 - 6
-	margin-bottom: 4px;
+	margin-block-end: 4px;
 }
 
 #TopSectionInner {

@@ -11,8 +11,8 @@
 	}
 
 	svg {
-		width: var(--icon-size);
 		height: var(--icon-size);
+		width: var(--icon-size);
 	}
 
 	line,
@@ -24,12 +24,11 @@
 
 #AddShowcaseRow {
 	margin: 0;
-	margin-top: calc(var(--library_body-spacing) * -1);
+	margin-block-start: calc(var(--library_body-spacing) * -1);
 }
 
 #ChildrenContainer {
 	margin: 0;
-
 	// #libraryhomeplaynext_PlayNextSubhead
 	position: relative;
 }
@@ -43,9 +42,9 @@
 	svg {
 		all: inherit;
 
-		transform: rotate(90deg);
 		background-image: var(--icon);
 		background-size: var(--icon-size);
+		transform: rotate(90deg);
 
 		&[style="transform: rotate(270deg);"] {
 			transform: rotate(-90deg);
@@ -58,11 +57,11 @@
 }
 
 #CountDisplay {
-	opacity: var(--library_secondary-text-opacity);
 	color: inherit;
 	font-size: inherit;
 	line-height: 1;
-	margin-left: var(--library_text-spacing);
+	margin-inline-start: var(--library_text-spacing);
+	opacity: var(--library_secondary-text-opacity);
 }
 
 #Message {
@@ -85,11 +84,11 @@
 
 #Showcase {
 	border: none;
-	padding-top: var(--library_spacing);
+	padding-block-start: var(--library_spacing);
 }
 
 #ShowcaseArrow {
-	top: 30px;
+	inset-block-start: 30px;
 
 	path,
 	line {

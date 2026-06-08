@@ -16,11 +16,11 @@
 }
 
 #SearchBar {
-	opacity: 1;
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
 	margin: 0;
-	margin-bottom: 2px;
-	margin-left: calc(var(--contextmenu_left-spacing) + 5px);
+	margin-block-end: 2px;
+	margin-inline-start: calc(var(--contextmenu_left-spacing) + 5px);
+	opacity: 1;
 }

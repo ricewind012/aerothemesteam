@@ -12,12 +12,11 @@
 	background: var(--library_green-dark);
 	border: var(--library_border-size) solid var(--library_green-dark);
 	gap: calc(var(--library_spacing) + var(--library_border-size));
-	padding: 0;
-	padding-top: var(--library_spacing);
-	padding-left: var(--library_spacing);
-
 	// copied, since the inline one doesn't work
 	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	padding: 0;
+	padding-block-start: var(--library_spacing);
+	padding-inline-start: var(--library_spacing);
 
 	&:has(> :only-child) {
 		grid-template-columns: 1fr;
@@ -37,22 +36,21 @@
 	@include library.activity-section_header;
 
 	letter-spacing: 0;
+	margin-block-end: var(--library_spacing-x05);
 	text-transform: unset;
-	margin-bottom: var(--library_spacing-x05);
 
 	// ty valve, fucking amazing
 	& + div:not([class]) {
-		gap: var(--library_spacing);
-
 		display: flex;
 		flex-direction: column;
+		gap: var(--library_spacing);
 	}
 }
 
 #AppActivityDay {
 	border: none;
+	margin-block-end: calc(var(--library_spacing) * 2);
 	padding: 0;
-	margin-bottom: calc(var(--library_spacing) * 2);
 }
 
 #Blur,
@@ -68,7 +66,7 @@
 
 #CarouselThumb {
 	border-radius: var(--border-radius-large);
-	margin-bottom: var(--library_spacing-x05);
+	margin-block-end: var(--library_spacing-x05);
 
 	&#Active {
 		border: none;
@@ -77,7 +75,7 @@
 
 #CarouselThumbs {
 	margin: 0;
-	margin-left: var(--library_spacing-x05);
+	margin-inline-start: var(--library_spacing-x05);
 }
 
 #DayPosted {
@@ -88,10 +86,10 @@
 
 #Event {
 	background: none;
-	font-size: var(--font-size);
 	border: none;
 	box-shadow: none;
-	margin-top: 0;
+	font-size: var(--font-size);
+	margin-block-start: 0;
 }
 
 #EventActorAvatar {
@@ -102,11 +100,11 @@
 	background: none;
 	border: none;
 	box-shadow: none;
-	margin-top: var(--library_spacing);
+	margin-block-start: var(--library_spacing);
 
 	&#UserStatus {
+		margin-block-start: 0;
 		padding: var(--library_spacing);
-		margin-top: 0;
 	}
 }
 
@@ -131,10 +129,10 @@
 #PartnerEventFeaturedHeader {
 	@include library.section-header;
 
-	text-transform: unset;
-	letter-spacing: 0;
 	line-height: unset;
+	letter-spacing: 0;
 	margin-inline: calc(var(--library_border-size) * -1);
+	text-transform: unset;
 }
 
 #PartnerEventTextOnly,
@@ -145,21 +143,19 @@
 	}
 
 	&_Summary {
-		opacity: var(--library_secondary-text-opacity);
 		color: inherit;
 		font-size: inherit;
-		text-shadow: none;
-
+		opacity: var(--library_secondary-text-opacity);
 		order: 1;
+		text-shadow: none;
 	}
 
 	&_TextColumn {
-		text-shadow: none;
-		padding: 0;
-		margin: 0;
-
 		display: flex;
 		flex-direction: column;
+		text-shadow: none;
+		margin: 0;
+		padding: 0;
 	}
 
 	&_Title {
@@ -172,11 +168,10 @@
 #PartnerEventType {
 	@include library.header-secondary;
 
+	margin-block-start: 10px;
+	order: 1;
 	text-shadow: none;
 	text-transform: unset;
-	margin-top: 10px;
-
-	order: 1;
 }
 
 // TODO: !important
@@ -185,26 +180,24 @@
 	// fucking hell, valve
 	--tooltip_description-spacing: 9px 0 9px;
 	border: none;
-
 	width: calc(100% + var(--library_spacing));
 }
 
 #Rule {
 	@include library.activity-section_rule;
 
-	margin-left: var(--library_text-spacing);
-	margin-top: 3px;
+	margin-block-start: 3px;
+	margin-inline-start: var(--library_text-spacing);
 }
 
 #ScreenshotCaption#HasCaption {
-	font-size: var(--font-size);
 	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+	font-size: var(--font-size);
+	margin-inline-end: 0;
+	margin-block-end: calc(1lh + var(--library_text-spacing));
+	max-width: unset;
 	padding-block: calc(var(--library_spacing-x05) / 2);
 	padding-inline: var(--library_spacing);
-	margin-right: 0;
-	margin-bottom: calc(1lh + var(--library_text-spacing));
-
-	max-width: unset;
 }
 
 #TimeStamp {
@@ -231,10 +224,9 @@
 	--size: calc(var(--library_icon-size) * 1.5);
 
 	border-radius: var(--border-radius);
-	margin-right: var(--library_spacing);
-
-	width: var(--size);
 	height: var(--size);
+	margin-inline-end: var(--library_spacing);
+	width: var(--size);
 }
 
 #ReviewText {

@@ -30,7 +30,7 @@ export default {
 		postcssSassPlugin({
 			// TODO: use "loadPaths" when @csstools/postcss-sass switches to
 			// normal sass API.
-			includePaths: ["theme"],
+			includePaths: ["src"],
 			silenceDeprecations: ["legacy-js-api"],
 		}),
 		postcssFunctions({

@@ -6,10 +6,9 @@
 }
 
 #KeyCaptureCenter {
+	align-items: start;
 	margin: var(--library_spacing);
 	margin-block-start: 0;
-
-	align-items: start;
 
 	#Explainer {
 		color: inherit;

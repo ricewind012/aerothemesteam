@@ -13,13 +13,13 @@
 			var(--library_button-bg-3)
 		),
 		var(--lighter-bg), var(--white-gradient);
+	border: 1px solid var(--blue-border);
+	border-radius: var(--border-radius);
 	color: var(--library_button-text);
 	font-size: var(--font-size);
 	font-weight: bold;
-	text-align: center;
 	line-height: 1;
-	border: 1px solid var(--blue-border);
-	border-radius: var(--border-radius);
+	text-align: center;
 	padding: 2.5px 18px;
 
 	&:active {
@@ -38,12 +38,12 @@
 
 @mixin text-input($compact: false) {
 	background-color: #fff;
-	color: var(--fg-main);
-	font-size: var(--font-size);
-	line-height: 18px;
 	border: 1px solid var(--blue-border);
 	border-radius: 0;
 	box-shadow: none;
+	color: var(--fg-main);
+	font-size: var(--font-size);
+	line-height: 18px;
 	padding: #{$compact and 0 or 3px} 6px;
 
 	&::placeholder {
@@ -54,16 +54,16 @@
 /*#endregion*/
 /*#region STYLE */
 @mixin placeholder {
-	opacity: var(--library_secondary-text-opacity);
 	border: 2px dashed var(--blue-text);
 	border-radius: 0;
+	opacity: var(--library_secondary-text-opacity);
 	padding: var(--library_spacing);
 }
 
 @mixin section {
 	background: none var(--library_section-bg);
 	border: var(--library_border);
-	border-top: none;
+	border-block-start: none;
 	border-radius: 0;
 }
 
@@ -94,10 +94,10 @@
 /*#endregion*/
 /*#region TEXT */
 @mixin description {
-	opacity: var(--library_secondary-text-opacity);
 	color: inherit;
 	font-size: var(--font-size);
 	font-style: italic;
+	opacity: var(--library_secondary-text-opacity);
 }
 
 @mixin header {
@@ -128,6 +128,6 @@
 }
 
 @mixin activity-section_rule {
-	border-top: 1px solid var(--library_border-color);
-	border-bottom: 1px solid var(--bg-main);
+	border-block-start: 1px solid var(--library_border-color);
+	border-block-end: 1px solid var(--bg-main);
 }

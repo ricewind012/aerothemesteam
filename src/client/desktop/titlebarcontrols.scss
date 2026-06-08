@@ -1,11 +1,10 @@
 @use "shared/extends/style";
 
 @mixin _titlebar-button {
-	margin-right: 10px;
-
-	width: var(--icon-size);
-	min-width: var(--icon-size);
+	margin-inline-end: 10px;
 	min-height: var(--icon-size);
+	min-width: var(--icon-size);
+	width: var(--icon-size);
 }
 
 #AccountMenu {

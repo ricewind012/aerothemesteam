@@ -8,28 +8,25 @@
 		var(--collapseicon_bg)
 	);
 	border: 1px solid;
-	border-left-color: var(--collapseicon_border-1);
-	border-top-color: var(--collapseicon_border-1);
-	border-right-color: var(--collapseicon_border-2);
-	border-bottom-color: var(--collapseicon_border-2);
+	border-inline-start-color: var(--collapseicon_border-1);
+	border-block-start-color: var(--collapseicon_border-1);
+	border-inline-end-color: var(--collapseicon_border-2);
+	border-block-end-color: var(--collapseicon_border-2);
 	border-radius: var(--border-radius);
+	height: var(--collapseicon_size);
 	padding: 0;
-
 	position: relative;
 	width: var(--collapseicon_size);
-	height: var(--collapseicon_size);
 
 	&::before {
-		content: "";
-
-		position: absolute;
-		inset: 0;
-
 		background-color: var(--collapseicon_border-2);
+		content: "";
+		inset: 0;
 		mask-image: var(--icon);
-		mask-repeat: no-repeat;
 		mask-position: 2px;
+		mask-repeat: no-repeat;
 		mask-size: var(--icon-size);
+		position: absolute;
 	}
 
 	&:active {

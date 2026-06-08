@@ -37,10 +37,9 @@
 	--size: calc(var(--library_icon-size) * 1.5);
 
 	border-radius: var(--border-radius);
-	margin-right: var(--library_spacing);
-
-	width: var(--size);
 	height: var(--size);
+	margin-inline-end: var(--library_spacing);
+	width: var(--size);
 }
 
 #ReviewText {

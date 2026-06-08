@@ -14,21 +14,18 @@
 @mixin container-child($offset) {
 	--offset: #{$offset};
 
-	margin-top: var(--offset);
-	margin-left: var(--offset);
+	margin-inline-start: var(--offset);
+	margin-block-start: var(--offset);
 }
 
 @mixin container-left-border {
 	&::before {
-		content: "";
-
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: var(--contextmenu_left-spacing);
-
-		border-left: 1px solid var(--contextmenu_separator-light);
+		border-inline-start: 1px solid var(--contextmenu_separator-light);
 		box-shadow: -1px 0 var(--contextmenu_separator-dark);
+		content: "";
+		position: absolute;
+		inset-block: 0;
+		inset-inline-start: var(--contextmenu_left-spacing);
 	}
 }
 
@@ -42,30 +39,28 @@
 		var(--icon-context-menu-#{$what}), var(--listitem_item-gradient);
 	background-position: center;
 	border-radius: var(--border-radius);
-
-	position: absolute;
-	top: var(--offset);
-	left: var(--offset);
-	width: var(--contextmenu_item-height);
 	height: var(--contextmenu_item-height);
+	inset-block-start: var(--offset);
+	inset-inline-start: var(--offset);
+	position: absolute;
+	width: var(--contextmenu_item-height);
 }
 
 @mixin icon-pos {
-	position: absolute;
-	left: 4px;
-	width: var(--icon-size);
 	height: var(--icon-size);
+	inset-inline-start: 4px;
+	position: absolute;
+	width: var(--icon-size);
 }
 
 @mixin item {
 	@include list.item;
 
-	// #contextmenu_UpperCase
-	text-transform: unset;
 	padding: 3px calc(8px * 2 + 4px) 3px
 		calc(5px + var(--contextmenu_left-spacing));
-
 	position: relative;
+	// #contextmenu_UpperCase
+	text-transform: unset;
 
 	&:focus {
 		@include list.item-active;
@@ -75,7 +70,7 @@
 @mixin separator {
 	--offset: calc(1px + var(--contextmenu_container-spacing));
 
-	border-top: 1px solid var(--contextmenu_separator-light);
+	border-block-start: 1px solid var(--contextmenu_separator-light);
 	box-shadow: 0 -1px var(--contextmenu_separator-dark);
 	margin: 5px 0 2px calc(var(--contextmenu_left-spacing) + var(--offset));
 }
@@ -84,7 +79,6 @@
 	@include style.arrow("right");
 
 	background-color: var(--listitem_fg);
-
 	position: absolute;
-	right: 8px;
+	inset-inline-end: 8px;
 }

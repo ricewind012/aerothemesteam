@@ -13,8 +13,8 @@
 }
 
 #AppSize {
-	opacity: 0.5;
 	color: inherit;
+	opacity: 0.5;
 }
 
 #DriveName {
@@ -43,11 +43,10 @@
 	background-image:
 		linear-gradient(var(--bg), var(--bg)), var(--white-gradient);
 	box-shadow: none;
-
 	z-index: 1;
 
 	&:not([style="width: 0%;"], [style^="width: 0.0"]) {
-		border-right: 1px solid var(--border-and-grad-color-50);
+		border-inline-end: 1px solid var(--border-and-grad-color-50);
 	}
 }
 
@@ -92,9 +91,8 @@
 	box-shadow:
 		0 1px 2px #00000040,
 		inset 0 1px #ffffff40;
-
-	width: var(--size);
 	height: var(--size);
+	width: var(--size);
 }
 
 // The parent of all, hence the vars
@@ -115,9 +113,8 @@
 	&::before,
 	&::after {
 		content: "";
-
-		position: absolute;
 		inset: 0;
+		position: absolute;
 	}
 
 	&::before {
@@ -136,8 +133,6 @@
 	}
 
 	&::after {
-		z-index: var(--bar-z-index);
-
 		background-image: linear-gradient(
 			90deg,
 			transparent,
@@ -145,15 +140,16 @@
 			color-mix(in srgb, var(--border-and-grad-color) 75%, transparent) 98%
 		);
 		box-shadow: inset 0 0 0 1px var(--border-and-grad-color-50);
+		z-index: var(--bar-z-index);
 	}
 }
 
 #DriveUsageNumber {
-	opacity: 0.5;
 	color: inherit;
 	font: inherit;
 	font-weight: bold;
 	letter-spacing: 0;
+	opacity: 0.5;
 	text-transform: unset;
 }
 
@@ -167,7 +163,7 @@
 
 #DropdownOptionCtn {
 	.DialogDropDown_CurrentDisplay {
-		margin-left: calc(var(--icon-size) + 5px);
+		margin-inline-start: calc(var(--icon-size) + 5px);
 	}
 
 	// star icon
@@ -182,12 +178,11 @@
 	color: inherit;
 
 	&::before {
-		content: "";
-
 		@include contextmenu.icon-pos;
 
 		background-image: var(--icon);
 		background-size: var(--icon-size);
+		content: "";
 	}
 
 	// The dropdown doesn't have a separate class for that...
@@ -203,8 +198,8 @@
 #NoCheckboxSpacer {
 	@include controls.input-base("checkbox", ".hack", ".hack");
 
-	width: var(--size);
 	height: var(--size);
+	width: var(--size);
 
 	&,
 	&:active,

@@ -2,19 +2,18 @@
 @use "shared/extends/list";
 
 #AppCount {
-	opacity: 1;
 	color: var(--listitem_fg-secondary);
-	padding-left: var(--library_text-spacing);
+	opacity: 1;
+	padding-inline-start: var(--library_text-spacing);
 }
 
 #DropDown {
 	@include contextmenu.container-left-border;
 
 	&::before {
-		top: var(--contextmenu_container-spacing);
-		bottom: var(--contextmenu_container-spacing);
-
-		margin-left: var(--contextmenu_container-spacing);
+		inset-block-start: var(--contextmenu_container-spacing);
+		inset-block-end: var(--contextmenu_container-spacing);
+		margin-inline-start: var(--contextmenu_container-spacing);
 	}
 }
 

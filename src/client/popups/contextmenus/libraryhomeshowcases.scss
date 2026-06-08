@@ -5,19 +5,17 @@
 }
 
 #OptionsRule {
-	margin-top: 8px;
-
+	margin-block-start: 8px;
 	overflow: visible;
 
 	&::before {
-		content: "";
-
-		position: absolute;
-		top: -9px;
-		// TODO: what
-		right: -1px;
-		left: calc(var(--contextmenu_container-spacing) * -1);
-
 		@include contextmenu.separator;
+
+		content: "";
+		inset-block-start: -9px;
+		// TODO: what
+		inset-inline-end: -1px;
+		inset-inline-start: calc(var(--contextmenu_container-spacing) * -1);
+		position: absolute;
 	}
 }
