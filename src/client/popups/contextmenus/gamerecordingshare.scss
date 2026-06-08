@@ -1,7 +1,7 @@
 @use "mixins/contextmenu";
 
 #AllChats {
-	--icon: var(--icon-users);
+	--icon: icon("users");
 }
 
 #AllChats,

@@ -38,7 +38,7 @@
 	order: -1;
 
 	#AddGameButton & {
-		--icon: var(--icon-plus);
+		--icon: icon("plus");
 	}
 
 	#DetailedDownloadProgress & {
@@ -48,11 +48,11 @@
 	}
 
 	#DownloadStatusContent & {
-		--icon: var(--icon-download);
+		--icon: icon("download");
 	}
 
 	#FriendsButton & {
-		--icon: var(--icon-users);
+		--icon: icon("users");
 	}
 
 	svg {

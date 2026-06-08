@@ -54,7 +54,7 @@
 	@include _details-section;
 
 	&#Downloading {
-		--icon: var(--icon-download);
+		--icon: icon("download");
 	}
 }
 
@@ -76,15 +76,15 @@
 	@include _details-section;
 
 	#CloudStatusSyncFail & {
-		--icon: var(--icon-cancel);
+		--icon: icon("cancel");
 	}
 
 	#LastPlayed & {
-		--icon: var(--icon-calendar);
+		--icon: icon("calendar");
 	}
 
 	#SuperimposedGridItems & {
-		--icon: var(--icon-checkmark);
+		--icon: icon("checkmark");
 	}
 
 	// Duplicate info
@@ -93,7 +93,7 @@
 	}
 
 	#Playtime & {
-		--icon: var(--icon-clock);
+		--icon: icon("clock");
 	}
 }
 

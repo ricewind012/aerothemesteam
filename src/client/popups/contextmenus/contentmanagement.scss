@@ -1,7 +1,7 @@
 @use "mixins/contextmenu";
 
 #AddFolderDropdownOption {
-	--icon: var(--icon-plus);
+	--icon: icon("plus");
 
 	&::before {
 		@include contextmenu.icon-pos;

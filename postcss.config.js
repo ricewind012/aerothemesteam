@@ -10,17 +10,28 @@ import {
 import fs from "node:fs";
 import path from "node:path";
 
-/**
- * `icon("name")` => `url("data:image/png;base64,${base64}")`
- *
- * @param {string} name File name without the extension.
- */
-function icon(name) {
-	const file = path.join("assets", "icons", `${name.replace(/"/g, "")}.png`);
-	const base64 = fs.readFileSync(file, { encoding: "base64" });
+const functions = {
+	/**
+	 * Output: `file("name")` => `url("data:image/png;base64,${base64}")`
+	 *
+	 * @param {string} name File name without the extension.
+	 */
+	file: (name) => {
+		const file = path.join("assets", "icons", `${name.replace(/"/g, "")}.png`);
+		const base64 = fs.readFileSync(file, { encoding: "base64" });
 
-	return `url("data:image/png;base64,${base64}")`;
-}
+		return `url("data:image/png;base64,${base64}")`;
+	},
+
+	/**
+	 * Output: `icon("name")` => `var(--icon-${name})`
+	 *
+	 * @param {string} name File name without the extension.
+	 */
+	icon: (name) => {
+		return `var(--icon-${unquote(name)})`;
+	},
+};
 
 /** @type {import("postcss-load-config").Config} */
 export default {
@@ -33,11 +44,7 @@ export default {
 			includePaths: ["src"],
 			silenceDeprecations: ["legacy-js-api"],
 		}),
-		postcssFunctions({
-			functions: {
-				icon,
-			},
-		}),
+		postcssFunctions({ functions }),
 		removeComments(),
 		selectorReplacerPlugin(),
 		appendImportantPlugin({

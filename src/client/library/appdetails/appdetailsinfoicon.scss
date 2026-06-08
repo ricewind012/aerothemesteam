@@ -1,6 +1,6 @@
 #MoreInfoIcon {
 	background-color: transparent;
-	background-image: var(--icon-help);
+	background-image: icon("help");
 	margin: calc(var(--library_section-header-spacing-y) * -1);
 }
 

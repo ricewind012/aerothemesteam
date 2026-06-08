@@ -25,7 +25,7 @@
 #FriendIsPlaying {
 	--offset: 4px;
 
-	background-image: var(--icon-users);
+	background-image: icon("users");
 	height: var(--icon-size);
 	inset-block-start: var(--offset);
 	inset-inline-start: var(--offset);

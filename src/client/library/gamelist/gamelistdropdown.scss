@@ -44,7 +44,7 @@
 	}
 
 	&:nth-last-child(3) {
-		--icon: var(--icon-windows);
+		--icon: icon("windows");
 	}
 
 	&:nth-last-child(2) {
@@ -52,7 +52,7 @@
 	}
 
 	&:nth-last-child(1) {
-		--icon: var(--icon-play);
+		--icon: icon("play");
 	}
 }
 

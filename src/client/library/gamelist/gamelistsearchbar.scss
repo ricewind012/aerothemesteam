@@ -33,7 +33,7 @@
 	.DialogInput {
 		--spacing-x: 5px;
 
-		background-image: var(--icon-search);
+		background-image: icon("search");
 		background-position: calc(100% - var(--spacing-x));
 		background-repeat: no-repeat;
 		font-size: 11px;

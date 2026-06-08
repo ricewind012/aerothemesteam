@@ -24,20 +24,20 @@
 
 		// TODO: refactor - move these somewhere one day
 		&.SVGIcon_Download {
-			--icon: var(--icon-download);
+			--icon: icon("download");
 		}
 
 		&.SVGIcon_Play {
-			--icon: var(--icon-play);
+			--icon: icon("play");
 		}
 
 		&.SVGIcon_Pause,
 		&.SVGIcon_X_Line {
-			--icon: var(--icon-cancel);
+			--icon: icon("cancel");
 		}
 
 		&:not(.SVGIcon_Button) {
-			--icon: var(--icon-update);
+			--icon: icon("update");
 		}
 	}
 }
