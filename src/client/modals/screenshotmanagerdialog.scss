@@ -1,4 +1,5 @@
 @use "mixins/library";
+@use "mixins/modal";
 
 // Actually screenshot share
 
@@ -7,7 +8,7 @@
 }
 
 #CloudStorageImpact {
-	@include library.description;
+	@include modal.description;
 }
 
 #ScreenshotShareDialog {

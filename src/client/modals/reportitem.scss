@@ -1,10 +1,11 @@
 @use "mixins/controls";
+@use "mixins/modal";
 
 #Description,
 #Description2,
 #DMCA {
-	color: inherit;
-	font: inherit;
+	@include modal.description;
+
 	margin-block: 0 var(--library_spacing-x05);
 }
 

@@ -6,7 +6,8 @@
 	margin: var(--library_spacing);
 
 	hr {
-		border-block-end: 2px solid var(--blue-border);
+		border-block-end: 2px solid transparent;
+		border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
 		margin-block: var(--library_spacing-x05);
 	}
 }

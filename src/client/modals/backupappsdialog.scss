@@ -1,10 +1,12 @@
+@use "mixins/modal";
+
 #BackupAppsBrowse {
 	margin: 0;
 }
 
 #BackupAppsDialog {
 	.DialogBody {
-		padding-block-start: 4px;
+		padding-block-start: var(--library_spacing-x05);
 	}
 
 	.DialogBodyText {
@@ -21,7 +23,7 @@
 
 // Not the same as .DialogBodyText, this one is in .DialogBody
 #DialogBodyText {
-	color: inherit;
-	font: inherit;
-	padding-block: var(--library_spacing) 4px;
+	@include modal.description;
+
+	padding-block: var(--library_spacing) var(--library_spacing-x05);
 }

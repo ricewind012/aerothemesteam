@@ -1,3 +1,4 @@
+@use "mixins/modal";
 @use "mixins/style";
 
 #ClientDetails {
@@ -48,8 +49,8 @@
 
 #Description,
 #DescriptionSmall {
-	color: inherit;
-	font: inherit;
+	@include modal.description;
+
 	padding: 0;
 }
 

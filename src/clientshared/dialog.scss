@@ -1,7 +1,6 @@
 @use "mixins/controls";
-@use "mixins/dialog";
-@use "mixins/library";
 @use "mixins/style";
+@use "mixins/modal";
 
 @keyframes dropfade {
 	0% {
@@ -186,7 +185,7 @@
 }
 
 :where(.FullModalOverlay) {
-	@include dialog.overlay;
+	@include modal.overlay;
 
 	display: block;
 	// Use this element for the animation
@@ -206,17 +205,16 @@
 	}
 
 	:where(& .DialogButton) {
-		@include library.button;
+		@include modal.button;
+	}
 
-		box-shadow: none;
+	:where(.DialogBodyText) {
+		margin-block-end: var(--library_spacing-x05);
 	}
 
 	:where(& .DialogContent) {
-		@include library.section;
+		@include modal.container;
 
-		border-block-start: var(--library_border);
-		color: var(--blue-text);
-		font-size: var(--font-size);
 		padding: 0;
 	}
 
@@ -224,21 +222,12 @@
 		overflow: hidden;
 	}
 
-	:where(& .DialogHeader) {
-		@include library.section-header;
+	:where(.DialogFooter) {
+		padding-block-start: var(--library_spacing);
+	}
 
-		background-image: linear-gradient(
-			0deg,
-			var(--blue-dark),
-			var(--blue-light)
-		);
-		display: block;
-		font-size: var(--font-size);
-		line-height: 2;
-		margin: calc(var(--library_border-size) * -1);
-		padding-block-start: calc(
-			var(--library_section-header-spacing-y) + var(--library_border-size)
-		);
+	:where(& .DialogHeader) {
+		@include modal.header;
 	}
 
 	:where(& .DialogTwoColLayout) {

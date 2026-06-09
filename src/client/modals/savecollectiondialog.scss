@@ -1,3 +1,5 @@
+@use "mixins/modal";
+
 #ActionLabel {
 	text-transform: unset;
 
@@ -7,9 +9,9 @@
 }
 
 #Description {
+	@include modal.description;
+
 	background: none;
-	color: color-mix(in srgb, currentColor 50%, transparent);
-	font-size: var(--font-size-small);
 	margin-block-start: 4px;
 	padding: 0;
 }

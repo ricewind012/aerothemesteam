@@ -1,7 +1,8 @@
 @use "mixins/controls";
+@use "mixins/style";
 
 #DescribeGame {
-	margin-block: 0 4px;
+	margin-block: 0 var(--library_spacing-x05);
 }
 
 #FreeCheckbox {
@@ -17,10 +18,22 @@
 	border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
 }
 
+#ReviewSettingsChecks {
+	gap: 4px;
+	margin: 0;
+	margin-inline-start: var(--library_spacing);
+
+	.HelperTooltip {
+		@include style.icon($name: "help", $hide-selector: "*");
+
+		margin-inline-start: 4px;
+	}
+}
+
 #ReviewSettingsRow {
 	& > span {
 		line-height: 22px;
-		margin-inline-end: 4px;
+		margin-inline-end: var(--library_spacing-x05);
 	}
 }
 

@@ -16,5 +16,10 @@
 }
 
 #ModalButtonRow {
+	gap: var(--library_spacing-x05);
 	margin: var(--library_spacing);
+
+	.DialogButton {
+		width: auto;
+	}
 }

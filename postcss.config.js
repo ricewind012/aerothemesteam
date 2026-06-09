@@ -10,6 +10,8 @@ import {
 import fs from "node:fs";
 import path from "node:path";
 
+const unquote = (str) => str.replace(/"/g, "");
+
 const functions = {
 	/**
 	 * Output: `file("name")` => `url("data:image/png;base64,${base64}")`

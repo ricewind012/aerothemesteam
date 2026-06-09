@@ -12,6 +12,11 @@
 	font-size: var(--font-size);
 }
 
+@mixin description {
+	color: inherit;
+	font-size: var(--font-size);
+}
+
 @mixin header {
 	@include library.section-header;
 
