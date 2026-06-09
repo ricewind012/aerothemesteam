@@ -1,5 +1,5 @@
-@use "mixins/dialog";
 @use "mixins/library";
+@use "mixins/modal";
 
 .MillenniumDesktopSidebar {
 	--sidebar-content-spacing-inline: var(--library_spacing);
@@ -34,7 +34,7 @@
 }
 
 .MillenniumDesktopSidebar_Overlay {
-	@include dialog.overlay;
+	@include modal.overlay;
 }
 
 .MillenniumDesktopSidebar_Title {

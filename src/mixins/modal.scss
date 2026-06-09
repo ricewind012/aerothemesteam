@@ -1,0 +1,32 @@
+@use "mixins/library";
+
+@mixin button {
+	@include library.button;
+}
+
+@mixin container {
+	@include library.section;
+
+	border-block-start: var(--library_border);
+	color: var(--blue-text);
+	font-size: var(--font-size);
+}
+
+@mixin header {
+	@include library.section-header;
+
+	background-image: linear-gradient(0deg, var(--blue-dark), var(--blue-light));
+	display: block;
+	font-size: var(--font-size);
+	line-height: 2;
+	margin: calc(var(--library_border-size) * -1);
+	padding-block-start: calc(
+		var(--library_section-header-spacing-y) + var(--library_border-size)
+	);
+}
+
+@mixin overlay {
+	backdrop-filter: blur(3px) saturate(50%);
+	background: radial-gradient(transparent, rgba(0, 0, 0, 0.4));
+	transition: calc(var(--anim-time) * 2);
+}

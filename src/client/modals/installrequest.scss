@@ -12,10 +12,15 @@
 #AppToInstall {
 	align-items: center;
 	border: none;
+	display: grid;
+	grid-template-areas:
+		"hero header"
+		"hero description";
 	line-height: inherit;
 	padding: 0;
 
 	#AppLogo {
+		grid-area: hero;
 		margin-inline-end: var(--library_spacing-x05);
 	}
 
@@ -23,27 +28,28 @@
 		@include library.header-primary;
 
 		flex: 0 0 auto;
+		grid-area: header;
 	}
 
 	#DiskSpace {
-		@include style.parentheses;
+		@include library.description;
 
-		color: color-mix(in srgb, var(--blue-text) 50%, transparent);
-		font: inherit;
-		margin-inline: 4px 0;
+		grid-area: description;
+		margin: 0;
 		text-align: start;
 	}
 }
 
 #CreateShortcuts {
 	flex-direction: column;
-	gap: 0;
-	margin-block: var(--library_spacing-x05);
+	gap: var(--library_spacing-x05);
+	margin-block: var(--library_spacing);
 }
 
 #FolderOption {
 	@include list.item;
 
+	background: none;
 	font: inherit;
 	margin: 0;
 
@@ -78,7 +84,8 @@
 }
 
 #FolderSelector {
-	border-block-start: 2px solid var(--blue-border);
+	border-block-start: 2px solid transparent;
+	border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
 	padding-block: var(--library_spacing);
 
 	#FolderSettings {
@@ -95,7 +102,7 @@
 	}
 
 	#Header {
-		@include library.header-secondary;
+		@include library.header;
 
 		align-items: center;
 		justify-content: space-between;

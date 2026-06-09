@@ -66,7 +66,10 @@
 }
 
 :where(.DialogCheckbox_Container) {
+	align-items: center;
+	display: flex;
 	margin: 0;
+	padding: 0;
 
 	.DialogCheckbox {
 		margin-inline-end: 4px;
