@@ -1,0 +1,27 @@
+#Background {
+	height: var(--library_header-img-height);
+	mask: var(--library_header-img-mask);
+	width: 80%;
+}
+
+#Blur {
+	display: none;
+}
+
+#HeaderContainer {
+	padding-inline: var(--library_body-spacing);
+}
+
+#HeaderImage {
+	& > img {
+		transition: none;
+	}
+}
+
+#Page {
+	background: var(--bg-main);
+
+	#Container {
+		padding-block-start: var(--library_body-spacing);
+	}
+}

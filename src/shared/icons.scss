@@ -11,6 +11,7 @@
 	);
 	--icon-context-menu-radio: file("context-menu-radio");
 	--icon-delete: file("delete");
+	--icon-delete-32: file("delete-32");
 	--icon-details: file("details");
 	--icon-discussions: file("discussions");
 	--icon-display: file("display");
@@ -35,6 +36,23 @@
 	--icon-plus: file("plus");
 	--icon-points: file("points");
 	--icon-rss: file("rss");
+	--icon-scrollbar-arrow-decrement-active: file(
+		"scrollbar-arrow-decrement-active"
+	);
+	--icon-scrollbar-arrow-decrement-hover: file(
+		"scrollbar-arrow-decrement-hover"
+	);
+	--icon-scrollbar-arrow-decrement: file("scrollbar-arrow-decrement");
+	--icon-scrollbar-arrow-increment-active: file(
+		"scrollbar-arrow-increment-active"
+	);
+	--icon-scrollbar-arrow-increment-hover: file(
+		"scrollbar-arrow-increment-hover"
+	);
+	--icon-scrollbar-arrow-increment: file("scrollbar-arrow-increment");
+	--icon-scrollbar-thumb-active: file("scrollbar-thumb-active");
+	--icon-scrollbar-thumb-hover: file("scrollbar-thumb-hover");
+	--icon-scrollbar-thumb: file("scrollbar-thumb");
 	--icon-search: file("search");
 	--icon-settings: file("settings");
 	--icon-smiley: file("smiley");

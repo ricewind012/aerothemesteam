@@ -28,6 +28,8 @@
 
 #TextNameSpace {
 	align-self: flex-start;
+	line-height: 1;
+	margin-block: calc((var(--library_icon-size) - var(--font-size-xlarge)) / 2);
 
 	&::before {
 		color: var(--blue-text);

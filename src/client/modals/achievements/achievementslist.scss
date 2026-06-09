@@ -1,0 +1,134 @@
+@use "mixins/library";
+@use "mixins/style";
+
+%-list-item {
+	--achievementiconbase_size: 64px;
+
+	background: none;
+	color: var(--blue-text);
+
+	&::before {
+		background: var(--library_section-bg);
+		border-block-start: var(--library_border);
+		content: "";
+		inset: calc(var(--achievementslist_virt-list-gap) / -2)
+			calc(var(--library_body-spacing) * -1);
+		position: absolute;
+	}
+}
+
+#AchievementContent {
+	gap: 4px;
+}
+
+#AchievementDescription {
+	@include library.header-secondary;
+}
+
+#AchievementGlobalPercentage {
+	@include library.description;
+}
+
+#AchievementList {
+	background-color: var(--bg-main);
+	font-size: var(--font-size);
+	gap: 0;
+	padding: var(--library_spacing) var(--library_body-spacing);
+	padding-block-end: 0;
+}
+
+#AchievementListItemBase {
+	@extend %-list-item;
+
+	// Hidden achievements, for some reason doesn't utilize a virtualized list
+	&:not([style]) {
+		position: relative;
+	}
+
+	#Container {
+		gap: var(--library_spacing);
+		padding: 0;
+		// For the ::before bg
+		z-index: 0;
+	}
+}
+
+#AchievementTitle {
+	@include library.header-primary;
+}
+
+#GlobalAchievementListItem {
+	@extend %-list-item;
+
+	#Content {
+		padding: 0;
+		position: unset;
+	}
+
+	#Description {
+		@include library.description;
+	}
+
+	#Info {
+		padding-inline-start: var(--library_spacing);
+	}
+
+	#Percent {
+		color: inherit;
+		font-size: var(--font-size);
+		font-weight: normal;
+	}
+
+	#ProgressFill {
+		background: var(--blue-dark);
+	}
+
+	#Title {
+		@include library.header;
+	}
+
+	#UnlockContainer {
+		padding: 0;
+		width: calc(var(--icon-size) + var(--library_spacing));
+		z-index: 1;
+
+		svg {
+			@include style.icon($name: "context-menu-checkmark", $hide-selector: "*");
+		}
+	}
+}
+
+#HeaderText {
+	color: var(--fg-main);
+	font: inherit;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#ListTitle {
+	@include library.section-header;
+
+	align-items: center;
+	display: flex;
+	font-size: var(--font-size);
+	height: calc(100% + var(--library_spacing));
+	letter-spacing: 0;
+	opacity: 1;
+	text-transform: none;
+	width: calc(100% + var(--achievementslist_virt-list-gap) * 3);
+
+	// Virtualized list
+	#AchievementList > [style] {
+		margin: calc(var(--achievementslist_virt-list-gap) / -2)
+			calc(var(--library_spacing) * -1);
+	}
+}
+
+#ProgressBar {
+	margin-block-start: 4px;
+}
+
+#UnlockDate {
+	color: inherit;
+	font-size: var(--font-size-small);
+}

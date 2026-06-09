@@ -1,12 +1,32 @@
 @use "mixins/style";
 @use "mixins/library";
 
+#AchievementsPageContainer {
+	.NarrowWindow & {
+		margin: 0;
+		width: 100%;
+	}
+
+	#CloseButton {
+		--icon-size: var(--library_icon-size);
+
+		@include style.icon($name: "delete-32", $hide-selector: "*");
+
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		inset-block-start: var(--library_body-spacing);
+		inset-inline-end: var(--library_body-spacing);
+	}
+}
+
 #AppDetailsMain {
 	border: var(--library_container-border);
 }
 
 #Container {
-	:where(& .DialogButton) {
+	:where(.DialogButton) {
 		@include library.button;
 
 		box-shadow: none;
@@ -16,33 +36,28 @@
 		}
 	}
 
-	:where(& .DialogDropDown) {
+	:where(.DialogDropDown) {
 		@include library.text-input;
 
 		align-items: center;
 	}
 
-	:where(& .DialogDropDown_Arrow) {
-		background: none;
-		border: none;
-		box-shadow: none;
-		height: 4px;
-		margin-inline-start: 6px;
-		width: 7px;
+	:where(.DialogDropDown_Arrow) {
+		&::before {
+			display: none;
+		}
 
-		// TODO: wtf
-		svg {
-			inset-block-start: -9px;
-			position: relative;
+		&::after {
+			inset-block-end: calc(var(--arrow-border-size) + 6px);
 		}
 	}
 
-	:where(& .DialogDropDown_CurrentDisplay) {
+	:where(.DialogDropDown_CurrentDisplay) {
 		line-height: 1;
 		padding: 0;
 	}
 
-	:where(& .DialogInput) {
+	:where(.DialogInput) {
 		@include library.text-input($compact: true);
 	}
 }
