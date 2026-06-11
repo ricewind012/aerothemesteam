@@ -1,0 +1,22 @@
+@use "mixins/library";
+
+#GameRecordingDuration {
+	@include library.description;
+
+	order: 1;
+}
+
+#GameRecordingLogo {
+	color: hsl(from var(--blue-text) 60 s l);
+}
+
+#StandardLogoDimensions {
+	height: var(--desktoptoasts_image-size);
+	width: var(--desktoptoasts_image-size);
+	// For the notification popup icon
+	z-index: 1;
+}
+
+#TimestampDesktop {
+	display: none;
+}

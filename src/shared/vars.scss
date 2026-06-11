@@ -76,6 +76,17 @@
 	--contextmenu_separator-dark: #e0e0e0;
 	--contextmenu_separator-light: #fff;
 
+	--desktoptoasts_image-color: #fff;
+	--desktoptoasts_image-size: 48px;
+	--desktoptoasts_status-away: hsl(from var(--blue-text) 75 s calc(l * 1.5));
+	--desktoptoasts_status-ingame: hsl(from var(--blue-text) 125 s calc(l * 1.5));
+	--desktoptoasts_status-offline: hsl(
+		from var(--blue-text) h calc(s / 2) calc(l * 1.5)
+	);
+	--desktoptoasts_status-online: hsl(
+		from var(--blue-text) h calc(s * 2) calc(l * 2)
+	);
+
 	--gamelistentry_active-bg: #8dd6ff;
 
 	--library_body-spacing: 16px;

@@ -1,0 +1,19 @@
+@use "mixins/library";
+@use "./notification";
+
+@include notification.template($popup-class: "#StandardTemplate");
+
+#Header {
+	@include library.header-primary;
+
+	height: unset;
+
+	#Title {
+		margin: 0;
+
+		&::after {
+			content: " ";
+			white-space: break-spaces;
+		}
+	}
+}

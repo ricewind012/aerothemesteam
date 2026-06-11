@@ -1,0 +1,189 @@
+@use "mixins/contextmenu";
+@use "mixins/library";
+
+@mixin -menu-item {
+	@include contextmenu.item;
+
+	background: none;
+	height: unset;
+}
+
+/// For whatever reason, Steam has *all* of its notification class names in 3
+/// components: {short,standard,steam}templates (notificationcontent too, but
+/// doesn't seem like it's in use), and they do not look different whatsoever...
+/// Can't predict what it will be either - Millennium uses shorttemplates, test
+/// notifictaions use standardtemplates, etc. There are some slight class name
+/// differences between them, but everything in this mixin is whatever these
+/// share between each other.
+@mixin template($popup-class: "#DesktopToastTemplate") {
+	#Content {
+		margin-inline-start: 6px;
+	}
+
+	// Classes not nested here are in use for the account notifications menu!
+	#{$popup-class} {
+		height: unset;
+		// Fits the hardcoded 70px
+		padding: 11px;
+
+		#AvatarStatus {
+			--size: 4px;
+
+			background: var(--bg);
+			box-shadow:
+				calc(var(--size) / -2) 0 hsla(from var(--bg) h s l / 0.5),
+				calc(var(--size) / -1) 0 hsla(from var(--bg) h s l / 0.25);
+			height: var(--desktoptoasts_image-size);
+			width: var(--size);
+			z-index: 1;
+
+			&:where(.awayOrSnooze) {
+				--bg: var(--desktoptoasts_status-away);
+			}
+
+			&:where(.ingame) {
+				--bg: var(--desktoptoasts_status-ingame);
+			}
+
+			&:where(.offline) {
+				--bg: var(--desktoptoasts_status-offline);
+			}
+
+			&:where(.online) {
+				--bg: var(--desktoptoasts_status-online);
+			}
+		}
+
+		// Text child node
+		#Body:has(> :only-child) {
+			@include library.header-secondary;
+		}
+
+		#Content {
+			margin-inline-start: 12px;
+		}
+
+		#FriendInGameAppColor {
+			@include library.description;
+
+			color: hsl(from var(--blue-text) 125 s l);
+		}
+
+		#GroupMessageBody {
+			@include library.description;
+		}
+
+		#GroupMessageTitle {
+			@include library.header-primary;
+		}
+
+		#GroupMessageUserName {
+			@include library.header-secondary;
+		}
+
+		#Icon {
+			--size: 64px;
+
+			color: var(--desktoptoasts_image-color);
+			height: var(--size);
+			inset-block-start: calc(var(--size) / 4);
+			inset-inline-start: calc(var(--size) / -4);
+			mask: linear-gradient(black, transparent);
+			width: var(--size);
+		}
+
+		#IngameTitle {
+			@include library.header-primary;
+		}
+
+		#StandardNotificationDescription {
+			@include library.header-secondary;
+		}
+
+		#StandardNotificationSubText {
+			@include library.description;
+		}
+
+		#Timestamp {
+			@include library.header-secondary;
+
+			opacity: var(--library_secondary-text-opacity);
+		}
+
+		#Title {
+			@include library.header-primary;
+
+			display: initial;
+		}
+	}
+
+	#Icon {
+		@include contextmenu.icon-pos;
+
+		color: var(--listitem_fg-secondary);
+		inset-block-start: 2px;
+
+		svg {
+			height: inherit;
+			width: inherit;
+		}
+	}
+
+	#PinnedBody {
+		color: inherit;
+		font: inherit;
+	}
+
+	#PinnedTemplateDesktop {
+		@include -menu-item;
+
+		margin: 0;
+
+		#Content {
+			margin: 0;
+		}
+
+		#Title {
+			display: none;
+		}
+	}
+
+	#StandardLogoDimensions {
+		height: var(--desktoptoasts_image-size);
+		width: var(--desktoptoasts_image-size);
+		// For the notification popup icon
+		z-index: 1;
+
+		img {
+			inset: 0;
+		}
+	}
+
+	#StandardNotificationDescription {
+		color: inherit;
+		font: inherit;
+		font-weight: bold;
+	}
+
+	#StandardNotificationSubText {
+		color: var(--listitem_fg-secondary);
+		font: inherit;
+
+		span {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+
+	#StandardTemplate {
+		background: none;
+	}
+
+	#StandardTemplateDesktop {
+		@include -menu-item;
+	}
+
+	#WishlistBlurImage {
+		display: none;
+	}
+}

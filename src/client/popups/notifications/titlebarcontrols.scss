@@ -1,0 +1,63 @@
+@use "mixins/contextmenu";
+@use "mixins/list";
+
+#AllNotificationsButton {
+	@include contextmenu.item;
+
+	background: none;
+	text-align: start;
+	width: 100%;
+}
+
+#AllNotificationsTitle {
+	display: none;
+}
+
+#EmptyNotificationsBody {
+	display: none;
+}
+
+#EmptyNotificationsTitle {
+	@include contextmenu.item;
+	@include list.item-disabled;
+
+	text-align: start;
+}
+
+#NotificationHeader {
+	flex-direction: column;
+	padding: 0;
+
+	&::after {
+		@include contextmenu.separator;
+
+		content: "";
+	}
+}
+
+#NotificationsMenu {
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+#NotificationsMenuEntriesContainer {
+	margin: 0;
+}
+
+#NotificationMenuItem {
+	--desktoptoasts_image-size: 32px;
+
+	background: none;
+	min-height: unset;
+}
+
+#NotificationsMenuScrollable {
+	margin: 0;
+
+	&#MenuScrollbarHidden #EmptyNotificationsCtn {
+		// steam bug
+		display: flex;
+		padding: 0;
+	}
+}

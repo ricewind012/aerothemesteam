@@ -4,6 +4,7 @@ export default {
 		"clientshared",
 		"client/desktop/millennium",
 		"client/popups/contextmenus/friendsui",
+		"client/popups/notifications/_notification",
 		"client/shared",
 	],
 };
