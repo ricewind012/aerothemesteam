@@ -1,3 +1,5 @@
+@use "mixins/style";
+
 :where(*) {
 	box-sizing: border-box;
 	font-family: "Segoe UI", sans-serif;
@@ -5,4 +7,18 @@
 
 .part {
 	display: initial;
+}
+
+$-icons: (
+	Download: "download",
+	Play: "play",
+	Pause: "delete",
+	PlusCircle: "plus",
+	X_Line: "delete",
+);
+
+@each $k, $v in $-icons {
+	:where(.SVGIcon_#{$k}) {
+		@include style.icon($name: $v, $hide-selector: "*");
+	}
 }

@@ -104,11 +104,6 @@
 	inset-inline-end: var(--library_spacing-x05);
 	opacity: 1;
 	width: unset;
-
-	// TODO: SVGIcon_Settings unify ?
-	svg {
-		@include style.icon("settings", "path");
-	}
 }
 
 #NoContent {
