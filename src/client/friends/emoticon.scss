@@ -1,0 +1,12 @@
+#emoticon {
+	// Don't make them blurry
+	--icon-size: 18px;
+
+	height: var(--icon-size);
+	width: var(--icon-size);
+}
+
+#EmoticonItem {
+	height: unset;
+	width: unset;
+}

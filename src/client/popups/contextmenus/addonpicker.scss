@@ -1,0 +1,27 @@
+@use "mixins/list";
+
+#Content {
+	gap: 12px;
+	padding-inline: calc(var(--contextmenu_left-spacing) + 6px) 0;
+}
+
+#FilterInput {
+	height: unset;
+}
+
+#FilterInputContainer {
+	padding-inline-start: calc(var(--contextmenu_left-spacing) + 6px);
+}
+
+#Item {
+	@include list.item;
+
+	margin: 0;
+}
+
+#SectionTitle {
+	color: var(--listitem_fg-secondary);
+	font: inherit;
+	letter-spacing: 0;
+	text-transform: none;
+}
