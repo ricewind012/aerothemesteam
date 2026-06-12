@@ -23,21 +23,43 @@
 #TextSection {
 	color: inherit;
 	font: inherit;
-	padding: var(--tooltip_description-spacing);
-	padding-inline-start: 0;
+	padding: 0;
 }
 
-#TopSectionAchievementIcon {
-	--icon-size: 64px;
-
+#TopSection {
+	gap: var(--tooltip_description-spacing);
 	margin: var(--tooltip_description-spacing);
 }
 
+#TopSectionAchievementIcon {
+	--achievementiconbase_size: 64px;
+
+	margin: 0;
+}
+
 #Unlocked {
-	@include tooltip.separator;
+	--tooltip--bottom-bg: rgb(200, 216, 239);
 
 	background: none;
 	color: inherit;
+	display: flex;
+	flex-direction: column;
 	font-size: var(--font-size);
 	font-weight: bold;
+	padding: var(--tooltip_description-spacing);
+
+	&::before {
+		@include tooltip.separator;
+
+		content: "";
+		padding-block: calc(var(--tooltip_description-spacing) / 2);
+	}
+
+	#RareLabel {
+		color: hsl(from var(--tooltip--bottom-bg) 35 s calc(l - 40));
+	}
+
+	#YouUnlocked {
+		color: hsl(from var(--tooltip--bottom-bg) h s calc(l - 40));
+	}
 }
