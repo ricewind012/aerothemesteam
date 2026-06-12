@@ -56,6 +56,12 @@
 	--tableheaderrow_border-start: #f2f2f2;
 	--tableheaderrow_border-end: #d5d5d5;
 
+	// Shared components
+	--desktoptab--inverse-border-size: 3px;
+	--desktoptab--item-gradient-end: #d7e0eb;
+	--desktoptab--item-spacing-block: 9px;
+	--desktoptab--item-spacing-inline: 12px;
+
 	// Componenet vars
 	--achievementiconbase_border: inset -1px -1px #fff, inset 1px 1px #3c5678;
 	--achievementiconbase_size: 32px;
@@ -152,9 +158,6 @@
 	--steamdesktop_window-size: calc(100% - var(--steamdesktop_border-size) * 2);
 
 	--supernav_icon-spacing: 4px;
-	--supernav_inverse-border-size: 3px;
-	--supernav_tab-gradient-end: #d7e0eb;
-	--supernav_tab-spacing-y: 9px;
 
 	--tooltip_background: linear-gradient(180deg, #fff, #c9d9ef);
 	--tooltip_description-spacing: 9px;
@@ -162,6 +165,6 @@
 	&[browsertype="DirectHWND"] {
 		--title-bar-height: 0px;
 		--steamdesktop_top-bar-drag: no-drag;
-		--supernav_tab-spacing-y: 3px;
+		--desktoptab--item-spacing-block: 3px;
 	}
 }

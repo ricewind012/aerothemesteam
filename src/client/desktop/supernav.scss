@@ -1,4 +1,5 @@
 @use "mixins/style";
+@use "mixins/tab";
 
 #Arrow {
 	@include style.icon("nav-forward", "path");
@@ -13,7 +14,8 @@
 
 #MenuButton {
 	color: inherit;
-	padding: var(--supernav_tab-spacing-y) 12px;
+	padding: var(--desktoptab--item-spacing-block)
+		var(--desktoptab--item-spacing-inline);
 	text-shadow: none;
 
 	&::after {
@@ -31,48 +33,14 @@
 
 // !important for #menu_MenuOpen
 #SuperNav #SuperNavMenu {
+	@include tab.item($selected: "&#Selected");
+
 	color: var(--steamdesktop_top-bar-text-color);
 	font-size: var(--font-size);
 	padding: 0;
-	position: relative;
 	text-transform: unset;
 
-	// Undo #menu_MenuOpen
-	&:hover {
-		background-image: none;
-	}
-
 	&#Selected {
-		--inverse-border-color: var(--supernav_tab-gradient-end);
-		background-image: linear-gradient(
-			360deg,
-			var(--supernav_tab-gradient-end) 18.86%,
-			#fff 95.54%
-		);
-		border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
-		box-shadow: inset 0 1px #ccddf2;
 		color: var(--blue-text);
-	}
-
-	&::before,
-	&::after {
-		box-shadow: 0 var(--supernav_inverse-border-size)
-			var(--inverse-border-color);
-		content: "";
-		height: calc(var(--supernav_inverse-border-size) * 2);
-		inset-block-end: 0;
-		position: absolute;
-		width: var(--supernav_inverse-border-size);
-		z-index: 1;
-	}
-
-	&::before {
-		border-end-end-radius: var(--supernav_inverse-border-size);
-		inset-inline-start: calc(var(--supernav_inverse-border-size) * -1);
-	}
-
-	&::after {
-		border-end-start-radius: var(--supernav_inverse-border-size);
-		inset-inline-end: calc(var(--supernav_inverse-border-size) * -1);
 	}
 }
