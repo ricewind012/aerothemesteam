@@ -1,0 +1,64 @@
+@use "mixins/contextmenu";
+@use "mixins/list";
+
+#ReminderBackground {
+	@include contextmenu.container;
+	@include contextmenu.container-left-border;
+
+	border-radius: 0;
+}
+
+#ReminderCalendarOptions {
+	flex-direction: column;
+	padding: 0;
+}
+
+#ReminderDialog {
+	border: none;
+	padding: 0;
+}
+
+#ReminderOption {
+	@include contextmenu.item;
+
+	background-color: transparent;
+	font-weight: normal;
+	height: var(--contextmenu_item-height);
+	line-height: inherit;
+	margin: 0;
+	text-align: start;
+	text-decoration: none;
+
+	.DialogCheckbox_Container[aria-checked="true"] .DialogCheckbox {
+		@include contextmenu.icon("checkmark");
+
+		display: block;
+		margin: 0;
+	}
+
+	.DialogCheckbox {
+		display: none;
+	}
+
+	.DialogToggle_Label {
+		margin: 0;
+	}
+}
+
+#ReminderOptionsHeader {
+	@include contextmenu.item;
+	@include list.item-disabled;
+
+	text-align: start;
+
+	&:not(:first-child) {
+		margin-block-start: 8px;
+
+		&::before {
+			@include contextmenu.separator;
+
+			content: "";
+			position: absolute;
+		}
+	}
+}

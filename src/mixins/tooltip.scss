@@ -1,3 +1,14 @@
+@mixin bigger--bg-blur {
+	filter: blur(9px) saturate(2);
+	mix-blend-mode: screen;
+}
+
+@mixin bigger--container {
+	@include container;
+
+	padding: 0;
+}
+
 @mixin container {
 	background: var(--tooltip_background);
 	border: 1px solid #767676;

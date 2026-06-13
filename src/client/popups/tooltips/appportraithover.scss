@@ -1,21 +1,10 @@
 @use "mixins/library";
 @use "mixins/tooltip";
 
-@mixin -tooltip-bigger {
-	@include tooltip.container;
-
-	padding: 0;
-}
-
-@mixin -tooltip-bigger-bg-blur {
-	filter: blur(10px) saturate(2);
-	mix-blend-mode: screen;
-}
-
 #AppPortraitHover {
 	--width: 220px;
 
-	@include -tooltip-bigger;
+	@include tooltip.bigger--container;
 }
 
 #AppStatus {
@@ -34,7 +23,7 @@
 }
 
 #CapsuleBackground {
-	@include -tooltip-bigger-bg-blur;
+	@include tooltip.bigger--bg-blur;
 
 	height: 100%;
 	inset: 0;

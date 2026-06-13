@@ -1,5 +1,5 @@
 #Container {
-	--icon: icon("minus");
+	--icon: icon("minus-small");
 	--icon-size: 5px 2px;
 
 	background-image: linear-gradient(
@@ -34,7 +34,7 @@
 	}
 
 	&#Collapsed {
-		--icon: icon("plus");
+		--icon: icon("plus-small");
 		--icon-size: 5px;
 	}
 

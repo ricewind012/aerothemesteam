@@ -1,0 +1,38 @@
+@use "mixins/library";
+@use "mixins/style";
+
+#ReminderCheckBox {
+	background: none;
+	box-shadow: none;
+	gap: 2px;
+}
+
+#ReminderDefault,
+#ReminderOpennedOptions,
+:where(#ReminderOptions) {
+	@include library.button;
+
+	line-height: inherit;
+	height: unset;
+}
+
+#ReminderDefault {
+	border-start-end-radius: 0;
+	border-end-end-radius: 0;
+}
+
+#ReminderOpennedOptions,
+#ReminderOptions {
+	border-start-start-radius: 0;
+	border-end-start-radius: 0;
+	padding: 7px 8px;
+	width: unset;
+
+	&::before {
+		@include style.arrow("bottom");
+
+		background-color: var(--blue-text);
+		content: "";
+		display: block;
+	}
+}

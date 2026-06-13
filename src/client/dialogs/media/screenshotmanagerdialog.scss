@@ -167,11 +167,6 @@
 		& > :nth-child(2) {
 			--icon: icon("delete");
 		}
-
-		// TODO: SVGIcon_Settings
-		& > :last-child {
-			--icon: icon("settings");
-		}
 	}
 }
 

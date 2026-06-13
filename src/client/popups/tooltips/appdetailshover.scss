@@ -1,7 +1,7 @@
 @use "mixins/tooltip";
 
 #AppDetailsHover {
-	@include tooltip.container;
+	@include tooltip.bigger--container;
 
 	background-image: none;
 }
@@ -12,6 +12,8 @@
 }
 
 #BlurContainer {
+	@include tooltip.bigger--bg-blur;
+
 	mask: none;
 	opacity: 1;
 }

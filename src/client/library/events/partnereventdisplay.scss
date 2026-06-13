@@ -1,0 +1,73 @@
+@use "mixins/library";
+@use "mixins/style";
+@use "mixins/tooltip";
+
+#EventBackgroundBlur {
+	// Obviously not tooltip, but same styling
+	@include tooltip.bigger--bg-blur;
+
+	height: 100%;
+	opacity: 1;
+}
+
+#EventDetailsBody {
+	color: var(--blue-text);
+	font-size: var(--font-size);
+	line-height: inherit;
+
+	:where(& a) {
+		@include style.link;
+	}
+
+	:where(& img) {
+		border-radius: var(--border-radius-large);
+	}
+}
+
+#EventDetailsSubTitle {
+	@include library.header-secondary;
+
+	line-height: inherit;
+	margin: 0;
+	order: -1;
+	padding: 0;
+}
+
+#EventDetailTimeInfo {
+	color: inherit;
+
+	div {
+		align-items: center;
+	}
+}
+
+#EventDetailTitle {
+	@include library.header-primary;
+
+	line-height: inherit;
+	margin: 0;
+	order: -1;
+}
+
+#EventDetailTitleContainer {
+	background: var(--library_section-bg);
+	color: var(--blue-text);
+	display: flex;
+	flex-direction: column;
+	gap: var(--library_text-spacing);
+	padding: var(--library_body-spacing);
+
+	// Empty element ?
+	& > span[style="font-size: 0px;"] {
+		display: none;
+	}
+}
+
+#LibraryEventBodyContainer {
+	padding: var(--library_body-spacing);
+}
+
+#LibraryEventTitleContainer {
+	border-block-end: var(--library_border);
+	box-shadow: none;
+}

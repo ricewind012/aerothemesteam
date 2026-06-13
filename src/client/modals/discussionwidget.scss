@@ -1,0 +1,62 @@
+@use "mixins/controls";
+@use "mixins/library";
+@use "mixins/style";
+
+#ClipboardText {
+	padding-block-start: var(--library_text-spacing);
+}
+
+#LinkButton {
+	@include style.icon($name: "link");
+
+	background-color: transparent;
+	box-shadow: none;
+	padding: 0;
+
+	// This has 2 tooltips otherwise (v*lve)
+	& > .tool-tip-source {
+		display: none;
+	}
+}
+
+#linkField {
+	gap: var(--library_spacing-x05);
+	margin: 0;
+}
+
+#LinkInput {
+	@include library.text-input;
+
+	height: unset;
+}
+
+#LinkInputLabel {
+	padding: 0;
+}
+
+#share_controls_ctn {
+	background: none;
+	margin: 0;
+	padding: 0;
+}
+
+// Let's just not touch this - V*lve embedded their svgs into an <img> element
+// OH MY GOD
+#ShareButtonContainer {
+	gap: var(--library_spacing-x05);
+	justify-content: start;
+	margin-block-start: var(--library_spacing-x05);
+}
+
+#ShareLanguagePicker {
+	padding: 0;
+
+	#LanguageLabel {
+		padding-inline: 0 var(--library_spacing-x05);
+	}
+
+	// VALVE
+	select {
+		@include controls.dropdown($disabled-class-name: ":disabled");
+	}
+}

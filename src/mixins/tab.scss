@@ -1,0 +1,43 @@
+@mixin container {
+	border-block-end: 2px solid var(--desktoptab--item-gradient-end);
+}
+
+/// All args are selectors.
+@mixin item($selected) {
+	font-weight: normal;
+	padding: var(--desktoptab--item-spacing-block)
+		var(--desktoptab--item-spacing-inline);
+	position: relative;
+
+	#{$selected} {
+		--inverse-border-color: var(--desktoptab--item-gradient-end);
+		background-image: linear-gradient(
+			#fff 18.86%,
+			var(--desktoptab--item-gradient-end) 95.54%
+		);
+		border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+		box-shadow: inset 0 1px #ccddf2;
+	}
+
+	&::before,
+	&::after {
+		box-shadow: 0 var(--desktoptab--inverse-border-size)
+			var(--inverse-border-color);
+		content: "";
+		height: calc(var(--desktoptab--inverse-border-size) * 2);
+		inset-block-end: 0;
+		position: absolute;
+		width: var(--desktoptab--inverse-border-size);
+		z-index: 1;
+	}
+
+	&::before {
+		border-end-end-radius: var(--desktoptab--inverse-border-size);
+		inset-inline-start: calc(var(--desktoptab--inverse-border-size) * -1);
+	}
+
+	&::after {
+		border-end-start-radius: var(--desktoptab--inverse-border-size);
+		inset-inline-end: calc(var(--desktoptab--inverse-border-size) * -1);
+	}
+}

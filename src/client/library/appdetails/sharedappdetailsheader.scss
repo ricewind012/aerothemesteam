@@ -30,6 +30,7 @@
 	align-self: flex-start;
 	line-height: 1;
 	margin-block: calc((var(--library_icon-size) - var(--font-size-xlarge)) / 2);
+	text-shadow: var(--library_header-text-shadow);
 
 	&::before {
 		color: var(--blue-text);
