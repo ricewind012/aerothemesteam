@@ -36,6 +36,12 @@
 	width: calc(100% + var(--radius));
 }
 
+#LibraryItemBox {
+	&:where(#InDownloads) {
+		box-shadow: none;
+	}
+}
+
 #PlaytimeDetails {
 	@include -footer($header: "#PlayedRecent", $description: "#PlayedTotal");
 }

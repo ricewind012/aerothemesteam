@@ -1,0 +1,336 @@
+@use "mixins/controls";
+@use "mixins/library";
+@use "mixins/style";
+
+#ActiveItemProgressBar #Status {
+	font-size: var(--font-size);
+
+	& > div:not([class]) {
+		opacity: var(--library_secondary-text-opacity);
+	}
+
+	#Label {
+		color: inherit;
+	}
+
+	// the only child is an svg, but is still called "Label", amazing
+	#ProgressDetails > #Label {
+		display: none;
+	}
+
+	#ProgressDetails,
+	#Value {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+#ActiveItemRightColumn {
+	border-inline-start: var(--library_border);
+	gap: var(--library_spacing-x05);
+	padding: var(--library_spacing);
+
+	#Bottom {
+		order: 1;
+
+		#DownloadTimeRemaining {
+			@include library.header;
+
+			#StartTime {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	#DetailsAndType {
+		order: 1;
+	}
+
+	#ProgressBars {
+		gap: var(--library_spacing);
+	}
+
+	#Throttle {
+		@include library.description;
+
+		font-weight: normal;
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	#ThrottleValue {
+		color: inherit;
+	}
+}
+
+#Button {
+	all: unset;
+
+	@include style.icon($hide-selector: "*");
+
+	#DownloadSectionActiveItem #Bottom & {
+		--icon: icon("cancel");
+	}
+
+	&#RemoveFromQueue {
+		--icon: icon("delete");
+	}
+
+	&:not(#RemoveFromQueue) {
+		--icon: icon("download");
+	}
+
+	&:where(:has(> svg > path:only-child)) {
+		--icon: icon("update");
+	}
+}
+
+#ButtonWrapper {
+	height: unset;
+	margin: 0;
+	width: unset;
+}
+
+#ContentType {
+	color: var(--blue-text);
+	gap: var(--library_text-spacing);
+	height: unset;
+
+	&:not(#Highlight) {
+		opacity: var(--library_secondary-text-opacity);
+	}
+
+	#Text {
+		font-size: var(--font-size-small);
+		letter-spacing: 0;
+		text-transform: none;
+	}
+}
+
+#ContentTypes {
+	inset-block-start: var(--library_spacing);
+	inset-inline-start: var(--library_spacing);
+}
+
+#DownloadsPage {
+	background: var(--bg-main);
+}
+
+#EmptyTransfers {
+	@include library.placeholder;
+
+	color: var(--blue-text);
+	font-size: var(--font-size);
+
+	#Text {
+		height: unset;
+	}
+}
+
+#Icon {
+	height: var(--icon-size);
+	width: var(--icon-size);
+}
+
+#ItemLists {
+	display: flex;
+	flex-direction: column;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	overflow: auto;
+	gap: var(--library_spacing);
+	padding: var(--library_body-spacing);
+
+	#ProgressBar {
+		display: none;
+	}
+
+	#SectionList {
+		--header-height: calc(
+			var(--library_section-header-spacing-y) * 2 + var(--font-size-small)
+		);
+
+		height: calc(100% - var(--header-height));
+	}
+}
+
+#ProgressBar {
+	@include controls.progress-bar-outer;
+
+	// Hidden by #appdetailsplaysection_DetailsProgressContainer
+	display: block;
+	margin-block-start: var(--library_text-spacing);
+
+	& > div {
+		@include controls.progress-bar-inner;
+	}
+}
+
+#RemoveAllButton {
+	all: unset;
+
+	@include style.icon($name: "delete", $hide-selector: "*");
+
+	font-size: 0;
+	margin-block: calc(var(--library_section-header-spacing-y) * -1);
+}
+
+#Section {
+	@include library.section;
+
+	margin: 0;
+	padding: 0;
+
+	// "Up Next" is displayed, so why not others?
+	&#Empty {
+		display: block;
+	}
+}
+
+#SectionItem {
+	background: var(--library_section-bg);
+	color: var(--blue-text);
+	padding: 0;
+
+	#DetailsAndType {
+		height: unset;
+	}
+
+	#DragHandle {
+		color: var(--blue-text);
+		margin: 0;
+
+		svg {
+			height: var(--icon-size);
+			width: var(--icon-size);
+		}
+	}
+
+	#Name {
+		@include library.header;
+
+		line-height: inherit;
+		margin: 0;
+	}
+
+	#ProgressDetails {
+		@include library.description;
+
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	#Value {
+		color: inherit;
+	}
+}
+
+#SectionItemCenter,
+#SectionItemContent {
+	gap: var(--library_spacing);
+}
+
+#SectionItemStatus {
+	color: inherit;
+	flex-grow: 1;
+	font: inherit;
+	font-size: var(--font-size-small);
+	letter-spacing: 0;
+	text-transform: none;
+
+	#InProgress {
+		@include library.header;
+	}
+
+	#Progress {
+		@include library.description;
+	}
+}
+
+#SectionItemWrapper {
+	&#Dragging {
+		box-shadow: var(--popup-shadow);
+	}
+}
+
+#SectionList {
+	border: none;
+	margin: 0;
+	padding: var(--library_spacing);
+
+	&#DropOption {
+		--offset: calc(
+			var(--library_spacing-x05) + var(--library_placeholder-border-size) / 2
+		);
+
+		background: none;
+		outline: var(--library_placeholder-border-size) dotted
+			var(--library_border-color);
+		outline-offset: calc(var(--offset) * -1);
+		transition: var(--anim-time);
+	}
+
+	#Buttons {
+		gap: var(--library_spacing-x05);
+	}
+}
+
+#SectionTitle {
+	@include library.section-header;
+
+	letter-spacing: 0;
+	line-height: inherit;
+	margin: calc(var(--library_border-size) * -1);
+
+	#AutoUpdateHours {
+		color: inherit;
+		font: inherit;
+		margin: 0;
+		opacity: var(--library_secondary-text-opacity);
+	}
+
+	#Count,
+	#Title {
+		all: unset;
+	}
+
+	#Rule {
+		visibility: hidden;
+	}
+}
+
+#TopSection {
+	#EmptyTransfers {
+		border: none;
+		opacity: 1;
+		padding: 0;
+	}
+
+	&:not(:hover) #HoverRing {
+		border-color: transparent;
+		transition: var(--anim-time);
+	}
+
+	#HoverRing {
+		border: var(--library_placeholder-border-size) dashed var(--blue-text);
+		inset: var(--library_spacing-x05);
+		opacity: var(--library_secondary-text-opacity);
+	}
+
+	#Section {
+		background-image: var(--library_header-img-mask);
+		border-inline: none;
+	}
+
+	#SectionItem {
+		background: none;
+	}
+
+	#SectionItemStatus {
+		justify-content: start;
+	}
+
+	#SectionList {
+		padding: 0;
+	}
+}

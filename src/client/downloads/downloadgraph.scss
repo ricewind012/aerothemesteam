@@ -1,0 +1,105 @@
+@use "mixins/library";
+@use "mixins/style";
+
+#DownloadGraph {
+	mask: none;
+
+	#DiskGraph {
+		height: 50%;
+	}
+}
+
+#DownloadGraphStats {
+	gap: var(--library_spacing);
+}
+
+#DownloadGraphStatsWrapper {
+	width: 100%;
+}
+
+#DownloadGraphWrapper {
+	margin: 0;
+}
+
+#HeroAndLogo {
+	background: linear-gradient(90deg, var(--library_border-color), transparent);
+	height: var(--library_header-img-height);
+	mask: var(--library_header-img-mask);
+	opacity: 1;
+	width: 100%;
+
+	#HeroContainer {
+		mask: none;
+	}
+
+	#HeroGradient {
+		display: none;
+	}
+
+	#Logo,
+	#LogoShadow {
+		height: 75%;
+		inset-block-start: var(--library_spacing);
+		inset-inline-start: var(--library_spacing);
+		margin-inline-start: 12.5%;
+	}
+
+	#LogoShadow {
+		filter: brightness(0) blur(16px);
+		opacity: 1;
+	}
+}
+
+// A second button, thanks v*lve
+#SettingsButton {
+	--icon: icon("settings");
+
+	inset-block-start: var(--library_spacing);
+	inset-inline-end: var(--library_spacing);
+
+	#Button {
+		all: unset;
+
+		@include style.icon($hide-selector: "*");
+	}
+}
+
+#SingleStat {
+	#LegendBox {
+		margin-inline-end: var(--library_spacing-x05);
+
+		&:not(#Disk) {
+			height: var(--icon-size);
+			width: var(--icon-size);
+		}
+
+		svg {
+			height: inherit;
+			width: inherit;
+		}
+	}
+
+	#LegendRow {
+		height: unset;
+	}
+
+	#LegendText {
+		@include library.header;
+
+		letter-spacing: 0;
+		line-height: inherit;
+		text-transform: none;
+	}
+
+	#Stat {
+		line-height: inherit;
+		padding-inline-start: calc(var(--icon-size) + var(--library_spacing-x05));
+
+		#Figure {
+			@include library.description;
+
+			letter-spacing: 0;
+			line-height: inherit;
+		}
+	}
+}
