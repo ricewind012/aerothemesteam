@@ -1,0 +1,7 @@
+@use "mixins/tooltip";
+
+#DateToolTip {
+	@include tooltip.container;
+
+	text-transform: none;
+}

@@ -1,0 +1,67 @@
+@use "mixins/library";
+@use "mixins/style";
+
+#Container {
+	background: var(--library_section-bg);
+	border-block-start: var(--library_border);
+	padding: var(--library_body-spacing);
+	// For the blurred bg
+	position: relative;
+	z-index: 0;
+}
+
+#DiscussionButton {
+	@include library.button;
+
+	margin: 0;
+
+	&[aria-label]::before {
+		content: attr(aria-label);
+	}
+}
+
+#DiscussionButtonText {
+	font: inherit;
+}
+
+#DiscussionCount,
+#VoteCount {
+	align-items: center;
+	color: var(--blue-text);
+	font-size: var(--font-size-small);
+	font-weight: inherit;
+	gap: var(--library_text-spacing);
+	height: unset;
+	margin: 0;
+	padding: 0;
+	width: 67px;
+
+	svg {
+		margin: 0;
+	}
+}
+
+// VAAAAAAAALVE wtf
+#DiscussContainer,
+#ShareContainer,
+#VoteContainer {
+	background: none;
+	gap: var(--library_spacing-x05);
+	padding: 0;
+}
+
+#DiscussIcon,
+#ShareIcon,
+#VoteDownIcon,
+#VoteUpIcon {
+	display: none;
+}
+
+#InnerContainer {
+	flex-direction: column;
+	gap: var(--library_spacing-x05);
+}
+
+#VoteUpStaticIcon {
+	@include style.icon($name: "thumbs-up", $hide-selector: "*");
+}

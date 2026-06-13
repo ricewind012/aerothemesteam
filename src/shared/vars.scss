@@ -132,6 +132,13 @@
 	--pagedsettings_tab-separator: #c5c5c5;
 	--pagedsettings_tab-separator2: #dde7ee;
 
+	// 70% should cover the bottom right text
+	--salepreviewwidgets_bg: radial-gradient(
+		at 0% 0%,
+		var(--library_section-bg) 70%,
+		var(--bg-main)
+	);
+
 	--steamavatar_size: 32px;
 
 	--steamdesktop_border-size: 1px;

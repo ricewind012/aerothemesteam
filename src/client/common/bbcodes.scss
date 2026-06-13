@@ -1,0 +1,28 @@
+#Header1,
+#Header2,
+#Header3,
+#Header4,
+#Header5 {
+	color: inherit;
+	font: inherit;
+}
+
+#Header1,
+#Header2,
+#Header3 {
+	font-size: var(--font-size-xlarge);
+}
+
+#Header4,
+#Header5 {
+	font-size: var(--font-size-large);
+}
+
+#TableCell {
+	background-color: color-mix(in srgb, currentColor 10%, transparent);
+
+	&:where(th) {
+		background-color: color-mix(in srgb, currentColor 25%, transparent);
+		color: inherit;
+	}
+}

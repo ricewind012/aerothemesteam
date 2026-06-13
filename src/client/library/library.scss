@@ -25,6 +25,15 @@
 	border: var(--library_container-border);
 }
 
+#AppDetailsOverlayTransitionGroup {
+	// bruh valve
+	& > div {
+		backdrop-filter: none;
+		// Keep relative positioning, as backdrop-filter is now disabled
+		transform-style: preserve-3d;
+	}
+}
+
 #Container {
 	:where(.DialogButton) {
 		@include library.button;
