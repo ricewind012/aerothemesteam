@@ -1,0 +1,67 @@
+@use "mixins/style";
+
+#ControlBlock {
+	// TODO(vars):
+	--icon-size: 32px;
+
+	gap: 0;
+	padding: 0;
+}
+
+#Controls {
+	gap: 4px;
+}
+
+#ControlsAndVolume {
+	#VolumeControl {
+		inset-inline-end: var(--library--body-spacing);
+	}
+}
+
+// !important
+#IconButton#IconButton#IconButton {
+	all: unset;
+
+	@include style.icon($hide-selector: "svg");
+
+	&:not(#Active) {
+		opacity: 0.5;
+	}
+
+	&:nth-child(1) {
+		--icon: icon("media-shuffle-32");
+	}
+
+	&:nth-child(2) {
+		--icon: icon("media-prev-32");
+	}
+
+	&:nth-child(3) {
+		--icon: icon("media-play-32");
+
+		&:has(> svg > [d$="25Z"]) {
+			--icon: icon("media-pause-32");
+		}
+	}
+
+	&:nth-child(4) {
+		--icon: icon("media-next-32");
+	}
+
+	&:nth-child(5) {
+		--icon: icon("media-repeat-32");
+	}
+}
+
+#Progress {
+	padding: 0;
+
+	.SliderControlPanelGroup {
+		padding: 0;
+	}
+}
+
+#Text {
+	font: inherit;
+	padding: 0;
+}

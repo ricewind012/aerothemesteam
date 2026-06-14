@@ -1,0 +1,162 @@
+@use "mixins/controls";
+@use "mixins/library";
+@use "mixins/list";
+
+#AlbumArt {
+	box-shadow: var(--achievementiconbase--border);
+	filter: none;
+	padding: 1px;
+	margin: 0;
+	width: 25%;
+}
+
+#AlbumArtAndTitle {
+	--blue-text: var(--bg-main);
+
+	flex-direction: row;
+	gap: var(--library--spacing);
+	margin: 0;
+
+	// For some reason children don't inherit this
+	* {
+		// Make it as visible as possible for contrast against --fg-main
+		text-shadow: 1px 1px var(--bg-main);
+	}
+}
+
+#AlbumName {
+	@include library.header-primary;
+
+	line-height: inherit;
+}
+
+#ArtistName {
+	@include library.header-secondary;
+
+	margin-block-end: var(--library--spacing);
+}
+
+#BackgroundBlurArt {
+	filter: none;
+	height: var(--library--header-img-height);
+	mask: var(--library--header-img-mask);
+	opacity: 1;
+	width: 80%;
+}
+
+#Columns {
+	flex-direction: column;
+	gap: var(--library--spacing);
+	padding: var(--library--body-spacing);
+}
+
+#Content {
+	gap: 0;
+}
+
+#DesktopControls {
+	background: var(--library--section-bg);
+	border: var(--library--border);
+	border-block-end: none;
+	border-radius: 0;
+	height: unset;
+	padding: var(--library--body-spacing);
+	position: unset;
+	transform: none;
+
+	// no way
+	#CurrentTrackContainer {
+		display: none;
+	}
+}
+
+#LeftColumn {
+	flex-direction: row;
+	flex-shrink: 0;
+	justify-content: space-between;
+	margin: 0;
+	mask: none;
+	max-width: unset;
+	overflow: visible;
+	padding: 0;
+	width: 100%;
+
+	#AlbumStats {
+		color: var(--fg-main);
+		font: inherit;
+		font-weight: normal;
+		font-style: normal;
+		line-height: var(--icon-size);
+	}
+
+	#AlbumStatsContainer {
+		@include library.description;
+
+		font-weight: bold;
+		letter-spacing: 0;
+		line-height: inherit;
+	}
+
+	// "Soundtrack for <game>"... no way
+	#ParentGameLinkContainer {
+		display: none;
+	}
+
+	#StatsAndParent {
+		justify-content: space-between;
+	}
+
+	& > .Panel {
+		flex-shrink: 0;
+	}
+}
+
+#RightColumn {
+	@include controls.table;
+
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0;
+	width: 100%;
+	// -25% for album art
+	height: 75%;
+}
+
+#SoundtrackContainer {
+	padding: 0;
+}
+
+#SoundtrackPanel {
+	background: var(--bg-main);
+	overflow: hidden;
+}
+
+#TrackListContainer {
+	border-radius: 0;
+	height: 100%;
+	padding: 0;
+
+	#Disc {
+		@include controls.table-header-row;
+
+		font-size: var(--font-size);
+	}
+}
+
+#TrackListing {
+	@include list.item;
+
+	&#Playing {
+		@include list.item-active;
+	}
+}
+
+#TrackName {
+	font: inherit;
+}
+
+#TrackLength,
+#TrackNumber {
+	color: var(--listitem--fg-secondary);
+	font: inherit;
+}

@@ -5,6 +5,11 @@
 	font-family: "Segoe UI", sans-serif;
 }
 
+body {
+	background: var(--bg-main);
+	color: var(--fg-main);
+}
+
 .part {
 	display: initial;
 }
