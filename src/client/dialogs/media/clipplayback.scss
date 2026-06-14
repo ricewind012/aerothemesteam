@@ -1,7 +1,7 @@
 @use "mixins/style";
 
 #LeftControls {
-	gap: var(--clipplayback_button-gap);
+	gap: var(--clipplayback--button-gap);
 
 	#AddMarkerIcon {
 		color: var(--blue-border);
@@ -17,7 +17,7 @@
 #PlaybackButton {
 	@include style.icon($hide-selector: "svg");
 
-	margin-inline: calc(var(--clipplayback_button-gap) / 2);
+	margin-inline: calc(var(--clipplayback--button-gap) / 2);
 	transform: none;
 
 	&:where(#FrameStepButton) {
@@ -34,7 +34,7 @@
 }
 
 #PlaybackControls {
-	--clipplayback_button-gap: 4px;
+	--clipplayback--button-gap: 4px;
 
 	height: unset;
 }
@@ -49,7 +49,7 @@
 }
 
 #RightButtons {
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 
 	#MoreSpecific {
 		gap: 0;

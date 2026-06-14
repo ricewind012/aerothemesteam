@@ -2,25 +2,25 @@
 @use "mixins/style";
 
 #AppOverviewRow {
-	gap: var(--library_spacing);
-	padding-block-end: var(--library_spacing);
+	gap: var(--library--spacing);
+	padding-block-end: var(--library--spacing);
 }
 
 #AuthorName {
 	font-size: var(--font-size);
-	margin-inline-start: var(--library_text-spacing);
+	margin-inline-start: var(--library--text-spacing);
 }
 
 #AuthorSection {
 	background: #cedef2;
-	border-block-start: var(--library_border);
+	border-block-start: var(--library--border);
 	border-radius: 0;
 	color: inherit;
-	padding: var(--library_spacing-x05);
+	padding: var(--library--spacing-x05);
 }
 
 #BottomSection {
-	padding: var(--library_spacing-x05);
+	padding: var(--library--spacing-x05);
 }
 
 #Button {
@@ -30,7 +30,7 @@
 
 #CommunityItem {
 	background-color: transparent;
-	border: var(--library_border);
+	border: var(--library--border);
 	border-radius: 0;
 	box-shadow: none;
 }
@@ -46,9 +46,9 @@
 
 #Controls {
 	background-color: #cedef2;
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 	justify-content: center;
-	padding: var(--library_spacing-x05);
+	padding: var(--library--spacing-x05);
 	position: unset;
 	transform: unset;
 }
@@ -84,7 +84,7 @@
 #InnerContainer {
 	@include library.section;
 
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }
 
 #LoadContentButton {
@@ -99,15 +99,15 @@
 	height: unset;
 	inset-block-start: unset;
 	inset-block-end: calc(
-		var(--library_spacing-x05) * 3 + var(--steamavatar_size) / 2 + 1lh
+		var(--library--spacing-x05) * 3 + var(--steamavatar--size) / 2 + 1lh
 	);
-	inset-inline-end: var(--library_spacing-x05);
+	inset-inline-end: var(--library--spacing-x05);
 	opacity: 1;
 	width: unset;
 }
 
 #NoContent {
-	margin-block-end: var(--library_spacing);
+	margin-block-end: var(--library--spacing);
 }
 
 #PreviewContainer {
@@ -122,7 +122,7 @@
 	@include library.header-primary;
 
 	line-height: inherit;
-	margin: var(--library_spacing-x05);
+	margin: var(--library--spacing-x05);
 	margin-block-end: 0;
 }
 

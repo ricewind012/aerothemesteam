@@ -9,14 +9,14 @@
 }
 
 #ActivityAchievementUnlocked {
-	background: var(--library_green-dark);
-	border: var(--library_border-size) solid var(--library_green-dark);
-	gap: calc(var(--library_spacing) + var(--library_border-size));
+	background: var(--library--green-dark);
+	border: var(--library--border-size) solid var(--library--green-dark);
+	gap: calc(var(--library--spacing) + var(--library--border-size));
 	// copied, since the inline one doesn't work
 	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 	padding: 0;
-	padding-block-start: var(--library_spacing);
-	padding-inline-start: var(--library_spacing);
+	padding-block-start: var(--library--spacing);
+	padding-inline-start: var(--library--spacing);
 
 	&:has(> :only-child) {
 		grid-template-columns: 1fr;
@@ -36,20 +36,20 @@
 	@include library.activity-section_header;
 
 	letter-spacing: 0;
-	margin-block-end: var(--library_spacing-x05);
+	margin-block-end: var(--library--spacing-x05);
 	text-transform: unset;
 
 	// ty valve, fucking amazing
 	& + div:not([class]) {
 		display: flex;
 		flex-direction: column;
-		gap: var(--library_spacing);
+		gap: var(--library--spacing);
 	}
 }
 
 #AppActivityDay {
 	border: none;
-	margin-block-end: calc(var(--library_spacing) * 2);
+	margin-block-end: calc(var(--library--spacing) * 2);
 	padding: 0;
 }
 
@@ -61,12 +61,12 @@
 }
 
 #CaptionQuoteContainer {
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 }
 
 #CarouselThumb {
 	border-radius: var(--border-radius-large);
-	margin-block-end: var(--library_spacing-x05);
+	margin-block-end: var(--library--spacing-x05);
 
 	&#Active {
 		border: none;
@@ -75,7 +75,7 @@
 
 #CarouselThumbs {
 	margin: 0;
-	margin-inline-start: var(--library_spacing-x05);
+	margin-inline-start: var(--library--spacing-x05);
 }
 
 #DayPosted {
@@ -100,18 +100,18 @@
 	background: none;
 	border: none;
 	box-shadow: none;
-	margin-block-start: var(--library_spacing);
+	margin-block-start: var(--library--spacing);
 
 	&#UserStatus {
 		margin-block-start: 0;
-		padding: var(--library_spacing);
+		padding: var(--library--spacing);
 	}
 }
 
 #EventHeadline {
 	color: inherit;
 	font: inherit;
-	padding-block: var(--library_spacing-x05);
+	padding-block: var(--library--spacing-x05);
 }
 
 #ImageWrapper {
@@ -123,7 +123,7 @@
 }
 
 #PartnerEventFeatured {
-	margin: calc(var(--library_spacing) * -1);
+	margin: calc(var(--library--spacing) * -1);
 }
 
 #PartnerEventFeaturedHeader {
@@ -131,7 +131,7 @@
 
 	line-height: unset;
 	letter-spacing: 0;
-	margin-inline: calc(var(--library_border-size) * -1);
+	margin-inline: calc(var(--library--border-size) * -1);
 	text-transform: unset;
 }
 
@@ -145,7 +145,7 @@
 	&_Summary {
 		color: inherit;
 		font-size: inherit;
-		opacity: var(--library_secondary-text-opacity);
+		opacity: var(--library--secondary-text-opacity);
 		order: 1;
 		text-shadow: none;
 	}
@@ -178,26 +178,26 @@
 #PrimaryAchievement#PrimaryAchievement,
 #ActivityAchievementUnlocked > :last-child {
 	// fucking hell, valve
-	--tooltip_description-spacing: 9px 0 9px;
+	--tooltip--description-spacing: 9px 0 9px;
 	border: none;
-	width: calc(100% + var(--library_spacing));
+	width: calc(100% + var(--library--spacing));
 }
 
 #Rule {
 	@include library.activity-section_rule;
 
 	margin-block-start: 3px;
-	margin-inline-start: var(--library_text-spacing);
+	margin-inline-start: var(--library--text-spacing);
 }
 
 #ScreenshotCaption#HasCaption {
 	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
 	font-size: var(--font-size);
 	margin-inline-end: 0;
-	margin-block-end: calc(1lh + var(--library_text-spacing));
+	margin-block-end: calc(1lh + var(--library--text-spacing));
 	max-width: unset;
-	padding-block: calc(var(--library_spacing-x05) / 2);
-	padding-inline: var(--library_spacing);
+	padding-block: calc(var(--library--spacing-x05) / 2);
+	padding-inline: var(--library--spacing);
 }
 
 #TimeStamp {
@@ -221,11 +221,11 @@
 }
 
 #ReviewIcon {
-	--size: calc(var(--library_icon-size) * 1.5);
+	--size: calc(var(--library--icon-size) * 1.5);
 
 	border-radius: var(--border-radius);
 	height: var(--size);
-	margin-inline-end: var(--library_spacing);
+	margin-inline-end: var(--library--spacing);
 	width: var(--size);
 }
 

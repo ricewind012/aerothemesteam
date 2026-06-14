@@ -10,7 +10,7 @@
 }
 
 #DownloadGraphStats {
-	gap: var(--library_spacing);
+	gap: var(--library--spacing);
 }
 
 #DownloadGraphStatsWrapper {
@@ -22,9 +22,9 @@
 }
 
 #HeroAndLogo {
-	background: linear-gradient(90deg, var(--library_border-color), transparent);
-	height: var(--library_header-img-height);
-	mask: var(--library_header-img-mask);
+	background: linear-gradient(90deg, var(--library--border-color), transparent);
+	height: var(--library--header-img-height);
+	mask: var(--library--header-img-mask);
 	opacity: 1;
 	width: 100%;
 
@@ -39,8 +39,8 @@
 	#Logo,
 	#LogoShadow {
 		height: 75%;
-		inset-block-start: var(--library_spacing);
-		inset-inline-start: var(--library_spacing);
+		inset-block-start: var(--library--spacing);
+		inset-inline-start: var(--library--spacing);
 		margin-inline-start: 12.5%;
 	}
 
@@ -54,8 +54,8 @@
 #SettingsButton {
 	--icon: icon("settings");
 
-	inset-block-start: var(--library_spacing);
-	inset-inline-end: var(--library_spacing);
+	inset-block-start: var(--library--spacing);
+	inset-inline-end: var(--library--spacing);
 
 	#Button {
 		all: unset;
@@ -66,7 +66,7 @@
 
 #SingleStat {
 	#LegendBox {
-		margin-inline-end: var(--library_spacing-x05);
+		margin-inline-end: var(--library--spacing-x05);
 
 		&:not(#Disk) {
 			height: var(--icon-size);
@@ -93,7 +93,7 @@
 
 	#Stat {
 		line-height: inherit;
-		padding-inline-start: calc(var(--icon-size) + var(--library_spacing-x05));
+		padding-inline-start: calc(var(--icon-size) + var(--library--spacing-x05));
 
 		#Figure {
 			@include library.description;

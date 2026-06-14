@@ -34,11 +34,11 @@
 }
 
 #ReviewIcon {
-	--size: calc(var(--library_icon-size) * 1.5);
+	--size: calc(var(--library--icon-size) * 1.5);
 
 	border-radius: var(--border-radius);
 	height: var(--size);
-	margin-inline-end: var(--library_spacing);
+	margin-inline-end: var(--library--spacing);
 	width: var(--size);
 }
 

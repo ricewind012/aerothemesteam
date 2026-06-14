@@ -6,7 +6,7 @@
 
 #AppGridSectionHeader {
 	padding: 0;
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 	margin-block-end: 0;
 	transform: none;
 }
@@ -17,12 +17,12 @@
 	font: inherit;
 	letter-spacing: 0;
 	margin: 0;
-	margin-inline-end: var(--library_text-spacing);
+	margin-inline-end: var(--library--text-spacing);
 	text-transform: none;
 }
 
 #CollectionOptions {
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }
 
 #CollectionOptionsRightJustified {
@@ -32,7 +32,7 @@
 #EmptyGridMessageContainer {
 	@include library.placeholder;
 
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 }
 
 #EmptyGridMessageLine {
@@ -54,8 +54,8 @@
 #Rule {
 	background-image: linear-gradient(
 		0deg,
-		var(--library_border-color),
-		var(--library_border-color)
+		var(--library--border-color),
+		var(--library--border-color)
 	);
 	margin: 0;
 }

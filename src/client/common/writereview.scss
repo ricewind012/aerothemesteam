@@ -3,7 +3,7 @@
 %button {
 	@include library.button;
 
-	margin-inline-start: var(--library_spacing-x05);
+	margin-inline-start: var(--library--spacing-x05);
 	margin-inline-end: 0;
 }
 
@@ -18,7 +18,7 @@
 #Playtime {
 	@include library.header-primary;
 
-	margin-block-end: var(--library_text-spacing);
+	margin-block-end: var(--library--text-spacing);
 }
 
 #RatingContainer {

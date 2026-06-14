@@ -2,12 +2,12 @@
 
 #ActivateProductDialog {
 	.DialogFooter {
-		margin: var(--library_spacing);
+		margin: var(--library--spacing);
 		margin-block-start: 0;
 	}
 
 	.DialogInput_Wrapper {
-		margin-inline: var(--library_spacing);
+		margin-inline: var(--library--spacing);
 	}
 }
 
@@ -31,5 +31,5 @@
 }
 
 #ProductActivationInfoContainerDesktop {
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }

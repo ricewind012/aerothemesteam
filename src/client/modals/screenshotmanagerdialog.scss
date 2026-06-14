@@ -12,16 +12,16 @@
 }
 
 #ScreenshotShareDialog {
-	gap: var(--library_spacing-x05);
-	padding: var(--library_spacing);
+	gap: var(--library--spacing-x05);
+	padding: var(--library--spacing);
 
 	#Buttons {
-		gap: var(--library_spacing-x05);
+		gap: var(--library--spacing-x05);
 	}
 }
 
 #ShareDialogRow {
 	align-items: start;
 	flex-direction: column;
-	gap: var(--library_text-spacing);
+	gap: var(--library--text-spacing);
 }

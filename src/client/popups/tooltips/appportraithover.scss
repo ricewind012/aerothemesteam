@@ -19,7 +19,7 @@
 }
 
 #AppTitleContainer {
-	padding: var(--tooltip_description-spacing);
+	padding: var(--tooltip--description-spacing);
 }
 
 #CapsuleBackground {
@@ -43,7 +43,7 @@
 	background: none;
 	display: flex;
 	flex-direction: column;
-	padding: var(--tooltip_description-spacing);
+	padding: var(--tooltip--description-spacing);
 	padding-block-start: 0;
 }
 
@@ -63,7 +63,7 @@
 	font: inherit;
 	letter-spacing: 0;
 	margin: 0;
-	padding: var(--tooltip_description-spacing);
+	padding: var(--tooltip--description-spacing);
 	width: var(--width);
 
 	#Header {

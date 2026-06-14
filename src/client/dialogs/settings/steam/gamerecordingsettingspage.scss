@@ -63,7 +63,7 @@
 		width: 100%;
 
 		&:after {
-			border-block-start: var(--pagedsettings_separator);
+			border-block-start: var(--pagedsettings--separator);
 			content: "";
 			flex: 1 1 0;
 			margin-inline-start: 4px;

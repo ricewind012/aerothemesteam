@@ -50,7 +50,7 @@
 	}
 
 	&#Selected {
-		border-color: hsla(from var(--listitem_item-border) h s l / 1);
+		border-color: hsla(from var(--listitem--item-border) h s l / 1);
 		box-shadow: none;
 		box-shadow: none;
 		filter: none;
@@ -95,16 +95,16 @@
 
 #OpenedItemHeaderControls {
 	background: linear-gradient(
-		hsla(from var(--listitem_item-gradient-start) h s l / 1),
-		hsla(from var(--listitem_item-gradient-end) h s l / 1)
+		hsla(from var(--listitem--item-gradient-start) h s l / 1),
+		hsla(from var(--listitem--item-gradient-end) h s l / 1)
 	);
-	border-block-end: 1px solid var(--listitem_item-border);
-	padding: var(--library_spacing);
+	border-block-end: 1px solid var(--listitem--item-border);
+	padding: var(--library--spacing);
 
 	#BackLabel {
 		@include controls.button;
 
-		gap: var(--library_text-spacing);
+		gap: var(--library--text-spacing);
 		height: unset;
 		transform: none;
 

@@ -8,7 +8,7 @@
 		padding: 0;
 
 		& > div > * {
-			margin-inline: var(--tooltip_description-spacing);
+			margin-inline: var(--tooltip--description-spacing);
 		}
 	}
 
@@ -23,12 +23,12 @@
 }
 
 .hover_body {
-	margin-block: var(--tooltip_description-spacing);
+	margin-block: var(--tooltip--description-spacing);
 }
 
 .hover_details_block {
 	border-radius: var(--border-radius);
-	margin-block-start: var(--library_text-spacing);
+	margin-block-start: var(--library--text-spacing);
 }
 
 .hover_details_block_full {
@@ -37,11 +37,11 @@
 }
 
 .hover_friends_blocks {
-	margin-block: var(--library_text-spacing) var(--tooltip_description-spacing);
+	margin-block: var(--library--text-spacing) var(--tooltip--description-spacing);
 }
 
 .hover_release {
-	--tooltip_description-spacing: 0px;
+	--tooltip--description-spacing: 0px;
 
 	@include library.description;
 }
@@ -72,8 +72,8 @@
 }
 
 .hover_screenshots {
-	margin: var(--tooltip_description-spacing);
-	margin-block-end: var(--library_text-spacing);
+	margin: var(--tooltip--description-spacing);
+	margin-block-end: var(--library--text-spacing);
 
 	.screenshot {
 		border-radius: var(--border-radius-large);
@@ -81,7 +81,7 @@
 }
 
 .hover_tag_row {
-	margin-block-start: var(--library_text-spacing);
+	margin-block-start: var(--library--text-spacing);
 
 	.app_tag {
 		// Derived from tooltip bottom background
@@ -92,7 +92,7 @@
 }
 
 .hover_title {
-	--tooltip_description-spacing: 0px;
+	--tooltip--description-spacing: 0px;
 
 	@include library.header;
 

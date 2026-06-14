@@ -2,7 +2,7 @@
 
 #Content {
 	gap: 12px;
-	padding-inline: calc(var(--contextmenu_left-spacing) + 6px) 0;
+	padding-inline: calc(var(--contextmenu--left-spacing) + 6px) 0;
 }
 
 #FilterInput {
@@ -10,7 +10,7 @@
 }
 
 #FilterInputContainer {
-	padding-inline-start: calc(var(--contextmenu_left-spacing) + 6px);
+	padding-inline-start: calc(var(--contextmenu--left-spacing) + 6px);
 }
 
 #Item {
@@ -20,7 +20,7 @@
 }
 
 #SectionTitle {
-	color: var(--listitem_fg-secondary);
+	color: var(--listitem--fg-secondary);
 	font: inherit;
 	letter-spacing: 0;
 	text-transform: none;

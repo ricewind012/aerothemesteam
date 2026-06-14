@@ -2,13 +2,13 @@
 @use "mixins/style";
 
 @mixin container {
-	background: var(--contextmenu_container-bg);
-	border: 1px solid var(--contextmenu_container-border-outer);
+	background: var(--contextmenu--container-bg);
+	border: 1px solid var(--contextmenu--container-border-outer);
 	box-shadow:
 		var(--popup-shadow),
-		inset 0 0 0 var(--contextmenu_container-spacing)
-			var(--contextmenu_container-border-inner);
-	padding: var(--contextmenu_container-spacing);
+		inset 0 0 0 var(--contextmenu--container-spacing)
+			var(--contextmenu--container-border-inner);
+	padding: var(--contextmenu--container-spacing);
 }
 
 @mixin container-child($offset) {
@@ -20,12 +20,12 @@
 
 @mixin container-left-border {
 	&::before {
-		border-inline-start: 1px solid var(--contextmenu_separator-light);
-		box-shadow: -1px 0 var(--contextmenu_separator-dark);
+		border-inline-start: 1px solid var(--contextmenu--separator-light);
+		box-shadow: -1px 0 var(--contextmenu--separator-dark);
 		content: "";
 		position: absolute;
 		inset-block: 0;
-		inset-inline-start: var(--contextmenu_left-spacing);
+		inset-inline-start: var(--contextmenu--left-spacing);
 	}
 }
 
@@ -36,14 +36,14 @@
 	@include list.item-active;
 
 	background-image:
-		var(--icon-context-menu-#{$what}), var(--listitem_item-gradient);
+		var(--icon-context-menu-#{$what}), var(--listitem--item-gradient);
 	background-position: center;
 	border-radius: var(--border-radius);
-	height: var(--contextmenu_item-height);
+	height: var(--contextmenu--item-height);
 	inset-block-start: var(--offset);
 	inset-inline-start: var(--offset);
 	position: absolute;
-	width: var(--contextmenu_item-height);
+	width: var(--contextmenu--item-height);
 }
 
 @mixin icon-pos {
@@ -57,7 +57,7 @@
 	@include list.item;
 
 	padding: 3px calc(8px * 2 + 4px) 3px
-		calc(5px + var(--contextmenu_left-spacing));
+		calc(5px + var(--contextmenu--left-spacing));
 	position: relative;
 	// #contextmenu_UpperCase
 	text-transform: unset;
@@ -68,17 +68,17 @@
 }
 
 @mixin separator {
-	--offset: calc(1px + var(--contextmenu_container-spacing));
+	--offset: calc(1px + var(--contextmenu--container-spacing));
 
-	border-block-start: 1px solid var(--contextmenu_separator-light);
-	box-shadow: 0 -1px var(--contextmenu_separator-dark);
-	margin: 5px 0 2px calc(var(--contextmenu_left-spacing) + var(--offset));
+	border-block-start: 1px solid var(--contextmenu--separator-light);
+	box-shadow: 0 -1px var(--contextmenu--separator-dark);
+	margin: 5px 0 2px calc(var(--contextmenu--left-spacing) + var(--offset));
 }
 
 @mixin submenu-arrow {
 	@include style.arrow("right");
 
-	background-color: var(--listitem_fg);
+	background-color: var(--listitem--fg);
 	position: absolute;
 	inset-inline-end: 8px;
 }

@@ -8,15 +8,15 @@
 	background:
 		linear-gradient(
 			0deg,
-			var(--library_button-bg-1) 9%,
-			var(--library_button-bg-2) 54%,
-			var(--library_button-bg-3)
+			var(--library--button-bg-1) 9%,
+			var(--library--button-bg-2) 54%,
+			var(--library--button-bg-3)
 		),
 		var(--lighter-bg), var(--white-gradient);
 	border: 1px solid var(--blue-border);
 	border-radius: var(--border-radius);
 	box-shadow: none;
-	color: var(--library_button-text);
+	color: var(--library--button-text);
 	font-size: var(--font-size);
 	font-weight: bold;
 	text-align: center;
@@ -54,15 +54,15 @@
 /*#endregion*/
 /*#region STYLE */
 @mixin placeholder {
-	border: var(--library_placeholder-border-size) dashed var(--blue-text);
+	border: var(--library--placeholder-border-size) dashed var(--blue-text);
 	border-radius: 0;
-	opacity: var(--library_secondary-text-opacity);
-	padding: var(--library_spacing);
+	opacity: var(--library--secondary-text-opacity);
+	padding: var(--library--spacing);
 }
 
 @mixin section {
-	background: none var(--library_section-bg);
-	border: var(--library_border);
+	background: none var(--library--section-bg);
+	border: var(--library--border);
 	border-block-start: none;
 	border-radius: 0;
 }
@@ -80,15 +80,15 @@
 	color: var(--blue-text);
 	font-size: var(--font-size-small);
 	font-weight: bold;
-	border: 1px solid var(--library_section-header-border-color);
-	padding: var(--library_section-header-spacing-y)
-		var(--library_section-header-spacing-x);
+	border: 1px solid var(--library--section-header-border-color);
+	padding: var(--library--section-header-spacing-y)
+		var(--library--section-header-spacing-x);
 }
 
 @mixin spotlight {
-	background: var(--library_green);
-	border: 1px solid var(--library_green-dark);
-	padding: var(--library_spacing);
+	background: var(--library--green);
+	border: 1px solid var(--library--green-dark);
+	padding: var(--library--spacing);
 }
 
 /*#endregion*/
@@ -97,7 +97,7 @@
 	color: inherit;
 	font-size: var(--font-size);
 	font-style: italic;
-	opacity: var(--library_secondary-text-opacity);
+	opacity: var(--library--secondary-text-opacity);
 }
 
 @mixin header {
@@ -116,7 +116,7 @@
 @mixin header-secondary {
 	@include header;
 
-	opacity: var(--library_secondary-text-opacity);
+	opacity: var(--library--secondary-text-opacity);
 }
 
 /*#endregion*/
@@ -128,6 +128,6 @@
 }
 
 @mixin activity-section_rule {
-	border-block-start: 1px solid var(--library_border-color);
+	border-block-start: 1px solid var(--library--border-color);
 	border-block-end: 1px solid var(--bg-main);
 }

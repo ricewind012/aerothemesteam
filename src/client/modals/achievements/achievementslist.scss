@@ -2,17 +2,17 @@
 @use "mixins/style";
 
 %-list-item {
-	--achievementiconbase_size: 64px;
+	--achievementiconbase--size: 64px;
 
 	background: none;
 	color: var(--blue-text);
 
 	&::before {
-		background: var(--library_section-bg);
-		border-block-start: var(--library_border);
+		background: var(--library--section-bg);
+		border-block-start: var(--library--border);
 		content: "";
-		inset: calc(var(--achievementslist_virt-list-gap) / -2)
-			calc(var(--library_body-spacing) * -1);
+		inset: calc(var(--achievementslist--virt-list-gap) / -2)
+			calc(var(--library--body-spacing) * -1);
 		position: absolute;
 	}
 }
@@ -33,7 +33,7 @@
 	background-color: var(--bg-main);
 	font-size: var(--font-size);
 	gap: 0;
-	padding: var(--library_spacing) var(--library_body-spacing);
+	padding: var(--library--spacing) var(--library--body-spacing);
 	padding-block-end: 0;
 }
 
@@ -46,7 +46,7 @@
 	}
 
 	#Container {
-		gap: var(--library_spacing);
+		gap: var(--library--spacing);
 		padding: 0;
 		// For the ::before bg
 		z-index: 0;
@@ -70,7 +70,7 @@
 	}
 
 	#Info {
-		padding-inline-start: var(--library_spacing);
+		padding-inline-start: var(--library--spacing);
 	}
 
 	#Percent {
@@ -89,7 +89,7 @@
 
 	#UnlockContainer {
 		padding: 0;
-		width: calc(var(--icon-size) + var(--library_spacing));
+		width: calc(var(--icon-size) + var(--library--spacing));
 		z-index: 1;
 
 		svg {
@@ -111,16 +111,16 @@
 	align-items: center;
 	display: flex;
 	font-size: var(--font-size);
-	height: calc(100% + var(--library_spacing));
+	height: calc(100% + var(--library--spacing));
 	letter-spacing: 0;
 	opacity: 1;
 	text-transform: none;
-	width: calc(100% + var(--achievementslist_virt-list-gap) * 3);
+	width: calc(100% + var(--achievementslist--virt-list-gap) * 3);
 
 	// Virtualized list
 	#AchievementList > [style] {
-		margin: calc(var(--achievementslist_virt-list-gap) / -2)
-			calc(var(--library_spacing) * -1);
+		margin: calc(var(--achievementslist--virt-list-gap) / -2)
+			calc(var(--library--spacing) * -1);
 	}
 }
 

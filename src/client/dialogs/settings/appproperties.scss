@@ -16,7 +16,7 @@
 #BetaHeaderRow {
 	@extend %-beta-row;
 
-	margin-block: var(--tabpanel_spacing) var(--library_text-spacing);
+	margin-block: var(--tabpanel--spacing) var(--library--text-spacing);
 	opacity: 0.5;
 	padding: 0;
 	text-transform: unset;
@@ -67,8 +67,8 @@
 #BetasTable {
 	border: none;
 	box-shadow: none;
-	gap: var(--library_text-spacing);
-	margin-block-end: var(--tabpanel_spacing);
+	gap: var(--library--text-spacing);
+	margin-block-end: var(--tabpanel--spacing);
 }
 
 #BrowseDiskSize {

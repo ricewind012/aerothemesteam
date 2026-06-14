@@ -12,16 +12,16 @@
 }
 
 #Container {
-	border: var(--library_container-border);
+	border: var(--library--container-border);
 	border-radius: 0;
-	padding: var(--library_body-spacing);
+	padding: var(--library--body-spacing);
 }
 
 // TODO: maybe move somewhere else
 #EditButton {
 	@include style.icon("edit");
 
-	margin: calc(var(--library_section-header-spacing-y) * -1) 0;
+	margin: calc(var(--library--section-header-spacing-y) * -1) 0;
 
 	&#Close,
 	.SVGIcon_Button {
@@ -57,6 +57,6 @@
 #SectionCount {
 	color: inherit;
 	flex-grow: 1;
-	margin-inline-start: var(--library_text-spacing);
-	opacity: var(--library_secondary-text-opacity);
+	margin-inline-start: var(--library--text-spacing);
+	opacity: var(--library--secondary-text-opacity);
 }

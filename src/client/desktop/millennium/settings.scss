@@ -1,5 +1,5 @@
 .MillenniumButtonsSection {
-	margin-block: 0 var(--pagedsettings_dialog-spacing);
+	margin-block: 0 var(--pagedsettings--dialog-spacing);
 }
 
 .MillenniumSettings {
@@ -12,7 +12,7 @@
 
 	margin-block: calc(var(--separator-size) / 4);
 	padding-inline: 6px;
-	text-shadow: 1px 1px color-mix(in srgb, var(--dialog_bg) 50%, transparent);
+	text-shadow: 1px 1px color-mix(in srgb, var(--dialog--bg) 50%, transparent);
 
 	&::before {
 		// Received by the plugin
@@ -28,10 +28,10 @@
 	&::after {
 		// Make the latter 50% transparent for dark themes
 		background: linear-gradient(
-			var(--dialog_bg),
-			color-mix(in srgb, var(--dialog_fg) 50%, transparent)
+			var(--dialog--bg),
+			color-mix(in srgb, var(--dialog--fg) 50%, transparent)
 		);
-		box-shadow: inset 0 1px var(--dialog_bg);
+		box-shadow: inset 0 1px var(--dialog--bg);
 		height: var(--separator-size);
 		inset-block-end: calc(var(--separator-size) * -1);
 		mask: var(--bg-mask);

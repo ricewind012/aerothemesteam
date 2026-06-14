@@ -8,13 +8,13 @@
 	&:is(:hover, #HasContextMenuOpen) {
 		background-color: color-mix(
 			in srgb,
-			var(--gamelistentry_active-bg) 50%,
+			var(--gamelistentry--active-bg) 50%,
 			transparent
 		);
 	}
 
 	&#Selected {
-		background-color: var(--gamelistentry_active-bg);
+		background-color: var(--gamelistentry--active-bg);
 	}
 
 	* {

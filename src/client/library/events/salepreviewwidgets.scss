@@ -2,7 +2,7 @@
 @use "mixins/tooltip";
 
 #CapsulePlatform {
-	gap: var(--library_text-spacing);
+	gap: var(--library--text-spacing);
 	height: unset;
 
 	svg {
@@ -11,12 +11,12 @@
 }
 
 #StoreSalePriceWidgetContainer {
-	height: calc(var(--font-size) + var(--library_spacing));
+	height: calc(var(--font-size) + var(--library--spacing));
 
 	#StoreSalePriceBox {
 		@include library.header;
 
-		padding: var(--library_spacing-x05) var(--library_spacing);
+		padding: var(--library--spacing-x05) var(--library--spacing);
 	}
 }
 
@@ -24,7 +24,7 @@
 	// Make the blurred bg a bit more visible for the bottom right gradient
 	background: radial-gradient(
 		at 0% 0%,
-		hsla(from var(--library_section-bg) h s l / 0.75) 70%,
+		hsla(from var(--library--section-bg) h s l / 0.75) 70%,
 		white
 	);
 
@@ -40,9 +40,9 @@
 }
 
 #StoreSaleWidgetContainer {
-	background: var(--salepreviewwidgets_bg);
+	background: var(--salepreviewwidgets--bg);
 	border: 2px solid transparent;
-	border-image: var(--salepreviewwidgets_bg) 1;
+	border-image: var(--salepreviewwidgets--bg) 1;
 	box-shadow: none;
 
 	#CapsuleImage {
@@ -62,13 +62,13 @@
 		background-color: color-mix(in srgb, currentColor 25%, transparent);
 		content: "";
 		height: var(--size);
-		margin-inline: var(--library_spacing-x05);
+		margin-inline: var(--library--spacing-x05);
 		width: var(--size);
 	}
 }
 
 #StoreSaleWidgetRight {
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }
 
 #StoreSaleWidgetShortDesc {
@@ -84,7 +84,7 @@
 
 	height: calc(var(--font-size-small) + var(--tag-spacing) * 2);
 	line-height: 1;
-	margin-block: var(--library_spacing-x05);
+	margin-block: var(--library--spacing-x05);
 
 	#AppTag {
 		background: color-mix(in srgb, currentColor 10%, transparent);
@@ -92,7 +92,7 @@
 		font: inherit;
 		font-size: var(--font-size-small);
 		padding: var(--tag-spacing) calc(var(--tag-spacing) * 2);
-		margin-inline-end: var(--library_text-spacing);
+		margin-inline-end: var(--library--text-spacing);
 		text-decoration: none;
 	}
 }

@@ -7,7 +7,7 @@
 @mixin container {
 	@include library.section;
 
-	border-block-start: var(--library_border);
+	border-block-start: var(--library--border);
 	color: var(--blue-text);
 	font-size: var(--font-size);
 }
@@ -24,9 +24,9 @@
 	display: block;
 	font-size: var(--font-size);
 	line-height: 2;
-	margin: calc(var(--library_border-size) * -1);
+	margin: calc(var(--library--border-size) * -1);
 	padding-block-start: calc(
-		var(--library_section-header-spacing-y) + var(--library_border-size)
+		var(--library--section-header-spacing-y) + var(--library--border-size)
 	);
 }
 

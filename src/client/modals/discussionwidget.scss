@@ -3,7 +3,7 @@
 @use "mixins/style";
 
 #ClipboardText {
-	padding-block-start: var(--library_text-spacing);
+	padding-block-start: var(--library--text-spacing);
 }
 
 #LinkButton {
@@ -20,7 +20,7 @@
 }
 
 #linkField {
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 	margin: 0;
 }
 
@@ -43,16 +43,16 @@
 // Let's just not touch this - V*lve embedded their svgs into an <img> element
 // OH MY GOD
 #ShareButtonContainer {
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 	justify-content: start;
-	margin-block-start: var(--library_spacing-x05);
+	margin-block-start: var(--library--spacing-x05);
 }
 
 #ShareLanguagePicker {
 	padding: 0;
 
 	#LanguageLabel {
-		padding-inline: 0 var(--library_spacing-x05);
+		padding-inline: 0 var(--library--spacing-x05);
 	}
 
 	// VALVE

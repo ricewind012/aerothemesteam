@@ -5,7 +5,7 @@
 #AchievementProgressContainer {
 	@include controls.progress-bar-outer;
 
-	margin-block-start: var(--library_text-spacing);
+	margin-block-start: var(--library--text-spacing);
 	margin-block-end: 0;
 }
 
@@ -17,16 +17,16 @@
 	margin: 0;
 
 	#Featured + & {
-		border-block-end: var(--library_border);
-		margin: 0 calc(var(--library_spacing) * -1);
-		padding: var(--library_spacing);
+		border-block-end: var(--library--border);
+		margin: 0 calc(var(--library--spacing) * -1);
+		padding: var(--library--spacing);
 	}
 }
 
 #AdditionalItem:not(#RemainderContainer) {
-	box-shadow: var(--achievementiconbase_border);
+	box-shadow: var(--achievementiconbase--border);
 	height: unset;
-	margin-inline-end: var(--library_spacing-x05);
+	margin-inline-end: var(--library--spacing-x05);
 }
 
 #Desc {
@@ -44,17 +44,17 @@
 
 #Featured {
 	background-color: #d1e1b9;
-	border-block-end: var(--library_border);
-	margin: calc(var(--library_spacing) * -1);
+	border-block-end: var(--library--border);
+	margin: calc(var(--library--spacing) * -1);
 	margin-block-end: 0;
-	padding: 0 var(--library_spacing);
+	padding: 0 var(--library--spacing);
 }
 
 #Label {
 	color: inherit;
 	font-size: var(--font-size-small);
-	margin-block-end: var(--library_text-spacing);
-	opacity: var(--library_secondary-text-opacity);
+	margin-block-end: var(--library--text-spacing);
+	opacity: var(--library--secondary-text-opacity);
 }
 
 #Name {
@@ -66,10 +66,10 @@
 
 	align-items: center;
 	display: flex;
-	height: var(--achievementiconbase_size);
+	height: var(--achievementiconbase--size);
 	justify-content: center;
 	padding: 0;
-	width: var(--achievementiconbase_size);
+	width: var(--achievementiconbase--size);
 }
 
 #RemainderContainer {
@@ -87,11 +87,11 @@
 
 #UnachievedSection {
 	border-block-start: none;
-	margin: 0 calc(var(--library_spacing) * -1);
-	padding: var(--library_spacing);
+	margin: 0 calc(var(--library--spacing) * -1);
+	padding: var(--library--spacing);
 
 	&:only-of-type {
-		margin-block-start: calc(var(--library_spacing) * -1);
+		margin-block-start: calc(var(--library--spacing) * -1);
 	}
 }
 
@@ -101,5 +101,5 @@
 
 #UnlockedLabelPercent {
 	color: inherit;
-	opacity: var(--library_secondary-text-opacity);
+	opacity: var(--library--secondary-text-opacity);
 }

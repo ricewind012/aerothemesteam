@@ -2,7 +2,7 @@
 
 #AppDetailsSection {
 	color: var(--blue-text);
-	margin-block-end: var(--library_spacing);
+	margin-block-end: var(--library--spacing);
 }
 
 #AppDetailsSectionContainer {
@@ -13,21 +13,21 @@
 :where(#Body) {
 	@include library.section;
 
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }
 
 #ButtonContainer {
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 }
 
 #Highlight {
 	background: none #cedef2;
-	border: var(--library_border);
+	border: var(--library--border);
 	border-block-start: none;
 	border-radius: 0;
 	box-shadow: none;
-	color: var(--library_button-text);
+	color: var(--library--button-text);
 	font-size: var(--font-size);
 	margin: 0;
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }

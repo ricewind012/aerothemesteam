@@ -4,13 +4,13 @@
 	padding: 0;
 
 	&:not(:last-child) {
-		margin-block-end: var(--library_spacing-x05);
+		margin-block-end: var(--library--spacing-x05);
 	}
 }
 
 #SoundtrackDetails {
-	gap: var(--library_text-spacing);
-	margin-inline-start: var(--library_spacing);
+	gap: var(--library--text-spacing);
+	margin-inline-start: var(--library--spacing);
 }
 
 #Soundtracks {
@@ -21,7 +21,7 @@
 	}
 
 	#Image {
-		--size: calc(var(--library_icon-size) * 2);
+		--size: calc(var(--library--icon-size) * 2);
 
 		height: var(--size);
 		width: var(--size);
@@ -49,5 +49,5 @@
 	color: inherit;
 	font-size: var(--font-size);
 	font-weight: normal;
-	margin-inline-start: var(--library_text-spacing);
+	margin-inline-start: var(--library--text-spacing);
 }

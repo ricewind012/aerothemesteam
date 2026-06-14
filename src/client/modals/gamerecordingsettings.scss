@@ -1,6 +1,6 @@
 #GRModalOptions {
 	gap: 0;
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 
 	#OptionExplainer {
 		margin-block-start: 0;
@@ -12,12 +12,12 @@
 #GROptionLabel {
 	color: inherit;
 	font: inherit;
-	gap: var(--library_text-spacing);
+	gap: var(--library--text-spacing);
 }
 
 #ModalButtonRow {
-	gap: var(--library_spacing-x05);
-	margin: var(--library_spacing);
+	gap: var(--library--spacing-x05);
+	margin: var(--library--spacing);
 
 	.DialogButton {
 		width: auto;

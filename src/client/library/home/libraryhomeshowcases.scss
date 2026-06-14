@@ -24,7 +24,7 @@
 
 #AddShowcaseRow {
 	margin: 0;
-	margin-block-start: calc(var(--library_body-spacing) * -1);
+	margin-block-start: calc(var(--library--body-spacing) * -1);
 }
 
 #ChildrenContainer {
@@ -60,8 +60,8 @@
 	color: inherit;
 	font-size: inherit;
 	line-height: 1;
-	margin-inline-start: var(--library_text-spacing);
-	opacity: var(--library_secondary-text-opacity);
+	margin-inline-start: var(--library--text-spacing);
+	opacity: var(--library--secondary-text-opacity);
 }
 
 #Message {
@@ -84,7 +84,7 @@
 
 #Showcase {
 	border: none;
-	padding-block-start: var(--library_spacing);
+	padding-block-start: var(--library--spacing);
 }
 
 #ShowcaseArrow {
@@ -97,7 +97,7 @@
 }
 
 #ShowcaseGrid {
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }
 
 #ShowcaseHeader {

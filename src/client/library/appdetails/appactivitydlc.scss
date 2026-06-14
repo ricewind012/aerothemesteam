@@ -26,7 +26,7 @@
 }
 
 #CarouselDescription {
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 	max-width: unset;
 }
 
@@ -39,7 +39,7 @@
 }
 
 #Rollup {
-	margin: calc(var(--library_spacing) * -1);
+	margin: calc(var(--library--spacing) * -1);
 }
 
 #ViewAll {
@@ -47,5 +47,5 @@
 }
 
 #ViewAllRow {
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 }

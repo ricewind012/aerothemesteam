@@ -2,12 +2,12 @@
 @use "mixins/modal";
 
 .MillenniumDesktopSidebar {
-	--sidebar-content-spacing-inline: var(--library_spacing);
+	--sidebar-content-spacing-inline: var(--library--spacing);
 
 	@include library.section;
 
 	border: none;
-	border-inline-start: var(--library_border);
+	border-inline-start: var(--library--border);
 	color: var(--blue-text);
 	font-size: var(--font-size);
 	padding: 0;
@@ -15,7 +15,7 @@
 
 .MillenniumDesktopSidebar_Content {
 	.MillenniumDesktopSidebar:not([data-focused-item-type]) & {
-		padding-block-start: var(--library_spacing);
+		padding-block-start: var(--library--spacing);
 	}
 }
 
@@ -23,12 +23,12 @@
 	padding: 0;
 
 	.MillenniumDesktopSidebar[data-focused-item-type="PLUGIN"] & {
-		padding-block-start: var(--library_spacing);
+		padding-block-start: var(--library--spacing);
 	}
 }
 
 .MillenniumDesktopSidebar_EditorHeader {
-	border-block-end: var(--library_border);
+	border-block-end: var(--library--border);
 	box-shadow: none;
 	margin: 0;
 }
@@ -42,7 +42,7 @@
 
 	background-color: transparent;
 	border: none;
-	border-block-end: 1px solid var(--library_section-header-border-color);
+	border-block-end: 1px solid var(--library--section-header-border-color);
 	box-shadow: none;
 	line-height: inherit;
 }

@@ -6,12 +6,12 @@
 #DMCA {
 	@include modal.description;
 
-	margin-block: 0 var(--library_spacing-x05);
+	margin-block: 0 var(--library--spacing-x05);
 }
 
 #InputBox {
 	@extend %textfield-base;
 
-	margin-block-end: var(--library_spacing-x05);
+	margin-block-end: var(--library--spacing-x05);
 	width: 100%;
 }

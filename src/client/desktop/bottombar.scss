@@ -2,7 +2,7 @@
 @use "mixins/style";
 
 :root {
-	--bottombar_spacing: 4px;
+	--bottombar--spacing: 4px;
 }
 
 #AddGameButton {
@@ -24,12 +24,12 @@
 #AddGameButton,
 #DownloadStatusContent,
 #FriendsButton {
-	gap: var(--bottombar_spacing);
+	gap: var(--bottombar--spacing);
 	padding: 0;
 }
 
 #DetailedDownloadProgress {
-	gap: var(--bottombar_spacing);
+	gap: var(--bottombar--spacing);
 }
 
 #Icon {
@@ -80,7 +80,7 @@
 #ProgressBarWrapper {
 	align-items: center;
 	flex-direction: row;
-	gap: var(--bottombar_spacing);
+	gap: var(--bottombar--spacing);
 }
 
 #Status {
@@ -90,8 +90,8 @@
 	&#Percentage {
 		@include style.parentheses;
 
-		margin-inline-start: var(--bottombar_spacing);
-		opacity: var(--library_secondary-text-opacity);
+		margin-inline-start: var(--bottombar--spacing);
+		opacity: var(--library--secondary-text-opacity);
 	}
 }
 

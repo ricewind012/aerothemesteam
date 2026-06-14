@@ -4,7 +4,7 @@
 #Arrow {
 	@include style.icon("nav-forward", "path");
 
-	margin: 0 var(--supernav_icon-spacing);
+	margin: 0 var(--supernav--icon-spacing);
 
 	&#Disabled {
 		opacity: 0.5;
@@ -26,7 +26,7 @@
 #SuperNav {
 	& > .part {
 		app-region: no-drag;
-		margin: 0 var(--supernav_icon-spacing);
+		margin: 0 var(--supernav--icon-spacing);
 		order: -1;
 	}
 }
@@ -35,7 +35,7 @@
 #SuperNav #SuperNavMenu {
 	@include tab.item($selected: "&#Selected");
 
-	color: var(--steamdesktop_top-bar-text-color);
+	color: var(--steamdesktop--top-bar-text-color);
 	font-size: var(--font-size);
 	padding: 0;
 	text-transform: unset;

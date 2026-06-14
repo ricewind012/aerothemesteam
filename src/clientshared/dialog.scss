@@ -76,10 +76,10 @@
 }
 
 :where(.DialogContent) {
-	background: var(--dialog_bg);
-	color: var(--dialog_fg);
+	background: var(--dialog--bg);
+	color: var(--dialog--fg);
 	font-size: var(--font-size);
-	padding: var(--dialog_spacing-content);
+	padding: var(--dialog--spacing-content);
 }
 
 :where(.DialogControlsSection),
@@ -87,7 +87,7 @@
 :where(.DialogHeader),
 :where(.DialogSubHeader) {
 	&:not(:first-child) {
-		margin-block-start: var(--tabpanel_spacing);
+		margin-block-start: var(--tabpanel--spacing);
 	}
 }
 
@@ -201,7 +201,7 @@
 	}
 
 	:where(& .DialogBody) {
-		padding: var(--library_spacing);
+		padding: var(--library--spacing);
 	}
 
 	:where(& .DialogButton) {
@@ -209,7 +209,7 @@
 	}
 
 	:where(.DialogBodyText) {
-		margin-block-end: var(--library_spacing-x05);
+		margin-block-end: var(--library--spacing-x05);
 	}
 
 	:where(& .DialogContent) {
@@ -223,7 +223,7 @@
 	}
 
 	:where(.DialogFooter) {
-		padding-block-start: var(--library_spacing);
+		padding-block-start: var(--library--spacing);
 	}
 
 	:where(& .DialogHeader) {
@@ -231,7 +231,7 @@
 	}
 
 	:where(& .DialogTwoColLayout) {
-		gap: var(--library_spacing-x05);
+		gap: var(--library--spacing-x05);
 
 		& > ._DialogLayout {
 			min-width: unset;
@@ -252,18 +252,18 @@
 		background:
 			linear-gradient(
 				0deg,
-				hsl(from var(--library_button-bg-1) 0 s l) 9%,
-				hsl(from var(--library_button-bg-2) 0 s l) 54%,
-				hsl(from var(--library_button-bg-3) 0 s l)
+				hsl(from var(--library--button-bg-1) 0 s l) 9%,
+				hsl(from var(--library--button-bg-2) 0 s l) 54%,
+				hsl(from var(--library--button-bg-3) 0 s l)
 			),
 			var(--lighter-bg), var(--white-gradient);
 		border-color: hsl(from var(--blue-border) 0 s l);
-		color: hsl(from var(--library_button-text) 0 s l);
+		color: hsl(from var(--library--button-text) 0 s l);
 	}
 
 	:where(& .DialogContent) {
-		background-color: hsl(from var(--library_section-bg) 0 s l);
-		border-color: hsl(from var(--library_border-color) 0 s l);
+		background-color: hsl(from var(--library--section-bg) 0 s l);
+		border-color: hsl(from var(--library--border-color) 0 s l);
 		color: hsl(from var(--blue-text) 0 s l);
 	}
 
@@ -273,7 +273,7 @@
 			hsl(from var(--blue-dark) 0 s l),
 			hsl(from var(--blue-light) 0 s l)
 		);
-		border-color: hsl(from var(--library_section-header-border-color) 0 s l);
+		border-color: hsl(from var(--library--section-header-border-color) 0 s l);
 		color: hsl(from var(--blue-text) 0 s l);
 	}
 }

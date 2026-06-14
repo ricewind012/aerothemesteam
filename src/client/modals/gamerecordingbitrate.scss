@@ -1,7 +1,7 @@
 #AutoExplainer {
 	color: inherit;
 	font: inherit;
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 	margin-block-start: 0;
 }
 
@@ -15,15 +15,15 @@
 }
 
 #BitRateTable {
-	background-color: var(--table_bg);
+	background-color: var(--table--bg);
 	color: var(--fg-main);
 	font: inherit;
-	border: 1px solid var(--table_border);
+	border: 1px solid var(--table--border);
 	border-radius: 0;
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 	margin-block: 0 auto;
 	// wtf
-	width: calc(100% - var(--library_spacing) * 2);
+	width: calc(100% - var(--library--spacing) * 2);
 
 	th {
 		color: inherit;
@@ -31,7 +31,7 @@
 }
 
 #DropDownRow {
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 	// wtf
-	width: calc(100% - var(--library_spacing) * 2);
+	width: calc(100% - var(--library--spacing) * 2);
 }

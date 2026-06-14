@@ -9,10 +9,10 @@
 }
 
 #OuterFrame {
-	gap: var(--steamdesktop_spacing);
-	margin: var(--steamdesktop_border-size);
-	height: var(--steamdesktop_window-size);
-	width: var(--steamdesktop_window-size);
+	gap: var(--steamdesktop--spacing);
+	margin: var(--steamdesktop--border-size);
+	height: var(--steamdesktop--window-size);
+	width: var(--steamdesktop--window-size);
 
 	& > .part {
 		order: -1;
@@ -39,12 +39,12 @@
 }
 
 #TopBar {
-	app-region: var(--steamdesktop_top-bar-drag);
+	app-region: var(--steamdesktop--top-bar-drag);
 	background-color: transparent;
 	box-shadow: none;
 	flex-direction: row-reverse;
 	justify-content: space-between;
-	margin-block-end: calc(var(--steamdesktop_spacing) * -1);
+	margin-block-end: calc(var(--steamdesktop--spacing) * -1);
 	order: -1;
 }
 
@@ -61,7 +61,7 @@
 }
 
 #Wrapper {
-	background-image: var(--steamdesktop_window-gradient);
+	background-image: var(--steamdesktop--window-gradient);
 	border: none;
 }
 
@@ -76,7 +76,7 @@ html:not([data-aerothemesteam-plugin-loaded]) {
 
 		flex-direction: column;
 		margin-block-end: calc(
-			var(--steamdesktop_spacing) * -1 + var(--steamdesktop_border-size)
+			var(--steamdesktop--spacing) * -1 + var(--steamdesktop--border-size)
 		);
 	}
 }

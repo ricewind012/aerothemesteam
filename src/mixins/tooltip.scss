@@ -10,7 +10,7 @@
 }
 
 @mixin container {
-	background: var(--tooltip_background);
+	background: var(--tooltip--background);
 	border: 1px solid #767676;
 	border-radius: var(--border-radius);
 	box-shadow: var(--popup-shadow);

@@ -4,22 +4,22 @@
 	@include library.header;
 
 	position: absolute;
-	inset-block-start: var(--library_spacing);
-	inset-inline-start: var(--library_spacing);
+	inset-block-start: var(--library--spacing);
+	inset-inline-start: var(--library--spacing);
 	letter-spacing: 0;
 	z-index: 1;
 }
 
 #PlayNextSuggestion {
-	margin-inline-end: var(--library_spacing);
+	margin-inline-end: var(--library--spacing);
 }
 
 #PlayNextSuggestionMediaContainer {
-	margin-block-start: var(--library_text-spacing);
+	margin-block-start: var(--library--text-spacing);
 }
 
 #PlayNextSuggestions {
 	height: unset;
-	padding: var(--library_spacing);
-	padding-block-start: calc(var(--library_spacing) + 1lh);
+	padding: var(--library--spacing);
+	padding-block-start: calc(var(--library--spacing) + 1lh);
 }

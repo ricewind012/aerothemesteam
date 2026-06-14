@@ -6,7 +6,7 @@
 	font-size: var(--font-size);
 
 	& > div:not([class]) {
-		opacity: var(--library_secondary-text-opacity);
+		opacity: var(--library--secondary-text-opacity);
 	}
 
 	#Label {
@@ -26,9 +26,9 @@
 }
 
 #ActiveItemRightColumn {
-	border-inline-start: var(--library_border);
-	gap: var(--library_spacing-x05);
-	padding: var(--library_spacing);
+	border-inline-start: var(--library--border);
+	gap: var(--library--spacing-x05);
+	padding: var(--library--spacing);
 
 	#Bottom {
 		order: 1;
@@ -47,7 +47,7 @@
 	}
 
 	#ProgressBars {
-		gap: var(--library_spacing);
+		gap: var(--library--spacing);
 	}
 
 	#Throttle {
@@ -93,11 +93,11 @@
 
 #ContentType {
 	color: var(--blue-text);
-	gap: var(--library_text-spacing);
+	gap: var(--library--text-spacing);
 	height: unset;
 
 	&:not(#Highlight) {
-		opacity: var(--library_secondary-text-opacity);
+		opacity: var(--library--secondary-text-opacity);
 	}
 
 	#Text {
@@ -108,8 +108,8 @@
 }
 
 #ContentTypes {
-	inset-block-start: var(--library_spacing);
-	inset-inline-start: var(--library_spacing);
+	inset-block-start: var(--library--spacing);
+	inset-inline-start: var(--library--spacing);
 }
 
 #DownloadsPage {
@@ -138,8 +138,8 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	overflow: auto;
-	gap: var(--library_spacing);
-	padding: var(--library_body-spacing);
+	gap: var(--library--spacing);
+	padding: var(--library--body-spacing);
 
 	#ProgressBar {
 		display: none;
@@ -147,7 +147,7 @@
 
 	#SectionList {
 		--header-height: calc(
-			var(--library_section-header-spacing-y) * 2 + var(--font-size-small)
+			var(--library--section-header-spacing-y) * 2 + var(--font-size-small)
 		);
 
 		height: calc(100% - var(--header-height));
@@ -159,7 +159,7 @@
 
 	// Hidden by #appdetailsplaysection_DetailsProgressContainer
 	display: block;
-	margin-block-start: var(--library_text-spacing);
+	margin-block-start: var(--library--text-spacing);
 
 	& > div {
 		@include controls.progress-bar-inner;
@@ -172,7 +172,7 @@
 	@include style.icon($name: "delete", $hide-selector: "*");
 
 	font-size: 0;
-	margin-block: calc(var(--library_section-header-spacing-y) * -1);
+	margin-block: calc(var(--library--section-header-spacing-y) * -1);
 }
 
 #Section {
@@ -188,7 +188,7 @@
 }
 
 #SectionItem {
-	background: var(--library_section-bg);
+	background: var(--library--section-bg);
 	color: var(--blue-text);
 	padding: 0;
 
@@ -227,7 +227,7 @@
 
 #SectionItemCenter,
 #SectionItemContent {
-	gap: var(--library_spacing);
+	gap: var(--library--spacing);
 }
 
 #SectionItemStatus {
@@ -256,22 +256,22 @@
 #SectionList {
 	border: none;
 	margin: 0;
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 
 	&#DropOption {
 		--offset: calc(
-			var(--library_spacing-x05) + var(--library_placeholder-border-size) / 2
+			var(--library--spacing-x05) + var(--library--placeholder-border-size) / 2
 		);
 
 		background: none;
-		outline: var(--library_placeholder-border-size) dotted
-			var(--library_border-color);
+		outline: var(--library--placeholder-border-size) dotted
+			var(--library--border-color);
 		outline-offset: calc(var(--offset) * -1);
 		transition: var(--anim-time);
 	}
 
 	#Buttons {
-		gap: var(--library_spacing-x05);
+		gap: var(--library--spacing-x05);
 	}
 }
 
@@ -280,13 +280,13 @@
 
 	letter-spacing: 0;
 	line-height: inherit;
-	margin: calc(var(--library_border-size) * -1);
+	margin: calc(var(--library--border-size) * -1);
 
 	#AutoUpdateHours {
 		color: inherit;
 		font: inherit;
 		margin: 0;
-		opacity: var(--library_secondary-text-opacity);
+		opacity: var(--library--secondary-text-opacity);
 	}
 
 	#Count,
@@ -312,13 +312,13 @@
 	}
 
 	#HoverRing {
-		border: var(--library_placeholder-border-size) dashed var(--blue-text);
-		inset: var(--library_spacing-x05);
-		opacity: var(--library_secondary-text-opacity);
+		border: var(--library--placeholder-border-size) dashed var(--blue-text);
+		inset: var(--library--spacing-x05);
+		opacity: var(--library--secondary-text-opacity);
 	}
 
 	#Section {
-		background-image: var(--library_header-img-mask);
+		background-image: var(--library--header-img-mask);
 		border-inline: none;
 	}
 

@@ -2,10 +2,10 @@
 
 #BigPlus {
 	color: inherit;
-	height: var(--library_icon-size);
+	height: var(--library--icon-size);
 	margin: 0;
 	transform: none;
-	width: var(--library_icon-size);
+	width: var(--library--icon-size);
 }
 
 #Collection {
@@ -15,11 +15,11 @@
 	color: var(--bg-main);
 	flex-direction: column;
 	justify-content: end;
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 	transition: var(--anim-time);
 
 	&:hover {
-		--library_secondary-text-opacity: 1;
+		--library--secondary-text-opacity: 1;
 
 		filter: contrast(1.25);
 		transition: var(--anim-time);
@@ -58,8 +58,8 @@
 #DynamicCollection svg {
 	background-color: color-mix(in srgb, var(--blue-text) 50%, transparent);
 	border-radius: 0;
-	inset-block-start: var(--library_spacing);
-	inset-inline-end: var(--library_spacing);
+	inset-block-start: var(--library--spacing);
+	inset-inline-end: var(--library--spacing);
 
 	// shadows
 	polyline {
@@ -72,7 +72,7 @@
 	background-image: none;
 	border: none;
 	border-radius: 0;
-	padding: var(--library_body-spacing);
+	padding: var(--library--body-spacing);
 }
 
 #Header {

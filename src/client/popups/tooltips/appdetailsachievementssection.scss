@@ -8,8 +8,8 @@
 #ProgressLabel {
 	color: inherit;
 	font-size: var(--font-size-small);
-	margin-block-end: var(--library_text-spacing);
-	opacity: var(--library_secondary-text-opacity);
+	margin-block-end: var(--library--text-spacing);
+	opacity: var(--library--secondary-text-opacity);
 }
 
 #SingleAchievementProgressBar {
@@ -17,7 +17,7 @@
 }
 
 #SingleAchievementProgressContainer {
-	margin-block-start: var(--tooltip_description-spacing);
+	margin-block-start: var(--tooltip--description-spacing);
 }
 
 #TextSection {
@@ -27,12 +27,12 @@
 }
 
 #TopSection {
-	gap: var(--tooltip_description-spacing);
-	margin: var(--tooltip_description-spacing);
+	gap: var(--tooltip--description-spacing);
+	margin: var(--tooltip--description-spacing);
 }
 
 #TopSectionAchievementIcon {
-	--achievementiconbase_size: 64px;
+	--achievementiconbase--size: 64px;
 
 	margin: 0;
 }
@@ -46,13 +46,13 @@
 	flex-direction: column;
 	font-size: var(--font-size);
 	font-weight: bold;
-	padding: var(--tooltip_description-spacing);
+	padding: var(--tooltip--description-spacing);
 
 	&::before {
 		@include tooltip.separator;
 
 		content: "";
-		padding-block: calc(var(--tooltip_description-spacing) / 2);
+		padding-block: calc(var(--tooltip--description-spacing) / 2);
 	}
 
 	#RareLabel {

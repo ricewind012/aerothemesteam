@@ -1,19 +1,19 @@
 #AchievementIconWrapper {
-	height: var(--achievementiconbase_size);
-	width: var(--achievementiconbase_size);
+	height: var(--achievementiconbase--size);
+	width: var(--achievementiconbase--size);
 }
 
 #HiddenLabel {
 	align-items: center;
-	background: var(--library_header-img-mask);
+	background: var(--library--header-img-mask);
 	background-color: var(--blue-dark);
-	box-shadow: var(--achievementiconbase_border);
+	box-shadow: var(--achievementiconbase--border);
 	color: inherit;
 	display: flex;
 	font-size: 18px;
-	height: var(--achievementiconbase_size);
+	height: var(--achievementiconbase--size);
 	justify-content: center;
-	width: var(--achievementiconbase_size);
+	width: var(--achievementiconbase--size);
 }
 
 #Icon {

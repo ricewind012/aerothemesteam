@@ -50,12 +50,12 @@
 }
 
 #EventDetailTitleContainer {
-	background: var(--library_section-bg);
+	background: var(--library--section-bg);
 	color: var(--blue-text);
 	display: flex;
 	flex-direction: column;
-	gap: var(--library_text-spacing);
-	padding: var(--library_body-spacing);
+	gap: var(--library--text-spacing);
+	padding: var(--library--body-spacing);
 
 	// Empty element ?
 	& > span[style="font-size: 0px;"] {
@@ -64,10 +64,10 @@
 }
 
 #LibraryEventBodyContainer {
-	padding: var(--library_body-spacing);
+	padding: var(--library--body-spacing);
 }
 
 #LibraryEventTitleContainer {
-	border-block-end: var(--library_border);
+	border-block-end: var(--library--border);
 	box-shadow: none;
 }

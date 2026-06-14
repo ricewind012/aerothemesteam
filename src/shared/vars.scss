@@ -28,33 +28,33 @@
 	}
 
 	// Imitation of native Windows 7 controls
-	--dialog_bg: #f0f0f0;
-	--dialog_fg: var(--fg-main);
-	--dialog_spacing-content: 7px 8px 8px 6px;
+	--dialog--bg: #f0f0f0;
+	--dialog--fg: var(--fg-main);
+	--dialog--spacing-content: 7px 8px 8px 6px;
 
-	--listitem_fg: var(--fg-main);
-	--listitem_fg-secondary: #6d6d6d;
-	--listitem_item-border: rgba(152, 196, 249, 0.75);
-	--listitem_item-gradient-start: rgba(245, 250, 255, 0.4);
-	--listitem_item-gradient-end: rgba(215, 232, 255, 0.4);
-	--listitem_item-gradient: linear-gradient(
+	--listitem--fg: var(--fg-main);
+	--listitem--fg-secondary: #6d6d6d;
+	--listitem--item-border: rgba(152, 196, 249, 0.75);
+	--listitem--item-gradient-start: rgba(245, 250, 255, 0.4);
+	--listitem--item-gradient-end: rgba(215, 232, 255, 0.4);
+	--listitem--item-gradient: linear-gradient(
 		180deg,
-		var(--listitem_item-gradient-start),
-		var(--listitem_item-gradient-end)
+		var(--listitem--item-gradient-start),
+		var(--listitem--item-gradient-end)
 	);
-	--listitem_item-inner-border: rgba(243, 248, 254, 0.75);
+	--listitem--item-inner-border: rgba(243, 248, 254, 0.75);
 
-	--tab_bg-selected: var(--bg-main);
-	--tab_border-outer: var(--tabpanel_border);
-	--tab_border-inner: #f8f8f8;
-	--tabpanel_bg: var(--bg-main);
-	--tabpanel_border: #898c95;
-	--tabpanel_spacing: 14px;
+	--tab--bg-selected: var(--bg-main);
+	--tab--border-outer: var(--tabpanel--border);
+	--tab--border-inner: #f8f8f8;
+	--tabpanel--bg: var(--bg-main);
+	--tabpanel--border: #898c95;
+	--tabpanel--spacing: 14px;
 
-	--table_bg: var(--bg-main);
-	--table_border: #828790;
-	--tableheaderrow_border-start: #f2f2f2;
-	--tableheaderrow_border-end: #d5d5d5;
+	--table--bg: var(--bg-main);
+	--table--border: #828790;
+	--tableheaderrow--border-start: #f2f2f2;
+	--tableheaderrow--border-end: #d5d5d5;
 
 	// Shared components
 	--desktoptab--inverse-border-size: 3px;
@@ -63,116 +63,121 @@
 	--desktoptab--item-spacing-inline: 12px;
 
 	// Componenet vars
-	--achievementiconbase_border: inset -1px -1px #fff, inset 1px 1px #3c5678;
-	--achievementiconbase_size: 32px;
+	--achievementiconbase--border: inset -1px -1px #fff, inset 1px 1px #3c5678;
+	--achievementiconbase--size: 32px;
 
-	--achievementslist_virt-list-gap: 8px;
+	--achievementslist--virt-list-gap: 8px;
 
-	--collapseicon_bg: #b5c7e9;
-	--collapseicon_border-1: #9dabc1;
-	--collapseicon_border-2: #354962;
-	--collapseicon_size: 11px;
+	--collapseicon--bg: #b5c7e9;
+	--collapseicon--border-1: #9dabc1;
+	--collapseicon--border-2: #354962;
+	--collapseicon--size: 11px;
 
-	--contextmenu_container-bg: #f0f0f0;
-	--contextmenu_container-border-inner: #f5f5f5;
-	--contextmenu_container-border-outer: #979797;
-	--contextmenu_container-spacing: 2px;
-	--contextmenu_item-height: 22px;
-	--contextmenu_left-spacing: 27px;
-	--contextmenu_separator-dark: #e0e0e0;
-	--contextmenu_separator-light: #fff;
+	--contextmenu--container-bg: #f0f0f0;
+	--contextmenu--container-border-inner: #f5f5f5;
+	--contextmenu--container-border-outer: #979797;
+	--contextmenu--container-spacing: 2px;
+	--contextmenu--item-height: 22px;
+	--contextmenu--left-spacing: 27px;
+	--contextmenu--separator-dark: #e0e0e0;
+	--contextmenu--separator-light: #fff;
 
-	--desktoptoasts_image-color: #fff;
-	--desktoptoasts_image-size: 48px;
-	--desktoptoasts_status-away: hsl(from var(--blue-text) 75 s calc(l * 1.5));
-	--desktoptoasts_status-ingame: hsl(from var(--blue-text) 125 s calc(l * 1.5));
-	--desktoptoasts_status-offline: hsl(
+	--desktoptoasts--image-color: #fff;
+	--desktoptoasts--image-size: 48px;
+	--desktoptoasts--status-away: hsl(from var(--blue-text) 75 s calc(l * 1.5));
+	--desktoptoasts--status-ingame: hsl(
+		from var(--blue-text) 125 s calc(l * 1.5)
+	);
+	--desktoptoasts--status-offline: hsl(
 		from var(--blue-text) h calc(s / 2) calc(l * 1.5)
 	);
-	--desktoptoasts_status-online: hsl(
+	--desktoptoasts--status-online: hsl(
 		from var(--blue-text) h calc(s * 2) calc(l * 2)
 	);
 
-	--gamelistentry_active-bg: #8dd6ff;
+	--gamelistentry--active-bg: #8dd6ff;
 
-	--library_body-spacing: 16px;
-	--library_border-color: #aeb8c6;
-	--library_border-size: 1px;
-	--library_border: var(--library_border-size) solid var(--library_border-color);
-	--library_button-bg-1: #bdd1ea;
-	--library_button-bg-2: #93b0d4;
-	--library_button-bg-3: #506580;
-	--library_button-text: #273b5c;
-	--library_container-border: var(--library_border-size) solid #39577c;
-	--library_game-stat-spacing: 7px;
-	--library_green: #d1e1b9;
-	--library_green-dark: color-mix(in srgb, var(--library_green) 75%, black);
-	--library_header-img-height: 163px;
-	--library_header-img-mask: radial-gradient(
+	--library--body-spacing: 16px;
+	--library--border-color: #aeb8c6;
+	--library--border-size: 1px;
+	--library--border: var(--library--border-size) solid
+		var(--library--border-color);
+	--library--button-bg-1: #bdd1ea;
+	--library--button-bg-2: #93b0d4;
+	--library--button-bg-3: #506580;
+	--library--button-text: #273b5c;
+	--library--container-border: var(--library--border-size) solid #39577c;
+	--library--game-stat-spacing: 7px;
+	--library--green: #d1e1b9;
+	--library--green-dark: color-mix(in srgb, var(--library--green) 75%, black);
+	--library--header-img-height: 163px;
+	--library--header-img-mask: radial-gradient(
 		55.62% 83.6% at 35.73% 0%,
 		var(--bg-main) 0%,
 		transparent 100%
 	);
-	--library_header-text-shadow: 1px 1px
+	--library--header-text-shadow: 1px 1px
 		color-mix(in srgb, var(--blue-text) 33%, var(--bg-main));
-	--library_icon-size: 32px;
-	--library_placeholder-border-size: 2px;
-	--library_secondary-text-opacity: 0.5;
-	--library_section-bg: #e1e7ef;
-	--library_section-header-border-color: #9cb1ca;
-	--library_section-header-spacing-y: 2.5px;
-	--library_section-header-spacing-x: 6px;
-	--library_spacing: 12px;
-	--library_spacing-x05: calc(var(--library_spacing) / 2);
-	--library_text-spacing: 4px;
+	--library--icon-size: 32px;
+	--library--placeholder-border-size: 2px;
+	--library--secondary-text-opacity: 0.5;
+	--library--section-bg: #e1e7ef;
+	--library--section-header-border-color: #9cb1ca;
+	--library--section-header-spacing-y: 2.5px;
+	--library--section-header-spacing-x: 6px;
+	--library--spacing: 12px;
+	--library--spacing-x05: calc(var(--library--spacing) / 2);
+	--library--text-spacing: 4px;
 
-	--pagedsettings_border: 1px solid var(--tabpanel_border);
-	--pagedsettings_dialog-spacing: 6px;
-	--pagedsettings_separator: 2px solid #7ba4e0;
-	--pagedsettings_tab-separator: #c5c5c5;
-	--pagedsettings_tab-separator2: #dde7ee;
+	--pagedsettings--border: 1px solid var(--tabpanel--border);
+	--pagedsettings--dialog-spacing: 6px;
+	--pagedsettings--separator: 2px solid #7ba4e0;
+	--pagedsettings--tab-separator: #c5c5c5;
+	--pagedsettings--tab-separator2: #dde7ee;
 
 	// 70% should cover the bottom right text
-	--salepreviewwidgets_bg: radial-gradient(
+	--salepreviewwidgets--bg: radial-gradient(
 		at 0% 0%,
-		var(--library_section-bg) 70%,
+		var(--library--section-bg) 70%,
 		var(--bg-main)
 	);
 
-	--steamavatar_size: 32px;
+	--steamavatar--size: 32px;
 
-	--steamdesktop_border-size: 1px;
-	--steamdesktop_top-bar-drag: drag;
-	--steamdesktop_top-bar-text-color: #fff;
-	--steamdesktop_spacing: 2px;
-	--steamdesktop_window-gradient:
+	--steamdesktop--border-size: 1px;
+	--steamdesktop--top-bar-drag: drag;
+	--steamdesktop--top-bar-text-color: #fff;
+	--steamdesktop--spacing: 2px;
+	--steamdesktop--window-gradient:
 		linear-gradient(
 			0deg,
 			transparent 96.5%,
-			var(--steamdesktop_window-gradient-top-color-mix) 100%
+			var(--steamdesktop--window-gradient-top-color-mix) 100%
 		),
 		linear-gradient(
-			var(--steamdesktop_window-gradient-start),
-			var(--steamdesktop_window-gradient-end)
+			var(--steamdesktop--window-gradient-start),
+			var(--steamdesktop--window-gradient-end)
 		);
-	--steamdesktop_window-gradient-end: #112034;
-	--steamdesktop_window-gradient-start: #293b53;
-	--steamdesktop_window-gradient-top-color: #82b4ff;
-	--steamdesktop_window-gradient-top-color-mix: color-mix(
+	--steamdesktop--window-gradient-end: #112034;
+	--steamdesktop--window-gradient-start: #293b53;
+	--steamdesktop--window-gradient-top-color: #82b4ff;
+	--steamdesktop--window-gradient-top-color-mix: color-mix(
 		in srgb,
-		var(--steamdesktop_window-gradient-top-color) 10%,
+		var(--steamdesktop--window-gradient-top-color) 10%,
 		transparent
 	);
-	--steamdesktop_window-size: calc(100% - var(--steamdesktop_border-size) * 2);
+	--steamdesktop--window-size: calc(
+		100% - var(--steamdesktop--border-size) * 2
+	);
 
-	--supernav_icon-spacing: 4px;
+	--supernav--icon-spacing: 4px;
 
-	--tooltip_background: linear-gradient(180deg, #fff, #c9d9ef);
-	--tooltip_description-spacing: 9px;
+	--tooltip--background: linear-gradient(180deg, #fff, #c9d9ef);
+	--tooltip--description-spacing: 9px;
 
 	&[browsertype="DirectHWND"] {
 		--title-bar-height: 0px;
-		--steamdesktop_top-bar-drag: no-drag;
+		--steamdesktop--top-bar-drag: no-drag;
 		--desktoptab--item-spacing-block: 3px;
 	}
 }

@@ -6,19 +6,19 @@
 }
 
 #AppPartnerEventsPage {
-	inset-block-start: calc(var(--library_spacing) * 2 + var(--icon-size));
+	inset-block-start: calc(var(--library--spacing) * 2 + var(--icon-size));
 }
 
 #ControlSection {
 	background: var(--bg-main);
-	border-block-end: var(--library_border);
+	border-block-end: var(--library--border);
 	inset-block-start: 0;
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }
 
 #ControlSectionRightSide {
 	flex-direction: row-reverse;
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 	max-width: 100%;
 
 	#CloseButton {
@@ -60,9 +60,9 @@
 }
 
 #PartnerEvent {
-	background: var(--library_section-bg);
+	background: var(--library--section-bg);
 	border: none;
-	border-block-end: var(--library_border);
+	border-block-end: var(--library--border);
 	border-radius: 0;
 	box-shadow: none;
 	margin: 0;
@@ -75,7 +75,7 @@
 		color: darkviolet;
 		padding: var(--spacing) calc(var(--spacing) * 2);
 		margin: calc(var(--spacing) * -1) calc(var(--spacing) * -2);
-		margin-inline-end: var(--library_text-spacing);
+		margin-inline-end: var(--library--text-spacing);
 	}
 
 	#EventTypeAndTimeRow#WithReminder {

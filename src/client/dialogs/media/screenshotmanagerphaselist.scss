@@ -41,7 +41,7 @@
 	background-color: var(--blue-border);
 	color: var(--blue-light);
 	font-size: var(--font-size);
-	text-shadow: 0 1px 1px var(--dialog_fg);
+	text-shadow: 0 1px 1px var(--dialog--fg);
 }
 
 #PhaseGridItem {
@@ -57,7 +57,7 @@
 }
 
 #PhaseList {
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }
 
 #PhaseListContainer {
