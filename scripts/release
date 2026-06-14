@@ -15,7 +15,7 @@ $(npx semantic-release --dry-run --no-ci 2>/dev/null)
 EOF
 : "${next:=1.0.0}"
 
-for i in package plugin skin; do
+for i in package skin; do
 	file=$i.json
 	sed -i "s/\"version\": \".*\"/\"version\": \"$next\"/" "$file"
 done
@@ -26,7 +26,7 @@ for i in client clientshared shared web; do
 done
 
 # Force add, since dist is gitignored.
-git add -f dist package.json plugin.json skin.json
+git add -f dist package.json skin.json
 git \
 	-c "user.name=github-actions[bot]" \
 	-c "user.email=41898282+github-actions[bot]@users.noreply.github.com" \
