@@ -1,4 +1,5 @@
 @use "mixins/library";
+@use "mixins/style";
 
 #AppPartnerEventsContainer {
 	margin: 0;
@@ -68,12 +69,9 @@
 	margin: 0;
 
 	#EventType {
-		// TODO(vars):
-		--spacing: 2.5px;
+		@include style.tag;
 
-		background: color-mix(in srgb, currentColor 20%, transparent);
 		color: darkviolet;
-		padding: var(--spacing) calc(var(--spacing) * 2);
 		margin: calc(var(--spacing) * -1) calc(var(--spacing) * -2);
 		margin-inline-end: var(--library--text-spacing);
 	}

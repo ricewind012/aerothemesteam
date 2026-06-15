@@ -52,6 +52,8 @@
 	}
 
 	:where(.DialogDropDown_Arrow) {
+		display: contents;
+
 		&::before {
 			display: none;
 		}

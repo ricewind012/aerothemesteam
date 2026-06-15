@@ -1,0 +1,78 @@
+@use "mixins/library";
+@use "mixins/modal";
+
+#Buttons {
+	margin: 0;
+
+	svg {
+		display: none;
+	}
+}
+
+#Checkbox {
+	color: inherit;
+	font-size: var(--font-size);
+}
+
+#Container {
+	gap: var(--library--spacing);
+	padding: var(--library--spacing);
+}
+
+#FilterArea,
+#Filters,
+#SearchBoxes {
+	gap: var(--library--spacing);
+}
+
+#FilterBucket {
+	&:not(#LanguageAndGenre) {
+		@include library.section;
+
+		padding: var(--library--spacing-x05);
+	}
+
+	// not in context menu
+	&:not(#DoubleWide) #Row:not(:last-child) {
+		margin-block-end: var(--library--text-spacing);
+	}
+
+	&#LanguageAndGenre {
+		gap: var(--library--spacing);
+	}
+
+	#CompatDropDown {
+		margin: 0;
+
+		&:not(:last-child) {
+			margin-block-end: var(--library--text-spacing);
+		}
+	}
+
+	.DialogInput_ClearAction {
+		inset-block-start: 4px;
+	}
+
+	.DialogInput_Wrapper {
+		margin: 0;
+	}
+}
+
+#FilterBucketBoxes {
+	padding: 0;
+}
+
+#FilterBucketLabel {
+	@include library.section-header;
+
+	margin: calc(var(--library--border-size) * -1 - var(--library--spacing-x05));
+	margin-block-end: var(--library--spacing-x05);
+	text-transform: none;
+}
+
+#Header {
+	@include modal.header;
+
+	margin: calc(var(--library--border-size) * -1 - var(--library--spacing));
+	margin-block-end: 0;
+}

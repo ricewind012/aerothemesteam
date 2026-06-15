@@ -25,6 +25,7 @@
 	font-size: var(--font-size);
 	line-height: 2;
 	margin: calc(var(--library--border-size) * -1);
+	margin-block-end: 0;
 	padding-block-start: calc(
 		var(--library--section-header-spacing-y) + var(--library--border-size)
 	);

@@ -1,0 +1,35 @@
+@use "mixins/contextmenu";
+
+#FilterBucket#DoubleWide:focus-within #FilterBucketBoxes:not(:empty) {
+	@include contextmenu.container;
+	@include contextmenu.container-left-border;
+
+	border-radius: 0;
+	color: var(--listitem--fg);
+	display: flex;
+	flex-direction: column;
+
+	.DialogCheckbox {
+		all: unset;
+		box-sizing: border-box;
+	}
+
+	.DialogCheckbox_Container {
+		@include contextmenu.item;
+
+		width: 100%;
+		z-index: 0;
+
+		&[aria-checked="true"] .DialogCheckbox {
+			@include contextmenu.icon("checkmark");
+		}
+	}
+
+	.DialogToggle_Label {
+		line-height: 1.2;
+	}
+
+	.tool-tip-source {
+		display: contents;
+	}
+}

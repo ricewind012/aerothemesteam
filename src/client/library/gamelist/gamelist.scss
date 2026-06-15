@@ -1,3 +1,16 @@
+@use "mixins/style";
+
 #Container {
 	background-color: var(--bg-main);
+	font-size: var(--font-size);
+}
+
+#NoResultsLink {
+	@include style.link;
+
+	font-weight: normal;
+}
+
+#NoResultsTitle {
+	font-weight: bold;
 }

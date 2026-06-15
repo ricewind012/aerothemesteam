@@ -1,9 +1,11 @@
 @use "mixins/library";
+@use "mixins/modal";
 @use "mixins/style";
 
 #AdvancedSearchButton {
 	@include library.button;
 
+	height: unset;
 	min-width: unset;
 	padding: 2px 3px;
 
@@ -22,6 +24,25 @@
 	height: unset;
 }
 
+#AdvancedSearchDismissalOverlay {
+	#AdvancedSearchPaneContainer#Visible & {
+		@include modal.overlay;
+	}
+}
+
+#AdvancedSearchPane {
+	@include modal.container;
+
+	animation: dropfade var(--anim-time) ease-in;
+	box-shadow: none;
+}
+
+#AdvancedSearchPaneContainer {
+	&::before {
+		display: none;
+	}
+}
+
 #Container {
 	background-color: transparent;
 	gap: 3px;
@@ -38,8 +59,45 @@
 		background-repeat: no-repeat;
 		font-size: 11px;
 		height: unset;
-		margin-inline-end: calc(var(--icon-size) + var(--spacing-x) * 2);
+		padding-inline-end: calc(var(--icon-size) + var(--spacing-x) * 2);
 	}
+}
+
+#FilterTag {
+	@include style.tag;
+
+	align-items: center;
+	color: blue;
+	height: unset;
+	margin: 0;
+
+	// Fix some bullshit CSS behavior
+	& > div {
+		display: flex;
+	}
+
+	img {
+		height: var(--icon-size);
+		width: var(--icon-size);
+	}
+
+	svg {
+		opacity: 1;
+	}
+}
+
+#FiltertagAvatarSpacer {
+	margin-inline-end: var(--library--text-spacing);
+}
+
+// why does this exist ?
+#FiltertagSpacer {
+	display: none;
+}
+
+#SearchFilterInput {
+	gap: var(--library--text-spacing);
+	padding: 0;
 }
 
 #SearchInput {

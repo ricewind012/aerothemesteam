@@ -1,4 +1,5 @@
 @use "mixins/library";
+@use "mixins/style";
 @use "mixins/tooltip";
 
 #CapsulePlatform {
@@ -79,19 +80,15 @@
 }
 
 #StoreSaleWidgetTags {
-	// TODO
-	--tag-spacing: 2.5px;
-
-	height: calc(var(--font-size-small) + var(--tag-spacing) * 2);
+	height: calc(var(--font-size-small) + var(--tag--spacing) * 2);
 	line-height: 1;
 	margin-block: var(--library--spacing-x05);
 
 	#AppTag {
-		background: color-mix(in srgb, currentColor 10%, transparent);
+		@include style.tag;
+
 		border-radius: 0;
 		font: inherit;
-		font-size: var(--font-size-small);
-		padding: var(--tag-spacing) calc(var(--tag-spacing) * 2);
 		margin-inline-end: var(--library--text-spacing);
 		text-decoration: none;
 	}

@@ -53,6 +53,13 @@
 	}
 }
 
+@mixin tag {
+	background: color-mix(in srgb, currentColor 10%, transparent);
+	border-radius: var(--border-radius);
+	font-size: var(--font-size-small);
+	padding: var(--tag--spacing) calc(var(--tag--spacing) * 2);
+}
+
 @mixin white-gradient($opacity-start: 0.75, $opacity-end: 0.25, $size: 12px) {
 	--wg-opacity-1: #{$opacity-start};
 	--wg-opacity-2: #{$opacity-end};
