@@ -65,7 +65,7 @@
 }
 
 #CarouselThumb {
-	border-radius: var(--border-radius-large);
+	border-radius: var(--rounding-lg);
 	margin-block-end: var(--library--spacing-x05);
 
 	&#Active {
@@ -88,7 +88,7 @@
 	background: none;
 	border: none;
 	box-shadow: none;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	margin-block-start: 0;
 }
 
@@ -115,7 +115,7 @@
 }
 
 #ImageWrapper {
-	border-radius: var(--border-radius-large);
+	border-radius: var(--rounding-lg);
 }
 
 #LeftSideMajorUpdateBar {
@@ -191,8 +191,8 @@
 }
 
 #ScreenshotCaption#HasCaption {
-	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
-	font-size: var(--font-size);
+	border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
+	font-size: var(--text--font-size-md);
 	margin-inline-end: 0;
 	margin-block-end: calc(1lh + var(--library--text-spacing));
 	max-width: unset;
@@ -223,7 +223,7 @@
 #ReviewIcon {
 	--size: calc(var(--library--icon-size) * 1.5);
 
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	height: var(--size);
 	margin-inline-end: var(--library--spacing);
 	width: var(--size);
@@ -231,6 +231,6 @@
 
 #ReviewText {
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 }
 /*#endregion*/

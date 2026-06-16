@@ -78,7 +78,7 @@
 :where(.DialogContent) {
 	background: var(--dialog--bg);
 	color: var(--dialog--fg);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	padding: var(--dialog--spacing-content);
 }
 
@@ -131,7 +131,7 @@
 }
 
 :where(.DialogInput_ClearAction) {
-	--icon-size: 12px;
+	--icon-size-sm: var(--icon-size-xs);
 	@include style.icon("delete", "svg");
 
 	inset-inline-end: 6px;

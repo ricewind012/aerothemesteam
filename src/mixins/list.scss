@@ -1,8 +1,8 @@
 @mixin item {
 	color: var(--listitem--fg);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	border: 1px solid transparent;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	padding: 2px;
 
 	&:hover {

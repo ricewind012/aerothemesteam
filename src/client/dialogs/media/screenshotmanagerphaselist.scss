@@ -2,12 +2,12 @@
 
 #DateHeader {
 	color: inherit;
-	font-size: var(--font-size-xlarge);
+	font-size: var(--text--font-size-xl);
 }
 
 #GameHeader {
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 
 	#Icon {
 		border-radius: 0;
@@ -34,13 +34,13 @@
 
 #NoContent {
 	color: inherit;
-	font-size: var(--font-size-xlarge);
+	font-size: var(--text--font-size-xl);
 }
 
 #OverflowItem {
 	background-color: var(--blue-border);
 	color: var(--blue-light);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	text-shadow: 0 1px 1px var(--dialog--fg);
 }
 

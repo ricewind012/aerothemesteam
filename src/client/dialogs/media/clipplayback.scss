@@ -5,8 +5,8 @@
 
 	#AddMarkerIcon {
 		color: var(--blue-border);
-		height: var(--icon-size);
-		width: var(--icon-size);
+		height: var(--icon-size-sm);
+		width: var(--icon-size-sm);
 	}
 
 	:where(& #PlaybackButton) {
@@ -40,7 +40,7 @@
 }
 
 #PlaybackControlsCtn {
-	--icon-size: 32px;
+	--icon-size-sm: var(--icon-size-md);
 
 	// bruh ok
 	#PlaybackButton:where(:has(> svg > [d^="M14"])) {
@@ -70,8 +70,8 @@
 
 #TimeBar {
 	color: var(--blue-text);
-	font-family: var(--font-family-monospace);
-	font-size: var(--font-size-small);
+	font-family: var(--text--font-family-monospace);
+	font-size: var(--text--font-size-sm);
 
 	#TimeDash {
 		color: inherit;

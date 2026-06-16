@@ -2,9 +2,9 @@
 
 @mixin _titlebar-button {
 	margin-inline-end: 10px;
-	min-height: var(--icon-size);
-	min-width: var(--icon-size);
-	width: var(--icon-size);
+	min-height: var(--icon-size-sm);
+	min-width: var(--icon-size-sm);
+	width: var(--icon-size-sm);
 }
 
 #AccountMenu {

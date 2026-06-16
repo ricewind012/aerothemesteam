@@ -86,7 +86,7 @@
 		font: inherit;
 		font-weight: normal;
 		font-style: normal;
-		line-height: var(--icon-size);
+		line-height: var(--icon-size-sm);
 	}
 
 	#AlbumStatsContainer {
@@ -139,7 +139,7 @@
 	#Disc {
 		@include controls.table-header-row;
 
-		font-size: var(--font-size);
+		font-size: var(--text--font-size-md);
 	}
 }
 

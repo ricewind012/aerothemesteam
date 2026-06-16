@@ -32,7 +32,7 @@
 
 #CollectionLabel {
 	color: inherit;
-	font-size: var(--font-size-large);
+	font-size: var(--text--font-size-lg);
 	letter-spacing: 0;
 	text-shadow: none;
 	text-transform: unset;
@@ -43,7 +43,7 @@
 
 #CollectionLabelCount {
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 }
 
 #DisplayCaseContainerBounds {

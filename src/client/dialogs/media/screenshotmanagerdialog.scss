@@ -56,7 +56,7 @@
 
 #Metadata {
 	color: inherit;
-	font-size: var(--font-size-small);
+	font-size: var(--text--font-size-sm);
 	font-weight: normal;
 	opacity: 0.5;
 
@@ -172,7 +172,7 @@
 
 #TopListTitle {
 	color: var(--listitem--fg);
-	font-size: var(--font-size-large);
+	font-size: var(--text--font-size-lg);
 	font-weight: bold;
 	height: unset;
 	// Align with the right side

@@ -1,5 +1,5 @@
 :root {
-	// Design
+	// Shared colors
 	--blue-border: #5a7eab;
 	--blue-text: #304461;
 	--blue-dark: #bcd0e8;
@@ -8,19 +8,27 @@
 	--bg-main: #fff;
 	--fg-main: #000;
 
-	--font-family-monospace: "Consolas", monospace;
-	--font-size-xlarge: 18pt;
-	--font-size-large: 12pt;
-	--font-size: 9pt;
-	--font-size-small: 8pt;
+	// Typography (the rest is in library mixins)
+	--text--font-family: "Segoe UI", "Arial", sans-serif;
+	--text--font-family-monospace: "Consolas", monospace;
 
-	--border-radius-large: 5px;
-	--border-radius: 2.5px;
+	--text--font-size-xl: 18pt;
+	--text--font-size-lg: 12pt;
+	--text--font-size-md: 9pt;
+	--text--font-size-sm: 8pt;
 
-	--tag--spacing: 2.5px;
+	// Units
+	--rounding-lg: 5px;
+	--rounding-md: 2.5px;
 
+	--icon-size-xs: 12px;
+	--icon-size-sm: 16px;
+	--icon-size-md: 32px;
+	--icon-size-lg: 48px;
+	--icon-size-xl: 64px;
+
+	// Other
 	--anim-time: 150ms;
-	--icon-size: 16px;
 	--popup-shadow: 4px 4px 4px -2px rgba(0, 0, 0, 0.5);
 	--scrollbar-size: 15px;
 	--title-bar-height: 32px;
@@ -64,6 +72,8 @@
 	--desktoptab--item-spacing-block: 9px;
 	--desktoptab--item-spacing-inline: 12px;
 
+	--tag--spacing: 2.5px;
+
 	// Componenet vars
 	--achievementiconbase--border: inset -1px -1px #fff, inset 1px 1px #3c5678;
 	--achievementiconbase--size: 32px;
@@ -85,7 +95,7 @@
 	--contextmenu--separator-light: #fff;
 
 	--desktoptoasts--image-color: #fff;
-	--desktoptoasts--image-size: 48px;
+	--desktoptoasts--image-size: var(--icon-size-lg);
 	--desktoptoasts--status-away: hsl(from var(--blue-text) 75 s calc(l * 1.5));
 	--desktoptoasts--status-ingame: hsl(
 		from var(--blue-text) 125 s calc(l * 1.5)
@@ -120,7 +130,7 @@
 	);
 	--library--header-text-shadow: 1px 1px
 		color-mix(in srgb, var(--blue-text) 33%, var(--bg-main));
-	--library--icon-size: 32px;
+	--library--icon-size: var(--icon-size-md);
 	--library--placeholder-border-size: 2px;
 	--library--secondary-text-opacity: 0.5;
 	--library--section-bg: #e1e7ef;
@@ -137,7 +147,6 @@
 	--pagedsettings--tab-separator: #c5c5c5;
 	--pagedsettings--tab-separator2: #dde7ee;
 
-	// 70% should cover the bottom right text
 	--salepreviewwidgets--bg: radial-gradient(
 		at 0% 0%,
 		var(--library--section-bg) 70%,

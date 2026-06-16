@@ -2,7 +2,7 @@
 
 :where(*) {
 	box-sizing: border-box;
-	font-family: "Segoe UI", sans-serif;
+	font-family: var(--text--font-family);
 }
 
 body {

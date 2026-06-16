@@ -38,7 +38,7 @@
 	background-image:
 		var(--icon-context-menu-#{$what}), var(--listitem--item-gradient);
 	background-position: center;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	height: var(--contextmenu--item-height);
 	inset-block-start: var(--offset);
 	inset-inline-start: var(--offset);
@@ -47,10 +47,10 @@
 }
 
 @mixin icon-pos {
-	height: var(--icon-size);
+	height: var(--icon-size-sm);
 	inset-inline-start: 4px;
 	position: absolute;
-	width: var(--icon-size);
+	width: var(--icon-size-sm);
 }
 
 @mixin item {

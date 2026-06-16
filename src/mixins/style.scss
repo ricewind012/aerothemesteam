@@ -17,9 +17,9 @@
 	}
 
 	background-image: var(--icon);
-	background-size: var(--icon-size);
-	height: var(--icon-size);
-	width: var(--icon-size);
+	background-size: var(--icon-size-sm);
+	height: var(--icon-size-sm);
+	width: var(--icon-size-sm);
 
 	&:active {
 		filter: brightness(1.25);
@@ -55,8 +55,8 @@
 
 @mixin tag {
 	background: color-mix(in srgb, currentColor 10%, transparent);
-	border-radius: var(--border-radius);
-	font-size: var(--font-size-small);
+	border-radius: var(--rounding-md);
+	font-size: var(--text--font-size-sm);
 	padding: var(--tag--spacing) calc(var(--tag--spacing) * 2);
 }
 

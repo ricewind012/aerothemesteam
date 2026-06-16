@@ -34,11 +34,11 @@
 #CommentIcon,
 #LikeIcon,
 #ReactionIcon {
-	height: var(--icon-size);
+	height: var(--icon-size-sm);
 	margin: 0;
 	margin-inline-start: var(--library--text-spacing);
 	overflow: visible;
-	width: var(--icon-size);
+	width: var(--icon-size-sm);
 
 	path {
 		fill: var(--library--button-text);

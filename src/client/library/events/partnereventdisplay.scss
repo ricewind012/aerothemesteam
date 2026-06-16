@@ -12,7 +12,7 @@
 
 #EventDetailsBody {
 	color: var(--blue-text);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	line-height: inherit;
 
 	:where(& a) {
@@ -20,7 +20,7 @@
 	}
 
 	:where(& img) {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--rounding-lg);
 	}
 }
 

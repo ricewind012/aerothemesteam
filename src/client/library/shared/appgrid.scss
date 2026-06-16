@@ -37,7 +37,7 @@
 
 #EmptyGridMessageLine {
 	color: var(--blue-text);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	margin: 0;
 }
 
@@ -62,7 +62,7 @@
 
 #SortingDropDown {
 	align-items: center;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	margin: 0;
 
 	.DialogDropDown {

@@ -12,7 +12,7 @@
 }
 
 #StoreSalePriceWidgetContainer {
-	height: calc(var(--font-size) + var(--library--spacing));
+	height: calc(var(--text--font-size-md) + var(--library--spacing));
 
 	#StoreSalePriceBox {
 		@include library.header;
@@ -80,7 +80,7 @@
 }
 
 #StoreSaleWidgetTags {
-	height: calc(var(--font-size-small) + var(--tag--spacing) * 2);
+	height: calc(var(--text--font-size-sm) + var(--tag--spacing) * 2);
 	line-height: 1;
 	margin-block: var(--library--spacing-x05);
 

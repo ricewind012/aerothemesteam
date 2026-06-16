@@ -59,7 +59,7 @@
 		background-repeat: no-repeat;
 		font-size: 11px;
 		height: unset;
-		padding-inline-end: calc(var(--icon-size) + var(--spacing-x) * 2);
+		padding-inline-end: calc(var(--icon-size-sm) + var(--spacing-x) * 2);
 	}
 }
 
@@ -77,8 +77,8 @@
 	}
 
 	img {
-		height: var(--icon-size);
-		width: var(--icon-size);
+		height: var(--icon-size-sm);
+		width: var(--icon-size-sm);
 	}
 
 	svg {

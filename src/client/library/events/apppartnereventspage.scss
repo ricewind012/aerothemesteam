@@ -7,7 +7,7 @@
 }
 
 #AppPartnerEventsPage {
-	inset-block-start: calc(var(--library--spacing) * 2 + var(--icon-size));
+	inset-block-start: calc(var(--library--spacing) * 2 + var(--icon-size-sm));
 }
 
 #ControlSection {
@@ -31,17 +31,14 @@
 	#ScrollButton {
 		all: unset;
 
-		height: var(--icon-size);
-		width: var(--icon-size);
+		height: var(--icon-size-md);
+		width: var(--icon-size-md);
 
 		&:where(#Down) svg {
 			transform: none;
 		}
 
 		&:where(#GameArt) {
-			// TODO(vars):
-			--icon-size: 24px;
-
 			margin: calc(8px / -2);
 			margin-inline-end: 0;
 

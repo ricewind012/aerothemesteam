@@ -23,7 +23,7 @@
 
 	#Label {
 		color: var(--library--button-text);
-		font-size: var(--font-size);
+		font-size: var(--text--font-size-md);
 		font-weight: normal;
 		letter-spacing: 0;
 		text-transform: none;
@@ -50,7 +50,7 @@
 #Title {
 	align-items: center;
 	color: var(--blue-text);
-	font-size: var(--font-size-xlarge);
+	font-size: var(--text--font-size-xl);
 	font-weight: bold;
 	display: flex;
 

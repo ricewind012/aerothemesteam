@@ -11,14 +11,14 @@
 	}
 
 	svg {
-		height: var(--icon-size);
-		width: var(--icon-size);
+		height: var(--icon-size-sm);
+		width: var(--icon-size-sm);
 	}
 
 	line,
 	circle {
 		stroke: var(--blue-text);
-		stroke-width: var(--icon-size);
+		stroke-width: var(--icon-size-sm);
 	}
 }
 
@@ -43,7 +43,7 @@
 		all: inherit;
 
 		background-image: var(--icon);
-		background-size: var(--icon-size);
+		background-size: var(--icon-size-sm);
 		transform: rotate(90deg);
 
 		&[style="transform: rotate(270deg);"] {
@@ -65,7 +65,7 @@
 }
 
 #Message {
-	font-size: var(--font-size-xlarge);
+	font-size: var(--text--font-size-xl);
 }
 
 #PageButtons {

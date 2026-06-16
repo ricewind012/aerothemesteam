@@ -36,7 +36,7 @@
 	@include tab.item($selected: "&#Selected");
 
 	color: var(--steamdesktop--top-bar-text-color);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	padding: 0;
 	text-transform: unset;
 

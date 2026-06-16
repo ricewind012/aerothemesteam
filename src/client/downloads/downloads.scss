@@ -3,7 +3,7 @@
 @use "mixins/style";
 
 #ActiveItemProgressBar #Status {
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 
 	& > div:not([class]) {
 		opacity: var(--library--secondary-text-opacity);
@@ -101,7 +101,7 @@
 	}
 
 	#Text {
-		font-size: var(--font-size-small);
+		font-size: var(--text--font-size-sm);
 		letter-spacing: 0;
 		text-transform: none;
 	}
@@ -120,7 +120,7 @@
 	@include library.placeholder;
 
 	color: var(--blue-text);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 
 	#Text {
 		height: unset;
@@ -128,8 +128,8 @@
 }
 
 #Icon {
-	height: var(--icon-size);
-	width: var(--icon-size);
+	height: var(--icon-size-sm);
+	width: var(--icon-size-sm);
 }
 
 #ItemLists {
@@ -147,7 +147,7 @@
 
 	#SectionList {
 		--header-height: calc(
-			var(--library--section-header-spacing-y) * 2 + var(--font-size-small)
+			var(--library--section-header-spacing-y) * 2 + var(--text--font-size-sm)
 		);
 
 		height: calc(100% - var(--header-height));
@@ -201,8 +201,8 @@
 		margin: 0;
 
 		svg {
-			height: var(--icon-size);
-			width: var(--icon-size);
+			height: var(--icon-size-sm);
+			width: var(--icon-size-sm);
 		}
 	}
 
@@ -234,7 +234,7 @@
 	color: inherit;
 	flex-grow: 1;
 	font: inherit;
-	font-size: var(--font-size-small);
+	font-size: var(--text--font-size-sm);
 	letter-spacing: 0;
 	text-transform: none;
 

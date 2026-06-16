@@ -7,7 +7,7 @@
 }
 
 #AuthorName {
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	margin-inline-start: var(--library--text-spacing);
 }
 
@@ -59,7 +59,7 @@
 
 #Description {
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	line-height: inherit;
 }
 

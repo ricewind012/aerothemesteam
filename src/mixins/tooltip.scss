@@ -12,10 +12,10 @@
 @mixin container {
 	background: var(--tooltip--background);
 	border: 1px solid #767676;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	box-shadow: var(--popup-shadow);
 	color: #4c4c4c;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	padding: 3px 5px 3px 4px;
 	text-shadow: none;
 }

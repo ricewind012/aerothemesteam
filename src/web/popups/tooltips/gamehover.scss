@@ -27,7 +27,7 @@
 }
 
 .hover_details_block {
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	margin-block-start: var(--library--text-spacing);
 }
 
@@ -76,7 +76,7 @@
 	margin-block-end: var(--library--text-spacing);
 
 	.screenshot {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--rounding-lg);
 	}
 }
 
@@ -87,7 +87,7 @@
 		// Derived from tooltip bottom background
 		background-color: #85a9db;
 		color: #fff;
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 	}
 }
 

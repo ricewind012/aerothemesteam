@@ -15,7 +15,7 @@
 }
 
 #CommentsContainer {
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 }
 
 #CommentsLabel {
@@ -36,7 +36,7 @@
 #ReviewIcon {
 	--size: calc(var(--library--icon-size) * 1.5);
 
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	height: var(--size);
 	margin-inline-end: var(--library--spacing);
 	width: var(--size);
@@ -44,7 +44,7 @@
 
 #ReviewText {
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 }
 
 #VoteUpDownContainer {

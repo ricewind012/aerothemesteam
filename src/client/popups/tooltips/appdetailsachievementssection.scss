@@ -7,7 +7,7 @@
 
 #ProgressLabel {
 	color: inherit;
-	font-size: var(--font-size-small);
+	font-size: var(--text--font-size-sm);
 	margin-block-end: var(--library--text-spacing);
 	opacity: var(--library--secondary-text-opacity);
 }
@@ -32,7 +32,7 @@
 }
 
 #TopSectionAchievementIcon {
-	--achievementiconbase--size: 64px;
+	--achievementiconbase--size: var(--icon-size-md);
 
 	margin: 0;
 }
@@ -44,7 +44,7 @@
 	color: inherit;
 	display: flex;
 	flex-direction: column;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	font-weight: bold;
 	padding: var(--tooltip--description-spacing);
 

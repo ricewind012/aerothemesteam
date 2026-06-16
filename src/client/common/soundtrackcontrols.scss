@@ -1,8 +1,7 @@
 @use "mixins/style";
 
 #ControlBlock {
-	// TODO(vars):
-	--icon-size: 32px;
+	--icon-size-sm: var(--icon-size-md);
 
 	gap: 0;
 	padding: 0;

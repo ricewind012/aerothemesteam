@@ -2,7 +2,7 @@
 @use "mixins/style";
 
 %-list-item {
-	--achievementiconbase--size: 64px;
+	--achievementiconbase--size: var(--icon-size-xl);
 
 	background: none;
 	color: var(--blue-text);
@@ -31,7 +31,7 @@
 
 #AchievementList {
 	background-color: var(--bg-main);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	gap: 0;
 	padding: var(--library--spacing) var(--library--body-spacing);
 	padding-block-end: 0;
@@ -75,7 +75,7 @@
 
 	#Percent {
 		color: inherit;
-		font-size: var(--font-size);
+		font-size: var(--text--font-size-md);
 		font-weight: normal;
 	}
 
@@ -89,7 +89,7 @@
 
 	#UnlockContainer {
 		padding: 0;
-		width: calc(var(--icon-size) + var(--library--spacing));
+		width: calc(var(--icon-size-sm) + var(--library--spacing));
 		z-index: 1;
 
 		svg {
@@ -110,7 +110,7 @@
 
 	align-items: center;
 	display: flex;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	height: calc(100% + var(--library--spacing));
 	letter-spacing: 0;
 	opacity: 1;
@@ -130,5 +130,5 @@
 
 #UnlockDate {
 	color: inherit;
-	font-size: var(--font-size-small);
+	font-size: var(--text--font-size-sm);
 }

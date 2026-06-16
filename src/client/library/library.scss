@@ -8,7 +8,7 @@
 	}
 
 	#CloseButton {
-		--icon-size: var(--library--icon-size);
+		--icon-size-sm: var(--icon-size-xl);
 
 		@include style.icon($name: "delete-32", $hide-selector: "*");
 

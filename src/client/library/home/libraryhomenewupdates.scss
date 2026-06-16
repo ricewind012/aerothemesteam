@@ -3,7 +3,7 @@
 
 #EventOptions {
 	& > div {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--rounding-lg);
 	}
 }
 
@@ -13,7 +13,7 @@
 }
 
 #EventSummaryContainer {
-	border-radius: var(--border-radius-large);
+	border-radius: var(--rounding-lg);
 }
 
 #EventTime {
@@ -23,9 +23,9 @@
 }
 
 #GameIcon {
-	height: var(--icon-size);
+	height: var(--icon-size-sm);
 	margin-inline-end: var(--library--text-spacing);
-	width: var(--icon-size);
+	width: var(--icon-size-sm);
 }
 
 #GameIconAndName {
@@ -43,7 +43,7 @@
 	margin-inline-end: var(--library--spacing);
 
 	&_MainImageContainer {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--rounding-lg);
 	}
 
 	&_TextCtn {

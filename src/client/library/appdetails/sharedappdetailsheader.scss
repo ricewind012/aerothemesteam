@@ -29,13 +29,15 @@
 #TextNameSpace {
 	align-self: flex-start;
 	line-height: 1;
-	margin-block: calc((var(--library--icon-size) - var(--font-size-xlarge)) / 2);
+	margin-block: calc(
+		(var(--library--icon-size) - var(--text--font-size-xl)) / 2
+	);
 	text-shadow: var(--library--header-text-shadow);
 
 	&::before {
 		color: var(--blue-text);
 		content: var(--library--game-name);
-		font-size: var(--font-size-xlarge);
+		font-size: var(--text--font-size-xl);
 		font-weight: bold;
 	}
 }

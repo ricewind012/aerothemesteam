@@ -27,7 +27,7 @@
 	@include library.placeholder;
 
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	margin-block-end: 0;
 	min-height: unset;
 }
