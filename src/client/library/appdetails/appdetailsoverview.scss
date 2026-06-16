@@ -3,23 +3,23 @@
 }
 
 #ColumnContainer {
-	padding: var(--library_body-spacing);
+	padding: var(--library--body-spacing);
 	padding-block-start: 0;
 }
 
 #LeftColumn {
 	// shit layout
-	width: calc(67% - var(--library_spacing));
+	width: calc(67% - var(--library--spacing));
 }
 
 #RightColumn {
-	margin-inline-start: var(--library_spacing);
+	margin-inline-start: var(--library--spacing);
 }
 
 #Spotlights {
 	padding: 0;
 
 	& > :last-child {
-		margin-block-end: var(--library_spacing);
+		margin-block-end: var(--library--spacing);
 	}
 }

@@ -5,7 +5,7 @@
 }
 
 #BoxSizerContainer {
-	inset: var(--library_body-spacing);
+	inset: var(--library--body-spacing);
 }
 
 #ImgBlur {
@@ -17,8 +17,8 @@
 }
 
 #ImgSrc {
-	height: var(--library_header-img-height);
-	mask: var(--library_header-img-mask);
+	height: var(--library--header-img-height);
+	mask: var(--library--header-img-mask);
 	width: 80%;
 }
 
@@ -29,12 +29,15 @@
 #TextNameSpace {
 	align-self: flex-start;
 	line-height: 1;
-	margin-block: calc((var(--library_icon-size) - var(--font-size-xlarge)) / 2);
+	margin-block: calc(
+		(var(--library--icon-size) - var(--text--font-size-xl)) / 2
+	);
+	text-shadow: var(--library--header-text-shadow);
 
 	&::before {
 		color: var(--blue-text);
-		content: var(--library_game-name);
-		font-size: var(--font-size-xlarge);
+		content: var(--library--game-name);
+		font-size: var(--text--font-size-xl);
 		font-weight: bold;
 	}
 }
@@ -45,26 +48,26 @@
 
 #TitleSection {
 	inset-block-start: 0;
-	padding: var(--library_body-spacing);
+	padding: var(--library--body-spacing);
 
 	&::before {
-		background-image: var(--library_game-icon);
+		background-image: var(--library--game-icon);
 		background-size: 100%;
 		content: "";
-		height: var(--library_icon-size);
-		margin-inline-end: var(--library_spacing);
-		width: var(--library_icon-size);
+		height: var(--library--icon-size);
+		margin-inline-end: var(--library--spacing);
+		width: var(--library--icon-size);
 	}
 }
 
 #TopCapsule {
-	height: var(--library_header-img-height);
+	height: var(--library--header-img-height);
 
 	&#FallbackArt::before {
 		background-color: var(--blue-light);
 		content: "";
 		height: 100%;
-		mask: var(--library_header-img-mask);
+		mask: var(--library--header-img-mask);
 		position: absolute;
 		width: 100%;
 	}

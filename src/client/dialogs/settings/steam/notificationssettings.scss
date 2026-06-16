@@ -1,7 +1,7 @@
 #CheckboxColumn {
 	align-items: start;
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 }
 
 #CheckboxHeaders {
@@ -9,7 +9,7 @@
 	position: unset;
 
 	#NotifyViaHeader {
-		font-size: var(--font-size);
+		font-size: var(--text--font-size-md);
 		font-style: normal;
 		opacity: 0.5;
 	}

@@ -3,7 +3,7 @@
 #AvatarAndName {
 	color: inherit;
 	font-weight: bold;
-	gap: 4px;
+	gap: var(--text-spacing);
 }
 
 #ColumnResizer {

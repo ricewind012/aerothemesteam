@@ -1,21 +1,10 @@
 @use "mixins/library";
 @use "mixins/tooltip";
 
-@mixin -tooltip-bigger {
-	@include tooltip.container;
-
-	padding: 0;
-}
-
-@mixin -tooltip-bigger-bg-blur {
-	filter: blur(10px) saturate(2);
-	mix-blend-mode: screen;
-}
-
 #AppPortraitHover {
 	--width: 220px;
 
-	@include -tooltip-bigger;
+	@include tooltip.bigger--container;
 }
 
 #AppStatus {
@@ -30,11 +19,11 @@
 }
 
 #AppTitleContainer {
-	padding: var(--tooltip_description-spacing);
+	padding: var(--tooltip--description-spacing);
 }
 
 #CapsuleBackground {
-	@include -tooltip-bigger-bg-blur;
+	@include tooltip.bigger--bg-blur;
 
 	height: 100%;
 	inset: 0;
@@ -54,7 +43,7 @@
 	background: none;
 	display: flex;
 	flex-direction: column;
-	padding: var(--tooltip_description-spacing);
+	padding: var(--tooltip--description-spacing);
 	padding-block-start: 0;
 }
 
@@ -65,7 +54,7 @@
 #FriendsLabel {
 	@include library.description;
 
-	margin-block-end: 4px;
+	margin-block-end: var(--text-spacing);
 	text-transform: none;
 }
 
@@ -74,7 +63,7 @@
 	font: inherit;
 	letter-spacing: 0;
 	margin: 0;
-	padding: var(--tooltip_description-spacing);
+	padding: var(--tooltip--description-spacing);
 	width: var(--width);
 
 	#Header {

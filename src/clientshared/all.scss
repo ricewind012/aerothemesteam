@@ -1,8 +1,31 @@
+@use "mixins/style";
+
 :where(*) {
 	box-sizing: border-box;
-	font-family: "Segoe UI", sans-serif;
+	font-family: var(--text--font-family);
+}
+
+body {
+	background: var(--bg-main);
+	color: var(--fg-main);
 }
 
 .part {
 	display: initial;
+}
+
+$-icons: (
+	ChatBubble: "discussions",
+	Download: "download",
+	FlatArrow: "nav-back",
+	Play: "play",
+	Pause: "delete",
+	PlusCircle: "plus",
+	X_Line: "delete",
+);
+
+@each $k, $v in $-icons {
+	:where(.SVGIcon_#{$k}) {
+		@include style.icon($name: $v, $hide-selector: "*");
+	}
 }

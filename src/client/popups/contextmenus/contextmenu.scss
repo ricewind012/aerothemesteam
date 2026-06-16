@@ -67,7 +67,7 @@ $icons: (
 		@include contextmenu.icon-pos;
 
 		background-image: var(--icon);
-		background-size: var(--icon-size);
+		background-size: var(--icon-size-sm);
 		content: "";
 	}
 

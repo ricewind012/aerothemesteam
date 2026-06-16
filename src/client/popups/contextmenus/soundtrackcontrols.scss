@@ -1,0 +1,14 @@
+// I can't really do much about it
+#ContextMenu {
+	padding: 0;
+	margin-inline-start: calc(var(--contextmenu--left-spacing) + 6px);
+
+	#SoundtrackName {
+		font: inherit;
+	}
+
+	#TrackName {
+		color: var(--listitem--fg-secondary);
+		font: inherit;
+	}
+}

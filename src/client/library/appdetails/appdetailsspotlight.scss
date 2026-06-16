@@ -4,7 +4,7 @@
 	@include library.spotlight;
 
 	#Buttons {
-		padding-block-start: var(--library_spacing);
+		padding-block-start: var(--library--spacing);
 	}
 
 	#Header {
@@ -13,12 +13,12 @@
 
 	#Info {
 		color: var(--blue-text);
-		padding-inline: var(--library_spacing);
+		padding-inline: var(--library--spacing);
 
 		& > :first-child {
 			@include library.header-primary;
 
-			margin-block-end: var(--library_text-spacing);
+			margin-block-end: var(--text-spacing);
 		}
 	}
 

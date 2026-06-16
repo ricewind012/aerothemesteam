@@ -1,0 +1,7 @@
+@use "mixins/library";
+
+#LinkButton {
+	@include library.button;
+
+	text-decoration: none;
+}

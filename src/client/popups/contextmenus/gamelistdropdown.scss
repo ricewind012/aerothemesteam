@@ -2,18 +2,18 @@
 @use "mixins/list";
 
 #AppCount {
-	color: var(--listitem_fg-secondary);
+	color: var(--listitem--fg-secondary);
 	opacity: 1;
-	padding-inline-start: var(--library_text-spacing);
+	padding-inline-start: var(--text-spacing);
 }
 
 #DropDown {
 	@include contextmenu.container-left-border;
 
 	&::before {
-		inset-block-start: var(--contextmenu_container-spacing);
-		inset-block-end: var(--contextmenu_container-spacing);
-		margin-inline-start: var(--contextmenu_container-spacing);
+		inset-block-start: var(--contextmenu--container-spacing);
+		inset-block-end: var(--contextmenu--container-spacing);
+		margin-inline-start: var(--contextmenu--container-spacing);
 	}
 }
 

@@ -17,7 +17,7 @@
 		var(--grad-bottom-end) var(--grad-top-size)
 	);
 	border: 1px solid var(--border);
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	box-shadow: inset 0 0 0 1px
 		color-mix(in srgb, var(--inner-border) 50%, transparent);
 	color: var(--fg-main);
@@ -188,7 +188,7 @@
 	background-color: transparent;
 	background-image: linear-gradient(180deg, #66666680, transparent);
 	border: 1px solid var(--blue-border);
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	box-shadow: 0 0 0 1px #fff;
 	height: 18px;
 }
@@ -208,23 +208,23 @@
 	@include button;
 
 	border-block-end: none;
-	border-color: var(--tab_border-outer);
+	border-color: var(--tab--border-outer);
 	border-radius: 0;
-	box-shadow: inset 0 0 0 1px var(--tab_border-inner);
+	box-shadow: inset 0 0 0 1px var(--tab--border-inner);
 	margin: 2px 0px 0px 0;
 	min-width: 45px;
 	padding: 2px 5px 5px 4px;
 }
 
 @mixin tab-panel {
-	background-color: var(--tabpanel_bg);
-	border: 1px solid var(--tabpanel_border);
+	background-color: var(--tabpanel--bg);
+	border: 1px solid var(--tabpanel--border);
 	padding: 14px;
 	z-index: 0;
 }
 
 @mixin tab-selected {
-	background: var(--tab_bg-selected);
+	background: var(--tab--bg-selected);
 	box-shadow: none;
 	padding: 0px 7px 5px 6px;
 	margin: 0px -2px 0px -2px;
@@ -237,8 +237,8 @@
 }
 
 @mixin table {
-	background-color: var(--table_bg);
-	border: 1px solid var(--table_border);
+	background-color: var(--table--bg);
+	border: 1px solid var(--table--border);
 	padding: 1px;
 }
 
@@ -252,8 +252,8 @@
 	--grad-bottom-end: #f1f2f4;
 
 	border-image-source: linear-gradient(
-		var(--tableheaderrow_border-start),
-		var(--tableheaderrow_border-end)
+		var(--tableheaderrow--border-start),
+		var(--tableheaderrow--border-end)
 	);
 	border-image-slice: 1;
 	border-inline-start: none;

@@ -8,7 +8,7 @@
 	}
 
 	#CloseButton {
-		--icon-size: var(--library_icon-size);
+		--icon-size-sm: var(--icon-size-xl);
 
 		@include style.icon($name: "delete-32", $hide-selector: "*");
 
@@ -16,13 +16,22 @@
 		border: none;
 		border-radius: 0;
 		box-shadow: none;
-		inset-block-start: var(--library_body-spacing);
-		inset-inline-end: var(--library_body-spacing);
+		inset-block-start: var(--library--body-spacing);
+		inset-inline-end: var(--library--body-spacing);
 	}
 }
 
 #AppDetailsMain {
-	border: var(--library_container-border);
+	border: var(--library--container-border);
+}
+
+#AppDetailsOverlayTransitionGroup {
+	// bruh valve
+	& > div {
+		backdrop-filter: none;
+		// Keep relative positioning, as backdrop-filter is now disabled
+		transform-style: preserve-3d;
+	}
 }
 
 #Container {
@@ -43,6 +52,8 @@
 	}
 
 	:where(.DialogDropDown_Arrow) {
+		display: contents;
+
 		&::before {
 			display: none;
 		}
@@ -63,7 +74,7 @@
 }
 
 #LeftListSizableContainer {
-	border: var(--library_container-border);
+	border: var(--library--container-border);
 }
 
 #LibraryWindowDivider {

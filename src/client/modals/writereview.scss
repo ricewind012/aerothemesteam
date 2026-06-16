@@ -2,7 +2,7 @@
 @use "mixins/style";
 
 #DescribeGame {
-	margin-block: 0 var(--library_spacing-x05);
+	margin-block: 0 var(--library--spacing-x05);
 }
 
 #FreeCheckbox {
@@ -13,27 +13,27 @@
 
 #Header {
 	color: var(--blue-text);
-	font-size: var(--font-size-xlarge);
+	font-size: var(--text--font-size-xl);
 	border-block-end: 2px solid transparent;
 	border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
 }
 
 #ReviewSettingsChecks {
-	gap: 4px;
+	gap: var(--text-spacing);
 	margin: 0;
-	margin-inline-start: var(--library_spacing);
+	margin-inline-start: var(--library--spacing);
 
 	.HelperTooltip {
 		@include style.icon($name: "help", $hide-selector: "*");
 
-		margin-inline-start: 4px;
+		margin-inline-start: var(--text-spacing);
 	}
 }
 
 #ReviewSettingsRow {
 	& > span {
 		line-height: 22px;
-		margin-inline-end: var(--library_spacing-x05);
+		margin-inline-end: var(--library--spacing-x05);
 	}
 }
 
@@ -45,7 +45,7 @@
 	font-size: inherit;
 
 	#RatingContainer {
-		margin-block: var(--library_spacing);
+		margin-block: var(--library--spacing);
 	}
 
 	.DialogInputLabelGroup {

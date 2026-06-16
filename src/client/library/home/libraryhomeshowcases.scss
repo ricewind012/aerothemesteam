@@ -11,20 +11,20 @@
 	}
 
 	svg {
-		height: var(--icon-size);
-		width: var(--icon-size);
+		height: var(--icon-size-sm);
+		width: var(--icon-size-sm);
 	}
 
 	line,
 	circle {
 		stroke: var(--blue-text);
-		stroke-width: var(--icon-size);
+		stroke-width: var(--icon-size-sm);
 	}
 }
 
 #AddShowcaseRow {
 	margin: 0;
-	margin-block-start: calc(var(--library_body-spacing) * -1);
+	margin-block-start: calc(var(--library--body-spacing) * -1);
 }
 
 #ChildrenContainer {
@@ -43,7 +43,7 @@
 		all: inherit;
 
 		background-image: var(--icon);
-		background-size: var(--icon-size);
+		background-size: var(--icon-size-sm);
 		transform: rotate(90deg);
 
 		&[style="transform: rotate(270deg);"] {
@@ -60,12 +60,12 @@
 	color: inherit;
 	font-size: inherit;
 	line-height: 1;
-	margin-inline-start: var(--library_text-spacing);
-	opacity: var(--library_secondary-text-opacity);
+	margin-inline-start: var(--text-spacing);
+	opacity: var(--library--secondary-text-opacity);
 }
 
 #Message {
-	font-size: var(--font-size-xlarge);
+	font-size: var(--text--font-size-xl);
 }
 
 #PageButtons {
@@ -84,7 +84,7 @@
 
 #Showcase {
 	border: none;
-	padding-block-start: var(--library_spacing);
+	padding-block-start: var(--library--spacing);
 }
 
 #ShowcaseArrow {
@@ -97,7 +97,7 @@
 }
 
 #ShowcaseGrid {
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }
 
 #ShowcaseHeader {

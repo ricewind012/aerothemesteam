@@ -1,16 +1,16 @@
 @use "mixins/library";
 
 #EventDaySeparator {
-	background-color: var(--library_border-color);
+	background-color: var(--library--border-color);
 	margin: 0;
-	width: var(--library_border-size);
+	width: var(--library--border-size);
 }
 
 #EventHeaderBlock {
 	@include library.header;
 
 	height: 1lh;
-	margin-block-end: var(--library_text-spacing);
+	margin-block-end: var(--text-spacing);
 }
 
 #ForcedCarouselPadding {
@@ -18,10 +18,10 @@
 }
 
 #GamePlaySummaryContainer {
-	margin-block-end: var(--library_spacing);
+	margin-block-end: var(--library--spacing);
 
 	&:not(:first-child) {
-		margin-block-start: var(--library_spacing);
+		margin-block-start: var(--library--spacing);
 	}
 }
 
@@ -29,8 +29,8 @@
 	color: inherit;
 	font: inherit;
 	letter-spacing: 0;
-	margin: var(--library_section-header-spacing-y)
-		var(--library_section-header-spacing-x);
+	margin: var(--library--section-header-spacing-y)
+		var(--library--section-header-spacing-x);
 	text-transform: none;
 }
 
@@ -44,12 +44,12 @@
 }
 
 #SummaryAchievementStack {
-	margin-block: var(--library_spacing) 0;
+	margin-block: var(--library--spacing) 0;
 }
 
 #SummaryContainer {
 	height: unset;
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 }
 
 #TypeSeparator {

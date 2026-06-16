@@ -46,7 +46,7 @@
 }
 
 #NotificationMenuItem {
-	--desktoptoasts_image-size: 32px;
+	--desktoptoasts--image-size: var(--icon-size-md);
 
 	background: none;
 	min-height: unset;

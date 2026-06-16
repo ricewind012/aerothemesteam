@@ -1,17 +1,17 @@
 @mixin header {
 	background-color: #dde7ee;
-	border-block-end: var(--pagedsettings_separator);
+	border-block-end: var(--pagedsettings--separator);
 	color: var(--blue-text);
 	font: inherit;
 	font-weight: bold;
 	margin: 0;
-	margin-block-end: var(--tabpanel_spacing);
+	margin-block-end: var(--tabpanel--spacing);
 	padding: 6px;
 	width: 100%;
 }
 
 @mixin separator {
-	border-block-start: var(--pagedsettings_separator);
+	border-block-start: var(--pagedsettings--separator);
 	margin-block-start: 10px;
 	padding-block-start: 12px;
 }

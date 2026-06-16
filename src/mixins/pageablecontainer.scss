@@ -8,8 +8,8 @@
 }
 
 @mixin buttons-container {
-	gap: calc(var(--library_section-header-spacing-x) / 2);
-	margin-inline-end: var(--library_section-header-spacing-x);
+	gap: calc(var(--library--section-header-spacing-x) / 2);
+	margin-inline-end: var(--library--section-header-spacing-x);
 
 	#Disabled {
 		opacity: 0.5;

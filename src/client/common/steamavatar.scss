@@ -6,10 +6,10 @@
 }
 
 #avatarHolder {
-	height: calc(var(--steamavatar_size) * var(--multiply));
+	height: calc(var(--steamavatar--size) * var(--multiply));
 	position: relative;
 	transform: unset;
-	width: calc(var(--steamavatar_size) * var(--multiply));
+	width: calc(var(--steamavatar--size) * var(--multiply));
 
 	&.X-Small {
 		--multiply: 0.75;

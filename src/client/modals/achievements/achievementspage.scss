@@ -1,6 +1,6 @@
 #Background {
-	height: var(--library_header-img-height);
-	mask: var(--library_header-img-mask);
+	height: var(--library--header-img-height);
+	mask: var(--library--header-img-mask);
 	width: 80%;
 }
 
@@ -9,7 +9,7 @@
 }
 
 #HeaderContainer {
-	padding-inline: var(--library_body-spacing);
+	padding-inline: var(--library--body-spacing);
 }
 
 #HeaderImage {
@@ -22,6 +22,6 @@
 	background: var(--bg-main);
 
 	#Container {
-		padding-block-start: var(--library_body-spacing);
+		padding-block-start: var(--library--body-spacing);
 	}
 }

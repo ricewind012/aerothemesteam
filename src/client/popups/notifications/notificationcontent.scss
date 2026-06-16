@@ -11,8 +11,8 @@
 }
 
 #StandardLogoDimensions {
-	height: var(--desktoptoasts_image-size);
-	width: var(--desktoptoasts_image-size);
+	height: var(--desktoptoasts--image-size);
+	width: var(--desktoptoasts--image-size);
 	// For the notification popup icon
 	z-index: 1;
 }

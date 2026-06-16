@@ -16,7 +16,7 @@
 #BetaHeaderRow {
 	@extend %-beta-row;
 
-	margin-block: var(--tabpanel_spacing) var(--library_text-spacing);
+	margin-block: var(--tabpanel--spacing) var(--text-spacing);
 	opacity: 0.5;
 	padding: 0;
 	text-transform: unset;
@@ -33,7 +33,7 @@
 
 #BetaName {
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	margin: 0;
 }
 
@@ -67,14 +67,14 @@
 #BetasTable {
 	border: none;
 	box-shadow: none;
-	gap: var(--library_text-spacing);
-	margin-block-end: var(--tabpanel_spacing);
+	gap: var(--text-spacing);
+	margin-block-end: var(--tabpanel--spacing);
 }
 
 #BrowseDiskSize {
 	color: inherit;
 	font-weight: bold;
-	margin-inline-start: 4px;
+	margin-inline-start: var(--text-spacing);
 }
 
 #BuildInfo {
@@ -90,7 +90,7 @@
 #Detail {
 	font: inherit;
 	margin: 0;
-	margin-block-end: 4px;
+	margin-block-end: var(--text-spacing);
 }
 
 #SectionTopLine {
@@ -117,6 +117,6 @@
 	gap: 12px;
 
 	.DialogLabel {
-		margin-inline-end: 4px;
+		margin-inline-end: var(--text-spacing);
 	}
 }

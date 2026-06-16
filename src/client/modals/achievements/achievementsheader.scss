@@ -1,34 +1,35 @@
 @use "mixins/library";
 
 #AchievementSearchHeader {
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 	margin-block-end: calc(
-		var(--library_spacing) + var(--achievementslist_virt-list-gap) / 2
+		var(--library--spacing) + var(--achievementslist--virt-list-gap) / 2
 	);
 }
 
 #Content {
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
+	text-shadow: var(--library--header-text-shadow);
 }
 
 #Progress {
 	backdrop-filter: blur(3px);
-	margin-block-start: 4px;
+	margin-block-start: var(--text-spacing);
 }
 
 #ProgressLabel {
-	gap: 4px;
+	gap: var(--text-spacing);
 	justify-content: start;
 
 	#Label {
-		color: var(--library_button-text);
-		font-size: var(--font-size);
+		color: var(--library--button-text);
+		font-size: var(--text--font-size-md);
 		font-weight: normal;
 		letter-spacing: 0;
 		text-transform: none;
 
 		&:last-child {
-			opacity: var(--library_secondary-text-opacity);
+			opacity: var(--library--secondary-text-opacity);
 		}
 	}
 }
@@ -40,20 +41,22 @@
 #StatsBlock {
 	background: none;
 	padding: 0;
-	margin-inline-start: calc(var(--library_icon-size) + var(--library_spacing));
+	margin-inline-start: calc(
+		var(--library--icon-size) + var(--library--spacing)
+	);
 }
 
 // Always display it so it can be made consistent with app details
 #Title {
 	align-items: center;
 	color: var(--blue-text);
-	font-size: var(--font-size-xlarge);
+	font-size: var(--text--font-size-xl);
 	font-weight: bold;
 	display: flex;
 
 	#GameIcon {
-		height: var(--library_icon-size);
-		margin-inline-end: var(--library_spacing);
-		width: var(--library_icon-size);
+		height: var(--library--icon-size);
+		margin-inline-end: var(--library--spacing);
+		width: var(--library--icon-size);
 	}
 }

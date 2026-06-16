@@ -7,9 +7,9 @@
 
 #ProgressLabel {
 	color: inherit;
-	font-size: var(--font-size-small);
-	margin-block-end: var(--library_text-spacing);
-	opacity: var(--library_secondary-text-opacity);
+	font-size: var(--text--font-size-sm);
+	margin-block-end: var(--text-spacing);
+	opacity: var(--library--secondary-text-opacity);
 }
 
 #SingleAchievementProgressBar {
@@ -17,27 +17,49 @@
 }
 
 #SingleAchievementProgressContainer {
-	margin-block-start: var(--tooltip_description-spacing);
+	margin-block-start: var(--tooltip--description-spacing);
 }
 
 #TextSection {
 	color: inherit;
 	font: inherit;
-	padding: var(--tooltip_description-spacing);
-	padding-inline-start: 0;
+	padding: 0;
+}
+
+#TopSection {
+	gap: var(--tooltip--description-spacing);
+	margin: var(--tooltip--description-spacing);
 }
 
 #TopSectionAchievementIcon {
-	--icon-size: 64px;
+	--achievementiconbase--size: var(--icon-size-md);
 
-	margin: var(--tooltip_description-spacing);
+	margin: 0;
 }
 
 #Unlocked {
-	@include tooltip.separator;
+	--tooltip--bottom-bg: rgb(200, 216, 239);
 
 	background: none;
 	color: inherit;
-	font-size: var(--font-size);
+	display: flex;
+	flex-direction: column;
+	font-size: var(--text--font-size-md);
 	font-weight: bold;
+	padding: var(--tooltip--description-spacing);
+
+	&::before {
+		@include tooltip.separator;
+
+		content: "";
+		padding-block: calc(var(--tooltip--description-spacing) / 2);
+	}
+
+	#RareLabel {
+		color: hsl(from var(--tooltip--bottom-bg) 35 s calc(l - 40));
+	}
+
+	#YouUnlocked {
+		color: hsl(from var(--tooltip--bottom-bg) h s calc(l - 40));
+	}
 }

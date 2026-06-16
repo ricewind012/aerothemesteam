@@ -31,7 +31,7 @@
 }
 
 #DriveSize {
-	color: var(--listitem_fg-secondary);
+	color: var(--listitem--fg-secondary);
 	font: inherit;
 	letter-spacing: 0;
 	text-transform: unset;
@@ -83,7 +83,7 @@
 }
 
 #DriveUsageDot {
-	--size: var(--font-size);
+	--size: var(--text--font-size-md);
 
 	@include style.white-gradient;
 
@@ -163,7 +163,7 @@
 
 #DropdownOptionCtn {
 	.DialogDropDown_CurrentDisplay {
-		margin-inline-start: calc(var(--icon-size) + 5px);
+		margin-inline-start: calc(var(--icon-size-sm) + 5px);
 	}
 
 	// star icon
@@ -181,7 +181,7 @@
 		@include contextmenu.icon-pos;
 
 		background-image: var(--icon);
-		background-size: var(--icon-size);
+		background-size: var(--icon-size-sm);
 		content: "";
 	}
 

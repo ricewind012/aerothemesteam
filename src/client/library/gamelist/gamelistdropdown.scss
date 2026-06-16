@@ -24,16 +24,16 @@
 	border: 1px solid transparent;
 	box-sizing: content-box;
 	padding: 2px 3px;
-	height: var(--icon-size);
+	height: var(--icon-size-sm);
 	margin: 0;
 	margin-inline-start: 3px;
-	width: var(--icon-size);
+	width: var(--icon-size-sm);
 
 	&#Active {
 		background-image:
 			linear-gradient(0deg, #a0d5f2 0%, #66c8ff 22.5%), var(--white-gradient);
 		border-color: #bbe7ff;
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 		box-shadow: inset 0px 1px 2.3px 2px rgba(0, 0, 0, 0.3);
 	}
 

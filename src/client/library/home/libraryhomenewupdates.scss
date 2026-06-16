@@ -3,35 +3,35 @@
 
 #EventOptions {
 	& > div {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--rounding-lg);
 	}
 }
 
 #EventRowCarousel {
 	margin: 0;
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }
 
 #EventSummaryContainer {
-	border-radius: var(--border-radius-large);
+	border-radius: var(--rounding-lg);
 }
 
 #EventTime {
 	@include library.header;
 
-	padding-block-end: var(--library_text-spacing);
+	padding-block-end: var(--text-spacing);
 }
 
 #GameIcon {
-	height: var(--icon-size);
-	margin-inline-end: var(--library_text-spacing);
-	width: var(--icon-size);
+	height: var(--icon-size-sm);
+	margin-inline-end: var(--text-spacing);
+	width: var(--icon-size-sm);
 }
 
 #GameIconAndName {
 	align-items: center;
 	background-color: transparent;
-	margin-block-start: var(--library_spacing-x05);
+	margin-block-start: var(--library--spacing-x05);
 	padding: 0;
 }
 
@@ -40,15 +40,15 @@
 }
 
 #PartnerEventRowCapsule {
-	margin-inline-end: var(--library_spacing);
+	margin-inline-end: var(--library--spacing);
 
 	&_MainImageContainer {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--rounding-lg);
 	}
 
 	&_TextCtn {
 		color: inherit;
-		margin-block-start: var(--library_spacing-x05);
+		margin-block-start: var(--library--spacing-x05);
 		padding: 0;
 	}
 
