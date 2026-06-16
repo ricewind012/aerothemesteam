@@ -54,7 +54,7 @@
 #FriendsLabel {
 	@include library.description;
 
-	margin-block-end: 4px;
+	margin-block-end: var(--text-spacing);
 	text-transform: none;
 }
 

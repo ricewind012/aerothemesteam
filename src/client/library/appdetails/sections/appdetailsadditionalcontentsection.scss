@@ -9,7 +9,7 @@
 }
 
 #SoundtrackDetails {
-	gap: var(--library--text-spacing);
+	gap: var(--text-spacing);
 	margin-inline-start: var(--library--spacing);
 }
 
@@ -49,5 +49,5 @@
 	color: inherit;
 	font-size: var(--text--font-size-md);
 	font-weight: normal;
-	margin-inline-start: var(--library--text-spacing);
+	margin-inline-start: var(--text-spacing);
 }

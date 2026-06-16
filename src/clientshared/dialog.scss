@@ -36,7 +36,7 @@
 	color: inherit;
 	font: inherit;
 	margin: 0;
-	margin-block-end: 4px;
+	margin-block-end: var(--text-spacing);
 }
 
 :where(.DialogButton) {
@@ -71,7 +71,7 @@
 	padding: 0;
 
 	.DialogCheckbox {
-		margin-inline-end: 4px;
+		margin-inline-end: var(--text-spacing);
 	}
 }
 

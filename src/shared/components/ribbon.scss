@@ -3,7 +3,7 @@
 .ribbon-button {
 	align-items: center;
 	display: flex;
-	gap: 4px;
+	gap: var(--text-spacing);
 	flex-direction: var(--direction);
 	flex-grow: 1;
 }

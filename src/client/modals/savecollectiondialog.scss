@@ -12,7 +12,7 @@
 	@include modal.description;
 
 	background: none;
-	margin-block-start: 4px;
+	margin-block-start: var(--text-spacing);
 	padding: 0;
 }
 
@@ -21,7 +21,7 @@
 }
 
 #Required {
-	margin-inline-start: 4px;
+	margin-inline-start: var(--text-spacing);
 }
 
 #SaveCollectionContainer {

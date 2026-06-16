@@ -19,12 +19,12 @@
 #EventTime {
 	@include library.header;
 
-	padding-block-end: var(--library--text-spacing);
+	padding-block-end: var(--text-spacing);
 }
 
 #GameIcon {
 	height: var(--icon-size-sm);
-	margin-inline-end: var(--library--text-spacing);
+	margin-inline-end: var(--text-spacing);
 	width: var(--icon-size-sm);
 }
 

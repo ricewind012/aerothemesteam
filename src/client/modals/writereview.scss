@@ -19,14 +19,14 @@
 }
 
 #ReviewSettingsChecks {
-	gap: 4px;
+	gap: var(--text-spacing);
 	margin: 0;
 	margin-inline-start: var(--library--spacing);
 
 	.HelperTooltip {
 		@include style.icon($name: "help", $hide-selector: "*");
 
-		margin-inline-start: 4px;
+		margin-inline-start: var(--text-spacing);
 	}
 }
 

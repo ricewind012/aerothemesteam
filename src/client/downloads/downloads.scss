@@ -93,7 +93,7 @@
 
 #ContentType {
 	color: var(--blue-text);
-	gap: var(--library--text-spacing);
+	gap: var(--text-spacing);
 	height: unset;
 
 	&:not(#Highlight) {
@@ -159,7 +159,7 @@
 
 	// Hidden by #appdetailsplaysection_DetailsProgressContainer
 	display: block;
-	margin-block-start: var(--library--text-spacing);
+	margin-block-start: var(--text-spacing);
 
 	& > div {
 		@include controls.progress-bar-inner;

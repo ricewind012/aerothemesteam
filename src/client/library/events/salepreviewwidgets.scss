@@ -3,7 +3,7 @@
 @use "mixins/tooltip";
 
 #CapsulePlatform {
-	gap: var(--library--text-spacing);
+	gap: var(--text-spacing);
 	height: unset;
 
 	svg {
@@ -89,7 +89,7 @@
 
 		border-radius: 0;
 		font: inherit;
-		margin-inline-end: var(--library--text-spacing);
+		margin-inline-end: var(--text-spacing);
 		text-decoration: none;
 	}
 }

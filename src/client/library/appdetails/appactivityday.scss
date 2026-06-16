@@ -187,14 +187,14 @@
 	@include library.activity-section_rule;
 
 	margin-block-start: 3px;
-	margin-inline-start: var(--library--text-spacing);
+	margin-inline-start: var(--text-spacing);
 }
 
 #ScreenshotCaption#HasCaption {
 	border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 	font-size: var(--text--font-size-md);
 	margin-inline-end: 0;
-	margin-block-end: calc(1lh + var(--library--text-spacing));
+	margin-block-end: calc(1lh + var(--text-spacing));
 	max-width: unset;
 	padding-block: calc(var(--library--spacing-x05) / 2);
 	padding-inline: var(--library--spacing);

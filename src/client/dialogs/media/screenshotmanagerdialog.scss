@@ -185,7 +185,7 @@
 
 #UGCCount {
 	align-items: center;
-	gap: var(--library--text-spacing);
+	gap: var(--text-spacing);
 
 	&:nth-child(1) {
 		--icon: icon("thumbs-up");

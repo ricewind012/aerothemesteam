@@ -8,7 +8,7 @@
 #PageListSeparator {
 	background-color: var(--pagedsettings--tab-separator);
 	box-shadow: 0 -1px var(--pagedsettings--tab-separator2);
-	margin: 0 4px;
+	margin: 0 var(--text-spacing);
 }
 
 #PagedSettingsDialog {
