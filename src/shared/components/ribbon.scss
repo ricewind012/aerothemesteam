@@ -1,6 +1,6 @@
 @use "mixins/style";
 
-.ribbon-button {
+.RibbonButton {
 	align-items: center;
 	display: flex;
 	gap: var(--text-spacing);
@@ -8,13 +8,13 @@
 	flex-grow: 1;
 }
 
-.ribbon-button-container {
+.RibbonButtonContainer {
 	align-items: center;
 	display: flex;
 	flex-direction: var(--direction);
 }
 
-.ribbon-button-arrow {
+.RibbonButtonArrow {
 	background-color: var(--blue-text);
 	height: 100%;
 	mask: var(--icon);
@@ -23,7 +23,7 @@
 	mask-repeat: no-repeat;
 	width: 8px;
 
-	&.vertical {
+	&[data-vertical] {
 		height: 8px;
 		mask-position: center 100%;
 		mask-size: 7px 4px;
@@ -31,25 +31,25 @@
 	}
 }
 
-.ribbon-button-container {
+.RibbonButtonContainer {
 	--direction: row;
 	--icon: var(--icon-arrow-right);
 
 	cursor: pointer;
 	justify-content: space-between;
 
-	&.disabled {
+	&[data-disabled] {
 		pointer-events: none;
 	}
 
-	&.vertical {
+	&[data-vertical] {
 		--direction: column;
 		--icon: var(--icon-arrow-bottom);
 		--icon-size-sm: var(--icon-size-md);
 	}
 }
 
-.ribbon-container {
+.RibbonContainer {
 	@include style.white-gradient(
 		$opacity-start: 0.575,
 		$opacity-end: 0.15,
@@ -69,7 +69,7 @@
 	padding: var(--spacing);
 }
 
-.ribbon-section {
+.RibbonSection {
 	--shadow: 1px 1px var(--shadow-color);
 
 	border: 1px solid #8198b9;
@@ -82,7 +82,7 @@
 	font-size: var(--text--font-size-sm);
 }
 
-.ribbon-section-body {
+.RibbonSectionBody {
 	--max-item-count: 3;
 	--spacing: 5px;
 	--spacing-y: var(--spacing);
@@ -100,7 +100,7 @@
 	padding: var(--spacing-y) var(--spacing-x);
 }
 
-.ribbon-section-title {
+.RibbonSectionTitle {
 	--spacing: 1.5px;
 
 	background-image: linear-gradient(0deg, #6a89b3, #a2b6d2);
