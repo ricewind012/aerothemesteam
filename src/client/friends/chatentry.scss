@@ -1,0 +1,31 @@
+@use "mixins/controls";
+@use "mixins/style";
+
+#chatEntryActionsContainer {
+}
+
+#chatEntryActionsGroup {
+	background: none;
+	box-shadow: none;
+	gap: var(--text-spacing);
+	padding: 0;
+}
+
+#chatEntryControls {
+}
+
+#chatSubmitButton {
+	@include style.icon;
+
+	&#EmoticonPickerButton {
+		--icon: icon("emoji");
+	}
+
+	&#EmbedButton {
+		--icon: icon("link");
+	}
+}
+
+#chatTextarea {
+	@extend %textfield-base;
+}

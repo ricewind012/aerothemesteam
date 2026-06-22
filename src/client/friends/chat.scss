@@ -1,0 +1,30 @@
+.ChatRoomGroupAvatar {
+	--size: 24px;
+
+	&:where(.Small) {
+	}
+
+	&:where(.Smaller) {
+	}
+
+	&:where(.Smallish) {
+	}
+
+	&:where(.Micro) {
+	}
+}
+
+.ChatRoomGroupAvatar_initials {
+}
+
+.chatTabSetContainer {
+	-webkit-app-region: no-drag;
+}
+
+.multiChatDialog {
+	background: linear-gradient(
+		180deg,
+		var(--steamdesktop--window-gradient-start),
+		var(--steamdesktop--window-gradient-end)
+	);
+}

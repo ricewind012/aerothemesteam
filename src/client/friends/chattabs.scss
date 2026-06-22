@@ -1,0 +1,29 @@
+@use "mixins/tab";
+
+#ChatTab {
+	@include tab.item($selected: "&#Active");
+
+	height: unset;
+
+	&::before,
+	&::after {
+		inset-block-start: unset;
+	}
+}
+
+#ChatTabContent_ChatRoomName {
+	color: inherit;
+	font: inherit;
+	margin-inline-start: var(--text-spacing);
+}
+
+#CloseButton {
+	height: var(--icon-size);
+	width: var(--icon-size);
+}
+
+.ChatTabs {
+	background: none;
+	border: none;
+	box-shadow: none;
+}

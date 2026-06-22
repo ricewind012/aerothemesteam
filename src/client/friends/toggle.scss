@@ -1,0 +1,28 @@
+@use "mixins/controls";
+
+#Label {
+	color: inherit;
+	font: inherit;
+}
+
+#Toggle {
+	@include controls.input-base("checkbox", "#On");
+
+	border-radius: 0;
+	box-shadow: none;
+	height: var(--size);
+	margin: 0;
+	position: unset;
+	width: var(--size);
+}
+
+#ToggleRail,
+#ToggleSwitch {
+	display: none;
+}
+
+#ToggleRow {
+	background: none;
+	margin-block: 3px;
+	padding: 0;
+}
