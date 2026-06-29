@@ -1,3 +1,43 @@
+@use "mixins/tooltip";
+
+.chatFileUploadBtn {
+	width: auto;
+}
+
+.chatFileUploadCancel {
+	background: none;
+	box-shadow: none;
+	padding: 0;
+}
+
+.chatFileUploadFileName {
+	display: flex;
+	flex-direction: column;
+	font: inherit;
+	gap: var(--text-spacing);
+	padding: 0;
+	width: 100%;
+
+	&::after {
+		@include tooltip.separator;
+
+		content: "";
+	}
+}
+
+.chatFileUploadPreview {
+	border-radius: 0;
+	box-shadow: var(--achievementiconbase--border);
+	padding: 1px;
+}
+
+.chatFileUploadPreviewContainer {
+	@include tooltip.container;
+
+	align-items: start;
+	gap: var(--text-spacing);
+}
+
 .ChatRoomGroupAvatar {
 	--size: 24px;
 
@@ -27,4 +67,7 @@
 		var(--steamdesktop--window-gradient-start),
 		var(--steamdesktop--window-gradient-end)
 	);
+	margin: var(--steamdesktop--border-size);
+	height: var(--steamdesktop--window-size);
+	width: var(--steamdesktop--window-size);
 }

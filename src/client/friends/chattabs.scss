@@ -11,6 +11,10 @@
 	}
 }
 
+#ChatTabContent_ChatRoom {
+	height: unset;
+}
+
 #ChatTabContent_ChatRoomName {
 	color: inherit;
 	font: inherit;
@@ -18,12 +22,16 @@
 }
 
 #CloseButton {
-	height: var(--icon-size);
-	width: var(--icon-size);
+	height: var(--icon-size-md);
+	width: var(--icon-size-md);
 }
 
 .ChatTabs {
 	background: none;
 	border: none;
 	box-shadow: none;
+}
+
+.chatTabSetContainer {
+	padding-inline-start: var(--desktoptab--inverse-border-size);
 }
