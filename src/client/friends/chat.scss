@@ -1,4 +1,15 @@
+@use "mixins/style";
 @use "mixins/tooltip";
+
+.chatEntry {
+	background: var(--library--section-bg);
+	border-block-start: var(--library--border);
+	padding: var(--library--body-spacing);
+
+	& > * {
+		margin: 0;
+	}
+}
 
 .chatFileUploadBtn {
 	width: auto;
@@ -38,6 +49,51 @@
 	gap: var(--text-spacing);
 }
 
+.chatHistory {
+	margin: 0;
+	padding: 0;
+
+	.msg.timeDivision {
+		color: inherit;
+		font-size: var(--text--font-size-lg);
+		font-weight: bold;
+		margin: var(--library--spacing) 0;
+		padding: 0;
+		// TODO: make steamavatar use --icon-size
+		padding-inline-start: var(--steamavatar--size);
+
+		.horizDivider {
+			border-block-start: 1px solid var(--library--button-bg-1);
+			border-block-end: 1px solid var(--library--button-bg-3);
+			margin-inline-start: var(--text-spacing);
+		}
+
+		.preHorizDivider {
+			display: none;
+		}
+	}
+}
+
+.chatHistoryScroll {
+	padding: var(--library--body-spacing);
+}
+
+.ChatMessageEntryVoice {
+	all: unset;
+
+	margin-inline-start: var(--library--spacing);
+
+	.VoiceToggle {
+		all: unset;
+
+		@include style.icon;
+	}
+
+	.VoiceToggleIconCtn {
+		display: none;
+	}
+}
+
 .ChatRoomGroupAvatar {
 	--size: 24px;
 
@@ -57,8 +113,47 @@
 .ChatRoomGroupAvatar_initials {
 }
 
+.ChatRoomSpeaker {
+	.speaker {
+		align-items: center;
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+	}
+
+	.speakerHoverArea {
+		align-items: center;
+		gap: var(--text-spacing);
+	}
+
+	.speakerName {
+		color: var(--color);
+		margin: 0;
+	}
+
+	.speakerStatus {
+		display: none;
+	}
+}
+
 .chatTabSetContainer {
 	-webkit-app-region: no-drag;
+}
+
+.chatWindow {
+	background: var(--bg-main);
+}
+
+.friend {
+	.labelHolder {
+		color: var(--color);
+		height: unset;
+		margin-inline-start: var(--library--spacing-x05);
+	}
+}
+
+.inviteAnotherFriendButton {
+	display: none;
 }
 
 .multiChatDialog {
@@ -67,7 +162,5 @@
 		var(--steamdesktop--window-gradient-start),
 		var(--steamdesktop--window-gradient-end)
 	);
-	margin: var(--steamdesktop--border-size);
-	height: var(--steamdesktop--window-size);
-	width: var(--steamdesktop--window-size);
+	padding: var(--steamdesktop--border-size);
 }

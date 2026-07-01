@@ -1,0 +1,15 @@
+#playerName {
+	color: inherit;
+	font-size: var(--text--font-size-md);
+	font-weight: bold;
+	// TODO: make steamavatar use --icon-size
+	line-height: calc(24px / 2);
+}
+
+#richPresenceLabel {
+	color: inherit;
+	font-size: var(--text--font-size-sm);
+	line-height: calc(24px / 2);
+	opacity: 0.5;
+	margin: 0;
+}

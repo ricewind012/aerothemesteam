@@ -11,6 +11,22 @@ body {
 	font-size: var(--text--font-size-md);
 }
 
+:where(.awayOrSnooze) {
+	--color: var(--status--color-away);
+}
+
+:where(.ingame) {
+	--color: var(--status--color-ingame);
+}
+
+:where(.offline) {
+	--color: var(--status--color-offline);
+}
+
+:where(.online) {
+	--color: var(--status--color-online);
+}
+
 .part {
 	display: initial;
 }

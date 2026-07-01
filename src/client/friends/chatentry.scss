@@ -9,23 +9,61 @@
 	box-shadow: none;
 	gap: var(--text-spacing);
 	padding: 0;
+	margin-inline-start: var(--library--spacing);
 }
 
 #chatEntryControls {
+	background: none;
+	box-shadow: none;
+	gap: var(--library--spacing);
+	padding: 0;
 }
 
 #chatSubmitButton {
-	@include style.icon;
+	all: unset;
+
+	--icon: icon("");
+
+	align-items: center;
+	display: flex;
+	gap: var(--text-spacing);
+
+	&:disabled {
+		opacity: 0.5;
+	}
 
 	&#EmoticonPickerButton {
-		--icon: icon("emoji");
+		--icon: icon("smiley");
 	}
 
 	&#EmbedButton {
 		--icon: icon("link");
 	}
+
+	&::before,
+	&::after {
+		content: "";
+		display: block;
+	}
+
+	&::before {
+		@include style.icon;
+	}
+
+	&::after {
+		@include style.arrow("bottom");
+
+		background-color: currentColor;
+	}
+
+	svg {
+		display: none;
+	}
 }
 
 #chatTextarea {
 	@extend %textfield-base;
+
+	height: unset;
+	margin: 0;
 }
