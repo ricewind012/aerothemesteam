@@ -49,9 +49,22 @@
 	gap: var(--text-spacing);
 }
 
+.chatHeader {
+	min-height: 0;
+}
+
 .chatHistory {
 	margin: 0;
 	padding: 0;
+
+	.msg {
+		line-height: 1.5;
+		padding-block: calc(var(--text-spacing) / 2);
+		// TODO: make steamavatar use --icon-size
+		padding-inline-start: calc(
+			var(--steamavatar--size) + var(--text-spacing) * 2
+		);
+	}
 
 	.msg.timeDivision {
 		color: inherit;
@@ -72,6 +85,10 @@
 			display: none;
 		}
 	}
+
+	.msgText {
+		color: inherit;
+	}
 }
 
 .chatHistoryScroll {
@@ -91,6 +108,26 @@
 
 	.VoiceToggleIconCtn {
 		display: none;
+	}
+}
+
+.ChatRoomGroupDialog_history {
+	background-color: hsla(from var(--bg-main) h s l / 0.5);
+	background-image:
+		radial-gradient(at 0% 0%, transparent, var(--bg-main)),
+		linear-gradient(transparent, var(--bg-main));
+	background-repeat: no-repeat;
+	background-size: 100% 25%;
+
+	&::before {
+		background: inherit;
+		background-image: url("https://steamloopback.host/images/client_login_bg_grid.jpg");
+		background-size: 100%;
+		content: "";
+		height: 25%;
+		inset: 0;
+		mix-blend-mode: screen;
+		position: absolute;
 	}
 }
 
@@ -116,14 +153,15 @@
 .ChatRoomSpeaker {
 	.speaker {
 		align-items: center;
-		font-weight: bold;
+		gap: var(--text-spacing);
 		margin: 0;
 		padding: 0;
 	}
 
 	.speakerHoverArea {
 		align-items: center;
-		gap: var(--text-spacing);
+		font-weight: bold;
+		gap: calc(var(--text-spacing) * 2);
 	}
 
 	.speakerName {
@@ -133,6 +171,10 @@
 
 	.speakerStatus {
 		display: none;
+	}
+
+	.speakerTimeStamp {
+		all: unset;
 	}
 }
 
@@ -163,4 +205,8 @@
 		var(--steamdesktop--window-gradient-end)
 	);
 	padding: var(--steamdesktop--border-size);
+}
+
+.ScrollToBottomButton {
+	display: none;
 }
