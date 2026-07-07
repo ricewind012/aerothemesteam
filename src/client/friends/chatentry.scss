@@ -2,6 +2,7 @@
 @use "mixins/style";
 
 #chatEntryActionsContainer {
+	align-self: center;
 }
 
 #chatEntryActionsGroup {
@@ -9,7 +10,7 @@
 	box-shadow: none;
 	gap: var(--text-spacing);
 	padding: 0;
-	margin-inline-start: var(--library--spacing);
+	margin-inline: var(--text-spacing);
 }
 
 #chatEntryControls {
@@ -22,7 +23,7 @@
 #chatSubmitButton {
 	all: unset;
 
-	--icon: icon("");
+	--icon: icon("mail-send");
 
 	align-items: center;
 	display: flex;
@@ -40,20 +41,19 @@
 		--icon: icon("link");
 	}
 
-	&::before,
-	&::after {
+	&::before {
+		@include style.icon;
+
 		content: "";
 		display: block;
 	}
 
-	&::before {
-		@include style.icon;
-	}
-
-	&::after {
+	&:where(#EmbedButton, #EmoticonPickerButton)::after {
 		@include style.arrow("bottom");
 
 		background-color: currentColor;
+		content: "";
+		display: block;
 	}
 
 	svg {

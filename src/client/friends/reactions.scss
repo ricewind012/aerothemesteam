@@ -1,6 +1,10 @@
 @use "mixins/library";
 @use "mixins/style";
 
+#AddReactionIcon {
+	--icon: icon("smiley");
+}
+
 #EmoticonReaction {
 	height: var(--icon-size-sm);
 	width: var(--icon-size-sm);
