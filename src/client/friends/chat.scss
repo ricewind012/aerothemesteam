@@ -1,3 +1,4 @@
+@use "mixins/list";
 @use "mixins/style";
 @use "mixins/tooltip";
 
@@ -102,8 +103,6 @@
 .ChatMessageEntryVoice {
 	all: unset;
 
-	margin-inline-start: var(--text--spacing);
-
 	.VoiceToggle {
 		all: unset;
 
@@ -154,6 +153,15 @@
 .ChatRoomGroupAvatar_initials {
 }
 
+// Broken shit
+.chatRoomGroupNavCollapseExpand {
+	display: none;
+}
+
+.ChatRoomMemberScrollList_List {
+	border: none;
+}
+
 .ChatRoomSpeaker {
 	.speaker {
 		align-items: center;
@@ -182,6 +190,42 @@
 	}
 }
 
+.chatRoomTextChannel {
+	@include list.item;
+
+	align-items: center;
+	gap: var(--text-spacing);
+	margin-block-start: 2px;
+
+	&.ActiveTextChannel {
+		@include list.item-active;
+	}
+}
+
+.chatRoomTextChannelIcon {
+	@include style.icon($name: "discussions", $hide-selector: "*");
+
+	margin: 0;
+}
+
+.chatRoomTextChannelName {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+.chatRoomVoiceChannel {
+	@include list.item;
+
+	margin: 0;
+	margin-block-start: 2px;
+	transition: none;
+
+	&.ActiveVoiceChannel {
+		@include list.item-active;
+	}
+}
+
 .chatTabSetContainer {
 	-webkit-app-region: no-drag;
 }
@@ -191,9 +235,12 @@
 }
 
 .friend {
+	height: unset;
+
 	.labelHolder {
 		color: var(--color);
 		height: unset;
+		margin: 0;
 		margin-inline-start: var(--library--spacing-x05);
 	}
 }
