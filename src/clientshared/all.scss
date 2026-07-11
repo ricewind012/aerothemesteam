@@ -39,6 +39,11 @@ $-icons: (
 	Pause: "delete",
 	PlusCircle: "plus",
 	X_Line: "delete",
+
+	// friendsui
+	Bell: "notifications",
+	ChatSettings: "settings",
+	Invite: "plus",
 );
 
 @each $k, $v in $-icons {

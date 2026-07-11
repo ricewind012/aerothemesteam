@@ -1,3 +1,4 @@
+@use "mixins/controls";
 @use "mixins/list";
 @use "mixins/style";
 @use "mixins/tooltip";
@@ -51,6 +52,7 @@
 }
 
 .chatHeader {
+	background: none;
 	min-height: 0;
 }
 
@@ -114,6 +116,25 @@
 	}
 }
 
+.ChatRoomGroupAvatar {
+	--size: 24px;
+
+	&:where(.Small) {
+	}
+
+	&:where(.Smaller) {
+	}
+
+	&:where(.Smallish) {
+	}
+
+	&:where(.Micro) {
+	}
+}
+
+.ChatRoomGroupAvatar_initials {
+}
+
 .ChatRoomGroupDialog_history {
 	background-color: hsla(from var(--bg-main) h s l / 0.5);
 	background-image:
@@ -134,23 +155,34 @@
 	}
 }
 
-.ChatRoomGroupAvatar {
-	--size: 24px;
+.chatRoomGroupHeader {
+	border: none;
 
-	&:where(.Small) {
+	.chatRoomButton {
+		all: unset;
+
+		// TODO: replace with ribbon.button... waiting for that plugin pr
+		// (impossible challenge)
+		@include controls.button;
+
+		// TODO: too
+		display: flex;
+
+		&::after {
+			content: attr(title);
+			display: block;
+			flex-grow: 1;
+		}
+
+		svg {
+			margin: 0;
+		}
 	}
 
-	&:where(.Smaller) {
+	.chatRoomOptions {
+		flex-direction: column;
+		margin: 0;
 	}
-
-	&:where(.Smallish) {
-	}
-
-	&:where(.Micro) {
-	}
-}
-
-.ChatRoomGroupAvatar_initials {
 }
 
 // Broken shit
@@ -247,6 +279,22 @@
 
 .inviteAnotherFriendButton {
 	display: none;
+}
+
+.MemberListOptionsContainer {
+	height: unset;
+
+	.friendSearchInput {
+		@extend %textfield-base;
+	}
+
+	.socialInputContainer {
+		margin: 0;
+	}
+
+	.ToggleMemberListView {
+		@include style.icon($name: "people", $hide-selector: "*");
+	}
 }
 
 .multiChatDialog {
