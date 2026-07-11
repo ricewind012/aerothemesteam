@@ -1,5 +1,6 @@
 @use "mixins/contextmenu";
 @use "mixins/library";
+@use "mixins/style";
 
 @mixin -menu-item {
 	@include contextmenu.item;
@@ -27,31 +28,7 @@
 		padding: 11px;
 
 		#AvatarStatus {
-			--size: 4px;
-
-			background: var(--bg);
-			box-shadow:
-				calc(var(--size) / -2) 0 hsla(from var(--bg) h s l / 0.5),
-				calc(var(--size) / -1) 0 hsla(from var(--bg) h s l / 0.25);
-			height: var(--desktoptoasts--image-size);
-			width: var(--size);
-			z-index: 1;
-
-			&:where(.awayOrSnooze) {
-				--bg: var(--desktoptoasts--status-away);
-			}
-
-			&:where(.ingame) {
-				--bg: var(--desktoptoasts--status-ingame);
-			}
-
-			&:where(.offline) {
-				--bg: var(--desktoptoasts--status-offline);
-			}
-
-			&:where(.online) {
-				--bg: var(--desktoptoasts--status-online);
-			}
+			@include style.avatar-status($size: "lg");
 		}
 
 		// Text child node

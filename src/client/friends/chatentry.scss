@@ -1,0 +1,70 @@
+@use "mixins/controls";
+@use "mixins/style";
+
+#chatEntryActionsContainer {
+	align-self: center;
+}
+
+#chatEntryActionsGroup {
+	background: none;
+	box-shadow: none;
+	gap: var(--library--spacing-x05);
+	padding: 0;
+	margin-inline: var(--library--spacing-x05);
+}
+
+#chatEntryControls {
+	background: none;
+	box-shadow: none;
+	gap: var(--library--spacing);
+	padding: 0;
+}
+
+#chatSubmitButton {
+	all: unset;
+
+	--icon: icon("mail-send");
+
+	align-items: center;
+	display: flex;
+	gap: var(--text-spacing);
+
+	&:disabled {
+		opacity: 0.5;
+	}
+
+	&#EmoticonPickerButton {
+		--icon: icon("smiley");
+	}
+
+	&#EmbedButton {
+		--icon: icon("link");
+	}
+
+	&::before {
+		@include style.icon;
+
+		content: "";
+		display: block;
+	}
+
+	&:where(#EmbedButton, #EmoticonPickerButton)::after {
+		@include style.arrow("bottom");
+
+		background-color: currentColor;
+		content: "";
+		display: block;
+	}
+
+	.tool-tip-source,
+	svg {
+		display: none;
+	}
+}
+
+#chatTextarea {
+	@extend %textfield-base;
+
+	height: unset;
+	margin: 0;
+}

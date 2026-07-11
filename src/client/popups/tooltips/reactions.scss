@@ -1,0 +1,10 @@
+@use "mixins/tooltip";
+
+#ReactionHover {
+	@include tooltip.container;
+
+	#EmoticonReaction {
+		height: var(--icon-size-lg);
+		width: var(--icon-size-lg);
+	}
+}

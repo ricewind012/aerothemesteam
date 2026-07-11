@@ -1,0 +1,311 @@
+@use "mixins/controls";
+@use "mixins/list";
+@use "mixins/style";
+@use "mixins/tooltip";
+
+.chatEntry {
+	background: var(--library--section-bg);
+	border-block-start: var(--library--border);
+	padding: var(--library--body-spacing);
+
+	& > * {
+		margin: 0;
+	}
+}
+
+.chatFileUploadBtn {
+	width: auto;
+}
+
+.chatFileUploadCancel {
+	background: none;
+	box-shadow: none;
+	padding: 0;
+}
+
+.chatFileUploadFileName {
+	display: flex;
+	flex-direction: column;
+	font: inherit;
+	gap: var(--text-spacing);
+	padding: 0;
+	width: 100%;
+
+	&::after {
+		@include tooltip.separator;
+
+		content: "";
+	}
+}
+
+.chatFileUploadPreview {
+	border-radius: 0;
+	box-shadow: var(--achievementiconbase--border);
+	padding: 1px;
+}
+
+.chatFileUploadPreviewContainer {
+	@include tooltip.container;
+
+	align-items: start;
+	gap: var(--text-spacing);
+}
+
+.chatHeader {
+	background: none;
+	min-height: 0;
+}
+
+.chatHistory {
+	margin: 0;
+	padding: 0;
+
+	.msg {
+		align-items: center;
+		display: flex;
+		line-height: 1.5;
+		padding-block: calc(var(--text-spacing) / 2);
+		// TODO: make steamavatar use --icon-size
+		padding-inline-start: calc(
+			var(--steamavatar--size) + var(--text-spacing) * 2
+		);
+
+		&:not(.timeDivision):hover {
+			background-color: hsla(from var(--fg-main) h s l / 0.1);
+		}
+	}
+
+	.msg.timeDivision {
+		color: inherit;
+		font-size: var(--text--font-size-lg);
+		font-weight: bold;
+		margin: var(--library--spacing) 0;
+		padding: 0;
+
+		.horizDivider {
+			border-block: 1px solid hsla(from var(--fg-main) h s l / 0.1);
+			margin-inline-start: var(--text-spacing);
+		}
+
+		.preHorizDivider {
+			display: none;
+		}
+	}
+
+	.msgText {
+		color: inherit;
+		flex-grow: 1;
+	}
+}
+
+.chatHistoryScroll {
+	padding: var(--library--body-spacing);
+}
+
+.ChatMessageEntryVoice {
+	all: unset;
+
+	.VoiceToggle {
+		all: unset;
+
+		@include style.icon($name: "microphone");
+	}
+
+	.VoiceToggleIconCtn {
+		display: none;
+	}
+}
+
+.ChatRoomGroupAvatar {
+	--size: 24px;
+
+	&:where(.Small) {
+	}
+
+	&:where(.Smaller) {
+	}
+
+	&:where(.Smallish) {
+	}
+
+	&:where(.Micro) {
+	}
+}
+
+.ChatRoomGroupAvatar_initials {
+}
+
+.ChatRoomGroupDialog_history {
+	background-color: hsla(from var(--bg-main) h s l / 0.5);
+	background-image:
+		radial-gradient(at 0% 0%, transparent, var(--bg-main)),
+		linear-gradient(transparent, var(--bg-main));
+	background-repeat: no-repeat;
+	background-size: 100% 25%;
+
+	&::before {
+		background: inherit;
+		background-image: url("https://steamloopback.host/images/client_login_bg_grid.jpg");
+		background-size: 100%;
+		content: "";
+		height: 25%;
+		inset: 0;
+		mix-blend-mode: screen;
+		position: absolute;
+	}
+}
+
+.chatRoomGroupHeader {
+	border: none;
+
+	.chatRoomButton {
+		all: unset;
+
+		// TODO: replace with ribbon.button... waiting for that plugin pr
+		// (impossible challenge)
+		@include controls.button;
+
+		// TODO: too
+		display: flex;
+
+		&::after {
+			content: attr(title);
+			display: block;
+			flex-grow: 1;
+		}
+
+		svg {
+			margin: 0;
+		}
+	}
+
+	.chatRoomOptions {
+		flex-direction: column;
+		margin: 0;
+	}
+}
+
+// Broken shit
+.chatRoomGroupNavCollapseExpand {
+	display: none;
+}
+
+.ChatRoomMemberScrollList_List {
+	border: none;
+}
+
+.ChatRoomSpeaker {
+	.speaker {
+		align-items: center;
+		gap: var(--text-spacing);
+		margin: 0;
+		padding: 0;
+	}
+
+	.speakerHoverArea {
+		align-items: center;
+		font-weight: bold;
+		gap: calc(var(--text-spacing) * 2);
+	}
+
+	.speakerName {
+		color: var(--color);
+		margin: 0;
+	}
+
+	.speakerStatus {
+		display: none;
+	}
+
+	.speakerTimeStamp {
+		all: unset;
+	}
+}
+
+.chatRoomTextChannel {
+	@include list.item;
+
+	align-items: center;
+	gap: var(--text-spacing);
+	margin-block-start: 2px;
+
+	&.ActiveTextChannel {
+		@include list.item-active;
+	}
+}
+
+.chatRoomTextChannelIcon {
+	@include style.icon($name: "discussions", $hide-selector: "*");
+
+	margin: 0;
+}
+
+.chatRoomTextChannelName {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+.chatRoomVoiceChannel {
+	@include list.item;
+
+	margin: 0;
+	margin-block-start: 2px;
+	transition: none;
+
+	&.ActiveVoiceChannel {
+		@include list.item-active;
+	}
+}
+
+.chatTabSetContainer {
+	-webkit-app-region: no-drag;
+}
+
+.chatWindow {
+	background: var(--bg-main);
+}
+
+.friend {
+	height: unset;
+
+	.labelHolder {
+		color: var(--color);
+		height: unset;
+		margin: 0;
+		margin-inline-start: var(--library--spacing-x05);
+	}
+}
+
+.inviteAnotherFriendButton {
+	display: none;
+}
+
+.MemberListOptionsContainer {
+	height: unset;
+
+	.friendSearchInput {
+		@extend %textfield-base;
+	}
+
+	.socialInputContainer {
+		margin: 0;
+	}
+
+	.ToggleMemberListView {
+		@include style.icon($name: "people", $hide-selector: "*");
+	}
+}
+
+.multiChatDialog {
+	background: linear-gradient(
+		180deg,
+		var(--steamdesktop--window-gradient-start),
+		var(--steamdesktop--window-gradient-end)
+	);
+	padding: var(--steamdesktop--border-size);
+}
+
+.ScrollToBottomButton {
+	display: none;
+}

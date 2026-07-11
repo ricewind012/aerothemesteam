@@ -1,0 +1,45 @@
+@use "mixins/tab";
+
+#ChatTab {
+	@include tab.item($selected: "&#Active");
+
+	background: none;
+	height: unset;
+
+	&:not(#Active) {
+		color: var(--steamdesktop--top-bar-text-color);
+	}
+
+	&::before,
+	&::after {
+		inset-block-start: unset;
+	}
+}
+
+#ChatTabContent_ChatRoom {
+	height: unset;
+}
+
+#ChatTabContent_ChatRoomName {
+	color: inherit;
+	font: inherit;
+	margin-inline-start: var(--text-spacing);
+}
+
+#CloseButton {
+	height: var(--icon-size-sm);
+	width: var(--icon-size-sm);
+}
+
+.ChatTabs {
+	background: none;
+	border: none;
+	box-shadow: none;
+	padding-inline: 0;
+}
+
+.chatTabSetContainer {
+	@include tab.container;
+
+	padding-inline-start: var(--desktoptab--inverse-border-size);
+}

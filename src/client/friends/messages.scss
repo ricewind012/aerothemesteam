@@ -1,0 +1,23 @@
+@use "mixins/style";
+
+#Addons {
+	background: none;
+	box-shadow: none;
+	margin: 0;
+	padding: 0;
+	position: unset;
+
+	#Emoticon {
+		@include style.icon($hide-selector: "*");
+
+		margin-inline-start: var(--text-spacing);
+
+		&:last-child {
+			background: currentColor;
+			mask: var(--icon-arrow-bottom);
+			mask-position: center;
+			mask-repeat: no-repeat;
+			mask-size: 7px 4px;
+		}
+	}
+}
