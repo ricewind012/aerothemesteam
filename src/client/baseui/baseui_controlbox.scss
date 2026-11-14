@@ -1,0 +1,27 @@
+@use "mixins/controls";
+
+:where(#ControlBox) {
+	box-shadow: none;
+	opacity: 1;
+	outline: none;
+
+	&:where([role="combobox"]) {
+		@include controls.dropdown($disabled-class-name: "#Disabled");
+		@include controls.dropdown-arrow;
+
+		& > :first-child > span {
+			@include controls.dropdown-text;
+		}
+	}
+
+	&:where(:not([role="combobox"])) {
+		@extend %textfield-base;
+
+		padding: 1px 3px;
+	}
+
+	// Icon
+	& > :last-child {
+		display: none;
+	}
+}
