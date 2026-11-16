@@ -1,0 +1,27 @@
+@use "mixins/library";
+
+#Buttons {
+	gap: var(--library--spacing-x05);
+	margin: 0;
+}
+
+#FramerateReportingBanner {
+	@include library.spotlight;
+
+	box-shadow: none;
+	color: var(--blue-text);
+	font: inherit;
+}
+
+#Question {
+	& > :not([class]) {
+		@include library.header-secondary;
+	}
+}
+
+#Title {
+	@include library.header-primary;
+
+	// TODO: maybe unify
+	margin-block-end: var(--text-spacing);
+}

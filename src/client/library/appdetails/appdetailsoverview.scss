@@ -19,6 +19,10 @@
 #Spotlights {
 	padding: 0;
 
+	& > :not(:first-child) {
+		margin-block-start: var(--library--spacing);
+	}
+
 	& > :last-child {
 		margin-block-end: var(--library--spacing);
 	}
