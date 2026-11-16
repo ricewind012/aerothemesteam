@@ -15,7 +15,9 @@
 :where(#ListBoxOption) {
 	@include contextmenu.item;
 
-	&:where([data-focused="true"], [data-selected="true"]) {
+	background: none;
+
+	&[data-focused="true"]:not([aria-disabled="true"]) {
 		@include list.item-active;
 	}
 
