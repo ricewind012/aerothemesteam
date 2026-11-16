@@ -1,0 +1,89 @@
+@use "mixins/controls";
+@use "mixins/list";
+@use "mixins/settings";
+
+#Container {
+	--sidebar-width: 160px;
+
+	background: var(--dialog--bg);
+	display: grid;
+	gap: var(--pagedsettings--dialog-spacing);
+	grid-template-columns: var(--sidebar-width) calc(
+			100% - var(--sidebar-width) - var(--pagedsettings--dialog-spacing)
+		);
+	padding: var(--pagedsettings--dialog-spacing);
+}
+
+#Content {
+	background: var(--bg-main);
+	border: var(--pagedsettings--border);
+	height: calc(600px - var(--pagedsettings--dialog-spacing) * 2);
+
+	:where(.DialogHBar) {
+		@include settings.separator;
+
+		background: none;
+	}
+
+	.ChatGroupSettingsChannels_Row {
+		background: none;
+
+		._DialogRow {
+			@include list.item;
+		}
+
+		.ChannelDeleteButton {
+			@include controls.button;
+		}
+	}
+
+	.inviteLinkContainer {
+		.DialogDropDown {
+			text-align: start;
+		}
+
+		.DialogDropDown_Arrow {
+			position: unset;
+		}
+
+		.DialogInput_Wrapper {
+			background: none;
+			padding: 0;
+		}
+	}
+
+	.rolePriorityButton {
+		position: unset;
+
+		svg {
+			transform: none;
+		}
+	}
+
+	.rolePriorityContainer {
+		height: unset;
+		width: unset;
+	}
+}
+
+#Nav {
+	background-color: var(--bg-main);
+	border: var(--pagedsettings--border);
+	padding: 2px;
+}
+
+#NavItem {
+	@include list.item;
+
+	margin-block-end: 2px;
+	padding: 2px 6px;
+	text-transform: none;
+
+	&#Active {
+		@include list.item-active;
+	}
+}
+
+#NavTitle {
+	display: none;
+}

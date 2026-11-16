@@ -1,0 +1,11 @@
+@use "mixins/settings";
+
+#PermissionsGroup {
+	.DialogLabel {
+		@include settings.header;
+	}
+}
+
+#PermissionToggle {
+	margin-block-end: var(--text-spacing);
+}

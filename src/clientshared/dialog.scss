@@ -145,6 +145,11 @@
 	border-radius: 0;
 }
 
+:where(.DialogRequirementLabel) {
+	color: red;
+	font: inherit;
+}
+
 :where(.DialogRoundCheckboxField) {
 	height: unset;
 	margin: 0;
@@ -234,6 +239,7 @@
 		gap: var(--library--spacing-x05);
 
 		& > ._DialogLayout {
+			max-width: unset;
 			min-width: unset;
 		}
 	}
@@ -273,7 +279,9 @@
 			hsl(from var(--blue-dark) 0 s l),
 			hsl(from var(--blue-light) 0 s l)
 		);
-		border-color: hsl(from var(--library--section-header-border-color) 0 s l);
+		border-color: hsl(
+			from var(--library--section-header-border-color) 0 s l
+		);
 		color: hsl(from var(--blue-text) 0 s l);
 	}
 }

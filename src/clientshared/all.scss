@@ -79,6 +79,23 @@ $-colors: (
 body {
 	background: var(--bg-main);
 	color: var(--fg-main);
+	font-size: var(--text--font-size-md);
+}
+
+:where(.awayOrSnooze) {
+	--color: var(--status--color-away);
+}
+
+:where(.ingame) {
+	--color: var(--status--color-ingame);
+}
+
+:where(.offline) {
+	--color: var(--status--color-offline);
+}
+
+:where(.online) {
+	--color: var(--status--color-online);
 }
 
 .part {
@@ -93,6 +110,11 @@ $-icons: (
 	Pause: "delete",
 	PlusCircle: "plus",
 	X_Line: "delete",
+
+	// friendsui
+	Bell: "notifications",
+	ChatSettings: "settings",
+	Invite: "plus",
 );
 
 @each $k, $v in $-icons {

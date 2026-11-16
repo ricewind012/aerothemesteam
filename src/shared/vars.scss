@@ -73,6 +73,15 @@
 	--desktoptab--item-spacing-block: 9px;
 	--desktoptab--item-spacing-inline: 12px;
 
+	--status--color-away: hsl(from var(--blue-text) 75 s calc(l * 1.5));
+	--status--color-ingame: hsl(from var(--blue-text) 125 s calc(l * 1.5));
+	--status--color-offline: hsl(
+		from var(--blue-text) h calc(s / 2) calc(l * 1.5)
+	);
+	--status--color-online: hsl(from var(--blue-text) h calc(s * 2) calc(l * 2));
+	--status--size-md: 2px;
+	--status--size-lg: 4px;
+
 	--tag--spacing: 2.5px;
 
 	// Componenet vars
@@ -97,16 +106,6 @@
 
 	--desktoptoasts--image-color: #fff;
 	--desktoptoasts--image-size: var(--icon-size-lg);
-	--desktoptoasts--status-away: hsl(from var(--blue-text) 75 s calc(l * 1.5));
-	--desktoptoasts--status-ingame: hsl(
-		from var(--blue-text) 125 s calc(l * 1.5)
-	);
-	--desktoptoasts--status-offline: hsl(
-		from var(--blue-text) h calc(s / 2) calc(l * 1.5)
-	);
-	--desktoptoasts--status-online: hsl(
-		from var(--blue-text) h calc(s * 2) calc(l * 2)
-	);
 
 	--gamelistentry--active-bg: #8dd6ff;
 

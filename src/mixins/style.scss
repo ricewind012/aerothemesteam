@@ -9,6 +9,17 @@
 	width: $w;
 }
 
+/// @param {"md" | "lg"} $size
+@mixin avatar-status($size) {
+	--size: var(--status--size-#{$size});
+
+	background: var(--color);
+	box-shadow:
+		calc(var(--size) / -2) 0 hsla(from var(--color) h s l / 0.5),
+		calc(var(--size) / -1) 0 hsla(from var(--color) h s l / 0.25);
+	width: var(--size);
+}
+
 /// @param {string} $name - Icon name found in `assets/icons`.
 /// @param {string} $hide-selector - Hide this selector, i.e. `svg`.
 @mixin icon($name: false, $hide-selector: false) {

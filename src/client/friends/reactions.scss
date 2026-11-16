@@ -1,0 +1,37 @@
+@use "mixins/library";
+@use "mixins/style";
+
+#AddReactionIcon {
+	--icon: icon("smiley");
+}
+
+#EmoticonReaction {
+	height: var(--icon-size-sm);
+	width: var(--icon-size-sm);
+}
+
+#MessageReaction {
+	@include library.button;
+
+	gap: var(--text-spacing);
+	margin: 0;
+}
+
+#MessageReactions {
+	gap: var(--library--spacing-x05);
+}
+
+#OpenPickerButton {
+	@include style.icon("smiley");
+
+	margin: 0;
+	opacity: 1;
+
+	* {
+		display: none;
+	}
+}
+
+#ReactionCount {
+	all: unset;
+}

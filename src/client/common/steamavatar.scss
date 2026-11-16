@@ -1,3 +1,5 @@
+@use "mixins/style";
+
 #avatar {
 	border: none;
 	box-shadow: none;
@@ -30,5 +32,14 @@
 
 	&.X-Large {
 		--multiply: 2;
+	}
+}
+
+#avatarStatus {
+	@include style.avatar-status($size: "md");
+
+	#avatarHolder:where(.awayOrSnooze) & {
+		mask: none;
+		opacity: 1;
 	}
 }

@@ -1,0 +1,13 @@
+@use "mixins/settings";
+
+#DialogContent {
+	margin: 0;
+	padding: var(--pagedsettings--dialog-spacing);
+}
+
+#DialogTitle {
+	@include settings.header;
+
+	letter-spacing: 0;
+	text-transform: none;
+}
