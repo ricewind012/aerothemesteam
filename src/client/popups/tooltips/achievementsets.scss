@@ -1,0 +1,7 @@
+@use "mixins/tooltip";
+
+#CompletedSetsTooltip {
+	--color-dull-1: var(--color-tooltip-text);
+
+	@include tooltip.container;
+}

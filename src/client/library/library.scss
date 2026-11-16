@@ -3,12 +3,13 @@
 
 #AchievementsPageContainer {
 	.NarrowWindow & {
+		height: 100%;
 		margin: 0;
 		width: 100%;
 	}
 
 	#CloseButton {
-		--icon-size-sm: var(--icon-size-xl);
+		--icon-size-sm: var(--icon-size-md);
 
 		@include style.icon($name: "delete-32", $hide-selector: "*");
 
