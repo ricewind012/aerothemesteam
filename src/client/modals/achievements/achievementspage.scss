@@ -1,3 +1,74 @@
+@use "mixins/controls";
+
+[style$="--gap: var(--spacing-4); --icon-size: 54px;"] {
+	--achievementiconbase--size: var(--icon-size-lg);
+
+	padding-block-start: var(--library--body-spacing);
+	z-index: 1;
+
+	& > :first-child {
+		// Icon
+		[style*="--min-height: 16px;"] {
+			margin: 0;
+		}
+
+		// Header
+		[style="--flex-grow: 1; --direction: column; --gap: var(--spacing-1);"] {
+			color: var(--blue-text);
+			gap: var(--library--spacing-x05);
+			text-shadow: var(--library--header-text-shadow);
+
+			& > h1 {
+				font-size: var(--text--font-size-xl);
+				font-weight: bold;
+			}
+		}
+	}
+
+	& > [style="--direction: column; --gap: var(--spacing-5);"] {
+		gap: 0;
+
+		// Checkboxes container
+		& > div > div > :first-child {
+			align-items: start;
+			flex-basis: unset;
+			flex-direction: column;
+			gap: var(--text-spacing);
+			padding: 0;
+
+			& > * {
+				flex-direction: row-reverse;
+				gap: var(--text-spacing);
+			}
+		}
+
+		& > :nth-child(2) {
+			padding-inline: 0;
+		}
+	}
+
+	// Progress bar
+	[style*="--height: 10px;"] {
+		// Dimmed progress, upon hovering on group type progress
+		--color-dull-9: transparent;
+
+		@include controls.progress-bar-multicolor;
+	}
+
+	// Group header
+	[style*="line-height: 20px;"] {
+		font-weight: bold;
+	}
+}
+
+#AchievementsPage {
+	background: var(--bg-main);
+	border: none;
+	border-radius: 0;
+	box-shadow: var(--popup-shadow);
+	max-block-size: 100%;
+}
+
 #Background {
 	height: var(--library--header-img-height);
 	mask: var(--library--header-img-mask);
@@ -15,13 +86,5 @@
 #HeaderImage {
 	& > img {
 		transition: none;
-	}
-}
-
-#Page {
-	background: var(--bg-main);
-
-	#Container {
-		padding-block-start: var(--library--body-spacing);
 	}
 }

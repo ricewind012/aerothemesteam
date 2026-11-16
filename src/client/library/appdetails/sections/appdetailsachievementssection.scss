@@ -61,12 +61,6 @@
 
 #ProgressBar > div {
 	@include controls.progress-bar-multicolor;
-
-	& > div {
-		@include controls.progress-bar-multicolor-part(
-			$excluded-sel: "&:not(:last-child)"
-		);
-	}
 }
 
 #ProgressRow {

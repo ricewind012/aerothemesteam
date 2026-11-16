@@ -1,6 +1,12 @@
+@use "mixins/controls";
+
 #Unlocked {
 	--progress-bar--fill-bg: oklch(0.7461 0.1907 130.2);
 	--bg: var(--progress-bar--fill-bg);
+
+	@include controls.progress-bar-multicolor-part(
+		$excluded-sel: "&:not(:last-child)"
+	);
 
 	&#Dimmed,
 	&#NoneUnlocked {

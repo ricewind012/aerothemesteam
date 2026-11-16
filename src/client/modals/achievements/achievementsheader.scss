@@ -7,11 +7,6 @@
 	);
 }
 
-#Content {
-	gap: var(--library--spacing-x05);
-	text-shadow: var(--library--header-text-shadow);
-}
-
 #Progress {
 	backdrop-filter: blur(3px);
 	margin-block-start: var(--text-spacing);
