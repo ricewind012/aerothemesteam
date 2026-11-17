@@ -1,0 +1,42 @@
+@use "mixins/library";
+
+#CollapseButton {
+	@include library.button;
+
+	block-size: 28px;
+	inline-size: 28px;
+	max-block-size: unset;
+	padding: 0;
+
+	svg {
+		block-size: var(--icon-size-sm);
+		inline-size: var(--icon-size-sm);
+		margin: 5px;
+	}
+}
+
+#GroupHeader {
+	background: oklch(from var(--library--section-bg) l c var(--hue));
+	border-block-start: var(--library--border-size) solid;
+	border-block-start-color: oklch(
+		from var(--library--border-color) l c var(--hue)
+	);
+	color: oklch(from var(--blue-text) l c var(--hue));
+	margin-inline: calc(var(--library--body-spacing) * -1);
+
+	&#BaseGroup {
+		--hue: 143;
+	}
+
+	&#DLCGroup {
+		--hue: 286;
+	}
+
+	& > div {
+		padding: calc(var(--library--body-spacing) / 2) var(--library--body-spacing);
+
+		[style$="--gap: var(--spacing-1);"] > div:first-child {
+			@include library.header;
+		}
+	}
+}

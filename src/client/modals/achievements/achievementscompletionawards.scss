@@ -1,0 +1,14 @@
+// Make the shine and sparkles more visible, since they are less visible on
+// light themes
+
+#GroupAchievementRibbon {
+	color: inherit;
+}
+
+#Shine {
+	--shine-opacity: 1;
+}
+
+#Sparkle {
+	--sparkle-size: var(--icon-size-sm);
+}

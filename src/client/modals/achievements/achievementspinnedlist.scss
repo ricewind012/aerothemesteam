@@ -1,0 +1,11 @@
+#PinnedRow {
+	background: none;
+	margin: 0;
+}
+
+#PinnedSection {
+	gap: 0;
+	margin-block-end: calc(var(--library--body-spacing) / 2);
+	outline: none;
+	padding: 0;
+}

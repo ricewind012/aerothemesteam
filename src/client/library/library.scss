@@ -18,7 +18,10 @@
 		border-radius: 0;
 		box-shadow: none;
 		inset-block-start: var(--library--body-spacing);
-		inset-inline-end: var(--library--body-spacing);
+		inset-inline-end: calc(
+			var(--scrollbar-size) + var(--library--body-spacing)
+		);
+		position: absolute;
 	}
 }
 
@@ -69,8 +72,22 @@
 		padding: 0;
 	}
 
+	:where([data-has-value]:not([role="combobox"])),
 	:where(.DialogInput) {
 		@include library.text-input($compact: true);
+	}
+
+	:where([role="combobox"]) {
+		@include library.text-input;
+
+		&::before {
+			display: none;
+		}
+
+		span {
+			padding: 0;
+			margin-inline-end: calc(7px + var(--text-spacing));
+		}
 	}
 }
 

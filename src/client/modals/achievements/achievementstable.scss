@@ -1,0 +1,105 @@
+@use "mixins/library";
+
+// It's a virtualized list, but changing rows' height here is fine, since it
+// recalculates its height right after. It doesn't flick/shit itself while
+// scrolling, but still has an empty space at the bottom... I think it's fine
+
+%-list-item {
+	position: relative;
+
+	&::before {
+		background: var(--library--section-bg);
+		border-block-start: var(--library--border);
+		content: "";
+		inset: 0 calc(var(--library--body-spacing) * -1);
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+%-list-item-text {
+	h1 {
+		@include library.header;
+	}
+
+	& > span {
+		@include library.description;
+	}
+}
+
+#AchievementRow {
+	--achievementiconbase--size: var(--icon-size-md);
+
+	@extend %-list-item;
+
+	border: none;
+
+	& > div {
+		padding: calc(var(--library--body-spacing) / 2) 0;
+	}
+
+	& > div > :first-child [style$="--gap: var(--spacing-1);"] {
+		@extend %-list-item-text;
+
+		gap: 0;
+	}
+
+	[style="--text-color: var(--color-text-body-description);"] {
+		@include library.header-secondary;
+	}
+}
+
+#AchievementsTable {
+	[data-index] > div {
+		color: var(--blue-text);
+		padding: 0;
+
+		// ? ty valve
+		& > :empty {
+			display: none;
+		}
+	}
+
+	// Header
+	[data-index] > div > span {
+		@include library.header;
+		@extend %-list-item;
+
+		display: block;
+		padding: calc(var(--library--body-spacing) / 2) 0;
+		width: 100%;
+	}
+}
+
+#AvatarAchievement {
+	border: none;
+
+	&#AvatarUnachieved {
+		opacity: 0.5;
+	}
+}
+
+#EmptyTableDivider {
+	display: none;
+}
+
+#GlobalProgressIcon {
+	margin: 0;
+}
+
+#HiddenContent {
+	#SectionGap > & {
+		@extend %-list-item;
+
+		background: none;
+		padding: calc(var(--library--body-spacing) / 2) 0;
+
+		& > :nth-child(2) {
+			@extend %-list-item-text;
+		}
+	}
+
+	#RevealInstructions {
+		background: var(--library--section-bg);
+	}
+}

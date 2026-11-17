@@ -27,6 +27,23 @@
 	@extend %-group;
 
 	gap: 0;
+	padding: 0;
+	margin-block-start: calc(var(--library--spacing) * -1);
+
+	& > div {
+		background: linear-gradient(
+			135deg,
+			transparent var(--pct, 75%),
+			oklch(from var(--progressbar--fill-bg) l c var(--hue, h) / 0.25)
+		);
+		color: oklch(from var(--progressbar--fill-bg) calc(l / 2) c var(--hue, h));
+		padding: var(--library--spacing-x05) var(--library--spacing);
+
+		&#DLC {
+			--hue: 286;
+			--pct: 50%;
+		}
+	}
 }
 
 #IconRow {
@@ -57,6 +74,8 @@
 
 #Name {
 	@include library.header;
+
+	line-height: inherit;
 }
 
 #ProgressBar > div {

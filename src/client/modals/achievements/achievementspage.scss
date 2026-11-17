@@ -1,20 +1,29 @@
 @use "mixins/controls";
+@use "mixins/library";
 
 [style$="--gap: var(--spacing-4); --icon-size: 54px;"] {
-	--achievementiconbase--size: var(--icon-size-lg);
-
+	font-size: var(--text--font-size-md);
 	padding-block-start: var(--library--body-spacing);
-	z-index: 1;
 
 	& > :first-child {
+		& > div > div {
+			--grid-areas: "capsule title" "capsule header";
+
+			gap: var(--library--spacing);
+		}
+
 		// Icon
 		[style*="--min-height: 16px;"] {
+			block-size: var(--icon-size-md);
+			inline-size: var(--icon-size-md);
 			margin: 0;
 		}
 
 		// Header
 		[style="--flex-grow: 1; --direction: column; --gap: var(--spacing-1);"] {
 			color: var(--blue-text);
+			font-size: var(--text--font-size-md);
+			font-weight: bold;
 			gap: var(--library--spacing-x05);
 			text-shadow: var(--library--header-text-shadow);
 
@@ -22,6 +31,14 @@
 				font-size: var(--text--font-size-xl);
 				font-weight: bold;
 			}
+		}
+
+		// Right side links
+		[style="--direction: row; --align: center; --gap: var(--spacing-4);"] {
+			align-items: end;
+			flex-direction: column;
+			gap: var(--text-spacing);
+			margin-block-start: calc(var(--icon-size-md) + var(--text-spacing));
 		}
 	}
 
@@ -41,23 +58,19 @@
 				gap: var(--text-spacing);
 			}
 		}
-
-		& > :nth-child(2) {
-			padding-inline: 0;
-		}
 	}
 
 	// Progress bar
 	[style*="--height: 10px;"] {
 		// Dimmed progress, upon hovering on group type progress
-		--color-dull-9: transparent;
+		//--color-dull-9: transparent;
 
 		@include controls.progress-bar-multicolor;
 	}
 
 	// Group header
 	[style*="line-height: 20px;"] {
-		font-weight: bold;
+		@include library.header;
 	}
 }
 
@@ -77,14 +90,4 @@
 
 #Blur {
 	display: none;
-}
-
-#HeaderContainer {
-	padding-inline: var(--library--body-spacing);
-}
-
-#HeaderImage {
-	& > img {
-		transition: none;
-	}
 }

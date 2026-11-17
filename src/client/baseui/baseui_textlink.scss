@@ -1,0 +1,5 @@
+@use "mixins/style";
+
+:where(#TextLink) {
+	@include style.link;
+}

@@ -46,32 +46,32 @@
 // Same colors, but from the same base as the progress bar background
 #DriveUsage {
 	&DLC {
-		--bg: #9e22c4;
+		--bg: hsl(286 70% 45%);
 	}
 
 	&Games {
-		--bg: #22b9c4;
+		--bg: hsl(184 70% 45%);
 	}
 
 	&Media {
-		--bg: #22c42f;
+		--bg: hsl(125 70% 45%);
 	}
 
 	&Other,
 	&OtherDot {
-		--bg: #2248c4;
+		--bg: hsl(226 70% 45%);
 	}
 
 	&Shader {
-		--bg: #c4227b;
+		--bg: hsl(327 70% 45%);
 	}
 
 	&Updates {
-		--bg: #c45522;
+		--bg: hsl(19 70% 45%);
 	}
 
 	&Workshop {
-		--bg: #84c422;
+		--bg: hsl(84 70% 45%);
 	}
 }
 
