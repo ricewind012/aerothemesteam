@@ -1,8 +1,7 @@
 # **INSTALL THE MOTHERFUCKING PLUGIN**
 
-On theme installation, a dialog for handling the plugin installation should appear. It will lead you to the plugin page and give you an option to enable it after you install it and restart Steam. In case the plugin will stop working, it will give you the option to revert your theme to default.
-
-This theme requires a [plugin](https://steambrew.app/plugin?id=dc691b7d877b) for the top bar and some other additional elements. The menu bar, links to a game's store page, community hub, etc. and some other things will not be accessible if not installed. Learn to read if you missed this.
+(change link here lol XDDDDDDDDDDDDDDDDDDDDDD)
+This theme requires a [plugin](wat) for the top bar and some other additional elements. It will still work if not installed, but the main idea revolves around having it installed. In case the plugin stops working, the theme will work, but look as if it wasn't installed.
 
 # Microsoft Office 2007 Styled Theme
 
