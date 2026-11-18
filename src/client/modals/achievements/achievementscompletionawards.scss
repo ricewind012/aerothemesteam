@@ -2,7 +2,12 @@
 // light themes
 
 #GroupAchievementRibbon {
+	--ribbon-width: (var(--height) - var(--height) / 3);
+
 	color: inherit;
+	margin-inline: calc(
+		(var(--achievementiconbase--size) - var(--ribbon-width)) / 2
+	);
 }
 
 #Shine {

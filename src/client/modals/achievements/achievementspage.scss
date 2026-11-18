@@ -1,11 +1,13 @@
 @use "mixins/controls";
-@use "mixins/library";
 
 [style$="--gap: var(--spacing-4); --icon-size: 54px;"] {
 	font-size: var(--text--font-size-md);
-	padding-block-start: var(--library--body-spacing);
+	gap: 0;
+	padding: 0;
 
 	& > :first-child {
+		padding: var(--library--body-spacing);
+
 		& > div > div {
 			--grid-areas: "capsule title" "capsule header";
 
@@ -46,31 +48,31 @@
 		gap: 0;
 
 		// Checkboxes container
-		& > div > div > :first-child {
-			align-items: start;
-			flex-basis: unset;
-			flex-direction: column;
-			gap: var(--text-spacing);
-			padding: 0;
+		& > :first-child {
+			margin: var(--library--spacing) var(--library--body-spacing);
 
-			& > * {
-				flex-direction: row-reverse;
+			& > div > :first-child {
+				align-items: start;
+				flex-basis: unset;
+				flex-direction: column;
 				gap: var(--text-spacing);
+				padding: 0;
+
+				& > * {
+					flex-direction: row-reverse;
+					gap: var(--text-spacing);
+				}
 			}
+		}
+
+		[data-has-value]:not([role="combobox"]) {
+			line-height: 24px;
 		}
 	}
 
 	// Progress bar
 	[style*="--height: 10px;"] {
-		// Dimmed progress, upon hovering on group type progress
-		//--color-dull-9: transparent;
-
 		@include controls.progress-bar-multicolor;
-	}
-
-	// Group header
-	[style*="line-height: 20px;"] {
-		@include library.header;
 	}
 }
 

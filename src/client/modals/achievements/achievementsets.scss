@@ -52,12 +52,16 @@
 	[style^="--max-height: calc(4"] {
 		background: var(--table--bg);
 		border: 1px solid var(--table--border);
-		padding: var(--spacing-1);
+		max-block-size: calc(4px * 2 + 16px * 4);
+		padding: 4px;
 
 		& > div {
-			gap: var(--spacing-2) var(--spacing-4);
+			flex-direction: column;
+			gap: 0;
 
 			& > div {
+				display: list-item;
+				margin-inline-start: 16px;
 				padding: 0;
 
 				& > :nth-child(2) {

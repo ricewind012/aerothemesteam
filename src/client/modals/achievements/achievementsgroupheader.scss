@@ -16,13 +16,16 @@
 }
 
 #GroupHeader {
-	background: oklch(from var(--library--section-bg) l c var(--hue));
-	border-block-start: var(--library--border-size) solid;
-	border-block-start-color: oklch(
-		from var(--library--border-color) l c var(--hue)
+	--l-diff: 0.025;
+
+	background: oklch(
+		from var(--library--section-bg) calc(l - var(--l-diff)) c var(--hue)
 	);
-	color: oklch(from var(--blue-text) l c var(--hue));
-	margin-inline: calc(var(--library--body-spacing) * -1);
+	border-block-end: var(--library--border-size) solid;
+	border-block-end-color: oklch(
+		from var(--library--border-color) calc(l - var(--l-diff)) c var(--hue)
+	);
+	color: oklch(from var(--blue-text) calc(l + var(--l-diff)) c var(--hue));
 
 	&#BaseGroup {
 		--hue: 143;
@@ -33,10 +36,26 @@
 	}
 
 	& > div {
-		padding: calc(var(--library--body-spacing) / 2) var(--library--body-spacing);
+		padding: calc(var(--library--spacing) / 2) var(--library--spacing);
 
-		[style$="--gap: var(--spacing-1);"] > div:first-child {
-			@include library.header;
+		[style$="--gap: var(--spacing-1);"] {
+			gap: 0;
+
+			& > div:first-child {
+				@include library.header;
+			}
 		}
+
+		[style$="--gap: var(--spacing-2);"] > :first-child {
+			@include library.description;
+		}
+	}
+}
+
+#GroupProgressBar {
+	height: 1lh;
+
+	&::after {
+		--wg-size: 0.5lh;
 	}
 }

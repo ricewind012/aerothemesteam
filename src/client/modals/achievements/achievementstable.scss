@@ -5,16 +5,11 @@
 // scrolling, but still has an empty space at the bottom... I think it's fine
 
 %-list-item {
-	position: relative;
+	--achievementiconbase--size: var(--icon-size-md);
 
-	&::before {
-		background: var(--library--section-bg);
-		border-block-start: var(--library--border);
-		content: "";
-		inset: 0 calc(var(--library--body-spacing) * -1);
-		position: absolute;
-		z-index: -1;
-	}
+	background: var(--library--section-bg);
+	border-block-end: var(--library--border);
+	padding: calc(var(--library--spacing) / 2) var(--library--spacing);
 }
 
 %-list-item-text {
@@ -28,14 +23,10 @@
 }
 
 #AchievementRow {
-	--achievementiconbase--size: var(--icon-size-md);
-
 	@extend %-list-item;
 
-	border: none;
-
 	& > div {
-		padding: calc(var(--library--body-spacing) / 2) 0;
+		padding: 0;
 	}
 
 	& > div > :first-child [style$="--gap: var(--spacing-1);"] {
@@ -66,7 +57,6 @@
 		@extend %-list-item;
 
 		display: block;
-		padding: calc(var(--library--body-spacing) / 2) 0;
 		width: 100%;
 	}
 }
@@ -83,6 +73,33 @@
 	display: none;
 }
 
+#FilteredAchievementsRow {
+	@extend %-list-item;
+
+	display: grid;
+	gap: 0 var(--spacing-2);
+	grid-template-areas: "icon header" "icon description";
+	grid-template-columns: min-content 1fr;
+
+	#RevealInstructions {
+		@include library.description;
+
+		grid-area: description;
+	}
+
+	& > :first-child {
+		block-size: var(--achievementiconbase--size);
+		grid-area: icon;
+		inline-size: var(--achievementiconbase--size);
+	}
+
+	& > :nth-child(2) {
+		@include library.header;
+
+		grid-area: header;
+	}
+}
+
 #GlobalProgressIcon {
 	margin: 0;
 }
@@ -90,9 +107,6 @@
 #HiddenContent {
 	#SectionGap > & {
 		@extend %-list-item;
-
-		background: none;
-		padding: calc(var(--library--body-spacing) / 2) 0;
 
 		& > :nth-child(2) {
 			@extend %-list-item-text;
