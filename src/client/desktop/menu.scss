@@ -1,13 +1,13 @@
 #MenuWrapper {
 	color: color-mix(
 		in srgb,
-		var(--steamdesktop_top-bar-text-color) 50%,
+		var(--steamdesktop--top-bar-text-color) 50%,
 		transparent
 	);
 	transition: none;
 
 	&:hover {
-		color: var(--steamdesktop_top-bar-text-color);
+		color: var(--steamdesktop--top-bar-text-color);
 	}
 
 	&#MenuOpen {
@@ -15,12 +15,12 @@
 			linear-gradient(
 				0deg,
 				transparent 96.5%,
-				var(--steamdesktop_window-gradient-top-color) 100%
+				var(--steamdesktop--window-gradient-top-color) 100%
 			),
 			linear-gradient(
-				var(--steamdesktop_window-gradient-end),
-				var(--steamdesktop_window-gradient-start)
+				var(--steamdesktop--window-gradient-end),
+				var(--steamdesktop--window-gradient-start)
 			);
-		color: var(--steamdesktop_top-bar-text-color);
+		color: var(--steamdesktop--top-bar-text-color);
 	}
 }

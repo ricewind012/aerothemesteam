@@ -1,0 +1,95 @@
+@use "mixins/library";
+@use "mixins/style";
+@use "mixins/tooltip";
+
+#CapsulePlatform {
+	gap: var(--text-spacing);
+	height: unset;
+
+	svg {
+		color: inherit;
+	}
+}
+
+#StoreSalePriceWidgetContainer {
+	height: calc(var(--text--font-size-md) + var(--library--spacing));
+
+	#StoreSalePriceBox {
+		@include library.header;
+
+		padding: var(--library--spacing-x05) var(--library--spacing);
+	}
+}
+
+#StoreSaleWidgetBgTint {
+	// Make the blurred bg a bit more visible for the bottom right gradient
+	background: radial-gradient(
+		at 0% 0%,
+		hsla(from var(--library--section-bg) h s l / 0.75) 70%,
+		white
+	);
+
+	#CapsuleImage {
+		@include tooltip.bigger--bg-blur;
+
+		// For some reason this makes the background smoother
+		backdrop-filter: blur(0);
+		// TODO(vars)
+		filter: blur(18px) saturate(4);
+		opacity: 1;
+	}
+}
+
+#StoreSaleWidgetContainer {
+	background: var(--salepreviewwidgets--bg);
+	border: 2px solid transparent;
+	border-image: var(--salepreviewwidgets--bg) 1;
+	box-shadow: none;
+
+	#CapsuleImage {
+		border-radius: 0;
+	}
+}
+
+#StoreSaleWidgetRelease {
+	@include library.header;
+
+	line-height: inherit;
+	margin: 0;
+
+	&::after {
+		--size: 4px;
+
+		background-color: color-mix(in srgb, currentColor 25%, transparent);
+		content: "";
+		height: var(--size);
+		margin-inline: var(--library--spacing-x05);
+		width: var(--size);
+	}
+}
+
+#StoreSaleWidgetRight {
+	padding: var(--library--spacing);
+}
+
+#StoreSaleWidgetShortDesc {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+#StoreSaleWidgetTags {
+	height: calc(var(--text--font-size-sm) + var(--tag--spacing) * 2);
+	line-height: 1;
+	margin-block: var(--library--spacing-x05);
+
+	#AppTag {
+		@include style.tag;
+
+		border-radius: 0;
+		font: inherit;
+		margin-inline-end: var(--text-spacing);
+		text-decoration: none;
+	}
+}

@@ -3,7 +3,7 @@
 
 #ButtonContainer {
 	flex-wrap: wrap;
-	margin-block-start: calc(var(--library_spacing-x05) * -1);
+	margin-block-start: calc(var(--library--spacing-x05) * -1);
 }
 
 #FeaturedItem {
@@ -22,7 +22,7 @@
 }
 
 #FeaturedItemHideButton {
-	width: var(--library_icon-size);
+	width: var(--library--icon-size);
 }
 
 #FeaturedItemLink {

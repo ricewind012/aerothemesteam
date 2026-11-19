@@ -6,14 +6,14 @@
 
 #ListItemTooltipDetail {
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 }
 
 #ListItemTooltipDetailSection {
-	margin-inline: var(--tooltip_description-spacing);
+	margin-inline: var(--tooltip--description-spacing);
 
 	&:last-child {
-		margin-block-end: var(--tooltip_description-spacing);
+		margin-block-end: var(--tooltip--description-spacing);
 	}
 }
 
@@ -22,5 +22,5 @@
 }
 
 #TitleRow {
-	margin-block-end: var(--tooltip_description-spacing);
+	margin-block-end: var(--tooltip--description-spacing);
 }

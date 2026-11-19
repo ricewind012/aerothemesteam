@@ -1,0 +1,46 @@
+@use "mixins/contextmenu";
+@use "mixins/list";
+
+:where(#ListBox) {
+	@include contextmenu.container;
+	@include contextmenu.container-left-border;
+
+	filter: none;
+
+	&::before {
+		margin: var(--contextmenu--container-spacing);
+	}
+
+	[role="separator"] {
+		@include contextmenu.separator;
+
+		inline-size: unset;
+	}
+}
+
+:where(#ListBoxOption) {
+	@include contextmenu.item;
+
+	background: none;
+
+	&[data-focused="true"]:not([aria-disabled="true"]) {
+		@include list.item-active;
+	}
+
+	&:has([role="checkbox"][aria-checked="true"]) {
+		&::before {
+			@include contextmenu.icon("checkmark");
+
+			box-sizing: border-box;
+			content: "";
+		}
+	}
+
+	&[aria-disabled="true"] {
+		@include list.item-disabled;
+	}
+
+	[role="checkbox"] {
+		display: none;
+	}
+}

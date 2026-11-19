@@ -5,7 +5,7 @@
 }
 
 #AddToFeed {
-	margin-block-end: var(--library_spacing);
+	margin-block-end: var(--library--spacing);
 }
 
 #EndRule {
@@ -15,11 +15,11 @@
 #EndText {
 	@include library.activity-section_header;
 
-	padding: 0 var(--library_text-spacing);
+	padding: 0 var(--text-spacing);
 }
 
 #FetchMoreContainer {
-	margin-block-start: var(--library_spacing-x05);
+	margin-block-start: var(--library--spacing-x05);
 	margin-block-end: 0;
 }
 
@@ -27,7 +27,7 @@
 	@include library.placeholder;
 
 	color: inherit;
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	margin-block-end: 0;
 	min-height: unset;
 }

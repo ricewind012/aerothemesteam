@@ -1,0 +1,17 @@
+@use "mixins/controls";
+
+:where(#Button) {
+	@include controls.button;
+
+	&:where(:disabled, [aria-disabled="true"]) {
+		// TODO: mixin
+		--bg: #f4f4f4;
+
+		--border: #adb2b5;
+		--inner-border: #fcfcfc;
+		--grad-top-start: var(--bg);
+		--grad-top-end: var(--bg);
+		--grad-bottom-start: var(--bg);
+		--grad-bottom-end: var(--bg);
+	}
+}

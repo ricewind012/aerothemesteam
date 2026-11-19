@@ -33,24 +33,24 @@
 			box-shadow:
 				calc(var(--size) / -2) 0 hsla(from var(--bg) h s l / 0.5),
 				calc(var(--size) / -1) 0 hsla(from var(--bg) h s l / 0.25);
-			height: var(--desktoptoasts_image-size);
+			height: var(--desktoptoasts--image-size);
 			width: var(--size);
 			z-index: 1;
 
 			&:where(.awayOrSnooze) {
-				--bg: var(--desktoptoasts_status-away);
+				--bg: var(--desktoptoasts--status-away);
 			}
 
 			&:where(.ingame) {
-				--bg: var(--desktoptoasts_status-ingame);
+				--bg: var(--desktoptoasts--status-ingame);
 			}
 
 			&:where(.offline) {
-				--bg: var(--desktoptoasts_status-offline);
+				--bg: var(--desktoptoasts--status-offline);
 			}
 
 			&:where(.online) {
-				--bg: var(--desktoptoasts_status-online);
+				--bg: var(--desktoptoasts--status-online);
 			}
 		}
 
@@ -82,9 +82,7 @@
 		}
 
 		#Icon {
-			--size: 64px;
-
-			color: var(--desktoptoasts_image-color);
+			color: var(--desktoptoasts--image-color);
 			height: var(--size);
 			inset-block-start: calc(var(--size) / 4);
 			inset-inline-start: calc(var(--size) / -4);
@@ -107,7 +105,7 @@
 		#Timestamp {
 			@include library.header-secondary;
 
-			opacity: var(--library_secondary-text-opacity);
+			opacity: var(--library--secondary-text-opacity);
 		}
 
 		#Title {
@@ -120,7 +118,7 @@
 	#Icon {
 		@include contextmenu.icon-pos;
 
-		color: var(--listitem_fg-secondary);
+		color: var(--listitem--fg-secondary);
 		inset-block-start: 2px;
 
 		svg {
@@ -149,8 +147,8 @@
 	}
 
 	#StandardLogoDimensions {
-		height: var(--desktoptoasts_image-size);
-		width: var(--desktoptoasts_image-size);
+		height: var(--desktoptoasts--image-size);
+		width: var(--desktoptoasts--image-size);
 		// For the notification popup icon
 		z-index: 1;
 
@@ -166,7 +164,7 @@
 	}
 
 	#StandardNotificationSubText {
-		color: var(--listitem_fg-secondary);
+		color: var(--listitem--fg-secondary);
 		font: inherit;
 
 		span {

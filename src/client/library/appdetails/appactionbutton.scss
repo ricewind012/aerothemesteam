@@ -22,20 +22,6 @@
 
 		margin-inline-end: 6px;
 
-		// TODO: refactor - move these somewhere one day
-		&.SVGIcon_Download {
-			--icon: icon("download");
-		}
-
-		&.SVGIcon_Play {
-			--icon: icon("play");
-		}
-
-		&.SVGIcon_Pause,
-		&.SVGIcon_X_Line {
-			--icon: icon("cancel");
-		}
-
 		&:not(.SVGIcon_Button) {
 			--icon: icon("update");
 		}

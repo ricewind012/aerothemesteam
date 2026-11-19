@@ -5,13 +5,13 @@
 }
 
 #RecentGame {
-	margin-inline-end: var(--library_spacing);
+	margin-inline-end: var(--library--spacing);
 }
 
 #RecentGameMediaContainer {
-	margin-block-start: var(--library_text-spacing);
+	margin-block-start: var(--text-spacing);
 }
 
 #RecentGames {
-	padding: var(--library_spacing);
+	padding: var(--library--spacing);
 }

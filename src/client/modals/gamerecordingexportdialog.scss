@@ -2,13 +2,13 @@
 
 #Content {
 	color: var(--blue-text);
-	font-size: var(--font-size);
-	margin: var(--library_spacing);
+	font-size: var(--text--font-size-md);
+	margin: var(--library--spacing);
 
 	hr {
 		border-block-end: 2px solid transparent;
 		border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
-		margin-block: var(--library_spacing-x05);
+		margin-block: var(--library--spacing-x05);
 	}
 }
 
@@ -19,23 +19,23 @@
 		@include library.header-primary;
 
 		letter-spacing: 0;
-		margin-block-end: var(--library_spacing-x05);
+		margin-block-end: var(--library--spacing-x05);
 		text-transform: none;
 	}
 
 	#Primary {
 		@include library.header-secondary;
 
-		margin-block-end: var(--library_spacing-x05);
+		margin-block-end: var(--library--spacing-x05);
 	}
 }
 
 #ExportPreview {
-	gap: var(--library_spacing);
-	padding-block-start: var(--library_spacing);
+	gap: var(--library--spacing);
+	padding-block-start: var(--library--spacing);
 
 	#Thumbnail {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--rounding-lg);
 	}
 }
 

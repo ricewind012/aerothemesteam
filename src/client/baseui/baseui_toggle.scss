@@ -1,0 +1,18 @@
+@use "mixins/controls";
+
+:where(#Handle),
+:where(#Track) {
+	display: none;
+}
+
+:where(#Root) {
+	@include controls.input-base(
+		$name: "checkbox",
+		$checked-class-name: "[aria-checked='true']",
+		$disabled-class-name: ""
+	);
+
+	border-radius: 0;
+	height: var(--size);
+	width: var(--size);
+}

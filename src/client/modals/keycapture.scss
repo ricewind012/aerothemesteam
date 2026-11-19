@@ -2,8 +2,8 @@
 @use "mixins/style";
 
 #KeyCaptureBottomRow {
-	gap: var(--library_spacing-x05);
-	margin: var(--library_spacing);
+	gap: var(--library--spacing-x05);
+	margin: var(--library--spacing);
 	margin-block-start: auto;
 
 	.DialogButton {
@@ -13,14 +13,14 @@
 
 #KeyCaptureCenter {
 	align-items: start;
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 	margin-block-start: 0;
 
 	#Explainer {
 		@include modal.description;
 
 		font-weight: bold;
-		margin-block-end: var(--library_spacing-x05);
+		margin-block-end: var(--library--spacing-x05);
 	}
 }
 
@@ -37,7 +37,7 @@
 #KeyCaptureHeader #Subhead {
 	@include modal.description;
 
-	margin: var(--library_spacing);
+	margin: var(--library--spacing);
 }
 
 #KeyCaptureModal {

@@ -8,7 +8,7 @@
 }
 
 #BackgroundSettingGameNameRow {
-	gap: 4px;
+	gap: var(--text-spacing);
 }
 
 #BackgroundSettingOperator {
@@ -45,13 +45,13 @@
 }
 
 #GameIconAndName {
-	gap: 4px;
+	gap: var(--text-spacing);
 
 	img,
 	svg {
 		border-radius: 0;
-		height: var(--icon-size);
-		width: var(--icon-size);
+		height: var(--icon-size-sm);
+		width: var(--icon-size-sm);
 	}
 
 	span {
@@ -63,10 +63,10 @@
 		width: 100%;
 
 		&:after {
-			border-block-start: var(--pagedsettings_separator);
+			border-block-start: var(--pagedsettings--separator);
 			content: "";
 			flex: 1 1 0;
-			margin-inline-start: 4px;
+			margin-inline-start: var(--text-spacing);
 		}
 	}
 }
@@ -80,7 +80,7 @@
 
 	#BackgroundSetting & {
 		letter-spacing: 0;
-		margin-block-end: 4px;
+		margin-block-end: var(--text-spacing);
 		text-transform: unset;
 	}
 }
@@ -123,7 +123,7 @@
 	background-color: transparent;
 	border: none;
 	box-shadow: none;
-	gap: 4px;
+	gap: var(--text-spacing);
 	padding: 0;
 }
 

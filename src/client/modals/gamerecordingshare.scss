@@ -15,8 +15,8 @@
 	#PlatformIcon {
 		color: inherit;
 		fill: currentColor;
-		height: var(--icon-size);
-		width: var(--icon-size);
+		height: var(--icon-size-sm);
+		width: var(--icon-size-sm);
 
 		.DialogMenuPosition & {
 			position: absolute;
@@ -28,14 +28,14 @@
 #CreateLinkDialog,
 #SendClipDialog {
 	.DialogFooter {
-		margin: var(--library_spacing);
+		margin: var(--library--spacing);
 		margin-block-start: 0;
 	}
 }
 
 #Content {
-	gap: var(--library_spacing-x05);
-	padding: var(--library_spacing);
+	gap: var(--library--spacing-x05);
+	padding: var(--library--spacing);
 
 	#Error {
 		color: hsl(from var(--blue-text) 0 s l);

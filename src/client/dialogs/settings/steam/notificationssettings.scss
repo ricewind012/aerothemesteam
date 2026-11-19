@@ -1,42 +1,3 @@
-#CheckboxColumn {
-	align-items: start;
-	color: inherit;
-	font-size: var(--font-size);
-}
-
-#CheckboxHeaders {
-	padding: 0;
-	position: unset;
-
-	#NotifyViaHeader {
-		font-size: var(--font-size);
-		font-style: normal;
-		opacity: 0.5;
-	}
-}
-
-#NotificationDescription {
-	color: inherit;
-	font: inherit;
-	margin: 0;
-}
-
-#NotificationGroup {
-	background-color: transparent;
-	border: none;
-}
-
-#NotificationPrefDetails {
-	background-color: transparent;
-	box-shadow: none;
-	padding-block-start: 0;
-	padding-inline-start: 20px;
-}
-
-#NotificationSection {
-	font: inherit;
-}
-
 #NotificationSectionHeader {
 	position: relative;
 
@@ -47,12 +8,6 @@
 		inset-inline-start: unset;
 		margin: 0;
 		position: absolute;
-	}
-}
-
-#PrefDetailsToggle {
-	svg {
-		height: unset;
 	}
 }
 

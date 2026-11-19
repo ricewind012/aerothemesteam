@@ -1,10 +1,10 @@
 @use "mixins/library";
 
 #Badge {
-	height: var(--library_icon-size);
+	height: var(--library--icon-size);
 	margin: 0;
-	margin-inline-end: var(--library_spacing);
-	width: var(--library_icon-size);
+	margin-inline-end: var(--library--spacing);
+	width: var(--library--icon-size);
 
 	&#EmptyCircle {
 		@include library.placeholder;

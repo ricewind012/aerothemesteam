@@ -4,7 +4,7 @@
 @mixin _details-section {
 	align-items: center;
 	flex-direction: row;
-	gap: var(--library_text-spacing);
+	gap: var(--text-spacing);
 	justify-content: start;
 	margin: 0;
 	padding: 0;
@@ -36,10 +36,11 @@
 
 #Container {
 	inset-block-start: calc(
-		var(--library_header-img-height) * -1 + var(--library_body-spacing) * 2 +
+		var(--library--header-img-height) * -1 + var(--library--body-spacing) * 2 +
 			1lh + 9px
 	);
 	position: absolute;
+	text-shadow: var(--library--header-text-shadow);
 
 	svg * {
 		display: none;
@@ -100,7 +101,7 @@
 #GameStatsSection {
 	flex-direction: column;
 	flex-wrap: nowrap;
-	gap: var(--library_game-stat-spacing);
+	gap: var(--library--game-stat-spacing);
 }
 
 #HideWhenNarrow {
@@ -108,8 +109,10 @@
 }
 
 #InnerContainer {
-	margin-inline-start: calc(var(--library_icon-size) + var(--library_spacing));
-	padding: 0 var(--library_body-spacing);
+	margin-inline-start: calc(
+		var(--library--icon-size) + var(--library--spacing)
+	);
+	padding: 0 var(--library--body-spacing);
 }
 
 #PlayBar {
@@ -119,7 +122,7 @@
 
 #PlayBarDetailLabel {
 	color: var(--fg-main);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	line-height: 1;
 }
 
@@ -130,7 +133,7 @@
 
 #PlayBarLabel {
 	color: var(--blue-text);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	font-weight: bold;
 	line-height: 1;
 	letter-spacing: 0;
@@ -155,7 +158,7 @@
 #StatusAndStats {
 	flex-direction: column;
 	flex-wrap: unset;
-	gap: var(--library_game-stat-spacing);
+	gap: var(--library--game-stat-spacing);
 	margin-inline-start: 14px;
 	max-height: unset;
 }

@@ -2,15 +2,15 @@
 @use "mixins/style";
 
 #Controls {
-	margin-block-start: var(--library_spacing-x05);
-	margin-block-end: var(--library_spacing);
+	margin-block-start: var(--library--spacing-x05);
+	margin-block-end: var(--library--spacing);
 	max-height: unset;
 	padding: 0;
 }
 
 #EmoticonButton {
 	background-color: transparent;
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 	height: unset;
 	width: unset;
 
@@ -45,7 +45,7 @@
 
 	align-items: center;
 	display: flex;
-	gap: var(--library_spacing-x05);
+	gap: var(--library--spacing-x05);
 	width: unset;
 
 	&::before {

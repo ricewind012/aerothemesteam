@@ -2,31 +2,10 @@
 @use "mixins/library";
 @use "mixins/style";
 
-#AchievementProgressContainer {
-	@include controls.progress-bar-outer;
-
-	margin-block-start: var(--library_text-spacing);
-	margin-block-end: 0;
-}
-
-#AchievementProgress {
-	@include controls.progress-bar-inner;
-}
-
-#Additional {
-	margin: 0;
-
-	#Featured + & {
-		border-block-end: var(--library_border);
-		margin: 0 calc(var(--library_spacing) * -1);
-		padding: var(--library_spacing);
-	}
-}
-
-#AdditionalItem:not(#RemainderContainer) {
-	box-shadow: var(--achievementiconbase_border);
-	height: unset;
-	margin-inline-end: var(--library_spacing-x05);
+%-group {
+	border-block-end: var(--library--border);
+	margin: 0 calc(var(--library--spacing) * -1);
+	padding: var(--library--spacing);
 }
 
 #Desc {
@@ -34,64 +13,88 @@
 
 	-webkit-line-clamp: 1;
 	line-height: unset;
-
-	#RemainderContainer & {
-		all: unset;
-
-		@include style.link;
-	}
 }
 
 #Featured {
 	background-color: #d1e1b9;
-	border-block-end: var(--library_border);
-	margin: calc(var(--library_spacing) * -1);
-	margin-block-end: 0;
-	padding: 0 var(--library_spacing);
+	border-block-end: var(--library--border);
+	margin: calc(var(--library--spacing) * -1);
+	margin-block: 0;
+	padding: var(--library--spacing-x05) var(--library--spacing);
+}
+
+#GroupsSection {
+	@extend %-group;
+
+	gap: 0;
+	padding: 0;
+	margin-block-start: calc(var(--library--spacing) * -1);
+
+	& > div {
+		background: linear-gradient(
+			135deg,
+			transparent var(--pct, 75%),
+			oklch(from var(--progressbar--fill-bg) l c var(--hue, h) / 0.25)
+		);
+		color: oklch(from var(--progressbar--fill-bg) calc(l / 2) c var(--hue, h));
+		padding: var(--library--spacing-x05) var(--library--spacing);
+
+		&#DLC {
+			--hue: 286;
+			--pct: 50%;
+		}
+	}
+}
+
+#IconRow {
+	--icon-size: var(--achievementiconbase--size);
+
+	gap: var(--library--spacing-x05);
+	margin-block-end: var(--library--spacing-x05);
+
+	#Featured + & {
+		@extend %-group;
+	}
+
+	& > [style]:last-child {
+		@include library.button;
+
+		height: var(--achievementiconbase--size);
+		padding: 0;
+		width: var(--achievementiconbase--size);
+	}
 }
 
 #Label {
 	color: inherit;
-	font-size: var(--font-size-small);
-	margin-block-end: var(--library_text-spacing);
-	opacity: var(--library_secondary-text-opacity);
+	font-size: var(--text--font-size-sm);
+	margin-block-end: var(--text-spacing);
+	opacity: var(--library--secondary-text-opacity);
 }
 
 #Name {
 	@include library.header;
+
+	line-height: inherit;
 }
 
-#Remainder {
-	@include library.button;
-
-	align-items: center;
-	display: flex;
-	height: var(--achievementiconbase_size);
-	justify-content: center;
-	padding: 0;
-	width: var(--achievementiconbase_size);
+#ProgressBar > div {
+	@include controls.progress-bar-multicolor;
 }
 
-#RemainderContainer {
-	border-radius: var(--border-radius);
-	height: unset;
-}
-
-#RemainderText {
-	all: unset;
-}
-
-#Ribbon {
-	display: none;
+#ProgressRow {
+	gap: var(--library--spacing);
+	margin-block-start: var(--text-spacing);
+	margin-block-end: 0;
 }
 
 #UnachievedSection {
 	border-block-start: none;
-	margin: 0 calc(var(--library_spacing) * -1);
-	padding: var(--library_spacing);
+	margin: 0 calc(var(--library--spacing) * -1);
+	padding: var(--library--spacing);
 
 	&:only-of-type {
-		margin-block-start: calc(var(--library_spacing) * -1);
+		margin-block-start: calc(var(--library--spacing) * -1);
 	}
 }
 
@@ -101,5 +104,5 @@
 
 #UnlockedLabelPercent {
 	color: inherit;
-	opacity: var(--library_secondary-text-opacity);
+	opacity: var(--library--secondary-text-opacity);
 }

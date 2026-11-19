@@ -1,0 +1,15 @@
+%-box {
+	background: none;
+	padding: 0;
+}
+
+#FriendCompareBox,
+#FriendCompareBoxOpen {
+	@extend %-box;
+
+	margin: var(--library--spacing) var(--library--body-spacing);
+}
+
+#FriendCompareBoxSm {
+	@extend %-box;
+}

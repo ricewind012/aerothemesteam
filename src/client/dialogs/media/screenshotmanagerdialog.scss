@@ -50,13 +50,13 @@
 
 #FocusedScreenshotImageContainer {
 	background: none;
-	box-shadow: inset 0 0 80px hsla(from var(--dialog_fg) h s l / 0.2);
+	box-shadow: inset 0 0 80px hsla(from var(--dialog--fg) h s l / 0.2);
 	margin: 0;
 }
 
 #Metadata {
 	color: inherit;
-	font-size: var(--font-size-small);
+	font-size: var(--text--font-size-sm);
 	font-weight: normal;
 	opacity: 0.5;
 
@@ -100,10 +100,10 @@
 
 #ScreenshotForm {
 	background: linear-gradient(
-		hsla(from var(--listitem_item-gradient-end) h s l / 1),
-		hsla(from var(--listitem_item-gradient-start) h s l / 1)
+		hsla(from var(--listitem--item-gradient-end) h s l / 1),
+		hsla(from var(--listitem--item-gradient-start) h s l / 1)
 	);
-	border-block-start: 1px solid var(--listitem_item-border);
+	border-block-start: 1px solid var(--listitem--item-border);
 	padding: 12px;
 }
 
@@ -112,7 +112,7 @@
 }
 
 #ScreenshotList {
-	padding: var(--dialog_spacing-content);
+	padding: var(--dialog--spacing-content);
 }
 
 #ScreenshotListInner {
@@ -122,15 +122,15 @@
 #StickyHeader {
 	backdrop-filter: none;
 	background: linear-gradient(
-		hsla(from var(--listitem_item-gradient-start) h s l / 1),
-		hsla(from var(--listitem_item-gradient-end) h s l / 1)
+		hsla(from var(--listitem--item-gradient-start) h s l / 1),
+		hsla(from var(--listitem--item-gradient-end) h s l / 1)
 	);
 	border: none;
-	border-block-end: 1px solid var(--listitem_item-border);
+	border-block-end: 1px solid var(--listitem--item-border);
 	box-shadow: none;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: var(--dialog_spacing-content);
+	padding: var(--dialog--spacing-content);
 	position: unset;
 	width: 100%;
 }
@@ -167,30 +167,25 @@
 		& > :nth-child(2) {
 			--icon: icon("delete");
 		}
-
-		// TODO: SVGIcon_Settings
-		& > :last-child {
-			--icon: icon("settings");
-		}
 	}
 }
 
 #TopListTitle {
-	color: var(--listitem_fg);
-	font-size: var(--font-size-large);
+	color: var(--listitem--fg);
+	font-size: var(--text--font-size-lg);
 	font-weight: bold;
 	height: unset;
 	// Align with the right side
 	line-height: 24px;
 	margin-block-start: var(--title-bar-height);
 	padding: 0;
-	text-shadow: 2px 2px var(--listitem_item-border);
+	text-shadow: 2px 2px var(--listitem--item-border);
 	text-transform: none;
 }
 
 #UGCCount {
 	align-items: center;
-	gap: var(--library_text-spacing);
+	gap: var(--text-spacing);
 
 	&:nth-child(1) {
 		--icon: icon("thumbs-up");
@@ -210,7 +205,7 @@
 }
 
 #UGCCounts {
-	gap: var(--library_spacing);
+	gap: var(--library--spacing);
 }
 
 #UGCMetadata {

@@ -17,15 +17,15 @@
 	background-repeat: no-repeat;
 	color: inherit;
 	flex-direction: row;
-	font-size: var(--font-size);
-	gap: 4px;
+	font-size: var(--text--font-size-md);
+	gap: var(--text-spacing);
 	justify-content: start;
 	line-height: 1;
 	margin: 0;
 	padding: 0;
 	// TODO: what lol
 	padding-block-end: 1px;
-	padding-inline-start: calc(var(--size) + 4px);
+	padding-inline-start: calc(var(--size) + var(--text-spacing));
 	text-shadow: none;
 
 	&::before {

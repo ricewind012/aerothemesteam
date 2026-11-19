@@ -31,59 +31,52 @@
 }
 
 #DriveSize {
-	color: var(--listitem_fg-secondary);
+	color: var(--listitem--fg-secondary);
 	font: inherit;
 	letter-spacing: 0;
 	text-transform: unset;
 }
 
 #DriveUsageBar {
-	@include controls.progress-bar-inner;
-
-	background-image:
-		linear-gradient(var(--bg), var(--bg)), var(--white-gradient);
-	box-shadow: none;
-	z-index: 1;
-
-	&:not([style="width: 0%;"], [style^="width: 0.0"]) {
-		border-inline-end: 1px solid var(--border-and-grad-color-50);
-	}
+	@include controls.progress-bar-multicolor-part(
+		$excluded-sel: "&:not([style='width: 0%;'], [style^='width: 0.0'])"
+	);
 }
 
 // Same colors, but from the same base as the progress bar background
 #DriveUsage {
 	&DLC {
-		--bg: #9e22c4;
+		--bg: hsl(286 70% 45%);
 	}
 
 	&Games {
-		--bg: #22b9c4;
+		--bg: hsl(184 70% 45%);
 	}
 
 	&Media {
-		--bg: #22c42f;
+		--bg: hsl(125 70% 45%);
 	}
 
 	&Other,
 	&OtherDot {
-		--bg: #2248c4;
+		--bg: hsl(226 70% 45%);
 	}
 
 	&Shader {
-		--bg: #c4227b;
+		--bg: hsl(327 70% 45%);
 	}
 
 	&Updates {
-		--bg: #c45522;
+		--bg: hsl(19 70% 45%);
 	}
 
 	&Workshop {
-		--bg: #84c422;
+		--bg: hsl(84 70% 45%);
 	}
 }
 
 #DriveUsageDot {
-	--size: var(--font-size);
+	--size: var(--text--font-size-md);
 
 	@include style.white-gradient;
 
@@ -95,53 +88,8 @@
 	width: var(--size);
 }
 
-// The parent of all, hence the vars
 #DriveUsageIndicator {
-	--bar-z-index: 1;
-	--border-and-grad-color: #fff;
-	--border-and-grad-color-50: color-mix(
-		in srgb,
-		var(--border-and-grad-color) 50%,
-		transparent
-	);
-
-	@include controls.progress-bar-outer;
-	@include style.white-gradient($size: 9px);
-
-	position: relative;
-
-	&::before,
-	&::after {
-		content: "";
-		inset: 0;
-		position: absolute;
-	}
-
-	&::before {
-		--bg: color-mix(in srgb, #000 12.5%, transparent);
-		--size: 10px;
-
-		background-image:
-			repeating-linear-gradient(
-				315deg,
-				var(--bg),
-				var(--bg) var(--size),
-				transparent var(--size),
-				transparent calc(var(--size) * 2)
-			),
-			var(--white-gradient);
-	}
-
-	&::after {
-		background-image: linear-gradient(
-			90deg,
-			transparent,
-			var(--border-and-grad-color-50) 65%,
-			color-mix(in srgb, var(--border-and-grad-color) 75%, transparent) 98%
-		);
-		box-shadow: inset 0 0 0 1px var(--border-and-grad-color-50);
-		z-index: var(--bar-z-index);
-	}
+	@include controls.progress-bar-multicolor;
 }
 
 #DriveUsageNumber {
@@ -163,7 +111,7 @@
 
 #DropdownOptionCtn {
 	.DialogDropDown_CurrentDisplay {
-		margin-inline-start: calc(var(--icon-size) + 5px);
+		margin-inline-start: calc(var(--icon-size-sm) + 5px);
 	}
 
 	// star icon
@@ -181,7 +129,7 @@
 		@include contextmenu.icon-pos;
 
 		background-image: var(--icon);
-		background-size: var(--icon-size);
+		background-size: var(--icon-size-sm);
 		content: "";
 	}
 

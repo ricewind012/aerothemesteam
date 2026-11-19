@@ -1,0 +1,85 @@
+@use "mixins/library";
+@use "mixins/style";
+
+#AppPartnerEventsContainer {
+	margin: 0;
+	padding: 0;
+}
+
+#AppPartnerEventsPage {
+	inset-block-start: calc(var(--library--spacing) * 2 + var(--icon-size-sm));
+}
+
+#ControlSection {
+	background: var(--bg-main);
+	border-block-end: var(--library--border);
+	inset-block-start: 0;
+	padding: var(--library--spacing);
+}
+
+#ControlSectionRightSide {
+	flex-direction: row-reverse;
+	gap: var(--library--spacing-x05);
+	max-width: 100%;
+
+	#CloseButton {
+		all: unset;
+
+		display: flex;
+	}
+
+	#ScrollButton {
+		all: unset;
+
+		height: var(--icon-size-md);
+		width: var(--icon-size-md);
+
+		&:where(#Down) svg {
+			transform: none;
+		}
+
+		&:where(#GameArt) {
+			margin: calc(8px / -2);
+			margin-inline-end: 0;
+
+			img {
+				padding: 0;
+			}
+		}
+
+		&:where(#Up) svg {
+			transform: scale(-1, 1);
+		}
+	}
+}
+
+#ControlSectionWidth {
+	width: 100%;
+}
+
+#PartnerEvent {
+	background: var(--library--section-bg);
+	border: none;
+	border-block-end: var(--library--border);
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0;
+
+	#EventType {
+		@include style.tag;
+
+		color: darkviolet;
+		margin: calc(var(--spacing) * -1) calc(var(--spacing) * -2);
+		margin-inline-end: var(--text-spacing);
+	}
+
+	#EventTypeAndTimeRow#WithReminder {
+		background: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	#TimeandPostedBy {
+		@include library.description;
+	}
+}

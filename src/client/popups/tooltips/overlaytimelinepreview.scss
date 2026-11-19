@@ -14,12 +14,12 @@
 }
 
 #ThumbnailImage {
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 }
 
 #TimeDisplayContainer {
 	color: var(--blue-text);
-	font-family: var(--font-family-monospace);
+	font-family: var(--text--font-family-monospace);
 	margin: 0;
 	padding: 0;
 }
@@ -30,10 +30,10 @@
 	svg {
 		color: var(--blue-border);
 		filter: none;
-		height: var(--icon-size);
+		height: var(--icon-size-sm);
 		opacity: 1;
 		padding: 0;
-		width: var(--icon-size);
+		width: var(--icon-size-sm);
 	}
 }
 

@@ -1,8 +1,102 @@
+@use "sass:color";
+@use "mixins/style";
+
+
+$-color-count: 12;
+$-colors: (
+	tomato: tomato,
+	red: red,
+	ruby: crimson,
+	crimson: crimson,
+	pink: pink,
+	plum: plum,
+	purple: purple,
+	violet: violet,
+	iris: indigo,
+	indigo: indigo,
+	blue: blue,
+	cyan: cyan,
+	teal: cyan,
+	jade: cyan,
+	green: green,
+	grass: green,
+	storegreen: green,
+	brown: brown,
+	bronze: brown,
+	gold: gold,
+	sky: lightblue,
+	mint: lightblue,
+	lime: lime,
+	yellow: yellow,
+	amber: orange,
+	orange: orange,
+);
+
+:root {
+	--box-shadow-elevation--1: none;
+	--box-shadow-elevation-0: none;
+	--box-shadow-elevation-1: none;
+	--box-shadow-elevation-2: none;
+
+	--control-height-1: unset;
+	--control-height-2: unset;
+	--control-height-3: unset;
+
+
+    --radius-sm: var(--rounding-md);
+    --radius-md: var(--rounding-md);
+    --radius-lg: var(--rounding-lg);
+
+	@each $k in greyneutral mauve slate sage olive sand {
+		@for $i from 1 through $-color-count {
+			// --color-#{"" + $k}-#{$i}: #f09;
+		}
+	}
+
+	@each $k, $v in $-colors {
+		$darker: color.scale($v, $lightness: -50%);
+
+		@for $i from 1 through $-color-count {
+			--color-#{"" + $k}-#{$i}: light-dark(#{$darker}, #{$v});
+		}
+	}
+}
+
+:where([data-body-text-color]) {
+	--color-text-body-title: var(--fg-main);
+	--color-text-body-subtitle: var(--fg-main);
+	--color-text-body-body: var(--fg-main);
+	// TODO: lol i don't have a color for this
+	--color-text-body-description: var(--listitem--fg-secondary);
+	--color-text-body-note: var(--listitem--fg-secondary);
+}
+
 :where(*) {
 	box-sizing: border-box;
-	font-family: "Segoe UI", sans-serif;
+	font-family: var(--text--font-family);
+}
+
+body {
+	background: var(--bg-main);
+	color: var(--fg-main);
 }
 
 .part {
 	display: initial;
+}
+
+$-icons: (
+	ChatBubble: "discussions",
+	Download: "download",
+	FlatArrow: "nav-back",
+	Play: "play",
+	Pause: "delete",
+	PlusCircle: "plus",
+	X_Line: "delete",
+);
+
+@each $k, $v in $-icons {
+	:where(.SVGIcon_#{$k}) {
+		@include style.icon($name: $v, $hide-selector: "*");
+	}
 }

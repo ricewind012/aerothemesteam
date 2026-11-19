@@ -13,11 +13,11 @@
 #Highlight {
 	color: inherit;
 	font-weight: bold;
-	margin-inline-start: 4px;
+	margin-inline-start: var(--text-spacing);
 }
 
 #Label {
 	color: inherit;
 	font: inherit;
-	font-size: var(--font-size-large);
+	font-size: var(--text--font-size-lg);
 }

@@ -1,0 +1,9 @@
+@use "mixins/controls";
+
+:where(#AchievementProgressBar) {
+	@include controls.progress-bar-outer;
+
+	&::after {
+		@include controls.progress-bar-inner;
+	}
+}

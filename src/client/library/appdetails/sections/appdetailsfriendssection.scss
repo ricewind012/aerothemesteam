@@ -11,20 +11,20 @@
 #ShowMore {
 	@include library.button;
 
-	margin-block-start: var(--library_spacing-x05);
+	margin-block-start: var(--library--spacing-x05);
 }
 
 #Subsection {
-	margin-block-end: var(--library_spacing-x05);
+	margin-block-end: var(--library--spacing-x05);
 	overflow: visible;
-	padding-block-end: var(--library_spacing-x05);
+	padding-block-end: var(--library--spacing-x05);
 	position: relative;
 
 	&:not(:last-of-type)::after {
-		border-block-end: var(--library_border) !important;
+		border-block-end: var(--library--border) !important;
 		content: "";
-		inset-block-end: calc(var(--library_border-size) * -1);
-		inset-inline: calc(var(--library_spacing-x05) * -1);
+		inset-block-end: calc(var(--library--border-size) * -1);
+		inset-inline: calc(var(--library--spacing-x05) * -1);
 		position: absolute;
 	}
 
@@ -36,6 +36,6 @@
 
 #SubsectionHeader {
 	color: inherit;
-	font-size: var(--font-size);
-	padding-block-end: var(--library_text-spacing);
+	font-size: var(--text--font-size-md);
+	padding-block-end: var(--text-spacing);
 }

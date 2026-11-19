@@ -22,7 +22,7 @@
 
 #CollectionButton {
 	&::before {
-		content: var(--GameList_View_Collections);
+		content: var(--GameList--View_Collections);
 	}
 }
 

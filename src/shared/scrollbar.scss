@@ -30,7 +30,7 @@
 			var(--gradient-color-4) 100%
 		);
 	border: 1px solid var(--button-border);
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	box-shadow: inset 0 0 0 1px var(--button-shadow);
 
 	&:hover {

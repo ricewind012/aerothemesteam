@@ -1,5 +1,5 @@
 #DesktopToastBackground {
-	color: var(--desktoptoasts_image-color);
+	color: var(--desktoptoasts--image-color);
 	opacity: 0.1;
 	transition: var(--anim-time);
 
@@ -10,16 +10,16 @@
 
 #DesktopToastPopup {
 	background: linear-gradient(
-		var(--library_button-bg-1),
-		var(--library_button-bg-2)
+		var(--library--button-bg-1),
+		var(--library--button-bg-2)
 	);
 	color: var(--blue-text);
 
 	&::before {
 		background: radial-gradient(
 			at 0% 0%,
-			var(--desktoptoasts_image-color),
-			var(--library_button-bg-2)
+			var(--desktoptoasts--image-color),
+			var(--library--button-bg-2)
 		);
 		transition: var(--anim-time);
 	}

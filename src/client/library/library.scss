@@ -3,12 +3,13 @@
 
 #AchievementsPageContainer {
 	.NarrowWindow & {
+		height: 100%;
 		margin: 0;
 		width: 100%;
 	}
 
 	#CloseButton {
-		--icon-size: var(--library_icon-size);
+		--icon-size-sm: var(--icon-size-md);
 
 		@include style.icon($name: "delete-32", $hide-selector: "*");
 
@@ -16,13 +17,25 @@
 		border: none;
 		border-radius: 0;
 		box-shadow: none;
-		inset-block-start: var(--library_body-spacing);
-		inset-inline-end: var(--library_body-spacing);
+		inset-block-start: var(--library--body-spacing);
+		inset-inline-end: calc(
+			var(--scrollbar-size) + var(--library--body-spacing)
+		);
+		position: absolute;
 	}
 }
 
 #AppDetailsMain {
-	border: var(--library_container-border);
+	border: var(--library--container-border);
+}
+
+#AppDetailsOverlayTransitionGroup {
+	// bruh valve
+	& > div {
+		backdrop-filter: none;
+		// Keep relative positioning, as backdrop-filter is now disabled
+		transform-style: preserve-3d;
+	}
 }
 
 #Container {
@@ -43,6 +56,8 @@
 	}
 
 	:where(.DialogDropDown_Arrow) {
+		display: contents;
+
 		&::before {
 			display: none;
 		}
@@ -57,13 +72,27 @@
 		padding: 0;
 	}
 
+	:where([data-has-value]:not([role="combobox"])),
 	:where(.DialogInput) {
 		@include library.text-input($compact: true);
+	}
+
+	:where([role="combobox"]) {
+		@include library.text-input;
+
+		&::before {
+			display: none;
+		}
+
+		span {
+			padding: 0;
+			margin-inline-end: calc(7px + var(--text-spacing));
+		}
 	}
 }
 
 #LeftListSizableContainer {
-	border: var(--library_container-border);
+	border: var(--library--container-border);
 }
 
 #LibraryWindowDivider {

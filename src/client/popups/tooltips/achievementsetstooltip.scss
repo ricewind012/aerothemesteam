@@ -1,0 +1,66 @@
+@use "mixins/library";
+@use "mixins/tooltip";
+
+#AchievementIconBackground {
+	background: inherit;
+
+	#BlurContainer {
+		--achievementiconbase--size: 100%;
+
+		@include tooltip.bigger--bg-blur;
+
+		mask: none;
+		opacity: 1;
+		width: 100%;
+	}
+}
+
+#AchievementTooltip {
+	filter: none;
+}
+
+#AchievementTooltipBody {
+	@include tooltip.bigger--container;
+
+	& > :nth-child(2) {
+		--achievementiconbase--size: var(--icon-size-md);
+
+		padding: var(--tooltip--description-spacing);
+		padding-block-end: 0;
+
+		& > :nth-child(2) {
+			gap: 0;
+
+			& > :first-child {
+				@include library.header;
+			}
+
+			& > :last-child {
+				@include library.description;
+			}
+		}
+	}
+}
+
+#UnlockInfo {
+	--tooltip--bottom-bg: hsl(215 55% 86%);
+
+	background: none;
+	gap: 0;
+	padding: var(--tooltip--description-spacing);
+
+	&::before {
+		@include tooltip.separator;
+
+		content: "";
+		padding-block: calc(var(--tooltip--description-spacing) / 2 - 2px);
+	}
+
+	& > :first-child {
+		color: hsl(from var(--tooltip--bottom-bg) h s calc(l - 40));
+	}
+
+	& > [style="--text-color: var(--color-amber-9);"] {
+		color: hsl(from var(--tooltip--bottom-bg) 35 s calc(l - 40));
+	}
+}

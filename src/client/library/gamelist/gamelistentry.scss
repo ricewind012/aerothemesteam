@@ -1,20 +1,20 @@
 #Container {
 	background-color: transparent;
 	color: var(--fg-main);
-	font-size: var(--font-size);
+	font-size: var(--text--font-size-md);
 	border: none;
 	box-shadow: none;
 
 	&:is(:hover, #HasContextMenuOpen) {
 		background-color: color-mix(
 			in srgb,
-			var(--gamelistentry_active-bg) 50%,
+			var(--gamelistentry--active-bg) 50%,
 			transparent
 		);
 	}
 
 	&#Selected {
-		background-color: var(--gamelistentry_active-bg);
+		background-color: var(--gamelistentry--active-bg);
 	}
 
 	* {
@@ -26,10 +26,10 @@
 	--offset: 4px;
 
 	background-image: icon("users");
-	height: var(--icon-size);
+	height: var(--icon-size-sm);
 	inset-block-start: var(--offset);
 	inset-inline-start: var(--offset);
-	width: var(--icon-size);
+	width: var(--icon-size-sm);
 
 	svg {
 		display: none;

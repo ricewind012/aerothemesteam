@@ -6,17 +6,17 @@
 
 #BackupAppsDialog {
 	.DialogBody {
-		padding-block-start: var(--library_spacing-x05);
+		padding-block-start: var(--library--spacing-x05);
 	}
 
 	.DialogBodyText {
 		margin: 0;
-		padding: var(--library_spacing);
+		padding: var(--library--spacing);
 		padding-block-end: 0;
 	}
 
 	.DialogFooter {
-		margin: var(--library_spacing);
+		margin: var(--library--spacing);
 		margin-block-start: 0;
 	}
 }
@@ -25,5 +25,5 @@
 #DialogBodyText {
 	@include modal.description;
 
-	padding-block: var(--library_spacing) var(--library_spacing-x05);
+	padding-block: var(--library--spacing) var(--library--spacing-x05);
 }

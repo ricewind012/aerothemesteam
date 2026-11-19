@@ -21,7 +21,7 @@
 
 	#AppLogo {
 		grid-area: hero;
-		margin-inline-end: var(--library_spacing-x05);
+		margin-inline-end: var(--library--spacing-x05);
 	}
 
 	#AppName {
@@ -42,8 +42,8 @@
 
 #CreateShortcuts {
 	flex-direction: column;
-	gap: var(--library_spacing-x05);
-	margin-block: var(--library_spacing);
+	gap: var(--library--spacing-x05);
+	margin-block: var(--library--spacing);
 }
 
 #FolderOption {
@@ -86,7 +86,7 @@
 #FolderSelector {
 	border-block-start: 2px solid transparent;
 	border-image: linear-gradient(90deg, var(--blue-border), transparent) 1;
-	padding-block: var(--library_spacing);
+	padding-block: var(--library--spacing);
 
 	#FolderSettings {
 		all: unset;

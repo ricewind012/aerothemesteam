@@ -3,7 +3,7 @@
 .ribbon-button {
 	align-items: center;
 	display: flex;
-	gap: 4px;
+	gap: var(--text-spacing);
 	flex-direction: var(--direction);
 	flex-grow: 1;
 }
@@ -45,7 +45,7 @@
 	&.vertical {
 		--direction: column;
 		--icon: var(--icon-arrow-bottom);
-		--icon-size: 32px;
+		--icon-size-sm: var(--icon-size-md);
 	}
 }
 
@@ -63,7 +63,7 @@
 		linear-gradient(0deg, #bdd1ea 14.1%, #93b0d5 84.62%, #506580 156.7%),
 		var(--white-gradient);
 	box-shadow: inset 0 0 9.3px var(--shadow-color);
-	border-radius: var(--border-radius-large);
+	border-radius: var(--rounding-lg);
 	display: flex;
 	gap: var(--spacing);
 	padding: var(--spacing);
@@ -73,13 +73,13 @@
 	--shadow: 1px 1px var(--shadow-color);
 
 	border: 1px solid #8198b9;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	box-shadow:
 		var(--shadow),
 		inset var(--shadow);
 	display: flex;
 	flex-direction: column;
-	font-size: var(--font-size-small);
+	font-size: var(--text--font-size-sm);
 }
 
 .ribbon-section-body {
@@ -95,7 +95,7 @@
 	gap: var(--spacing-y) var(--spacing-x);
 	max-height: calc(
 		var(--spacing-y) * (var(--max-item-count) - 1) + var(--spacing-y) * 2 +
-			var(--icon-size) * var(--max-item-count)
+			var(--icon-size-sm) * var(--max-item-count)
 	);
 	padding: var(--spacing-y) var(--spacing-x);
 }

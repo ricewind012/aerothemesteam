@@ -1,6 +1,6 @@
 #OtherToolTip {
 	& > div:not([class]) {
-		margin: var(--tooltip_description-spacing);
+		margin: var(--tooltip--description-spacing);
 	}
 }
 

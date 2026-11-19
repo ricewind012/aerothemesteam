@@ -1,8 +1,8 @@
 @use "mixins/settings";
 
 #PanelSection {
-	margin-block-end: var(--library_spacing);
-	padding-inline: var(--library_spacing);
+	margin-block-end: var(--library--spacing);
+	padding-inline: var(--library--spacing);
 }
 
 #PanelSectionTitle {

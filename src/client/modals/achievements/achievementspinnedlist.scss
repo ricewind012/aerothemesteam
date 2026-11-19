@@ -1,0 +1,43 @@
+@use "mixins/library";
+
+#DragHandle {
+	block-size: var(--achievementiconbase--size);
+	color: inherit;
+	inline-size: var(--achievementiconbase--size);
+	inset: calc(var(--library--spacing) / 2) var(--library--spacing);
+	inset-inline-start: unset;
+	position: absolute;
+}
+
+#PinnedAchievementsList {
+	margin: 0;
+}
+
+#PinnedRow {
+	background: none;
+	margin: 0;
+	position: relative;
+}
+
+#PinnedSection {
+	color: var(--blue-text);
+	gap: 0;
+	outline: none;
+	padding: 0;
+
+	& > span {
+		@include library.header;
+
+		background: var(--library--section-bg);
+		border-block-end: var(--library--border);
+		padding: calc(var(--library--spacing) / 2) var(--library--spacing);
+	}
+}
+
+#RowContent {
+	& > div {
+		padding-inline-end: calc(
+			var(--achievementiconbase--size) + var(--library--spacing) * 3
+		);
+	}
+}
