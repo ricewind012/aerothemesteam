@@ -204,6 +204,68 @@
 	border-radius: 0;
 }
 
+@mixin progress-bar-multicolor {
+	--bar-z-index: 1;
+	--border-and-grad-color: #fff;
+	--border-and-grad-color-50: color-mix(
+		in srgb,
+		var(--border-and-grad-color) 50%,
+		transparent
+	);
+
+	@include progress-bar-outer;
+	@include style.white-gradient($size: 9px);
+
+	position: relative;
+
+	&::before,
+	&::after {
+		content: "";
+		inset: 0;
+		position: absolute;
+	}
+
+	&::before {
+		--bg: color-mix(in srgb, #000 12.5%, transparent);
+		--size: 10px;
+
+		background-image:
+			repeating-linear-gradient(
+				315deg,
+				var(--bg),
+				var(--bg) var(--size),
+				transparent var(--size),
+				transparent calc(var(--size) * 2)
+			),
+			var(--white-gradient);
+	}
+
+	&::after {
+		background-image: linear-gradient(
+			90deg,
+			transparent,
+			var(--border-and-grad-color-50) 65%,
+			color-mix(in srgb, var(--border-and-grad-color) 75%, transparent) 98%
+		);
+		box-shadow: inset 0 0 0 1px var(--border-and-grad-color-50);
+		z-index: var(--bar-z-index);
+	}
+}
+
+/// @param {string} $excluded-sel - Which children should not have a border
+@mixin progress-bar-multicolor-part($excluded-sel) {
+	@include progress-bar-inner;
+
+	background-image:
+		linear-gradient(var(--bg), var(--bg)), var(--white-gradient);
+	box-shadow: none;
+	z-index: var(--bar-z-index);
+
+	#{$excluded-sel} {
+		border-inline-end: 1px solid var(--border-and-grad-color-50);
+	}
+}
+
 @mixin tab {
 	@include button;
 

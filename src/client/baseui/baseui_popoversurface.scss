@@ -10,6 +10,12 @@
 	&::before {
 		margin: var(--contextmenu--container-spacing);
 	}
+
+	[role="separator"] {
+		@include contextmenu.separator;
+
+		inline-size: unset;
+	}
 }
 
 :where(#ListBoxOption) {

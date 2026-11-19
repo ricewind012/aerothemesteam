@@ -1,0 +1,102 @@
+@use "mixins/library";
+@use "mixins/style";
+
+#CompletionBackgroundLayer {
+	display: none;
+}
+
+#PlaytimeItems {
+	flex-direction: column;
+	margin: 0;
+
+	& > div {
+		align-items: center;
+		gap: var(--text-spacing);
+
+		&:nth-child(1) {
+			--icon: icon("steam");
+		}
+
+		&:nth-child(2) {
+			--icon: icon("star");
+		}
+
+		&:nth-child(3) {
+			--icon: icon("clock");
+		}
+
+		&::before {
+			@include style.icon;
+
+			content: "";
+		}
+
+		[role="separator"] {
+			display: none;
+		}
+	}
+}
+
+#SummaryHeading {
+	--achievementiconbase--size: var(--icon-size-lg);
+
+	background: none;
+	padding: 0;
+
+	[style$="--gap: var(--spacing-1);"],
+	[style$="--gap: var(--spacing-2);"] {
+		gap: var(--text-spacing);
+	}
+
+	// Sets' names
+	[style^="--max-height: calc(4"] {
+		background: var(--table--bg);
+		border: 1px solid var(--table--border);
+		max-block-size: calc(4px * 2 + 16px * 4);
+		padding: 4px;
+
+		& > div {
+			flex-direction: column;
+			gap: 0;
+
+			& > div {
+				display: list-item;
+				margin-inline-start: 16px;
+				padding: 0;
+
+				& > :nth-child(2) {
+					opacity: var(--library--secondary-text-opacity);
+				}
+			}
+		}
+	}
+
+	[style="--direction: column; --justify: space-around; --gap: var(--spacing-0);"] {
+		justify-content: center;
+
+		& > :first-child {
+			@include library.header-primary;
+		}
+
+		& > :nth-child(2) {
+			@include library.header-secondary;
+		}
+
+		& > :last-child {
+			@include library.description;
+		}
+	}
+}
+
+#UnlockedCount {
+	font: inherit;
+
+	span > span {
+		opacity: var(--library--secondary-text-opacity);
+	}
+
+	& + [style*="amber-10"] {
+		color: oklch(from var(--blue-text) calc(l * 1.75) c 60);
+		font-weight: bold;
+	}
+}

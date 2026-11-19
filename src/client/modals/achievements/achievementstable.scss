@@ -1,0 +1,119 @@
+@use "mixins/library";
+
+// It's a virtualized list, but changing rows' height here is fine, since it
+// recalculates its height right after. It doesn't flick/shit itself while
+// scrolling, but still has an empty space at the bottom... I think it's fine
+
+%-list-item {
+	--achievementiconbase--size: var(--icon-size-md);
+
+	background: var(--library--section-bg);
+	border-block-end: var(--library--border);
+	padding: calc(var(--library--spacing) / 2) var(--library--spacing);
+}
+
+%-list-item-text {
+	h1 {
+		@include library.header;
+	}
+
+	& > span {
+		@include library.description;
+	}
+}
+
+#AchievementRow {
+	@extend %-list-item;
+
+	& > div {
+		padding: 0;
+	}
+
+	& > div > :first-child [style$="--gap: var(--spacing-1);"] {
+		@extend %-list-item-text;
+
+		gap: 0;
+	}
+
+	[style="--text-color: var(--color-text-body-description);"] {
+		@include library.header-secondary;
+	}
+}
+
+#AchievementsTable {
+	[data-index] > div {
+		color: var(--blue-text);
+		padding: 0;
+
+		// ? ty valve
+		& > :empty {
+			display: none;
+		}
+	}
+
+	// Header
+	[data-index] > div > span {
+		@include library.header;
+		@extend %-list-item;
+
+		display: block;
+		width: 100%;
+	}
+}
+
+#AvatarAchievement {
+	border: none;
+
+	&#AvatarUnachieved {
+		opacity: 0.5;
+	}
+}
+
+#EmptyTableDivider {
+	display: none;
+}
+
+#FilteredAchievementsRow {
+	@extend %-list-item;
+
+	display: grid;
+	gap: 0 var(--spacing-2);
+	grid-template-areas: "icon header" "icon description";
+	grid-template-columns: min-content 1fr;
+
+	#RevealInstructions {
+		@include library.description;
+
+		grid-area: description;
+	}
+
+	& > :first-child {
+		block-size: var(--achievementiconbase--size);
+		grid-area: icon;
+		inline-size: var(--achievementiconbase--size);
+	}
+
+	& > :nth-child(2) {
+		@include library.header;
+
+		grid-area: header;
+	}
+}
+
+#GlobalProgressIcon {
+	margin: 0;
+}
+
+#HiddenContent {
+	#SectionGap > & {
+		@extend %-list-item;
+
+		& > :nth-child(2) {
+			@extend %-list-item-text;
+		}
+	}
+
+	#RevealInstructions {
+		background: var(--library--section-bg);
+	}
+}

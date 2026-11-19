@@ -1,3 +1,89 @@
+@use "mixins/controls";
+
+[style$="--gap: var(--spacing-4); --icon-size: 54px;"] {
+	font-size: var(--text--font-size-md);
+	gap: 0;
+	padding: 0;
+
+	& > :first-child {
+		padding: var(--library--body-spacing);
+
+		& > div > div {
+			--grid-areas: "capsule title" "capsule header";
+
+			gap: var(--library--spacing);
+		}
+
+		// Icon
+		[style*="--min-height: 16px;"] {
+			block-size: var(--icon-size-md);
+			inline-size: var(--icon-size-md);
+			margin: 0;
+		}
+
+		// Header
+		[style="--flex-grow: 1; --direction: column; --gap: var(--spacing-1);"] {
+			color: var(--blue-text);
+			font-size: var(--text--font-size-md);
+			font-weight: bold;
+			gap: var(--library--spacing-x05);
+			text-shadow: var(--library--header-text-shadow);
+
+			& > h1 {
+				font-size: var(--text--font-size-xl);
+				font-weight: bold;
+			}
+		}
+
+		// Right side links
+		[style="--direction: row; --align: center; --gap: var(--spacing-4);"] {
+			align-items: end;
+			flex-direction: column;
+			gap: var(--text-spacing);
+			margin-block-start: calc(var(--icon-size-md) + var(--text-spacing));
+		}
+	}
+
+	& > [style="--direction: column; --gap: var(--spacing-5);"] {
+		gap: 0;
+
+		// Checkboxes container
+		& > :first-child {
+			margin: var(--library--spacing) var(--library--body-spacing);
+
+			& > div > :first-child {
+				align-items: start;
+				flex-basis: unset;
+				flex-direction: column;
+				gap: var(--text-spacing);
+				padding: 0;
+
+				& > * {
+					flex-direction: row-reverse;
+					gap: var(--text-spacing);
+				}
+			}
+		}
+
+		[data-has-value]:not([role="combobox"]) {
+			line-height: 24px;
+		}
+	}
+
+	// Progress bar
+	[style*="--height: 10px;"] {
+		@include controls.progress-bar-multicolor;
+	}
+}
+
+#AchievementsPage {
+	background: var(--bg-main);
+	border: none;
+	border-radius: 0;
+	box-shadow: var(--popup-shadow);
+	max-block-size: 100%;
+}
+
 #Background {
 	height: var(--library--header-img-height);
 	mask: var(--library--header-img-mask);
@@ -6,22 +92,4 @@
 
 #Blur {
 	display: none;
-}
-
-#HeaderContainer {
-	padding-inline: var(--library--body-spacing);
-}
-
-#HeaderImage {
-	& > img {
-		transition: none;
-	}
-}
-
-#Page {
-	background: var(--bg-main);
-
-	#Container {
-		padding-block-start: var(--library--body-spacing);
-	}
 }

@@ -1,0 +1,61 @@
+@use "mixins/library";
+
+#CollapseButton {
+	@include library.button;
+
+	block-size: 28px;
+	inline-size: 28px;
+	max-block-size: unset;
+	padding: 0;
+
+	svg {
+		block-size: var(--icon-size-sm);
+		inline-size: var(--icon-size-sm);
+		margin: 5px;
+	}
+}
+
+#GroupHeader {
+	--l-diff: 0.025;
+
+	background: oklch(
+		from var(--library--section-bg) calc(l - var(--l-diff)) c var(--hue)
+	);
+	border-block-end: var(--library--border-size) solid;
+	border-block-end-color: oklch(
+		from var(--library--border-color) calc(l - var(--l-diff)) c var(--hue)
+	);
+	color: oklch(from var(--blue-text) calc(l + var(--l-diff)) c var(--hue));
+
+	&#BaseGroup {
+		--hue: 143;
+	}
+
+	&#DLCGroup {
+		--hue: 286;
+	}
+
+	& > div {
+		padding: calc(var(--library--spacing) / 2) var(--library--spacing);
+
+		[style$="--gap: var(--spacing-1);"] {
+			gap: 0;
+
+			& > div:first-child {
+				@include library.header;
+			}
+		}
+
+		[style$="--gap: var(--spacing-2);"] > :first-child {
+			@include library.description;
+		}
+	}
+}
+
+#GroupProgressBar {
+	height: 1lh;
+
+	&::after {
+		--wg-size: 0.5lh;
+	}
+}
